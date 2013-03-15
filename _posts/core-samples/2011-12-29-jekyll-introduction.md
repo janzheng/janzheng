@@ -1,7 +1,8 @@
 ---
 layout: post
+title: Blergh
 category : lessons
-tagline: "Supporting tagline"
+tagline: "Supporting tagline woop"
 tags : [intro, beginner, jekyll, tutorial]
 ---
 {% include JB/setup %}
