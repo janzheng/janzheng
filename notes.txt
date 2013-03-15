@@ -1,0 +1,9 @@
+
+Jekyll Introduction:
+http://jekyllbootstrap.com/lessons/jekyll-introduction.html
+
+Template Data API:
+http://jekyllbootstrap.com/api/template-data-api.html
+
+Blog, Analytics, Comments
+http://jekyllbootstrap.com/usage/blog-configuration.html
