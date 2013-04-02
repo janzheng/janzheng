@@ -1,0 +1,29 @@
+---
+layout: none
+---
+<!doctype html>
+<html lang="en" class="no-js">
+{% include head.html %}
+
+<body class="post">	
+	<div id="container">
+	  {% include logo.html %}	  
+	  <div id="main-column">
+  	  <header>  	      	    
+  	    {% include nm-svg.html %}
+  	  </header>  	    
+  	  <div id="blog">
+  	    {{ content }}
+  	  </div>
+  	  <div id="sidebar">
+  	    {% include work.html %}
+  	    {% include links.html %}
+  	  </div>
+	  </div>
+	  <div class="clear"></div>
+	  {% include footer.html %}	  
+	</div>
+	<div class="clear"></div>
+  {% include script.html %}
+</body>
+</html>

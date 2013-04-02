@@ -1,0 +1,36 @@
+---
+layout: home
+title: Nathan McGinness
+---
+
+{% for post in site.posts %}
+  <section class="post-home">
+    <div class="meta-data">
+      <span class="date">
+        {{ post.date | date: "%d %B %Y" }}      
+      </span> 
+      {% if post.external %}
+        <span class="external">External link</span>
+        <a class="permalink" href="{{ post.url }}">Permalink</a>
+      {% endif %}
+    </div>
+    <h1><a href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">{{ post.title }}</a></h1>
+    {% if post.image-path %}      
+      <a href=" {% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}"><img class="{{ post.no-shadow }}" src="{{ post.image-path }}"/ ></a>             
+    {% endif %}
+    {% if post.youtube %}
+      <iframe width="550" height="452" src="{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>
+    {% endif %}
+    {% if post.vimeo %}
+      <iframe src="{{ post.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=0f314a" width="550" height="309" frameborder="0"></iframe>
+    {% endif %}    
+    {% if post.summary-only %}
+        <div class="summary">
+        {{ post.content }}
+        </div>        
+    {% else %}
+       <p class="post-summary grid_14 prefix_3 alpha omega">{{ post.summary }}</p>
+    {% endif %}    
+    <div class="clear"></div>
+  </section>
+{% endfor %}

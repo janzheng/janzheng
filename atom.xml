@@ -1,28 +1,38 @@
 ---
 layout: nil
-title : Atom Feed
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>{{ site.title }}</title>
- <link href="{{ site.production_url }}/{{ site.atom_path }}" rel="self"/>
- <link href="{{ site.production_url }}"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.production_url }}</id>
- <author>
-   <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
- </author>
-
- {% for post in site.posts %}
- <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.production_url }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.production_url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
- </entry>
- {% endfor %}
- 
+    <title>Nathan McGinness</title>
+    <link href="http://njmcgee.com/atom.xml" rel="self"/>
+    <link href="http://njmcgee.com/"/>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>http://njmcgee.com/</id>
+    
+    {% for post in site.posts %}
+    <entry>
+        <title>{{ post.title | h }} {% if post.external %}&#x219D;{% endif %}</title>
+        {% for category in post.categories %}
+        <category term="{{category}}" scheme="http://www.sixapart.com/ns/types#tag" />
+        {% endfor %}
+        {% if post.external %}
+        <link href="{{ post.external }}"/>
+        {% else %}
+        <link href="http://njmcgee.com{{ post.url }}"/>
+        {% endif %}
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <id>njmcgee.com:{{ post.id }}</id>
+        <content type="html">
+          {% if post.image-path %}
+           <img src="http://njmcgee.com{{ post.image-path }}"></img>
+          {% endif %}
+          {{ post.content }}
+          
+        </content>
+        <author>
+            <name>{{post.author_name}}</name>
+            <uri>{{post.author_uri}}</uri>
+        </author>
+    </entry>
+    {% endfor %}
 </feed>

@@ -1,0 +1,111 @@
+#secondary-logo {
+	display: none;
+}
+#container {
+	max-width: 1680px;
+}
+@media screen and (max-width: 1200px) {
+	p.intro {
+		font-size: 1.7em; /* /18 */
+	}
+}
+@media screen and (max-width: 1024px) {
+	nav#elsewhere {
+		li {
+			width: 50%;
+		}
+	}
+	footer {
+		.logo { 
+			width: 100%;
+			display: block;
+			margin-bottom: 30px;
+		}	
+		nav {
+			width: 30%;
+		}
+		#fine-print {
+			width: 70%;
+		}
+	}
+}
+@media screen and (max-width: 980px) {
+	#logo {
+		display: none;
+	}
+	#container {
+		width: 90%;
+	}
+	#sidebar, body.post #sidebar, body.about #sidebar {
+		margin: 0;
+	}
+	#main-column, #sidebar, #blog, footer {
+		width: 100%;
+		display: block;
+	} 
+	footer {
+		margin-left: 0;
+	}
+	p.intro {
+		font-size: 1.4em; /* /18 */
+	}
+	nav#elsewhere {
+		li {
+			width: 25%;
+			font-size: 1.333333333333333em; /* /18 */ ;
+		}
+	}
+	#secondary-logo {
+		@include nm-logo;		
+		margin-right: 20px;
+		float: left;
+		margin-top: -47px;
+		margin-bottom: 20px;
+	}
+	header svg {
+		float: left;
+		margin-bottom: 78px;
+	}
+	footer {
+		margin-top: 0;
+	}
+}
+@media screen and (max-width: 480px) {
+	footer {
+		nav {
+			width: 100%;
+			display: block;
+			margin-bottom: 30px;
+		}
+		#fine-print {
+			width: 100%;
+			display: block;
+		}
+	}
+}
+@media screen and (max-width: 320px) {
+	nav#elsewhere {
+		li {
+			width: 50%;
+		}
+	}
+	.meta-data {
+		font-size: 0.833333333333333em;
+	}
+	h1 {
+		font-size: 1.444444444444444em;
+	}	
+	header svg {
+		margin-bottom: 40px !important;
+	}
+}
+
+
+@media screen and (-webkit-device-pixel-ratio: 2) {
+	#logo a {
+		background: url(/images/nm-logo@2x.png) no-repeat;
+	}
+	#secondary-logo {
+		background: url(/images/nm-logo@2x.png) no-repeat;
+	}
+}
