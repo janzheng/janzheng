@@ -1,3 +1,19 @@
+title : Jan Zheng Portfolio
+tagline: Site Tagline
+author :
+  name : Jan Zheng
+  email : contact@janzheng.com
+  github : janzheng
+  twitter : janistanian
+  linkedin : www.linkedin.com/in/janzh # this probably needs to be configured somewhere
+
+
 markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:title.html
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "notes.txt"]
+auto: true
+
+
+# don't forget to separately set Google Analytics and Facebook Comments
+# alternately, use Tumblr to post

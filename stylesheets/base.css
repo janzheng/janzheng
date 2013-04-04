@@ -1,0 +1,1336 @@
+/*  HTML5 ✰ Boilerplate  */
+/* line 11, sass/base.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 21, sass/base.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 25, sass/base.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 27, sass/base.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 28, sass/base.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 29, sass/base.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 30, sass/base.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 31, sass/base.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 32, sass/base.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 33, sass/base.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 34, sass/base.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 36, sass/base.scss */
+body {
+  font: 13px/1.231 sans-serif;
+  *font-size: small;
+}
+
+/* line 37, sass/base.scss */
+select, input, textarea, button {
+  font: 99% sans-serif;
+}
+
+/* line 38, sass/base.scss */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* line 40, sass/base.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 41, sass/base.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/* line 42, sass/base.scss */
+ul, ol {
+  margin-left: 2em;
+}
+
+/* line 43, sass/base.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 44, sass/base.scss */
+nav ul, nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 45, sass/base.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 46, sass/base.scss */
+strong, th {
+  font-weight: bold;
+}
+
+/* line 47, sass/base.scss */
+td {
+  vertical-align: top;
+}
+
+/* line 49, sass/base.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+/* line 50, sass/base.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 51, sass/base.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 53, sass/base.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+/* line 54, sass/base.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 55, sass/base.scss */
+.ie6 legend, .ie7 legend {
+  margin-left: -7px;
+}
+
+/* line 56, sass/base.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 57, sass/base.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+/* line 58, sass/base.scss */
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+/* line 59, sass/base.scss */
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/* line 60, sass/base.scss */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer;
+}
+
+/* line 61, sass/base.scss */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* line 63, sass/base.scss */
+input:invalid, textarea:invalid {
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red;
+}
+
+/* line 64, sass/base.scss */
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* line 66, sass/base.scss */
+::-moz-selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 67, sass/base.scss */
+::selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 68, sass/base.scss */
+a:link {
+  -webkit-tap-highlight-color: #FF5E99;
+}
+
+/* line 70, sass/base.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* line 71, sass/base.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 73, sass/base.scss */
+body, select, input, textarea {
+  color: #444;
+}
+
+/* line 74, sass/base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* line 75, sass/base.scss */
+a, a:active, a:visited {
+  color: #607890;
+}
+
+/* line 76, sass/base.scss */
+a:hover {
+  color: #036;
+}
+
+/*
+    // ========================================== \
+   ||                                              ||
+   ||               Your styles !                  ||
+   ||                                              ||
+    \ ========================================== //
+*/
+/* line 1, sass/_syntax.scss */
+.highlight {
+  background: #ffffff;
+}
+
+/* line 2, sass/_syntax.scss */
+.highlight .c {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment */
+/* line 3, sass/_syntax.scss */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+/* Error */
+/* line 4, sass/_syntax.scss */
+.highlight .k {
+  font-weight: bold;
+}
+
+/* Keyword */
+/* line 5, sass/_syntax.scss */
+.highlight .o {
+  font-weight: bold;
+}
+
+/* Operator */
+/* line 6, sass/_syntax.scss */
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+/* line 7, sass/_syntax.scss */
+.highlight .cp {
+  color: #999999;
+  font-weight: bold;
+}
+
+/* Comment.Preproc */
+/* line 8, sass/_syntax.scss */
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
+}
+
+/* Comment.Single */
+/* line 9, sass/_syntax.scss */
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Comment.Special */
+/* line 10, sass/_syntax.scss */
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+
+/* Generic.Deleted */
+/* line 11, sass/_syntax.scss */
+.highlight .gd .x {
+  color: #000000;
+  background-color: #ffaaaa;
+}
+
+/* Generic.Deleted.Specific */
+/* line 12, sass/_syntax.scss */
+.highlight .ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+/* line 13, sass/_syntax.scss */
+.highlight .gr {
+  color: #aa0000;
+}
+
+/* Generic.Error */
+/* line 14, sass/_syntax.scss */
+.highlight .gh {
+  color: #999999;
+}
+
+/* Generic.Heading */
+/* line 15, sass/_syntax.scss */
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+
+/* Generic.Inserted */
+/* line 16, sass/_syntax.scss */
+.highlight .gi .x {
+  color: #000000;
+  background-color: #aaffaa;
+}
+
+/* Generic.Inserted.Specific */
+/* line 17, sass/_syntax.scss */
+.highlight .go {
+  color: #888888;
+}
+
+/* Generic.Output */
+/* line 18, sass/_syntax.scss */
+.highlight .gp {
+  color: #555555;
+}
+
+/* Generic.Prompt */
+/* line 19, sass/_syntax.scss */
+.highlight .gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+/* line 20, sass/_syntax.scss */
+.highlight .gu {
+  color: #aaaaaa;
+}
+
+/* Generic.Subheading */
+/* line 21, sass/_syntax.scss */
+.highlight .gt {
+  color: #aa0000;
+}
+
+/* Generic.Traceback */
+/* line 22, sass/_syntax.scss */
+.highlight .kc {
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+/* line 23, sass/_syntax.scss */
+.highlight .kd {
+  font-weight: bold;
+}
+
+/* Keyword.Declaration */
+/* line 24, sass/_syntax.scss */
+.highlight .kp {
+  font-weight: bold;
+}
+
+/* Keyword.Pseudo */
+/* line 25, sass/_syntax.scss */
+.highlight .kr {
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+/* line 26, sass/_syntax.scss */
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+
+/* Keyword.Type */
+/* line 27, sass/_syntax.scss */
+.highlight .m {
+  color: #009999;
+}
+
+/* Literal.Number */
+/* line 28, sass/_syntax.scss */
+.highlight .s {
+  color: #d14;
+}
+
+/* Literal.String */
+/* line 29, sass/_syntax.scss */
+.highlight .na {
+  color: #008080;
+}
+
+/* Name.Attribute */
+/* line 30, sass/_syntax.scss */
+.highlight .nb {
+  color: #0086B3;
+}
+
+/* Name.Builtin */
+/* line 31, sass/_syntax.scss */
+.highlight .nc {
+  color: #445588;
+  font-weight: bold;
+}
+
+/* Name.Class */
+/* line 32, sass/_syntax.scss */
+.highlight .no {
+  color: #008080;
+}
+
+/* Name.Constant */
+/* line 33, sass/_syntax.scss */
+.highlight .ni {
+  color: #800080;
+}
+
+/* Name.Entity */
+/* line 34, sass/_syntax.scss */
+.highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+/* line 35, sass/_syntax.scss */
+.highlight .nf {
+  color: #990000;
+  font-weight: bold;
+}
+
+/* Name.Function */
+/* line 36, sass/_syntax.scss */
+.highlight .nn {
+  color: #555555;
+}
+
+/* Name.Namespace */
+/* line 37, sass/_syntax.scss */
+.highlight .nt {
+  color: #000080;
+}
+
+/* Name.Tag */
+/* line 38, sass/_syntax.scss */
+.highlight .nv {
+  color: #008080;
+}
+
+/* Name.Variable */
+/* line 39, sass/_syntax.scss */
+.highlight .ow {
+  font-weight: bold;
+}
+
+/* Operator.Word */
+/* line 40, sass/_syntax.scss */
+.highlight .w {
+  color: #bbbbbb;
+}
+
+/* Text.Whitespace */
+/* line 41, sass/_syntax.scss */
+.highlight .mf {
+  color: #009999;
+}
+
+/* Literal.Number.Float */
+/* line 42, sass/_syntax.scss */
+.highlight .mh {
+  color: #009999;
+}
+
+/* Literal.Number.Hex */
+/* line 43, sass/_syntax.scss */
+.highlight .mi {
+  color: #009999;
+}
+
+/* Literal.Number.Integer */
+/* line 44, sass/_syntax.scss */
+.highlight .mo {
+  color: #009999;
+}
+
+/* Literal.Number.Oct */
+/* line 45, sass/_syntax.scss */
+.highlight .sb {
+  color: #d14;
+}
+
+/* Literal.String.Backtick */
+/* line 46, sass/_syntax.scss */
+.highlight .sc {
+  color: #d14;
+}
+
+/* Literal.String.Char */
+/* line 47, sass/_syntax.scss */
+.highlight .sd {
+  color: #d14;
+}
+
+/* Literal.String.Doc */
+/* line 48, sass/_syntax.scss */
+.highlight .s2 {
+  color: #d14;
+}
+
+/* Literal.String.Double */
+/* line 49, sass/_syntax.scss */
+.highlight .se {
+  color: #d14;
+}
+
+/* Literal.String.Escape */
+/* line 50, sass/_syntax.scss */
+.highlight .sh {
+  color: #d14;
+}
+
+/* Literal.String.Heredoc */
+/* line 51, sass/_syntax.scss */
+.highlight .si {
+  color: #d14;
+}
+
+/* Literal.String.Interpol */
+/* line 52, sass/_syntax.scss */
+.highlight .sx {
+  color: #d14;
+}
+
+/* Literal.String.Other */
+/* line 53, sass/_syntax.scss */
+.highlight .sr {
+  color: #009926;
+}
+
+/* Literal.String.Regex */
+/* line 54, sass/_syntax.scss */
+.highlight .s1 {
+  color: #d14;
+}
+
+/* Literal.String.Single */
+/* line 55, sass/_syntax.scss */
+.highlight .ss {
+  color: #990073;
+}
+
+/* Literal.String.Symbol */
+/* line 56, sass/_syntax.scss */
+.highlight .bp {
+  color: #999999;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 57, sass/_syntax.scss */
+.highlight .vc {
+  color: #008080;
+}
+
+/* Name.Variable.Class */
+/* line 58, sass/_syntax.scss */
+.highlight .vg {
+  color: #008080;
+}
+
+/* Name.Variable.Global */
+/* line 59, sass/_syntax.scss */
+.highlight .vi {
+  color: #008080;
+}
+
+/* Name.Variable.Instance */
+/* line 60, sass/_syntax.scss */
+.highlight .il {
+  color: #009999;
+}
+
+/* Literal.Number.Integer.Long */
+/*Variables*/
+/*Global mixins*/
+/*Structure and type*/
+/* line 39, sass/_styles.scss */
+body {
+  background-color: #F1F1F1;
+  /*background: url(/images/bg.png) repeat;*/
+  font: normal 112.5% 'kepler-std-1', Georgia, serif;
+  /*18 px default*/
+  color: #393536;
+  font-weight: 300;
+  line-height: 1.625em;
+  border-top: #393536 6px solid;
+}
+
+/* line 48, sass/_styles.scss */
+b {
+  font-weight: 600;
+}
+
+/* line 51, sass/_styles.scss */
+a, a:visited {
+  color: #b93c48;
+  text-decoration: none;
+}
+
+/* line 55, sass/_styles.scss */
+a:hover {
+  color: #1e6386;
+}
+
+/* line 58, sass/_styles.scss */
+h1, h2, h3, h4, h5, nav {
+  font: normal 100% 'proxima-nova-1', Helvetica, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .125em;
+}
+
+/* line 64, sass/_styles.scss */
+blockquote {
+  padding-left: 30px;
+  border-left: 1px dotted #1e6386;
+  color: #1e6386;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* line 71, sass/_styles.scss */
+.highlight {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 74, sass/_styles.scss */
+pre {
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
+  font-size: 0.722222222222222em;
+  line-height: 1.8em;
+  margin-bottom: 40px;
+}
+
+/* line 81, sass/_styles.scss */
+pre, code, kbd, samp {
+  font-family: 'Monaco', 'andale mono', 'lucida console', monospace;
+}
+
+/* line 84, sass/_styles.scss */
+code.inline, code.default-size {
+  font-size: 0.777777777777778em;
+  /*font-size: 12px;*/
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #CECECE;
+  padding: 2px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* line 92, sass/_styles.scss */
+h1 {
+  margin-bottom: 40px;
+  line-height: 1.15em;
+  font-size: 1.75em;
+  /*28 / 16*/
+}
+
+/* line 97, sass/_styles.scss */
+p, ul, ol {
+  margin-bottom: 30px;
+}
+
+/* line 100, sass/_styles.scss */
+i, em {
+  font-style: italic;
+}
+
+/* line 104, sass/_styles.scss */
+#container {
+  width: 94.2372881355932%;
+  margin: 0 auto;
+  /*1112 / 1180*/
+}
+
+/* line 108, sass/_styles.scss */
+#logo {
+  width: 172px;
+  float: left;
+}
+/* line 111, sass/_styles.scss */
+#logo a {
+  width: 150px;
+  height: 149px;
+  background: url(/images/nm-logo.png) no-repeat;
+  -webkit-background-size: 150px 149px;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: fixed;
+  margin-top: 24px;
+}
+
+/* line 118, sass/_styles.scss */
+#main-column {
+  width: 80.508474576271186%;
+  /*950 / 1180*/
+  float: left;
+}
+
+/* line 122, sass/_styles.scss */
+header {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+/* line 126, sass/_styles.scss */
+header h1 {
+  display: none;
+}
+/* line 129, sass/_styles.scss */
+header svg {
+  margin-bottom: 70px;
+}
+
+/* line 134, sass/_styles.scss */
+#sidebar {
+  width: 36.842105263157895%;
+  /*350 / 950*/
+  float: left;
+  margin-right: 5.263157894736842%;
+  /*50 / 950 */
+}
+/* line 138, sass/_styles.scss */
+#sidebar #links, #sidebar #work {
+  border-top: #393536 6px solid;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+/* line 143, sass/_styles.scss */
+#sidebar #work {
+  padding-top: 0;
+  border-top: none;
+}
+/* line 146, sass/_styles.scss */
+#sidebar #work img.portrait {
+  max-width: 97%;
+  border: #393536 6px solid;
+  margin-bottom: 40px;
+}
+
+/* line 153, sass/_styles.scss */
+body.post #sidebar, body.about #sidebar {
+  margin-left: 5.263157894736842%;
+  /*50 / 950 */
+  margin-right: 0;
+  /*50 / 950 */
+}
+
+/* line 157, sass/_styles.scss */
+#blog {
+  width: 57.894736842105263%;
+  /*550 / 950 */
+  float: left;
+}
+
+/* line 161, sass/_styles.scss */
+.clear {
+  clear: both;
+}
+
+/* line 164, sass/_styles.scss */
+nav#elsewhere {
+  font-size: 0.666666666666667em;
+}
+/* line 166, sass/_styles.scss */
+nav#elsewhere li {
+  float: left;
+  margin-bottom: 20px;
+  width: 25%;
+}
+
+/* line 173, sass/_styles.scss */
+footer {
+  margin-left: 172px;
+  border-top: #393536 6px solid;
+  margin-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  width: 80.5085%;
+}
+/* line 180, sass/_styles.scss */
+footer .logo {
+  float: left;
+  width: 26%;
+}
+/* line 184, sass/_styles.scss */
+footer nav {
+  float: left;
+  width: 16.1053%;
+}
+/* line 188, sass/_styles.scss */
+footer #fine-print {
+  width: 57.8947%;
+  float: left;
+  font-size: 0.888888888888889em;
+  line-height: 1.45em;
+}
+
+/*Homepage*/
+/* line 198, sass/_styles.scss */
+.intro {
+  font-size: 2em;
+  /* 29px / 18px */
+  font-family: 'proxima-nova-1', Helvetica, sans-serif;
+  line-height: 1.35em;
+  font-weight: 800;
+  margin-bottom: 3px;
+  margin-bottom: 12px;
+}
+/* line 205, sass/_styles.scss */
+.intro b {
+  font-weight: 800;
+}
+
+/*Homepage - Blog posts*/
+/* line 218, sass/_styles.scss */
+.post-home {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  border-top: #393536 6px solid;
+}
+/* line 222, sass/_styles.scss */
+.post-home img, .post-home iframe {
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+/* line 226, sass/_styles.scss */
+.meta-data {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+/* line 229, sass/_styles.scss */
+.meta-data span {
+  margin-right: 20px;
+}
+
+/* line 233, sass/_styles.scss */
+.external.hover {
+  color: #1e6386;
+  text-decoration: underline;
+}
+
+/*Post pages*/
+/* line 239, sass/_styles.scss */
+body.post article {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  border-top: #393536 6px solid;
+}
+/* line 243, sass/_styles.scss */
+body.post article img, body.post article iframe {
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+/* line 246, sass/_styles.scss */
+body.post article h2 {
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 12px;
+  margin-top: 6px;
+  line-height: 1.625em;
+  font-size: 1.1em;
+}
+/* line 249, sass/_styles.scss */
+body.post article .post-intro {
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+
+/* line 254, sass/_styles.scss */
+.photo-ending {
+  border-top: #393536 6px solid;
+  margin-top: 30px;
+  padding-top: 40px;
+}
+
+/*about*/
+/* line 263, sass/_styles.scss */
+body.about #work h1 {
+  display: none;
+}
+/* line 266, sass/_styles.scss */
+body.about section {
+  border-top: #393536 6px solid;
+  padding-top: 40px;
+  margin-bottom: 60px;
+}
+/* line 270, sass/_styles.scss */
+body.about section h2 {
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 12px;
+  margin-top: 6px;
+  line-height: 1.625em;
+  font-size: 1.1em;
+}
+/* line 272, sass/_styles.scss */
+body.about section h2.last {
+  margin-bottom: 30px;
+}
+
+/* line 280, sass/_styles.scss */
+#awards h2, #experience h2, #education h2, #other h2, #post-body h2 {
+  margin-bottom: 16px;
+  font-family: 'kepler-std-1', Georgia, serif;
+  font-weight: 300;
+  padding-top: 10px;
+}
+
+/* line 287, sass/_styles.scss */
+#post-body h2 {
+  margin-bottom: 12px;
+}
+
+/* line 291, sass/_styles.scss */
+#made h2 {
+  font-family: 'kepler-std-1', Georgia, serif;
+  font-weight: 300;
+}
+
+/* line 298, sass/_styles.scss */
+.project {
+  /*font-family: 'kepler-std-1', Georgia, serif;  */
+  font-weight: 300;
+}
+
+/* comments */
+/* line 306, sass/_styles.scss */
+#disqus_thread {
+  margin-top: 60px;
+  overflow: hidden;
+  padding-top: 40px;
+  border-top: #393536 6px solid;
+}
+/* line 311, sass/_styles.scss */
+#disqus_thread iframe {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 317, sass/_styles.scss */
+.dsq-textarea-reply {
+  margin-left: 0 !important;
+}
+
+/* line 320, sass/_styles.scss */
+#dsq-sort-by, #dsq-pagination, .dsq-trackback-url, .dsq-brlink, #dsq-global-toolbar, #dsq-account-dropdown {
+  display: none !important;
+}
+
+/* line 323, sass/_styles.scss */
+.dsq-textarea-wrapper iframe {
+  margin-left: 0 !important;
+}
+
+/*.dsq-comment-body {
+	padding-left: 0 !important;
+}*/
+/* line 329, sass/_styles.scss */
+#dsq-reply {
+  margin-top: 0px !important;
+  margin-bottom: 20px !important;
+}
+
+/* line 333, sass/_styles.scss */
+#dsq-content h3 {
+  margin-bottom: 20px !important;
+  font-size: 0.666666666666667em;
+}
+
+/* line 92, sass/base.scss */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* line 93, sass/base.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 94, sass/base.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 96, sass/base.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 97, sass/base.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 98, sass/base.scss */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 99, sass/base.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 100, sass/base.scss */
+.clearfix {
+  zoom: 1;
+}
+
+/* line 1, sass/_media-queries.scss */
+#secondary-logo {
+  display: none;
+}
+
+/* line 4, sass/_media-queries.scss */
+#container {
+  max-width: 1680px;
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 8, sass/_media-queries.scss */
+  p.intro {
+    font-size: 1.7em;
+    /* /18 */
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* line 14, sass/_media-queries.scss */
+  nav#elsewhere li {
+    width: 50%;
+  }
+
+  /* line 19, sass/_media-queries.scss */
+  footer .logo {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+  /* line 24, sass/_media-queries.scss */
+  footer nav {
+    width: 30%;
+  }
+  /* line 27, sass/_media-queries.scss */
+  footer #fine-print {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 980px) {
+  /* line 33, sass/_media-queries.scss */
+  #logo {
+    display: none;
+  }
+
+  /* line 36, sass/_media-queries.scss */
+  #container {
+    width: 90%;
+  }
+
+  /* line 39, sass/_media-queries.scss */
+  #sidebar, body.post #sidebar, body.about #sidebar {
+    margin: 0;
+  }
+
+  /* line 42, sass/_media-queries.scss */
+  #main-column, #sidebar, #blog, footer {
+    width: 100%;
+    display: block;
+  }
+
+  /* line 46, sass/_media-queries.scss */
+  footer {
+    margin-left: 0;
+  }
+
+  /* line 49, sass/_media-queries.scss */
+  p.intro {
+    font-size: 1.4em;
+    /* /18 */
+  }
+
+  /* line 53, sass/_media-queries.scss */
+  nav#elsewhere li {
+    width: 25%;
+    font-size: 1.333333333333333em;
+    /* /18 */
+  }
+
+  /* line 58, sass/_media-queries.scss */
+  #secondary-logo {
+    width: 150px;
+    height: 149px;
+    background: url(/images/nm-logo.png) no-repeat;
+    -webkit-background-size: 150px 149px;
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 20px;
+    float: left;
+    margin-top: -47px;
+    margin-bottom: 20px;
+  }
+
+  /* line 65, sass/_media-queries.scss */
+  header svg {
+    float: left;
+    margin-bottom: 78px;
+  }
+
+  /* line 69, sass/_media-queries.scss */
+  footer {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 75, sass/_media-queries.scss */
+  footer nav {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+  /* line 80, sass/_media-queries.scss */
+  footer #fine-print {
+    width: 100%;
+    display: block;
+  }
+}
+@media screen and (max-width: 320px) {
+  /* line 88, sass/_media-queries.scss */
+  nav#elsewhere li {
+    width: 50%;
+  }
+
+  /* line 92, sass/_media-queries.scss */
+  .meta-data {
+    font-size: 0.833333333333333em;
+  }
+
+  /* line 95, sass/_media-queries.scss */
+  h1 {
+    font-size: 1.444444444444444em;
+  }
+
+  /* line 98, sass/_media-queries.scss */
+  header svg {
+    margin-bottom: 40px !important;
+  }
+}
+@media screen and (-webkit-device-pixel-ratio: 2) {
+  /* line 105, sass/_media-queries.scss */
+  #logo a {
+    background: url(/images/nm-logo@2x.png) no-repeat;
+  }
+
+  /* line 108, sass/_media-queries.scss */
+  #secondary-logo {
+    background: url(/images/nm-logo@2x.png) no-repeat;
+  }
+}
+@media print {
+  /* line 106, sass/base.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 108, sass/base.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  /* line 109, sass/base.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 110, sass/base.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 111, sass/base.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 112, sass/base.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 113, sass/base.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 114, sass/base.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 116, sass/base.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 117, sass/base.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

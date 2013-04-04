@@ -1,0 +1,29 @@
+---
+layout: none
+---
+<!doctype html>
+<html lang="en" class="no-js">
+{% include head.html %}
+
+<body class="main">	
+	<div id="container">
+    <div id="sidebar" style="background-color:SpringGreen;">
+      <header>{% include logo.html %}</header>
+      <nav id="menu">{% include menu.html %}</nav>
+      <div id="">{% include about.html %}</div>
+      <div id="">{% include contact.html %}</div>
+    </div>
+    <div class="clear"></div>
+
+	  <div id="content" style="background-color:SkyBlue ;">
+  	  <div id="blog">
+  	    {{ content }}
+  	  </div>
+      <footer id="legal">{% include legal.html %}</footer>
+	  </div>
+
+	</div>
+
+  {% include script.html %}
+</body>
+</html>

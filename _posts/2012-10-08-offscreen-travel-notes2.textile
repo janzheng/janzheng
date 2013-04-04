@@ -1,0 +1,9 @@
+---
+layout: post
+title: Offscreen Travel Notes
+summary-only: yes
+<!-- external: http://www.offscreenmag.com/ -->
+image-path: /images/offscreen.jpg
+---
+
+I wrote a few words in "Offscreen - Issue 3":http://www.offscreenmag.com/issue3/. Buy it, it's beautiful.
