@@ -3,7 +3,7 @@
 
 This is the repository for my personal blog and portfolio site. Feel free to browse.
 
-
+The code of this site is somewhat based off Nathan McGinness's personal site, [nthn](http://nthn.net)
 
 # How to Make Your Own
 
