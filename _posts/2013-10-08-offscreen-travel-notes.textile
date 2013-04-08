@@ -8,6 +8,3 @@ summary-only: yes
 
 I wrote a few words in "Offscreen - Issue 3":http://www.offscreenmag.com/issue3/. Buy it, it's beautiful.
 
-{% highlight html %}  
-   <div id="hello">hello world!</div>  
-{% endhighlight %}
