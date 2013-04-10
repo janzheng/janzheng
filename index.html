@@ -13,32 +13,34 @@ Object    (external link | post url) (image | youtube | vimeo)
 Summary   
  -->
 {% for post in site.posts %}
-<section class="post">
-  <div class="meta-data">
-    <span class="post-date">
-      {{ post.date | date: "%d %B %Y" }}      
-    </span> 
+<a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
+  <section class="post">
+    <div class="meta-data">
+      <span class="post-date">
+        {{ post.date | date: "%d %B %Y" }}      
+      </span> 
 
 
-<!--{% if post.external %}
-      <span class="external">External link</span>
-      <a class="permalink" href="{{ post.url }}">Permalink</a>
-    {% endif %} -->
-  </div>
+  <!--{% if post.external %}
+        <span class="external">External link</span>
+        <a class="permalink" href="{{ post.url }}">Permalink</a>
+      {% endif %} -->
+    </div>
 
-  <h1><a href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">{{ post.title }}</a></h1>
+    <h1>{{ post.title }}</h1>
 
-  {% if post.image-path %}      
-    <a href=" {% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}"><img class="post-image" src="{{ post.image-path }}"></img></a>             
-  {% endif %}
+    {% if post.image-path %}      
+     <img class="post-image" src="{{ post.image-path }}"></img>           
+    {% endif %}
 
-  {% if post.youtube %}<iframe width="550" height="452" src="{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>{% endif %}
-  {% if post.vimeo %}<iframe src="{{ post.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=0f314a" width="550" height="309" frameborder="0"></iframe>{% endif %}    
+    {% if post.youtube %}<iframe width="550" height="452" src="{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>{% endif %}
+    {% if post.vimeo %}<iframe src="{{ post.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=0f314a" width="550" height="309" frameborder="0"></iframe>{% endif %}    
 
 
-  <p class="post-summary">{{ post.summary }}</p>
+    <p class="post-summary">{{ post.summary }}</p>
 
-  <div class="clear"></div>
-</section>
+    <div class="clear"></div>
+  </section>
+</a>
 <div class="line-separator"></div>
 {% endfor %}

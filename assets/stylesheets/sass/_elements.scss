@@ -1,17 +1,22 @@
 
-//button styles
-a {
-    color: #f44a56;
+//link & button styles
+
+h1, h2, h3, h4, h5, h6 {  }
+a, a:active, a:visited { 
+    color: $dark-gray; 
     text-decoration: none;
+}
+a:hover { color: $gray; }
+
+a.bttn {
+    color: $white;
     cursor: pointer;
+    padding: 1em;
+    background-color: $dark-gray;
 }
 
-.bttn.download, .bttn.back, .bttn.tweet {
-    padding: 1em;
-    background-color: #f44a56;
-}
 .bttn:hover, .bttn:active, .bttn.clicked {
-    background: #3e4b5d;
+    background: $light-gray;
     @include ease-transition(300ms);
 }
 
@@ -24,7 +29,6 @@ a {
     @include ease-transition(200ms);
 
     margin-bottom: 0.5em;
-
 
     //round corners for medium and up
     @include media($medium){

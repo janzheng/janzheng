@@ -19,7 +19,6 @@
     #logo {
       text-align: center;
       @include span-columns(12);
-      background-color: steelblue;
 
       #logo-image {
         width: 100%;
@@ -27,7 +26,7 @@
       }
     }
     #menu {
-      padding-top: 4em;
+      padding-top: 12em;
       #menu-blog{@include span-columns(12);}
       #menu-email{@include span-columns(12);}
     }
@@ -38,7 +37,6 @@
     }
 
     #legal {
-      background-color: NavajoWhite;
     }
     
   }
@@ -61,6 +59,15 @@
 
 #container {
   @include outer-container;
+
+
+/*
+
+
+    SIDE BAR ********************************************************************************************************
+
+
+*/
 
   #sidebar {
       // position:relative;
@@ -98,7 +105,7 @@
           height: 100%;
           position: fixed;
         }
-        background-color:darkseagreen;
+        // background-color:darkseagreen;
       }
 
       #contact {
@@ -150,44 +157,63 @@
   }
 
 
+
+
+/*
+
+
+    MAIN CONTENT ********************************************************************************************************
+    
+
+*/
+
+
+
+
   #main {
     @include span-columns(12);
-
-
-    // li {
-    //   background-color: white;
-    //   height: 180px;
-    //   margin: 10px;
-    // }
-
     @include clearfix;
+  
+    padding-bottom: 8em;
 
     .post {
+      margin-top: 3em;
       // border-bottom: 1px solid #888; 
       padding: 2em;
-      // @include set-radius(10px);
+      @include set-radius(0.5em);
+      border: 1px solid $light-gray;
+      background-color: $silver;
     }
     
-    .line-separator {
-      height: 1px;
-      border-bottom: 1px solid #ddd; 
-      @include span-columns(12);
-      // @include box-shadow(0 1px 1px rgba(200, 200, 200, 0.3));
-
-    }
 
     @include media($small) {
       @include span-columns(6);
 
+      //typography
+      .post-date {@include font-tip($f4, 300);}
+      h1 {@include font-body($f1*0.8, 300);}
+      .post-summary{@include font-body($f2*0.8, 300); margin-top: 0.3em;}
+
+      .post {
+        border-left: 0px; border-right: 0px;
+        @include set-radius(0);
+      }
+
       .post-image {
         width: 100%;
         height: auto;
+
       }
     }
 
     @include media($medium) {
       @include span-columns(9);
       @include shift (3);
+
+      //typography
+      .post-date {@include font-tip($f4, 300);}
+      h1 {@include font-body($f1*0.8, 300);}
+      .post-summary{@include font-body($f2*0.8, 300); margin-top: 0.3em;}
 
       .post-image {
         width:95%;
@@ -202,6 +228,11 @@
     @include media($large) {
       @include span-columns(9);
       @include shift(3);
+
+      //typography
+      .post-date {@include font-tip($f4, 300);}
+      h1 {@include font-body($f1, 300);}
+      .post-summary{@include font-body($f2, 300); margin-top: 0.3em;}
 
     }
 

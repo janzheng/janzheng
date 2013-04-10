@@ -1,6 +1,54 @@
 
     
 // settings
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Open+Sans:300,400);
+
+
+//colors
+$white: #fff;
+$red: #972020;
+$light-red: #a00;
+$light-gray: #ccc;
+$gray: #777;
+$dark-gray: #333;
+$silver: #f5f5f5;
+$pink: #f44a56;
+$matte-blue: #3e4b5d;
+
+
+/*
+kuler: Lifedots 1
+#2A3140
+#F2D399
+#F29863
+#D95F43
+#A63737
+
+
+kuler: Norse
+9C001A
+FFFBDB
+ACBFCC
+77838C
+41484C
+
+*/
+
+
+@mixin font-tip($size: $base, $weight: 400, $style: normal) {
+    font-family: 'Georgia', serif;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+}
+
+@mixin font-body($size: $base, $weight: 300, $style: normal) {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+}
+
 
 // respsonsive
 $break-small: 400px;
@@ -32,12 +80,12 @@ $tall: new-breakpoint(min-height $break-tall 12);
 // sizing
 $base: 13px;
 
-$h1: $base;
-$h2: $base;
-$h3: $base;
-$h4: $base;
-$h5: $base;
-$h6: $base;
+$f1: golden-ratio($base, 4) * 0.45;
+$f2: golden-ratio($base, 3) * 0.45;
+$f3: golden-ratio($base, 2) * 0.45;
+$f4: golden-ratio($base, 1) * 0.65;
+$f5: golden-ratio($base, 1) * 0.45;
+$f6: golden-ratio($base, 1) * 0.45;
 $tinyfont: $base * 0.82;
 
 
@@ -213,9 +261,9 @@ button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
 body, select, input, textarea {  color: #444; }
-h1, h2, h3, h4, h5, h6 { font-weight: bold; }
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
+h1, h2, h3, h4, h5, h6 {  }
+a, a:active, a:visited { color: $red; }
+a:hover { color: $light-red; }
 
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .hidden { display: none; visibility: hidden; }

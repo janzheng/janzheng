@@ -1,0 +1,12 @@
+---
+layout: post
+title: Getting started on Github and Jekyll
+summary: Github is incredibly powerful and completely free. 
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+---
+
+Using Github pages is incredibly flexible and absolutely free. 
+

@@ -1,17 +1,18 @@
 ---
 layout: post
 title: Textile Primer
-<!-- summary-only: yes -->
-<!-- external: http://www.offscreenmag.com/ -->
-<!-- image-path: /assets/images2/offscreen.jpg -->
+summary: A quick handy synopsis to writing posts in Textile. 
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
 ---
 
 Hello new blog, and hello Textile!
 
-Having only written in Markdown and pure HTML, I've decided to pick up Textile. Seems like Textile's a little more fluid, and supports things like inline CSS classes and IDs - seems like that could come in handy.
+Having only written in Markdown and pure HTML, I've decided to pick up Textile. Seems like Textile's a little more flexible and supports things like inline CSS classes and IDs - those could come in handy. With that said, I've never written in textile before. Since  this is my first post, this is going to be a sort of textile review / cheat sheet / practice ground to help me get started.
 
-bloop
- 
+
 bc. 
 $(function(){
    $(".post-home h1 a").hover(
@@ -26,8 +27,3 @@ $(function(){
 
 hmmm
 
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
