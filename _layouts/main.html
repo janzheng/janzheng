@@ -1,6 +1,8 @@
 ---
 layout: none
+
 ---
+
 <!doctype html>
 <html lang="en" class="no-js">
 {% include head.html %}
@@ -12,33 +14,25 @@ layout: none
       <div class="content">
 
         <div class="sticky-wrapper">
-          <header>{% include logo.html %}</header>
-          <nav id="menu">{% include menu.html %}</nav>
-          <div id="">{% include about.html %}</div>
+          <div id="logo">{% include logo.html %}</div>
+          <div id="menu">{% include menu.html %}</div>
+          <div id="about">{% include about.html %}</div>
 
           <div class="push"></div>
         </div>
         
         <footer>
-          <div id="">{% include contact.html %}</div>
-          {% include legal.html %}
+          <div id="contact">{% include contact.html %}</div>
+          <div id="legal">{% include legal.html %}</div>
         </footer>
       </div>
     </div>
 
     <div class="clear"></div>
 
-	  <div id="main" style="background-color:SkyBlue ;">
+	  <div id="main">
   	  <div class="content">
-  	    <!-- {{ content }} -->
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+  	    {{ content }}
   	  </div>
 	  </div>
 

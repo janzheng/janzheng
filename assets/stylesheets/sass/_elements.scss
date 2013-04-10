@@ -1,0 +1,55 @@
+
+//button styles
+a {
+    color: #f44a56;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bttn.download, .bttn.back, .bttn.tweet {
+    padding: 1em;
+    background-color: #f44a56;
+}
+.bttn:hover, .bttn:active, .bttn.clicked {
+    background: #3e4b5d;
+    @include ease-transition(300ms);
+}
+
+.bttn {
+    overflow: hidden;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    @include ease-transition(200ms);
+
+    margin-bottom: 0.5em;
+
+
+    //round corners for medium and up
+    @include media($medium){
+        @include set-radius(3px);
+    }
+}
+
+
+
+// sticky contact footer
+html, body, #container, img {
+    height: 100%;
+    @include ease-transition(200ms);
+}
+
+.sticky-wrapper {
+    min-height: 100%;
+    @include media($medium){margin: 0 auto -14em;}
+    @include media($large){margin: 0 auto -7em;}
+}
+
+footer, .push {
+    @include media($medium){height: 14em;}
+    @include media($large){margin: 0 auto -7em;}
+}
+
+
+

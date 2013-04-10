@@ -1,0 +1,1247 @@
+/* line 2, ../sass/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Batch;
+  src: url("/assets/fonts/batch.eot");
+  src: url("/assets/fonts/batch.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/batch.woff") format("woff"), url("/assets/fonts/batch.ttf") format("truetype"), url("/assets/fonts/batch.svg#batchregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 77, ../sass/_settings.scss */
+.batch {
+  font-family: "Batch";
+  /*or whatever you've decalred your font name as*/
+  font-size: 16px;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* line 83, ../sass/_settings.scss */
+.batch:before {
+  content: attr(data-icon);
+}
+
+/* line 87, ../sass/_settings.scss */
+.batch--tiny {
+  font-size: 9px;
+}
+
+/* line 88, ../sass/_settings.scss */
+.batch--large {
+  font-size: 32px;
+}
+
+/* line 89, ../sass/_settings.scss */
+.batch--huge {
+  font-size: 64px;
+}
+
+/* line 90, ../sass/_settings.scss */
+.batch--natural {
+  font-size: inherit;
+}
+
+/*  HTML5 ✰ Boilerplate  */
+/* line 148, ../sass/_settings.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 158, ../sass/_settings.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 162, ../sass/_settings.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 164, ../sass/_settings.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 165, ../sass/_settings.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 166, ../sass/_settings.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 167, ../sass/_settings.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 168, ../sass/_settings.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 169, ../sass/_settings.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 170, ../sass/_settings.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 171, ../sass/_settings.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 174, ../sass/_settings.scss */
+body {
+  font: 13px sans-serif;
+  *font-size: small;
+}
+
+/* line 175, ../sass/_settings.scss */
+select, input, textarea, button {
+  font: 99% sans-serif;
+}
+
+/* line 176, ../sass/_settings.scss */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* line 178, ../sass/_settings.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 179, ../sass/_settings.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/* line 182, ../sass/_settings.scss */
+ul, ol {
+  margin-left: 0em;
+}
+
+/* line 183, ../sass/_settings.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 184, ../sass/_settings.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 186, ../sass/_settings.scss */
+nav ul, nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 187, ../sass/_settings.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 188, ../sass/_settings.scss */
+strong, th {
+  font-weight: bold;
+}
+
+/* line 189, ../sass/_settings.scss */
+td {
+  vertical-align: top;
+}
+
+/* line 191, ../sass/_settings.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+/* line 192, ../sass/_settings.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 193, ../sass/_settings.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 195, ../sass/_settings.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+/* line 196, ../sass/_settings.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 197, ../sass/_settings.scss */
+.ie6 legend, .ie7 legend {
+  margin-left: -7px;
+}
+
+/* line 198, ../sass/_settings.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 199, ../sass/_settings.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+/* line 200, ../sass/_settings.scss */
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+/* line 201, ../sass/_settings.scss */
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/* line 202, ../sass/_settings.scss */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer;
+}
+
+/* line 203, ../sass/_settings.scss */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* line 205, ../sass/_settings.scss */
+input:invalid, textarea:invalid {
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red;
+}
+
+/* line 206, ../sass/_settings.scss */
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* line 208, ../sass/_settings.scss */
+::-moz-selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 209, ../sass/_settings.scss */
+::selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 210, ../sass/_settings.scss */
+a:link {
+  -webkit-tap-highlight-color: #FF5E99;
+}
+
+/* line 212, ../sass/_settings.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* line 213, ../sass/_settings.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 215, ../sass/_settings.scss */
+body, select, input, textarea {
+  color: #444;
+}
+
+/* line 216, ../sass/_settings.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* line 217, ../sass/_settings.scss */
+a, a:active, a:visited {
+  color: #607890;
+}
+
+/* line 218, ../sass/_settings.scss */
+a:hover {
+  color: #036;
+}
+
+/* line 220, ../sass/_settings.scss */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* line 221, ../sass/_settings.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 222, ../sass/_settings.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 224, ../sass/_settings.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 225, ../sass/_settings.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 226, ../sass/_settings.scss */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 227, ../sass/_settings.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 228, ../sass/_settings.scss */
+.clearfix {
+  zoom: 1;
+}
+
+/* line 3, ../sass/_elements.scss */
+a {
+  color: #f44a56;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 9, ../sass/_elements.scss */
+.bttn.download, .bttn.back, .bttn.tweet {
+  padding: 1em;
+  background-color: #f44a56;
+}
+
+/* line 13, ../sass/_elements.scss */
+.bttn:hover, .bttn:active, .bttn.clicked {
+  background: #3e4b5d;
+  -webkit-transition: 300ms ease;
+  -moz-transition: 300ms ease;
+  -ms-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+/* line 18, ../sass/_elements.scss */
+.bttn {
+  overflow: hidden;
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 200ms ease;
+  -moz-transition: 200ms ease;
+  -ms-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+  margin-bottom: 0.5em;
+}
+@media screen and (min-width: 400px) {
+  /* line 18, ../sass/_elements.scss */
+  .bttn {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+  }
+}
+
+/* line 38, ../sass/_elements.scss */
+html, body, #container, img {
+  height: 100%;
+  -webkit-transition: 200ms ease;
+  -moz-transition: 200ms ease;
+  -ms-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+/* line 43, ../sass/_elements.scss */
+.sticky-wrapper {
+  min-height: 100%;
+}
+@media screen and (min-width: 400px) {
+  /* line 43, ../sass/_elements.scss */
+  .sticky-wrapper {
+    margin: 0 auto -14em;
+  }
+}
+@media screen and (min-width: 760px) {
+  /* line 43, ../sass/_elements.scss */
+  .sticky-wrapper {
+    margin: 0 auto -7em;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  /* line 49, ../sass/_elements.scss */
+  footer, .push {
+    height: 14em;
+  }
+}
+@media screen and (min-width: 760px) {
+  /* line 49, ../sass/_elements.scss */
+  footer, .push {
+    margin: 0 auto -7em;
+  }
+}
+
+/* line 1, ../sass/_syntax2.scss */
+.highlight .hll {
+  background-color: #333333;
+}
+
+/* line 2, ../sass/_syntax2.scss */
+.highlight {
+  background: #111111;
+  color: #ffffff;
+  padding: 0.2em 0.9em;
+  margin-bottom: 1em;
+  font: normal normal normal 115%/normal "Monaco", "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace !important;
+  line-height: 1.1em;
+  overflow: auto;
+  font-size: 1.0em;
+  border: 1px solid #CCC;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+
+/* line 24, ../sass/_syntax2.scss */
+code, pre {
+  font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
+  font-size: 0.95em;
+  margin: 1em 0 1.5em 0;
+}
+
+/* line 31, ../sass/_syntax2.scss */
+.highlight span {
+  font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
+  font-size: 1em;
+}
+
+/* line 36, ../sass/_syntax2.scss */
+.highlight .hll {
+  background-color: #49483e;
+}
+
+/* line 37, ../sass/_syntax2.scss */
+.highlight {
+  /*background: #272822;*/
+  color: #f8f8f2;
+}
+
+/* line 38, ../sass/_syntax2.scss */
+.highlight .c {
+  color: #75715e;
+}
+
+/* Comment */
+/* line 39, ../sass/_syntax2.scss */
+.highlight .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+
+/* Error */
+/* line 40, ../sass/_syntax2.scss */
+.highlight .k {
+  color: #66d9ef;
+}
+
+/* Keyword */
+/* line 41, ../sass/_syntax2.scss */
+.highlight .l {
+  color: #ae81ff;
+}
+
+/* Literal */
+/* line 42, ../sass/_syntax2.scss */
+.highlight .n {
+  color: #f8f8f2;
+}
+
+/* Name */
+/* line 43, ../sass/_syntax2.scss */
+.highlight .o {
+  color: #f92672;
+}
+
+/* Operator */
+/* line 44, ../sass/_syntax2.scss */
+.highlight .p {
+  color: #f8f8f2;
+}
+
+/* Punctuation */
+/* line 45, ../sass/_syntax2.scss */
+.highlight .cm {
+  color: #75715e;
+}
+
+/* Comment.Multiline */
+/* line 46, ../sass/_syntax2.scss */
+.highlight .cp {
+  color: #75715e;
+}
+
+/* Comment.Preproc */
+/* line 47, ../sass/_syntax2.scss */
+.highlight .c1 {
+  color: #75715e;
+}
+
+/* Comment.Single */
+/* line 48, ../sass/_syntax2.scss */
+.highlight .cs {
+  color: #75715e;
+}
+
+/* Comment.Special */
+/* line 49, ../sass/_syntax2.scss */
+.highlight .ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+/* line 50, ../sass/_syntax2.scss */
+.highlight .gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+/* line 51, ../sass/_syntax2.scss */
+.highlight .kc {
+  color: #66d9ef;
+}
+
+/* Keyword.Constant */
+/* line 52, ../sass/_syntax2.scss */
+.highlight .kd {
+  color: #66d9ef;
+}
+
+/* Keyword.Declaration */
+/* line 53, ../sass/_syntax2.scss */
+.highlight .kn {
+  color: #f92672;
+}
+
+/* Keyword.Namespace */
+/* line 54, ../sass/_syntax2.scss */
+.highlight .kp {
+  color: #66d9ef;
+}
+
+/* Keyword.Pseudo */
+/* line 55, ../sass/_syntax2.scss */
+.highlight .kr {
+  color: #66d9ef;
+}
+
+/* Keyword.Reserved */
+/* line 56, ../sass/_syntax2.scss */
+.highlight .kt {
+  color: #66d9ef;
+}
+
+/* Keyword.Type */
+/* line 57, ../sass/_syntax2.scss */
+.highlight .ld {
+  color: #e6db74;
+}
+
+/* Literal.Date */
+/* line 58, ../sass/_syntax2.scss */
+.highlight .m {
+  color: #ae81ff;
+}
+
+/* Literal.Number */
+/* line 59, ../sass/_syntax2.scss */
+.highlight .s {
+  color: #e6db74;
+}
+
+/* Literal.String */
+/* line 60, ../sass/_syntax2.scss */
+.highlight .na {
+  color: #a6e22e;
+}
+
+/* Name.Attribute */
+/* line 61, ../sass/_syntax2.scss */
+.highlight .nb {
+  color: #f8f8f2;
+}
+
+/* Name.Builtin */
+/* line 62, ../sass/_syntax2.scss */
+.highlight .nc {
+  color: #a6e22e;
+}
+
+/* Name.Class */
+/* line 63, ../sass/_syntax2.scss */
+.highlight .no {
+  color: #66d9ef;
+}
+
+/* Name.Constant */
+/* line 64, ../sass/_syntax2.scss */
+.highlight .nd {
+  color: #a6e22e;
+}
+
+/* Name.Decorator */
+/* line 65, ../sass/_syntax2.scss */
+.highlight .ni {
+  color: #f8f8f2;
+}
+
+/* Name.Entity */
+/* line 66, ../sass/_syntax2.scss */
+.highlight .ne {
+  color: #a6e22e;
+}
+
+/* Name.Exception */
+/* line 67, ../sass/_syntax2.scss */
+.highlight .nf {
+  color: #a6e22e;
+}
+
+/* Name.Function */
+/* line 68, ../sass/_syntax2.scss */
+.highlight .nl {
+  color: #f8f8f2;
+}
+
+/* Name.Label */
+/* line 69, ../sass/_syntax2.scss */
+.highlight .nn {
+  color: #f8f8f2;
+}
+
+/* Name.Namespace */
+/* line 70, ../sass/_syntax2.scss */
+.highlight .nx {
+  color: #a6e22e;
+}
+
+/* Name.Other */
+/* line 71, ../sass/_syntax2.scss */
+.highlight .py {
+  color: #f8f8f2;
+}
+
+/* Name.Property */
+/* line 72, ../sass/_syntax2.scss */
+.highlight .nt {
+  color: #f92672;
+}
+
+/* Name.Tag */
+/* line 73, ../sass/_syntax2.scss */
+.highlight .nv {
+  color: #f8f8f2;
+}
+
+/* Name.Variable */
+/* line 74, ../sass/_syntax2.scss */
+.highlight .ow {
+  color: #f92672;
+}
+
+/* Operator.Word */
+/* line 75, ../sass/_syntax2.scss */
+.highlight .w {
+  color: #f8f8f2;
+}
+
+/* Text.Whitespace */
+/* line 76, ../sass/_syntax2.scss */
+.highlight .mf {
+  color: #ae81ff;
+}
+
+/* Literal.Number.Float */
+/* line 77, ../sass/_syntax2.scss */
+.highlight .mh {
+  color: #ae81ff;
+}
+
+/* Literal.Number.Hex */
+/* line 78, ../sass/_syntax2.scss */
+.highlight .mi {
+  color: #ae81ff;
+}
+
+/* Literal.Number.Integer */
+/* line 79, ../sass/_syntax2.scss */
+.highlight .mo {
+  color: #ae81ff;
+}
+
+/* Literal.Number.Oct */
+/* line 80, ../sass/_syntax2.scss */
+.highlight .sb {
+  color: #e6db74;
+}
+
+/* Literal.String.Backtick */
+/* line 81, ../sass/_syntax2.scss */
+.highlight .sc {
+  color: #e6db74;
+}
+
+/* Literal.String.Char */
+/* line 82, ../sass/_syntax2.scss */
+.highlight .sd {
+  color: #e6db74;
+}
+
+/* Literal.String.Doc */
+/* line 83, ../sass/_syntax2.scss */
+.highlight .s2 {
+  color: #e6db74;
+}
+
+/* Literal.String.Double */
+/* line 84, ../sass/_syntax2.scss */
+.highlight .se {
+  color: #ae81ff;
+}
+
+/* Literal.String.Escape */
+/* line 85, ../sass/_syntax2.scss */
+.highlight .sh {
+  color: #e6db74;
+}
+
+/* Literal.String.Heredoc */
+/* line 86, ../sass/_syntax2.scss */
+.highlight .si {
+  color: #e6db74;
+}
+
+/* Literal.String.Interpol */
+/* line 87, ../sass/_syntax2.scss */
+.highlight .sx {
+  color: #e6db74;
+}
+
+/* Literal.String.Other */
+/* line 88, ../sass/_syntax2.scss */
+.highlight .sr {
+  color: #e6db74;
+}
+
+/* Literal.String.Regex */
+/* line 89, ../sass/_syntax2.scss */
+.highlight .s1 {
+  color: #e6db74;
+}
+
+/* Literal.String.Single */
+/* line 90, ../sass/_syntax2.scss */
+.highlight .ss {
+  color: #e6db74;
+}
+
+/* Literal.String.Symbol */
+/* line 91, ../sass/_syntax2.scss */
+.highlight .bp {
+  color: #f8f8f2;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 92, ../sass/_syntax2.scss */
+.highlight .vc {
+  color: #f8f8f2;
+}
+
+/* Name.Variable.Class */
+/* line 93, ../sass/_syntax2.scss */
+.highlight .vg {
+  color: #f8f8f2;
+}
+
+/* Name.Variable.Global */
+/* line 94, ../sass/_syntax2.scss */
+.highlight .vi {
+  color: #f8f8f2;
+}
+
+/* Name.Variable.Instance */
+/* line 95, ../sass/_syntax2.scss */
+.highlight .il {
+  color: #ae81ff;
+}
+
+/* Literal.Number.Integer.Long */
+/* line 19, ../sass/base.scss */
+#container #sidebar #logo {
+  text-align: center;
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+  background-color: steelblue;
+}
+/* line 54, ../sass/neat/grid/_span-columns.scss */
+#container #sidebar #logo:last-child {
+  margin-right: 0;
+}
+/* line 24, ../sass/base.scss */
+#container #sidebar #logo #logo-image {
+  width: 100%;
+  height: 103px;
+}
+/* line 29, ../sass/base.scss */
+#container #sidebar #menu {
+  padding-top: 4em;
+}
+/* line 31, ../sass/base.scss */
+#container #sidebar #menu #menu-blog {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 54, ../sass/neat/grid/_span-columns.scss */
+#container #sidebar #menu #menu-blog:last-child {
+  margin-right: 0;
+}
+/* line 32, ../sass/base.scss */
+#container #sidebar #menu #menu-email {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 54, ../sass/neat/grid/_span-columns.scss */
+#container #sidebar #menu #menu-email:last-child {
+  margin-right: 0;
+}
+/* line 36, ../sass/base.scss */
+#container #sidebar #about #about-blurb {
+  display: inherit;
+}
+/* line 37, ../sass/base.scss */
+#container #sidebar #about #about-longer {
+  display: none;
+}
+/* line 40, ../sass/base.scss */
+#container #sidebar #legal {
+  background-color: NavajoWhite;
+}
+
+/* line 62, ../sass/base.scss */
+#container {
+  *zoom: 1;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 18, ../sass/bourbon/addons/_clearfix.scss */
+#container:before, #container:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/bourbon/addons/_clearfix.scss */
+#container:after {
+  clear: both;
+}
+@media screen and (max-width: 400px) {
+  /* line 65, ../sass/base.scss */
+  #container #sidebar {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+    text-align: center;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar:last-child {
+    margin-right: 0;
+  }
+  /* line 76, ../sass/base.scss */
+  #container #sidebar #contact {
+    padding-top: 0.5em;
+  }
+  /* line 78, ../sass/base.scss */
+  #container #sidebar #contact #contact-email {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-email:last-child {
+    margin-right: 0;
+  }
+  /* line 79, ../sass/base.scss */
+  #container #sidebar #contact #contact-twitter {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 47.58542%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-twitter:last-child {
+    margin-right: 0;
+  }
+  /* line 80, ../sass/base.scss */
+  #container #sidebar #contact #contact-linkedin {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 47.58542%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-linkedin:last-child {
+    margin-right: 0;
+  }
+  /* line 83, ../sass/base.scss */
+  #container #sidebar #legal {
+    display: none;
+  }
+}
+@media screen and (min-width: 400px) {
+  /* line 65, ../sass/base.scss */
+  #container #sidebar {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar:last-child {
+    margin-right: 0;
+  }
+  /* line 93, ../sass/base.scss */
+  #container #sidebar .content {
+    width: 22%;
+    position: absolute;
+    background-color: darkseagreen;
+  }
+  /* line 104, ../sass/base.scss */
+  #container #sidebar #contact {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-top: 0.5em;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact:last-child {
+    margin-right: 0;
+  }
+  /* line 106, ../sass/base.scss */
+  #container #sidebar #contact #contact-email {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-email:last-child {
+    margin-right: 0;
+  }
+  /* line 107, ../sass/base.scss */
+  #container #sidebar #contact #contact-twitter {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-twitter:last-child {
+    margin-right: 0;
+  }
+  /* line 108, ../sass/base.scss */
+  #container #sidebar #contact #contact-linkedin {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-linkedin:last-child {
+    margin-right: 0;
+  }
+  /* line 113, ../sass/base.scss */
+  #container #sidebar #legal {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #legal:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 400px) and (min-height: 500px) {
+  /* line 93, ../sass/base.scss */
+  #container #sidebar .content {
+    height: 100%;
+    position: fixed;
+  }
+}
+@media screen and (min-width: 760px) {
+  /* line 122, ../sass/base.scss */
+  #container #sidebar .content {
+    height: 100%;
+    position: fixed;
+    width: 14.3254em;
+  }
+  /* line 131, ../sass/base.scss */
+  #container #sidebar #about #about-blurb {
+    display: none;
+  }
+  /* line 132, ../sass/base.scss */
+  #container #sidebar #about #about-longer {
+    display: inherit;
+  }
+  /* line 135, ../sass/base.scss */
+  #container #sidebar #contact {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-top: 0.5em;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact:last-child {
+    margin-right: 0;
+  }
+  /* line 137, ../sass/base.scss */
+  #container #sidebar #contact #contact-email {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-email:last-child {
+    margin-right: 0;
+  }
+  /* line 138, ../sass/base.scss */
+  #container #sidebar #contact #contact-twitter {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-twitter:last-child {
+    margin-right: 0;
+  }
+  /* line 139, ../sass/base.scss */
+  #container #sidebar #contact #contact-linkedin {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-linkedin:last-child {
+    margin-right: 0;
+  }
+  /* line 144, ../sass/base.scss */
+  #container #sidebar #legal {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #legal:last-child {
+    margin-right: 0;
+  }
+}
+/* line 153, ../sass/base.scss */
+#container #main {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+  *zoom: 1;
+}
+/* line 54, ../sass/neat/grid/_span-columns.scss */
+#container #main:last-child {
+  margin-right: 0;
+}
+/* line 18, ../sass/bourbon/addons/_clearfix.scss */
+#container #main:before, #container #main:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/bourbon/addons/_clearfix.scss */
+#container #main:after {
+  clear: both;
+}
+/* line 165, ../sass/base.scss */
+#container #main .post {
+  padding: 2em;
+}
+/* line 171, ../sass/base.scss */
+#container #main .line-separator {
+  height: 1px;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 54, ../sass/neat/grid/_span-columns.scss */
+#container #main .line-separator:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 400px) {
+  /* line 153, ../sass/base.scss */
+  #container #main {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #main:last-child {
+    margin-right: 0;
+  }
+  /* line 182, ../sass/base.scss */
+  #container #main .post-image {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 400px) {
+  /* line 153, ../sass/base.scss */
+  #container #main {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-left: 25.58941%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #main:last-child {
+    margin-right: 0;
+  }
+  /* line 192, ../sass/base.scss */
+  #container #main .post-image {
+    width: 95%;
+    height: auto;
+  }
+  /* line 197, ../sass/base.scss */
+  #container #main .content {
+    display: block;
+  }
+}
+@media screen and (min-width: 760px) {
+  /* line 153, ../sass/base.scss */
+  #container #main {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-left: 25.58941%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #main:last-child {
+    margin-right: 0;
+  }
+}

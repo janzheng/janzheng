@@ -1,11 +1,18 @@
 Make it simple, but significant (Mad Men)
-"I make fun and functional experiences"
+"I make experiences fun & functional"
 
 http://www.sitepoint.com/pure-css3-paper-curls/
 
 http://www.google.com/intl/en/+/learnmore/better/
 
 http://51bits.com/articles/conversion-by-design/
+
+
+http://adamwhitcroft.com/batch/
+- icons
+- love the twitter button at the bottom
+
+
 
 - what are customers looking for
 - market a SOLUTION, instead of a PRODUCT
