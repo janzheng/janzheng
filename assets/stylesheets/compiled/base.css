@@ -472,399 +472,303 @@ html, body, #container, img {
   }
 }
 
-/* line 1, ../sass/_syntax2.scss */
-.highlight .hll {
-  background-color: #333333;
+/* line 2, ../sass/_pastie.sass */
+.codehilite .hll {
+  background-color: #ffffcc;
 }
-
-/* line 2, ../sass/_syntax2.scss */
-.highlight {
-  background: #111111;
-  color: #ffffff;
-  padding: 0.2em 0.9em;
-  margin-bottom: 1em;
-  font: normal normal normal 115%/normal "Monaco", "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace !important;
-  line-height: 1.1em;
-  overflow: auto;
-  font-size: 1.0em;
-  border: 1px solid #CCC;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  border-radius: 7px;
+/* line 4, ../sass/_pastie.sass */
+.codehilite .c {
+  color: #888888;
 }
-
-/* line 24, ../sass/_syntax2.scss */
-code, pre {
-  font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
-  font-size: 0.95em;
-  margin: 1em 0 1.5em 0;
+/* line 6, ../sass/_pastie.sass */
+.codehilite .err {
+  color: #a61717;
+  background-color: #e3d2d2;
 }
-
-/* line 31, ../sass/_syntax2.scss */
-.highlight span {
-  font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
-  font-size: 1em;
+/* line 9, ../sass/_pastie.sass */
+.codehilite .k {
+  color: #008800;
+  font-weight: bold;
 }
-
-/* line 36, ../sass/_syntax2.scss */
-.highlight .hll {
-  background-color: #49483e;
+/* line 12, ../sass/_pastie.sass */
+.codehilite .cm {
+  color: #888888;
 }
-
-/* line 37, ../sass/_syntax2.scss */
-.highlight {
-  /*background: #272822;*/
-  color: #f8f8f2;
+/* line 14, ../sass/_pastie.sass */
+.codehilite .cp {
+  color: #cc0000;
+  font-weight: bold;
 }
-
-/* line 38, ../sass/_syntax2.scss */
-.highlight .c {
-  color: #75715e;
+/* line 17, ../sass/_pastie.sass */
+.codehilite .c1 {
+  color: #888888;
 }
-
-/* Comment */
-/* line 39, ../sass/_syntax2.scss */
-.highlight .err {
-  color: #960050;
-  background-color: #1e0010;
+/* line 19, ../sass/_pastie.sass */
+.codehilite .cs {
+  color: #cc0000;
+  font-weight: bold;
+  background-color: #fff0f0;
 }
-
-/* Error */
-/* line 40, ../sass/_syntax2.scss */
-.highlight .k {
-  color: #66d9ef;
+/* line 23, ../sass/_pastie.sass */
+.codehilite .gd {
+  color: black;
+  background-color: #ffdddd;
 }
-
-/* Keyword */
-/* line 41, ../sass/_syntax2.scss */
-.highlight .l {
-  color: #ae81ff;
-}
-
-/* Literal */
-/* line 42, ../sass/_syntax2.scss */
-.highlight .n {
-  color: #f8f8f2;
-}
-
-/* Name */
-/* line 43, ../sass/_syntax2.scss */
-.highlight .o {
-  color: #f92672;
-}
-
-/* Operator */
-/* line 44, ../sass/_syntax2.scss */
-.highlight .p {
-  color: #f8f8f2;
-}
-
-/* Punctuation */
-/* line 45, ../sass/_syntax2.scss */
-.highlight .cm {
-  color: #75715e;
-}
-
-/* Comment.Multiline */
-/* line 46, ../sass/_syntax2.scss */
-.highlight .cp {
-  color: #75715e;
-}
-
-/* Comment.Preproc */
-/* line 47, ../sass/_syntax2.scss */
-.highlight .c1 {
-  color: #75715e;
-}
-
-/* Comment.Single */
-/* line 48, ../sass/_syntax2.scss */
-.highlight .cs {
-  color: #75715e;
-}
-
-/* Comment.Special */
-/* line 49, ../sass/_syntax2.scss */
-.highlight .ge {
+/* line 26, ../sass/_pastie.sass */
+.codehilite .ge {
   font-style: italic;
 }
-
-/* Generic.Emph */
-/* line 50, ../sass/_syntax2.scss */
-.highlight .gs {
+/* line 28, ../sass/_pastie.sass */
+.codehilite .gr {
+  color: #aa0000;
+}
+/* line 30, ../sass/_pastie.sass */
+.codehilite .gh {
+  color: #303030;
+}
+/* line 32, ../sass/_pastie.sass */
+.codehilite .gi {
+  color: black;
+  background-color: #ddffdd;
+}
+/* line 35, ../sass/_pastie.sass */
+.codehilite .go {
+  color: #888888;
+}
+/* line 37, ../sass/_pastie.sass */
+.codehilite .gp {
+  color: #555555;
+}
+/* line 39, ../sass/_pastie.sass */
+.codehilite .gs {
+  font-weight: bold;
+}
+/* line 41, ../sass/_pastie.sass */
+.codehilite .gu {
+  color: #606060;
+}
+/* line 43, ../sass/_pastie.sass */
+.codehilite .gt {
+  color: #aa0000;
+}
+/* line 45, ../sass/_pastie.sass */
+.codehilite .kc, .codehilite .kd, .codehilite .kn {
+  color: #008800;
+  font-weight: bold;
+}
+/* line 48, ../sass/_pastie.sass */
+.codehilite .kp {
+  color: #008800;
+}
+/* line 50, ../sass/_pastie.sass */
+.codehilite .kr {
+  color: #008800;
+  font-weight: bold;
+}
+/* line 53, ../sass/_pastie.sass */
+.codehilite .kt {
+  color: #888888;
+  font-weight: bold;
+}
+/* line 56, ../sass/_pastie.sass */
+.codehilite .m {
+  color: #0000dd;
+  font-weight: bold;
+}
+/* line 59, ../sass/_pastie.sass */
+.codehilite .s {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+/* line 62, ../sass/_pastie.sass */
+.codehilite .na {
+  color: #336699;
+}
+/* line 64, ../sass/_pastie.sass */
+.codehilite .nb {
+  color: #003388;
+}
+/* line 66, ../sass/_pastie.sass */
+.codehilite .nc {
+  color: #bb0066;
+  font-weight: bold;
+}
+/* line 69, ../sass/_pastie.sass */
+.codehilite .no {
+  color: #003366;
+  font-weight: bold;
+}
+/* line 72, ../sass/_pastie.sass */
+.codehilite .nd {
+  color: #555555;
+}
+/* line 74, ../sass/_pastie.sass */
+.codehilite .ne {
+  color: #bb0066;
+  font-weight: bold;
+}
+/* line 77, ../sass/_pastie.sass */
+.codehilite .nf {
+  color: #0066bb;
+  font-weight: bold;
+}
+/* line 80, ../sass/_pastie.sass */
+.codehilite .nl {
+  color: #336699;
+  font-style: italic;
+}
+/* line 83, ../sass/_pastie.sass */
+.codehilite .nn {
+  color: #bb0066;
+  font-weight: bold;
+}
+/* line 86, ../sass/_pastie.sass */
+.codehilite .py {
+  color: #336699;
+  font-weight: bold;
+}
+/* line 89, ../sass/_pastie.sass */
+.codehilite .nt {
+  color: #bb0066;
+  font-weight: bold;
+}
+/* line 92, ../sass/_pastie.sass */
+.codehilite .nv {
+  color: #336699;
+}
+/* line 94, ../sass/_pastie.sass */
+.codehilite .ow {
+  color: #008800;
+}
+/* line 96, ../sass/_pastie.sass */
+.codehilite .w {
+  color: #bbbbbb;
+}
+/* line 98, ../sass/_pastie.sass */
+.codehilite .mf, .codehilite .mh, .codehilite .mi, .codehilite .mo {
+  color: #0000dd;
+  font-weight: bold;
+}
+/* line 101, ../sass/_pastie.sass */
+.codehilite .sb, .codehilite .sc, .codehilite .sd, .codehilite .s2 {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+/* line 104, ../sass/_pastie.sass */
+.codehilite .se {
+  color: #0044dd;
+  background-color: #fff0f0;
+}
+/* line 107, ../sass/_pastie.sass */
+.codehilite .sh {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+/* line 110, ../sass/_pastie.sass */
+.codehilite .si {
+  color: #3333bb;
+  background-color: #fff0f0;
+}
+/* line 113, ../sass/_pastie.sass */
+.codehilite .sx {
+  color: #22bb22;
+  background-color: honeydew;
+}
+/* line 116, ../sass/_pastie.sass */
+.codehilite .sr {
+  color: #008800;
+  background-color: #fff0ff;
+}
+/* line 119, ../sass/_pastie.sass */
+.codehilite .s1 {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+/* line 122, ../sass/_pastie.sass */
+.codehilite .ss {
+  color: #aa6600;
+  background-color: #fff0f0;
+}
+/* line 125, ../sass/_pastie.sass */
+.codehilite .bp {
+  color: #003388;
+}
+/* line 127, ../sass/_pastie.sass */
+.codehilite .vc {
+  color: #336699;
+}
+/* line 129, ../sass/_pastie.sass */
+.codehilite .vg {
+  color: #dd7700;
+}
+/* line 131, ../sass/_pastie.sass */
+.codehilite .vi {
+  color: #3333bb;
+}
+/* line 133, ../sass/_pastie.sass */
+.codehilite .il {
+  color: #0000dd;
   font-weight: bold;
 }
 
+/* Comment */
+/* Error */
+/* Keyword */
+/* Comment.Multiline */
+/* Comment.Preproc */
+/* Comment.Single */
+/* Comment.Special */
+/* Generic.Deleted */
+/* Generic.Emph */
+/* Generic.Error */
+/* Generic.Heading */
+/* Generic.Inserted */
+/* Generic.Output */
+/* Generic.Prompt */
 /* Generic.Strong */
-/* line 51, ../sass/_syntax2.scss */
-.highlight .kc {
-  color: #66d9ef;
-}
-
+/* Generic.Subheading */
+/* Generic.Traceback */
 /* Keyword.Constant */
-/* line 52, ../sass/_syntax2.scss */
-.highlight .kd {
-  color: #66d9ef;
-}
-
 /* Keyword.Declaration */
-/* line 53, ../sass/_syntax2.scss */
-.highlight .kn {
-  color: #f92672;
-}
-
 /* Keyword.Namespace */
-/* line 54, ../sass/_syntax2.scss */
-.highlight .kp {
-  color: #66d9ef;
-}
-
 /* Keyword.Pseudo */
-/* line 55, ../sass/_syntax2.scss */
-.highlight .kr {
-  color: #66d9ef;
-}
-
 /* Keyword.Reserved */
-/* line 56, ../sass/_syntax2.scss */
-.highlight .kt {
-  color: #66d9ef;
-}
-
 /* Keyword.Type */
-/* line 57, ../sass/_syntax2.scss */
-.highlight .ld {
-  color: #e6db74;
-}
-
-/* Literal.Date */
-/* line 58, ../sass/_syntax2.scss */
-.highlight .m {
-  color: #ae81ff;
-}
-
 /* Literal.Number */
-/* line 59, ../sass/_syntax2.scss */
-.highlight .s {
-  color: #e6db74;
-}
-
 /* Literal.String */
-/* line 60, ../sass/_syntax2.scss */
-.highlight .na {
-  color: #a6e22e;
-}
-
 /* Name.Attribute */
-/* line 61, ../sass/_syntax2.scss */
-.highlight .nb {
-  color: #f8f8f2;
-}
-
 /* Name.Builtin */
-/* line 62, ../sass/_syntax2.scss */
-.highlight .nc {
-  color: #a6e22e;
-}
-
 /* Name.Class */
-/* line 63, ../sass/_syntax2.scss */
-.highlight .no {
-  color: #66d9ef;
-}
-
 /* Name.Constant */
-/* line 64, ../sass/_syntax2.scss */
-.highlight .nd {
-  color: #a6e22e;
-}
-
 /* Name.Decorator */
-/* line 65, ../sass/_syntax2.scss */
-.highlight .ni {
-  color: #f8f8f2;
-}
-
-/* Name.Entity */
-/* line 66, ../sass/_syntax2.scss */
-.highlight .ne {
-  color: #a6e22e;
-}
-
 /* Name.Exception */
-/* line 67, ../sass/_syntax2.scss */
-.highlight .nf {
-  color: #a6e22e;
-}
-
 /* Name.Function */
-/* line 68, ../sass/_syntax2.scss */
-.highlight .nl {
-  color: #f8f8f2;
-}
-
 /* Name.Label */
-/* line 69, ../sass/_syntax2.scss */
-.highlight .nn {
-  color: #f8f8f2;
-}
-
 /* Name.Namespace */
-/* line 70, ../sass/_syntax2.scss */
-.highlight .nx {
-  color: #a6e22e;
-}
-
-/* Name.Other */
-/* line 71, ../sass/_syntax2.scss */
-.highlight .py {
-  color: #f8f8f2;
-}
-
 /* Name.Property */
-/* line 72, ../sass/_syntax2.scss */
-.highlight .nt {
-  color: #f92672;
-}
-
 /* Name.Tag */
-/* line 73, ../sass/_syntax2.scss */
-.highlight .nv {
-  color: #f8f8f2;
-}
-
 /* Name.Variable */
-/* line 74, ../sass/_syntax2.scss */
-.highlight .ow {
-  color: #f92672;
-}
-
 /* Operator.Word */
-/* line 75, ../sass/_syntax2.scss */
-.highlight .w {
-  color: #f8f8f2;
-}
-
 /* Text.Whitespace */
-/* line 76, ../sass/_syntax2.scss */
-.highlight .mf {
-  color: #ae81ff;
-}
-
 /* Literal.Number.Float */
-/* line 77, ../sass/_syntax2.scss */
-.highlight .mh {
-  color: #ae81ff;
-}
-
 /* Literal.Number.Hex */
-/* line 78, ../sass/_syntax2.scss */
-.highlight .mi {
-  color: #ae81ff;
-}
-
 /* Literal.Number.Integer */
-/* line 79, ../sass/_syntax2.scss */
-.highlight .mo {
-  color: #ae81ff;
-}
-
 /* Literal.Number.Oct */
-/* line 80, ../sass/_syntax2.scss */
-.highlight .sb {
-  color: #e6db74;
-}
-
 /* Literal.String.Backtick */
-/* line 81, ../sass/_syntax2.scss */
-.highlight .sc {
-  color: #e6db74;
-}
-
 /* Literal.String.Char */
-/* line 82, ../sass/_syntax2.scss */
-.highlight .sd {
-  color: #e6db74;
-}
-
 /* Literal.String.Doc */
-/* line 83, ../sass/_syntax2.scss */
-.highlight .s2 {
-  color: #e6db74;
-}
-
 /* Literal.String.Double */
-/* line 84, ../sass/_syntax2.scss */
-.highlight .se {
-  color: #ae81ff;
-}
-
 /* Literal.String.Escape */
-/* line 85, ../sass/_syntax2.scss */
-.highlight .sh {
-  color: #e6db74;
-}
-
 /* Literal.String.Heredoc */
-/* line 86, ../sass/_syntax2.scss */
-.highlight .si {
-  color: #e6db74;
-}
-
 /* Literal.String.Interpol */
-/* line 87, ../sass/_syntax2.scss */
-.highlight .sx {
-  color: #e6db74;
-}
-
 /* Literal.String.Other */
-/* line 88, ../sass/_syntax2.scss */
-.highlight .sr {
-  color: #e6db74;
-}
-
 /* Literal.String.Regex */
-/* line 89, ../sass/_syntax2.scss */
-.highlight .s1 {
-  color: #e6db74;
-}
-
 /* Literal.String.Single */
-/* line 90, ../sass/_syntax2.scss */
-.highlight .ss {
-  color: #e6db74;
-}
-
 /* Literal.String.Symbol */
-/* line 91, ../sass/_syntax2.scss */
-.highlight .bp {
-  color: #f8f8f2;
-}
-
 /* Name.Builtin.Pseudo */
-/* line 92, ../sass/_syntax2.scss */
-.highlight .vc {
-  color: #f8f8f2;
-}
-
 /* Name.Variable.Class */
-/* line 93, ../sass/_syntax2.scss */
-.highlight .vg {
-  color: #f8f8f2;
-}
-
 /* Name.Variable.Global */
-/* line 94, ../sass/_syntax2.scss */
-.highlight .vi {
-  color: #f8f8f2;
-}
-
 /* Name.Variable.Instance */
-/* line 95, ../sass/_syntax2.scss */
-.highlight .il {
-  color: #ae81ff;
-}
-
 /* Literal.Number.Integer.Long */
 /* line 19, ../sass/base.scss */
 #container #sidebar #logo {

@@ -6,8 +6,8 @@
 
 @import 'settings';
 @import 'elements';
-@import 'syntax2';    // this is for Pygments code highlighting; won't work locally bc Python not installed
-
+//@import 'syntax2';    // this is for Pygments code highlighting; won't work locally bc Python not installed
+@import  'pastie';
 
 // general sizing
 
