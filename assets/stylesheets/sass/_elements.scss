@@ -52,7 +52,7 @@ html, body, #container, img {
 
 footer, .push {
     @include media($medium){height: 14em;}
-    @include media($large){margin: 0 auto -7em;}
+    @include media($large){height: 7em;}
 }
 
 

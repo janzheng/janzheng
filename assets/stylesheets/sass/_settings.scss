@@ -51,9 +51,9 @@ ACBFCC
 
 
 // respsonsive
-$break-small: 400px;
-$break-medium: 760px;
-$break-large: 960px;
+$break-small: 460px;
+$break-medium: 830px;
+$break-large: 996px;
 
 // neat bourbon setup... doesn't seem to work?
 $visual-grid: true;
@@ -72,20 +72,20 @@ $not-small: new-breakpoint(min-width $break-small 12);
 $not-large: new-breakpoint(max-width $break-large 12);
 
 //for sticky menu
-$break-tall: 500px;
-$break-short: 200px;
+$break-tall: 460px;
+$break-short: 560px;
 $short: new-breakpoint(min-height $break-short 12);
 $tall: new-breakpoint(min-height $break-tall 12);
 
 // sizing
 $base: 13px;
 
-$f1: golden-ratio($base, 4) * 0.45;
-$f2: golden-ratio($base, 3) * 0.45;
-$f3: golden-ratio($base, 2) * 0.45;
-$f4: golden-ratio($base, 1) * 0.65;
-$f5: golden-ratio($base, 1) * 0.45;
-$f6: golden-ratio($base, 1) * 0.45;
+$f1: golden-ratio($base, 4) * 0.3;
+$f2: golden-ratio($base, 3) * 0.3;
+$f3: golden-ratio($base, 2) * 0.3;
+$f4: golden-ratio($base, 1) * 0.5;
+$f5: golden-ratio($base, 1) * 0.3;
+$f6: golden-ratio($base, 1) * 0.5;
 $tinyfont: $base * 0.82;
 
 

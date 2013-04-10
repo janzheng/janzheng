@@ -19,21 +19,39 @@
     #logo {
       text-align: center;
       @include span-columns(12);
+      @include font-tip($f4, 300);
 
       #logo-image {
-        width: 100%;
-        height: 103px;
+        margin-top: 3em;
+        width: 88%;
+        max-width: 170px;
+        height: auto;
       }
     }
-    #menu {
-      padding-top: 12em;
-      #menu-blog{@include span-columns(12);}
-      #menu-email{@include span-columns(12);}
+
+    #slogan {
+      text-align: center;
+      padding-top: 9em;
+      padding-bottom: 2em;
+      @include font-tip($f2*0.75, 300);
+      line-height: $f2*1.2;
+
+      #slogan-blurb {
+        border-bottom: 1px solid #888; 
+        padding: 0.6em;
+        @include set-radius(0.5em);
+        border: 1px solid $light-gray;
+        background-color: $silver;
+      }
     }
 
     #about {
       #about-blurb{display: inherit;}
       #about-longer{display: none;}
+    }
+    #menu {
+      #menu-blog{@include span-columns(12);}
+      #menu-email{@include span-columns(12);}
     }
 
     #legal {
@@ -49,9 +67,38 @@
 
 
 // generalresponsive 
-@include media($small) {}
-@include media($medium) {}
-@include media($large) {}
+@include media($small) {
+  #slogan-blurb {
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    border-left: 0px; border-right: 0px;
+    @include set-radius(0px); 
+  }
+
+  #legal-bottom{
+    display: inline;
+    display: block;
+    padding-bottom: 2em;
+    text-align: center;
+  }
+
+
+}
+@include media($medium) {
+  #legal-bottom{
+    display: none;
+  }
+  #container {
+    // padding: 0 3em 0 3em;
+    @include pad(0 1em 0 1em);
+  }
+}
+@include media($large) {
+  #container {
+    // padding: 0 3em 0 3em;
+    @include pad(0 3em 0 1em);
+  }
+}
 
 
 // site layout
@@ -101,7 +148,7 @@
         // this makes menu sticky, but only above a certain height
         width: 22%;
         position: absolute;
-        @include media($tall) {
+        @include media($short) {
           height: 100%;
           position: fixed;
         }
@@ -129,9 +176,14 @@
       .content {
         // this makes menu sticky
         height: 100%;
-        position: fixed;
+
+        position: absolute;
+        @include media($tall) {
+          height: 100%;
+          position: fixed;
+        }
+
         width: $gutter+$column*3;
-        // background-color:blue;
       }
 
       #about {
@@ -177,9 +229,9 @@
     padding-bottom: 8em;
 
     .post {
-      margin-top: 3em;
+      margin-top: 2em;
       // border-bottom: 1px solid #888; 
-      padding: 2em;
+      padding: 1.4em;
       @include set-radius(0.5em);
       border: 1px solid $light-gray;
       background-color: $silver;
@@ -190,7 +242,7 @@
       @include span-columns(6);
 
       //typography
-      .post-date {@include font-tip($f4, 300);}
+      .post-date {@include font-tip($f4, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1*0.8, 300);}
       .post-summary{@include font-body($f2*0.8, 300); margin-top: 0.3em;}
 
@@ -211,7 +263,7 @@
       @include shift (3);
 
       //typography
-      .post-date {@include font-tip($f4, 300);}
+      .post-date {@include font-tip($f4, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1*0.8, 300);}
       .post-summary{@include font-body($f2*0.8, 300); margin-top: 0.3em;}
 
@@ -230,7 +282,7 @@
       @include shift(3);
 
       //typography
-      .post-date {@include font-tip($f4, 300);}
+      .post-date {@include font-tip($f4, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1, 300);}
       .post-summary{@include font-body($f2, 300); margin-top: 0.3em;}
 

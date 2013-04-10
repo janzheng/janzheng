@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started on Github and Jekyll
-summary: Github is incredibly powerful and completely free. 
+title: Thoughts on choosing Github and Jekyll for blogging
+summary: Incredibly powerful and completely free blogging. 
 <!-- external: # -->
 <!-- image-path: /assets/# -->
 <!-- youtube: # -->
@@ -10,3 +10,8 @@ summary: Github is incredibly powerful and completely free.
 
 Using Github pages is incredibly flexible and absolutely free. 
 
+considered using Tumblr, hosting on dropbox (which is what I used to do), Light CMS, Squarespace, and a bunch of other CMS's.
+
+Github and Jekyll beats them all in terms of cost (free) and flexibility (completely customizable) 
+
+Probably more geared towards developers, as you need Ruby, and need to configure your own template / site for fancier (esp. responsive) designs.

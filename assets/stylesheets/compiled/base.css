@@ -440,7 +440,7 @@ a.bttn {
   transition: 200ms ease;
   margin-bottom: 0.5em;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 460px) {
   /* line 23, ../sass/_elements.scss */
   .bttn {
     -webkit-border-radius: 3px;
@@ -465,29 +465,29 @@ html, body, #container, img {
 .sticky-wrapper {
   min-height: 100%;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 460px) {
   /* line 47, ../sass/_elements.scss */
   .sticky-wrapper {
     margin: 0 auto -14em;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 830px) {
   /* line 47, ../sass/_elements.scss */
   .sticky-wrapper {
     margin: 0 auto -7em;
   }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 460px) {
   /* line 53, ../sass/_elements.scss */
   footer, .push {
     height: 14em;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 830px) {
   /* line 53, ../sass/_elements.scss */
   footer, .push {
-    margin: 0 auto -7em;
+    height: 7em;
   }
 }
 
@@ -796,21 +796,54 @@ html, body, #container, img {
   float: left;
   margin-right: 2.35765%;
   width: 100%;
+  font-family: 'Georgia', serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 10.517px;
 }
 /* line 54, ../sass/neat/grid/_span-columns.scss */
 #container #sidebar #logo:last-child {
   margin-right: 0;
 }
-/* line 23, ../sass/base.scss */
+/* line 24, ../sass/base.scss */
 #container #sidebar #logo #logo-image {
-  width: 100%;
-  height: 103px;
+  margin-top: 3em;
+  width: 88%;
+  max-width: 170px;
+  height: auto;
 }
-/* line 28, ../sass/base.scss */
-#container #sidebar #menu {
-  padding-top: 12em;
+/* line 32, ../sass/base.scss */
+#container #sidebar #slogan {
+  text-align: center;
+  padding-top: 9em;
+  padding-bottom: 2em;
+  font-family: 'Georgia', serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12.38972px;
+  line-height: 19.82355px;
 }
-/* line 30, ../sass/base.scss */
+/* line 39, ../sass/base.scss */
+#container #sidebar #slogan #slogan-blurb {
+  border-bottom: 1px solid #888;
+  padding: 0.6em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  border: 1px solid #cccccc;
+  background-color: whitesmoke;
+}
+/* line 49, ../sass/base.scss */
+#container #sidebar #about #about-blurb {
+  display: inherit;
+}
+/* line 50, ../sass/base.scss */
+#container #sidebar #about #about-longer {
+  display: none;
+}
+/* line 53, ../sass/base.scss */
 #container #sidebar #menu #menu-blog {
   display: block;
   float: left;
@@ -821,7 +854,7 @@ html, body, #container, img {
 #container #sidebar #menu #menu-blog:last-child {
   margin-right: 0;
 }
-/* line 31, ../sass/base.scss */
+/* line 54, ../sass/base.scss */
 #container #sidebar #menu #menu-email {
   display: block;
   float: left;
@@ -832,19 +865,50 @@ html, body, #container, img {
 #container #sidebar #menu #menu-email:last-child {
   margin-right: 0;
 }
-/* line 35, ../sass/base.scss */
-#container #sidebar #about #about-blurb {
-  display: inherit;
-}
-/* line 36, ../sass/base.scss */
-#container #sidebar #about #about-longer {
-  display: none;
-}
 
-/* line 60, ../sass/base.scss */
+@media screen and (max-width: 460px) {
+  /* line 71, ../sass/base.scss */
+  #slogan-blurb {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    border-left: 0px;
+    border-right: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+  }
+
+  /* line 78, ../sass/base.scss */
+  #legal-bottom {
+    display: inline;
+    display: block;
+    padding-bottom: 2em;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 460px) {
+  /* line 88, ../sass/base.scss */
+  #legal-bottom {
+    display: none;
+  }
+
+  /* line 91, ../sass/base.scss */
+  #container {
+    padding: 0 1em 0 1em;
+  }
+}
+@media screen and (min-width: 830px) {
+  /* line 97, ../sass/base.scss */
+  #container {
+    padding: 0 3em 0 1em;
+  }
+}
+/* line 107, ../sass/base.scss */
 #container {
   *zoom: 1;
-  max-width: 960px;
+  max-width: 996px;
   margin-left: auto;
   margin-right: auto;
   /*
@@ -871,8 +935,8 @@ html, body, #container, img {
 #container:after {
   clear: both;
 }
-@media screen and (max-width: 400px) {
-  /* line 72, ../sass/base.scss */
+@media screen and (max-width: 460px) {
+  /* line 119, ../sass/base.scss */
   #container #sidebar {
     display: block;
     float: left;
@@ -884,11 +948,11 @@ html, body, #container, img {
   #container #sidebar:last-child {
     margin-right: 0;
   }
-  /* line 83, ../sass/base.scss */
+  /* line 130, ../sass/base.scss */
   #container #sidebar #contact {
     padding-top: 0.5em;
   }
-  /* line 85, ../sass/base.scss */
+  /* line 132, ../sass/base.scss */
   #container #sidebar #contact #contact-email {
     display: block;
     float: left;
@@ -899,7 +963,7 @@ html, body, #container, img {
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
-  /* line 86, ../sass/base.scss */
+  /* line 133, ../sass/base.scss */
   #container #sidebar #contact #contact-twitter {
     display: block;
     float: left;
@@ -910,7 +974,7 @@ html, body, #container, img {
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
-  /* line 87, ../sass/base.scss */
+  /* line 134, ../sass/base.scss */
   #container #sidebar #contact #contact-linkedin {
     display: block;
     float: left;
@@ -921,13 +985,13 @@ html, body, #container, img {
   #container #sidebar #contact #contact-linkedin:last-child {
     margin-right: 0;
   }
-  /* line 90, ../sass/base.scss */
+  /* line 137, ../sass/base.scss */
   #container #sidebar #legal {
     display: none;
   }
 }
-@media screen and (min-width: 400px) {
-  /* line 72, ../sass/base.scss */
+@media screen and (min-width: 460px) {
+  /* line 119, ../sass/base.scss */
   #container #sidebar {
     display: block;
     float: left;
@@ -938,12 +1002,12 @@ html, body, #container, img {
   #container #sidebar:last-child {
     margin-right: 0;
   }
-  /* line 100, ../sass/base.scss */
+  /* line 147, ../sass/base.scss */
   #container #sidebar .content {
     width: 22%;
     position: absolute;
   }
-  /* line 111, ../sass/base.scss */
+  /* line 158, ../sass/base.scss */
   #container #sidebar #contact {
     display: block;
     float: left;
@@ -955,7 +1019,7 @@ html, body, #container, img {
   #container #sidebar #contact:last-child {
     margin-right: 0;
   }
-  /* line 113, ../sass/base.scss */
+  /* line 160, ../sass/base.scss */
   #container #sidebar #contact #contact-email {
     display: block;
     float: left;
@@ -966,7 +1030,7 @@ html, body, #container, img {
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
-  /* line 114, ../sass/base.scss */
+  /* line 161, ../sass/base.scss */
   #container #sidebar #contact #contact-twitter {
     display: block;
     float: left;
@@ -977,7 +1041,7 @@ html, body, #container, img {
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
-  /* line 115, ../sass/base.scss */
+  /* line 162, ../sass/base.scss */
   #container #sidebar #contact #contact-linkedin {
     display: block;
     float: left;
@@ -988,7 +1052,7 @@ html, body, #container, img {
   #container #sidebar #contact #contact-linkedin:last-child {
     margin-right: 0;
   }
-  /* line 120, ../sass/base.scss */
+  /* line 167, ../sass/base.scss */
   #container #sidebar #legal {
     display: block;
     float: left;
@@ -1002,29 +1066,29 @@ html, body, #container, img {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 400px) and (min-height: 500px) {
-  /* line 100, ../sass/base.scss */
+@media screen and (min-width: 460px) and (min-height: 560px) {
+  /* line 147, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
     position: fixed;
   }
 }
-@media screen and (min-width: 760px) {
-  /* line 129, ../sass/base.scss */
+@media screen and (min-width: 830px) {
+  /* line 176, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
-    position: fixed;
+    position: absolute;
     width: 14.3254em;
   }
-  /* line 138, ../sass/base.scss */
+  /* line 190, ../sass/base.scss */
   #container #sidebar #about #about-blurb {
     display: none;
   }
-  /* line 139, ../sass/base.scss */
+  /* line 191, ../sass/base.scss */
   #container #sidebar #about #about-longer {
     display: inherit;
   }
-  /* line 142, ../sass/base.scss */
+  /* line 194, ../sass/base.scss */
   #container #sidebar #contact {
     display: block;
     float: left;
@@ -1036,7 +1100,7 @@ html, body, #container, img {
   #container #sidebar #contact:last-child {
     margin-right: 0;
   }
-  /* line 144, ../sass/base.scss */
+  /* line 196, ../sass/base.scss */
   #container #sidebar #contact #contact-email {
     display: block;
     float: left;
@@ -1047,7 +1111,7 @@ html, body, #container, img {
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
-  /* line 145, ../sass/base.scss */
+  /* line 197, ../sass/base.scss */
   #container #sidebar #contact #contact-twitter {
     display: block;
     float: left;
@@ -1058,7 +1122,7 @@ html, body, #container, img {
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
-  /* line 146, ../sass/base.scss */
+  /* line 198, ../sass/base.scss */
   #container #sidebar #contact #contact-linkedin {
     display: block;
     float: left;
@@ -1069,7 +1133,7 @@ html, body, #container, img {
   #container #sidebar #contact #contact-linkedin:last-child {
     margin-right: 0;
   }
-  /* line 151, ../sass/base.scss */
+  /* line 203, ../sass/base.scss */
   #container #sidebar #legal {
     display: block;
     float: left;
@@ -1083,7 +1147,14 @@ html, body, #container, img {
     margin-right: 0;
   }
 }
-/* line 173, ../sass/base.scss */
+@media screen and (min-width: 830px) and (min-height: 460px) {
+  /* line 176, ../sass/base.scss */
+  #container #sidebar .content {
+    height: 100%;
+    position: fixed;
+  }
+}
+/* line 225, ../sass/base.scss */
 #container #main {
   display: block;
   float: left;
@@ -1105,10 +1176,10 @@ html, body, #container, img {
 #container #main:after {
   clear: both;
 }
-/* line 179, ../sass/base.scss */
+/* line 231, ../sass/base.scss */
 #container #main .post {
-  margin-top: 3em;
-  padding: 2em;
+  margin-top: 2em;
+  padding: 1.4em;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
   -ms-border-radius: 0.5em;
@@ -1117,8 +1188,8 @@ html, body, #container, img {
   border: 1px solid #cccccc;
   background-color: whitesmoke;
 }
-@media screen and (max-width: 400px) {
-  /* line 173, ../sass/base.scss */
+@media screen and (max-width: 460px) {
+  /* line 225, ../sass/base.scss */
   #container #main {
     display: block;
     float: left;
@@ -1129,29 +1200,31 @@ html, body, #container, img {
   #container #main:last-child {
     margin-right: 0;
   }
-  /* line 193, ../sass/base.scss */
+  /* line 245, ../sass/base.scss */
   #container #main .post-date {
     font-family: 'Georgia', serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 13.6721px;
+    font-size: 10.517px;
+    display: block;
+    padding-bottom: 0.7em;
   }
-  /* line 194, ../sass/base.scss */
+  /* line 246, ../sass/base.scss */
   #container #main h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 32.0745px;
+    font-size: 21.383px;
   }
-  /* line 195, ../sass/base.scss */
+  /* line 247, ../sass/base.scss */
   #container #main .post-summary {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 19.82355px;
+    font-size: 13.2157px;
     margin-top: 0.3em;
   }
-  /* line 197, ../sass/base.scss */
+  /* line 249, ../sass/base.scss */
   #container #main .post {
     border-left: 0px;
     border-right: 0px;
@@ -1161,14 +1234,14 @@ html, body, #container, img {
     -o-border-radius: 0;
     border-radius: 0;
   }
-  /* line 202, ../sass/base.scss */
+  /* line 254, ../sass/base.scss */
   #container #main .post-image {
     width: 100%;
     height: auto;
   }
 }
-@media screen and (min-width: 400px) {
-  /* line 173, ../sass/base.scss */
+@media screen and (min-width: 460px) {
+  /* line 225, ../sass/base.scss */
   #container #main {
     display: block;
     float: left;
@@ -1180,40 +1253,42 @@ html, body, #container, img {
   #container #main:last-child {
     margin-right: 0;
   }
-  /* line 214, ../sass/base.scss */
+  /* line 266, ../sass/base.scss */
   #container #main .post-date {
     font-family: 'Georgia', serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 13.6721px;
+    font-size: 10.517px;
+    display: block;
+    padding-bottom: 0.7em;
   }
-  /* line 215, ../sass/base.scss */
+  /* line 267, ../sass/base.scss */
   #container #main h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 32.0745px;
+    font-size: 21.383px;
   }
-  /* line 216, ../sass/base.scss */
+  /* line 268, ../sass/base.scss */
   #container #main .post-summary {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 19.82355px;
+    font-size: 13.2157px;
     margin-top: 0.3em;
   }
-  /* line 218, ../sass/base.scss */
+  /* line 270, ../sass/base.scss */
   #container #main .post-image {
     width: 95%;
     height: auto;
   }
-  /* line 223, ../sass/base.scss */
+  /* line 275, ../sass/base.scss */
   #container #main .content {
     display: block;
   }
 }
-@media screen and (min-width: 760px) {
-  /* line 173, ../sass/base.scss */
+@media screen and (min-width: 830px) {
+  /* line 225, ../sass/base.scss */
   #container #main {
     display: block;
     float: left;
@@ -1225,26 +1300,28 @@ html, body, #container, img {
   #container #main:last-child {
     margin-right: 0;
   }
-  /* line 233, ../sass/base.scss */
+  /* line 285, ../sass/base.scss */
   #container #main .post-date {
     font-family: 'Georgia', serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 13.6721px;
+    font-size: 10.517px;
+    display: block;
+    padding-bottom: 0.7em;
   }
-  /* line 234, ../sass/base.scss */
+  /* line 286, ../sass/base.scss */
   #container #main h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 40.09313px;
+    font-size: 26.72875px;
   }
-  /* line 235, ../sass/base.scss */
+  /* line 287, ../sass/base.scss */
   #container #main .post-summary {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 24.77944px;
+    font-size: 16.51962px;
     margin-top: 0.3em;
   }
 }

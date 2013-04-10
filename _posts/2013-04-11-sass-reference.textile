@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Textile Primer
-summary: A quick handy guide to writing posts in Textile. 
+title: Newbie's SCSS Reference Poster
+summary: A downloadable reference guide for the SCSS beginner. 
 <!-- external: # -->
 <!-- image-path: /assets/# -->
 <!-- youtube: # -->
