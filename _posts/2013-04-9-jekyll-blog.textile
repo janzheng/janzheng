@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thoughts on choosing Github and Jekyll for blogging
+title: Using Github and Jekyll for blogging
 summary: Incredibly powerful and completely free blogging. 
 <!-- external: # -->
 <!-- image-path: /assets/# -->

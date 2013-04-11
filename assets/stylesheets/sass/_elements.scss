@@ -1,40 +1,45 @@
 
 //link & button styles
 
-h1, h2, h3, h4, h5, h6 {  }
 a, a:active, a:visited { 
     color: $dark-gray; 
     text-decoration: none;
 }
 a:hover { color: $gray; }
 
-a.bttn {
-    color: $white;
-    cursor: pointer;
-    padding: 1em;
-    background-color: $dark-gray;
-}
-
 .bttn:hover, .bttn:active, .bttn.clicked {
-    background: $light-gray;
+    background-color: $light-gray;
     @include ease-transition(300ms);
 }
 
 .bttn {
-    overflow: hidden;
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    @include ease-transition(200ms);
+    overflow: hidden; display: block; color: $white;
+    cursor: pointer;
+    padding: 1em;
+    background-color: $dark-gray;
 
-    margin-bottom: 0.5em;
-
-    //round corners for medium and up
-    @include media($medium){
-        @include set-radius(3px);
-    }
+    @include font-body($f3*1.3, 300);
+    text-align: center; text-decoration: none;
+    @include ease-transition(200ms); margin-bottom: 0.5em;
+    @include media($medium){@include set-radius(3px);} /*round corners for medium and up*/
 }
+
+a.contact-email {
+    background: #ffffff url('/assets/images/email.png') no-repeat center;
+    background-size: 25px auto; height: 3em;
+    background-color: $life2;
+}
+a.contact-twitter {
+    background: #ffffff url('/assets/images/twitter.png') no-repeat center;
+    background-size: 25px auto; height: 3em;
+    background-color: $life3;
+}
+a.contact-linkedin {
+    background: #ffffff url('/assets/images/linkedin.png') no-repeat center;
+    background-size: 25px auto; height: 3em;
+    background-color: $life4;
+}
+
 
 
 

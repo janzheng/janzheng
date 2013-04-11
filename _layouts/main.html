@@ -15,11 +15,13 @@ layout: none
 
         <div class="sticky-wrapper">
           <div id="logo"><a href="/">{% include logo.html %}</a></div>
+
           <div id="slogan">
-             <div id="slogan-blurb">I make fun &amp; functional experiences. </div>
+             <div id="slogan-blurb">I make fun, functional experiences. </div>
           </div>
 
           <div id="menu">{% include menu.html %}</div>
+
           <div id="about">{% include about.html %}</div>
 
           <div class="push"></div>
@@ -27,7 +29,7 @@ layout: none
         
         <footer>
           <div id="contact">{% include contact.html %}</div>
-          <div id="legal">{% include legal.html %}</div>
+          <!-- <div class="legal">{% include legal.html %}</div> -->
         </footer>
       </div>
     </div>
@@ -36,12 +38,13 @@ layout: none
 
 	  <div id="main">
   	  <div class="content">
+        <!-- <div id="taglist">{% include taglist.html %}</div> -->
   	    {{ content }}
+        <div class="legal bottom">{% include legal.html %}</div>
   	  </div>
 	  </div>
 
 	</div>
-  <div id="legal-bottom">{% include legal.html %}</div>
   {% include script.html %}
 </body>
 </html>

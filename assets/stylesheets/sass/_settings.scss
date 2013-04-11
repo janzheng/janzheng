@@ -18,13 +18,14 @@ $matte-blue: #3e4b5d;
 
 /*
 kuler: Lifedots 1
-#2A3140
-#F2D399
-#F29863
-#D95F43
-#A63737
+*/
+$life1: #2A3140;
+$life2: #F2D399;
+$life3: #F29863;
+$life4: #D95F43;
+$life5: #A63737;
 
-
+/*
 kuler: Norse
 9C001A
 FFFBDB
@@ -35,18 +36,20 @@ ACBFCC
 */
 
 
-@mixin font-tip($size: $base, $weight: 400, $style: normal) {
+@mixin font-tip($size: $base, $weight: 400, $height: auto, $style: normal) {
     font-family: 'Georgia', serif;
     font-weight: $weight;
     font-style: $style;
     font-size: $size;
+    line-height: $height;
 }
 
-@mixin font-body($size: $base, $weight: 300, $style: normal) {
+@mixin font-body($size: $base, $weight: 300, $height: auto, $style: normal) {
     font-family: 'Open Sans', sans-serif;
     font-weight: $weight;
     font-style: $style;
     font-size: $size;
+    line-height: $height;
 }
 
 
@@ -82,10 +85,10 @@ $base: 13px;
 
 $f1: golden-ratio($base, 4) * 0.3;
 $f2: golden-ratio($base, 3) * 0.3;
-$f3: golden-ratio($base, 2) * 0.3;
-$f4: golden-ratio($base, 1) * 0.5;
-$f5: golden-ratio($base, 1) * 0.3;
-$f6: golden-ratio($base, 1) * 0.5;
+$f3: golden-ratio($base, 2) * 0.32;
+$f4: golden-ratio($base, 2) * 0.3;
+$f5: golden-ratio($base, 2) * 0.2;
+$f6: golden-ratio($base, 1) * 0.3;
 $tinyfont: $base * 0.82;
 
 
@@ -136,9 +139,6 @@ $tinyfont: $base * 0.82;
 .batch--large { font-size:32px; }
 .batch--huge { font-size:64px; }
 .batch--natural { font-size:inherit; }
-
-
-
 
 
 

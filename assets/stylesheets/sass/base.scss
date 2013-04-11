@@ -19,7 +19,7 @@
     #logo {
       text-align: center;
       @include span-columns(12);
-      @include font-tip($f4, 300);
+      @include font-tip($f3, 300);
 
       #logo-image {
         margin-top: 3em;
@@ -30,37 +30,68 @@
     }
 
     #slogan {
-      text-align: center;
-      padding-top: 9em;
+      // padding-top: 7em;
+      padding-top: 8em;
+      text-align: left;
       padding-bottom: 2em;
-      @include font-tip($f2*0.75, 300);
-      line-height: $f2*1.2;
+      @include font-tip($f2*0.95, 300, $f2*1.4);
 
       #slogan-blurb {
-        border-bottom: 1px solid #888; 
+        border-top: 1px solid #ccc; 
+        border-bottom: 1px solid #ccc; 
         padding: 0.6em;
-        @include set-radius(0.5em);
-        border: 1px solid $light-gray;
-        background-color: $silver;
+        // @include set-radius(0.5em);
+        // border: 1px solid $light-gray;
+        // background-color: $silver;
       }
     }
 
     #about {
       #about-blurb{display: inherit;}
       #about-longer{display: none;}
+
+
+      #about-container {
+        border-top: 1px solid #ccc; 
+        border-bottom: 1px solid #ccc; 
+        padding: 0.6em;
+        margin-top: 10em;
+        // @include set-radius(0.5em);
+        // border: 1px solid $light-gray;
+        // background-color: $silver;
+      }
     }
     #menu {
+      // padding-top: 9em;
       #menu-blog{@include span-columns(12);}
       #menu-email{@include span-columns(12);}
-    }
-
-    #legal {
     }
     
   }
 
   #main {
+    .post-taglist {
+      margin-top: 1.5em;
+      li{
 
+        border: 1px solid $gray;
+        background-color: $gray;
+        padding-bottom: 0.3em; padding-top: 0.3em;
+        padding-left: 0.8em; padding-right: 0.8em;
+        @include set-radius(4px); 
+        @include font-body($f3, 300);
+        display: inline;
+        color: white;
+      }
+    }
+
+
+    .legal {
+      @include span-columns(12);
+      padding-top: 2.5em; padding-bottom: 0.5em;
+      @include font-tip($f3, 300);
+      text-align: center;
+    }
   }
 }
 
@@ -68,48 +99,31 @@
 
 // generalresponsive 
 @include media($small) {
-  #slogan-blurb {
-    border-top: 1px solid $light-gray;
-    border-bottom: 1px solid $light-gray;
-    border-left: 0px; border-right: 0px;
-    @include set-radius(0px); 
-  }
+ 
 
-  #legal-bottom{
-    display: inline;
+  .legal{
     display: block;
-    padding-bottom: 2em;
+    padding-bottom: 4em;
+    @include font-tip($f3, 300);
     text-align: center;
   }
 
 
 }
 @include media($medium) {
-  #legal-bottom{
-    display: none;
-  }
-  #container {
-    // padding: 0 3em 0 3em;
-    @include pad(0 1em 0 1em);
-  }
+  // .bottom{display: none;}
+  #container {@include pad(0 1em 0 1em); }
 }
 @include media($large) {
-  #container {
-    // padding: 0 3em 0 3em;
-    @include pad(0 3em 0 1em);
-  }
+  #container {@include pad(0 3em 0 1em);}
 }
 
 
 // site layout
 
-
 #container {
   @include outer-container;
-
-
 /*
-
 
     SIDE BAR ********************************************************************************************************
 
@@ -117,15 +131,22 @@
 */
 
   #sidebar {
-      // position:relative;
-
-
-
     @include media($small) {
       @include span-columns(6);
-
       text-align: center;
-      // background-color: brown;
+
+      #slogan {
+        padding-top: 9em;
+
+        #slogan-blurb {
+          text-align: center;
+          border-top: 1px solid $light-gray;
+          border-bottom: 1px solid $light-gray;
+          border-left: 0px; border-right: 0px;
+          @include set-radius(0px); 
+        }
+
+      }
 
       #contact {
         padding-top: 0.5em;
@@ -133,13 +154,7 @@
         #contact-twitter{@include span-columns(3);}
         #contact-linkedin{@include span-columns(3);}
       }
-
-      #legal {
-        // font-size: $tinyfont;
-        // just hide this for mobile
-        display: none;
-      }
-
+      // .legal {display: none;}
     }
 
     @include media($medium) {
@@ -164,10 +179,7 @@
         padding-top: 0.5em;
       }
 
-      #legal {
-        @include span-columns(12);
-        padding-top: 0.5em; padding-bottom: 0.5em;
-      }
+
 
     }
 
@@ -189,6 +201,8 @@
       #about {
         #about-blurb{display: none}
         #about-longer{display: inherit;}
+
+
       }
 
       #contact {
@@ -200,10 +214,6 @@
         padding-top: 0.5em;
       }
 
-      #legal {
-        @include span-columns(12);
-        padding-top: 0.5em; padding-bottom: 0.5em;
-      }
     }
 
   }
@@ -226,7 +236,7 @@
     @include span-columns(12);
     @include clearfix;
   
-    padding-bottom: 8em;
+    padding-bottom: 4em;
 
     .post {
       margin-top: 2em;
@@ -242,7 +252,7 @@
       @include span-columns(6);
 
       //typography
-      .post-date {@include font-tip($f4, 300); display:block; padding-bottom: 0.7em;}
+      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1*0.8, 300);}
       .post-summary{@include font-body($f2*0.8, 300); margin-top: 0.3em;}
 
@@ -263,7 +273,7 @@
       @include shift (3);
 
       //typography
-      .post-date {@include font-tip($f4, 300); display:block; padding-bottom: 0.7em;}
+      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1*0.8, 300);}
       .post-summary{@include font-body($f2*0.8, 300); margin-top: 0.3em;}
 
@@ -278,11 +288,9 @@
     }
 
     @include media($large) {
-      @include span-columns(9);
-      @include shift(3);
 
       //typography
-      .post-date {@include font-tip($f4, 300); display:block; padding-bottom: 0.7em;}
+      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1, 300);}
       .post-summary{@include font-body($f2, 300); margin-top: 0.3em;}
 
@@ -298,44 +306,8 @@
 
 
 
-// // example
-// .fifth {
-//   @include outer-container;
-//   background-color: #d5eefb;
 
-//   ul {margin: 0}
-
-//   li {
-//     display: block;
-//     height: 40px;
-//     background-color: #aadbf5;
-//     margin-bottom: 10px;
-
-//     @include media($small) {
-//       background-color: brown;
-//       @include span-columns(6);
-//       @include omega(2n);
-//     }
-
-//     @include media($medium) {
-//       background-color: blue;
-//       @include span-columns(4);
-//       @include omega(2n);
-//     }
-
-//     @include media($large) {
-//       background-color: red;
-//       @include span-columns(3);
-//       @include omega(4n);
-//     }
-//   }
-// }
-
-
-
-
-
-
+/*
 // @media print {
 //   * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
 //   -ms-filter: none !important; } 
@@ -350,3 +322,4 @@
 //   p, h2, h3 { orphans: 3; widows: 3; }
 //   h2, h3{ page-break-after: avoid; }
 // }
+*/

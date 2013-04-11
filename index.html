@@ -11,6 +11,7 @@ date      (01 January 2013)
 Title     (external link | post url)
 Object    (external link | post url) (image | youtube | vimeo)
 Summary   
+Tags
  -->
 {% for post in site.posts %}
 <a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
@@ -38,6 +39,26 @@ Summary
 
 
     <p class="post-summary">{{ post.summary }}</p>
+
+    {% if post.tags != null %}
+      {% assign tags_list = post.tags %} 
+        {% if tags_list.size > 0 %}
+        <ul class="post-taglist">
+
+          {% if tags_list.first[0] == null %}
+            {% for tag in tags_list %} 
+              <li>{{ tag }}</li>
+            {% endfor %}
+          {% else %}
+            {% for tag in tags_list %} 
+              <li>{{ tag[0] }}</li>
+            {% endfor %}
+          {% endif %}
+          
+        {% endif %}
+        {% assign tags_list = nil %}
+      </ul>
+    {% endif %}
 
     <div class="clear"></div>
   </section>
