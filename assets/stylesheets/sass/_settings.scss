@@ -25,15 +25,36 @@ $life3: #F29863;
 $life4: #D95F43;
 $life5: #A63737;
 
+
 /*
 kuler: Norse
-9C001A
-FFFBDB
-ACBFCC
-77838C
-41484C
-
 */
+$norse1: #9C001A;
+$norse2: #FFFBDB;
+$norse3: #ACBFCC;
+$norse4: #77838C;
+$norse5: #41484C;
+
+$color1: $norse1;
+$color2: $norse2;
+$color3: $norse3;
+$color4: $norse4;
+$color5: $norse5;
+$color6: $life1;
+$color7: $life2;
+$color8: $life3;
+$color9: $life4;
+$color0: $life5;
+
+$color-link: #fff;
+$color-link-active: #fff;
+
+$color-email: $norse3;
+$color-twitter: $norse3;
+$color-linkedin: $norse3;
+
+
+
 
 
 @mixin font-tip($size: $base, $weight: 400, $height: auto, $style: normal) {
@@ -151,6 +172,12 @@ $tinyfont: $base * 0.82;
 
 
 // mixins 
+@mixin ui-separator-dashed($color: #999, $color-alt: $silver, $height: 1px)
+{
+    border: 0; //cancel default <hr> style
+    border-bottom: $height dashed $color-alt;
+    background: $color;
+}
 
 
 // ClearFix Mixin - taken care of by bourbon
@@ -168,16 +195,6 @@ $tinyfont: $base * 0.82;
 //       clear:both;
 //     }
 // }
-
-
-// helper functions
-
-// taken are of by bourbon.io's em(#px) function
-@function px-to-em($target){
-    @return ($target / $base) * 1em;
-}
-
-// @media (device-height: 1024px) and (device-width: 768px), only all and (max-height: 650px)
 
 
 
