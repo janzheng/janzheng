@@ -5,15 +5,19 @@ a, a:active, a:visited {
     color: $dark-gray; 
     text-decoration: none;
 }
-a:hover { color: $gray; }
-
-.bttn:hover, .bttn:active, .bttn.clicked {
-    background-color: $light-gray;
-    @include ease-transition(300ms);
+a:hover { 
+    color: $gray; 
+    @include ease-transition(200ms);
 }
 
-.bttn {
-    overflow: hidden; display: block; color: $white;
+a.bttn:hover, .bttn:active, .bttn.clicked {
+    background-color: $light-gray;
+    @include ease-transition(200ms);
+}
+
+a.bttn {
+    color: #fff;
+    overflow: hidden; display: block; 
     cursor: pointer;
     padding: 1em;
     background-color: $dark-gray;
@@ -24,26 +28,46 @@ a:hover { color: $gray; }
     @include media($medium){@include set-radius(3px);} /*round corners for medium and up*/
 }
 
-a.contact-email {
-    background: #ffffff url('/assets/images/email.png') no-repeat center;
-    background-size: 25px auto; height: 3em;
-    background-color: $life2;
-}
-a.contact-twitter {
-    background: #ffffff url('/assets/images/twitter.png') no-repeat center;
-    background-size: 25px auto; height: 3em;
-    background-color: $life3;
-}
-a.contact-linkedin {
-    background: #ffffff url('/assets/images/linkedin.png') no-repeat center;
-    background-size: 25px auto; height: 3em;
-    background-color: $life4;
+
+.line {
+    @include ui-separator-dashed;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 
 
+//something I used for coloring, but decided to keep
+#color-palette {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
 
-// sticky contact footer
+  #c1{background-color: $color1;}
+  #c2{background-color: $color2;}
+  #c3{background-color: $color3;}
+  #c4{background-color: $color4;}
+  #c5{background-color: $color5;}
+  #a1{background-color: $color6;}
+  #a2{background-color: $color7;}
+  #a3{background-color: $color8;}
+  #a4{background-color: $color9;}
+  #a5{background-color: $color0;}
+
+  div {
+    height: 5px;
+    width: 10%;
+    float: left;
+    z-index: 2000;
+    // background-color: $color1;
+  }
+}
+
+
+
+//  contact footer
 html, body, #container, img {
     height: 100%;
     @include ease-transition(200ms);

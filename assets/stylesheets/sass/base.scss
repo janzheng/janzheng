@@ -11,7 +11,6 @@
 
 // general sizing
 
-
 // general, catch-all
 #container {
   #sidebar {
@@ -33,47 +32,94 @@
       // padding-top: 7em;
       padding-top: 8em;
       text-align: left;
-      padding-bottom: 2em;
       @include font-tip($f2*0.95, 300, $f2*1.4);
+      background-color: inherit;
 
       #slogan-blurb {
-        border-top: 1px solid #ccc; 
-        border-bottom: 1px solid #ccc; 
+        border-top: 1px solid $color3; 
+        border-bottom: 1px solid $color3; 
         padding: 0.6em;
         // @include set-radius(0.5em);
         // border: 1px solid $light-gray;
-        // background-color: $silver;
+        background-color: $white;
       }
+
     }
 
     #about {
       #about-blurb{display: inherit;}
       #about-longer{display: none;}
 
+      
+      .triangle {
+          @include triangle(12px, $color5, up);
+          text-align: center;
+          position: relative;
+          left: 50%;
+          margin-left: -6px;
+      }
 
       #about-container {
-        border-top: 1px solid #ccc; 
-        border-bottom: 1px solid #ccc; 
-        padding: 0.6em;
-        margin-top: 10em;
-        // @include set-radius(0.5em);
-        // border: 1px solid $light-gray;
+        // border-top: 1px solid #ccc; 
+        // border-bottom: 1px solid #ccc;
+        padding-top: 0.4em;
+        background-color: $color5; 
+        padding: 0.8em;
+        a {color: $color2; &:hover {color: $color4;}}
+        // margin-top: 10em;
+        @include set-radius(3px);
+        // border: 1px solid $color3;
         // background-color: $silver;
+        @include font-body($f3,400);
+
+
+        .line {
+            @include ui-separator-dashed($color5, $color4);
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
       }
+
     }
     #menu {
-      // padding-top: 9em;
+      padding-top: 9em;
       #menu-blog{@include span-columns(12);}
       #menu-email{@include span-columns(12);}
+    }
+
+
+    a.contact-email {
+        background: #ffffff url('/assets/images/email.png') no-repeat center;
+        background-size: 25px auto; height: 3em;
+        background-color: $color-email;
+        &:hover{background-color: $color7;}
+    }
+    a.contact-twitter {
+        background: #ffffff url('/assets/images/twitter.png') no-repeat center;
+        background-size: 25px auto; height: 3em;
+        background-color: $color-twitter;
+        &:hover{background-color: $color8;}
+    }
+    a.contact-linkedin {
+        background: #ffffff url('/assets/images/linkedin.png') no-repeat center;
+        background-size: 25px auto; height: 3em;
+        background-color: $color-linkedin;
+        &:hover{background-color: $color2;}
     }
     
   }
 
   #main {
     .post-taglist {
-      margin-top: 1.5em;
+      margin-top: 0.6em;
+      // margin-top: 1.5em;
       li{
+        @include font-tip($f3, 300);
+        display: inline;
+        content: ',';
+        color: $color4;
 
+        /* once we have clickable tags
         border: 1px solid $gray;
         background-color: $gray;
         padding-bottom: 0.3em; padding-top: 0.3em;
@@ -82,6 +128,10 @@
         @include font-body($f3, 300);
         display: inline;
         color: white;
+        */
+      }
+      li:not(:last-child):after{
+        content: ',';
       }
     }
 
@@ -133,22 +183,15 @@
   #sidebar {
     @include media($small) {
       @include span-columns(6);
-      text-align: center;
+      text-align: center; 
 
       #slogan {
         padding-top: 9em;
-
-        #slogan-blurb {
-          text-align: center;
-          border-top: 1px solid $light-gray;
-          border-bottom: 1px solid $light-gray;
-          border-left: 0px; border-right: 0px;
-          @include set-radius(0px); 
-        }
-
+        #slogan-blurb {@include set-radius(0px);}
       }
+      #about {#about-blurb{display: none}#about-longer{display: inherit;}}
 
-      #contact {
+      #contact { 
         padding-top: 0.5em;
         #contact-email{@include span-columns(6);}
         #contact-twitter{@include span-columns(3);}
@@ -167,7 +210,6 @@
           height: 100%;
           position: fixed;
         }
-        // background-color:darkseagreen;
       }
 
       #contact {
@@ -198,12 +240,7 @@
         width: $gutter+$column*3;
       }
 
-      #about {
-        #about-blurb{display: none}
-        #about-longer{display: inherit;}
-
-
-      }
+      #about {#about-blurb{display: none}#about-longer{display: inherit;}}
 
       #contact {
         @include span-columns(12);
@@ -239,12 +276,13 @@
     padding-bottom: 4em;
 
     .post {
-      margin-top: 2em;
+      margin-top: 1em;
       // border-bottom: 1px solid #888; 
       padding: 1.4em;
-      @include set-radius(0.5em);
-      border: 1px solid $light-gray;
-      background-color: $silver;
+      padding-left: 0.8em;
+      // @include set-radius(0.5em);
+      // border: 1px solid $light-gray;
+      // background-color: $silver;
     }
     
 
@@ -295,12 +333,8 @@
       .post-summary{@include font-body($f2, 300); margin-top: 0.3em;}
 
     }
-
-
-
   }
   
-
 }
 
 
