@@ -13,6 +13,8 @@
 
 // general, catch-all
 #container {
+  @include span-columns(12);
+
   #sidebar {
 
     #logo {
@@ -188,7 +190,7 @@
 
       #slogan {
         padding-top: 9em;
-        #slogan-blurb {@include set-radius(0px);}
+        #slogan-blurb {@include set-radius(0px); text-align: center;}
       }
       #about {#about-blurb{display: none}#about-longer{display: inherit;}}
 
