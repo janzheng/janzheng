@@ -67,11 +67,12 @@
         padding: 0.8em;
         a {color: $color2; &:hover {color: $color4;}}
         // margin-top: 10em;
-        @include set-radius(3px);
+
+        @include media($medium) {@include set-radius(3px);}
+        @include media($large) {@include set-radius(3px);}
         // border: 1px solid $color3;
         // background-color: $silver;
         @include font-body($f3,400);
-
 
         .line {
             @include ui-separator-dashed($color5, $color4);
