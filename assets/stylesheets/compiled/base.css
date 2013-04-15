@@ -1416,7 +1416,7 @@ body:after {
     display: block;
     float: left;
     margin-right: 4.82916%;
-    width: 204.82916%;
+    width: 100%;
   }
   /* line 54, ../sass/neat/grid/_span-columns.scss */
   #container #main:last-child {
