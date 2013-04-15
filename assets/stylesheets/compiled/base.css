@@ -1420,4 +1420,46 @@ body:after {
   #container #main:last-child {
     margin-right: 0;
   }
+  /* line 312, ../sass/base.scss */
+  #container #main .post-date {
+    font-family: 'Georgia', serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 10.89056px;
+    line-height: auto;
+    display: block;
+    padding-bottom: 0.7em;
+  }
+  /* line 313, ../sass/base.scss */
+  #container #main h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 21.383px;
+    line-height: auto;
+  }
+  /* line 314, ../sass/base.scss */
+  #container #main .post-summary {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13.2157px;
+    line-height: auto;
+    margin-top: 0.3em;
+  }
+  /* line 316, ../sass/base.scss */
+  #container #main .post {
+    border-left: 0px;
+    border-right: 0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+  }
+  /* line 321, ../sass/base.scss */
+  #container #main .post-image {
+    width: 100%;
+    height: auto;
+  }
 }
