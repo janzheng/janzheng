@@ -165,7 +165,7 @@ body {
 
 
   #main {
-    @include span-columns(12);
+    // @include span-columns(12);
     @include clearfix;
   
     padding-bottom: 4em;
@@ -181,9 +181,6 @@ body {
     }
     
 
-    @include media($small) {
-      @include span-columns(6);
-    }
 
   }
   
