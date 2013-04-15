@@ -1001,28 +1001,6 @@ body:after {
 #container #sidebar #menu {
   padding-top: 3em;
 }
-/* line 94, ../sass/base.scss */
-#container #sidebar #menu #menu-blog {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 100%;
-}
-/* line 54, ../sass/neat/grid/_span-columns.scss */
-#container #sidebar #menu #menu-blog:last-child {
-  margin-right: 0;
-}
-/* line 95, ../sass/base.scss */
-#container #sidebar #menu #menu-email {
-  display: block;
-  float: left;
-  margin-right: 2.35765%;
-  width: 100%;
-}
-/* line 54, ../sass/neat/grid/_span-columns.scss */
-#container #sidebar #menu #menu-email:last-child {
-  margin-right: 0;
-}
 /* line 99, ../sass/base.scss */
 #container #sidebar a.contact-email {
   background: white url("/assets/images/email.png") no-repeat center;
