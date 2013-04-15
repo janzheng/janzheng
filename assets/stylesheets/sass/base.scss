@@ -75,7 +75,160 @@ body {
 
 */
 
+  #sidebar {
+    @include media($small) {
+      @include span-columns(6);
+      text-align: center; 
+
+      #slogan {
+        padding-top: 9em;
+        #slogan-blurb {@include set-radius(0px); text-align: center;}
+      }
+      #about {#about-blurb{display: none}#about-longer{display: inherit;}}
+
+      #contact { 
+        padding-top: 0.5em;
+        #contact-email{@include span-columns(6);}
+        #contact-twitter{@include span-columns(3);}
+        #contact-linkedin{@include span-columns(3);}
+      }
+      // .legal {display: none;}
+    }
+
+    @include media($medium) {
+      @include span-columns(6);
+      .content {
+        // this makes menu sticky, but only above a certain height
+        width: 22%;
+        position: absolute;
+        @include media($short) {
+          height: 100%;
+          position: fixed;
+        }
+      }
+
+      #contact {
+        @include span-columns(12);
+        #contact-email{@include span-columns(12);}
+        #contact-twitter{@include span-columns(12);}
+        #contact-linkedin{@include span-columns(12);}
+
+        padding-top: 0.5em;
+      }
+
+
+
+    }
+
+    @include media($large) {
+
+      .content {
+        // this makes menu sticky
+        height: 100%;
+
+        position: absolute;
+        @include media($tall) {
+          height: 100%;
+          position: fixed;
+        }
+
+        width: $gutter+$column*3;
+      }
+
+      #about {#about-blurb{display: none}#about-longer{display: inherit;}}
+
+      #contact {
+        @include span-columns(12);
+        #contact-email{@include span-columns(4);}
+        #contact-twitter{@include span-columns(4);}
+        #contact-linkedin{@include span-columns(4);}
+
+        padding-top: 0.5em;
+      }
+
+    }
+
+  }
+
+
+
+
+/*
+
+
+    MAIN CONTENT ********************************************************************************************************
+    
+
+*/
+
+
+
+
+  #main {
+    @include span-columns(12);
+    @include clearfix;
   
+    padding-bottom: 4em;
+
+    .post {
+      margin-top: 1em;
+      // border-bottom: 1px solid #888; 
+      padding: 1.4em;
+      padding-left: 0.8em;
+      // @include set-radius(0.5em);
+      // border: 1px solid $light-gray;
+      // background-color: $silver;
+    }
+    
+
+    @include media($small) {
+      @include span-columns(6);
+
+      //typography
+      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
+      h1 {@include font-body($f1*0.8, 300);}
+      .post-summary{@include font-body($f2*0.8, 300); margin-top: 0.3em;}
+
+      .post {
+        border-left: 0px; border-right: 0px;
+        @include set-radius(0);
+      }
+
+      .post-image {
+        width: 100%;
+        height: auto;
+
+      }
+    }
+
+    @include media($medium) {
+      @include span-columns(9);
+      @include shift (3);
+
+      //typography
+      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
+      h1 {@include font-body($f1*0.8, 300);}
+      .post-summary{@include font-body($f2*0.8, 300); margin-top: 0.3em;}
+
+      .post-image {
+        width:95%;
+        height: auto;
+      }
+
+      .content {
+        display: block;
+      }
+    }
+
+    @include media($large) {
+
+      //typography
+      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
+      h1 {@include font-body($f1, 300);}
+      .post-summary{@include font-body($f2, 300); margin-top: 0.3em;}
+
+    }
+  }
   
 }
 
