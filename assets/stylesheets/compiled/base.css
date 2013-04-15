@@ -1342,3 +1342,81 @@ html, body, #container, img {
     position: fixed;
   }
 }
+/* line 275, ../sass/base.scss */
+#container #main {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+  *zoom: 1;
+  padding-bottom: 4em;
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 54, ../sass/neat/grid/_span-columns.scss */
+#container #main:last-child {
+  margin-right: 0;
+}
+/* line 18, ../sass/bourbon/addons/_clearfix.scss */
+#container #main:before, #container #main:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/bourbon/addons/_clearfix.scss */
+#container #main:after {
+  clear: both;
+}
+/* line 281, ../sass/base.scss */
+#container #main .post {
+  margin-top: 1em;
+  padding: 1.4em;
+  padding-left: 0.8em;
+}
+/* line 54, ../sass/neat/grid/_span-columns.scss */
+#container #main:last-child {
+  margin-right: 0;
+}
+/* line 296, ../sass/base.scss */
+#container #main .post-date {
+  font-family: 'Georgia', serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 10.89056px;
+  line-height: auto;
+  display: block;
+  padding-bottom: 0.7em;
+}
+/* line 297, ../sass/base.scss */
+#container #main h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 21.383px;
+  line-height: auto;
+}
+/* line 298, ../sass/base.scss */
+#container #main .post-summary {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 13.2157px;
+  line-height: auto;
+  margin-top: 0.3em;
+}
+/* line 300, ../sass/base.scss */
+#container #main .post {
+  border-left: 0px;
+  border-right: 0px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 305, ../sass/base.scss */
+#container #main .post-image {
+  width: 100%;
+  height: auto;
+}
