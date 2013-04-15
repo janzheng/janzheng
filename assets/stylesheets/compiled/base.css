@@ -954,6 +954,13 @@ body:after {
   
   
   */
+  /*
+  
+  
+      MAIN CONTENT ********************************************************************************************************
+      
+  
+  */
 }
 /* line 18, ../sass/bourbon/addons/_clearfix.scss */
 #container:before, #container:after {
@@ -963,4 +970,214 @@ body:after {
 /* line 23, ../sass/bourbon/addons/_clearfix.scss */
 #container:after {
   clear: both;
+}
+@media screen and (max-width: 460px) {
+  /* line 78, ../sass/base.scss */
+  #container #sidebar {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+    text-align: center;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar:last-child {
+    margin-right: 0;
+  }
+  /* line 83, ../sass/base.scss */
+  #container #sidebar #slogan {
+    padding-top: 9em;
+  }
+  /* line 85, ../sass/base.scss */
+  #container #sidebar #slogan #slogan-blurb {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    text-align: center;
+  }
+  /* line 87, ../sass/base.scss */
+  #container #sidebar #about #about-blurb {
+    display: none;
+  }
+  /* line 87, ../sass/base.scss */
+  #container #sidebar #about #about-longer {
+    display: inherit;
+  }
+  /* line 89, ../sass/base.scss */
+  #container #sidebar #contact {
+    padding-top: 0.5em;
+  }
+  /* line 91, ../sass/base.scss */
+  #container #sidebar #contact #contact-email {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-email:last-child {
+    margin-right: 0;
+  }
+  /* line 92, ../sass/base.scss */
+  #container #sidebar #contact #contact-twitter {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 47.58542%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-twitter:last-child {
+    margin-right: 0;
+  }
+  /* line 93, ../sass/base.scss */
+  #container #sidebar #contact #contact-linkedin {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 47.58542%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-linkedin:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 460px) {
+  /* line 78, ../sass/base.scss */
+  #container #sidebar {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar:last-child {
+    margin-right: 0;
+  }
+  /* line 100, ../sass/base.scss */
+  #container #sidebar .content {
+    width: 22%;
+    position: absolute;
+  }
+  /* line 110, ../sass/base.scss */
+  #container #sidebar #contact {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-top: 0.5em;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact:last-child {
+    margin-right: 0;
+  }
+  /* line 112, ../sass/base.scss */
+  #container #sidebar #contact #contact-email {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-email:last-child {
+    margin-right: 0;
+  }
+  /* line 113, ../sass/base.scss */
+  #container #sidebar #contact #contact-twitter {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-twitter:last-child {
+    margin-right: 0;
+  }
+  /* line 114, ../sass/base.scss */
+  #container #sidebar #contact #contact-linkedin {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-linkedin:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 460px) and (min-height: 560px) {
+  /* line 100, ../sass/base.scss */
+  #container #sidebar .content {
+    height: 100%;
+    position: fixed;
+  }
+}
+@media screen and (min-width: 830px) {
+  /* line 125, ../sass/base.scss */
+  #container #sidebar .content {
+    height: 100%;
+    position: absolute;
+    width: 14.3254em;
+  }
+  /* line 138, ../sass/base.scss */
+  #container #sidebar #about #about-blurb {
+    display: none;
+  }
+  /* line 138, ../sass/base.scss */
+  #container #sidebar #about #about-longer {
+    display: inherit;
+  }
+  /* line 140, ../sass/base.scss */
+  #container #sidebar #contact {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-top: 0.5em;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact:last-child {
+    margin-right: 0;
+  }
+  /* line 142, ../sass/base.scss */
+  #container #sidebar #contact #contact-email {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-email:last-child {
+    margin-right: 0;
+  }
+  /* line 143, ../sass/base.scss */
+  #container #sidebar #contact #contact-twitter {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-twitter:last-child {
+    margin-right: 0;
+  }
+  /* line 144, ../sass/base.scss */
+  #container #sidebar #contact #contact-linkedin {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #sidebar #contact #contact-linkedin:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 830px) and (min-height: 460px) {
+  /* line 125, ../sass/base.scss */
+  #container #sidebar .content {
+    height: 100%;
+    position: fixed;
+  }
 }
