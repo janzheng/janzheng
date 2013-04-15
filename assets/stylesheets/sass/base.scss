@@ -294,6 +294,16 @@ body {
   #main {
     @include clearfix;
   
+    padding-bottom: 4em;
+
+    .post {
+      margin-top: 1em;
+      // border-bottom: 1px solid #888; 
+      // @include set-radius(0.5em);
+      // border: 1px solid $light-gray;
+      // background-color: $silver;
+    }
+    
 
     @include media($small) {
       // @include span-columns(6);

@@ -1393,6 +1393,7 @@ body:after {
 /* line 294, ../sass/base.scss */
 #container #main {
   *zoom: 1;
+  padding-bottom: 4em;
 }
 /* line 18, ../sass/bourbon/addons/_clearfix.scss */
 #container #main:before, #container #main:after {
@@ -1402,4 +1403,8 @@ body:after {
 /* line 23, ../sass/bourbon/addons/_clearfix.scss */
 #container #main:after {
   clear: both;
+}
+/* line 299, ../sass/base.scss */
+#container #main .post {
+  margin-top: 1em;
 }
