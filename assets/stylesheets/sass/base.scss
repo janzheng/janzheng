@@ -160,9 +160,17 @@ body {
 @include media($small) {
   
   #test {
+    @include span-columns(12);
     height: 50px;
     width: 100%;
     background-color: blue;
+  }
+
+  #test2 {
+    @include span-columns(13);
+    height: 50px;
+    width: 100%;
+    background-color: red;
   }
 
   .legal{
