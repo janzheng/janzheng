@@ -8,11 +8,7 @@ layout: none
 {% include head.html %}
 
 <body>	
-  <div id="test"></div>
 	<div id="container">
-
-  <div id="test2"></div>
-
     <div id="sidebar" >
       <div id="color-palette">
         <div id="c1"></div><div id="c2"></div><div id="c3"></div><div id="c4"></div><div id="c5"></div>
@@ -22,8 +18,9 @@ layout: none
       <div class="content">
 
         <div class="sticky-wrapper">
+          <div id="logo">{% include logo.html %}</div>
           <div id="menu">{% include menu.html %}</div>
-          <div id="slogan"><div id="slogan-blurb">I make fun, functional experiences. </div></div>
+          <div id="slogan"><div id="slogan-blurb">I make fun{ctional} experiences. </div></div>
           <div id="about">{% include about.html %}</div>
 
           <div class="push"></div>
@@ -44,6 +41,7 @@ layout: none
 	  <div id="main">
   	  <div class="content">
         <!-- <div id="taglist">{% include taglist.html %}</div> -->
+        <!-- <div class="title">Blog</div> -->
   	    {{ content }}
         <div class="legal bottom">{% include legal.html %}</div>
   	  </div>

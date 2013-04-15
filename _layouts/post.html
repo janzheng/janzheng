@@ -1,38 +1,65 @@
 ---
 layout: main
 ---
-<article id="post">
+
+<!-- post format:
+
+date      (01 January 2013)
+*icon     (external | other post types) *not implemented yet
+Title     (external link | post url)
+Object    (external link | post url) (image | youtube | vimeo)
+Summary   
+Tags
+ -->
+
+<article class="post">
+
   <div class="meta-data">
-    <span class="date">
+    <span class="post-date">
       {{ page.date | date: "%d %B %Y" }}      
     </span> 
-    {% if page.external %}
-      <span class="external">External link</span>
-    {% endif %}
   </div>
-  <h1>
-    {% if page.external %}
-      <a href="{{ page.external }}">{{ page.title }}</a>
-    {% else %}
-      {{ page.title }}           
-    {% endif %}    
-  </h1>
-  {% if page.image-path %}
-    {% if page.remove-image %}      
-    {% else %}
-      <img src="{{ page.image-path }}"/ >
-    {% endif %}    
+
+
+  <h1>{{ page.title }}</h1>
+
+  {% if page.image-path %}      
+   <img class="post-image" src="{{ page.image-path }}"></img>           
   {% endif %}
-  {% if page.youtube %}
-    <iframe width="550" height="452" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+
+  {% if page.youtube %}<iframe width="550" height="452" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>{% endif %}
+  {% if page.vimeo %}<iframe src="{{ page.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=0f314a" width="550" height="309" frameborder="0"></iframe>{% endif %}    
+
+
+  <p class="post-summary">{{ page.summary }}</p>
+
+  {% if page.tags != null %}
+    {% assign tags_list = page.tags %} 
+      {% if tags_list.size > 0 %}
+      <ul class="post-taglist">
+
+        {% if tags_list.first[0] == null %}
+          {% for tag in tags_list %} 
+            <li>{{ tag }}</li>
+          {% endfor %}
+        {% else %}
+          {% for tag in tags_list %} 
+            <li>{{ tag[0] }}</li>
+          {% endfor %}
+        {% endif %}
+        
+      {% endif %}
+      {% assign tags_list = nil %}
+    </ul>
   {% endif %}
-  {% if page.vimeo %}
-    <iframe src="{{ page.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=0f314a" width="550" height="309" frameborder="0"></iframe>
-  {% endif %}
-  <div class="clear"></div>
-  <div id="post-body">
+
+
+  <div class="line"></div>
+
+  <div class="post-body">
     {{ content }}
   </div>
+
   <div class="clear"></div>
     
   {% include disqus.html %}

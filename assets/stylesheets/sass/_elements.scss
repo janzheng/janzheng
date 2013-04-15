@@ -1,19 +1,18 @@
 
 //link & button styles
 
-a, a:active, a:visited { 
-    color: $dark-gray; 
-    text-decoration: none;
-}
-a:hover { 
-    color: $gray; 
-    @include ease-transition(200ms);
-}
+a, a:active, a:visited {color: $dark-gray; text-decoration: underline;}
+a:hover {color: $gray; @include ease-transition(200ms);}
+
+section.post:hover {background-color: $color2;}
+#main a, #about a {text-decoration: none;}
 
 a.bttn:hover, .bttn:active, .bttn.clicked {
     background-color: $light-gray;
     @include ease-transition(200ms);
 }
+
+
 
 a.bttn {
     color: #fff;
@@ -35,6 +34,8 @@ a.bttn {
     margin-bottom: 6px;
 }
 
+
+blockquote {margin: 1em; padding: 4px 1em 1em 2em; background-color: $color2; border-left: 6px solid $color3; @include font-tip($f2, 300, auto); font-style: italic}
 
 
 //something I used for coloring, but decided to keep
