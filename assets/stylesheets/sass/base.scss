@@ -16,6 +16,7 @@
 body {
   @include outer-container;
   width: 100%;
+  text-align: center;
 }
 
 // general, catch-all
