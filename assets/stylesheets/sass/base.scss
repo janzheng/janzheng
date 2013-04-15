@@ -18,6 +18,8 @@ body {
 // general, catch-all
 #container {
   @include span-columns(12);
+    width: 100%;
+    background-color: green;
 
   #sidebar {
 
