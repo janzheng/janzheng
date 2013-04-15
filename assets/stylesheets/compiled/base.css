@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Open+Sans:300,400);
-/* line 2, ../sass/neat/grid/_grid.scss */
+/* line 2, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_grid.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -20,7 +20,7 @@ kuler: Norse
   font-style: normal;
 }
 
-/* line 149, ../sass/_settings.scss */
+/* line 149, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .batch {
   font-family: "Batch";
   /*or whatever you've decalred your font name as*/
@@ -29,33 +29,33 @@ kuler: Norse
   display: inline-block;
 }
 
-/* line 155, ../sass/_settings.scss */
+/* line 155, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .batch:before {
   content: attr(data-icon);
 }
 
-/* line 159, ../sass/_settings.scss */
+/* line 159, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .batch--tiny {
   font-size: 9px;
 }
 
-/* line 160, ../sass/_settings.scss */
+/* line 160, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .batch--large {
   font-size: 32px;
 }
 
-/* line 161, ../sass/_settings.scss */
+/* line 161, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .batch--huge {
   font-size: 64px;
 }
 
-/* line 162, ../sass/_settings.scss */
+/* line 162, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .batch--natural {
   font-size: inherit;
 }
 
 /*  HTML5 ✰ Boilerplate  */
-/* line 213, ../sass/_settings.scss */
+/* line 213, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
@@ -73,32 +73,32 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 223, ../sass/_settings.scss */
+/* line 223, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 227, ../sass/_settings.scss */
+/* line 227, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 229, ../sass/_settings.scss */
+/* line 229, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 230, ../sass/_settings.scss */
+/* line 230, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 ins {
   background-color: #ff9;
   color: #000;
   text-decoration: none;
 }
 
-/* line 231, ../sass/_settings.scss */
+/* line 231, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 mark {
   background-color: #ff9;
   color: #000;
@@ -106,24 +106,24 @@ mark {
   font-weight: bold;
 }
 
-/* line 232, ../sass/_settings.scss */
+/* line 232, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 233, ../sass/_settings.scss */
+/* line 233, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 abbr[title], dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
 
-/* line 234, ../sass/_settings.scss */
+/* line 234, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 235, ../sass/_settings.scss */
+/* line 235, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 hr {
   display: block;
   height: 1px;
@@ -133,92 +133,92 @@ hr {
   padding: 0;
 }
 
-/* line 236, ../sass/_settings.scss */
+/* line 236, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 input, select {
   vertical-align: middle;
 }
 
-/* line 239, ../sass/_settings.scss */
+/* line 239, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 body {
   font: 13px sans-serif;
   *font-size: small;
 }
 
-/* line 240, ../sass/_settings.scss */
+/* line 240, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 select, input, textarea, button {
   font: 99% sans-serif;
 }
 
-/* line 241, ../sass/_settings.scss */
+/* line 241, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 pre, code, kbd, samp {
   font-family: monospace, sans-serif;
 }
 
-/* line 243, ../sass/_settings.scss */
+/* line 243, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 html {
   overflow-y: scroll;
 }
 
-/* line 244, ../sass/_settings.scss */
+/* line 244, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 a:hover, a:active {
   outline: none;
 }
 
-/* line 247, ../sass/_settings.scss */
+/* line 247, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 ul, ol {
   margin-left: 0em;
 }
 
-/* line 248, ../sass/_settings.scss */
+/* line 248, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 ul {
   list-style-type: none;
 }
 
-/* line 249, ../sass/_settings.scss */
+/* line 249, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 ol {
   list-style-type: decimal;
 }
 
-/* line 251, ../sass/_settings.scss */
+/* line 251, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 nav ul, nav li {
   margin: 0;
   list-style: none;
   list-style-image: none;
 }
 
-/* line 252, ../sass/_settings.scss */
+/* line 252, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 small {
   font-size: 85%;
 }
 
-/* line 253, ../sass/_settings.scss */
+/* line 253, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 strong, th {
   font-weight: bold;
 }
 
-/* line 254, ../sass/_settings.scss */
+/* line 254, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 td {
   vertical-align: top;
 }
 
-/* line 256, ../sass/_settings.scss */
+/* line 256, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
 }
 
-/* line 257, ../sass/_settings.scss */
+/* line 257, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 258, ../sass/_settings.scss */
+/* line 258, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 260, ../sass/_settings.scss */
+/* line 260, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -226,47 +226,47 @@ pre {
   padding: 15px;
 }
 
-/* line 261, ../sass/_settings.scss */
+/* line 261, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 textarea {
   overflow: auto;
 }
 
-/* line 262, ../sass/_settings.scss */
+/* line 262, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .ie6 legend, .ie7 legend {
   margin-left: -7px;
 }
 
-/* line 263, ../sass/_settings.scss */
+/* line 263, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 input[type="radio"] {
   vertical-align: text-bottom;
 }
 
-/* line 264, ../sass/_settings.scss */
+/* line 264, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 input[type="checkbox"] {
   vertical-align: bottom;
 }
 
-/* line 265, ../sass/_settings.scss */
+/* line 265, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .ie7 input[type="checkbox"] {
   vertical-align: baseline;
 }
 
-/* line 266, ../sass/_settings.scss */
+/* line 266, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .ie6 input {
   vertical-align: text-bottom;
 }
 
-/* line 267, ../sass/_settings.scss */
+/* line 267, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 label, input[type="button"], input[type="submit"], input[type="image"], button {
   cursor: pointer;
 }
 
-/* line 268, ../sass/_settings.scss */
+/* line 268, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 button, input, select, textarea {
   margin: 0;
 }
 
-/* line 270, ../sass/_settings.scss */
+/* line 270, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 input:invalid, textarea:invalid {
   border-radius: 1px;
   -moz-box-shadow: 0px 0px 5px red;
@@ -274,57 +274,57 @@ input:invalid, textarea:invalid {
   box-shadow: 0px 0px 5px red;
 }
 
-/* line 271, ../sass/_settings.scss */
+/* line 271, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 273, ../sass/_settings.scss */
+/* line 273, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 ::-moz-selection {
   background: #FF5E99;
   color: #fff;
   text-shadow: none;
 }
 
-/* line 274, ../sass/_settings.scss */
+/* line 274, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 ::selection {
   background: #FF5E99;
   color: #fff;
   text-shadow: none;
 }
 
-/* line 275, ../sass/_settings.scss */
+/* line 275, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 a:link {
   -webkit-tap-highlight-color: #FF5E99;
 }
 
-/* line 277, ../sass/_settings.scss */
+/* line 277, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 button {
   width: auto;
   overflow: visible;
 }
 
-/* line 278, ../sass/_settings.scss */
+/* line 278, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .ie7 img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 280, ../sass/_settings.scss */
+/* line 280, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 body, select, input, textarea {
   color: #444;
 }
 
-/* line 282, ../sass/_settings.scss */
+/* line 282, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 a, a:active, a:visited {
   color: #972020;
 }
 
-/* line 283, ../sass/_settings.scss */
+/* line 283, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 a:hover {
   color: #aa0000;
 }
 
-/* line 285, ../sass/_settings.scss */
+/* line 285, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .ir {
   display: block;
   text-indent: -999em;
@@ -334,13 +334,13 @@ a:hover {
   direction: ltr;
 }
 
-/* line 286, ../sass/_settings.scss */
+/* line 286, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .hidden {
   display: none;
   visibility: hidden;
 }
 
-/* line 287, ../sass/_settings.scss */
+/* line 287, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -352,7 +352,7 @@ a:hover {
   width: 1px;
 }
 
-/* line 289, ../sass/_settings.scss */
+/* line 289, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -363,12 +363,12 @@ a:hover {
   width: auto;
 }
 
-/* line 290, ../sass/_settings.scss */
+/* line 290, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 291, ../sass/_settings.scss */
+/* line 291, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .clearfix:before, .clearfix:after {
   content: "\0020";
   display: block;
@@ -376,23 +376,23 @@ a:hover {
   overflow: hidden;
 }
 
-/* line 292, ../sass/_settings.scss */
+/* line 292, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 293, ../sass/_settings.scss */
+/* line 293, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss */
 .clearfix {
   zoom: 1;
 }
 
-/* line 4, ../sass/_elements.scss */
+/* line 4, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 a, a:active, a:visited {
   color: #333333;
   text-decoration: underline;
 }
 
-/* line 5, ../sass/_elements.scss */
+/* line 5, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 a:hover {
   color: #777777;
   -webkit-transition: 200ms ease;
@@ -402,17 +402,17 @@ a:hover {
   transition: 200ms ease;
 }
 
-/* line 7, ../sass/_elements.scss */
+/* line 7, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 section.post:hover {
   background-color: #fffbdb;
 }
 
-/* line 8, ../sass/_elements.scss */
+/* line 8, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #main a, #about a {
   text-decoration: none;
 }
 
-/* line 10, ../sass/_elements.scss */
+/* line 10, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 a.bttn:hover, .bttn:active, .bttn.clicked {
   background-color: #cccccc;
   -webkit-transition: 200ms ease;
@@ -422,7 +422,7 @@ a.bttn:hover, .bttn:active, .bttn.clicked {
   transition: 200ms ease;
 }
 
-/* line 17, ../sass/_elements.scss */
+/* line 17, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 a.bttn {
   color: #fff;
   overflow: hidden;
@@ -445,8 +445,8 @@ a.bttn {
   margin-bottom: 0.5em;
   /*round corners for medium and up*/
 }
-@media screen and (min-width: 460px) {
-  /* line 17, ../sass/_elements.scss */
+@media screen and (min-width: 470px) {
+  /* line 17, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
   a.bttn {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -456,7 +456,7 @@ a.bttn {
   }
 }
 
-/* line 31, ../sass/_elements.scss */
+/* line 31, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 .line {
   border: 0;
   border-bottom: 1px dashed whitesmoke;
@@ -465,7 +465,7 @@ a.bttn {
   margin-bottom: 6px;
 }
 
-/* line 38, ../sass/_elements.scss */
+/* line 38, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 blockquote {
   margin: 1em;
   padding: 4px 1em 1em 2em;
@@ -479,7 +479,7 @@ blockquote {
   font-style: italic;
 }
 
-/* line 42, ../sass/_elements.scss */
+/* line 42, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette {
   position: absolute;
   top: 0px;
@@ -487,47 +487,47 @@ blockquote {
   width: 100%;
   height: auto;
 }
-/* line 49, ../sass/_elements.scss */
+/* line 49, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette #c1 {
   background-color: #9c001a;
 }
-/* line 50, ../sass/_elements.scss */
+/* line 50, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette #c2 {
   background-color: #fffbdb;
 }
-/* line 51, ../sass/_elements.scss */
+/* line 51, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette #c3 {
   background-color: #acbfcc;
 }
-/* line 52, ../sass/_elements.scss */
+/* line 52, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette #c4 {
   background-color: #77838c;
 }
-/* line 53, ../sass/_elements.scss */
+/* line 53, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette #c5 {
   background-color: #41484c;
 }
-/* line 54, ../sass/_elements.scss */
+/* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette #a1 {
   background-color: #2a3140;
 }
-/* line 55, ../sass/_elements.scss */
+/* line 55, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette #a2 {
   background-color: #f2d399;
 }
-/* line 56, ../sass/_elements.scss */
+/* line 56, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette #a3 {
   background-color: #f29863;
 }
-/* line 57, ../sass/_elements.scss */
+/* line 57, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette #a4 {
   background-color: #d95f43;
 }
-/* line 58, ../sass/_elements.scss */
+/* line 58, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette #a5 {
   background-color: #a63737;
 }
-/* line 60, ../sass/_elements.scss */
+/* line 60, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 #color-palette div {
   height: 5px;
   width: 10%;
@@ -535,7 +535,7 @@ blockquote {
   z-index: 2000;
 }
 
-/* line 72, ../sass/_elements.scss */
+/* line 72, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 html, body, #container, img {
   height: 100%;
   -webkit-transition: 200ms ease;
@@ -545,270 +545,270 @@ html, body, #container, img {
   transition: 200ms ease;
 }
 
-/* line 77, ../sass/_elements.scss */
+/* line 77, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
 .sticky-wrapper {
   min-height: 100%;
 }
-@media screen and (min-width: 460px) {
-  /* line 77, ../sass/_elements.scss */
+@media screen and (min-width: 470px) {
+  /* line 77, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
   .sticky-wrapper {
     margin: 0 auto -14em;
   }
 }
-@media screen and (min-width: 830px) {
-  /* line 77, ../sass/_elements.scss */
+@media screen and (min-width: 840px) {
+  /* line 77, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
   .sticky-wrapper {
     margin: 0 auto -7em;
   }
 }
 
-@media screen and (min-width: 460px) {
-  /* line 83, ../sass/_elements.scss */
+@media screen and (min-width: 470px) {
+  /* line 83, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
   footer, .push {
     height: 14em;
   }
 }
-@media screen and (min-width: 830px) {
-  /* line 83, ../sass/_elements.scss */
+@media screen and (min-width: 840px) {
+  /* line 83, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss */
   footer, .push {
     height: 7em;
   }
 }
 
-/* line 2, ../sass/_pastie.sass */
+/* line 2, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .hll {
   background-color: #ffffcc;
 }
-/* line 4, ../sass/_pastie.sass */
+/* line 4, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .c {
   color: #888888;
 }
-/* line 6, ../sass/_pastie.sass */
+/* line 6, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .err {
   color: #a61717;
   background-color: #e3d2d2;
 }
-/* line 9, ../sass/_pastie.sass */
+/* line 9, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .k {
   color: #008800;
   font-weight: bold;
 }
-/* line 12, ../sass/_pastie.sass */
+/* line 12, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .cm {
   color: #888888;
 }
-/* line 14, ../sass/_pastie.sass */
+/* line 14, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .cp {
   color: #cc0000;
   font-weight: bold;
 }
-/* line 17, ../sass/_pastie.sass */
+/* line 17, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .c1 {
   color: #888888;
 }
-/* line 19, ../sass/_pastie.sass */
+/* line 19, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .cs {
   color: #cc0000;
   font-weight: bold;
   background-color: #fff0f0;
 }
-/* line 23, ../sass/_pastie.sass */
+/* line 23, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .gd {
   color: black;
   background-color: #ffdddd;
 }
-/* line 26, ../sass/_pastie.sass */
+/* line 26, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .ge {
   font-style: italic;
 }
-/* line 28, ../sass/_pastie.sass */
+/* line 28, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .gr {
   color: #aa0000;
 }
-/* line 30, ../sass/_pastie.sass */
+/* line 30, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .gh {
   color: #303030;
 }
-/* line 32, ../sass/_pastie.sass */
+/* line 32, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .gi {
   color: black;
   background-color: #ddffdd;
 }
-/* line 35, ../sass/_pastie.sass */
+/* line 35, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .go {
   color: #888888;
 }
-/* line 37, ../sass/_pastie.sass */
+/* line 37, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .gp {
   color: #555555;
 }
-/* line 39, ../sass/_pastie.sass */
+/* line 39, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .gs {
   font-weight: bold;
 }
-/* line 41, ../sass/_pastie.sass */
+/* line 41, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .gu {
   color: #606060;
 }
-/* line 43, ../sass/_pastie.sass */
+/* line 43, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .gt {
   color: #aa0000;
 }
-/* line 45, ../sass/_pastie.sass */
+/* line 45, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .kc, .codehilite .kd, .codehilite .kn {
   color: #008800;
   font-weight: bold;
 }
-/* line 48, ../sass/_pastie.sass */
+/* line 48, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .kp {
   color: #008800;
 }
-/* line 50, ../sass/_pastie.sass */
+/* line 50, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .kr {
   color: #008800;
   font-weight: bold;
 }
-/* line 53, ../sass/_pastie.sass */
+/* line 53, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .kt {
   color: #888888;
   font-weight: bold;
 }
-/* line 56, ../sass/_pastie.sass */
+/* line 56, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .m {
   color: #0000dd;
   font-weight: bold;
 }
-/* line 59, ../sass/_pastie.sass */
+/* line 59, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .s {
   color: #dd2200;
   background-color: #fff0f0;
 }
-/* line 62, ../sass/_pastie.sass */
+/* line 62, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .na {
   color: #336699;
 }
-/* line 64, ../sass/_pastie.sass */
+/* line 64, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .nb {
   color: #003388;
 }
-/* line 66, ../sass/_pastie.sass */
+/* line 66, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .nc {
   color: #bb0066;
   font-weight: bold;
 }
-/* line 69, ../sass/_pastie.sass */
+/* line 69, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .no {
   color: #003366;
   font-weight: bold;
 }
-/* line 72, ../sass/_pastie.sass */
+/* line 72, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .nd {
   color: #555555;
 }
-/* line 74, ../sass/_pastie.sass */
+/* line 74, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .ne {
   color: #bb0066;
   font-weight: bold;
 }
-/* line 77, ../sass/_pastie.sass */
+/* line 77, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .nf {
   color: #0066bb;
   font-weight: bold;
 }
-/* line 80, ../sass/_pastie.sass */
+/* line 80, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .nl {
   color: #336699;
   font-style: italic;
 }
-/* line 83, ../sass/_pastie.sass */
+/* line 83, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .nn {
   color: #bb0066;
   font-weight: bold;
 }
-/* line 86, ../sass/_pastie.sass */
+/* line 86, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .py {
   color: #336699;
   font-weight: bold;
 }
-/* line 89, ../sass/_pastie.sass */
+/* line 89, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .nt {
   color: #bb0066;
   font-weight: bold;
 }
-/* line 92, ../sass/_pastie.sass */
+/* line 92, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .nv {
   color: #336699;
 }
-/* line 94, ../sass/_pastie.sass */
+/* line 94, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .ow {
   color: #008800;
 }
-/* line 96, ../sass/_pastie.sass */
+/* line 96, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .w {
   color: #bbbbbb;
 }
-/* line 98, ../sass/_pastie.sass */
+/* line 98, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .mf, .codehilite .mh, .codehilite .mi, .codehilite .mo {
   color: #0000dd;
   font-weight: bold;
 }
-/* line 101, ../sass/_pastie.sass */
+/* line 101, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .sb, .codehilite .sc, .codehilite .sd, .codehilite .s2 {
   color: #dd2200;
   background-color: #fff0f0;
 }
-/* line 104, ../sass/_pastie.sass */
+/* line 104, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .se {
   color: #0044dd;
   background-color: #fff0f0;
 }
-/* line 107, ../sass/_pastie.sass */
+/* line 107, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .sh {
   color: #dd2200;
   background-color: #fff0f0;
 }
-/* line 110, ../sass/_pastie.sass */
+/* line 110, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .si {
   color: #3333bb;
   background-color: #fff0f0;
 }
-/* line 113, ../sass/_pastie.sass */
+/* line 113, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .sx {
   color: #22bb22;
   background-color: honeydew;
 }
-/* line 116, ../sass/_pastie.sass */
+/* line 116, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .sr {
   color: #008800;
   background-color: #fff0ff;
 }
-/* line 119, ../sass/_pastie.sass */
+/* line 119, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .s1 {
   color: #dd2200;
   background-color: #fff0f0;
 }
-/* line 122, ../sass/_pastie.sass */
+/* line 122, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .ss {
   color: #aa6600;
   background-color: #fff0f0;
 }
-/* line 125, ../sass/_pastie.sass */
+/* line 125, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .bp {
   color: #003388;
 }
-/* line 127, ../sass/_pastie.sass */
+/* line 127, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .vc {
   color: #336699;
 }
-/* line 129, ../sass/_pastie.sass */
+/* line 129, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .vg {
   color: #dd7700;
 }
-/* line 131, ../sass/_pastie.sass */
+/* line 131, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .vi {
   color: #3333bb;
 }
-/* line 133, ../sass/_pastie.sass */
+/* line 133, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_pastie.sass */
 .codehilite .il {
   color: #0000dd;
   font-weight: bold;
@@ -881,12 +881,12 @@ body {
   margin-right: auto;
   width: 100%;
 }
-/* line 18, ../sass/bourbon/addons/_clearfix.scss */
+/* line 18, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/bourbon/addons/_clearfix.scss */
 body:before, body:after {
   content: " ";
   display: table;
 }
-/* line 23, ../sass/bourbon/addons/_clearfix.scss */
+/* line 23, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/bourbon/addons/_clearfix.scss */
 body:after {
   clear: both;
 }
@@ -969,7 +969,7 @@ body:after {
 #container #sidebar #about #about-container a:hover {
   color: #77838c;
 }
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 470px) {
   /* line 68, ../sass/base.scss */
   #container #sidebar #about #about-container {
     -webkit-border-radius: 3px;
@@ -979,7 +979,7 @@ body:after {
     border-radius: 3px;
   }
 }
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 840px) {
   /* line 68, ../sass/base.scss */
   #container #sidebar #about #about-container {
     -webkit-border-radius: 3px;
@@ -1081,7 +1081,7 @@ body:after {
   text-align: center;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   /* line 162, ../sass/base.scss */
   #container {
     padding: 0;
@@ -1099,13 +1099,13 @@ body:after {
     text-align: center;
   }
 }
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 470px) {
   /* line 175, ../sass/base.scss */
   #container {
     padding: 0 1em 0 1em;
   }
 }
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 840px) {
   /* line 178, ../sass/base.scss */
   #container {
     padding: 0 3em 0 1em;
@@ -1131,16 +1131,16 @@ body:after {
   
   */
 }
-/* line 18, ../sass/bourbon/addons/_clearfix.scss */
+/* line 18, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/bourbon/addons/_clearfix.scss */
 #container:before, #container:after {
   content: " ";
   display: table;
 }
-/* line 23, ../sass/bourbon/addons/_clearfix.scss */
+/* line 23, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/bourbon/addons/_clearfix.scss */
 #container:after {
   clear: both;
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   /* line 193, ../sass/base.scss */
   #container #sidebar {
     display: block;
@@ -1149,7 +1149,7 @@ body:after {
     width: 100%;
     text-align: center;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar:last-child {
     margin-right: 0;
   }
@@ -1185,7 +1185,7 @@ body:after {
     margin-right: 4.82916%;
     width: 30.11389%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
@@ -1196,7 +1196,7 @@ body:after {
     margin-right: 4.82916%;
     width: 30.11389%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
@@ -1207,7 +1207,7 @@ body:after {
     margin-right: 4.82916%;
     width: 30.11389%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact #contact-linkedin:last-child {
     margin-right: 0;
   }
@@ -1218,7 +1218,7 @@ body:after {
     margin-right: 4.82916%;
     width: 47.58542%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #menu #menu-blog:last-child {
     margin-right: 0;
   }
@@ -1229,12 +1229,12 @@ body:after {
     margin-right: 4.82916%;
     width: 47.58542%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #menu #menu-email:last-child {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 470px) {
   /* line 193, ../sass/base.scss */
   #container #sidebar {
     display: block;
@@ -1242,7 +1242,7 @@ body:after {
     margin-right: 2.35765%;
     width: 48.82117%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar:last-child {
     margin-right: 0;
   }
@@ -1259,7 +1259,7 @@ body:after {
     width: 100%;
     padding-top: 0.5em;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact:last-child {
     margin-right: 0;
   }
@@ -1270,7 +1270,7 @@ body:after {
     margin-right: 2.35765%;
     width: 100%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
@@ -1281,7 +1281,7 @@ body:after {
     margin-right: 2.35765%;
     width: 100%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
@@ -1292,19 +1292,19 @@ body:after {
     margin-right: 2.35765%;
     width: 100%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact #contact-linkedin:last-child {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 460px) and (min-height: 560px) {
+@media screen and (min-width: 470px) and (min-height: 560px) {
   /* line 220, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
     position: fixed;
   }
 }
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 840px) {
   /* line 245, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
@@ -1327,7 +1327,7 @@ body:after {
     width: 100%;
     padding-top: 0.5em;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact:last-child {
     margin-right: 0;
   }
@@ -1338,7 +1338,7 @@ body:after {
     margin-right: 2.35765%;
     width: 31.76157%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
@@ -1349,7 +1349,7 @@ body:after {
     margin-right: 2.35765%;
     width: 31.76157%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
@@ -1360,12 +1360,12 @@ body:after {
     margin-right: 2.35765%;
     width: 31.76157%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact #contact-linkedin:last-child {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 830px) and (min-height: 460px) {
+@media screen and (min-width: 840px) and (min-height: 460px) {
   /* line 245, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
@@ -1377,12 +1377,12 @@ body:after {
   *zoom: 1;
   padding-bottom: 4em;
 }
-/* line 18, ../sass/bourbon/addons/_clearfix.scss */
+/* line 18, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/bourbon/addons/_clearfix.scss */
 #container #main:before, #container #main:after {
   content: " ";
   display: table;
 }
-/* line 23, ../sass/bourbon/addons/_clearfix.scss */
+/* line 23, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/bourbon/addons/_clearfix.scss */
 #container #main:after {
   clear: both;
 }
@@ -1392,7 +1392,7 @@ body:after {
   padding: 1.4em;
   padding-left: 0.8em;
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   /* line 307, ../sass/base.scss */
   #container #main .post-date {
     font-family: 'Georgia', serif;
@@ -1454,7 +1454,7 @@ body:after {
     margin-top: 1.6em;
   }
 }
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 470px) {
   /* line 287, ../sass/base.scss */
   #container #main {
     display: block;
@@ -1463,7 +1463,7 @@ body:after {
     width: 74.41059%;
     margin-left: 25.58941%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #main:last-child {
     margin-right: 0;
   }
@@ -1517,7 +1517,7 @@ body:after {
     margin-top: 0.8em;
   }
 }
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 840px) {
   /* line 287, ../sass/base.scss */
   #container #main {
     display: block;
@@ -1525,7 +1525,7 @@ body:after {
     margin-right: 2.35765%;
     width: 74.41059%;
   }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  /* line 54, C:/Users/jan.zheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/neat/grid/_span-columns.scss */
   #container #main:last-child {
     margin-right: 0;
   }
