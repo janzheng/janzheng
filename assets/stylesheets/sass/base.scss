@@ -157,7 +157,6 @@ body {
 
 // general responsive 
 @include media($small) {
-  #container {@include pad(0); padding: 0; }
   
   #test {
     @include span-columns(6);
@@ -308,7 +307,7 @@ body {
     
 
     @include media($small) {
-      // @include span-columns(12);
+      // @include span-columns(6);
 
       //typography
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
