@@ -1408,3 +1408,16 @@ body:after {
 #container #main .post {
   margin-top: 1em;
 }
+@media screen and (max-width: 460px) {
+  /* line 294, ../sass/base.scss */
+  #container #main {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, ../sass/neat/grid/_span-columns.scss */
+  #container #main:last-child {
+    margin-right: 0;
+  }
+}

@@ -306,7 +306,7 @@ body {
     
 
     @include media($small) {
-      // @include span-columns(6);
+      @include span-columns(6);
 
     }
 
