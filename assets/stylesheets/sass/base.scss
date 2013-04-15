@@ -57,7 +57,6 @@ body {
       #about-blurb{display: inherit;}
       #about-longer{display: none;}
 
-      
       .triangle {
           @include triangle(12px, $color5, up);
           text-align: center;
@@ -73,7 +72,6 @@ body {
         background-color: $color5; 
         padding: 0.8em;
         a {color: $color2; &:hover {color: $color4;}}
-        // margin-top: 10em;
 
         @include media($medium) {@include set-radius(3px);}
         @include media($large) {@include set-radius(3px);}
@@ -83,8 +81,7 @@ body {
 
         .line {
             @include ui-separator-dashed($color5, $color4);
-            margin-top: 6px;
-            margin-bottom: 6px;
+            margin-top: 6px; margin-bottom: 6px;
         }
       }
 
@@ -148,7 +145,7 @@ body {
 
 
     .legal {
-      @include span-columns(12);
+      // @include span-columns(12);
       padding-top: 2.5em; padding-bottom: 0.5em;
       @include font-tip($f3, 300);
       text-align: center;
@@ -162,6 +159,7 @@ body {
 
 // general responsive 
 @include media($small) {
+  #container {@include pad(0); }
 
   .legal{
     display: block;
@@ -194,7 +192,7 @@ body {
 
   #sidebar {
     @include media($small) {
-      // @include span-columns(6);
+      @include span-columns(6);
       text-align: center; 
 
       #slogan {
@@ -312,7 +310,7 @@ body {
       .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
       .post-image {width: 100%;height: auto;}
       .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.7em); p {margin-top: 0.8em;} }
-
+      .post {margin-top: 1.6em;}
     }
 
     @include media($medium) {
