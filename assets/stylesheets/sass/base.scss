@@ -290,6 +290,14 @@ body {
 
 
 
+
+  #main {
+    @include media($small) {
+      // @include span-columns(6);
+
+    }
+
+  }
   
 }
 
