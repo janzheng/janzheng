@@ -12,6 +12,7 @@
 // general sizing
 body {
   @include outer-container;
+  width: 100%;
 }
 
 // general, catch-all
@@ -153,9 +154,14 @@ body {
 
 
 
-// generalresponsive 
+// general responsive 
 @include media($small) {
- 
+  
+  #test {
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+  }
 
   .legal{
     display: block;
