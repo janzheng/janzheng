@@ -866,6 +866,17 @@ body:after {
   clear: both;
 }
 
+/* line 18, ../sass/base.scss */
+#container {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 54, ../sass/neat/grid/_span-columns.scss */
+#container:last-child {
+  margin-right: 0;
+}
 /* line 23, ../sass/base.scss */
 #container #sidebar #logo {
   text-align: center;
@@ -1111,6 +1122,10 @@ body:after {
 }
 /* line 180, ../sass/base.scss */
 #container {
+  *zoom: 1;
+  max-width: 996px;
+  margin-left: auto;
+  margin-right: auto;
   /*
   
       SIDE BAR ********************************************************************************************************
@@ -1125,8 +1140,17 @@ body:after {
   
   */
 }
+/* line 18, ../sass/bourbon/addons/_clearfix.scss */
+#container:before, #container:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/bourbon/addons/_clearfix.scss */
+#container:after {
+  clear: both;
+}
 @media screen and (max-width: 460px) {
-  /* line 188, ../sass/base.scss */
+  /* line 189, ../sass/base.scss */
   #container #sidebar {
     display: block;
     float: left;
@@ -1138,11 +1162,11 @@ body:after {
   #container #sidebar:last-child {
     margin-right: 0;
   }
-  /* line 193, ../sass/base.scss */
+  /* line 194, ../sass/base.scss */
   #container #sidebar #slogan {
     padding-top: 9em;
   }
-  /* line 195, ../sass/base.scss */
+  /* line 196, ../sass/base.scss */
   #container #sidebar #slogan #slogan-blurb {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
@@ -1151,19 +1175,19 @@ body:after {
     border-radius: 0px;
     text-align: center;
   }
-  /* line 197, ../sass/base.scss */
+  /* line 198, ../sass/base.scss */
   #container #sidebar #about #about-blurb {
     display: none;
   }
-  /* line 197, ../sass/base.scss */
+  /* line 198, ../sass/base.scss */
   #container #sidebar #about #about-longer {
     display: inherit;
   }
-  /* line 199, ../sass/base.scss */
+  /* line 200, ../sass/base.scss */
   #container #sidebar #contact {
     padding-top: 0.5em;
   }
-  /* line 201, ../sass/base.scss */
+  /* line 202, ../sass/base.scss */
   #container #sidebar #contact #contact-email {
     display: block;
     float: left;
@@ -1174,7 +1198,7 @@ body:after {
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
-  /* line 202, ../sass/base.scss */
+  /* line 203, ../sass/base.scss */
   #container #sidebar #contact #contact-twitter {
     display: block;
     float: left;
@@ -1185,7 +1209,7 @@ body:after {
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
-  /* line 203, ../sass/base.scss */
+  /* line 204, ../sass/base.scss */
   #container #sidebar #contact #contact-linkedin {
     display: block;
     float: left;
@@ -1198,7 +1222,7 @@ body:after {
   }
 }
 @media screen and (min-width: 460px) {
-  /* line 188, ../sass/base.scss */
+  /* line 189, ../sass/base.scss */
   #container #sidebar {
     display: block;
     float: left;
@@ -1209,12 +1233,12 @@ body:after {
   #container #sidebar:last-child {
     margin-right: 0;
   }
-  /* line 210, ../sass/base.scss */
+  /* line 211, ../sass/base.scss */
   #container #sidebar .content {
     width: 22%;
     position: absolute;
   }
-  /* line 220, ../sass/base.scss */
+  /* line 221, ../sass/base.scss */
   #container #sidebar #contact {
     display: block;
     float: left;
@@ -1226,7 +1250,7 @@ body:after {
   #container #sidebar #contact:last-child {
     margin-right: 0;
   }
-  /* line 222, ../sass/base.scss */
+  /* line 223, ../sass/base.scss */
   #container #sidebar #contact #contact-email {
     display: block;
     float: left;
@@ -1237,7 +1261,7 @@ body:after {
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
-  /* line 223, ../sass/base.scss */
+  /* line 224, ../sass/base.scss */
   #container #sidebar #contact #contact-twitter {
     display: block;
     float: left;
@@ -1248,7 +1272,7 @@ body:after {
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
-  /* line 224, ../sass/base.scss */
+  /* line 225, ../sass/base.scss */
   #container #sidebar #contact #contact-linkedin {
     display: block;
     float: left;
@@ -1261,28 +1285,28 @@ body:after {
   }
 }
 @media screen and (min-width: 460px) and (min-height: 560px) {
-  /* line 210, ../sass/base.scss */
+  /* line 211, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
     position: fixed;
   }
 }
 @media screen and (min-width: 830px) {
-  /* line 235, ../sass/base.scss */
+  /* line 236, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
     position: absolute;
     width: 14.3254em;
   }
-  /* line 248, ../sass/base.scss */
+  /* line 249, ../sass/base.scss */
   #container #sidebar #about #about-blurb {
     display: none;
   }
-  /* line 248, ../sass/base.scss */
+  /* line 249, ../sass/base.scss */
   #container #sidebar #about #about-longer {
     display: inherit;
   }
-  /* line 250, ../sass/base.scss */
+  /* line 251, ../sass/base.scss */
   #container #sidebar #contact {
     display: block;
     float: left;
@@ -1294,7 +1318,7 @@ body:after {
   #container #sidebar #contact:last-child {
     margin-right: 0;
   }
-  /* line 252, ../sass/base.scss */
+  /* line 253, ../sass/base.scss */
   #container #sidebar #contact #contact-email {
     display: block;
     float: left;
@@ -1305,7 +1329,7 @@ body:after {
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
-  /* line 253, ../sass/base.scss */
+  /* line 254, ../sass/base.scss */
   #container #sidebar #contact #contact-twitter {
     display: block;
     float: left;
@@ -1316,7 +1340,7 @@ body:after {
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
-  /* line 254, ../sass/base.scss */
+  /* line 255, ../sass/base.scss */
   #container #sidebar #contact #contact-linkedin {
     display: block;
     float: left;
@@ -1329,13 +1353,13 @@ body:after {
   }
 }
 @media screen and (min-width: 830px) and (min-height: 460px) {
-  /* line 235, ../sass/base.scss */
+  /* line 236, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
     position: fixed;
   }
 }
-/* line 277, ../sass/base.scss */
+/* line 278, ../sass/base.scss */
 #container #main {
   display: block;
   float: left;
@@ -1357,25 +1381,25 @@ body:after {
 #container #main:after {
   clear: both;
 }
-/* line 283, ../sass/base.scss */
+/* line 284, ../sass/base.scss */
 #container #main .post {
   margin-top: 1em;
   padding: 1.4em;
   padding-left: 0.8em;
 }
 @media screen and (max-width: 460px) {
-  /* line 277, ../sass/base.scss */
+  /* line 278, ../sass/base.scss */
   #container #main {
     display: block;
     float: left;
     margin-right: 4.82916%;
-    width: 204.82916%;
+    width: 100%;
   }
   /* line 54, ../sass/neat/grid/_span-columns.scss */
   #container #main:last-child {
     margin-right: 0;
   }
-  /* line 298, ../sass/base.scss */
+  /* line 299, ../sass/base.scss */
   #container #main .post-date {
     font-family: 'Georgia', serif;
     font-weight: 300;
@@ -1385,7 +1409,7 @@ body:after {
     display: block;
     padding-bottom: 0.7em;
   }
-  /* line 299, ../sass/base.scss */
+  /* line 300, ../sass/base.scss */
   #container #main h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -1393,7 +1417,7 @@ body:after {
     font-size: 21.383px;
     line-height: auto;
   }
-  /* line 300, ../sass/base.scss */
+  /* line 301, ../sass/base.scss */
   #container #main .post-summary {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -1402,7 +1426,7 @@ body:after {
     line-height: auto;
     margin-top: 0.3em;
   }
-  /* line 302, ../sass/base.scss */
+  /* line 303, ../sass/base.scss */
   #container #main .post {
     border-left: 0px;
     border-right: 0px;
@@ -1412,14 +1436,14 @@ body:after {
     -o-border-radius: 0;
     border-radius: 0;
   }
-  /* line 307, ../sass/base.scss */
+  /* line 308, ../sass/base.scss */
   #container #main .post-image {
     width: 100%;
     height: auto;
   }
 }
 @media screen and (min-width: 460px) {
-  /* line 277, ../sass/base.scss */
+  /* line 278, ../sass/base.scss */
   #container #main {
     display: block;
     float: left;
@@ -1431,7 +1455,7 @@ body:after {
   #container #main:last-child {
     margin-right: 0;
   }
-  /* line 319, ../sass/base.scss */
+  /* line 320, ../sass/base.scss */
   #container #main .post-date {
     font-family: 'Georgia', serif;
     font-weight: 300;
@@ -1441,7 +1465,7 @@ body:after {
     display: block;
     padding-bottom: 0.7em;
   }
-  /* line 320, ../sass/base.scss */
+  /* line 321, ../sass/base.scss */
   #container #main h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -1449,7 +1473,7 @@ body:after {
     font-size: 21.383px;
     line-height: auto;
   }
-  /* line 321, ../sass/base.scss */
+  /* line 322, ../sass/base.scss */
   #container #main .post-summary {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -1458,18 +1482,18 @@ body:after {
     line-height: auto;
     margin-top: 0.3em;
   }
-  /* line 323, ../sass/base.scss */
+  /* line 324, ../sass/base.scss */
   #container #main .post-image {
     width: 95%;
     height: auto;
   }
-  /* line 328, ../sass/base.scss */
+  /* line 329, ../sass/base.scss */
   #container #main .content {
     display: block;
   }
 }
 @media screen and (min-width: 830px) {
-  /* line 336, ../sass/base.scss */
+  /* line 337, ../sass/base.scss */
   #container #main .post-date {
     font-family: 'Georgia', serif;
     font-weight: 300;
@@ -1479,7 +1503,7 @@ body:after {
     display: block;
     padding-bottom: 0.7em;
   }
-  /* line 337, ../sass/base.scss */
+  /* line 338, ../sass/base.scss */
   #container #main h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -1487,7 +1511,7 @@ body:after {
     font-size: 26.72875px;
     line-height: auto;
   }
-  /* line 338, ../sass/base.scss */
+  /* line 339, ../sass/base.scss */
   #container #main .post-summary {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;

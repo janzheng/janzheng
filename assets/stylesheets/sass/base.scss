@@ -16,7 +16,7 @@ body {
 
 // general, catch-all
 #container {
-  // @include span-columns(12);
+  @include span-columns(12);
 
   #sidebar {
 
@@ -178,6 +178,7 @@ body {
 // site layout
 
 #container {
+  @include outer-container;
 /*
 
     SIDE BAR ********************************************************************************************************
@@ -292,7 +293,7 @@ body {
     
 
     @include media($small) {
-      @include span-columns(12);
+      @include span-columns(6);
 
       //typography
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
