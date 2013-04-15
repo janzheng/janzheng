@@ -183,22 +183,6 @@ body {
 
     @include media($small) {
       @include span-columns(6);
-
-      //typography
-      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
-      h1 {@include font-body($f1*0.8, 300);}
-      .post-summary{@include font-body($f2*0.8, 300); margin-top: 0.3em;}
-
-      .post {
-        border-left: 0px; border-right: 0px;
-        @include set-radius(0);
-      }
-
-      .post-image {
-        width: 100%;
-        height: auto;
-
-      }
     }
 
   }
