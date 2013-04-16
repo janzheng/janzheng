@@ -59,10 +59,10 @@ body {
 }
 @include media($medium) {
   // .bottom{display: none;}
-  #container {@include pad(0 1em 0 1em); }
+  // #container {@include pad(0 1em 0 1em); }
 }
 @include media($large) {
-  #container {@include pad(0 1em 0 1em);}
+  // #container {@include pad(0 1em 0 1em);}
 }
 
 

@@ -937,18 +937,6 @@ body:after {
     text-align: center;
   }
 }
-@media screen and (min-width: 470px) {
-  /* line 62, ../sass/base.scss */
-  #container {
-    padding: 0 1em 0 1em;
-  }
-}
-@media screen and (min-width: 840px) {
-  /* line 65, ../sass/base.scss */
-  #container {
-    padding: 0 1em 0 1em;
-  }
-}
 /* line 71, ../sass/base.scss */
 #container {
   *zoom: 1;
