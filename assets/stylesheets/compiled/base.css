@@ -896,6 +896,12 @@ body:after {
   width: 100%;
 }
 /* line 26, ../sass/base.scss */
+#container #sidebar #test {
+  width: 100%;
+  height: 40px;
+  background-color: chartreuse;
+}
+/* line 27, ../sass/base.scss */
 #container #sidebar #logo {
   text-align: center;
   font-family: 'Georgia', serif;
@@ -904,14 +910,14 @@ body:after {
   font-size: 10.89056px;
   line-height: auto;
 }
-/* line 30, ../sass/base.scss */
+/* line 31, ../sass/base.scss */
 #container #sidebar #logo #logo-image {
   margin-top: 3em;
   width: 88%;
   max-width: 170px;
   height: auto;
 }
-/* line 38, ../sass/base.scss */
+/* line 39, ../sass/base.scss */
 #container #sidebar #slogan {
   padding-top: 8em;
   text-align: left;
@@ -922,22 +928,22 @@ body:after {
   line-height: 21.58564px;
   background-color: inherit;
 }
-/* line 45, ../sass/base.scss */
+/* line 46, ../sass/base.scss */
 #container #sidebar #slogan #slogan-blurb {
   border-top: 1px solid #acbfcc;
   border-bottom: 1px solid #acbfcc;
   padding: 0.6em;
   background-color: white;
 }
-/* line 57, ../sass/base.scss */
+/* line 58, ../sass/base.scss */
 #container #sidebar #about #about-blurb {
   display: inherit;
 }
-/* line 58, ../sass/base.scss */
+/* line 59, ../sass/base.scss */
 #container #sidebar #about #about-longer {
   display: none;
 }
-/* line 60, ../sass/base.scss */
+/* line 61, ../sass/base.scss */
 #container #sidebar #about .triangle {
   height: 0;
   width: 0;
@@ -950,7 +956,7 @@ body:after {
   left: 50%;
   margin-left: -6px;
 }
-/* line 68, ../sass/base.scss */
+/* line 69, ../sass/base.scss */
 #container #sidebar #about #about-container {
   padding-top: 0.4em;
   background-color: #41484c;
@@ -961,16 +967,16 @@ body:after {
   font-size: 10.89056px;
   line-height: auto;
 }
-/* line 74, ../sass/base.scss */
+/* line 75, ../sass/base.scss */
 #container #sidebar #about #about-container a {
   color: #fffbdb;
 }
-/* line 74, ../sass/base.scss */
+/* line 75, ../sass/base.scss */
 #container #sidebar #about #about-container a:hover {
   color: #77838c;
 }
 @media screen and (min-width: 470px) {
-  /* line 68, ../sass/base.scss */
+  /* line 69, ../sass/base.scss */
   #container #sidebar #about #about-container {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -980,7 +986,7 @@ body:after {
   }
 }
 @media screen and (min-width: 840px) {
-  /* line 68, ../sass/base.scss */
+  /* line 69, ../sass/base.scss */
   #container #sidebar #about #about-container {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -989,7 +995,7 @@ body:after {
     border-radius: 3px;
   }
 }
-/* line 82, ../sass/base.scss */
+/* line 83, ../sass/base.scss */
 #container #sidebar #about #about-container .line {
   border: 0;
   border-bottom: 1px dashed #77838c;
@@ -997,54 +1003,54 @@ body:after {
   margin-top: 6px;
   margin-bottom: 6px;
 }
-/* line 89, ../sass/base.scss */
+/* line 90, ../sass/base.scss */
 #container #sidebar #menu {
   padding-top: 3em;
 }
-/* line 96, ../sass/base.scss */
+/* line 97, ../sass/base.scss */
 #container #sidebar a.contact-email {
   background: white url("/assets/images/email.png") no-repeat center;
   background-size: 25px auto;
   height: 3em;
   background-color: #acbfcc;
 }
-/* line 100, ../sass/base.scss */
+/* line 101, ../sass/base.scss */
 #container #sidebar a.contact-email:hover {
   background-color: #f2d399;
 }
-/* line 102, ../sass/base.scss */
+/* line 103, ../sass/base.scss */
 #container #sidebar a.contact-twitter {
   background: white url("/assets/images/twitter.png") no-repeat center;
   background-size: 25px auto;
   height: 3em;
   background-color: #acbfcc;
 }
-/* line 106, ../sass/base.scss */
+/* line 107, ../sass/base.scss */
 #container #sidebar a.contact-twitter:hover {
   background-color: #f29863;
 }
-/* line 108, ../sass/base.scss */
+/* line 109, ../sass/base.scss */
 #container #sidebar a.contact-linkedin {
   background: white url("/assets/images/linkedin.png") no-repeat center;
   background-size: 25px auto;
   height: 3em;
   background-color: #acbfcc;
 }
-/* line 112, ../sass/base.scss */
+/* line 113, ../sass/base.scss */
 #container #sidebar a.contact-linkedin:hover {
   background-color: #fffbdb;
 }
-/* line 117, ../sass/base.scss */
+/* line 118, ../sass/base.scss */
 #container #main {
   /*.title {
       @include font-body($f1*1.3, 300);
   }*/
 }
-/* line 121, ../sass/base.scss */
+/* line 122, ../sass/base.scss */
 #container #main .post-taglist {
   margin-top: 0.6em;
 }
-/* line 124, ../sass/base.scss */
+/* line 125, ../sass/base.scss */
 #container #main .post-taglist li {
   font-family: 'Georgia', serif;
   font-weight: 300;
@@ -1065,11 +1071,11 @@ body:after {
   color: white;
   */
 }
-/* line 141, ../sass/base.scss */
+/* line 142, ../sass/base.scss */
 #container #main .post-taglist li:not(:last-child):after {
   content: ',';
 }
-/* line 147, ../sass/base.scss */
+/* line 148, ../sass/base.scss */
 #container #main .legal {
   padding-top: 2.5em;
   padding-bottom: 0.5em;
@@ -1082,7 +1088,7 @@ body:after {
 }
 
 @media screen and (max-width: 470px) {
-  /* line 162, ../sass/base.scss */
+  /* line 163, ../sass/base.scss */
   #container {
     padding: 0;
     display: block;
@@ -1095,7 +1101,7 @@ body:after {
     margin-right: 0;
   }
 
-  /* line 164, ../sass/base.scss */
+  /* line 165, ../sass/base.scss */
   .legal {
     display: block;
     padding-bottom: 4em;
@@ -1108,18 +1114,18 @@ body:after {
   }
 }
 @media screen and (min-width: 470px) {
-  /* line 175, ../sass/base.scss */
+  /* line 176, ../sass/base.scss */
   #container {
     padding: 0 1em 0 1em;
   }
 }
 @media screen and (min-width: 840px) {
-  /* line 178, ../sass/base.scss */
+  /* line 179, ../sass/base.scss */
   #container {
     padding: 0 1em 0 1em;
   }
 }
-/* line 184, ../sass/base.scss */
+/* line 185, ../sass/base.scss */
 #container {
   *zoom: 1;
   max-width: 996px;
@@ -1149,17 +1155,17 @@ body:after {
   clear: both;
 }
 @media screen and (max-width: 470px) {
-  /* line 193, ../sass/base.scss */
+  /* line 194, ../sass/base.scss */
   #container #sidebar {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 199, ../sass/base.scss */
+  /* line 200, ../sass/base.scss */
   #container #sidebar #slogan {
     padding-top: 4em;
   }
-  /* line 201, ../sass/base.scss */
+  /* line 202, ../sass/base.scss */
   #container #sidebar #slogan #slogan-blurb {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
@@ -1168,19 +1174,19 @@ body:after {
     border-radius: 0px;
     text-align: center;
   }
-  /* line 203, ../sass/base.scss */
+  /* line 204, ../sass/base.scss */
   #container #sidebar #about #about-blurb {
     display: none;
   }
-  /* line 203, ../sass/base.scss */
+  /* line 204, ../sass/base.scss */
   #container #sidebar #about #about-longer {
     display: inherit;
   }
-  /* line 205, ../sass/base.scss */
+  /* line 206, ../sass/base.scss */
   #container #sidebar #contact {
     padding-top: 0.5em;
   }
-  /* line 207, ../sass/base.scss */
+  /* line 208, ../sass/base.scss */
   #container #sidebar #contact #contact-email {
     display: block;
     float: left;
@@ -1191,7 +1197,7 @@ body:after {
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
-  /* line 208, ../sass/base.scss */
+  /* line 209, ../sass/base.scss */
   #container #sidebar #contact #contact-twitter {
     display: block;
     float: left;
@@ -1202,7 +1208,7 @@ body:after {
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
-  /* line 209, ../sass/base.scss */
+  /* line 210, ../sass/base.scss */
   #container #sidebar #contact #contact-linkedin {
     display: block;
     float: left;
@@ -1213,7 +1219,7 @@ body:after {
   #container #sidebar #contact #contact-linkedin:last-child {
     margin-right: 0;
   }
-  /* line 214, ../sass/base.scss */
+  /* line 215, ../sass/base.scss */
   #container #sidebar #menu #menu-blog {
     display: block;
     float: left;
@@ -1224,7 +1230,7 @@ body:after {
   #container #sidebar #menu #menu-blog:last-child {
     margin-right: 0;
   }
-  /* line 215, ../sass/base.scss */
+  /* line 216, ../sass/base.scss */
   #container #sidebar #menu #menu-email {
     display: block;
     float: left;
@@ -1237,7 +1243,7 @@ body:after {
   }
 }
 @media screen and (min-width: 470px) {
-  /* line 193, ../sass/base.scss */
+  /* line 194, ../sass/base.scss */
   #container #sidebar {
     display: block;
     float: left;
@@ -1248,12 +1254,12 @@ body:after {
   #container #sidebar:last-child {
     margin-right: 0;
   }
-  /* line 221, ../sass/base.scss */
+  /* line 222, ../sass/base.scss */
   #container #sidebar .content {
     width: 22%;
     position: absolute;
   }
-  /* line 231, ../sass/base.scss */
+  /* line 232, ../sass/base.scss */
   #container #sidebar #contact {
     display: block;
     float: left;
@@ -1265,7 +1271,7 @@ body:after {
   #container #sidebar #contact:last-child {
     margin-right: 0;
   }
-  /* line 233, ../sass/base.scss */
+  /* line 234, ../sass/base.scss */
   #container #sidebar #contact #contact-email {
     display: block;
     float: left;
@@ -1276,7 +1282,7 @@ body:after {
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
-  /* line 234, ../sass/base.scss */
+  /* line 235, ../sass/base.scss */
   #container #sidebar #contact #contact-twitter {
     display: block;
     float: left;
@@ -1287,7 +1293,7 @@ body:after {
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
-  /* line 235, ../sass/base.scss */
+  /* line 236, ../sass/base.scss */
   #container #sidebar #contact #contact-linkedin {
     display: block;
     float: left;
@@ -1300,28 +1306,28 @@ body:after {
   }
 }
 @media screen and (min-width: 470px) and (min-height: 560px) {
-  /* line 221, ../sass/base.scss */
+  /* line 222, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
     position: fixed;
   }
 }
 @media screen and (min-width: 840px) {
-  /* line 246, ../sass/base.scss */
+  /* line 247, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
     position: absolute;
     width: 14.3254em;
   }
-  /* line 259, ../sass/base.scss */
+  /* line 260, ../sass/base.scss */
   #container #sidebar #about #about-blurb {
     display: none;
   }
-  /* line 259, ../sass/base.scss */
+  /* line 260, ../sass/base.scss */
   #container #sidebar #about #about-longer {
     display: inherit;
   }
-  /* line 261, ../sass/base.scss */
+  /* line 262, ../sass/base.scss */
   #container #sidebar #contact {
     display: block;
     float: left;
@@ -1333,7 +1339,7 @@ body:after {
   #container #sidebar #contact:last-child {
     margin-right: 0;
   }
-  /* line 263, ../sass/base.scss */
+  /* line 264, ../sass/base.scss */
   #container #sidebar #contact #contact-email {
     display: block;
     float: left;
@@ -1344,7 +1350,7 @@ body:after {
   #container #sidebar #contact #contact-email:last-child {
     margin-right: 0;
   }
-  /* line 264, ../sass/base.scss */
+  /* line 265, ../sass/base.scss */
   #container #sidebar #contact #contact-twitter {
     display: block;
     float: left;
@@ -1355,7 +1361,7 @@ body:after {
   #container #sidebar #contact #contact-twitter:last-child {
     margin-right: 0;
   }
-  /* line 265, ../sass/base.scss */
+  /* line 266, ../sass/base.scss */
   #container #sidebar #contact #contact-linkedin {
     display: block;
     float: left;
@@ -1368,13 +1374,13 @@ body:after {
   }
 }
 @media screen and (min-width: 840px) and (min-height: 460px) {
-  /* line 246, ../sass/base.scss */
+  /* line 247, ../sass/base.scss */
   #container #sidebar .content {
     height: 100%;
     position: fixed;
   }
 }
-/* line 288, ../sass/base.scss */
+/* line 289, ../sass/base.scss */
 #container #main {
   *zoom: 1;
   padding-bottom: 4em;
@@ -1388,7 +1394,7 @@ body:after {
 #container #main:after {
   clear: both;
 }
-/* line 293, ../sass/base.scss */
+/* line 294, ../sass/base.scss */
 #container #main .post {
   margin-top: 1em;
   padding: 1.4em;
@@ -1396,6 +1402,10 @@ body:after {
 }
 @media screen and (max-width: 470px) {
   /* line 308, ../sass/base.scss */
+  #container #main .content {
+    margin-top: 2em;
+  }
+  /* line 309, ../sass/base.scss */
   #container #main .post-date {
     font-family: 'Georgia', serif;
     font-weight: 300;
@@ -1405,7 +1415,7 @@ body:after {
     display: block;
     padding-bottom: 0.7em;
   }
-  /* line 309, ../sass/base.scss */
+  /* line 310, ../sass/base.scss */
   #container #main h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -1413,7 +1423,7 @@ body:after {
     font-size: 24.05588px;
     line-height: auto;
   }
-  /* line 310, ../sass/base.scss */
+  /* line 311, ../sass/base.scss */
   #container #main .post-summary {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -1422,7 +1432,7 @@ body:after {
     line-height: auto;
     margin-top: 0.3em;
   }
-  /* line 311, ../sass/base.scss */
+  /* line 312, ../sass/base.scss */
   #container #main .post {
     border-left: 0px;
     border-right: 0px;
@@ -1432,12 +1442,12 @@ body:after {
     -o-border-radius: 0;
     border-radius: 0;
   }
-  /* line 312, ../sass/base.scss */
+  /* line 313, ../sass/base.scss */
   #container #main .post-image {
     width: 100%;
     height: auto;
   }
-  /* line 313, ../sass/base.scss */
+  /* line 314, ../sass/base.scss */
   #container #main .post-body {
     padding-top: 1em;
     padding-bottom: 4em;
@@ -1447,17 +1457,17 @@ body:after {
     font-size: 15.41832px;
     line-height: 1.7em;
   }
-  /* line 313, ../sass/base.scss */
+  /* line 314, ../sass/base.scss */
   #container #main .post-body p {
     margin-top: 0.8em;
   }
-  /* line 314, ../sass/base.scss */
+  /* line 315, ../sass/base.scss */
   #container #main .post {
     margin-top: 1.6em;
   }
 }
 @media screen and (min-width: 470px) {
-  /* line 288, ../sass/base.scss */
+  /* line 289, ../sass/base.scss */
   #container #main {
     display: block;
     float: left;
@@ -1469,7 +1479,7 @@ body:after {
   #container #main:last-child {
     margin-right: 0;
   }
-  /* line 322, ../sass/base.scss */
+  /* line 323, ../sass/base.scss */
   #container #main .post-date {
     font-family: 'Georgia', serif;
     font-weight: 300;
@@ -1479,7 +1489,7 @@ body:after {
     display: block;
     padding-bottom: 0.7em;
   }
-  /* line 323, ../sass/base.scss */
+  /* line 324, ../sass/base.scss */
   #container #main h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -1487,7 +1497,7 @@ body:after {
     font-size: 24.05588px;
     line-height: auto;
   }
-  /* line 324, ../sass/base.scss */
+  /* line 325, ../sass/base.scss */
   #container #main .post-summary {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -1496,16 +1506,16 @@ body:after {
     line-height: auto;
     margin-top: 0.3em;
   }
-  /* line 325, ../sass/base.scss */
+  /* line 326, ../sass/base.scss */
   #container #main .post-image {
     width: 95%;
     height: auto;
   }
-  /* line 326, ../sass/base.scss */
+  /* line 327, ../sass/base.scss */
   #container #main .content {
     display: block;
   }
-  /* line 327, ../sass/base.scss */
+  /* line 328, ../sass/base.scss */
   #container #main .post-body {
     padding-bottom: 4em;
     font-family: 'Open Sans', sans-serif;
@@ -1514,13 +1524,13 @@ body:after {
     font-size: 15.41832px;
     line-height: 1.7em;
   }
-  /* line 327, ../sass/base.scss */
+  /* line 328, ../sass/base.scss */
   #container #main .post-body p {
     margin-top: 0.8em;
   }
 }
 @media screen and (min-width: 840px) {
-  /* line 288, ../sass/base.scss */
+  /* line 289, ../sass/base.scss */
   #container #main {
     display: block;
     float: left;
@@ -1531,7 +1541,7 @@ body:after {
   #container #main:last-child {
     margin-right: 0;
   }
-  /* line 334, ../sass/base.scss */
+  /* line 335, ../sass/base.scss */
   #container #main .post-date {
     font-family: 'Georgia', serif;
     font-weight: 300;
@@ -1541,7 +1551,7 @@ body:after {
     display: block;
     padding-bottom: 0.7em;
   }
-  /* line 335, ../sass/base.scss */
+  /* line 336, ../sass/base.scss */
   #container #main h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -1549,7 +1559,7 @@ body:after {
     font-size: 26.72875px;
     line-height: auto;
   }
-  /* line 336, ../sass/base.scss */
+  /* line 337, ../sass/base.scss */
   #container #main .post-summary {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
