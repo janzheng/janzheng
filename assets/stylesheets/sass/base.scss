@@ -159,7 +159,7 @@ body {
 
 // general responsive 
 @include media($small) {
-  #container {@include pad(0); }
+  #container {@include pad(0); @include span-columns(6);}
 
   .legal{
     display: block;
