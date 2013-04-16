@@ -286,57 +286,6 @@ body {
 
 
 
-  #main {
-    @include clearfix;
-  
-    padding-bottom: 4em;
-
-    .post {
-      margin-top: 1em;
-      // border-bottom: 1px solid #888; 
-      padding: 1.4em;
-      padding-left: 0.8em;
-      // @include set-radius(0.5em);
-      // border: 1px solid $light-gray;
-      // background-color: $silver;
-    }
-    
-
-    @include media($small) {
-      // @include span-columns(6);
-
-      .content {margin-top: 2em;}
-      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
-      h1 {@include font-body($f1*0.9, 300);}
-      .post-summary{@include font-body($f2*0.96, 400); margin-top: 0.3em;}
-      .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
-      .post-image {width: 100%;height: auto;}
-      .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.7em); p {margin-top: 0.8em;} }
-      .post {margin-top: 1.6em;}
-    }
-
-    @include media($medium) {
-      @include span-columns(9);
-      @include shift (3);
-
-      //typography
-      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
-      h1 {@include font-body($f1*0.9, 300);}
-      .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
-      .post-image {width:95%;height: auto;}
-      .content {display: block;}
-      .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.7em); p {margin-top: 0.8em;} }
-    }
-
-    @include media($large) {
-      @include span-columns(9);
-
-      //typography
-      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
-      h1 {@include font-body($f1, 300);}
-      .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
-    }
-  }
   
 }
 
