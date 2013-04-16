@@ -194,6 +194,7 @@ body {
     @include media($small) {
       // @include span-columns(6);
       text-align: center; 
+      margin-left: auto; margin-right: auto;
 
       #slogan {
         padding-top: 4em;
