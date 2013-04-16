@@ -87,10 +87,8 @@ $max-width: $break-large;
 
 //0 to small
 $small: new-breakpoint(max-width $break-small 6);
-$medium : $small;
-$large : $small;
-// $medium: new-breakpoint(min-width $break-small 12);
-// $large: new-breakpoint(min-width $break-medium 12);
+$medium: new-breakpoint(min-width $break-small 12);
+$large: new-breakpoint(min-width $break-medium 12);
 
 $not-large: new-breakpoint(max-height $break-large 12);
 
