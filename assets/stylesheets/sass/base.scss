@@ -77,7 +77,6 @@ body {
         @include media($medium) {@include set-radius(3px);}
         @include media($large) {@include set-radius(3px);}
         // border: 1px solid $color3;
-        border: 0px;
         // background-color: $silver;
         @include font-body($f3,400);
 
@@ -194,8 +193,9 @@ body {
 
   #sidebar {
     @include media($small) {
-      // text-align: center; 
-      // margin-left: auto; margin-right: auto;
+      // @include span-columns(6);
+      text-align: center; 
+      margin-left: auto; margin-right: auto;
 
       #slogan {
         padding-top: 4em;
