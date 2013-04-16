@@ -77,38 +77,6 @@ body {
 
 */
 
-  #sidebar {
-    @include media($small) {
-      // @include span-columns(6);
-      text-align: center; 
-      margin-left: auto; margin-right: auto;
-
-      #slogan {
-        padding-top: 4em;
-        #slogan-blurb {@include set-radius(0px); text-align: center;}
-      }
-      #about {#about-blurb{display: none}#about-longer{display: inherit;}}
-
-      #contact { 
-        padding-top: 0.5em;
-        #contact-email{@include span-columns(2);}
-        #contact-twitter{@include span-columns(2);}
-        #contact-linkedin{@include span-columns(2);}
-      }
-      // .legal {display: none;}
-
-      #menu {
-        #menu-blog{@include span-columns(3);}
-        #menu-email{@include span-columns(3);}
-      }
-    }
-
-    @include media($medium) {
-
-    }
-
-
-  }
 
 
 
