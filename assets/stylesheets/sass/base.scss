@@ -20,6 +20,7 @@ body {
 
 // general, catch-all
 #container {
+  background-color: blue;
     width: 100%;
 
   #sidebar {
@@ -103,7 +104,7 @@ body {
     }
 
     @include media($medium) {
-      @include span-columns(6);
+      @include span-columns(12);
       .content {
         // this makes menu sticky, but only above a certain height
         width: 22%;
@@ -127,33 +128,6 @@ body {
 
     }
 
-    @include media($large) {
-
-      .content {
-        // this makes menu sticky
-        height: 100%;
-
-        position: absolute;
-        @include media($tall) {
-          height: 100%;
-          position: fixed;
-        }
-
-        width: $gutter+$column*3;
-      }
-
-      #about {#about-blurb{display: none}#about-longer{display: inherit;}}
-
-      #contact {
-        @include span-columns(12);
-        #contact-email{@include span-columns(4);}
-        #contact-twitter{@include span-columns(4);}
-        #contact-linkedin{@include span-columns(4);}
-
-        padding-top: 0.5em;
-      }
-
-    }
 
   }
 
