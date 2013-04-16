@@ -312,7 +312,7 @@ body {
       .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
       .post-image {width: 100%;height: auto;}
       .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.7em); p {margin-top: 0.8em;} }
-      .post {margin-top: 1.6em;}
+      .post {margin-top: 1em;}
     }
 
     @include media($medium) {

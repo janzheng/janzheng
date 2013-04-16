@@ -5,7 +5,7 @@ a, a:active, a:visited {color: $dark-gray; text-decoration: underline;}
 a:hover {color: $gray; @include ease-transition(200ms);}
 
 section.post:hover {background-color: $color2;}
-#main a, #about a {text-decoration: none;}
+.content a {text-decoration: none;}
 
 a.bttn:hover, .bttn:active, .bttn.clicked {
     background-color: $light-gray;
