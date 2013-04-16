@@ -16,10 +16,36 @@ layout: none
       </div>
       <div id="test"></div>
   
+      <div class="content">
+
+        <div class="sticky-wrapper">
+          <div id="menu">{% include menu.html %}</div>
+          <div id="slogan"><div id="slogan-blurb">I make fun{ctional} experiences. </div></div>
+          <div id="about">{% include about.html %}</div>
+
+          <div class="push"></div>
+        </div>
+        
+        <footer>
+          <div id="contact">
+            <!-- <div id="contact-findme">Find me here: </div> -->
+            {% include contact.html %}
+          </div>
+          <!-- <div class="legal">{% include legal.html %}</div> -->
+        </footer>
+      </div>
     </div>
 
     <div class="clear"></div>
 
+	  <div id="main">
+  	  <div class="content">
+        <!-- <div id="taglist">{% include taglist.html %}</div> -->
+        <!-- <div class="title">Blog</div> -->
+  	    {{ content }}
+        <div class="legal bottom">{% include legal.html %}</div>
+  	  </div>
+	  </div>
 
 	</div>
   {% include script.html %}
