@@ -43,6 +43,29 @@ body {
 }
 
 
+
+// general responsive 
+@include media($small) {
+  #container {@include pad(0); }
+
+  .legal{
+    display: block;
+    padding-bottom: 4em;
+    @include font-tip($f3, 300);
+    text-align: center;
+  }
+
+
+}
+@include media($medium) {
+  // .bottom{display: none;}
+  // #container {@include pad(0 1em 0 1em); }
+}
+@include media($large) {
+  // #container {@include pad(0 1em 0 1em);}
+}
+
+
 // site layout
 
 #container {

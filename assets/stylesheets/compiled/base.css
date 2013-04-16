@@ -919,7 +919,25 @@ body:after {
   height: auto;
 }
 
-/* line 48, ../sass/base.scss */
+@media screen and (max-width: 470px) {
+  /* line 49, ../sass/base.scss */
+  #container {
+    padding: 0;
+  }
+
+  /* line 51, ../sass/base.scss */
+  .legal {
+    display: block;
+    padding-bottom: 4em;
+    font-family: 'Georgia', serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 10.89056px;
+    line-height: auto;
+    text-align: center;
+  }
+}
+/* line 71, ../sass/base.scss */
 #container {
   *zoom: 1;
   max-width: 996px;
@@ -949,7 +967,7 @@ body:after {
   clear: both;
 }
 @media screen and (max-width: 470px) {
-  /* line 57, ../sass/base.scss */
+  /* line 80, ../sass/base.scss */
   #container #sidebar {
     text-align: center;
     margin-left: auto;
