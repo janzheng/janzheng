@@ -38,7 +38,7 @@ body {
 
     #slogan {
       // padding-top: 7em;
-      padding-top: 8em;
+      padding-top: 2em;
       text-align: left;
       @include font-tip($f2*0.95, 300, $f2*1.4);
       background-color: inherit;
@@ -198,7 +198,7 @@ body {
       margin-left: auto; margin-right: auto;
 
       #slogan {
-        padding-top: 2em;
+        padding-top: 4em;
         #slogan-blurb {@include set-radius(0px); text-align: center;}
       }
       #about {#about-blurb{display: none}#about-longer{display: inherit;}}
@@ -212,8 +212,8 @@ body {
       // .legal {display: none;}
 
       #menu {
-        // #menu-blog{@include span-columns(3);}
-        // #menu-email{@include span-columns(3);}
+        #menu-blog{@include span-columns(3);}
+        #menu-email{@include span-columns(3);}
       }
     }
 
@@ -305,14 +305,14 @@ body {
     @include media($small) {
       // @include span-columns(6);
 
-      .content {margin-top: 2em;}
+      .content {padding-top: 4em;}
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1*0.9, 300);}
       .post-summary{@include font-body($f2*0.96, 400); margin-top: 0.3em;}
       .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
       .post-image {width: 100%;height: auto;}
       .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.7em); p {margin-top: 0.8em;} }
-      .post {margin-top: 2.6em;}
+      .post {margin-top: 1.6em;}
     }
 
     @include media($medium) {
