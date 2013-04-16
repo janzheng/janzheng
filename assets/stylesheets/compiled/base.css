@@ -1143,15 +1143,7 @@ body:after {
 @media screen and (max-width: 470px) {
   /* line 193, ../sass/base.scss */
   #container #sidebar {
-    display: block;
-    float: left;
-    margin-right: 4.82916%;
-    width: 100%;
     text-align: center;
-  }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
-  #container #sidebar:last-child {
-    margin-right: 0;
   }
   /* line 198, ../sass/base.scss */
   #container #sidebar #slogan {
