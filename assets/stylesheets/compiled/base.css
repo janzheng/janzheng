@@ -1113,6 +1113,18 @@ body:after {
     text-align: center;
   }
 }
+@media screen and (min-width: 470px) {
+  /* line 176, ../sass/base.scss */
+  body {
+    padding: 0 1em 0 1em;
+  }
+}
+@media screen and (min-width: 840px) {
+  /* line 179, ../sass/base.scss */
+  body {
+    padding: 0 1em 0 1em;
+  }
+}
 /* line 185, ../sass/base.scss */
 #container {
   *zoom: 1;
@@ -1205,28 +1217,6 @@ body:after {
   }
   /* line 54, ../sass/neat/grid/_span-columns.scss */
   #container #sidebar #contact #contact-linkedin:last-child {
-    margin-right: 0;
-  }
-  /* line 215, ../sass/base.scss */
-  #container #sidebar #menu #menu-blog {
-    display: block;
-    float: left;
-    margin-right: 4.82916%;
-    width: 47.58542%;
-  }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
-  #container #sidebar #menu #menu-blog:last-child {
-    margin-right: 0;
-  }
-  /* line 216, ../sass/base.scss */
-  #container #sidebar #menu #menu-email {
-    display: block;
-    float: left;
-    margin-right: 4.82916%;
-    width: 47.58542%;
-  }
-  /* line 54, ../sass/neat/grid/_span-columns.scss */
-  #container #sidebar #menu #menu-email:last-child {
     margin-right: 0;
   }
 }

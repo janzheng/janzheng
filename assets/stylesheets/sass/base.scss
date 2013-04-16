@@ -173,10 +173,10 @@ body {
 }
 @include media($medium) {
   // .bottom{display: none;}
-  // #container {@include pad(0 1em 0 1em); }
+  body {@include pad(0 1em 0 1em); }
 }
 @include media($large) {
-  // #container {@include pad(0 1em 0 1em);}
+  body {@include pad(0 1em 0 1em);}
 }
 
 
@@ -212,8 +212,8 @@ body {
       // .legal {display: none;}
 
       #menu {
-        #menu-blog{@include span-columns(3);}
-        #menu-email{@include span-columns(3);}
+        // #menu-blog{@include span-columns(3);}
+        // #menu-email{@include span-columns(3);}
       }
     }
 
