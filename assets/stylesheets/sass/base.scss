@@ -43,29 +43,6 @@ body {
 }
 
 
-
-// general responsive 
-@include media($small) {
-  #container {@include pad(0); }
-
-  .legal{
-    display: block;
-    padding-bottom: 4em;
-    @include font-tip($f3, 300);
-    text-align: center;
-  }
-
-
-}
-@include media($medium) {
-  // .bottom{display: none;}
-  #container {@include pad(0 1em 0 1em); }
-}
-@include media($large) {
-  #container {@include pad(0 1em 0 1em);}
-}
-
-
 // site layout
 
 #container {
@@ -83,48 +60,9 @@ body {
       text-align: center; 
       margin-left: auto; margin-right: auto;
 
-      #slogan {
-        padding-top: 4em;
-        #slogan-blurb {@include set-radius(0px); text-align: center;}
-      }
-      #about {#about-blurb{display: none}#about-longer{display: inherit;}}
-
-      #contact { 
-        padding-top: 0.5em;
-        #contact-email{@include span-columns(2);}
-        #contact-twitter{@include span-columns(2);}
-        #contact-linkedin{@include span-columns(2);}
-      }
-      // .legal {display: none;}
-
-      #menu {
-        #menu-blog{@include span-columns(3);}
-        #menu-email{@include span-columns(3);}
-      }
     }
 
     @include media($medium) {
-      @include span-columns(12);
-      .content {
-        // this makes menu sticky, but only above a certain height
-        width: 22%;
-        position: absolute;
-        @include media($short) {
-          height: 100%;
-          position: fixed;
-        }
-      }
-
-      #contact {
-        @include span-columns(12);
-        #contact-email{@include span-columns(12);}
-        #contact-twitter{@include span-columns(12);}
-        #contact-linkedin{@include span-columns(12);}
-
-        padding-top: 0.5em;
-      }
-
-
 
     }
 
