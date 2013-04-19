@@ -313,7 +313,6 @@ body {
     @include media($small) {
       // @include span-columns(6);
 
-      .content {padding-top: 4em;}
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1*0.9, 300);}
       .post-summary{@include font-body($f2*0.96, 400); margin-top: 0.3em;}
