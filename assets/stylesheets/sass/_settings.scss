@@ -98,8 +98,8 @@ $not-small: new-breakpoint(min-width $break-small 12);
 $not-large: new-breakpoint(max-width $break-large 12);
 
 //for sticky menu
-$break-tall: 460px;
-$break-short: 560px;
+$break-tall: 490px;
+$break-short: 630px;
 $short: new-breakpoint(min-height $break-short 12);
 $tall: new-breakpoint(min-height $break-tall 12);
 

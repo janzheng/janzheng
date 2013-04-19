@@ -17,22 +17,25 @@ layout: none
   
       <div class="content">
 
-        <div class="sticky-wrapper">
+        <div class="expandable">
           <div id="logo">{% include logo.html %}</div>
-          <div id="menu">{% include menu.html %}</div>
-          <div id="slogan"><div id="slogan-blurb">I make fun{ctional} experiences. </div></div>
-          <div id="about">{% include about.html %}</div>
+          <div class="btn btn-open"><div id="btn-menu">MENU<div class="triangle-down-red"></div></div></div>
+          <div class="btn btn-close"><div id="btn-menu">MENU<div class="triangle-up-red"></div></div></div>
+          <div class="collapsible">
+            <div class="sticky-wrapper">
+              <div id="menu">{% include menu.html %}</div>
+              <div id="slogan"><div id="slogan-blurb">I make fun{ctional} experiences. </div></div>
+              <div id="about">{% include about.html %}</div>
+              <div class="push"></div>
+            </div>
+            <footer><div id="contact">{% include contact.html %}</div></footer>
 
-          <div class="push"></div>
-        </div>
-        
-        <footer>
-          <div id="contact">
-            <!-- <div id="contact-findme">Find me here: </div> -->
-            {% include contact.html %}
           </div>
-          <!-- <div class="legal">{% include legal.html %}</div> -->
-        </footer>
+        </div>
+
+
+
+
       </div>
     </div>
 

@@ -2,7 +2,7 @@
 //link & button styles
 
 a, a:active, a:visited {color: $dark-gray; text-decoration: underline;}
-a:hover {color: $gray; @include ease-transition(200ms);}
+a:hover {color: $color4; @include ease-transition(200ms);}
 
 section.post:hover {background-color: $color2;}
 .content a {text-decoration: none;}
@@ -10,6 +10,7 @@ section.post:hover {background-color: $color2;}
 a.bttn:hover, .bttn:active, .bttn.clicked {
     background-color: $light-gray;
     @include ease-transition(200ms);
+    color: $color5;
 }
 
 
@@ -69,21 +70,64 @@ blockquote {margin: 1em; padding: 4px 1em 1em 2em; background-color: $color2; bo
 
 
 //  contact footer
-html, body, #container, img {
-    height: 100%;
+html, body, #container, img, .expandable, .collapsible {
+    
+    @include media($medium){height: 100%};
+    @include media($large){height: 100%};
     @include ease-transition(200ms);
 }
 
 .sticky-wrapper {
-    min-height: 100%;
-    @include media($medium){margin: 0 auto -14em;}
-    @include media($large){margin: 0 auto -7em;}
+  min-height: 100%;
+  @include media($medium){margin: 0 auto -19em; }
+  @include media($large){margin: 0 auto -12em; }
 }
 
 footer, .push {
-    @include media($medium){height: 14em;}
-    @include media($large){height: 7em;}
+    @include media($medium){height: 19em;}
+    @include media($large){height: 12em;}
 }
 
+footer {@include media($small){height: 4em;}}
 
+.tri-base {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -6px;
+}
+
+.triangle {@include triangle(12px, $color5, up);@extend .tri-base;}
+.triangle-up {@include triangle(12px, $color5, up);@extend .tri-base;}
+.triangle-down {@include triangle(12px, $color5, down);@extend .tri-base;}
+.triangle-down-red {@include triangle(12px, $color0, down);@extend .tri-base;margin-top: 6px;}
+.triangle-up-red {@include triangle(12px, $color0, up);@extend .tri-base;}
+
+/*
+  Expand + Collapse Menu
+  - When SMALL: show open button, hide close button, hide content
+  - When MED: hide open button, hide close button, show content 
+*/
+
+@include media($small) {
+  .collapsible, .btn-close{display: none;}
+
+  .btn {
+    cursor:pointer;
+    text-align: center;
+    padding-top: 0.4em;
+    padding: 0.8em;
+    a {color: $color2; &:hover {color: $color4;}}
+    margin-top: 1em;
+  }
+
+  #btn-menu {padding: 1em 0 1em 0; @include font-body(1em, 400); background-color: $silver;}
+
+}
+
+@include media($medium) {
+  .btn-open, .btn-close{
+    display: none;
+  }
+}
 

@@ -1,8 +1,12 @@
 
+/* TODO
+   fun: play with colors at top and About message w/ responsive
 
-// fun: play with colors at top and About message w/ responsive
-
-// launchpad for all styles
+   1. About Page - Content & Format
+   2. Toggle State (show/hide menu; hide all the menu / contact crud in articles? Shrink menu state for mobile)
+   3. Tumblr integration?
+   4. Content!
+*/
 
 @import 'bourbon/bourbon';
 @import 'neat/neat';
@@ -10,7 +14,10 @@
 @import 'settings';
 @import 'elements';
 //@import 'syntax2';    // this is for Pygments code highlighting; won't work locally bc Python not installed
-@import  'pastie';
+
+// @import  'pastie';
+
+
 
 // general sizing
 body {
@@ -58,13 +65,6 @@ body {
       #about-blurb{display: inherit;}
       #about-longer{display: none;}
 
-      .triangle {
-          @include triangle(12px, $color5, up);
-          text-align: center;
-          position: relative;
-          left: 50%;
-          margin-left: -6px;
-      }
 
       #about-container {
         // border-top: 1px solid #ccc; 
@@ -211,9 +211,17 @@ body {
       }
       // .legal {display: none;}
 
-      #menu {
-        #menu-blog{@include span-columns(3);}
-        #menu-email{@include span-columns(3);}
+      .content {
+        @include outer-container;
+        @include span-columns(6);
+        // background-color: red;
+        .collapsible{padding: 0.8em; background-color: $silver;}
+        #menu {
+          padding-top: 0; margin-top: 0; 
+          #menu-blog{@include span-columns(3);}
+          #menu-email{@include span-columns(3);}
+        }
+
       }
     }
 

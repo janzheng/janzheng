@@ -1,6 +1,6 @@
 ---
 layout: main
-title: JanZ's Blog &amp; Portfolio
+title: Jan Zheng Portfolio
 ---
 
 
@@ -13,8 +13,9 @@ Object    (external link | post url) (image | youtube | vimeo)
 Summary   
 Tags
  -->
- 
+
 {% for post in site.posts %}
+{% if post.portfolio == null %} 
 <a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
   <section class="post">
     <div class="meta-data">
@@ -65,4 +66,5 @@ Tags
   </section>
 </a>
 <div class="line"></div>
+{% endif %}
 {% endfor %}
