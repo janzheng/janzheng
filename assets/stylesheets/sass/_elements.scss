@@ -116,7 +116,7 @@ footer {@include media($small){height: 4em;}}
     cursor:pointer;
     text-align: center;
     padding-top: 0.4em;
-    padding: 0.8em;
+    // padding: 0.8em;
     a {color: $color2; &:hover {color: $color4;}}
     margin-top: 1em;
   }

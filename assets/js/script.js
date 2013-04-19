@@ -43,16 +43,4 @@ $(document).ready(function() {
 
    });
 
-
-// @include media($small) {
-//   .collapsible, .btn-close{
-//     display: none;
-//   }
-// }
-
-// @include media($medium) {
-//   .btn-open, .btn-close{
-//     display: none;
-//   }
-// }
 }); // end .ready
