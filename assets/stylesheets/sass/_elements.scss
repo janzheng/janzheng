@@ -1,4 +1,8 @@
 
+@import 'triangles';
+@import 'collapsable';
+
+
 //link & button styles
 
 a, a:active, a:visited {color: $dark-gray; text-decoration: underline;}
@@ -7,20 +11,13 @@ a:hover {color: $color4; @include ease-transition(200ms);}
 section.post:hover {background-color: $color2;}
 .content a {text-decoration: none;}
 
-a.bttn:hover, .bttn:active, .bttn.clicked {
-    background-color: $light-gray;
-    @include ease-transition(200ms);
-    color: $color5;
-}
-
-
-
 a.bttn {
-    color: #fff;
     overflow: hidden; display: block; 
     cursor: pointer;
     padding: 1em;
-    background-color: $dark-gray;
+    background-color: $light-gray;
+    border: 1px solid $silver;
+    color: $dark-gray;
 
     @include font-body($f3*1.3, 300);
     text-align: center; text-decoration: none;
@@ -28,11 +25,18 @@ a.bttn {
     @include media($medium){@include set-radius(3px);} /*round corners for medium and up*/
 }
 
+a.bttn:hover, a.bttn:active, a.bttn.clicked {
+    background-color: $dark-gray; color: $silver;
+    @include ease-transition(200ms);
+}
+
+@import 'contact';
 
 .line {
     @include ui-separator-dashed;
     margin-top: 6px;
     margin-bottom: 6px;
+    // background-color: transparent;
 }
 
 
@@ -70,7 +74,7 @@ blockquote {margin: 1em; padding: 4px 1em 1em 2em; background-color: $color2; bo
 
 
 //  contact footer
-html, body, #container, img, .expandable, .collapsible {
+html, body, #container, .expandable, .collapsible {
     
     @include media($medium){height: 100%};
     @include media($large){height: 100%};
@@ -89,45 +93,3 @@ footer, .push {
 }
 
 footer {@include media($small){height: 4em;}}
-
-.tri-base {
-    text-align: center;
-    position: relative;
-    left: 50%;
-    margin-left: -6px;
-}
-
-.triangle {@include triangle(12px, $color5, up);@extend .tri-base;}
-.triangle-up {@include triangle(12px, $color5, up);@extend .tri-base;}
-.triangle-down {@include triangle(12px, $color5, down);@extend .tri-base;}
-.triangle-down-red {@include triangle(12px, $color0, down);@extend .tri-base;margin-top: 6px;}
-.triangle-up-red {@include triangle(12px, $color0, up);@extend .tri-base;}
-
-/*
-  Expand + Collapse Menu
-  - When SMALL: show open button, hide close button, hide content
-  - When MED: hide open button, hide close button, show content 
-*/
-
-@include media($small) {
-  .collapsible, .btn-close{display: none;}
-
-  .btn {
-    cursor:pointer;
-    text-align: center;
-    padding-top: 0.4em;
-    // padding: 0.8em;
-    a {color: $color2; &:hover {color: $color4;}}
-    margin-top: 1em;
-  }
-
-  #btn-menu {padding: 1em 0 1em 0; @include font-body(1em, 400); background-color: $silver;}
-
-}
-
-@include media($medium) {
-  .btn-open, .btn-close{
-    display: none;
-  }
-}
-

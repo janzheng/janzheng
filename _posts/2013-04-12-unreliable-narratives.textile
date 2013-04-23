@@ -8,6 +8,8 @@ summary: A downloadable reference guide for the SCSS beginner.
 <!-- vimeo: # -->
 category : Gane Design
 tags : [Gane Design, Narrative]
+published: yes
+portfolio: no
 ---
 
 Talk about Bioshock Infinite, Trance, etc

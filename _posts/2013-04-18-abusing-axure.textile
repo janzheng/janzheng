@@ -1,0 +1,17 @@
+---
+layout: post
+title: Abusing Axure
+summary: A downloadable reference guide for the SCSS beginner. 
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- image-icon: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Interaction Design 
+tags : [wireframe, axure]
+published: yes
+portfolio: no
+---
+
+This is a sample work portfolio item
+

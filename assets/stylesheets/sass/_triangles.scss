@@ -1,0 +1,13 @@
+
+.tri-base {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -6px;
+}
+
+.triangle {@include triangle(12px, $color4, up); @extend .tri-base;}
+/* .triangle-up {@include triangle(12px, $color5, up);@extend .tri-base;}
+.triangle-down {@include triangle(12px, $color5, down);@extend .tri-base;} */
+.triangle-down {@include triangle(12px, $color0, down);@extend .tri-base;margin-top: 6px;}
+.triangle-up {@include triangle(12px, $color0, up);@extend .tri-base;}

@@ -15,43 +15,66 @@ Tags
  -->
  
 <section id="about">
-  <div id="about-me"></div>
-  <div id="about-school"></div>
+  <div id="about-intro">
+    <div id="portrait"><img src="http://placehold.it/150x150" /></div>
+    <div id="description">
+      <p>Hello!</p>
+
+      <p>My name is Jan ('yawn'), and I make interactive experiences like websites, apps &amp; interfaces, services, and games.</p>
+
+      <p>I always strive to make my experiences immersive, memorable, and delightful, through the use of research, user-centered design and lots of iterative prototyping.</p>
+
+      <p>I am the Senior User Experience Architect at Nurun,
+      but am available for freelance.</p>
+
+      <p>I live in Atlanta, but would like to explore the world. I am a dual citizen of the United States and Sweden. <!-- <a href="#about-self">(I sure do look Swedish!)</a> --></p>
+
+      <div class="contact-block">[[Want to say hi? (short, simple bar with icons to reach out to me) ]]<!-- <div id="contact">{% include contact.html %}</div> --></div>
+    </div>
+  </div>
+
   <div id="about-work">
 
+    <span class="section-title">Work</span>
+    <div class="line"></div>
+
+    <p>I have been on both the agency and the client-side, and I've been lucky to have worked with some great companies.</p>
+
+    <p>I currently work for an interactive agency called <em>Nurun</em>, where I work with <em>Nespresso</em>, <em>GE Energy</em>, <em>The Home Depot</em> among others. My previous clients include <em>Coca Cola</em>, <em>L'Oreal</em>, <em>Verizon</em>, and <em>Cartoon Network</em>.
+    I have also worked at places like <em>Microsoft</em>, and <em>Lockheed Martin</em>.</p>
 
     <div class="expandable">
-      <div class="btn btn-open">Read about stuff<div class="triangle-down"></div></div>
-      <div class="btn btn-close">{close}<div class="triangle-up"></div></div>
+      <div class="btn btn-open">Work Experience<div class="triangle-down"></div></div>
+      <div class="btn btn-close">Work Experience<div class="triangle-up"></div></div>
       <div class="collapsible">
-          <p><em>This is stuff that just expanded</em> blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh <a href="http://www.google.com">Google Linkz</a>blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh
-          </p>
-      </div>
-    </div>
-
-    <div class="expandable">
-      <div class="btn btn-open">Open Btn</div>
-      <div class="btn btn-close">Close Btn</div>
-      <div class="collapsible">
-        <p><em>This is stuff that just expanded</em> blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh <a href="http://www.google.com">Google Linkz</a>blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh
-        </p>
-      </div>
-    </div>
-
-    <div class="expandable">
-      <div class="btn btn-open">Open Btn</div>
-      <div class="btn btn-close">Close Btn</div>
-      <div class="collapsible">
-        <p><em>This is stuff that just expanded</em> blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh <a href="http://www.google.com">Google Linkz</a>blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh blargh
-        </p>
+        <p><em>All work</em> blargh blargh blargh blargh <a href="http://www.google.com">Google Linkz</a>blargh</p>
       </div>
     </div>
 
   </div>
 
+  <div id="about-school">
+    <span class="section-title">School</span>
+    <div class="line"></div>
+
+    <p>I have a Masters of Human-Computer Interaction from Carnegie Mellon, and have undergraduate degrees in Computer Science and Psychology, focusing in game development from UMBC.</p>
+
+    <div class="expandable">
+      <div class="btn btn-open">School<div class="triangle-down"></div></div>
+      <div class="btn btn-close">School<div class="triangle-up"></div></div>
+      <div class="collapsible">
+        <p><em>All work</em> blargh blargh blargh blargh <a href="http://www.google.com">Google Linkz</a>blargh</p>
+      </div>
+    </div>
+  </div>
+
+  <a id="about-self"></a>
+
 </section>
 
 
+<span class="section-title">Some of My Work</span>
+<div class="line"></div>
 
 {% for post in site.posts %}
 {% if post.portfolio  %} 

@@ -15,7 +15,9 @@ Tags
  -->
 
 {% for post in site.posts %}
-{% if post.portfolio == null %} 
+{% if post.portfolio != yes %} 
+{% if post.published != yes %} 
+
 <a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
   <section class="post">
     <div class="meta-data">
@@ -66,5 +68,6 @@ Tags
   </section>
 </a>
 <div class="line"></div>
+{% endif %}
 {% endif %}
 {% endfor %}

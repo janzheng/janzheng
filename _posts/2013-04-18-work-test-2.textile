@@ -1,0 +1,17 @@
+---
+layout: post
+title: Unreliable Narrators and Narratives
+summary: A downloadable reference guide for the SCSS beginner. 
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- image-icon: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Gane Design
+tags : [Gane Design, Narrative]
+published: yes
+portfolio: yes
+---
+
+This is a sample work portfolio item
+

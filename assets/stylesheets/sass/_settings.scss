@@ -11,7 +11,7 @@ $light-red: #a00;
 $light-gray: #ccc;
 $gray: #777;
 $dark-gray: #333;
-$silver: #f5f5f5;
+$silver: #f2f2f2;
 $pink: #f44a56;
 $matte-blue: #3e4b5d;
 
@@ -50,11 +50,6 @@ $color-link: #fff;
 $color-link-active: #fff;
 $highlight: $color9;
 $highlight-text: $color2;
-
-$color-email: $norse3;
-$color-twitter: $norse3;
-$color-linkedin: $norse3;
-
 
 
 
@@ -174,7 +169,7 @@ $tinyfont: $base * 0.82;
 
 
 // mixins 
-@mixin ui-separator-dashed($color: #999, $color-alt: $silver, $height: 1px)
+@mixin ui-separator-dashed($color: $light-gray, $color-alt: $silver, $height: 1px)
 {
     border: 0; //cancel default <hr> style
     border-bottom: $height dashed $color-alt;
@@ -281,8 +276,8 @@ button {  width: auto; overflow: visible; }
 
 body, select, input, textarea {  color: #444; }
 h1, h2, h3, h4, h5, h6 {  }
-a, a:active, a:visited { color: $red; }
-a:hover { color: $light-red; }
+// a, a:active, a:visited { color: $red; }
+// a:hover { color: $light-red; }
 
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .hidden { display: none; visibility: hidden; }

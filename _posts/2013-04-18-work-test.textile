@@ -7,9 +7,10 @@ summary: A downloadable reference guide for the SCSS beginner.
 <!-- image-icon: /assets/# -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
-portfolio: yes
 category : Gane Design
 tags : [Gane Design, Narrative]
+published: yes
+portfolio: yes
 ---
 
 This is a sample work portfolio item

@@ -1,0 +1,39 @@
+
+$color-contact: $color3;
+
+@mixin bttn-contact {background-size: 25px auto; height: 3em;}
+
+a.bttn-contact, a.bttn-contact:active, a.bttn-contact.clicked, a.bttn-contact:visited{
+  background-color: $color-contact;
+}
+
+a.contact-email {
+  background: $color-contact url('/assets/images/email.png') no-repeat center;
+  @include bttn-contact;
+  &:hover{background-color: $color7;}
+}
+a.contact-twitter {
+  background: $color-contact url('/assets/images/twitter.png') no-repeat center;
+  @include bttn-contact;
+  &:hover{background-color: $color8;}
+}
+a.contact-linkedin {
+  background: $color-contact url('/assets/images/linkedin.png') no-repeat center;
+  @include bttn-contact;
+  &:hover{background-color: $color7;}
+}
+
+@include media($small) {
+  #contact {padding-top: 0.5em;}
+  #contact-container li{@include span-columns(2);}
+}
+
+@include media($medium) {
+  #contact {@include span-columns(12); padding-top: 0.5em;}
+  #contact-container li{@include span-columns(12);}
+}
+
+@include media($large) {
+  #contact {@include span-columns(12); padding-top: 0.5em;}
+  #contact-container li{@include span-columns(4);}
+}

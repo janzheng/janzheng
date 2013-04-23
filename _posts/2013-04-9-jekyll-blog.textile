@@ -6,6 +6,10 @@ summary: Incredibly powerful and completely free blogging.
 <!-- image-path: /assets/# -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
+category : Gane Design
+tags : [Gane Design, Narrative]
+published: yes
+portfolio: no
 ---
 
 Using Github pages is incredibly flexible and absolutely free. 

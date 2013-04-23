@@ -13,6 +13,7 @@
 
 @import 'settings';
 @import 'elements';
+
 //@import 'syntax2';    // this is for Pygments code highlighting; won't work locally bc Python not installed
 
 // @import  'pastie';
@@ -44,35 +45,22 @@ body {
     }
 
     #slogan {
-      // padding-top: 7em;
-      padding-top: 2em;
-      text-align: left;
+      text-align: center;
       @include font-tip($f2*0.95, 300, $f2*1.4);
       background-color: inherit;
-
-      #slogan-blurb {
-        border-top: 1px solid $color3; 
-        border-bottom: 1px solid $color3; 
-        padding: 0.6em;
-        // @include set-radius(0.5em);
-        // border: 1px solid $light-gray;
-        background-color: $white;
-      }
-
+      #slogan-blurb {padding: 0 0.6em 0.6em 0.6em;}
     }
 
     #about {
-      #about-blurb{display: inherit;}
-      #about-longer{display: none;}
-
+      padding-top: 2em;
 
       #about-container {
-        // border-top: 1px solid #ccc; 
-        // border-bottom: 1px solid #ccc;
-        padding-top: 0.4em;
-        background-color: $color5; 
+        border-top: 1px solid $light-gray; 
+        border-bottom: 1px solid $light-gray;
+        // background-color: $color5; 
         padding: 0.8em;
-        a {color: $color2; &:hover {color: $color4;}}
+        text-align: center;
+        a {color: $color4; &:hover {color: $color3;}}
 
         @include media($medium) {@include set-radius(3px);}
         @include media($large) {@include set-radius(3px);}
@@ -81,7 +69,7 @@ body {
         @include font-body($f3,400);
 
         .line {
-            @include ui-separator-dashed($color5, $color4);
+            @include ui-separator-dashed($color5, $color7);
             margin-top: 6px; margin-bottom: 6px;
         }
       }
@@ -92,27 +80,6 @@ body {
       // #menu-blog{@include span-columns(12);}
       // #menu-email{@include span-columns(12);}
     }
-
-
-    a.contact-email {
-        background: #ffffff url('/assets/images/email.png') no-repeat center;
-        background-size: 25px auto; height: 3em;
-        background-color: $color-email;
-        &:hover{background-color: $color7;}
-    }
-    a.contact-twitter {
-        background: #ffffff url('/assets/images/twitter.png') no-repeat center;
-        background-size: 25px auto; height: 3em;
-        background-color: $color-twitter;
-        &:hover{background-color: $color8;}
-    }
-    a.contact-linkedin {
-        background: #ffffff url('/assets/images/linkedin.png') no-repeat center;
-        background-size: 25px auto; height: 3em;
-        background-color: $color-linkedin;
-        &:hover{background-color: $color2;}
-    }
-    
   }
 
   #main {
@@ -154,6 +121,8 @@ body {
 
 
   }
+
+  section { margin-top: 3em;}
 }
 
 
@@ -193,28 +162,16 @@ body {
 
   #sidebar {
     @include media($small) {
-      // @include span-columns(6);
       text-align: center; 
       margin-left: auto; margin-right: auto;
 
       #slogan {
-        padding-top: 4em;
         #slogan-blurb {@include set-radius(0px); text-align: center;}
       }
-      #about {#about-blurb{display: none}#about-longer{display: inherit;}}
-
-      #contact { 
-        padding-top: 0.5em;
-        #contact-email{@include span-columns(2);}
-        #contact-twitter{@include span-columns(2);}
-        #contact-linkedin{@include span-columns(2);}
-      }
-      // .legal {display: none;}
 
       .content {
         @include outer-container;
         @include span-columns(6);
-        // background-color: red;
         .collapsible{padding: 0.8em; background-color: $silver;}
         #menu {
           padding-top: 0; margin-top: 0; 
@@ -237,17 +194,6 @@ body {
         }
       }
 
-      #contact {
-        @include span-columns(12);
-        #contact-email{@include span-columns(12);}
-        #contact-twitter{@include span-columns(12);}
-        #contact-linkedin{@include span-columns(12);}
-
-        padding-top: 0.5em;
-      }
-
-
-
     }
 
     @include media($large) {
@@ -265,16 +211,6 @@ body {
         width: $gutter+$column*3;
       }
 
-      #about {#about-blurb{display: none}#about-longer{display: inherit;}}
-
-      #contact {
-        @include span-columns(12);
-        #contact-email{@include span-columns(4);}
-        #contact-twitter{@include span-columns(4);}
-        #contact-linkedin{@include span-columns(4);}
-
-        padding-top: 0.5em;
-      }
 
     }
 
@@ -290,8 +226,6 @@ body {
     
 
 */
-
-
 
 
   #main {
@@ -320,6 +254,9 @@ body {
       .post-image {width: 100%;height: auto;}
       .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.7em); p {margin-top: 0.8em;} }
       .post {margin-top: 1em;}
+
+      p { @include font-body($f2*0.96, 400); margin-top: 0.3em; }
+      img { display: block; margin-left: auto; margin-right: auto; }
     }
 
     @include media($medium) {
