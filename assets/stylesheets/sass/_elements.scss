@@ -15,7 +15,8 @@ a.bttn {
     overflow: hidden; display: block; 
     cursor: pointer;
     padding: 1em;
-    background-color: $light-gray;
+    background-color: $silver;
+    @include media($small) {background-color: $light-gray;}
     border: 1px solid $silver;
     color: $dark-gray;
 
@@ -40,7 +41,7 @@ a.bttn:hover, a.bttn:active, a.bttn.clicked {
 }
 
 
-blockquote {margin: 1em; padding: 4px 1em 1em 2em; background-color: $color2; border-left: 6px solid $color3; @include font-tip($f2, 300, auto); font-style: italic}
+blockquote {margin: 0; padding: 4px 1em 1em 2em; background-color: $color2; border-left: 6px solid $color3; @include font-tip($f2, 300, auto); font-style: italic}
 
 
 //something I used for coloring, but decided to keep
@@ -75,7 +76,6 @@ blockquote {margin: 1em; padding: 4px 1em 1em 2em; background-color: $color2; bo
 
 //  contact footer
 html, body, #container, .expandable, .collapsible {
-    
     @include media($medium){height: 100%};
     @include media($large){height: 100%};
     @include ease-transition(200ms);
@@ -83,13 +83,13 @@ html, body, #container, .expandable, .collapsible {
 
 .sticky-wrapper {
   min-height: 100%;
-  @include media($medium){margin: 0 auto -19em; }
-  @include media($large){margin: 0 auto -12em; }
+  @include media($medium){margin: 0 auto -32em; }
+  @include media($large){margin: 0 auto -23em; }
 }
 
 footer, .push {
-    @include media($medium){height: 19em;}
-    @include media($large){height: 12em;}
+    @include media($medium){height: 32em;}
+    @include media($large){height: 23em;}
 }
 
 footer {@include media($small){height: 4em;}}

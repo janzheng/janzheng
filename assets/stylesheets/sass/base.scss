@@ -73,21 +73,14 @@ body {
           margin-top: 6px; margin-bottom: 6px;
         }
 
-        #ctional {color: #light-gray;}
+        #ctional {color: $light-gray;}
+        em {background: none; color: $color6}
       }
-
     }
-    #menu {
-      padding-top: 3em;
-      // #menu-blog{@include span-columns(12);}
-      // #menu-email{@include span-columns(12);}
-    }
+    #menu {padding-top: 1em;}
   }
 
   #main {
-    /*.title {
-        @include font-body($f1*1.3, 300);
-    }*/
     .post-taglist {
       margin-top: 0.6em;
       // margin-top: 1.5em;
@@ -113,18 +106,33 @@ body {
       }
     }
 
-
     .legal {
-      // @include span-columns(12);
       padding-top: 2.5em; padding-bottom: 0.5em;
       @include font-tip($f3, 300);
       text-align: center;
     }
-
-
   }
 
-  section { margin-top: 3em;}
+  // about page & static content
+  section { margin-top: 3em; padding: 1em; @include outer-container; }
+  .section-title { text-transform: uppercase; @include font-body($f3, 400); color: $color5;}
+  p { @include font-body($f2, 400, 1.6em); margin-top: 0.8em; }
+  // img { display: block; margin-left: auto; margin-right: auto; }
+
+  //styling specific to about page bc I'm vain
+  #triangle-hello { @include triangle(21px, $silver, up); @extend .tri-base; left: 5.5em;}
+  #hello-box {@include font-tip($f2, 400, 1.6em); padding: 1em ; background-color: $silver;@include set-radius(3px); div{ margin-bottom: 0.3em; } }
+  #hello { @include font-tip($f2*1.5, 400, 1.6em); margin: 0px}
+  em { /*background-color: $color2;*/ color: $color0 }
+
+  #aboutme-current { 
+    @include span-columns(12);
+    @include media($small) {@include span-columns(6);}
+  } 
+
+  .callout {margin: 2em 0 2em 0; padding: 0 1em 0.5em 1em; border-left: 2px solid $color3; }
+  #aboutme-work { @extend .callout; @include span-columns(6); @include media($small) {@include span-columns(6);} }
+  #aboutme-live { @extend .callout; @include span-columns(6); @include media($small) {@include span-columns(6);} }
 }
 
 
@@ -174,7 +182,7 @@ body {
       .content {
         @include outer-container;
         @include span-columns(6);
-        .collapsible{padding: 0.8em; background-color: $silver;}
+        .collapsible{padding: 0.8em; background-color: $silver; @include clearfix;}
         #menu {
           padding-top: 0; margin-top: 0; 
           #menu-blog{@include span-columns(3);}
@@ -254,11 +262,8 @@ body {
       .post-summary{@include font-body($f2*0.96, 400); margin-top: 0.3em;}
       .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
       .post-image {width: 100%;height: auto;}
-      .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.7em); p {margin-top: 0.8em;} }
+      .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} }
       .post {margin-top: 1em;}
-
-      p { @include font-body($f2*0.96, 400); margin-top: 0.3em; }
-      img { display: block; margin-left: auto; margin-right: auto; }
     }
 
     @include media($medium) {
@@ -271,7 +276,7 @@ body {
       .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
       .post-image {width:95%;height: auto;}
       .content {display: block;}
-      .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.7em); p {margin-top: 0.8em;} }
+      .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} }
     }
 
     @include media($large) {

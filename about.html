@@ -14,20 +14,26 @@ Summary
 Tags
  -->
  
-<section id="about">
+<section id="aboutme">
   <div id="about-intro">
     <div id="portrait"><img src="http://placehold.it/150x150" /></div>
     <div id="description">
-      <p>Hello!</p>
+      <div id="triangle-hello"></div>
+      <div id="hello-box">
+        <div id="hello">Hello!</div>
+        <div>My name is Jan ('yawn'), and I make interactive experiences like <em>websites</em>, <em>apps</em> &amp; <em>interfaces</em>, <em>services</em>, and <em>games</em>.
+        </div>
 
-      <p>My name is Jan ('yawn'), and I make interactive experiences like websites, apps &amp; interfaces, services, and games.</p>
+        <div>I always strive to make my experiences immersive, memorable, and delightful, through the use of research, user-centered design and lots of iterative prototyping.
+        </div>
+      </div>
 
-      <p>I always strive to make my experiences immersive, memorable, and delightful, through the use of research, user-centered design and lots of iterative prototyping.</p>
+      <div id="aboutme-current">
+        <div id="aboutme-work"><p>I am the Senior User Experience Architect at Nurun,
+        but am available for freelance.</p></div>
 
-      <p>I am the Senior User Experience Architect at Nurun,
-      but am available for freelance.</p>
-
-      <p>I live in Atlanta, but would like to explore the world. I am a dual citizen of the United States and Sweden. <!-- <a href="#about-self">(I sure do look Swedish!)</a> --></p>
+        <div id="aboutme-live"><p>I live in Atlanta, but I share citizenship between the United States and Sweden. <!-- <a href="#about-self">(I sure do look Swedish!)</a> --></p></div>
+      </div>
 
       <div class="contact-block">[[Want to say hi? (short, simple bar with icons to reach out to me) ]]<!-- <div id="contact">{% include contact.html %}</div> --></div>
     </div>
@@ -70,58 +76,58 @@ Tags
 
   <a id="about-self"></a>
 
-</section>
-
-
-<span class="section-title">Some of My Work</span>
-<div class="line"></div>
-
-{% for post in site.posts %}
-{% if post.portfolio  %} 
-  <a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
-    <section class="post">
-      <div class="meta-data">
-        <span class="post-date">
-          {{ post.date | date: "%d %B %Y" }}      
-        </span> 
-
-      </div>
-
-      <h1>{{ post.title }}</h1>
-
-      {% if post.image-path %}      
-       <img class="post-image" src="{{ post.image-path }}"></img>           
-      {% endif %}
-
-      {% if post.youtube %}<iframe width="550" height="452" src="{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>{% endif %}
-      {% if post.vimeo %}<iframe src="{{ post.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=0f314a" width="550" height="309" frameborder="0"></iframe>{% endif %}    
-
-
-      <p class="post-summary">{{ post.summary }}</p>
-
-      {% if post.tags != null %}
-        {% assign tags_list = post.tags %} 
-          {% if tags_list.size > 0 %}
-          <ul class="post-taglist">
-
-            {% if tags_list.first[0] == null %}
-              {% for tag in tags_list %} 
-                <li>{{ tag }}</li>
-              {% endfor %}
-            {% else %}
-              {% for tag in tags_list %} 
-                <li>{{ tag[0] }}</li>
-              {% endfor %}
-            {% endif %}
-            
-          {% endif %}
-          {% assign tags_list = nil %}
-        </ul>
-      {% endif %}
-
-      <div class="clear"></div>
-    </section>
-  </a>
+  <span class="section-title">Some of My Work</span>
   <div class="line"></div>
-{% endif %}
-{% endfor %}
+
+  {% for post in site.posts %}
+  {% if post.portfolio  %} 
+    <a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
+      <section class="post">
+        <div class="meta-data">
+          <span class="post-date">
+            {{ post.date | date: "%d %B %Y" }}      
+          </span> 
+
+        </div>
+
+        <h1>{{ post.title }}</h1>
+
+        {% if post.image-path %}      
+         <img class="post-image" src="{{ post.image-path }}"></img>           
+        {% endif %}
+
+        {% if post.youtube %}<iframe width="550" height="452" src="{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>{% endif %}
+        {% if post.vimeo %}<iframe src="{{ post.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=0f314a" width="550" height="309" frameborder="0"></iframe>{% endif %}    
+
+
+        <p class="post-summary">{{ post.summary }}</p>
+
+        {% if post.tags != null %}
+          {% assign tags_list = post.tags %} 
+            {% if tags_list.size > 0 %}
+            <ul class="post-taglist">
+
+              {% if tags_list.first[0] == null %}
+                {% for tag in tags_list %} 
+                  <li>{{ tag }}</li>
+                {% endfor %}
+              {% else %}
+                {% for tag in tags_list %} 
+                  <li>{{ tag[0] }}</li>
+                {% endfor %}
+              {% endif %}
+              
+            {% endif %}
+            {% assign tags_list = nil %}
+          </ul>
+        {% endif %}
+
+        <div class="clear"></div>
+      </section>
+    </a>
+    <div class="line"></div>
+  {% endif %}
+  {% endfor %}
+
+
+</section>
