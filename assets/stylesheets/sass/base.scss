@@ -69,9 +69,11 @@ body {
         @include font-body($f3,400);
 
         .line {
-            @include ui-separator-dashed($color5, $color7);
-            margin-top: 6px; margin-bottom: 6px;
+          @include ui-separator-dashed($color5, $color7);
+          margin-top: 6px; margin-bottom: 6px;
         }
+
+        #ctional {color: #light-gray;}
       }
 
     }
