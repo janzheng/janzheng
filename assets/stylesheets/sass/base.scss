@@ -121,7 +121,8 @@ body {
 
   //styling specific to about page bc I'm vain
   #triangle-hello { @include triangle(21px, $silver, up); @extend .tri-base; left: 5.5em;}
-  #hello-box {@include font-tip($f2, 400, 1.6em); padding: 1em ; background-color: $silver;@include set-radius(3px); div{ margin-bottom: 0.3em; } }
+  #hello-box {@include font-tip($f2, 400, 1.6em); padding: 1em; background-color: $silver;@include set-radius(3px); 
+    div{ margin-bottom: 0.6em; } }
   #hello { @include font-tip($f2*1.5, 400, 1.6em); margin: 0px}
   em { /*background-color: $color2;*/ color: $color0 }
 
@@ -130,9 +131,9 @@ body {
     @include media($small) {@include span-columns(6);}
   } 
 
-  .callout {margin: 2em 0 2em 0; padding: 0 1em 0.5em 1em; border-left: 2px solid $color3; }
+  .callout {margin: 2em 0 0 0; padding: 0 1em 1em 1em; border-left: 1px solid $color3; background-color: $color7;}
   #aboutme-work { @extend .callout; @include span-columns(6); @include media($small) {@include span-columns(6);} }
-  #aboutme-live { @extend .callout; @include span-columns(6); @include media($small) {@include span-columns(6);} }
+  #aboutme-live { @extend #aboutme-work }
 }
 
 
