@@ -1,15 +1,14 @@
 
 @import 'triangles';
-@import 'collapsable';
+@import 'collapsible';
 
 
 //link & button styles
 
-a, a:active, a:visited {color: $dark-gray; text-decoration: underline;}
+a, a:active, a:visited {color: $color0; text-decoration: underline;}
 a:hover {color: $color4; @include ease-transition(200ms);}
 
 section.post:hover {background-color: $color2;}
-.content a {text-decoration: none;}
 
 a.bttn {
     overflow: hidden; display: block; 
@@ -93,3 +92,5 @@ footer, .push {
 }
 
 footer {@include media($small){height: 4em;}}
+
+.left-edge {border-left: 1px solid $color3;}

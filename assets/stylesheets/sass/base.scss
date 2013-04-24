@@ -54,13 +54,14 @@ body {
     #about {
       padding-top: 2em;
 
+
       #about-container {
         border-top: 1px solid $light-gray; 
         border-bottom: 1px solid $light-gray;
         // background-color: $color5; 
         padding: 0.8em;
         text-align: center;
-        a {color: $color4; &:hover {color: $color3;}}
+        a {color: $color4; &:hover {color: $color3;} text-decoration: none;}
 
         @include media($medium) {@include set-radius(3px);}
         @include media($large) {@include set-radius(3px);}
@@ -114,26 +115,31 @@ body {
   }
 
   // about page & static content
-  section { margin-top: 3em; padding: 1em; @include outer-container; }
-  .section-title { text-transform: uppercase; @include font-body($f3, 400); color: $color5;}
+  section { margin-top: 2em; margin-bottom: 1em; padding: 1em; @include outer-container; }
+  .section-title {text-transform: uppercase; @include font-body($f3, 400); color: $color5; margin-top: 1em;}
+  .section-title-large {@extend .section-title; font-size: $f3*1.7;}
   p { @include font-body($f2, 400, 1.6em); margin-top: 0.8em; }
   // img { display: block; margin-left: auto; margin-right: auto; }
 
   //styling specific to about page bc I'm vain
   #triangle-hello { @include triangle(21px, $silver, up); @extend .tri-base; left: 5.5em;}
-  #hello-box {@include font-tip($f2, 400, 1.6em); padding: 1em; background-color: $silver;@include set-radius(3px); 
-    div{ margin-bottom: 0.6em; } }
-  #hello { @include font-tip($f2*1.5, 400, 1.6em); margin: 0px}
+  #hello-box {@include font-body($f2, 400, 1.6em); padding: 1em; background-color: $silver;@include set-radius(3px); 
+    div{ margin-bottom: 0.9em; } @extend .left-edge; }
+  #hello { @extend .section-title-large; margin-top: 0; text-transform: none; }
   em { /*background-color: $color2;*/ color: $color0 }
 
-  #aboutme-current { 
+  .row-content {
     @include span-columns(12);
     @include media($small) {@include span-columns(6);}
-  } 
-
-  .callout {margin: 2em 0 0 0; padding: 0 1em 1em 1em; border-left: 1px solid $color3; background-color: $color7;}
-  #aboutme-work { @extend .callout; @include span-columns(6); @include media($small) {@include span-columns(6);} }
+  }
+  #aboutme-current { @extend .row-content}   
+  .callout {margin: 1em 0 0 0; padding: 0 1em 1em 1em; @extend .left-edge;  background-color: $silver;}
+  .whiteout {@extend .callout; background: none;}
+  #aboutme-work { @extend .whiteout; @include span-columns(6); @include media($small) {@include span-columns(6);} p { margin-top: 0}}
   #aboutme-live { @extend #aboutme-work }
+  .note { @include font-body($f3*1.2, 400); }
+  .shout { @include font-body($f2*1.34, 300, 1.6em); margin: 1em 0 1em 0;}
+  #aboutme-contact { @extend .callout; padding: 0 2em 0.5em 1em; @include span-columns(12); li{@include span-columns(4); margin-top: 1em;}}
 }
 
 
@@ -183,7 +189,7 @@ body {
       .content {
         @include outer-container;
         @include span-columns(6);
-        .collapsible{padding: 0.8em; background-color: $silver; @include clearfix;}
+        .collapsible-mobile{padding: 0.8em; background-color: $silver; @include clearfix;}
         #menu {
           padding-top: 0; margin-top: 0; 
           #menu-blog{@include span-columns(3);}
@@ -241,23 +247,10 @@ body {
 
   #main {
     @include clearfix;
-  
     padding-bottom: 4em;
-
-    .post {
-      margin-top: 1em;
-      // border-bottom: 1px solid #888; 
-      padding: 1.4em;
-      padding-left: 0.8em;
-      // @include set-radius(0.5em);
-      // border: 1px solid $light-gray;
-      // background-color: $silver;
-    }
-    
-
+    .post {margin-top: 0; margin-bottom: 0; padding-left: 0.8em;}
+    .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none;}
     @include media($small) {
-      // @include span-columns(6);
-
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1*0.9, 300);}
       .post-summary{@include font-body($f2*0.96, 400); margin-top: 0.3em;}

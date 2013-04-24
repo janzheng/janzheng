@@ -1,0 +1,27 @@
+
+/*
+  Expand + Collapse Menu
+  - When SMALL: show open button, hide close button, hide content
+  - When MED: hide open button, hide close button, show content 
+*/
+
+.expandable { @include span-columns(12) }
+.btn {
+  cursor:pointer;
+  text-align: center;
+  padding-top: 0.4em;
+  // padding: 0.8em;
+  color: $color4; &:hover {background-color: $color2; color: $color0; @include ease-transition(200ms);} 
+  margin-top: 1em;
+  padding: 1em 0 1em 0; @include font-body(1em, 400); background-color: $silver;
+}
+
+@include media($small) {
+  .collapsible, .collapsible-mobile, .btn-close, .btn-close-mobile{display: none;}
+
+}
+@include media($medium) {
+  .btn { @include span-columns(6)}
+  .collapsible { @include span-columns(12)}
+  .collapsible, .btn-close, .btn-open-mobile, .btn-close-mobile{display: none;}
+}

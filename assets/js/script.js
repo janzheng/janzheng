@@ -2,13 +2,12 @@
 $(document).ready(function() {
 
    //show / hide functionality
-   //initially hide all collapsible areas; moved into JS instead
+   //initially hide all collapsible areas; moved into CSS instead
    // $(".expandable .collapsible").hide();
    $(".btn").click(function() {
       // console.log("clicked"); 
-      $(this).parent().find('.collapsible').toggle();
-      $(this).parent().find('.btn-open').toggle();
-      $(this).parent().find('.btn-close').toggle();
+      $(this).parent().find('.collapsible, .collapsible-mobile').toggle();
+      $(this).parent().find('.btn-open-mobile, .btn-close-mobile, .btn-open, .btn-close').toggle();
    });
 
    //reset all buttons when window resizes, or the open/close buttons will show all weird-like
@@ -27,14 +26,15 @@ $(document).ready(function() {
            delay(function() {
                var width = $(window).width();
        
+              //show buttons and hide content if in mobile view
                if( width > 470 ) {
                   // medium and large
-                  $('.btn-open, .btn-close').hide();
-                  $('.collapsible').show();
+                  $('.btn-open-mobile, .btn-close-mobile').hide();
+                  $('.collapsible-mobile').show();
                } else if( width <= 470 ) {
                    // code for mobile portrait
-                  $('.collapsible, .btn-close').hide();
-                  $('.btn-open').show();
+                  $('.collapsible-mobile, .btn-close-mobile').hide();
+                  $('.btn-open-mobile').show();
                }
            
            }, pause );

@@ -52,8 +52,6 @@ $highlight: $color9;
 $highlight-text: $color2;
 
 
-
-
 @mixin font-tip($size: $base, $weight: 400, $height: auto, $style: normal) {
     font-family: 'Georgia', serif;
     font-weight: $weight;
@@ -94,7 +92,7 @@ $not-large: new-breakpoint(max-width $break-large 12);
 
 //for sticky menu
 $break-tall: 410px;
-$break-short: 530px;
+$break-short: 520px;
 $short: new-breakpoint(min-height $break-short 12);
 $tall: new-breakpoint(min-height $break-tall 12);
 
