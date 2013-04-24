@@ -18,10 +18,13 @@
 
 @include media($small) {
   .collapsible, .collapsible-mobile, .btn-close, .btn-close-mobile{display: none;}
-
+  .collapsible-mobile{padding: 0.8em; background-color: $silver; @include clearfix;}
 }
 @include media($medium) {
-  .btn { @include span-columns(6)}
-  .collapsible { @include span-columns(12)}
+  .btn { @include span-columns(4) }
+  .collapsible { @include span-columns(12) }
   .collapsible, .btn-close, .btn-open-mobile, .btn-close-mobile{display: none;}
 }
+
+.collapsible { padding: 0.8em; background-color: $silver; @include clearfix;
+ }

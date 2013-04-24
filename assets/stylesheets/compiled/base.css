@@ -404,14 +404,27 @@ body, select, input, textarea {
 @media screen and (max-width: 470px) {
   /* line 20, ../sass/_collapsible.scss */
   .collapsible, .collapsible-mobile, .btn-close, .btn-close-mobile {
-    display: none; } }
+    display: none; }
+
+  /* line 21, ../sass/_collapsible.scss */
+  .collapsible-mobile {
+    padding: 0.8em;
+    background-color: #f2f2f2;
+    *zoom: 1; }
+    /* line 18, ../sass/bourbon/addons/_clearfix.scss */
+    .collapsible-mobile:before, .collapsible-mobile:after {
+      content: " ";
+      display: table; }
+    /* line 23, ../sass/bourbon/addons/_clearfix.scss */
+    .collapsible-mobile:after {
+      clear: both; } }
 @media screen and (min-width: 470px) {
   /* line 24, ../sass/_collapsible.scss */
   .btn {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 48.82117%; }
+    width: 31.76157%; }
     /* line 54, ../sass/neat/grid/_span-columns.scss */
     .btn:last-child {
       margin-right: 0; }
@@ -429,6 +442,19 @@ body, select, input, textarea {
   /* line 26, ../sass/_collapsible.scss */
   .collapsible, .btn-close, .btn-open-mobile, .btn-close-mobile {
     display: none; } }
+/* line 29, ../sass/_collapsible.scss */
+.collapsible {
+  padding: 0.8em;
+  background-color: #f2f2f2;
+  *zoom: 1; }
+  /* line 18, ../sass/bourbon/addons/_clearfix.scss */
+  .collapsible:before, .collapsible:after {
+    content: " ";
+    display: table; }
+  /* line 23, ../sass/bourbon/addons/_clearfix.scss */
+  .collapsible:after {
+    clear: both; }
+
 /* line 8, ../sass/_elements.scss */
 a, a:active, a:visited {
   color: #a63737;
@@ -436,7 +462,8 @@ a, a:active, a:visited {
 
 /* line 9, ../sass/_elements.scss */
 a:hover {
-  color: #77838c;
+  color: #fffbdb;
+  background-color: #d95f43;
   -webkit-transition: 200ms ease;
   -moz-transition: 200ms ease;
   -ms-transition: 200ms ease;
@@ -761,6 +788,10 @@ body {
         /* line 64, ../sass/base.scss */
         #container #sidebar #about #about-container a:hover {
           color: #acbfcc; }
+      /* line 65, ../sass/base.scss */
+      #container #sidebar #about #about-container a:hover {
+        color: #333333;
+        background: #fffbdb; }
       @media screen and (min-width: 470px) {
         /* line 58, ../sass/base.scss */
         #container #sidebar #about #about-container {
@@ -777,27 +808,27 @@ body {
           -ms-border-radius: 3px;
           -o-border-radius: 3px;
           border-radius: 3px; } }
-      /* line 72, ../sass/base.scss */
+      /* line 73, ../sass/base.scss */
       #container #sidebar #about #about-container .line {
         border: 0;
         border-bottom: 1px dashed #f2d399;
         background: #41484c;
         margin-top: 6px;
         margin-bottom: 6px; }
-      /* line 77, ../sass/base.scss */
+      /* line 78, ../sass/base.scss */
       #container #sidebar #about #about-container #ctional {
         color: #cccccc; }
-      /* line 78, ../sass/base.scss */
+      /* line 79, ../sass/base.scss */
       #container #sidebar #about #about-container em {
         background: none;
         color: #2a3140; }
-  /* line 81, ../sass/base.scss */
+  /* line 82, ../sass/base.scss */
   #container #sidebar #menu {
     padding-top: 1em; }
-  /* line 85, ../sass/base.scss */
+  /* line 86, ../sass/base.scss */
   #container #main .post-taglist {
     margin-top: 0.6em; }
-    /* line 88, ../sass/base.scss */
+    /* line 89, ../sass/base.scss */
     #container #main .post-taglist li {
       font-family: 'Georgia', serif;
       font-weight: 300;
@@ -817,10 +848,10 @@ body {
       display: inline;
       color: white;
       */ }
-    /* line 105, ../sass/base.scss */
+    /* line 106, ../sass/base.scss */
     #container #main .post-taglist li:not(:last-child):after {
       content: ','; }
-  /* line 110, ../sass/base.scss */
+  /* line 111, ../sass/base.scss */
   #container #main .legal {
     padding-top: 2.5em;
     padding-bottom: 0.5em;
@@ -830,7 +861,7 @@ body {
     font-size: 10.89056px;
     line-height: auto;
     text-align: center; }
-  /* line 118, ../sass/base.scss */
+  /* line 119, ../sass/base.scss */
   #container section {
     margin-top: 2em;
     margin-bottom: 1em;
@@ -846,7 +877,7 @@ body {
     /* line 23, ../sass/bourbon/addons/_clearfix.scss */
     #container section:after {
       clear: both; }
-  /* line 119, ../sass/base.scss */
+  /* line 120, ../sass/base.scss */
   #container .section-title, #container .section-title-large, #container #hello {
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
@@ -856,10 +887,10 @@ body {
     line-height: auto;
     color: #41484c;
     margin-top: 1em; }
-  /* line 120, ../sass/base.scss */
+  /* line 121, ../sass/base.scss */
   #container .section-title-large, #container #hello {
     font-size: 18.51396px; }
-  /* line 121, ../sass/base.scss */
+  /* line 122, ../sass/base.scss */
   #container p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -867,7 +898,7 @@ body {
     font-size: 15.41832px;
     line-height: 1.6em;
     margin-top: 0.8em; }
-  /* line 125, ../sass/base.scss */
+  /* line 126, ../sass/base.scss */
   #container #triangle-hello {
     height: 0;
     width: 0;
@@ -876,7 +907,7 @@ body {
     border-width: 10.5px;
     border-bottom-color: #f2f2f2;
     left: 5.5em; }
-  /* line 126, ../sass/base.scss */
+  /* line 127, ../sass/base.scss */
   #container #hello-box {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -890,18 +921,18 @@ body {
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px; }
-    /* line 127, ../sass/base.scss */
+    /* line 128, ../sass/base.scss */
     #container #hello-box div {
       margin-bottom: 0.9em; }
-  /* line 128, ../sass/base.scss */
+  /* line 129, ../sass/base.scss */
   #container #hello {
     margin-top: 0;
     text-transform: none; }
-  /* line 129, ../sass/base.scss */
+  /* line 130, ../sass/base.scss */
   #container em {
     /*background-color: $color2;*/
     color: #a63737; }
-  /* line 131, ../sass/base.scss */
+  /* line 132, ../sass/base.scss */
   #container .row-content, #container #aboutme-current {
     display: block;
     float: left;
@@ -911,7 +942,7 @@ body {
     #container .row-content:last-child, #container #aboutme-current:last-child {
       margin-right: 0; }
     @media screen and (max-width: 470px) {
-      /* line 131, ../sass/base.scss */
+      /* line 132, ../sass/base.scss */
       #container .row-content, #container #aboutme-current {
         display: block;
         float: left;
@@ -921,14 +952,17 @@ body {
         #container .row-content:last-child, #container #aboutme-current:last-child {
           margin-right: 0; } }
   /* line 136, ../sass/base.scss */
+  #container #aboutme-resume {
+    padding: 0 1em 1em 1em; }
+  /* line 138, ../sass/base.scss */
   #container .callout, #container .whiteout, #container #aboutme-work, #container #aboutme-live, #container #aboutme-contact {
     margin: 1em 0 0 0;
     padding: 0 1em 1em 1em;
     background-color: #f2f2f2; }
-  /* line 137, ../sass/base.scss */
+  /* line 139, ../sass/base.scss */
   #container .whiteout, #container #aboutme-work, #container #aboutme-live {
     background: none; }
-  /* line 138, ../sass/base.scss */
+  /* line 140, ../sass/base.scss */
   #container #aboutme-work, #container #aboutme-live {
     display: block;
     float: left;
@@ -938,7 +972,7 @@ body {
     #container #aboutme-work:last-child, #container #aboutme-live:last-child {
       margin-right: 0; }
     @media screen and (max-width: 470px) {
-      /* line 138, ../sass/base.scss */
+      /* line 140, ../sass/base.scss */
       #container #aboutme-work, #container #aboutme-live {
         display: block;
         float: left;
@@ -947,17 +981,17 @@ body {
         /* line 54, ../sass/neat/grid/_span-columns.scss */
         #container #aboutme-work:last-child, #container #aboutme-live:last-child {
           margin-right: 0; } }
-    /* line 138, ../sass/base.scss */
+    /* line 140, ../sass/base.scss */
     #container #aboutme-work p, #container #aboutme-live p {
       margin-top: 0; }
-  /* line 140, ../sass/base.scss */
+  /* line 142, ../sass/base.scss */
   #container .note {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 13.06868px;
     line-height: auto; }
-  /* line 141, ../sass/base.scss */
+  /* line 143, ../sass/base.scss */
   #container .shout {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -965,7 +999,7 @@ body {
     font-size: 20.66054px;
     line-height: 1.6em;
     margin: 1em 0 1em 0; }
-  /* line 142, ../sass/base.scss */
+  /* line 144, ../sass/base.scss */
   #container #aboutme-contact {
     padding: 0 2em 0.5em 1em;
     display: block;
@@ -975,7 +1009,7 @@ body {
     /* line 54, ../sass/neat/grid/_span-columns.scss */
     #container #aboutme-contact:last-child {
       margin-right: 0; }
-    /* line 142, ../sass/base.scss */
+    /* line 144, ../sass/base.scss */
     #container #aboutme-contact li {
       display: block;
       float: left;
@@ -987,7 +1021,7 @@ body {
         margin-right: 0; }
 
 @media screen and (max-width: 470px) {
-  /* line 149, ../sass/base.scss */
+  /* line 151, ../sass/base.scss */
   #container {
     padding: 0;
     display: block;
@@ -998,7 +1032,7 @@ body {
     #container:last-child {
       margin-right: 0; }
 
-  /* line 151, ../sass/base.scss */
+  /* line 153, ../sass/base.scss */
   .legal {
     display: block;
     padding-bottom: 4em;
@@ -1009,14 +1043,14 @@ body {
     line-height: auto;
     text-align: center; } }
 @media screen and (min-width: 470px) {
-  /* line 162, ../sass/base.scss */
+  /* line 164, ../sass/base.scss */
   body {
     padding: 0 1em 0 1em; } }
 @media screen and (min-width: 730px) {
-  /* line 165, ../sass/base.scss */
+  /* line 167, ../sass/base.scss */
   body {
     padding: 0 1em 0 1em; } }
-/* line 171, ../sass/base.scss */
+/* line 173, ../sass/base.scss */
 #container {
   *zoom: 1;
   max-width: 996px;
@@ -1043,12 +1077,12 @@ body {
   #container:after {
     clear: both; }
   @media screen and (max-width: 470px) {
-    /* line 180, ../sass/base.scss */
+    /* line 182, ../sass/base.scss */
     #container #sidebar {
       text-align: center;
       margin-left: auto;
       margin-right: auto; }
-      /* line 186, ../sass/base.scss */
+      /* line 188, ../sass/base.scss */
       #container #sidebar #slogan #slogan-blurb {
         -webkit-border-radius: 0px;
         -moz-border-radius: 0px;
@@ -1056,7 +1090,7 @@ body {
         -o-border-radius: 0px;
         border-radius: 0px;
         text-align: center; }
-      /* line 189, ../sass/base.scss */
+      /* line 191, ../sass/base.scss */
       #container #sidebar .content {
         *zoom: 1;
         max-width: 996px;
@@ -1076,23 +1110,11 @@ body {
         /* line 54, ../sass/neat/grid/_span-columns.scss */
         #container #sidebar .content:last-child {
           margin-right: 0; }
-        /* line 192, ../sass/base.scss */
-        #container #sidebar .content .collapsible-mobile {
-          padding: 0.8em;
-          background-color: #f2f2f2;
-          *zoom: 1; }
-          /* line 18, ../sass/bourbon/addons/_clearfix.scss */
-          #container #sidebar .content .collapsible-mobile:before, #container #sidebar .content .collapsible-mobile:after {
-            content: " ";
-            display: table; }
-          /* line 23, ../sass/bourbon/addons/_clearfix.scss */
-          #container #sidebar .content .collapsible-mobile:after {
-            clear: both; }
-        /* line 193, ../sass/base.scss */
+        /* line 194, ../sass/base.scss */
         #container #sidebar .content #menu {
           padding-top: 0;
           margin-top: 0; }
-          /* line 195, ../sass/base.scss */
+          /* line 196, ../sass/base.scss */
           #container #sidebar .content #menu #menu-blog {
             display: block;
             float: left;
@@ -1101,7 +1123,7 @@ body {
             /* line 54, ../sass/neat/grid/_span-columns.scss */
             #container #sidebar .content #menu #menu-blog:last-child {
               margin-right: 0; }
-          /* line 196, ../sass/base.scss */
+          /* line 197, ../sass/base.scss */
           #container #sidebar .content #menu #menu-email {
             display: block;
             float: left;
@@ -1111,7 +1133,7 @@ body {
             #container #sidebar .content #menu #menu-email:last-child {
               margin-right: 0; } }
   @media screen and (min-width: 470px) {
-    /* line 180, ../sass/base.scss */
+    /* line 182, ../sass/base.scss */
     #container #sidebar {
       display: block;
       float: left;
@@ -1120,27 +1142,27 @@ body {
       /* line 54, ../sass/neat/grid/_span-columns.scss */
       #container #sidebar:last-child {
         margin-right: 0; }
-      /* line 204, ../sass/base.scss */
+      /* line 205, ../sass/base.scss */
       #container #sidebar .content {
         width: 22%;
         position: absolute; } }
       @media screen and (min-width: 470px) and (min-height: 520px) {
-        /* line 204, ../sass/base.scss */
+        /* line 205, ../sass/base.scss */
         #container #sidebar .content {
           height: 100%;
           position: fixed; } }
   @media screen and (min-width: 730px) {
-    /* line 218, ../sass/base.scss */
+    /* line 219, ../sass/base.scss */
     #container #sidebar .content {
       height: 100%;
       position: absolute;
       width: 14.3254em; } }
     @media screen and (min-width: 730px) and (min-height: 410px) {
-      /* line 218, ../sass/base.scss */
+      /* line 219, ../sass/base.scss */
       #container #sidebar .content {
         height: 100%;
         position: fixed; } }
-  /* line 248, ../sass/base.scss */
+  /* line 249, ../sass/base.scss */
   #container #main {
     *zoom: 1;
     padding-bottom: 4em; }
@@ -1151,17 +1173,17 @@ body {
     /* line 23, ../sass/bourbon/addons/_clearfix.scss */
     #container #main:after {
       clear: both; }
-    /* line 251, ../sass/base.scss */
+    /* line 252, ../sass/base.scss */
     #container #main .post {
       margin-top: 0;
       margin-bottom: 0;
       padding-left: 0.8em; }
-    /* line 252, ../sass/base.scss */
+    /* line 253, ../sass/base.scss */
     #container #main .post-link, #container #main .post-link:active, #container #main .post-link:visited {
       color: #333333;
       text-decoration: none; }
     @media screen and (max-width: 470px) {
-      /* line 254, ../sass/base.scss */
+      /* line 255, ../sass/base.scss */
       #container #main .post-date {
         font-family: 'Georgia', serif;
         font-weight: 300;
@@ -1170,14 +1192,14 @@ body {
         line-height: auto;
         display: block;
         padding-bottom: 0.7em; }
-      /* line 255, ../sass/base.scss */
+      /* line 256, ../sass/base.scss */
       #container #main h1 {
         font-family: 'Open Sans', sans-serif;
         font-weight: 300;
         font-style: normal;
         font-size: 24.05588px;
         line-height: auto; }
-      /* line 256, ../sass/base.scss */
+      /* line 257, ../sass/base.scss */
       #container #main .post-summary {
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
@@ -1185,7 +1207,7 @@ body {
         font-size: 14.80158px;
         line-height: auto;
         margin-top: 0.3em; }
-      /* line 257, ../sass/base.scss */
+      /* line 258, ../sass/base.scss */
       #container #main .post {
         border-left: 0px;
         border-right: 0px;
@@ -1194,11 +1216,11 @@ body {
         -ms-border-radius: 0;
         -o-border-radius: 0;
         border-radius: 0; }
-      /* line 258, ../sass/base.scss */
+      /* line 259, ../sass/base.scss */
       #container #main .post-image {
         width: 100%;
         height: auto; }
-      /* line 259, ../sass/base.scss */
+      /* line 260, ../sass/base.scss */
       #container #main .post-body {
         padding-top: 1em;
         padding-bottom: 4em;
@@ -1207,14 +1229,14 @@ body {
         font-style: normal;
         font-size: 15.41832px;
         line-height: 1.6em; }
-        /* line 259, ../sass/base.scss */
+        /* line 260, ../sass/base.scss */
         #container #main .post-body p {
           margin-top: 0.8em; }
-      /* line 260, ../sass/base.scss */
+      /* line 261, ../sass/base.scss */
       #container #main .post {
         margin-top: 1em; } }
     @media screen and (min-width: 470px) {
-      /* line 248, ../sass/base.scss */
+      /* line 249, ../sass/base.scss */
       #container #main {
         display: block;
         float: left;
@@ -1224,7 +1246,7 @@ body {
         /* line 54, ../sass/neat/grid/_span-columns.scss */
         #container #main:last-child {
           margin-right: 0; }
-        /* line 268, ../sass/base.scss */
+        /* line 269, ../sass/base.scss */
         #container #main .post-date {
           font-family: 'Georgia', serif;
           font-weight: 300;
@@ -1233,14 +1255,14 @@ body {
           line-height: auto;
           display: block;
           padding-bottom: 0.7em; }
-        /* line 269, ../sass/base.scss */
+        /* line 270, ../sass/base.scss */
         #container #main h1 {
           font-family: 'Open Sans', sans-serif;
           font-weight: 300;
           font-style: normal;
           font-size: 24.05588px;
           line-height: auto; }
-        /* line 270, ../sass/base.scss */
+        /* line 271, ../sass/base.scss */
         #container #main .post-summary {
           font-family: 'Open Sans', sans-serif;
           font-weight: 400;
@@ -1248,14 +1270,14 @@ body {
           font-size: 15.41832px;
           line-height: auto;
           margin-top: 0.3em; }
-        /* line 271, ../sass/base.scss */
+        /* line 272, ../sass/base.scss */
         #container #main .post-image {
           width: 95%;
           height: auto; }
-        /* line 272, ../sass/base.scss */
+        /* line 273, ../sass/base.scss */
         #container #main .content {
           display: block; }
-        /* line 273, ../sass/base.scss */
+        /* line 274, ../sass/base.scss */
         #container #main .post-body {
           padding-bottom: 4em;
           font-family: 'Open Sans', sans-serif;
@@ -1263,11 +1285,11 @@ body {
           font-style: normal;
           font-size: 15.41832px;
           line-height: 1.6em; }
-          /* line 273, ../sass/base.scss */
+          /* line 274, ../sass/base.scss */
           #container #main .post-body p {
             margin-top: 0.8em; } }
     @media screen and (min-width: 730px) {
-      /* line 248, ../sass/base.scss */
+      /* line 249, ../sass/base.scss */
       #container #main {
         display: block;
         float: left;
@@ -1276,7 +1298,7 @@ body {
         /* line 54, ../sass/neat/grid/_span-columns.scss */
         #container #main:last-child {
           margin-right: 0; }
-        /* line 280, ../sass/base.scss */
+        /* line 281, ../sass/base.scss */
         #container #main .post-date {
           font-family: 'Georgia', serif;
           font-weight: 300;
@@ -1285,14 +1307,14 @@ body {
           line-height: auto;
           display: block;
           padding-bottom: 0.7em; }
-        /* line 281, ../sass/base.scss */
+        /* line 282, ../sass/base.scss */
         #container #main h1 {
           font-family: 'Open Sans', sans-serif;
           font-weight: 300;
           font-style: normal;
           font-size: 26.72875px;
           line-height: auto; }
-        /* line 282, ../sass/base.scss */
+        /* line 283, ../sass/base.scss */
         #container #main .post-summary {
           font-family: 'Open Sans', sans-serif;
           font-weight: 400;

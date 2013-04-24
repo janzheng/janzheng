@@ -62,6 +62,7 @@ body {
         padding: 0.8em;
         text-align: center;
         a {color: $color4; &:hover {color: $color3;} text-decoration: none;}
+        a:hover {color: $dark-gray; background: $color2;}
 
         @include media($medium) {@include set-radius(3px);}
         @include media($large) {@include set-radius(3px);}
@@ -132,6 +133,7 @@ body {
     @include span-columns(12);
     @include media($small) {@include span-columns(6);}
   }
+  #aboutme-resume {padding: 0 1em 1em 1em; }
   #aboutme-current { @extend .row-content}   
   .callout {margin: 1em 0 0 0; padding: 0 1em 1em 1em; @extend .left-edge;  background-color: $silver;}
   .whiteout {@extend .callout; background: none;}
@@ -189,7 +191,6 @@ body {
       .content {
         @include outer-container;
         @include span-columns(6);
-        .collapsible-mobile{padding: 0.8em; background-color: $silver; @include clearfix;}
         #menu {
           padding-top: 0; margin-top: 0; 
           #menu-blog{@include span-columns(3);}
