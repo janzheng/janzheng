@@ -116,9 +116,10 @@ body {
   }
 
   // about page & static content
+  .title {text-transform: uppercase; @include font-body($f2, 400); color: $color5; margin: 1em; margin-top: 3em;}
   section { margin-top: 2em; margin-bottom: 1em; padding: 1em; @include outer-container; }
   .section-title {text-transform: uppercase; @include font-body($f3, 400); color: $color5; margin-top: 1em;}
-  .section-title-large {@extend .section-title; font-size: $f3*1.7;}
+  .section-title-large {@extend .section-title; font-size: $f3*1.5;}
   p { @include font-body($f2, 400, 1.6em); margin-top: 0.8em; }
   // img { display: block; margin-left: auto; margin-right: auto; }
 
@@ -126,7 +127,7 @@ body {
   #triangle-hello { @include triangle(21px, $silver, up); @extend .tri-base; left: 5.5em;}
   #hello-box {@include font-body($f2, 400, 1.6em); padding: 1em; background-color: $silver;@include set-radius(3px); 
     div{ margin-bottom: 0.9em; } @extend .left-edge; }
-  #hello { @extend .section-title-large; margin-top: 0; text-transform: none; }
+  #hello { @extend .section-title; font-size: $f3*1.8; margin-top: 0; text-transform: none; }
   em { /*background-color: $color2;*/ color: $color0 }
 
   .row-content {
@@ -142,6 +143,16 @@ body {
   .note { @include font-body($f3*1.2, 400); }
   .shout { @include font-body($f2*1.34, 300, 1.6em); margin: 1em 0 1em 0;}
   #aboutme-contact { @extend .callout; padding: 0 2em 0.5em 1em; @include span-columns(12); li{@include span-columns(4); margin-top: 1em;}}
+  // .button-list {padding-top: 1em;}
+  .experience {@include span-columns(12); padding: 2em 1em 2em 1em; }
+  .experience-side {@include media($large) {@include span-columns(3);} @include media($small) {@include span-columns(6);}}
+  .experience-main {@include media($large) {@include span-columns(9);} @include media($small) {@include span-columns(6);} }
+    .experience-date { @include font-tip($f3*1.14, 300, 1.3em); }
+    .experience-company { @include font-body($f2*1.6, 300, 1.3em); }
+    .experience-location { @include font-body($f3*1.3, 300, 1.3em); margin-bottom: 1em; }
+    .experience-role { @include font-body($f2*1.2, 300, 1.3em); margin-top: 1em;}
+    .experience-desc p { @include font-body($f3*1.2, 400, 1.6em); margin-top: 0.8em; }
+    .experience-desc li { @include font-body($f3*1.2, 400, 1.6em); margin-top: 0.6em; list-style-type:circle; list-style-position:inside; }
 }
 
 
@@ -249,7 +260,7 @@ body {
   #main {
     @include clearfix;
     padding-bottom: 4em;
-    .post {margin-top: 0; margin-bottom: 0; padding-left: 0.8em;}
+    .post {margin-top: 0; margin-bottom: 0; padding-left: 1em;}
     .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none;}
     @include media($small) {
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}

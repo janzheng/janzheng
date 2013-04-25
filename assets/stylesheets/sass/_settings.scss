@@ -111,7 +111,6 @@ $tinyfont: $base * 0.82;
 
 
 
-
 @mixin ease-transition($speed){
     -webkit-transition: $speed ease;
     -moz-transition: $speed ease;
@@ -155,41 +154,6 @@ $tinyfont: $base * 0.82;
 .batch--large { font-size:32px; }
 .batch--huge { font-size:64px; }
 .batch--natural { font-size:inherit; }
-
-
-
-  // use this for the logo
-  // div {
-  //   @include hide-text;
-  //   background-image: url(logo.png);
-  // }
-
-
-
-// mixins 
-@mixin ui-separator-dashed($color: $light-gray, $color-alt: $silver, $height: 1px)
-{
-    border: 0; //cancel default <hr> style
-    border-bottom: $height dashed $color-alt;
-    background: $color;
-}
-
-
-// ClearFix Mixin - taken care of by bourbon
-// http://nicolasgallagher.com/micro-clearfix-hack/
-// @mixin clearfix {
-//     *zoom:1;
-//     &:before, &:after
-//     {
-//       content: "";
-//       display:table;
-//     }
-
-//     &:after
-//     {
-//       clear:both;
-//     }
-// }
 
 
 

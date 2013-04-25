@@ -7,6 +7,7 @@
 
 a, a:active, a:visited {color: $color0; text-decoration: underline;}
 a:hover {color: $color2; background-color: $color9; @include ease-transition(200ms);}
+a.nolink { text-decoration: none; &:hover {background: none}}
 
 section.post:hover {background-color: $color2;}
 
@@ -28,15 +29,6 @@ a.bttn {
 a.bttn:hover, a.bttn:active, a.bttn.clicked {
     background-color: $dark-gray; color: $silver;
     @include ease-transition(200ms);
-}
-
-@import 'contact';
-
-.line {
-    @include ui-separator-dashed;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    // background-color: transparent;
 }
 
 
@@ -74,7 +66,7 @@ blockquote {margin: 0; padding: 4px 1em 1em 2em; background-color: $color2; bord
 
 
 //  contact footer
-html, body, #container, .expandable, .collapsible {
+html, body, #container, .expandable, .collapsible-mobile {
     @include media($medium){height: 100%};
     @include media($large){height: 100%};
     @include ease-transition(200ms);
@@ -94,3 +86,33 @@ footer, .push {
 footer {@include media($small){height: 4em;}}
 
 .left-edge {border-left: 1px solid $color3;}
+
+
+
+// mixins 
+@mixin ui-separator-dashed($color: $light-gray, $color-alt: $silver, $height: 1px)
+{
+    border: 0; //cancel default <hr> style
+    border-bottom: $height dashed $color-alt;
+    background: $color;
+}
+
+@mixin ui-separator($color: $light-gray, $height: 1px)
+{
+    border: 0; //cancel default <hr> style
+    border-bottom: $height solid $color;
+}
+
+.line {
+    @include ui-separator-dashed;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.solidline {
+    @include ui-separator;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+@import 'contact';
