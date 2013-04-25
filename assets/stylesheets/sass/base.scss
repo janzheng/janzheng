@@ -52,9 +52,6 @@ body {
     }
 
     #about {
-      padding-top: 2em;
-
-
       #about-container {
         border-top: 1px solid $light-gray; 
         border-bottom: 1px solid $light-gray;
@@ -116,8 +113,8 @@ body {
   }
 
   // about page & static content
-  .title {text-transform: uppercase; @include font-body($f2, 400); color: $color5; margin: 1em; margin-top: 3em;}
-  section { margin-top: 2em; margin-bottom: 1em; padding: 1em; @include outer-container; }
+  .title {text-transform: uppercase; @include font-body($f2, 400); color: $color5; margin: 1em;}
+  section {margin-bottom: 1em; padding: 1em; @include outer-container; }
   .section-title {text-transform: uppercase; @include font-body($f3, 400); color: $color5; margin-top: 1em;}
   .section-title-large {@extend .section-title; font-size: $f3*1.5;}
   p { @include font-body($f2, 400, 1.6em); margin-top: 0.8em; }
@@ -149,7 +146,7 @@ body {
   .experience-main {@include media($large) {@include span-columns(9);} @include media($small) {@include span-columns(6);} }
     .experience-date { @include font-tip($f3*1.14, 300, 1.3em); }
     .experience-company { @include font-body($f2*1.6, 300, 1.3em); }
-    .experience-location { @include font-body($f3*1.3, 300, 1.3em); margin-bottom: 1em; }
+    .experience-location { @include font-body($f3*1.3, 300, 1.3em); margin: 0.4em 0 0.4em 0;}
     .experience-role { @include font-body($f2*1.2, 300, 1.3em); margin-top: 1em;}
     .experience-desc p { @include font-body($f3*1.2, 400, 1.6em); margin-top: 0.8em; }
     .experience-desc li { @include font-body($f3*1.2, 400, 1.6em); margin-top: 0.6em; list-style-type:circle; list-style-position:inside; }
@@ -260,7 +257,8 @@ body {
   #main {
     @include clearfix;
     padding-bottom: 4em;
-    .post {margin-top: 0; margin-bottom: 0; padding-left: 1em;}
+    .post {margin-bottom: 0; padding-left: 1em;}
+    .post-list {margin-top: 0; margin-bottom: 0; padding-left: 1em;}
     .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none;}
     @include media($small) {
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
@@ -281,7 +279,7 @@ body {
       h1 {@include font-body($f1*0.9, 300);}
       .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
       .post-image {width:95%;height: auto;}
-      .content {display: block;}
+      .content {display: block; padding-top: 3em;}
       .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} }
     }
 

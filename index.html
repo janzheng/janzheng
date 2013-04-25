@@ -14,14 +14,14 @@ Summary
 Tags
  -->
 
-<div class="title">Things I say</div>
+<!-- <div class="title">Things I say</div> -->
 
 {% for post in site.posts %}
 {% if post.portfolio != yes %} 
 {% if post.published != yes %} 
 
 <a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
-  <section class="post">
+  <section class="post-list">
     <div class="meta-data">
       <span class="post-date">
         {{ post.date | date: "%d %B %Y" }}      

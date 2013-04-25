@@ -9,7 +9,7 @@ a, a:active, a:visited {color: $color0; text-decoration: underline;}
 a:hover {color: $color2; background-color: $color9; @include ease-transition(200ms);}
 a.nolink { text-decoration: none; &:hover {background: none}}
 
-section.post:hover {background-color: $color2;}
+section.post-list:hover {background-color: $color2;}
 
 a.bttn {
     overflow: hidden; display: block; 

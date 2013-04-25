@@ -79,6 +79,20 @@ Tags
 
           <li class="experience">
             <div class="experience-side">
+              <div class="experience-date">Current</div>
+              <div class="experience-company">Freelance</div>
+              <div class="experience-location">Atlanta, GA</div>
+            </div>
+            <div class="experience-main">
+              <div class="experience-role">Freelance Web Design</div>
+              <div class="experience-desc">
+                <p>I've helped friends and others design websites for various purposes. Currently working with gym concept ubody fitness to create their new site and look.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="experience">
+            <div class="experience-side">
               <div class="experience-date">2012+</div>
               <div class="experience-company">Nurun</div>
               <div class="experience-location">Atlanta, GA</div>
@@ -150,23 +164,80 @@ Tags
               <div class="experience-role">Program Manager Intern</div>
               <div class="experience-desc">
                 <p>Managed and assisted in designing and developing a shell extension feature similar to the Subversion SVN system to Visual Studio Team Foundation Server. Also researched, wireframed and proposed a system for a collaborative coding environment.</p>
-
-                <p>Relevant Coursework</p>
                 <ul>
                   <li>Managed agile sprint schedule and day-to-day tasks</li>
                   <li>Created Project timelines and project reports</li>
-
                   <li>Assisted project with design assets</li>
-
                   <li>Performed competitive research for collaborative coding concept</li>
-
                   <li>Interviews developers and stakeholders for key insights for the concept</li>
-
                   <li>Created conceptual wireframes in Microsoft Visio</li>
                 </ul>
               </div>
             </div>
           </li>
+
+          <li class="experience">
+            <div class="experience-side">
+              <div class="experience-date">2007</div>
+              <div class="experience-company">University of Southern California</div>
+              <div class="experience-location">Los Angeles, CA</div>
+            </div>
+            <div class="experience-main">
+              <div class="experience-role">Research Intern</div>
+              <div class="experience-desc">
+                <p>Created experimental real-time MIDI pattern generator and sound tools using Max/MSP, and a video annotation in Adobe Flash / Flex.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="experience">
+            <div class="experience-side">
+              <div class="experience-date">2006 - 2007</div>
+              <div class="experience-company">Lockheed Martin</div>
+              <div class="experience-location">Woodlawn, MD</div>
+            </div>
+            <div class="experience-main">
+              <div class="experience-role">Developer</div>
+              <div class="experience-desc">
+                <p>As a developer intern (and later part time), I Designed and developed an internal communication portal for Lockheed's SSA technical team to track work, ideas, and documents, using Windows Sharepoint Services (1.0).</p>
+
+                <ul>
+                  <li>Designed and concepted portal with internal stakeholders</li>
+                  <li>Configured and developed site on Windows Sharepoint 1.0 CMS</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+
+          <li class="experience">
+            <div class="experience-side">
+              <div class="experience-date">2004 - 2009</div>
+              <div class="experience-company">UMBC</div>
+              <div class="experience-location">Baltimore, MD</div>
+              <div class="experience-location">GPA: 3.45</div>
+            </div>
+            <div class="experience-main">
+              <div class="experience-role">Computer Science &amp; Psychology</div>
+              <div class="experience-desc">
+                <p>At UMBC, I received a bachelor's degree in computer science, with a minor in psychology. I took the Game Development track, which focused on game design and game-related development, including graphics, artificial intelligence, and algorithms. </p>
+
+                <p>I took psychology for fun, and split my studies between behavioral (learning) psychology and cognitive psychology. I worked on a few simulation and pilot projects with the learning lab.</p>
+
+                <p>I got pretty far in the computer engineering and math tracks, but didn't complete.</p>
+                <p>Relevant Coursework</p>
+                <ul>
+                  <li>Game Design, Game Development Capstone</li>
+                  <li>Discrete Structures, Algorithms, Data Structures, Scripting Languages, Computer Graphics, GUI Programming, Artificial Intelligence Programming, Software Design, Operating Systems, Assembly Language</li>
+                  <li>Statistics, Linear Algebra, Differential Equations, Math Analysis</li>
+                  <li>Child Developmental Psychology, Psychology of Learning (Behavioral Psychology), Cognitive Psychology, Social Psychology</li>
+                  <li>Honors include the Meyerhoff Scholarship, and membership in the Honors College, Psi Chi Psychology Honor Society, and LeaderShape</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+
         </ul>
       </div>
     </div>
@@ -174,13 +245,13 @@ Tags
 </section>
 
 <section id="about-workschool">
-  <span class="section-title-large">Sample Portfolio</span>
+  <span class="section-title-large">Partial Portfolio</span>
   <div class="solidline"></div>
 
   {% for post in site.posts %}
   {% if post.portfolio  %} 
     <a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
-      <section class="post">
+      <section class="post-list">
         <div class="meta-data">
           <span class="post-date">
             {{ post.date | date: "%d %B %Y" }}      
@@ -243,8 +314,17 @@ Tags
     <p>My eclectic background mirrors my eclectic upbringing. Though born in China, I moved to Stockholm at a young age.</p> <p>I am fluent in <em>English</em> and <em>Swedish</em>, and conversational in <em>Mandarin</em>.</p> <p>I hold <em>dual citizenship</em> with the <em>United States</em> and <em>Sweden</em>.</p>
 
     <p>On my off days, I enjoy swing dancing, rock climbing, playing indie games, and enjoying good food. </p>
-
-
   </div>
 
+</section>
+
+<section id="about-myself">
+  <div id="about-work">
+    <span class="section-title-large">About this Site</span>
+    <div class="solidline"></div>
+
+    <p>This site's probably my umpteenth portfolio redesign, as I seem to want to create a new one every three months. This one will hopefully last longer, as it has a blog element, is written in SASS, is fairly robust, and hosted for free at Github.</p>
+
+    <p>I crawled through many CMS and hosting systems, including WordPress, and didn't like any of them. WordPress was too heavy for me. I landed on Github Pages out of chance, and found out you could blog for free using the service, along with a static site generator called Jekyll. If you want your own portfolio site, I'll create a post to show exactly how I created this site. Shoot an e-mail for questions for now. </p>
+  </div>
 </section>
