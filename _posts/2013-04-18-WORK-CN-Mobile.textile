@@ -13,6 +13,8 @@ published: yes
 portfolio: yes
 ---
 
+<div class="post-maincontent">
+
 p. 
 "Cartoon Network":http://www.cartoonnetwork.com/ was rebranding their brand and wanted a mobile site that exuded the fun, quirkiness of their new site.
 
@@ -30,3 +32,37 @@ p.
 * Created a proof of concept prototype for team buy-in
 * Produced several rounds of iterative wireframe designs
 * Collaborated with designers and developers to finalize the site
+
+</div>
+
+
+
+<div class="post-sidebar">
+   <div class="post-sidebar-column">
+      <h4>Client</h4>
+      <span>Cartoon Network</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Goal</h4>
+      <span>To create a fun mobile-centric website for Cartoon Network</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Role</h4>
+      <span>Information architect</span>
+      <span>Interaction design</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Employer</h4>
+      <span>Moxie</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Link</h4>
+      <span><a href="http://m.cartoonnetwork.com/">m.cartoonnetwork.com</a> (mobile only)</span>
+      <span><a href="/assets/posts/work_cnm/cartoon.html">Concept prototype</a></span>
+      <span><a href="/assets/posts/work_cnm/mobile_web_v4.7_notes_9-23-11.pdf">Wireframe document</a></span>
+   </div>
+</div>

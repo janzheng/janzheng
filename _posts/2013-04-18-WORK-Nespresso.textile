@@ -13,6 +13,8 @@ published: yes
 portfolio: yes
 ---
 
+<div class="post-maincontent">
+
 p. "Nespresso":http://www.nespresso-us.com/boutique/ is an espresso coffee machine company who came to us looking to give their exclusive network of coffee shops a stronger online presence. They wanted a place for their fans to learn more about their Boutiques, and needed a site to match the style, elegance, and exclusivity of their local Boutiques.
 
 p. My part of the project required me to translate the vast collection of ethnographic and market research, massive amount of requirements, and design goals into a rich web and tablet user experience.
@@ -26,3 +28,40 @@ p.
 * Created interface design variations and iterations based on core concepts
 * Client interaction walkthroughs
 * Worked with designers and developers to deliver final product
+
+</div>
+
+
+<div class="post-sidebar">
+   <div class="post-sidebar-column">
+      <h4>Client</h4>
+      <span>Nespresso</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Goal</h4>
+      <span>To bring the boutique experience online</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Role</h4>
+      <span>Information architect</span>
+      <span>Interaction design</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Employer</h4>
+      <span>Nurun</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Awards</h4>
+      <span>ADDY Awards 2012 Silver: Mobile App</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Link</h4>
+      <span><a href="http://boutique.nespresso-us.com/store-locations">Nespresso Boutiques</a></span>
+   </div>
+</div>
+

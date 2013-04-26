@@ -262,14 +262,25 @@ body {
     .post {margin-bottom: 0; padding-left: 1em;}
     .post-list {margin-top: 0; margin-bottom: 0; padding-left: 1em;}
     .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none;}
+
+    .post-maincontent { @include media($large) {@include span-columns(8); margin-bottom: 4em;} }
+    .post-sidebar { @include media($large) {@include span-columns(4); } margin-top: 1em;}
+
+    .post-sidebar-column {
+      border-left: 1px solid $color3;
+      padding: 0.6em;
+      margin-bottom: 0.6em;
+      span { display: block; @include font-body($f3*1.21, 400, 1.45em); }
+    }
+
     @include media($small) {
-      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
+      .post-date {@include font-tip($f3, 300); padding-bottom: 0.7em; }
       h1 {@include font-body($f1*0.9, 300);}
       .post-summary{@include font-body($f2*0.96, 400); margin-top: 0.3em;}
       .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
       .post-image {width: 100%;height: auto;}
       .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} }
-      .post {margin-top: 1em;}
+      .post {margin-top: 1em; @include span-columns(6); }
     }
 
     @include media($medium) {
@@ -282,7 +293,7 @@ body {
       .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
       .post-image {width:95%;height: auto;}
       .content {display: block; padding-top: 3em;}
-      .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} }
+      .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} @include span-columns(12); }
     }
 
     @include media($large) {
@@ -292,6 +303,7 @@ body {
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1, 300);}
       .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
+      .post-body {@include span-columns(12); }
     }
   }
   

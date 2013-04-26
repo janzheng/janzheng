@@ -5,6 +5,8 @@
 
 //link & button styles
 
+h4 { @include font-tip($f3, 300, 1.2em); }
+
 a, a:active, a:visited {color: $color0; text-decoration: underline;}
 a:hover {color: $color2; background-color: $color9; @include ease-transition(200ms);}
 a.nolink { text-decoration: none; &:hover {background: none}}
@@ -114,5 +116,6 @@ footer {@include media($small){height: 4em;}}
     margin-top: 3px;
     margin-bottom: 3px;
 }
+
 
 @import 'contact';

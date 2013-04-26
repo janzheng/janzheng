@@ -13,43 +13,50 @@ published: yes
 portfolio: yes
 ---
 
-<div class="post-sidebar">
-
-h1. Client
-
-p. Verizon
-
-h1. Goal
-
-p. To create a family-friendly holiday mobile experience
-
-h1. Role
-
-p. Information architect
-p. Interaction design
-
-h1. Employer
-
-p. Moxie
-
-h1. Awards
-
-p. ADDY Awards 2012 Silver: Mobile App
-
-h1. Project Links
-
-p. Article (app has been removed from the app store)
-
-<div>
-
-h1. asdasd
-
+<div class="post-maincontent">
+   
 p. 
 We wanted to create something for "Verizon Wireless":http://www.verizonwireless.com/ for the holidays that didn't involve selling more phones. The app was designed with families with young children in mind, and tied into the 2011 Holiday sales campaign.
-
 
 p. 
 * Created holiday and storybook app download flow
 * Designed app functionality flow and experience
 * Storyboarding and narrative integration
 * Worked closely with designers and developers to integrate story with interface
+
+</div>
+
+
+<div class="post-sidebar">
+   <div class="post-sidebar-column">
+      <h4>Client</h4>
+      <span>Verizon</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Goal</h4>
+      <span>To create a family-friendly holiday mobile experience</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Role</h4>
+      <span>Information architect</span>
+      <span>Interaction design</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Employer</h4>
+      <span>Moxie</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Awards</h4>
+      <span>ADDY Awards 2012 Silver: Mobile App</span>
+   </div>
+
+   <div class="post-sidebar-column">
+      <h4>Link</h4>
+      <span><a href="http://www.atlantaintownpaper.com/2011/12/local-company-helps-create-interactive-storybook/">Article</a> (app has been removed from the app store)</span>
+   </div>
+</div>
+
