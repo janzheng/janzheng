@@ -204,7 +204,7 @@ a:hover, a:active { outline: none; }
 
 // EDITED
 ul, ol { margin-left: 0em; }
-ul { list-style-type: none; }
+ul { list-style-type:circle; list-style-position:inside; }
 ol { list-style-type: decimal; }
 
 nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }

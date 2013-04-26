@@ -1,0 +1,55 @@
+---
+layout: post
+title: Verizon Lost Elf Storybook
+summary: Free holiday kids' storybook app for Verizon's 2011 Holiday Campaign  
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- image-icon: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Portfolio
+tags : [Portfolio, Information Architecture, Interaction Design]
+published: yes
+portfolio: yes
+---
+
+<div class="post-sidebar">
+
+h1. Client
+
+p. Verizon
+
+h1. Goal
+
+p. To create a family-friendly holiday mobile experience
+
+h1. Role
+
+p. Information architect
+p. Interaction design
+
+h1. Employer
+
+p. Moxie
+
+h1. Awards
+
+p. ADDY Awards 2012 Silver: Mobile App
+
+h1. Project Links
+
+p. Article (app has been removed from the app store)
+
+<div>
+
+h1. asdasd
+
+p. 
+We wanted to create something for "Verizon Wireless":http://www.verizonwireless.com/ for the holidays that didn't involve selling more phones. The app was designed with families with young children in mind, and tied into the 2011 Holiday sales campaign.
+
+
+p. 
+* Created holiday and storybook app download flow
+* Designed app functionality flow and experience
+* Storyboarding and narrative integration
+* Worked closely with designers and developers to integrate story with interface

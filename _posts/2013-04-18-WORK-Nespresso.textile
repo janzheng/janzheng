@@ -1,0 +1,28 @@
+---
+layout: post
+title: Nespresso Boutiques
+summary: Bringing the essence of the Nespresso Boutique to the web 
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- image-icon: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Portfolio
+tags : [Portfolio, Information Architecture, Interaction Design]
+published: yes
+portfolio: yes
+---
+
+p. "Nespresso":http://www.nespresso-us.com/boutique/ is an espresso coffee machine company who came to us looking to give their exclusive network of coffee shops a stronger online presence. They wanted a place for their fans to learn more about their Boutiques, and needed a site to match the style, elegance, and exclusivity of their local Boutiques.
+
+p. My part of the project required me to translate the vast collection of ethnographic and market research, massive amount of requirements, and design goals into a rich web and tablet user experience.
+
+p.   
+* Performed rounds of content and requirement audits
+* Created a requirements & site map
+* Created a content grid for clients to populate content
+* Created core interaction concept for the user experience
+* Sketched, designed, and wireframed the interface design
+* Created interface design variations and iterations based on core concepts
+* Client interaction walkthroughs
+* Worked with designers and developers to deliver final product
