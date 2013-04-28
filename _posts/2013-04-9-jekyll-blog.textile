@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Using Github and Jekyll for blogging
-summary: Incredibly powerful and completely free blogging. 
+title: Creating a Site with Github and Jekyll
+summary: It's incredibly powerful, and incredibly free. Rad.
 <!-- external: # -->
 <!-- image-path: /assets/# -->
+<!-- image-icon: /assets/# -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
-category : Gane Design
-tags : [Gane Design, Narrative]
-published: yes
-portfolio: no
+category : Web
+tags : [Web Design, Blogging, Github]
+published : yes
+portfolio : no
+
 ---
 
-Using Github pages is incredibly flexible and absolutely free. 
+Using Github pages is incredibly flexible and incredibly free. 
 
 considered using Tumblr, hosting on dropbox (which is what I used to do), Light CMS, Squarespace, and a bunch of other CMS's.
 

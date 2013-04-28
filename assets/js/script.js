@@ -1,6 +1,11 @@
 
 $(document).ready(function() {
 
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+
+
    //show / hide functionality
    //initially hide all collapsible areas; moved into CSS instead
    // $(".expandable .collapsible").hide();

@@ -14,6 +14,7 @@
 @import 'settings';
 @import 'elements';
 
+
 //@import 'syntax2';    // this is for Pygments code highlighting; won't work locally bc Python not installed
 
 // @import  'pastie';
@@ -278,7 +279,8 @@ body {
       h1 {@include font-body($f1*0.9, 300);}
       .post-summary{@include font-body($f2*0.96, 400); margin-top: 0.3em;}
       .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
-      .post-image {width: 100%;height: auto;}
+      .post-imageframe {padding: 1em 1em 0 0;}
+      .post-image {width:98%;height: auto;}
       .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} }
       .post {margin-top: 1em; @include span-columns(6); }
     }
@@ -291,7 +293,7 @@ body {
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1*0.9, 300);}
       .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
-      .post-image {width:95%;height: auto;}
+      .post-image {width:98%;height: auto;}
       .content {display: block; padding-top: 3em;}
       .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} @include span-columns(12); }
     }

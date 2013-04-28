@@ -9,8 +9,8 @@ summary: Free holiday kids' storybook app for Verizon's 2011 Holiday Campaign
 <!-- vimeo: # -->
 category : Portfolio
 tags : [Portfolio, Information Architecture, Interaction Design]
-published: yes
-portfolio: yes
+published : true
+portfolio : true
 ---
 
 <div class="post-maincontent">

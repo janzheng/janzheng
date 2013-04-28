@@ -8,8 +8,8 @@ summary: A quick handy guide to writing posts in Textile.
 <!-- vimeo: # -->
 category : Gane Design
 tags : [Gane Design, Narrative]
-published: yes
-portfolio: no
+published: true
+portfolio: false
 ---
 
 Hello new blog, and hello Textile!

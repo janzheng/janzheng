@@ -23,13 +23,8 @@ Tags
 
   <h1>{{ page.title }}</h1>
 
-  {% if page.image-path %}      
-   <img class="post-image" src="{{ page.image-path }}"></img>           
-  {% endif %}
-
   {% if page.youtube %}<iframe width="550" height="452" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>{% endif %}
   {% if page.vimeo %}<iframe src="{{ page.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=0f314a" width="550" height="309" frameborder="0"></iframe>{% endif %}    
-
 
   <p class="post-summary">{{ page.summary }}</p>
 
@@ -53,8 +48,11 @@ Tags
     </ul>
   {% endif %}
 
-
   <div class="solidline"></div>
+
+  {% if page.image-path %}      
+    <div class="post-imageframe"><img class="post-image" src="{{ page.image-path }}" /></div>
+  {% endif %}
 
   <div class="post-body">
     {{ content }}

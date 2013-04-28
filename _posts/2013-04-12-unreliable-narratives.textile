@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unreliable Narrators and Narratives
-summary: A downloadable reference guide for the SCSS beginner. 
+summary: Many movies and games nowadays make use of the unreliable narrator. Here we explore some of the games and their impact on the narrative design
 <!-- external: # -->
 <!-- image-path: /assets/# -->
 <!-- youtube: # -->

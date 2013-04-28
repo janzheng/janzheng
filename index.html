@@ -17,8 +17,8 @@ Tags
 <!-- <div class="title">Things I say</div> -->
 
 {% for post in site.posts %}
-{% if post.portfolio != yes %} 
-{% if post.published != yes %} 
+{% if post.portfolio == false %} 
+{% if post.published == true %} 
 
 <a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
   <section class="post-list">

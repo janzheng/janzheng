@@ -1,0 +1,27 @@
+---
+layout: post
+title: Designing, Wireframing, and Prototyping Forms
+summary: Let's face it, forms can be confusing. This is a framework that will help.
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- image-icon: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Design
+tags: [Wiretool, Interaction Design, Forms, Prototyping]
+published: true
+portfolio: false
+---
+
+- First of all, if yo'ure new to forms, please read Luke Wroblewski's quintessential book on designing forms (Web Form Design). (amazon link). He's the guy who pioneered responsive websites, so you know he's smart.
+ 
+
+Note: This is the first in s a series of posts that build up Wiretool, a web framework dedicated to presenting and developing wireframe prototypes for websites
+
+- I'm going to go over very broad strokes of what he talks about, and applying to them in code
+
+- Purpose of this is to Prototype forms quickly- so you can quickly gauge how your form should look and behave. This tool makes use of SASS / SCSS [please review the SCSS guide if new to SCSS], and 
+
+- Show other resouces: http://webdesigneraid.com/7-form-frameworks-to-help-manage-your-forms-easily
+
+ 
