@@ -76,7 +76,6 @@ p.
          <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/kitchen_adventurer_caramel.jpg" />
          <p class="flex-caption">1. Captions and cupcakes. Winning combination.</p>
       </a>
-      </a>
     </li>
     <li>
       <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/kitchen_adventurer_cheesecake_brownie.jpg" />

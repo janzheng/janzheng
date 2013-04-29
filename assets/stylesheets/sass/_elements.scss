@@ -34,6 +34,8 @@ a.bttn:hover, a.bttn:active, a.bttn.clicked {
 }
 
 .flexslider {
+  @include media($small){@include span-columns(6); }
+  @include media($medium){@include span-columns(9); }
   @include media($large){@include span-columns(9); }
   
 
