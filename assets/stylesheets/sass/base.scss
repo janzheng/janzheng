@@ -28,7 +28,7 @@ body {
 }
 
 // general, catch-all
-#container {
+.container {
     width: 100%;
 
   #sidebar {
@@ -158,7 +158,7 @@ body {
 
 // general responsive 
 @include media($small) {
-  #container {@include pad(0); @include span-columns(6);}
+  .container {@include pad(0); @include span-columns(6);}
 
   .legal{
     display: block;
@@ -180,7 +180,7 @@ body {
 
 // site layout
 
-#container {
+.container {
   @include outer-container;
 /*
 
@@ -263,7 +263,7 @@ body {
     .post {margin-bottom: 0; padding-left: 1em;}
     .post-list {margin-top: 0; margin-bottom: 0; padding-left: 1em;}
     .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none;}
-
+    .post-contentwrapper { @include span-columns(12); }
     .post-maincontent { @include media($large) {@include span-columns(8); margin-bottom: 4em;} }
     .post-sidebar { @include media($large) {@include span-columns(4); } margin-top: 1em;}
 

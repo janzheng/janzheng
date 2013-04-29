@@ -2,7 +2,9 @@
 $(document).ready(function() {
 
   $('.flexslider').flexslider({
-    animation: "slide"
+    animation: "slide",
+    slideshow: false,
+    itemWidth: 2000
   });
 
 

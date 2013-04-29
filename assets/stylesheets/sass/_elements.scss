@@ -33,6 +33,11 @@ a.bttn:hover, a.bttn:active, a.bttn.clicked {
     @include ease-transition(200ms);
 }
 
+.flexslider {
+  @include media($large){@include span-columns(9); }
+  
+
+}
 
 blockquote {margin: 0; padding: 4px 1em 1em 2em; background-color: $color2; border-left: 6px solid $color3; @include font-tip($f2, 300, auto); font-style: italic}
 
