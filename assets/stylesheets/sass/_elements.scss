@@ -33,11 +33,12 @@ a.bttn:hover, a.bttn:active, a.bttn.clicked {
     @include ease-transition(200ms);
 }
 
+.slides a  { text-decoration: none; color: #333;}
+.slides a:hover { text-decoration: none; color: #972020;}
 .flexslider {
   @include media($small){@include span-columns(6); }
   @include media($medium){@include span-columns(9); }
   @include media($large){@include span-columns(9); }
-  
 
 }
 

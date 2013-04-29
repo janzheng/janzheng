@@ -28,6 +28,8 @@
 	top: 0;
 	border: 10px solid #fff;
 	background-repeat: no-repeat;
+	max-width: 700px;
+	height: auto;
 }
 
 #lbPrevLink, #lbNextLink {

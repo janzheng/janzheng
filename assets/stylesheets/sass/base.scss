@@ -260,7 +260,7 @@ body {
   #main {
     @include clearfix;
     padding-bottom: 4em;
-    .post {margin-bottom: 0; padding-left: 1em;}
+    .post {margin-bottom: 0; padding-left: 1em; padding-right: 1em}
     .post-list {margin-top: 0; margin-bottom: 0; padding-left: 1em;}
     .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none;}
     .post-contentwrapper { @include span-columns(12); }
