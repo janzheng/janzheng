@@ -16,7 +16,7 @@ Tags
  
 <section id="aboutme">
   <div id="about-intro">
-    <div id="portrait"><img src="http://placehold.it/150x150" /></div>
+    <div id="portrait"><img src="/assets/images/profilepicture.jpg" /></div>
     <div id="description">
       <div id="triangle-hello"></div>
       <div id="hello-box">
@@ -257,15 +257,14 @@ Tags
 
         </div>
 
-        <h1>{{ post.title }}</h1>
-
-        {% if post.image-path %}      
-         <img class="post-image" src="{{ post.image-path }}"></img>           
+        {% if post.image-icon %}      
+         <img class="post-image" src="{{ post.image-icon }}"></img>           
         {% endif %}
+
+        <h1>{{ post.title }}</h1>
 
         {% if post.youtube %}<iframe width="550" height="452" src="{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>{% endif %}
         {% if post.vimeo %}<iframe src="{{ post.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=0f314a" width="550" height="309" frameborder="0"></iframe>{% endif %}    
-
 
         <p class="post-summary">{{ post.summary }}</p>
 

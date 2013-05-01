@@ -6,6 +6,7 @@
    2. Toggle State (show/hide menu; hide all the menu / contact crud in articles? Shrink menu state for mobile)
    3. Tumblr integration?
    4. Content!
+   5. Next / Previous Post links at the top of each post
 */
 
 @import 'bourbon/bourbon';
@@ -280,7 +281,7 @@ body {
       .post-summary{@include font-body($f2*0.96, 400); margin-top: 0.3em;}
       .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
       .post-imageframe {padding: 1em 1em 0 0;}
-      .post-image {width:98%;height: auto;}
+      .post-image {width:auto; height: auto;}
       .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} }
       .post {margin-top: 1em; @include span-columns(6); }
     }
@@ -293,7 +294,7 @@ body {
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
       h1 {@include font-body($f1*0.9, 300);}
       .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
-      .post-image {width:98%;height: auto;}
+      .post-image {width:auto;height: auto;}
       .content {display: block; padding-top: 3em;}
       .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} @include span-columns(12); }
     }
