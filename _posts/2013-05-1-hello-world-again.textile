@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello World. Again. 
-summary: Thoughts on why I would start yet another blog. For super real this time, guys.
+summary: Thoughts on why I would start yet another blog. For real this time.
 <!-- external: # -->
 <!-- image-path: /assets/# -->
 <!-- image-icon: /assets/# -->
@@ -14,13 +14,15 @@ portfolio : false
 
 ---
 
-Well, I'll be honest. I'm a terrible writer, and I'm terrible at updating content. Most of the time I feel like I don't have anything to talk about.
+Hello World! This is probably my fifth time attempt at starting a blog, and my umpteenth personal portfolio design. And the first time I've married those two together. 
 
-But, as an active practitioner in User Experience and web design, and an active maker of cool and experimental stuff, I kind of realized I need a tiny corner of the web to sound off new ideas, tips, and such, and share a little knowledge back to the community.
+I'll admit, I'm not the most periodic type of writer. Most of my blogs have kind of... evaporated, for lack of better word. Usually, I run out of things to talk about, but, I figured I need to really start a new one- a professional one.
 
-Thing is, the User Experience and web design community is vibrant and full of smart people, many of whom share knowledge for free. Despite not being a stellar writer, I feel like we're obliged as professionals to voice our own opinions, and to give a little feedback back to the community.
+As an active practitioner in User Experience and design, and active hobbyist, I kind of realized I need a tiny corner of the web to sound off my ideas, tips, and opinions on things, hopefully get my thoughts out and give someone a lending hand along the way.
 
-This site will look at User Experience, Game Design, and Interaction Design topics. And probably a few more other ones. 
+The UX and web design community is vibrant and full of smart people, many of whom share knowledge on their own blogs. Despite not being a particularly prolific writer, I feel like we're obliged as professionals to voice our own opinions, share our techniques, and to give a little feedback back to the community.
 
-Good stuff is coming. Promise!
+This blog will mostly focus on User Experience, Interaction and Experiential Design and Game Design topics.
+
+Stuff is soon to follow. Keep posted!
 
