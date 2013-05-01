@@ -10,7 +10,7 @@ summary: Simulating Responsive Design in Axure
 category : Interaction Design 
 tags : [wireframe, axure]
 published: false
-portfolio: no
+portfolio: false
 ---
 
 Glad to see you're enjoying the Abusing Axure series.

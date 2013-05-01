@@ -9,7 +9,7 @@ summary: Thoughts on why I would start yet another blog. For super real this tim
 <!-- vimeo: # -->
 category : Writing
 tags : [General, Thoughts]
-published : false
+published : true
 portfolio : false
 
 ---

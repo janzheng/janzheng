@@ -9,8 +9,8 @@ summary: Creating Listener Functions in Axure
 <!-- vimeo: # -->
 category : Interaction Design 
 tags : [wireframe, axure]
-published: yes
-portfolio: no
+published: false
+portfolio: true
 ---
 
 Axure can be used from the most basic layout designs to very complex (probably overly complex and over-designed) prototypes. That's what makes Axure fun. This series explores the various ways one could over-engineer Axure.
