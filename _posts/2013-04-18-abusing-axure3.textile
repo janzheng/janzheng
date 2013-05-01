@@ -9,7 +9,7 @@ summary: Simulating Responsive Design in Axure
 <!-- vimeo: # -->
 category : Interaction Design 
 tags : [wireframe, axure]
-published: yes
+published: false
 portfolio: no
 ---
 

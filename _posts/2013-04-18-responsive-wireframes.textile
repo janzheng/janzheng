@@ -9,7 +9,7 @@ summary: Websites are becoming responsive. Wireframes should also be responsive
 <!-- vimeo: # -->
 category : Gane Design
 tags: [Gane Design, Narrative]
-published: true
+published: false
 portfolio: false
 ---
 

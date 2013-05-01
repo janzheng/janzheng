@@ -9,8 +9,8 @@ summary: Simulating Parallax in Axure
 <!-- vimeo: # -->
 category : Interaction Design 
 tags : [wireframe, axure]
-published: yes
-portfolio: no
+published: false
+portfolio: falsee
 ---
 
 Welcome back to the Abusing Axure series.

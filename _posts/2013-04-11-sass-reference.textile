@@ -8,7 +8,7 @@ summary: A downloadable reference guide for the SCSS beginner.
 <!-- vimeo: # -->
 category : Gane Design
 tags : [Gane Design, Narrative]
-published: true
+published: false
 portfolio: false
 ---
 

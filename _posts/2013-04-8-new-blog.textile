@@ -1,29 +1,28 @@
 ---
 layout: post
-title: Yet Another Blog?! 
-summary: Why Is It So Drab and Boring!? What Will You Talk About!?
+title: Hello World. Again. 
+summary: Thoughts on why I would start yet another blog. For super real this time, guys.
 <!-- external: # -->
 <!-- image-path: /assets/# -->
 <!-- image-icon: /assets/# -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
-category : Gane Design
-tags : [Gane Design, Narrative]
-published : yes
-portfolio : no
+category : Writing
+tags : [General, Thoughts]
+published : false
+portfolio : false
 
 ---
 
-Well, I'll be honest. I'm a terrible writer, and I'm terrible at updating content, mostly because I hate writing.
+Well, I'll be honest. I'm a terrible writer, and I'm terrible at updating content. Most of the time I feel like I don't have anything to talk about.
 
 But, as an active practitioner in User Experience and web design, and an active maker of cool and experimental stuff, I kind of realized I need a tiny corner of the web to show off things to say, and share a little back with the community.
 
 Thing is, the community is vibrant and full of smart people, many of whom share knowledge for free. Despite my not enjoying writing, as a professional, I need to have a public voice for my opinions tips, and give-back to the community.
 
-That, and I'm actually fairly opinionated. I just don't like writing about it.
+This site will look at User Experience, Game Deisng, and Interaction Design topics. And probably a few more other ones. 
 
-This site will double up as a sounding board for my professional voice, and as a portfolio site so I can continue to feed myself and stuff.
+In this side of the web, I'll be focusing on User Experience & Interaction Design, Web Design, and Game Design. 
 
-In this side of the web, I'll be focusing on User Experience & Interaction Design, Web Design, and Game Design. A few of my passions.
+Good stuff is coming. Promise!
 
-Why is this so drab and boring?! Well, I'm minimalist, and I want the content to shine. That, and I don't really want to spend more time illustrating stuff.

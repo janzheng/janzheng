@@ -9,7 +9,7 @@ summary: It's incredibly powerful, and incredibly free. Rad.
 <!-- vimeo: # -->
 category : Web
 tags : [Web Design, Blogging, Github]
-published : yes
+published : false
 portfolio : no
 
 ---

@@ -8,7 +8,7 @@ summary: Many movies and games nowadays make use of the unreliable narrator. Her
 <!-- vimeo: # -->
 category : Gane Design
 tags : [Gane Design, Narrative]
-published: yes
+published: false
 portfolio: no
 ---
 
