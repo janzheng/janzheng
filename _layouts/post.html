@@ -60,6 +60,8 @@ Tags
 
   <div class="clear"></div>
     
-  {% include disqus.html %}
+  {% if page.comments == true %} 
+    {% include disqus.html %}
+  {% endif %} 
 
 </article>

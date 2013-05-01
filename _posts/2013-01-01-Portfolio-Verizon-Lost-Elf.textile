@@ -11,6 +11,7 @@ category : Portfolio
 tags : [Portfolio, Information Architecture, Interaction Design]
 published : true
 portfolio : true
+comments : false
 ---
 
 <div class="post-maincontent">

@@ -46,6 +46,11 @@
 
 #lbPrevLink:hover {
 	background: transparent url(/assets/images/prevlabel.gif) no-repeat 0 15%;
+    -webkit-transition: 0 ease;
+    -moz-transition: 0 ease;
+    -ms-transition: 0 ease;
+    -o-transition: 0 ease;
+    transition: 0 ease;
 }
 
 #lbNextLink {
@@ -54,6 +59,11 @@
 
 #lbNextLink:hover {
 	background: transparent url(/assets/images/nextlabel.gif) no-repeat 100% 15%;
+    -webkit-transition: 0 ease;
+    -moz-transition: 0 ease;
+    -ms-transition: 0 ease;
+    -o-transition: 0 ease;
+    transition: 0 ease;
 }
 
 #lbBottom {

@@ -11,6 +11,7 @@ category : Portfolio
 tags : [Portfolio, Information Architecture, Interaction Design]
 published : true
 portfolio : true
+comments : false
 ---
 
 
@@ -20,12 +21,53 @@ portfolio : true
 <div class="flexslider">
   <ul class="slides">
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/1.png" title="this is a title" rel="lightbox-cats">
+      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/1.png" title="Nespresso Boutique Homepage" rel="lightbox-nespresso">
          <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/1sm.png" />
          <p class="flex-caption">Nespresso Boutique homepage. The large images and look reflect the mood of the Nespresso boutique experience, while the list of states on the left show store availability.</p>
       </a>
     </li>
     
+    <li>
+      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/2.png" title="Boutique Gallery" rel="lightbox-nespresso">
+         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/2sm.png" />
+         <p class="flex-caption">Boutique Gallery view. The gallery view allows the distinct architecture and design of each boutique stand out.</p>
+      </a>
+    </li>
+
+    <li>
+      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/3.png" title="Boutique Landing Page" rel="lightbox-nespresso">
+         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/3sm.png" />
+         <p class="flex-caption">Boutique Landing Page. Each boutique has its own dedicated page that tells each store's unique history, amenities, opening times, and menu.</p>
+      </a>
+    </li>
+
+    <li>
+      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/4.png" title="Boutique Locations Page" rel="lightbox-nespresso">
+         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/4sm.png" />
+         <p class="flex-caption">Boutique Locations Page. The locations tab under each boutique page reveals the location of the boutique on a Google Maps plugin.</p>
+      </a>
+    </li>
+
+    <li>
+      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/5.png" title="Wireframe: Boutique Landing Page" rel="lightbox-nespresso">
+         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/5sm.png" />
+         <p class="flex-caption">Wireframe of the Boutique Landing page. This earlier version of the Boutique landing page shows all the page elements and requirements displayed on a single page.</p>
+      </a>
+    </li>
+
+    <li>
+      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/6.png" title="Wireframe: Boutique Finder" rel="lightbox-nespresso">
+         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/6sm.png" />
+         <p class="flex-caption">Wireframe of the Boutique Finder. This is an alternate exploration of the boutique landing page, focusing on large images of each location.</p>
+      </a>
+    </li>
+
+    <li>
+      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/7.png" title="Wireframe: Boutique Landing Page" rel="lightbox-nespresso">
+         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/7sm.png" />
+         <p class="flex-caption">Wireframe of the Boutique Finder. This is an alternate exploration of the Finder, focusing on scalability, and highlighting each location's most important information.</p>
+      </a>
+    </li>
   </ul>
 </div>
 
