@@ -16,13 +16,11 @@ portfolio : false
 
 Well, I'll be honest. I'm a terrible writer, and I'm terrible at updating content. Most of the time I feel like I don't have anything to talk about.
 
-But, as an active practitioner in User Experience and web design, and an active maker of cool and experimental stuff, I kind of realized I need a tiny corner of the web to show off things to say, and share a little back with the community.
+But, as an active practitioner in User Experience and web design, and an active maker of cool and experimental stuff, I kind of realized I need a tiny corner of the web to sound off new ideas, tips, and such, and share a little knowledge back to the community.
 
-Thing is, the community is vibrant and full of smart people, many of whom share knowledge for free. Despite my not enjoying writing, as a professional, I need to have a public voice for my opinions tips, and give-back to the community.
+Thing is, the User Experience and web design community is vibrant and full of smart people, many of whom share knowledge for free. Despite not being a stellar writer, I feel like we're obliged as professionals to voice our own opinions, and to give a little feedback back to the community.
 
-This site will look at User Experience, Game Deisng, and Interaction Design topics. And probably a few more other ones. 
-
-In this side of the web, I'll be focusing on User Experience & Interaction Design, Web Design, and Game Design. 
+This site will look at User Experience, Game Design, and Interaction Design topics. And probably a few more other ones. 
 
 Good stuff is coming. Promise!
 
