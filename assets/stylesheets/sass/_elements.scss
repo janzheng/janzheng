@@ -5,7 +5,10 @@
 
 //link & button styles
 
-h4 { @include font-tip($f3, 300, 1.2em); }
+h1 { @include font-body($f1, 300, 1.2em); }
+h2 { @include font-body($f2*1.3, 300, 1.2em); margin-top: 1.6em;}
+h3 { @include font-tip($f2, 300, 1.2em); margin-top: 1.6em; }
+h4 { @include font-tip($f3, 300, 1.2em); margin-top: 1.6em; }
 
 a, a:active, a:visited {color: $color0; text-decoration: underline;}
 a:hover {color: $color2; background-color: $color9; @include ease-transition(200ms);}

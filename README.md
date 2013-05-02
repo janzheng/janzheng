@@ -10,4 +10,7 @@ The code of this site is somewhat based off Nathan McGinness's personal site, [n
 The site is built on Jekyll-Bootstrap and hosted by Github Pages.
 For all usage and documentation please see: <http://jekyllbootstrap.com>
 Code Highlighting is done with [Pygments](https://github.com/mojombo/jekyll/wiki/liquid-extensions))
+
 CSS was assembled using SASS and ScoutApp
+
+Inspired by http://nthn.net
