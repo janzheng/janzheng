@@ -8,6 +8,37 @@ $(document).ready(function() {
   });
 
 
+
+// ************************************************************
+// Button show / hide functionality
+//initially hide all collapsible areas (specified in CSS)
+// $(".mobile-hide").hide();
+
+// $(".mobile-open").click(function() {
+//   var width = $(window).width();
+//   // if( width <= 480 ) {$(this).find('.mobile-hide').slideToggle();}
+//   if( width <= 480 ){toggleMobile(this);}
+// });
+
+
+// function toggleMobile(input){
+//   var state = $(input).find('.mobile-hide').css('display');
+  
+//   if (state == 'none'){
+//     showMobile(input);
+//   } else
+//   { hideMobile(input); }
+// }
+// function showMobile(input) {
+//     $(input).find('.mobile-hide').css('display', 'block');
+// }
+
+// function hideMobile(input) {
+//     $(input).find('.mobile-hide').css('display', 'none');
+// }
+// End button show / hide
+// ************************************************************
+
    //show / hide functionality
    //initially hide all collapsible areas; moved into CSS instead
    // $(".expandable .collapsible").hide();
