@@ -1,0 +1,20 @@
+---
+layout: post
+title: User Experience Should Design for Intent, Information, and User Flow
+summary: Websites are becoming responsive. Wireframes need to reflect this
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- image-icon: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Gane Design
+tags: [Gane Design, Narrative]
+published: false
+portfolio: false
+---
+
+- How come GPS devices are almost there but not quite?
+- Keyboard lookup
+- Zooms in too quickly, can't see my next turn
+- Interface is crazy confusing
+- 

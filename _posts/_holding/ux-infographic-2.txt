@@ -1,0 +1,73 @@
+
+you need to redo this:
+http://www.fastcodesign.com/1671735/infographic-the-intricate-anatomy-of-ux-design#3
+http://www.kickerstudio.com/blog/2008/12/the-disciplines-of-user-experience/
+
+I dont agree with your diagram. All the above disciplines mentioned have fuzzy ends. There is a constant amalgamation on the overlapping edges.
+
+
+Perspectives on UX Design
+
+Anyone can be a UX Designer.
+UX Design is the embodiment of carefully crafting good or services with the audience / user / cusomter people involved in mind
+
+
+
+
+Main Discipline
+> Sub Discipline
+	> Sub-sub discipline
+
+Add components:
+
+Engineering
+- Mechanical Engineering
+- Computer & Electrical Engineering
+- Computer Science
+
+Anthropology & Social Studies
+	- Ethnography
+	
+- Service Design
+
+- Creative Art & Design
+	- Visual Design
+	- Storytelling
+	
+- Ergonomics
+	- Human Factors
+	
+- Human Computer Interaction
+
+- Industrial Design
+
+Language
+- Copywriting
+
+Psychology
+- Behavioral & Learning
+- Social
+- Cognitive
+
+Strategy & Planning
+
+Account Planning & Management
+Marketing, Business
+Strategy
+Social Media
+Economics
+
+
+
+
+Part 2:
+-------------------------
+Advertising UX & Process Guidelines
+
+
+
+Part 2:
+-------------------------
+Discipline vs. 
+It would be interesting to look at experience with more focus on the human element where this is the absolute center focus: i.e. emotion, intuitiveness, functionality, content, all of which is relative to different cultural backgrounds and various levels of personal development.
+

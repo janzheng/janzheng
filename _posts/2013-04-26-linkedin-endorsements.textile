@@ -1,0 +1,18 @@
+---
+layout: post
+title: Designing, Wireframing, and Prototyping Forms
+summary: Let's face it, forms can be confusing. This is a framework that will help.
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- image-icon: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Design
+tags: [Wiretool, Interaction Design, Forms, Prototyping]
+published: false
+portfolio: false
+---
+
+- Endorsing people on LinkedIn is meant to let colleagues vouch for a person's skills
+- LinkedIn makes it too easy to endorse people, and it seems like some people just like to s
+ 

@@ -1,0 +1,67 @@
+Designing Responsively
+---------------------------------------
+
+A Step in the Right Direction
+More and more popular websites are adopting a Responsive Web Design (RWD) approach, in which sites resize to fit a device screen. With the influx of tablets, phablets, and smart TVs, the landscape of screen resolutions is ever growing, and it's not at all surprising that Responsive Web Design is currently all the rage. Though the concept of formatting content to fit any screen is here to stay, the term "Responsive" design as we know it will probably fade away.
+
+Although a step in the right direction, the concept of "Responsive" design focuses more on fitting content to various screens, rather than shaping content to fit the value.
+
+In the near future, we will transition from the idea of merely designing responding websites, to a more holistic concept of designing systems that "transfer valuable information between users and digital services." With more screens on the horizon and the proliferating concept of an "Internet of Things," we'll instead be designing information and usability with heavier emphasis on context, intent and lifestyle.
+
+For now, our most flexible, connected device is the smartphone. We also have our tablets, laptops, and desktops. Each device offers us different benefits and drawbacks, which leads to people using them in different contexts. For example, tablets are designed around media consumption, whereas desktops are better for performing work. Because digital devices are becoming increasingly differentiated and context heavy, we can't just think "how can we fit a website to a specific screen," but also "how can we fit content to provide the most value depending on context. 
+
+Working With Clients
+When working with a client who wants a Responsive website, the hardest part is getting a client to develop a set of fundamental goals that drive both the content strategy and user experience. What value will the site provide? What actions should users perform? Should the site merely inform users, or shoud it convince them to sign up? Are there different goals depending on the context and environment? Will users be browsing while driving, or browse while lounging at home? Perform some research and find out for what contexts and environments the website could provide the most value. The more information that can be gathered on fundamental goals, requirements, value opportunities, and user context, the more valuable the website will be.
+
+Since responsive sites are still fairly unconventional, getting early buy-in from the client is very important. Use sketches, wireframes, and prototypes to show the client both the thinking and the functionality behind the design decisions, from menus to banners to carousels Show them how the site will react to touch, and show clients how the various screen sizes will affect the visibility of content. 
+
+Show how some content will be moved down "below the fold," on some screens, and convince them that people (http://uxmyths.com/post/654047943/myth-people-dont-scroll) actually (http://boxesandarrows.com/blasting-the-myth-of-the-fold/ ) do (http://iampaddy.com/lifebelow600/) scroll (http://dopeoplescroll.com/). People will scroll as long as "the layout encourages scanning, and readers believe it's worth their time (Nielsen http://www.nngroup.com/articles/scrolling-and-attention/)"
+
+Furthermore, use context in your designs to your advantage. For example, if metrics show that mobiles users look for specific content, make that front and center. Don't make users work for it. However, only promote information, and never omit information based on context, as we can't always predict what information users really need. 
+
+
+Here is a list of considerations when approaching a responsive project.
+
+1. Before you start, develop fundamental site goals
+	- What value will the site provide? 
+	- What actions should users perform?
+	- Do goals differ depending on the user's context and environment?
+	- Develop user personas and user flows to keep design goals manageable
+
+2. Develop compelling content that deliver value
+	- Research your audience and understand what makes compelling, valuable content
+	
+3. Understand situations where context and environment might affect user needs
+	- Are there different uses of the site, depending on the device?
+	- What information do users look for in various contexts?
+
+4. Provide value for different contexts...
+	- How can you help the user quickly get to the information they need, depending on their context?
+
+5. ...but never omit information
+	- Use context and device to highlight, but never to hide information
+
+6. Responsive Design is still unconventional, so get client buy-in early
+	- Express your design thinking in terms of their site goals
+	- Use sketches, wireframes, and simple prototypes to convey functionality and content
+
+7. Iterate often, and iterate quickly
+	- Use personas, user flows, and design goals to keep the design on track
+
+8. Convince the client early that the fold doesn't matter as long as the content provides value
+	
+9. Make the content compelling
+	- Did I already mention that?
+	
+
+
+Designing Responsibly
+
+Responsive design is exciting. 
+
+It's an important step towards designing for context, environment and lifestyle, rather than for screens. Now that we've started to surround ourselves with more technology and more interfaces, we'll need to start thinking about how to deliver the right information for the right time and the right place.
+
+Please add your own thoughts and responsive design tips in the comments!
+
+
+
