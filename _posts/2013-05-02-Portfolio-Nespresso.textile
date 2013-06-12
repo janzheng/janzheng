@@ -118,9 +118,11 @@ p.
       </div>
 
       <div class="post-sidebar-column">
-         <h4>Link</h4>
-         <span><a href="http://boutique.nespresso-us.com/store-locations">Nespresso Boutiques</a></span>
+         <h4>Links</h4>
+         <span><a href="http://www.nespresso-us.com/coffee-boutiques/">Nespresso Boutiques</a></span>
+         <span><a href="http://share.axure.com/3GTDZ6/">Axure wireframes</a></span>
       </div>
    </div>
+   
 
 </div>

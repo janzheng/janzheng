@@ -84,7 +84,7 @@ body {
 
   #main {
     .post-taglist {
-      margin-top: 0.6em;
+      margin: 0.6em 0 0.7em 0 ;
       // margin-top: 1.5em;
       li{
         @include font-tip($f3, 300);
@@ -277,8 +277,8 @@ body {
 
     @include media($small) {
       .post-date {@include font-tip($f3, 300); padding-bottom: 0.7em; }
-      h1 {@include font-body($f1*0.9, 300);}
-      .post-summary{@include font-body($f2*0.96, 400); margin-top: 0.3em;}
+      h1 {@include font-body($f1*0.9, 300); padding-top: 0.6em; }
+      .post-summary{@include font-body($f2*0.96, 400); margin: 0.4em 0 0.4em 0; }
       .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
       .post-imageframe {padding: 1em 1em 0 0;}
       .post-image {width:auto; height: auto;}
@@ -291,8 +291,8 @@ body {
       @include shift (3);
 
       //typography
-      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
-      h1 {@include font-body($f1*0.9, 300);}
+      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.9em;}
+      h1 {@include font-body($f1*0.9, 300); padding-top: 0.6em; }
       .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
       .post-image {width:auto;height: auto;}
       .content {display: block; padding-top: 3em;}
@@ -304,7 +304,7 @@ body {
 
       //typography
       .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
-      h1 {@include font-body($f1, 300);}
+      h1 {@include font-body($f1, 300); padding-top: 0.6em; }
       .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
       .post-body {@include span-columns(12); }
     }

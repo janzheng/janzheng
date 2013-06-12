@@ -128,36 +128,6 @@ $tinyfont: $base * 0.82;
 }
 
 
-// batch icon font
-@font-face{
-    font-family:Batch;
-    src:url('/assets/fonts/batch.eot');
-    src:url('/assets/fonts/batch.eot?#iefix') format('embedded-opentype'),
-      url('/assets/fonts/batch.woff') format('woff'),
-      url('/assets/fonts/batch.ttf') format('truetype'),
-      url('/assets/fonts/batch.svg#batchregular') format('svg');
-    font-weight:normal;
-    font-style:normal;
-}
-
-.batch {
-    font-family:"Batch"; /*or whatever you've decalred your font name as*/
-    font-size:16px;
-    line-height:1;
-    display:inline-block;
-}
-.batch:before {
-    content:attr(data-icon);
-}
-
-.batch--tiny { font-size:9px; }
-.batch--large { font-size:32px; }
-.batch--huge { font-size:64px; }
-.batch--natural { font-size:inherit; }
-
-
-
-
 
 /*  HTML5 ✰ Boilerplate  */
 

@@ -4,7 +4,7 @@ title: Cartoon Network Mobile
 summary: Fun and quirky mobile site for browsing shows and watching videos 
 <!-- external: # -->
 <!-- image-path: /assets/# -->
-image-icon: /assets/posts/2013-04-18-Portfolio-CN-Mobile/polaroid.png
+image-icon: /assets/posts/2013-04-18-Portfolio-CN-Mobile/polaroid.jpg
 <!-- youtube: # -->
 <!-- vimeo: # -->
 category : Portfolio
@@ -106,7 +106,7 @@ comments : false
 p. 
 "Cartoon Network":http://www.cartoonnetwork.com/ wanted a mobile site that exuded the fun and quirkiness of their new site.
 
-They wanted a playful, mobile-friendly version of their desktop site that focused on getting show information and watching clips. They also wanted the mobile site to drive more app downloads.
+They wanted a playful, mobile-app version of their desktop site that focused on getting show information and watching clips. They also wanted the mobile site to drive more app downloads.
 
 I began concepting by sketching many different conceptual homepages and basic navigatoinal interactions, ranging from more traditional layouts to other more app-like layouts. I iterated some of the more interesting concepts, using paper cut-outs and tape to simulate some of the interaction, and eventually landed on two designs that I liked and worked well. The final sketches were presented to the client, who chose the final design presented here.
 
