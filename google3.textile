@@ -11,7 +11,7 @@ h3. Architecture & Sitemap
 
 The site is small and has few categories, and no control states or paths. The narrative content would make sense if told as a single, linear story, and thus would best be served on one page. Multiple pages for small amounts of content will lead to more friction and click fatigue. Multiple pages with more interesting content or interactions could be more engaging, but would not be appropriate given the smaller scope of the project. In the end, a simple, single narrative page would be both more effective and more efficient. 
 
-The marketing page will use loosely borrow from the Marketing copy. For wireframe and design exercise purposes, I'll create a single design that I think will strike a good balance between the two mentioned approaches. Otherwise, if given time and scope, I would explore more ways to express the narrative.
+The marketing page will loosely borrow from the Marketing copy. For wireframe and design exercise purposes, I'll create a single design that I think will strike a good balance between the two mentioned approaches. Otherwise, if given time and scope, I would explore more ways to express the narrative.
 
 The copy is for placement only, and each section details what the section is meant to accomplish. Because content and narrative is so important, I will try to stay away from lorem ipsum placeholders and use FPO copy that try to convey the content.
 
@@ -32,13 +32,13 @@ bc. Approach 1 & 2 Hybrid
 + Google News
   + Marketing Page
     1. Intro 1: What is Google News?
-    2. Intro 2: How Does it Work?
-    3. Unbiased: Different Perspectives 
-    4. Editors' Picks: Follow Your Favorite Publishers
-    5. Personalize: Personalize Your News
+    2. Intro 2: A Little Different
+    3. Personalize: Make it Personal
+    4. Unbiased: Different Perspectives 
+    5. Editors' Picks: Follow Your Favorite Publishers
     6. Global: Across the World
     7. Local: Close to Home
-    8. Features: Stay Informed on What Matters (Archive, Feeds, Alerts)
+    8. Features: Stay Informed on News that Matter
     9. Google+: Share With Your Friend
     10. Mobile: From Any Device
     11. Call to Action
@@ -52,7 +52,7 @@ Google News is a personalized news service that collects headlines from around t
 
 ---
 
-h4. 2. How does it work?
+h4. 2. A Little Different
 
 Traditionally, news readers first pick a publication and then look for headlines that interest them. On Google News, we first show trending stories and headlines, then let you choose the publication to read.
 
@@ -94,7 +94,7 @@ Each regional edition is tailored with news for that audience, and we will autom
 
 ---
 
-h4. 8. Stay Informed on What Matters
+h4. 8. Stay Informed on the News that Matter
 
 *News Archive*
 Archive Search provides an easy way to search and explore historical archives dating back over 200 years. 
@@ -111,20 +111,12 @@ Sign up to recieve weekly, daily or as-it-happens email alerts on any topic that
 
 Google News Alerts are emails automatically sent to you when there are new Google News results for your search terms.
 
-
-Inset Text:
-
-To set up a News Alert, just perform a search on Google News, click the Create an email alert link at the bottom of the search results page. You’ll get to a page where you can finish creating your News Alert.
-
 ---
 
 h4. 9. Share With Your Friends
 
 Sometimes, the best content may come from people you know. Other times, it might come from you. With Google+, you'll be able to see and share content and commentary with your Google+ circles.
 
-Inset Text:
-
-Just like the articles included in Google News, posts are identified and displayed by a computer algorithm that crawls Google+ for timely and interesting content
 ---
 
 h4. 10. From Any Device

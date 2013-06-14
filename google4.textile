@@ -35,7 +35,7 @@ Unless noted, the designers have significant creative freedom over the project, 
 
 Supporting assets should illustrate the content described in the section. 
 
-Scroll effects could be applied to certain assets like the homepage asset, or personalize asset for slight animation effects, like the sliders in Section 5 (Personalization) for example. "Example from The Verge":http://www.theverge.com/2013/6/11/4418188/apple-ios-7-design-influences (scroll down to the large row of iPhones)  
+Scroll effects could be applied to certain assets like the homepage asset, or personalize asset for slight animation effects, for example, the personalization sliders. "Example from The Verge":http://www.theverge.com/2013/6/11/4418188/apple-ios-7-design-influences (scroll down to the large row of iPhones)  
 
 
 </div>
