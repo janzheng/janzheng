@@ -21,7 +21,7 @@ h3. 1. Why are you interested in this particular position at Google?
 ---
 
 
-* They say that if you build a good product, they will come. Although I use Google's more popular products every day (Search, Gmail, Drive, Chrome), I often find myself discovering and playing around with Google products I've either never heard of. I love finding new products and features, but it's frustrating to me because sometimes I wish I'd known about them earlier. 
+* They say that if you build a good product, they will come. Although I use Google's more popular products every day (Search, Gmail, Drive, Chrome), I often find myself discovering and playing around with Google products I've never heard of. I love finding new products and features, but can be frustrating as new Google products and services can be hard to discover. 
 
 * I feel Google could do a better job exposing their products, services, and features, because so many are often hidden. I'm interested in this position because I want to tackle the problem of making Google products more discoverable, and making the hidden features and services more visible. I'm also excited about the position because of the large number of teams and products I'll potentially get to work with.
 
@@ -29,7 +29,7 @@ h3. 2. How would you define Information Architecture?
 
 ---
 
-* Information Architecture is the discipline that makes sense of information and data. It does so by making relationships and establishing structure and form to otherwise disparate data points. The process of making sense of data transforms information into knowledge, which can in turn can be built into a narrative and be communicated through a medium of communication, such as a visual, aural, or interactive experience. 
+* Information Architecture is the discipline that makes sense of information and data. It does so by making relationships and establishing structure and form to otherwise disparate data points. The process of making sense of data transforms information into knowledge, which can be converted into a narrative and be communicated through visual, aural, or interactive experiences. 
 
 h3. 3. How do you keep yourself informed about the latest updates in the industry?
 
