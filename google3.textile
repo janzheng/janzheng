@@ -1,0 +1,139 @@
+---
+layout: google
+title: Google Design Exercise
+---
+
+<div class="google">
+
+h1. III. Page Architecture
+
+h3. Architecture & Sitemap
+
+The site is small and has few categories, and no control states or paths. The narrative content would make sense if told as a single, linear story, and thus would best be served on one page. Multiple pages for small amounts of content will lead to more friction and click fatigue. Multiple pages with more interesting content or interactions could be more engaging, but would not be appropriate given the smaller scope of the project. In the end, a simple, single narrative page would be both more effective and more efficient. 
+
+The marketing page will use loosely borrow from the Marketing copy. For wireframe and design exercise purposes, I'll create a single design that I think will strike a good balance between the two mentioned approaches. Otherwise, if given time and scope, I would explore more ways to express the narrative.
+
+The copy is for placement only, and each section details what the section is meant to accomplish. Because content and narrative is so important, I will try to stay away from lorem ipsum placeholders and use FPO copy that try to convey the content.
+
+bc. Original Structure
++ Google News
+  + Marketing Page
+    |- Intro to Google News
+    |- Local News
+    |- Alerts
+    |- Mobile
+    |- Feeds
+    |- Editors' Picks
+    |- News Archive Search
+    |- Google+ Posts
+
+
+bc. Approach 1 & 2 Hybrid
++ Google News
+  + Marketing Page
+    1. Intro 1: What is Google News?
+    2. Intro 2: How Does it Work?
+    3. Unbiased: Different Perspectives 
+    4. Editors' Picks: Follow Your Favorite Publishers
+    5. Personalize: Personalize Your News
+    6. Global: Across the World
+    7. Local: Close to Home
+    8. Features: Stay Informed on What Matters (Archive, Feeds, Alerts)
+    9. Google+: Share With Your Friend
+    10. Mobile: From Any Device
+    11. Call to Action
+
+
+h3. Content Map
+
+h4. 1. What is Google News?
+
+Google News is a personalized news service that collects headlines from around the world, and helps you stay up to speed on stories based on both your location and your interests.
+
+---
+
+h4. 2. How does it work?
+
+Traditionally, news readers first pick a publication and then look for headlines that interest them. On Google News, we first show trending stories and headlines, then let you choose the publication to read.
+
+Inset Text:
+Our articles are selected and ranked by computers that evaluate, among other things, how often and on what sites a story appears online. We also rank based on certain characteristics of news content such as freshness, location, relevance and diversity. As a result, stories are sorted without regard to political viewpoint or ideology and you can choose from a wide variety of perspectives on any given story.
+
+
+--- 
+
+h4. 3. Make It Personal
+
+Only read what you care about. We deliver stories to your personalized Google News page page based on popularity, location, and relevance, but you can personalize the news page to only show the topics you care about.
+
+Assets: Google News Personalize Video
+
+---
+
+h4. 4. Different Perspectives
+
+We get articles from more than 50,000 news sources every day. For every story, we offer a variety of perspectives by linking to different publications, so you may come to your own conclusions.
+
+---
+
+h4. 5. Follow Your Favorite Publishers
+
+Stay Up to Date on Your Favorite Publishers. Editors' Picks lets you see the best content from your favorite publishers.
+
+---
+
+h4. 6. Across the World
+
+With more than 70 regional editions around the world, you can follow the news you want, from many locations around the world, in many different languages.
+
+---
+
+h4. 7. Close to Home
+
+Each regional edition is tailored with news for that audience, and we will automatically suggest news for your city based on your location.
+
+---
+
+h4. 8. Stay Informed on What Matters
+
+*News Archive*
+Archive Search provides an easy way to search and explore historical archives dating back over 200 years. 
+
+Search for events, people or ideas and see how they have been described over time.
+
+*Feeds*
+Use RSS feeds to get easier access to updates about news topics that interest you. 
+
+News feeds are available for both the regular sections of Google News, and for your Google News search results, and for your customized Google News page.
+
+*Alerts*
+Sign up to recieve weekly, daily or as-it-happens email alerts on any topic that interests you.
+
+Google News Alerts are emails automatically sent to you when there are new Google News results for your search terms.
+
+
+Inset Text:
+
+To set up a News Alert, just perform a search on Google News, click the Create an email alert link at the bottom of the search results page. You’ll get to a page where you can finish creating your News Alert.
+
+---
+
+h4. 9. Share With Your Friends
+
+Sometimes, the best content may come from people you know. Other times, it might come from you. With Google+, you'll be able to see and share content and commentary with your Google+ circles.
+
+Inset Text:
+
+Just like the articles included in Google News, posts are identified and displayed by a computer algorithm that crawls Google+ for timely and interesting content
+---
+
+h4. 10. From Any Device
+
+Access your personalized news experience, no matter what device you use.
+
+---
+
+h4. 11. Visit Google News to personalize your news experience.
+
+
+</div>

@@ -1,0 +1,224 @@
+---
+layout: google
+title: Google Design Exercise
+---
+
+<div class="google">
+
+h1. II. Design Exercise Analysis
+
+h3. 1. Instructions
+
+---
+
+"Google News":http://news.google.com/
+"Google News About Page":http://www.google.com/intl/en_us/about_google_news.html
+
+For the skills test please use the document with the copy regarding Google News as a basis for a small website promoting the service. Imagine your stakeholders from the marketing team shared the document with you and it is your task to create an information architecture as basis of a new website for your team to design and implement.
+ 
+Please provide a sitemap, wireframes and any other documents you create for this website in a zip file. Feel free to edit, delete, add and structure the copy as you feel makes sense in order to achieve the website goal.
+
+Ryan Thomas
+Global Engineering Manager / Webmaster Engineering
+
+h3. 2. Examples
+
+---
+
+These are the "about" pages that describe similar services and products.
+
+h4. News & Information Services
+
+"http://www.feedly.com/":http://www.feedly.com/
+"https://www.google.com/producer/currents":https://www.google.com/producer/currents
+"http://www.flipboard.com/":http://www.flipboard.com
+"http://www.newsvine.com/_tps/_tour":http://www.newsvine.com/_tps/_tour
+"https://www.pulse.me/":https://www.pulse.me/
+
+"http://www.broadcastr.com/":http://www.broadcastr.com
+"http://www.zite.com/":http://www.zite.com
+"http://getprismatic.com/":http://getprismatic.com
+"http://news360.com/":http://news360.com
+
+h4. Google Landing Page Examples
+
+"http://www.google.com/intl/en_us/about_google_news.html":http://www.google.com/intl/en_us/about_google_news.html
+"https://support.google.com/calendar/answer/2465776?hl=en":https://support.google.com/calendar/answer/2465776?hl=en
+"http://www.google.com/glass/start/":http://www.google.com/glass/start/
+"http://www.google.com/tv/":http://www.google.com/tv/
+"https://www.google.com/intl/en/chrome/browser/":https://www.google.com/intl/en/chrome/browser/
+"http://www.google.com/nexus/":http://www.google.com/nexus/
+"http://play.google.com/about/":http://play.google.com/about/
+
+
+h3. 3. Approach
+
+---
+
+h4. Objectives:
+# Increase daily traffic to Google News
+# Explain core functionality and how to use Google News
+   
+Google News is a highly personal news experience that can be completely tailored to an individual's interests. Because of the wide variety of topics, languages, and platform availability, Google News has a large audience potential. 
+
+Google News appeals to both the tech-savvy, and those who are new to technology, to those of many cultures, backgrounds, and interests. The marketing page needs to speak to a wide variety of individuals, who are interested in the news.
+
+Currently, the supplied marketing copy feels more geared towards a more technical audience, as much of the language focuses more on describing the technology rather than its value and potential. Not everyone will be interested in how Google News works, but most likely, everyone will be interested to hear how Google News could provide them a better news delivery experience.
+
+The page should be simple, value-driven and experiential. The site will need to convince the reader why they should visit Google News site for their news consumption needs.
+
+Following the Google design language, the marketing site needs to convey "a friendly, modern, and quirky tone." It will need to convey Google's "spirit and provide user with light-hearted information about our products." ["source":http://www.behance.net/gallery/Google-Visual-Assets-Guidelines-Part-1/9028077]
+
+h4. The Marketing page will:
+# Explain what Google News is, and what it does
+# Show readers the value and potential of using Google News
+# Show the benefits of using Google News
+# Show readers that Google News won't change their news consumption habits
+
+
+h3. 4. Design Requirements
+
+---
+
+*Core Message*: Google News is a powerful and personal tool for helping people to browse, follow, and understand the news in a timely, effortless, informed, and unbiased manner.
+
+* Small website promoting the service 
+** Site can't be too heavy, difficult, or expensive to produce
+** use existing assets, screenshots, and the "personalize" video to describe features and functionality
+* Speak to the audience in an informative, value-driven, yet light-hearted, conversational manner
+* Focus on personal, relevant experiences. Why is Google News more relevant to the reader?
+* Platform-aware
+** Mobile and tablet viewers to land on site, so use mobile detection and/or responsive design to create a platform-centric experience. Ex: show mobile assets for mobile viewers, tablet for tablet viewers, to make the site feel more relevant.
+* Call to Action should direct users to start using Google News
+** CTA messaging should convey: "Start Tailoring Your Own News with Google News"
+* Sell Google News experientially. Tell a narrative of how and why Google News is a better way to stay informed
+
+
+h3. 5. Research Questions and Thoughts
+
+---
+
+Here are some questions and thoughts that might affect the content strategy, copy, and interaction design of the News marketing page:
+
+# Establish why and what types of people read news
+# Establish news consumption habits (what do people read, why, and how do they do it)
+# What are the main motivators for reading news? Entertainment? Social connection? Bragging rights? Validation?
+# What is the most and least important aspects to reading the news?
+# What are other news sources that people use, and why? How could Google News address these differences?
+# Is there a larger problem or pattern around people consuming news? 
+# Do people only read topics they state they're interested in, or could they potentially discover new areas of interest?
+
+
+
+h3. 6. Design Value-Adds
+
+---
+
+* Market the service live through integrating the trending article into the visual assets. Instead of using static images, assets could be built from a Live API, to give the product relevance and urgency. For example, explaining alerts, search, and other features could use the Snowden / NSA leak case as the example. 
+* This is a unique opportunity, as many other Google products won't be able to engage users with this 'live' aspect. Of course, this would add a quite bit more on development time and costs.
+* Furthermore, the marketing page could look at viewer's Google+ interests, to further sell the  personalized experience.
+
+
+h3. 7. Messaging
+
+---
+
+h4. Approach 1: Empowering, consumer-friendly narrative
+
+* Google News article should be portrayed as relevant, unbiased, and empowering
+* Copy should be friendlier, less about the feature and more about what the feature could do for the reader. How can people get news faster, more accurate, and more relevant?
+* Appeal to a wider audience; tell them how they would use Google News to understand, keep track of, and stay connected to the world
+* Consumer-friendly approach is to appeal to a wider audience
+* Strike a balance between features and technical descriptions and empowerment
+
+h4. Approach 2: Feature-driven walk-through
+
+* Google News is a powerful hub of information. It's not just a news source, but as a news center: a pasteboard of news clips hand-picked to fit the reader's needs, always keeping the reader informed, wherever they are.
+* Copy is a little more technical, emphasizing the features and technology
+* Emphasize how the technology could serve the reader (similar to the marketing copy)
+
+h3. 8. Resources
+
+---
+
+h4. A. "Google News Personalize Video":https://www.youtube.com/watch?feature=player_embedded&v=JmxL5BlVzZQ
+
+Transcript:
+With over 50k sources, Google News allows you to personalize the world's news, giving you access to different perspectives from a wide range of sources. You can build your customized news experience by choosing how much news you want to get from each different section, but with google news personalization, you are not limited to simply these sections. You can choose from an infinite range of topics that interest you, and then easily follow that topic in the news. 
+
+Everything that is in the news you can follow; anything from your favorite hobbies or current trends. You can easily make additional sections in your Google News. And the best part is it doesn't matter where you are or what language you speak: Google news is available in 70 different locations around the world, and no matter what kind of device you're on, you can access your personalized news experience. 
+
+Now it's your turn. 
+Personalize your Google News. 
+
+
+h4. B. Marketing Copy
+
+*Google News*
+
+Google News is a computer-generated news site that aggregates headlines from news sources worldwide, groups similar stories together, and displays them according to each reader's personalized interests.
+
+Traditionally, news readers first pick a publication and then look for headlines that interest them. We do things a little differently, with the goal of offering our readers more personalized options and a wider variety of perspectives from which to choose. 
+
+On Google News we offer links to several articles on every story, so you can first decide what subject interests you and then select which publishers’ accounts of each story you’d like to read. Click on the headline that interests you and you'll go directly to the site which published that story.
+
+Our articles are selected and ranked by computers that evaluate, among other things, how often and on what sites a story appears online. We also rank based on certain characteristics of news content such as freshness, location, relevance and diversity.
+As a result, stories are sorted without regard to political viewpoint or ideology and you can choose from a wide variety of perspectives on any given story. We'll continue to improve Google News by adding sources, fine-tuning our technology and providing Google News to readers in even more regions.
+
+*Suggesting local news for you*
+
+When browsing Google News, we will automatically suggest a News near your section based on your location. You can see this local content in a special section for your city.
+
+Occasionally, we may not correctly identify your location. In this case you can choose to manually change your location by clicking Change Location where it appears next to the name of the city our system has automatically detected. When you enter your location information you should try to be as specific as possible. You may want to try entering your city's postal code. If your postal code fails to bring up accurate local content use your city and state/province.
+
+Additionally, we use automatic signals to determine which edition of Google News to show you. You may want to review how to switch editions if we're displaying news from the wrong country or in the wrong language.
+
+Due to various differences in naming conventions between countries, we may sometimes have trouble identifying your correct location. Additionally, some regions have fewer news sources and there may not be enough content to fill an entire
+section. We're aware of these issues and are working hard to correct them.
+
+*Alerts*
+
+You can sign up to recieve weekly, daily or as-it-happens email alerts on any topic that interests you.
+
+Google News Alerts are emails automatically sent to you when there are new Google News results for your search terms.
+
+To set up a News Alert, just perform a search on Google News, click the Create an email alert link at the bottom of the search results page. You'll get to a page where you can finish creating your News Alert.
+
+*News for your mobile phone*
+
+If you have a mobile data plan, you can access a special version of Google News right from your mobile phone.
+
+*Feeds*
+
+You can receive updates of varous sections of Google News or Google News search results by subscribing to RSS or Atom feeds in your favorite feed reader. Using RSS feeds of Google News, you can get easier access to updates about news topics that interest you. News feeds are available for sections of Google News (such as Sports or Business), for your Google News search results, or for your customized Google News page. When you subscribe to a Google News feed using a feed reader, you'll receive a regularly updated summary of relevant news articles along with links to the full articles. Google News RSS feeds are available in RSS 2.0 format.
+
+You can use and subscribe to both Google News section feeds and search results feeds. You can find Google News Feeds by searching for the orange RSS icon at the bottom of any Google News page. For more information on RSS feeds, please visit the
+Google Reader Help Center's guide to RSS Feeds.
+
+By clicking this RSS icon, you can get a feed for any Google News section. For instance, while you're on the Business page, clicking the RSS icon at the bottom of the page will give you a feed of business news.
+
+You can also get a feed for searches you do on Google News. First perform a search on Google News, then simply use the RSS icon at the bottom of the search results page
+to generate the feed.
+
+*Editors’ Picks*
+
+Editors’ Picks is a feature that allows publishers to showcase original, innovative news content that they have on their site at any given time. This content may include long-form narrative articles, slideshows, interactive graphics, or video
+stories.
+
+The links you see in Editors’ Picks are hand-picked by the news organization whose logo is displayed above the links.
+
+*News archive search*
+
+Search and explore information from historical archives dating back over 200 years. Learn more.
+
+Google News Archive Search provides an easy way to search and explore historical archives. Users can search for events, people or ideas and see how they have been described over time.
+
+Search results include content from a number of sources, including both partner newspaper content digitized by Google through our News Archives Partner Program and online archival materials that we've crawled. Search results can include content that is freely accessible as well as content that requires a fee. You can either browse through the full collection of newspapers scanned or use Advanced News Search to specify the date range in which you'd like to search the archives.
+
+Using the News Archive Viewer, you can browse through our scanned collection like you would a physical paper, but with a searcheable collection you can find countless articles on topics you care about. Visit our Frequently Asked Questions for more information.
+
+*Google+ posts*
+
+Sometimes, the best, most relevant content for you about a particular news story may come from people you know. If you're signed in, you may see content and commentary from people in your Google+ circles alongside the day's top headlines. Just like the articles included in Google News, posts are identified and displayed by a computer algorithm that crawls Google+ for timely and interesting content. Alongside the day's top headlines, you'll be able to see content and commentary from leading newsmakers as well as people in your Google+ circles.
+
+</div>

@@ -15,11 +15,13 @@
 @import 'settings';
 @import 'elements';
 
+@import 'google';
+
 
 //@import 'syntax2';    // this is for Pygments code highlighting; won't work locally bc Python not installed
 
 // @import  'pastie';
-
+ 
 
 
 // general sizing
@@ -276,7 +278,7 @@ body {
     }
 
     @include media($small) {
-      .post-date {@include font-tip($f3, 300); padding-bottom: 0.7em; }
+      .post-date {@include font-tip($f3, 300); }
       h1 {@include font-body($f1*0.9, 300); padding-top: 0.6em; }
       .post-summary{@include font-body($f2*0.96, 400); margin: 0.4em 0 0.4em 0; }
       .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
@@ -291,7 +293,7 @@ body {
       @include shift (3);
 
       //typography
-      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.9em;}
+      .post-date {@include font-tip($f3, 300); display:block; }
       h1 {@include font-body($f1*0.9, 300); padding-top: 0.6em; }
       .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
       .post-image {width:auto;height: auto;}
@@ -303,7 +305,7 @@ body {
       @include span-columns(9);
 
       //typography
-      .post-date {@include font-tip($f3, 300); display:block; padding-bottom: 0.7em;}
+      .post-date {@include font-tip($f3, 300); display:block;}
       h1 {@include font-body($f1, 300); padding-top: 0.6em; }
       .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
       .post-body {@include span-columns(12); }

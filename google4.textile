@@ -1,0 +1,41 @@
+---
+layout: google
+title: Google Design Exercise
+---
+
+<div class="google">
+
+h1. IV. Wireframes & Interaction Design
+
+h3. Wireframes
+
+<notextile>
+<a href="http://share.axure.com/TF0EHN"><div class="google-bg"></div></a>
+</notextile>
+
+"Wireframe (large PNG)":google1.png
+
+"Axure Wireframe Link":http://share.axure.com/TF0EHN
+
+"Axure File Link":google.rp
+
+The purpose of the wireframes is to illustrate the layout and flow of content. Each section should seamlessly lead to the next, creating a smooth narrative flow between the elements.
+
+The content is broken into several distinct segments, but the content doesn't necessary need to be separated into horizontal containers. The bottom of one visual asset could sneak beyond the edge of the next section to portray a sense of urgency.
+
+The site and content is designed as a single page, content-focused, linear narrative. 
+
+The page itself is minimally responsive, and handles two breakpoints, one for smaller screens (between 0 and 480 pixels) and one for larger screens (481 pixels and up). Because of a lack of menu and few interactive elements, more breakpoints are unnecessary.
+
+Some image placeholders are marked as "live asset." These placeholders will look like screenshots, but pull in content live from the Google News feed. The idea is to create more relevance using live data.
+
+Some sections have interactive elements that reveal additional inset / flavor copy, as noted in the wireframe. 
+
+Unless noted, the designers have significant creative freedom over the project, including dimensions of assets and content placement.
+
+Supporting assets should illustrate the content described in the section. 
+
+Scroll effects could be applied to certain assets like the homepage asset, or personalize asset for slight animation effects, like the sliders in Section 5 (Personalization) for example. "Example from The Verge":http://www.theverge.com/2013/6/11/4418188/apple-ios-7-design-influences (scroll down to the large row of iPhones)  
+
+
+</div>
