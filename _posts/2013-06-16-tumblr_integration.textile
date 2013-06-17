@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Embed Tumblr without a server
+title: How to Embed Tumblr Without a Server
 summary: How to easily add Tumblr to a static site, without PHP or server-side code
 <!-- external: # -->
 <!-- image-path: /assets/# -->
