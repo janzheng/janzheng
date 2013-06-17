@@ -7,9 +7,10 @@ summary: How to easily add Tumblr to a static site, without PHP or server-side c
 <!-- youtube: # -->
 <!-- vimeo: # -->
 category : Code
-tags : [code, tumblr, embed, api, javascript]
+tags : [code, tumblr, api, javascript, blog]
 published : true
 portfolio : false
+comments : true
 ---
 
 I've recently started "funkability":http://funkability.tumblr.com a usability and interaction design feed on Tumblr I'll probably get around to updating twice a year.
