@@ -1,7 +1,7 @@
 ---
 layout: nil
 ---
-<?xml version="1.0" encoding="US-ASCII"?>
+<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Jan Zheng</title>
     <link href="http://janzheng.com/atom.xml" rel="self"/>
@@ -16,11 +16,7 @@ layout: nil
         <link href="http://janzheng.com{{ post.url }}"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <content type="html">
-          {% if post.image-path %}
-           <img src="http://njmcgee.com{{ post.image-path }}"></img>
-          {% endif %}
           {{ post.content }}
-          
         </content>
         <author>
             <name>Jan Zheng</name>
