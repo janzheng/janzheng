@@ -89,4 +89,4 @@ document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent
 
 And there you go, you have full access to your Tumblr feed, using Javascript! 
 
-Next, I'm going to integrate Tumblr into my Jekyll blog feed, then have a writeup a few Javascript parsing functions to pretty-fy and make the output a bit easier to use, and examples on how to integrate.
+Next, I'm going to integrate Tumblr into my Jekyll blog feed, add a writeup and a few Javascript parsing functions, and some examples on how it all works.
