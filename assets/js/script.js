@@ -8,6 +8,24 @@ $(document).ready(function() {
   });
 
 
+// var myfeed=new google.feeds.Feed("https://gdata.youtube.com/feeds/api/users/devinsupertramp/uploads")
+// var myfeed=new google.feeds.Feed("https://funkability.tumblr.com/api/read/")
+
+// myfeed.load(formatmsgs)
+
+// function formatmsgs(result){
+// var rssContent=""
+// if (!result.error){//if no error fetching RSS feed
+//   var thefeeds=result.feed.entries //get feed contents (JSON array)
+//   for (var i=0; i<thefeeds.length; i++)
+//     rssContent+="<a href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</a><br />"
+//     // document.getElementById("adiv").innerHTML=rssContent
+//     // console.log(rssContent)
+// }
+//   else //if error fetching feed, alert human readable error message
+//   alert(result.error.message)
+// }
+
 
 // ************************************************************
 // Button show / hide functionality
@@ -82,3 +100,5 @@ $(document).ready(function() {
    });
 
 }); // end .ready
+
+

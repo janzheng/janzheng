@@ -1,0 +1,93 @@
+---
+layout: post
+title: How to Embed Tumblr without a server
+summary: How to easily add Tumblr to a static site, without PHP or server-side code
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Code
+tags : [code, tumblr, embed, api, javascript]
+published : true
+portfolio : false
+---
+
+I've recently started "funkability":http://funkability.tumblr.com a usability and interaction design feed on Tumblr I'll probably get around to updating twice a year.
+
+More interested in the engineering aspects than posting, I've decided to fully integrate my tumblr feed into my blog. Apparently, the simple answer was a little more hidden than expected. Many solutions around the 'web and on Stack Exchange involve using server-side scripting. Because this site is hosted on Github, I don't have access to any scripting, so I had to think of something else. Here's that something else.
+
+
+h2. Simple Way:
+
+The easiest way to integrate a tumblr blog into a website is covered in "adrifolio's article":http://adrifolio.tumblr.com/post/487702548/how-to-embed-tumblr-on-your-website-and-customize-it
+
+Basically, you can add
+
+bc. <script type="text/javascript" src="http://funkability.tumblr.com/js"></script>
+
+to anywhere an unstyled but HTML-formatted tumblr dump to show up on your side, and style the output however you want with CSS.
+
+"Here's the JS":http://funkability.tumblr.com/js and "Here's the HTML":/assets/posts/tumblr-integration.html
+
+it looks nice if you want a simple feed on your site, for example if your main page only consists of your tumblr blog, or if you have a separate page dedicated to your tumblr. 
+
+But it's hard to work with, since can't customize the content and output easily. You don't get any meta-data, and you can't control the number of returned, and so on, making it hard to create controls like pagination or infinite scroll.
+
+
+
+
+h2. Hard Way:
+
+There's another way to get your Tumblr data however - by using the Tumblr API. Finlay covers the other popular method around the 'web "in his article":ttp://finlay.tumblr.com/post/529010691/embed-tumblr-into-your-website
+
+The gist is that you can retrieve an XML feed by using:
+
+bc. http://funkability.tumblr.com/api/read
+http://funkability.tumblr.com/api/read?start=0&num=1
+http://funkability.tumblr.com/api/read?start=0&num=1&type=text
+
+p. Much better! You receive your feed in a neatly formatted XML file. Great! You even get to select what and how many posts are returned! I post. I seriously got excited when I found this post. But then I saw the following: "So, using SimpleXML in PHP, we can tell our PHP look through for that tag, and then return it’s entire contents."
+
+Well, drats. I'm hosting my site on Github, which isn't exactly a full-featured web host (that's what I get for being cheap). Github doesn't have any server-side scripting enabled, so the many solutions in blogs and on StackExchange to use a server to essentially proxy the XML feed back to the page won't help. So how do we get around this "small" problem of not having PHP?
+
+Well, turns out the answer was on Tumblr's API site the entire time.
+
+
+
+h2. Better Way:
+
+Here's what "Tumblr has to say about API integration":http://www.tumblr.com/docs/en/api/v1
+
+They cover Finlay's method of using @http://(username).tumblr.com/api/read@ but also introduce a new method of returning JSON output:
+
+bc. <script type="text/javascript" src="http://(username).tumblr.com/api/read/json"></script>
+
+<script type="text/javascript">
+    // The variable "tumblr_api_read" is now set.
+    document.write(
+        '<a href="' + tumblr_api_read[1][0]['url'] + 
+        '">Most recent Tumblr post</a>'
+    );
+</script>
+
+Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how there is a much richer set of metadata using this method, nicely placed in the variable @tumblr_api_read@.
+
+With this variable, you can now easily extract the post information. For example, you can extract the link to your most recent post, using @tumblr_api_read['posts'][0]['url']@. (Note: for some reason the example @tumblr_api_read[1][0]['url']@ didn't work for me).
+
+For example, here is a link to <notextile>
+<script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
+<script type="text/javascript">
+document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">my most recent Tumblr post</a>');
+</script>
+</notextile>
+
+Here's the example code:
+
+bc. <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
+<script type="text/javascript">
+document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
+</script> 
+
+And there you go, you have full access to your Tumblr feed, using Javascript! 
+
+Next, I'm going to integrate Tumblr into my Jekyll blog feed, then have a writeup a few Javascript parsing functions to pretty-fy and make the output a bit easier to use, and examples on how to integrate.
