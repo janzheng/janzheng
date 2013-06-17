@@ -18,7 +18,7 @@
 
 @include media($small) {
   .collapsible, .collapsible-mobile, .btn-close, .btn-close-mobile{display: none;}
-  .collapsible-mobile{padding: 0.8em; background-color: $silver; @include clearfix;}
+  .collapsible-mobile{padding: 0.8em; padding-bottom: 2em; background-color: $silver; @include clearfix;}
 }
 @include media($medium) {
   .btn { @include span-columns(6);  }

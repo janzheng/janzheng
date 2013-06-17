@@ -24,7 +24,7 @@ a.contact-linkedin {
 }
 
 @include media($small) {
-  #contact {padding-top: 0.5em;}
+  #contact {padding-top: 0.5em; }
   #contact-container li{@include span-columns(2);}
 }
 
