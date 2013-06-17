@@ -18,7 +18,7 @@ I've recently started "funkability":http://funkability.tumblr.com a usability an
 More interested in the engineering aspects than posting, I've decided to fully integrate my tumblr feed into my blog. Apparently, the simple answer was a little more hidden than expected. Many solutions around the 'web and on Stack Exchange involve using server-side scripting. Because this site is hosted on Github, I don't have access to any scripting, so I had to think of something else. Here's that something else.
 
 
-h2. Simple Way:
+h2. The Simple Way:
 
 The easiest way to integrate a tumblr blog into a website is covered in "adrifolio's article":http://adrifolio.tumblr.com/post/487702548/how-to-embed-tumblr-on-your-website-and-customize-it
 
@@ -26,18 +26,16 @@ Basically, you can add
 
 bc. <script type="text/javascript" src="http://funkability.tumblr.com/js"></script>
 
-to anywhere an unstyled but HTML-formatted tumblr dump to show up on your side, and style the output however you want with CSS.
+to anywhere on your site, and an HTML-formatted tumblr dump will appear on your site. You can style the output however you want with CSS.
 
-"Here's the JS":http://funkability.tumblr.com/js and "Here's the HTML":/assets/posts/tumblr-integration.html
+"Here's what tumblr generates":http://funkability.tumblr.com/js and "here's the site output":/assets/posts/tumblr-integration.html
 
-it looks nice if you want a simple feed on your site, for example if your main page only consists of your tumblr blog, or if you have a separate page dedicated to your tumblr. 
-
-But it's hard to work with, since can't customize the content and output easily. You don't get any meta-data, and you can't control the number of returned, and so on, making it hard to create controls like pagination or infinite scroll.
+Yt looks nice if all you want a simple feed on your site, for example if your main page only consists of your tumblr blog, or if you have a separate page dedicated to your tumblr. But the output is flexible and hard to work with. You can't easily customize the output, and you don't get any meta-data. Create controls like pagination or infinite scroll would be inconvenient.
 
 
 
 
-h2. Hard Way:
+h2. The Complicated Way:
 
 There's another way to get your Tumblr data however - by using the Tumblr API. Finlay covers the other popular method around the 'web "in his article":ttp://finlay.tumblr.com/post/529010691/embed-tumblr-into-your-website
 
@@ -91,4 +89,4 @@ document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent
 
 And there you go, you have full access to your Tumblr feed, using Javascript! 
 
-Next, I'm going to integrate Tumblr into my Jekyll blog feed, then have a writeup a few Javascript parsing functions to pretty-fy and make the output a bit easier to use, and examples on how to integrate.
+Next, I'm going to integrate Tumblr into my Jekyll blog feed, add a writeup and a few Javascript parsing functions, and some examples on how it all works.
