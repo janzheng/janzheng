@@ -52,7 +52,7 @@ Well, turns out the answer was on Tumblr's API site the entire time.
 
 h2. The Better Way:
 
-Here's what "Tumblr has to say about API integration":http://www.tumblr.com/docs/en/api/v1
+Here's what "Tumblr has to say about API integration":http://www.tumblr.com/docs/en/api/v1:
 
 They cover Finlay's method, and introduce another method of returning JSON output. Add the following script to the end of the @<head>@ section of your website:
 
