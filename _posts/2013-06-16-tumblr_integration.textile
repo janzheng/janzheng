@@ -52,9 +52,9 @@ Well, turns out the answer was on Tumblr's API site the entire time.
 
 h2. The Better Way:
 
-Here's what "Tumblr has to say about API integration":http://www.tumblr.com/docs/en/api/v1:
 
-They cover Finlay's method, and introduce another method of returning JSON output. Add the following script to the end of the @<head>@ section of your website:
+Apparnetly, in addition to Finlay's method, "Tumblr has a way to return a JSON-formatted feed":http://www.tumblr.com/docs/en/api/v1.
+Add the following script to the end of the @<head>@ section of your website:
 
 bc. <script type="text/javascript" src="http://username.tumblr.com/api/read/json"></script>
 
