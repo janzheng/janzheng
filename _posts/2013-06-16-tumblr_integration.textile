@@ -66,11 +66,10 @@ bc. <script type="text/javascript" src="http://username.tumblr.com/api/read/json
     );
 </script>
 
-This snippet assigns a JSON object of your entire blog to variable @tumblr_api_read@. Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how there is a much richer set of metadata using this method.
+This snippet assigns a JSON object of your entire blog to a new variable called @tumblr_api_read@. Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how there is a much richer set of metadata using this method.
 
-With this variable, you can now easily extract the post information. For example, you can extract the link to your most recent post with @tumblr_api_read['posts'][0]['url'].
-
-For example, here is a link to <notextile>
+With this variable, you can now easily extract and control your posts. For example, you can extract the link to your most recent post with @tumblr_api_read['posts'][0]['url']@.
+As an example, here is a link to <notextile>
 <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
 <script type="text/javascript">
 document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">my most recent Tumblr post</a>');
@@ -88,5 +87,5 @@ bc.
     );
 </script>
 
-And there you go, you have full access to your Tumblr feed, using only Javascript, and not an ounce of having to learn PHP or how to set up your server. 
+And there you go, you have full access to your Tumblr feed, using only Javascript, and not an ounce of PHP or server-side. 
 
