@@ -87,5 +87,5 @@ bc.
     );
 </script>
 
-And there you go, you have full access to your Tumblr feed, using only Javascript, and not an ounce of PHP or server-side. 
+And there you go. You now have full access to modify and control your Tumblr feed, using only Javascript, and not an ounce of PHP or server-side. 
 
