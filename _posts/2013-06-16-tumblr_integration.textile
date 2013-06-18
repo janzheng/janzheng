@@ -22,16 +22,13 @@ h2. The Simple Way:
 
 The easiest way to integrate a tumblr blog into a website is covered in "adrifolio's article":http://adrifolio.tumblr.com/post/487702548/how-to-embed-tumblr-on-your-website-and-customize-it
 
-Basically, you can add
-
 bc. <script type="text/javascript" src="http://funkability.tumblr.com/js"></script>
 
-to anywhere on your site, and an HTML-formatted tumblr dump will appear on your site. You can style the output however you want with CSS.
+You basically add the above anywhere you want your tumblr feed to show up, and an HTML-formatted tumblr dump will appear on your site. You can then style the output with CSS.
 
-"Here's what tumblr generates":http://funkability.tumblr.com/js and "here's the site output":/assets/posts/tumblr-integration.html
+"Here's what the tumblr dump looks like":/assets/posts/tumblr-integration.html
 
-Yt looks nice if all you want a simple feed on your site, for example if your main page only consists of your tumblr blog, or if you have a separate page dedicated to your tumblr. But the output is flexible and hard to work with. You can't easily customize the output, and you don't get any meta-data. Create controls like pagination or infinite scroll would be inconvenient.
-
+It's ok if you only want a simple feed on your site, but the output is inflexible and hard to work with. You can't easily customize the output, you don't get meta-data, and can't easily add controls like pagination or infinite scroll to this content.
 
 
 
@@ -45,21 +42,21 @@ bc. http://funkability.tumblr.com/api/read
 http://funkability.tumblr.com/api/read?start=0&num=1
 http://funkability.tumblr.com/api/read?start=0&num=1&type=text
 
-p. Much better! You receive your feed in a neatly formatted XML file. Great! You even get to select what and how many posts are returned! I post. I seriously got excited when I found this post. But then I saw the following: "So, using SimpleXML in PHP, we can tell our PHP look through for that tag, and then return it’s entire contents."
+p. Much better! You receive your feed in a neatly formatted XML file. Great! You even get to select what and how many posts are returned! I seriously got excited... until I saw: "So, using SimpleXML in PHP, we can tell our PHP look through for that tag, and then return it’s entire contents."
 
-Well, drats. I'm hosting my site on Github, which isn't exactly a full-featured web host (that's what I get for being cheap). Github doesn't have any server-side scripting enabled, so the many solutions in blogs and on StackExchange to use a server to essentially proxy the XML feed back to the page won't help. So how do we get around this "small" problem of not having PHP?
+Well, drats. I'm hosting my site on Github, which isn't exactly a full-featured web host (that's what I get for being cheap). Github doesn't have any server-side scripting enabled, so the many solutions in blogs and on StackExchange to use a server to essentially proxy the XML feed back to my site won't help. I can't use JS to request the feed, because it's sitting on another domain. So how do we get around this "small" problem of not having PHP?
 
 Well, turns out the answer was on Tumblr's API site the entire time.
 
 
 
-h2. Better Way:
+h2. The Better Way:
 
 Here's what "Tumblr has to say about API integration":http://www.tumblr.com/docs/en/api/v1
 
-They cover Finlay's method of using @http://(username).tumblr.com/api/read@ but also introduce a new method of returning JSON output:
+They cover Finlay's method, and introduce another method of returning JSON output. Add the following script to the end of the @<head>@ section of your website:
 
-bc. <script type="text/javascript" src="http://(username).tumblr.com/api/read/json"></script>
+bc. <script type="text/javascript" src="http://username.tumblr.com/api/read/json"></script>
 
 <script type="text/javascript">
     // The variable "tumblr_api_read" is now set.
@@ -69,9 +66,9 @@ bc. <script type="text/javascript" src="http://(username).tumblr.com/api/read/js
     );
 </script>
 
-Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how there is a much richer set of metadata using this method, nicely placed in the variable @tumblr_api_read@.
+This snippet assigns a JSON object of your entire blog to variable @tumblr_api_read@. Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how there is a much richer set of metadata using this method.
 
-With this variable, you can now easily extract the post information. For example, you can extract the link to your most recent post, using @tumblr_api_read['posts'][0]['url']@. (Note: for some reason the example @tumblr_api_read[1][0]['url']@ didn't work for me).
+With this variable, you can now easily extract the post information. For example, you can extract the link to your most recent post with @tumblr_api_read['posts'][0]['url'].
 
 For example, here is a link to <notextile>
 <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
@@ -80,13 +77,16 @@ document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">my most rec
 </script>
 </notextile>
 
-Here's the example code:
+Here's the example code. After you've inserted the previous code at the end of @<head>@, insert the following code anywhere you cant your link to show up.
 
-bc. <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
+bc. 
 <script type="text/javascript">
-document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
-</script> 
+    // The variable "tumblr_api_read" is now set.
+    document.write(
+        '<a href="' + tumblr_api_read['posts][0]['url'] + 
+        '">My most recent Tumblr post</a>'
+    );
+</script>
 
-And there you go, you have full access to your Tumblr feed, using Javascript! 
+And there you go, you have full access to your Tumblr feed, using only Javascript, and not an ounce of having to learn PHP or how to set up your server. 
 
-Next, I'm going to integrate Tumblr into my Jekyll blog feed, add a writeup and a few Javascript parsing functions, and some examples on how it all works.
