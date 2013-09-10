@@ -1,0 +1,20 @@
+---
+layout: post
+title: Creating a Site with Github and Jekyll
+summary: It's incredibly powerful, and incredibly free. Rad.
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- image-icon: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Web
+tags : [Web Design, Blogging, Github]
+published : false
+portfolio : no
+
+---
+
+http://www.nerdblog.com/2012/10/a-day-with-philips-hue.html?showComment=1352172383498
+http://developers.meethue.com/
+http://www.shatteredhaven.com/2012/12/1379365-colorful-lights-hacking-philips.html
+https://groups.google.com/forum/#!forum/hue-hackers
