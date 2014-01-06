@@ -32,7 +32,7 @@ a.bttn {
 }
 
 a.bttn:hover, a.bttn:active, a.bttn.clicked {
-    background-color: $dark-gray; color: $silver;
+    background-color: $dark-gray; color: $silver; 
     @include ease-transition(200ms);
 }
 
