@@ -1,6 +1,38 @@
+
+{% assign url = page.url|remove:'index.html' %}
+{% assign navlist = site.navigation %}
+
+<div id="menu-container">
+	<ul>
+		{% for item in navlist %} 
+		{% if url == item.url %}
+			<li><a href="{{item.url}}" class=" active bttn menu-btn">{{item.text}}</a></li>
+		{% else %}
+			<li><a href="{{item.url}}" class=" bttn menu-btn">{{item.text}}</a></li>
+		{% endif %}
+		{% endfor %}
+
+	</ul>
+</div>
+
+
+<!-- 
+
 <div id="menu-container">
    <ul>
       <li id="menu-blog"><a href="/" class="bttn">blog</a></li>
       <li id="menu-email"><a href="/about.html" class="bttn">about</a></li>
    </ul>
 </div>
+
+
+
+               <div class="links">
+                  {% for item in navlist %} 
+                     {% if url == item.url %}
+                        <a class="active" href="{{item.url}}">{{item.text}}</a> 
+                     {% else %}
+                        <a {% if url contains item.url and forloop.index > 1 %} class="active" {% endif %} href="{{item.url}}">{{item.text}}</a> 
+                     {% endif %}
+                  {% endfor %}
+               </div> -->

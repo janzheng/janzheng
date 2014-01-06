@@ -1,3 +1,19 @@
+
+
+
+Portfolio v2
+
+Cool layout:
+https://medium.com/design-things/61ef4f88218a
+
+Use Flexboxes / ProtoWire to rewrite
+- Use the menu-system properly
+- Add more work
+
+
+—————————
+
+
 Make it simple, but significant (Mad Men)
 "I make experiences fun & functional"
 

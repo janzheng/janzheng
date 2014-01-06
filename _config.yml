@@ -15,5 +15,14 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "
 auto: true
 
 
+navigation:
+ - text: home
+   url: /
+ - text: portfolio
+   url: /about.html
+ - text: resume
+   url: /resume.pdf
+
+
 # don't forget to separately set Google Analytics and Facebook Comments
 # alternately, use Tumblr to post

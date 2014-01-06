@@ -1,0 +1,64 @@
+---
+layout: post
+title: Textile Primer
+summary: A quick handy guide to writing posts in Textile. 
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Gane Design
+tags : [Gane Design, Narrative]
+published: false
+portfolio: false
+---
+
+PayPal:
+
+One form, have to do two. No PHP access.
+Use JS to whip up a new form:
+
+hook onClick or onSubmit to payPalSubmit function
+
+
+<script type="text/javascript">
+ function payPalSubmit(form){
+ 
+paypal=document.createElement('FORM');
+paypal.name='newPayPal';
+paypal.target='_blank';
+paypal.method='POST';
+paypal.action='https://www.sandbox.paypal.com/cgi-bin/webscr';
+
+newField=document.createElement('INPUT');
+newField.type='hidden';
+newField.name='cmd';
+newField.value='_xclick';
+paypal.appendChild(newField);
+
+newField=document.createElement('INPUT');
+newField.type='hidden';
+newField.name='business';
+newField.value='janeazy@gmail.com';
+paypal.appendChild(newField);
+
+newField=document.createElement('INPUT');
+newField.type='hidden';
+newField.name='currency_code';
+newField.value='USD';
+paypal.appendChild(newField);
+
+newField=document.createElement('INPUT');
+newField.type='hidden';
+newField.name='item_name';
+newField.value='Teddy Bear';
+paypal.appendChild(newField);
+
+newField=document.createElement('INPUT');
+newField.type='hidden';
+newField.name='amount';
+newField.value='amount';
+
+document.body.appendChild(paypal);
+paypal.submit();
+}
+</script>

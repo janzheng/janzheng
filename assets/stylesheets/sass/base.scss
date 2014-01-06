@@ -207,8 +207,12 @@ body {
         #menu {
           padding-top: 0; margin-top: 0; 
 
-          #menu-blog{@include span-columns(3);}
-          #menu-email{@include span-columns(3);}
+          // .menu-btn{@include span-columns(3);}
+          .active {
+            font-weight: bold;
+            background-color: $color3;
+          }
+          
         }
 
       }
@@ -223,6 +227,24 @@ body {
         @include media($short) {
           height: 100%;
           position: fixed;
+        }
+
+        // .menu-btn{@include span-columns(3);}
+        .active {
+          font-weight: bold;
+          background-color: $color3;
+          a:hover {color: black}
+        }
+        .active:after {
+          content:' ';
+          z-index: 100;
+          position: absolute;
+          width: 0; 
+          height: 0; 
+          right: -5px; margin-top: 3px;
+          border-top: 6px solid transparent;
+          border-bottom: 6px solid transparent;
+          border-left: 8px solid $color3;
         }
       }
 
