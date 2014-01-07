@@ -23,7 +23,7 @@ a.bttn {
     background-color: $silver;
     @include media($small) {background-color: $light-gray;}
     border: 1px solid $silver;
-    color: $dark-gray;
+    color: $dark-gray; 
 
     @include font-body($f3*1.3, 300);
     text-align: center; text-decoration: none;
@@ -31,9 +31,10 @@ a.bttn {
     @include media($medium){@include set-radius(3px);} /*round corners for medium and up*/
 }
 
-a.bttn:hover, a.bttn:active, a.bttn.clicked {
-    background-color: $dark-gray; color: $silver; 
+a.bttn:not(.active):hover, a.bttn:active, a.bttn.clicked {
+    background-color: $color3; color: $silver; 
     @include ease-transition(200ms);
+    .dl-svg {fill: white;}
 }
 
 .slides a  { text-decoration: none; color: #333;}

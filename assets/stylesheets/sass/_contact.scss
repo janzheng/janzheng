@@ -3,24 +3,29 @@ $color-contact: $color3;
 
 @mixin bttn-contact {background-size: 25px auto; height: 3em;}
 
-a.bttn-contact, a.bttn-contact:active, a.bttn-contact.clicked, a.bttn-contact:visited{
-  background-color: $color-contact;
-}
+// a.bttn-contact, a.bttn-contact:active, a.bttn-contact.clicked, a.bttn-contact:visited{
+//   background-color: $color-contact;
+// }
 
 a.contact-email {
-  background: $color-contact url('/assets/images/email.png') no-repeat center;
+  background: rgba($color-contact,0.5)  url('/assets/images/email.png') no-repeat center;
   @include bttn-contact;
-  &:hover{background-color: $color7;}
+  &:hover{background-color: $color2 !important;}
 }
 a.contact-twitter {
-  background: $color-contact url('/assets/images/twitter.png') no-repeat center;
+  background: rgba($color-contact,0.5)  url('/assets/images/twitter.png') no-repeat center;
   @include bttn-contact;
-  &:hover{background-color: $color8;}
+  &:hover{background-color: $color2 !important;}
 }
 a.contact-linkedin {
-  background: $color-contact url('/assets/images/linkedin.png') no-repeat center;
+  background: rgba($color-contact,0.5)  url('/assets/images/linkedin.png') no-repeat center;
   @include bttn-contact;
-  &:hover{background-color: $color7;}
+  &:hover{background-color: $color2 !important;}
+}
+
+.rss-svg {
+  fill: $color8 !important;
+  &:hover {background-color: none !important; fill: white !important;}
 }
 
 @include media($small) {
