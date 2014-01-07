@@ -10,12 +10,12 @@ layout: none
 <body>	
 	<div class="container">
     <div id="sidebar" >
-      <div id="color-palette">
+      <div class="color-palette color-top">
         <div id="c1"></div><div id="c2"></div><div id="c3"></div><div id="c4"></div><div id="c5"></div>
         <div id="a1"></div><div id="a2"></div><div id="a3"></div><div id="a4"></div><div id="a5"></div>
       </div>
   
-      <div class="content">
+      <div class="content {% if page.menu != 'full' %} short-menu{% else %}full-menu {% endif %} " >
 
         <div class="expandable">
           <div id="logo">{% include logo.html %}</div>
@@ -32,12 +32,13 @@ layout: none
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="clear"></div>
 
 	  <div id="main">
-  	  <div class="content">
+  	  <div class="content {% if page.menu != 'full' %} full-content{% else %}short-content {% endif %}">
         <!-- <div id="taglist">{% include taglist.html %}</div> -->
   	    {{ content }}
   	  </div>
@@ -45,11 +46,14 @@ layout: none
         <p id="fine-print">
           Hosted by <a href="https://github.com/janzheng/janzheng.github.com">Github</a> and powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
         </p>
+        
         <div class="clear"></div>
       </div>
 	  </div>
 
+
 	</div>
+
   {% include script.html %}
 </body>
 </html>

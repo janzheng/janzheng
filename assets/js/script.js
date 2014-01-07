@@ -64,11 +64,11 @@ $(document).ready(function() {
                var width = $(window).width();
        
               //show buttons and hide content if in mobile view
-               if( width > 470 ) {
+               if( width >= 470 ) {
                   // medium and large
                   $('.btn-open-mobile, .btn-close-mobile').hide();
                   $('.collapsible-mobile').show();
-               } else if( width <= 470 ) {
+               } else if( width < 470 ) {
                    // code for mobile portrait
                   $('.collapsible-mobile, .btn-close-mobile').hide();
                   $('.btn-open-mobile').show();

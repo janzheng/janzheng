@@ -70,9 +70,10 @@ $highlight-text: $color2;
 
 
 // respsonsive
-$break-small: 470px;
+$break-small: 469px;
 $break-medium: 730px;
 $break-large: 996px;
+$break-infinite: 1300px;
 
 // neat bourbon setup... doesn't seem to work?
 $visual-grid: true;
@@ -84,6 +85,7 @@ $max-width: $break-large;
 $small: new-breakpoint(max-width $break-small 6);
 $medium: new-breakpoint(min-width $break-small 12);
 $large: new-breakpoint(min-width $break-medium 12);
+$infinite: new-breakpoint(min-width $break-infinite 12);
 
 $not-large: new-breakpoint(max-height $break-large 12);
 
@@ -91,8 +93,8 @@ $not-small: new-breakpoint(min-width $break-small 12);
 $not-large: new-breakpoint(max-width $break-large 12);
 
 //for sticky menu
-$break-tall: 410px;
-$break-short: 520px;
+$break-tall: 465px;
+$break-short: 575px;
 $short: new-breakpoint(min-height $break-short 12);
 $tall: new-breakpoint(min-height $break-tall 12);
 

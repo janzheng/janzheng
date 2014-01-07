@@ -7,6 +7,10 @@ $color-contact: $color3;
 //   background-color: $color-contact;
 // }
 
+.contact-rss {
+  text-align: center;
+}
+
 a.contact-email {
   background: rgba($color-contact,0.5)  url('/assets/images/email.png') no-repeat center;
   @include bttn-contact;
@@ -23,9 +27,13 @@ a.contact-linkedin {
   &:hover{background-color: $color2 !important;}
 }
 
+.a-nofx { &:hover {background-color: transparent; } }
 .rss-svg {
+  text-align: center;
   fill: $color8 !important;
-  &:hover {background-color: none !important; fill: white !important;}
+  max-height:21px !important;
+  max-width:21px !important;
+  &:hover {fill: $color1 !important;}
 }
 
 @include media($small) {
@@ -40,5 +48,7 @@ a.contact-linkedin {
 
 @include media($large) {
   #contact {@include span-columns(12); padding-top: 0.5em;}
-  #contact-container li{@include span-columns(4);}
+  // #contact-container li{@include span-columns(4);}
+  .full-menu { #contact-container li{@include span-columns(4);} }
+  .short-menu { #contact-container li{@include span-columns(12);} }
 }

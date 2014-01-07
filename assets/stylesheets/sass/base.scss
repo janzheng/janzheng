@@ -17,10 +17,6 @@
 
 @import 'google';
 
-
-//@import 'syntax2';    // this is for Pygments code highlighting; won't work locally bc Python not installed
-
-// @import  'pastie';
  
 
 
@@ -55,6 +51,10 @@ body {
     }
 
     #about {
+      #about-link {
+        text-decoration: none; display: block;
+        &:hover {color: inherit; background-color: $color2; }
+      }
       #about-container {
         border-top: 1px solid $light-gray; 
         border-bottom: 1px solid $light-gray;
@@ -85,13 +85,14 @@ body {
 
   #main {
     .post-taglist {
-      margin: 0.6em 0 0.7em 0 ;
+      margin: 0.6em 0 0.7em 0;
       // margin-top: 1.5em;
       li{
         @include font-tip($f3, 300);
         display: inline;
         content: ',';
         color: $color4;
+        &:before {content: '#'}
 
         /* once we have clickable tags
         border: 1px solid $gray;
@@ -201,12 +202,13 @@ body {
       }
 
       .content {
-        @include outer-container;
-        @include span-columns(6);
+        // @include outer-container;
+        // @include span-columns(6);
+
         #menu {
           padding-top: 0; margin-top: 0; 
 
-          // .menu-btn{@include span-columns(3);}
+          .menu-btn{text-align: left;}
           .active {
             background-color: $color2;          
           }
@@ -219,32 +221,43 @@ body {
           max-width:16px;
           fill: $color4;
         }
+
+
+
+        //add a narrow menu effect for certain content-heavy pages
+        &.short-menu {
+          //menu triangle
+          .active:after {margin-top: 19px;}
+        }
+      
       }
     }
 
     @include media($medium) {
-      @include span-columns(6);
       .content {
         // this makes menu sticky, but only above a certain height
         width: 22%;
+
         position: absolute;
         @include media($short) {
           height: 100%;
           position: fixed;
         }
 
-        // .menu-btn{@include span-columns(3);}
+        .menu-btn{text-align: left;}
         .active {
           background-color: $color2;
           a:hover {color: black}
         }
+        //menu triangle
         .active:after {
+          display: block;
           content:' ';
           z-index: 100;
           position: absolute;
           width: 0; 
           height: 0; 
-          right: -7px; margin-top: 3px;
+          right: -8px; margin-top: -15px;
           border-top: 6px solid transparent;
           border-bottom: 6px solid transparent;
           border-left: 8px solid $silver;
@@ -255,6 +268,29 @@ body {
           max-height:16px;
           max-width:16px;
           fill: $color4;
+        }
+
+
+        //add a narrow menu effect for certain content-heavy pages
+        &.short-menu {
+          width: 8%;
+          .menu-text{display: none;}
+
+          .svg {
+            max-height:32px;
+            max-width:32px;
+          }
+          .rss-svg {
+            max-height:32px;
+            max-width:32px;
+          }
+
+          .menu-btn{text-align: center; padding-left: 0; padding-right: 0}
+
+          #about, #logo-slogan {display: none;}
+
+          //menu triangle
+          .active:after {margin-top: -25px;}
         }
         
       }
@@ -267,22 +303,45 @@ body {
         // this makes menu sticky
         height: 100%;
 
+        .menu-btn{padding-left: 40px;}
         position: absolute;
         @include media($tall) {
           height: 100%;
           position: fixed;
         }
 
+        //menu triangle
+        .active:after {
+          right: 13px; display: block;
+        }
+
         width: $gutter+$column*3;
+        padding-right: 20px;
+
+
+        //add a narrow menu effect for certain content-heavy pages
+        &.short-menu {
+          width: 80px;
+          .menu-btn{text-align: center; padding-left: 0; padding-right: 0;} 
+          //menu triangle
+          // .active:after {margin-top: 9px;}
+        }
       }
+    }
 
 
+    @include media($infinite) {
+
+      .content {
+
+        &.short-menu {
+          width: 6%;
+        }
+
+      }
     }
 
   }
-
-
-
 
 /*
 
@@ -294,54 +353,64 @@ body {
 
 
   #main {
-    @include clearfix;
-    padding-bottom: 4em;
-    .post {margin-bottom: 0; padding-left: 1em; padding-right: 1em}
-    .post-list {margin-top: 0; margin-bottom: 0; padding-left: 1em;}
-    .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none;}
-    .post-contentwrapper { @include span-columns(12); }
-    .post-maincontent { @include media($large) {@include span-columns(8); margin-bottom: 4em;} }
-    .post-sidebar { @include media($large) {@include span-columns(4); } margin-top: 1em;}
+    .content{
+      @include clearfix;
+      padding-top: 2.5em;
+      padding-bottom: 4em;
+      .post {margin-bottom: 0; padding-left: 1em; padding-right: 1em}
+      .post-list {margin-top: 0; margin-bottom: 0; padding-left: 1em;}
+      .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none;}
+      .post-contentwrapper { @include span-columns(12); }
+      .post-maincontent { @include media($large) {@include span-columns(8); margin-bottom: 4em;} }
+      .post-sidebar { @include media($large) {@include span-columns(4); } margin-top: 1em;}
 
-    .post-sidebar-column {
-      border-left: 1px solid $color3;
-      padding: 0.6em;
-      margin-bottom: 0.6em;
-      span { display: block; @include font-body($f3*1.21, 400, 1.45em); }
-    }
+      .post-sidebar-column {
+        border-left: 1px solid $color3;
+        padding: 0.6em;
+        margin-bottom: 0.6em;
+        span { display: block; @include font-body($f3*1.21, 400, 1.45em); }
+      }
 
-    @include media($small) {
-      .post-date {@include font-tip($f3, 300); }
-      h1 {@include font-body($f1*0.9, 300); padding-top: 0.6em; }
-      .post-summary{@include font-body($f2*0.96, 400); margin: 0.4em 0 0.4em 0; }
-      .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
-      .post-imageframe {padding: 1em 1em 0 0;}
-      .post-image {width:auto; height: auto;}
-      .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} }
-      .post {margin-top: 1em; @include span-columns(6); }
-    }
+      @include media($small) {
+        .post-date {@include font-tip($f3, 300); }
+        h1 {@include font-body($f1*0.9, 300); padding-top: 0.6em; }
+        .post-summary{@include font-body($f2*0.96, 400); margin: 0.4em 0 0.4em 0; }
+        .post {border-left: 0px; border-right: 0px; @include set-radius(0);}
+        .post-imageframe {padding: 1em 1em 0 0;}
+        .post-image {width:auto; height: auto;}
+        .post-body {padding-top: 1em; padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} }
+        .post {margin-top: 1em; @include span-columns(6); }
+      }
 
-    @include media($medium) {
-      @include span-columns(9);
-      @include shift (3);
+      @include media($medium) {
 
-      //typography
-      .post-date {@include font-tip($f3, 300); display:block; }
-      h1 {@include font-body($f1*0.9, 300); padding-top: 0.6em; }
-      .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
-      .post-image {width:auto;height: auto;}
-      .content {display: block; padding-top: 3em;}
-      .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} @include span-columns(12); }
-    }
+        //typography
+        .post-date {@include font-tip($f3, 300); display:block; }
+        h1 {@include font-body($f1*0.9, 300); padding-top: 0.6em; }
+        .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
+        .post-image {width:auto;height: auto;}
+        .content {display: block; padding-top: 3em;}
+        .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} @include span-columns(12); }
 
-    @include media($large) {
-      @include span-columns(9);
+        &.full-content {
+          @include span-columns(11);
+          @include shift (1);
+        }
+        &.short-content{
+          @include span-columns(9);
+          @include shift (3);
+        }
+      }
 
-      //typography
-      .post-date {@include font-tip($f3, 300); display:block;}
-      h1 {@include font-body($f1, 300); padding-top: 0.6em; }
-      .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
-      .post-body {@include span-columns(12); }
+      @include media($large) {
+        @include span-columns(9);
+
+        //typography
+        .post-date {@include font-tip($f3, 300); display:block;}
+        h1 {@include font-body($f1, 300); padding-top: 0.6em; }
+        .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
+        .post-body {@include span-columns(12); }
+      }
     }
   }
   

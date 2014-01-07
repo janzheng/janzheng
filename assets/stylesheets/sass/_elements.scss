@@ -32,9 +32,8 @@ a.bttn {
 }
 
 a.bttn:not(.active):hover, a.bttn:active, a.bttn.clicked {
-    background-color: $color3; color: $silver; 
+    background-color: $color2; color: $dark-gray; 
     @include ease-transition(200ms);
-    .dl-svg {fill: white;}
 }
 
 .slides a  { text-decoration: none; color: #333;}
@@ -46,14 +45,21 @@ a.bttn:not(.active):hover, a.bttn:active, a.bttn.clicked {
 
 }
 
+.prettyprinted {
+  margin: 12px auto;
+}
+code {background-color: #333; padding: 3px; color: #ddd;}
+
 blockquote {margin: 0; padding: 4px 1em 1em 2em; background-color: $color2; border-left: 6px solid $color3; @include font-tip($f2, 300, auto); font-style: italic}
 
 
+// Google Prettyprint modifications
+// tends to add some weird empty "pln" class that adds space
+// .pln {display: none;}
+
 //something I used for coloring, but decided to keep
-#color-palette {
+.color-palette {
   position: absolute;
-  top: 0px;
-  left: 0px;
   width: 100%;
   height: auto;
 
@@ -75,6 +81,14 @@ blockquote {margin: 0; padding: 4px 1em 1em 2em; background-color: $color2; bord
     z-index: 2000;
     // background-color: $color1;
   }
+
+  &.color-top {
+    top: 0px;
+    left: 0px;
+  }
+  &.color-bot {
+    // bottom: 0px;
+  }
 }
 
 
@@ -86,18 +100,38 @@ html, body, #container, .expandable, .collapsible-mobile {
     @include ease-transition(200ms);
 }
 
-.sticky-wrapper {
-  min-height: 100%;
-  @include media($medium){margin: 0 auto -32em; }
-  @include media($large){margin: 0 auto -23em; }
+.full-menu {
+  .sticky-wrapper {
+    min-height: 100%;
+
+    // this value is how high the contact area of the sidebar should float towards the bottom
+    @include media($medium){margin: 0 auto -32em; }
+    @include media($large){margin: 0 auto -24em; }
+
+    footer, .push {
+    // this value is how narrow the browser window can get before the sidebar contact area unsticks
+        @include media($medium){height: 32em;}
+        @include media($large){height: 24em;}
+    }
+  }
 }
 
-footer, .push {
-    @include media($medium){height: 32em;}
-    @include media($large){height: 23em;}
+.short-menu {
+  .sticky-wrapper {
+    min-height: 100%;
+    @include media($medium){margin: 0 auto -20em; }
+    @include media($large){margin: 0 auto -20em; }
+
+    footer, .push {
+        @include media($medium){height: 20em;}
+        @include media($large){height: 20em;}
+    }
+  }
 }
+
 
 footer {@include media($small){height: 4em;}}
+#fine-print {font-size: $base*0.8;}
 
 .left-edge {border-left: 1px solid $color3;}
 

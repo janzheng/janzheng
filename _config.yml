@@ -16,7 +16,7 @@ auto: true
 
 
 navigation:
- - text: home
+ - text: blog
    url: /
  - text: portfolio
    url: /about.html
