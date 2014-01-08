@@ -1,7 +1,7 @@
 
     
 // settings
-@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Open+Sans:300,400);
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Open+Sans:300,400,400italic);
 
 
 //colors
@@ -114,11 +114,11 @@ $tinyfont: $base * 0.82;
 
 
 @mixin ease-transition($speed){
-    -webkit-transition: $speed ease;
-    -moz-transition: $speed ease;
-    -ms-transition: $speed ease;
-    -o-transition: $speed ease;
-    transition: $speed ease;
+    -webkit-transition: all $speed ease;
+    -moz-transition: all $speed ease;
+    -ms-transition: all $speed ease;
+    -o-transition: all $speed ease;
+    transition: all $speed ease;
 }
 
 @mixin set-radius($rad){

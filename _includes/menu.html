@@ -6,7 +6,7 @@
 	<ul>
 		{% for item in navlist %} 
 		{% if url == item.url %}
-			<li><a href="{{item.url}}" class=" active bttn menu-btn">
+			<li><a href="{{item.url}}" class="active bttn menu-btn" data-text="{{item.text}}">
 
 			{% if item.text == 'blog' %}
 				<svg class="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <path id="speech-bubble-14-icon" d="M440.704,391.771C454.312,375.362,462,354.216,462,332.679c0-35.26-19.864-65.01-49.435-83.766
@@ -28,7 +28,7 @@ c19.564,14.066,31.901,34.5,31.901,57.207c0,22.273-9.612,36.297-23.179,50.127C412
 			<span class="menu-text">{{item.text}}</span>
 		</a></li>
 		{% else %}
-			<li><a href="{{item.url}}" class=" bttn menu-btn">
+			<li><a href="{{item.url}}" class="bttn menu-btn" data-text="{{item.text}}">
 
 				{% if item.text == 'blog' %}
 					<svg class="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <path id="speech-bubble-14-icon" d="M440.704,391.771C454.312,375.362,462,354.216,462,332.679c0-35.26-19.864-65.01-49.435-83.766

@@ -50,7 +50,8 @@ a.bttn:not(.active):hover, a.bttn:active, a.bttn.clicked {
 }
 code {background-color: #333; padding: 3px; color: #ddd;}
 
-blockquote {margin: 0; padding: 4px 1em 1em 2em; background-color: $color2; border-left: 6px solid $color3; @include font-tip($f2, 300, auto); font-style: italic}
+blockquote {margin: 0; padding: 5px 1em 5px 2em; background-color: $silver; border-left: 3px solid $color1; 
+   p{font-size: 0.9em !important; font-weight: 400; font-style: italic !important; margin-top: 0 !important;}}
 
 
 // Google Prettyprint modifications
@@ -100,6 +101,7 @@ html, body, #container, .expandable, .collapsible-mobile {
     @include ease-transition(200ms);
 }
 
+// homepage menu
 .full-menu {
   .sticky-wrapper {
     min-height: 100%;
@@ -116,15 +118,16 @@ html, body, #container, .expandable, .collapsible-mobile {
   }
 }
 
+// content menu (less wide, icons)
 .short-menu {
   .sticky-wrapper {
     min-height: 100%;
-    @include media($medium){margin: 0 auto -20em; }
-    @include media($large){margin: 0 auto -20em; }
+    @include media($medium){margin: 0 auto -21em; }
+    @include media($large){margin: 0 auto -21em; }
 
     footer, .push {
-        @include media($medium){height: 20em;}
-        @include media($large){height: 20em;}
+        @include media($medium){height: 21em;}
+        @include media($large){height: 21em;}
     }
   }
 }
@@ -159,8 +162,7 @@ footer {@include media($small){height: 4em;}}
 
 .solidline {
     @include ui-separator;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    // margin-top: 3px; margin-bottom: 3px;
 }
 
 

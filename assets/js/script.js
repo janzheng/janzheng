@@ -8,6 +8,15 @@ $(document).ready(function() {
   });
 
 
+// set background images for posts with bg-images on homepage
+$('.post-list').each(function(){
+  var bg = $(this).data("bg");
+  if(typeof $(this).data("bg") != 'undefined') {
+    console.log('exists')
+    $(this).css('background-image', 'url(' + bg + ')');
+  } 
+});
+
 // ************************************************************
 // Button show / hide functionality
 //initially hide all collapsible areas (specified in CSS)

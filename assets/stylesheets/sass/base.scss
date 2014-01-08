@@ -35,12 +35,28 @@ body {
       text-align: center;
       @include font-tip($f3, 300);
 
-      #logo-image {
+      img {
         margin-top: 3em;
         width: 88%;
         max-width: 170px;
         height: auto;
       }
+
+      //triggered to show/hide the larger or smaller logo version,
+      //but always show larger one on mobile view
+      #logo-hidden {
+        display: none;
+      }
+      @include media($small) {
+        .logo-short {display: none}
+        .logo-full {display: inline !important;}
+        // &.logo-full {display: none !important}
+      }
+      @include media($medium) {
+        // .logo-short {display: inline}
+        // &.logo-full {display: none !important}
+      }
+    
     }
 
     #slogan {
@@ -156,7 +172,6 @@ body {
     .experience-desc p { @include font-body($f3*1.2, 400, 1.6em); margin-top: 0.8em; }
     .experience-desc li { @include font-body($f3*1.2, 400, 1.6em); margin-top: 0.6em;}
 }
-
 
 
 // general responsive 
@@ -286,6 +301,23 @@ body {
           }
 
           .menu-btn{text-align: center; padding-left: 0; padding-right: 0}
+          .menu-btn:not(.active):hover:after{
+            content: attr(data-text);
+            position: absolute; margin-top: -7px;
+            padding: 15px 10px; border-radius: 4px; border-top-left-radius: 0px; border-bottom-left-radius: 0px;
+            left: 70px; background: $silver;
+          }
+          .menu-btn:hover:before{
+            display: block;
+            content:' ';
+            z-index: 100;
+            position: absolute;
+            width: 0; 
+            height: 0; margin-top: 13px; left: 62px;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-right: 8px solid $color4;
+          }
 
           #about, #logo-slogan {display: none;}
 
@@ -322,6 +354,7 @@ body {
         //add a narrow menu effect for certain content-heavy pages
         &.short-menu {
           width: 80px;
+          left: 20px;
           .menu-btn{text-align: center; padding-left: 0; padding-right: 0;} 
           //menu triangle
           // .active:after {margin-top: 9px;}
@@ -357,9 +390,25 @@ body {
       @include clearfix;
       padding-top: 2.5em;
       padding-bottom: 4em;
-      .post {margin-bottom: 0; padding-left: 1em; padding-right: 1em}
-      .post-list {margin-top: 0; margin-bottom: 0; padding-left: 1em;}
-      .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none;}
+      .post {
+        margin-bottom: 0; padding-left: 1em; padding-right: 1em;
+      }
+      .post-list {margin-top: 0; margin-bottom: 0; padding-left: 1em; @include ease-transition(200ms);}
+      .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none; position: relative;}
+      
+      // special case for posts with bg image. Only supports 1 line of text, different bg colors
+      .post-list-bg { 
+        height: 230px; background-position: 50%;
+        .post-info { position: absolute; bottom: 10px; .meta-data { position: relative; top: -7px; }} 
+        h1 { display: inline; color: $color6; background-color: rgba(white, 0.8); padding: 0 6px;}
+        .post-summary { color: $color6; background-color: rgba(white, 0.8); padding: 0 6px; }
+        .post-taglist {li {color: $color6; background-color: rgba(white, 0.8); padding: 2px; } }
+
+        &:hover {
+          h1, .post-summary, .post-taglist li{ color: black; background-color: rgba($color2, 0.8)}
+        }
+      }
+
       .post-contentwrapper { @include span-columns(12); }
       .post-maincontent { @include media($large) {@include span-columns(8); margin-bottom: 4em;} }
       .post-sidebar { @include media($large) {@include span-columns(4); } margin-top: 1em;}
@@ -370,6 +419,19 @@ body {
         margin-bottom: 0.6em;
         span { display: block; @include font-body($f3*1.21, 400, 1.45em); }
       }
+
+      // blog elements
+      .post-title-img {
+        width: 100%; 
+      }
+      .post-sources {
+        font-size: 0.85em; line-height: 1.7em;
+      }
+      // .post-first-sentence:first-letter {
+      //   @include font-body($f1*2.6, 400, 1.45em);
+      //   background: $silver; color: $color1;
+      // }
+
 
       @include media($small) {
         .post-date {@include font-tip($f3, 300); }
@@ -387,7 +449,7 @@ body {
         //typography
         .post-date {@include font-tip($f3, 300); display:block; }
         h1 {@include font-body($f1*0.9, 300); padding-top: 0.6em; }
-        .post-summary{@include font-body($f2, 400); margin-top: 0.3em;}
+        .post-summary{@include font-body($f2, 400); margin-top: 0.3em; margin-bottom: 0.5em}
         .post-image {width:auto;height: auto;}
         .content {display: block; padding-top: 3em;}
         .post-body {padding-bottom: 4em; @include font-body($f2, 400, 1.6em); p {margin-top: 0.8em;} @include span-columns(12); }
