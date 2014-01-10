@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hello World. Again. 
+title: Hello World... Again. 
 summary: Thoughts on why I would start yet another blog. For real this time.
 <!-- external: # -->
 <!-- image-path: /assets/# -->
 <!-- image-icon: /assets/# -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
-category : Writing
-tags : [General, Thoughts]
+category : writing
+tags : [general, thoughts]
 published : true
 portfolio : false
 comments : true

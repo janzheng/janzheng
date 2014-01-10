@@ -1,0 +1,97 @@
+---
+layout: post
+title: How Tinder could get even faster.
+summary: The Tinder UI is fast, but here are some tweaks to make it even faster
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : User Experience
+tags : [user experience, mini]
+published : false
+portfolio : false
+comments : true
+<!-- title-bg : /assets/posts/tinder-dating-app/tinder-android.jpg -->
+---
+
+<!-- !(post-title-img)/assets/posts/tinder-dating-app/tinder-android.jpg! -->
+
+h2. "Mountains of Data"
+
+
+End note:
+Both Tinder and OkCupid share the Right-to-Like / Left-to-Reject interface, but for hookup-type online dating, Tinder is still much more popular than OkCupid. An app's features is as important as what it doesn't feature. Tinder is popular exactly because it doesn't let users to message each other. BEcause it doesn't have any other components. It's simple and undiluted; as superficial as its premise. This is why it draws its crowd. It's simple, elegant, and laser-focused. 
+
+
+
+
+
+
+
+
+talk about how the x / &lt;3 buttons could be positioned in the same spot
+
+
+bq. "The possibilities feel endless! Potential love connections everywhere!" - "HuffPo":http://www.huffingtonpost.com/2013/08/02/unwritten-rules-tinder_n_3689441.html
+
+p(post-first-sentence). That's the sentiment most people share when they fire up the app.
+
+Ever since my friend convinced me to get Tinder (ahum), I've had this thought: Tinder isn't addictive because media feels it's a "dirty hookup app where everyone gets laid":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html, but because it's a well-designed, easy-to-use skinner box that promises the potential for hookup instead of food pellets. 
+
+The app works just like an MMORPG video game, which is already addictive in its own right, with elements of variable-ratio reinforcement, instant gratification, the promise of sex, and our generational craving for immediacy thrown in for good measure. 
+
+According to this "Telegraph article,":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html "The quick follow-though from swipe to sex is similarly instinctive for a generation with an appetite for immediacy." Whether anyone actually gets laid, I don't know. But it's articles like these that fuel the fantasy that if I swipe enough Likes, then I will get laid. 
+
+
+more like classic MMORPG video games, like EverQuest. Addictive, like a well-designed variable-ratio-reinforced skinner box. And the reward isn't a rare item or a food pellet - it's the prospect of sex. 
+
+Remember hot or not? T Tinder is Hot or Not, with the element of instant gratification. The dating element, or more likely, the *possibility* of dating, makes it ever so alluring.
+
+Random reward schedule, ala EverQuest. 
+
+According to the Telegraph article "The quick follow-though from swipe to sex is similarly instinctive for a generation with an appetite for immediacy." Whether the sex actually happens, I don't know. But it's articles like these that fuel the fantasy that if I swipe enoguh Yes-es, then I will get laid. 
+
+"My sociopathic curiosity and appetite for constant validation are fuelled by Tinder's addictive swipe function. I start consuming hundreds of profiles on boring journeys or in queues for a slow barista. Oh, the immediate gratification of having eight suitors when I woke up this morning! Didn't reply to any, but it's nice to know they're out there. Tinder totally complements my lazy and attention-seeking personality. "
+- attention-seeking persona
+- instant gratification
+- what's the gratification? Social acceptance, inclusion, social validation. 
+- safe and protected. If you don't respond, or if you block, no one gets (really) hurt.
+
+- The internet is cruel, and this is a site about validation.
+- Dating apps like these could potentially do to dating (and to people) what Netflix and iTunes, Spotify did to movies and song- made them insignificant, trivial, commoditized (more on that on another post)
+
+The male and female difference
+More older men, fewer older women. 
+
+Fast, and usable
+
+
+"“likes” on Facebook and retweets and Twitter can release a dopamine surge that, in some cases, lead to social media addiction. ":http://www.ft.com/intl/cms/s/0/27514afc-5444-11e2-9d25-00144feab49a.html
+
+""It grants permission for those in our culture to rate others based on physical appearance, and furthermore, it teaches us how to slash an 'X' on those we find unattractive (too old, too short, too much facial hair)," lamented Carlina Duan, a contributor to the University of Michigan's Michigan Daily student newspaper, in a story about Tinder. “It teaches us that dating, then, is a process of physical attraction and only physical attraction."
+>> don't we do this on a daily basis anyway? Society tells us this is wrong, but you and I both know this is what we do.
+
+
+
+So what are the results of this casually browsing through potential hookups? The commoditization of people, of course. It's shallow, and it's self-boosting. We don't have to work for 
+
+But in the end, have fun, don't be serious. 
+And of course, if you get a hookup, the better
+
+End note:
+Both Tinder and OkCupid share the Right-to-Like / Left-to-Reject interface, so how come Tinder is much more popular than OkCupid in terms of superficial-level dating? An app's features is as important as what it doesn't feature. Tinder is popular exactly because it doesn't let users to message each other. BEcause it doesn't have any other components. It's simple and undiluted; as superficial as its premise. This is why it draws its crowd. It's simple, elegant, and laser-focused. 
+
+
+div(post-sources). Sources:
+"NickYee.com: 'Everquest: The Virtual Skinner Box'":http://www.nickyee.com/eqt/skinner.html
+"Betabunny.com: Variable Ratio Schedule'":http://www.betabunny.com/behaviorism/VRS.htm
+"Telegraph.co.uk: 'Tinder review: A Woman's Perspective'":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html
+"ArsTechnica.com: 'It's not just girls asking 'Am I prettyor ugly?' on the Internet'":http://arstechnica.com/business/2013/11/its-not-just-girls-asking-am-i-pretty-or-ugly-on-the-internet/
+"ArsTechnica.com: 'Am I pretty or ugly? Exploring an unfortunate YouTube phenomenon'":http://arstechnica.com/business/2013/10/am-i-pretty-or-ugly-exploring-an-unfortunate-youtube-phenomenon/
+Image from "DigitalTrends":http://www.digitaltrends.com/social-media/everything-you-wanted-to-know-about-tinder-but-were-afraid-to-ask/
+
+
+
+
+
+

@@ -50,7 +50,7 @@ a.bttn:not(.active):hover, a.bttn:active, a.bttn.clicked {
 }
 code {background-color: #333; padding: 3px; color: #ddd;}
 
-blockquote {margin: 0; padding: 5px 1em 5px 2em; background-color: $silver; border-left: 3px solid $color1; 
+blockquote {margin: $base 0; padding: 5px 1em 5px 1em; background-color: $silver; border-left: 3px solid $color1; 
    p{font-size: 0.9em !important; font-weight: 400; font-style: italic !important; margin-top: 0 !important;}}
 
 
