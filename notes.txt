@@ -7,7 +7,8 @@ Cool layout:
 https://medium.com/design-things/61ef4f88218a
 
 Use Flexboxes / ProtoWire to rewrite
-- Use the menu-system properly
+- Add Facebook / Twitter for each article (low priority)
+- Make short menu sticky (when browser is too short to show the entire left menu, make it stick to the top and bottom of the browser when scrolling up and down - use skrollr
 - Add more work
 
 
