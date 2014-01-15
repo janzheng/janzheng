@@ -97,28 +97,28 @@ p.
 
    <div class="post-sidebar">
       <div class="post-sidebar-column">
-         <h4>Client</h4>
+         <title>Client</title>
          <span>Nespresso</span>
       </div>
 
       <div class="post-sidebar-column">
-         <h4>Goal</h4>
+         <title>Goal</title>
          <span>To bring the boutique experience online</span>
       </div>
 
       <div class="post-sidebar-column">
-         <h4>Role</h4>
+         <title>Role</title>
          <span>Information architect</span>
          <span>Interaction design</span>
       </div>
 
       <div class="post-sidebar-column">
-         <h4>Employer</h4>
+         <title>Employer</title>
          <span>Nurun</span>
       </div>
 
       <div class="post-sidebar-column">
-         <h4>Links</h4>
+         <title>Links</title>
          <span><a href="http://www.nespresso-us.com/coffee-boutiques/">Nespresso Boutiques</a></span>
          <span><a href="http://share.axure.com/3GTDZ6/">Axure wireframes</a></span>
       </div>

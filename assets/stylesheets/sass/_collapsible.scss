@@ -13,7 +13,7 @@
   // padding: 0.8em;
   color: $color4; &:hover {background-color: $color2; color: $color0; @include ease-transition(200ms);} 
   margin-top: 1em;
-  padding: 1em 0 1em 0; @include font-body(1em, 400); background-color: $silver;
+  padding: 1em 0 1em 0; @include font-sans(1em, 400); background-color: $silver;
 }
 
 @include media($small) {

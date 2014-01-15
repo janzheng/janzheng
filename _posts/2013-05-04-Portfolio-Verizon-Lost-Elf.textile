@@ -81,33 +81,33 @@ p.
 
 <div class="post-sidebar">
    <div class="post-sidebar-column">
-      <h4>Client</h4>
+      <title>Client</title>
       <span>Verizon</span>
    </div>
 
    <div class="post-sidebar-column">
-      <h4>Goal</h4>
+      <title>Goal</title>
       <span>To create a family-friendly holiday mobile experience</span>
    </div>
 
    <div class="post-sidebar-column">
-      <h4>Role</h4>
+      <title>Role</title>
       <span>Information architect</span>
       <span>Interaction design</span>
    </div>
 
    <div class="post-sidebar-column">
-      <h4>Employer</h4>
-      <span>Moxie</span>
+      <title>Employer</title>
+      <span><a href="http://www.moxieinteractive.com/">Moxie</a></span>
    </div>
 
    <div class="post-sidebar-column">
-      <h4>Awards</h4>
+      <title>Awards</title>
       <span>ADDY Awards 2012 Silver: Mobile App</span>
    </div>
 
    <div class="post-sidebar-column">
-      <h4>Link</h4>
+      <title>Link</title>
       <span><a href="http://www.atlantaintownpaper.com/2011/12/local-company-helps-create-interactive-storybook/">Article</a> (app has been removed from the app store)</span>
    </div>
 </div>

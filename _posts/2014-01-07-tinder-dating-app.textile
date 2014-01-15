@@ -1,14 +1,14 @@
 ---
 layout: post
 title: The Tinder Game
-summary: A hookup app that's not about the hookups
+summary: Thoughts on the hookup app that's not entirely about hookups
 <!-- external: # -->
 <!-- image-path: /assets/# -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
 category : Society
-tags : [psychology, user experience, society]
-published : false
+tags : [psychology, user experience, society, thoughts, game design]
+published : true
 portfolio : false
 comments : true
 title-bg : /assets/posts/tinder-dating-app/tinder-android.jpg
@@ -17,30 +17,31 @@ featured : true
 
 !(post-title-img)/assets/posts/tinder-dating-app/tinder-android.jpg!
 
-bq. "The possibilities feel endless! Potential love connections everywhere!" - "HuffPo":http://www.huffingtonpost.com/2013/08/02/unwritten-rules-tinder_n_3689441.html
+h2. "The possibilities feel endless! Potential love connections everywhere!"
 
-p(post-first-sentence). That's the sentiment most people share when they fire up the app.
+p(post-first-sentence). That's the sentiment "most people":http://www.huffingtonpost.com/2013/08/02/unwritten-rules-tinder_n_3689441.html share when they fire up the app.
 
-Ever since my friend convinced me to get Tinder (ahum), I've had this thought: Tinder isn't just addictive because the media labels it as a "dirty hookup app where everyone gets laid":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html, but because it's a well-designed, instantly gratifying skinner box that promises the potential for hookup instead of food pellets. 
+Ever since my friend convinced me to get Tinder (ahum), I've had this thought: People aren't using Tinder because it's a "dirty hookup app where everyone gets laid":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html, but because it's a well-designed, instantly gratifying skinner box that rewards with social validation. 
 
-According to this "Telegraph article,":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html "The quick follow-through from swipe to sex is similarly instinctive for a generation with an appetite for immediacy." How many Tinder users actually end up hooking up, I don't know, but we can agree that Tinder provides something very salient and gratifying, regardless whether the sex happens or not.
+"Though media claims":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html "the quick follow-through from swipe to sex is similarly instinctive for a generation with an appetite for immediacy," I'm not sure many Tinder users actually get from swipe to sex. I do know that Tinder provides something very salient and gratifying, regardless of sex. Tinder is succcessful because it's essentially a marriage of Hot or Not and World of Warcraft: it cleverly uses game mechanics, psychology, and the potential for romance, to take advantage of our craving for immediacy, gratification, and validation. 
 
-The app is essentially a marriage of Hot or Not and World of Warcraft. It takes advantage our generation's craving for immediacy, gratification, and validation, while providing plenty of pictures of attractive young women. And instead of the fantasy of killing monsters, it runs off the allure of potentially getting some. 
+In the end, Tinder is not a dating app. It's not the scourge upon society that media likes to portray, or the dirty hookup app that reduces us to sex-craving animals. 
 
+Instead, it's a safe environment for social validation and confidence-building. Instead, it's just a game.
 
 
 
 h2. Press the lever
 
-Remember from Psych 101 that behavior can be learned through rewards and punishment ("operant conditioning":http://en.wikipedia.org/wiki/Operant_conditioning), and how psychologists used the "Skinner Box":http://en.wikipedia.org/wiki/Skinner_box to experiment with behavioral learning through different kinds of rewards and punishment. For example, a rat would press a lever, which would yield a food pellet. If the number of rewards were reduced for each lever press, the rats would persist in pushing the lever until they received a reward, leading to a high number of lever presses regardless. Thus, the behavior of the rat was shaped to press that lever.
+bq. "If at first you don't succeed, try- try- try again!" - Gambling addict
 
-Also recall that in operant conditioning, one of the most successful ways to shape a behavior (a 'response') is called a "variable ratio schedule":http://www.betabunny.com/behaviorism/VRS.htm of reinforcement. The way it works is that at first, a rat receives a steady number of rewards for their response. For example, one food pellet is given for every lever press. Once the rat has learned the response, the number of rewards is only given after a variable number of correct responses. This causes the rat to perform the response anyway, as it doesn't stop immediately after the rewards have stopped.
+Remember from Psych 101 that behavior can be learned through rewards and punishment ("operant conditioning":http://en.wikipedia.org/wiki/Operant_conditioning), and that a "Skinner Box":http://en.wikipedia.org/wiki/Skinner_box is a tool that conditions animals to new behavior. For example, a rat presses a lever (a _response_) to receive a food pellet. The frequency and types of rewards and punishments are changed to see what kind of behavior can be elicited from the rat. 
 
-Similarly, if the rat keeps pressing the lever but the rewards have stopped, eventually the rat will reduce the number of times it will press the lever. This type of behavior is called extinction.
+Also recall that in operant conditioning, one of the most successful ways to shape a behavior (a 'response') is called a "variable ratio schedule":http://www.betabunny.com/behaviorism/VRS.htm of reinforcement. At first, a rat receives a steady number of rewards for their response. For example, one food pellet is given for every lever press. Once the rat has learned the response, a reward is only randomly given after correct responses. Eventually, fewer rewards are given for the same number of button presses, but the rat continues to press the lever (for a while). If the rewards have stopped completely, eventually the rat will press the lever less often (_extinction_).
 
-Examples of variable ratio schedules in the wild include slot machines, leveling up in certain video games like in EverQuest "(read: EverQuest: The Virutal Skinner Box)":http://www.nickyee.com/eqt/skinner.html or in Zynga's FarmVille. In these games, you receive either money or XP/coins/crafting for a variable (random) number of attempts. This causes people to feel that trying harder will get them a reward, and if they haven't received a reward yet, doing so a little bit longer will net them the reward. This causes people to pull the lever more for the reward.
+Examples of variable ratio schedules include slot machines and leveling up in certain video games "(EverQuest was notorious for this)":http://www.nickyee.com/eqt/skinner.html. In these games, players perform a number of responses like pulling a lever or killing a monster, and receive a variable reward like a certain amount of money, experience points. This type of reinforcement scheme convinces players that playing for longer usually yields more rewards. Often, players will continue to play because they feel they will receive more rewards if they play for just a little bit longer.
 
-This is the short take on why gambling and games could be so addictive.
+This is essentially why gambling and some games could become so addictive.
 
 
 
@@ -48,121 +49,92 @@ h2. "This online dating app is really a judging app"
 
 So what does all of this have to do with an online dating app?
 
-Tinder turns online dating on its head by embracing several game mechanics and by deliberately removing features that are common among traditional dating apps. The app only presents users with one profile at a time, and does not allow for users to list or search for profiles. It forces users to rate a profile in order to receive a new one, and introduces a swipe feature that makes it incredibly easy for users to rate profiles. This creates an environment that is easily explorative and accessible. The user doesn't have many options. Either turn left, or turn right. See someone you don't like? Swipe left. See someone cute? Press the lever.
+Tinder turns online dating on its head by embracing a simple mechanic, and by deliberately removing features that are common among traditional dating apps. The app only presents users with one profile at a time, does not allow for users to browse or search profiles, and forces users to browse profiles through an incredibly easy judging mechanic. This combination mimics the Skinner Box environment, where the swipe is the response, and the match is the reward.
 
-Tinder eschews the traditional aspect of carefully choosing and connecting with potential suitors and instead throws them in your face.
-
-
+In many ways, Tinder is a step backwards from more popular dating apps - it hides a lot of the information that would otherwise make someone look more appealing. But Tinder eschews long-winded descriptors and algorithmic match-making for a more game-like experience, by recognizing the basic fact that we are inherently 'shallow'. It caters to our most primitive instinct of physical attraction to create an exciting experience. It's like a blind version of online dating.
 
 
-h2. Another kind of food pellet
+h2. More than just a food pellet
 
 bq. "That deeply personal, useful and instantly gratifying information makes Tinder an addictive experience, with each match fueling a kind of emotional high. Research has shown 'likes' on Facebook and retweets and Twitter can release a dopamine surge that lead to social media addiction. It suggests we're all but starving for likes. in our push to figure out which strangers, and how many, think we're hot."
-- "Huffington Post":http://www.huffingtonpost.com/2013/04/09/tinder-dating-app_n_3044472.html#slide=1946649
+- "Huffington Post":http://www.huffingtonpost.com/2013/04/09/tinder-dating-app_n_3044472.html
 
-Tinder's reward structure is fascinating. A reward comes in the form of not only browsing and judging others, but from the feedback: A user will know instantly if someone likes you back. And even if there is no match, there's a chance the user hasn't been viewed yet. Furthermore, any user that hasn't been matched can't be messaged. This not only speaks to social validation, but it also shields users from the potential shame of rejection and from unsolicited messages. While many dating sites might either yield a bevy of unreturned messages or a deluge unsolicited emails Tinder's design completely sidesteps these problems.
+We all know that being complimented makes us happy. Being complimented online is no different.
 
-They key to Tinder's successful reward structure is its entirely positiive reinforcement scheme. 
+Tinder uses the feeling of being complimented to drive its game mechanic. Swipe right, and you will know if someone thinks you're hot. If it wasn't a match, maybe they haven't seen your profile yet. But the next one? Oh, s/he's cute - maybe s/he's seen your profile. Maybe there's a match. Swipe right. Eventually, you'll find a match, right?
 
+The app never tells you if a profile rejected you. Maybe they just haven't seen your profile yet. In a large city of hundreds of users, you're bound to match at least a few profiles, right? Well, keep swiping, or you won't ever find out.
 
+Furthermore, any user that has not been matched cannot be messaged. In addition to social validation, matching also shields users from unsolicited messages and any potential for the feelings of rejection. While most dating apps might either result in unreturned or unsolicited messages, Tinder's mechanic sidesteps both of these problems.
 
-h2. But is it actually _bad_ for society?
-
-h2. Social
-
-One would think that the ultimate reward of using Tinder is from a successful hookup, but I'm curious to see whether more people use Tinder for social validation than for actually hooking up.
-
-- liking someone isn't an awkward compliment, or creepy compliment
-- people look for validation; teens do too online (ars tech article) - amisex / amiugly - tinder provides the validation without the negative aspects
-- 
-- helps introverted / unsociable to voice ou
-- The part where users may message each other is cream on the crop it rewards them with the possibility of contacting each other
-- easy to like someone
-- rewards judging someone by a potential match
-- turn down creeps
-- interesting to see how many users use it for just social validaiton; how many matches are made but no one talks; number of non-replies, how many people swipe 'yes' even to people they don't like (can be inferred from non-replies)
-a match means:
-- affirmation: someone likes you back
+In the end, Tinder's success lies in its positiive, variable ratio reinforcement scheme, where a potential match seems right around the corner, and players won't ever be disappotinted. 
 
 
+h2. A Scourge Upon Society
+
+bq. "Tinder grants permission for those in our culture to rate others based on physical appearance, and furthermore, it teaches us how to slash an 'X' on those we find unattractive (too old, too short, too much facial hair)... it teaches us that dating, then, is a process of physical attraction and only physical attraction." - "Michigan Daily":http://www.michigandaily.com/arts/03afraid-of-tinder20 / Any Media outlet ever
+
+Isn't dating already a process of physical attraction? Tinder merely introduces those who find each other attractive. Like an initial flirt at a bar. What the players do with this information is up to them. Even "real" dating sites are not immune to this type of judgment. In "Jon Milward's attraction experiment":http://jonmillward.com/blog/attraction-dating/cupid-on-trial-a-4-month-online-dating-experiment, the two most attractive women received almost six times more messages than the other three women combined. Apparently, attractive people receive more attention.
+
+But a more difficult question to answer is: How many people actually use Tinder seriously, as a hookup app? How many use it more than just a way to kill time? How many matches end up in longer, extend online conversations, and how many eventually become face-to-face encounters, and out of those encounters, how many actually end in a hookup? My suspicion: probably not many. I predict that most people use Tinder more as a tool for social validation, rather than for hookups. Tinder's a feel-good app over a hookup app.
+
+Many, especially teens, turn to social media for validation. Many of them resort to "pretty or ugly" threads on sites like "Youtube":http://www.youtube.com/results?search_query=am+i+pretty+or+ugly&oq=am+i+pretty+&gs_l=youtube.1.0.0i3j0l9.472.2004.0.3633.12.9.0.2.2.0.190.1062.4j5.9.0%E2%80%A60.0%E2%80%A61ac.1.11.youtube.5lW30J6q5lY or "Reddit":http://arstechnica.com/business/2013/11/its-not-just-girls-asking-am-i-pretty-or-ugly-on-the-internet/, where some of the feedback "can get pretty nasty":http://arstechnica.com/business/2013/10/am-i-pretty-or-ugly-exploring-an-unfortunate-youtube-phenomenon/.
+
+Tinder offers a similar type of validation for those who seek it, but without the scathing feedback that haunts social media. The also helps reduce the deluge of unsolicited and often nasty messages that seem to overwhelm the attractive female's inbox.  
 
 
-http://www.huffingtonpost.com/2012/06/29/okcupid-profile-picture-experiment_n_1638322.html
+h2. Behind the Scene
+
+I'd be curious to learn how Tinder's algorithm actually works in the background. Tinder requires a user's Facebook profile, location, and a few basic preferences like user gender and preferred gender to start showing matches. But how does it know who to match, and in what order? Does it assume that, since users swipe through profiles so quickly, that it can just show profiles on random? Or is it smarter?
+
+Potentially, the app could choose what profiles to show based on how it wants to shape the user's behavior, just like a Skinner Box. As a user judges more profiles, the app will learn more about a user's preferences, like preferred age and interests. The app will also know how attractive or popular someone is based on how many likes and crosses the person has received. Potentially, it could also learn what type of people the user likes, including race, facial type, profile description, and more. 
+
+The developers could build a score for desirability for each profile, and treat highly desirable profiles as rewards to help shape a user's behavior. Some indicators of desirability could include:
+# Popularity (number of Likes and Crosses)
+# Number of images
+# Number of mutual friends
+# Age
+# Profile description
+# Distance from user
+# Mutual match
+
+With this information, the developers could adjust the displayed profiles to create a variable ratio schedule. If too many desirable profiles are successively shown, users might become jaded and bored. If too few are shown, users might start losing interest. The developers must strike a balance between highly desirable and less-than-desirable profiles to get users to continue using the app.
+
+If the app detects that users are becoming too swipe-happy, it could indicate that there are "no current matches near you," to prevent the user from swiping too much. It might also delay displaying a match, if the user has frequently been receiving them. Thus, the match is saved for moments when a user is less popular.  
+
+In the end, the entire data that Tinder sits on is like a popularity contest, that the developers could use to mold and shift user behavior. Would be interesting if the developers released some analytics.
 
 
+h2. Tinderitis
 
+As addictive as it is, Tinder is a passing fad. It's a one-trick pony without longevity. After thousands of swipes, users will eventually get bored. The novelty will wear out, and profiles will blur together and look the same. Maybe users will start Liking every profile to see how many matches they get. Maybe matches will eventually get less exciting. Maybe users will eventually want something else.
 
+With the fast swiping mechanic, many users will probably exhaust their local cache of profiles. When that happens, will Tinder really transform us into the shallow, commoditized, and sex-depraved pieces of meat that media portrays us? Or will it just increase our hunger for deeper and more emotionally fulfilling relationships?
 
+The app merely caters to our human nature. It caters to our desire for inclusion, social validation, and acceptance, while safely protecting us from hurtful insults, shameful rejections and nasty creeps. I highly doubt it will change us in any significant ways. 
 
+Its future lies in its capability of establishing validation and building connections... Not in hooking up.
 
-The app appears to be "shallow" by constraining the amount of information users can enter about themselves. It also 
+It's mighty fun, but it's just a toy.
+Treat it as such, and you'll enjoy. 
 
+Now if you'll excuse me, I have some more swiping to get back to.
 
-
-But what is going on behind the scenes, in the app's algorithm?
-Providing matches in a random variable ratio
-
-
-
-"My sociopathic curiosity and appetite for constant validation are fuelled by Tinder's addictive swipe function. I start consuming hundreds of profiles on boring journeys or in queues for a slow barista. Oh, the immediate gratification of having eight suitors when I woke up this morning! Didn't reply to any, but it's nice to know they're out there. Tinder totally complements my lazy and attention-seeking personality. "
-- attention-seeking persona
-- instant gratification
-- what's the gratification? Social acceptance, inclusion, social validation. 
-- safe and protected. If you don't respond, or if you block, no one gets (really) hurt.
-
-- The internet is cruel and creepy (for women), and this is a site about validation.
-- Dating apps like these could potentially do to dating (and to people) what Netflix and iTunes, Spotify did to movies and song- made them insignificant, trivial, commoditized (more on that on another post)
-
-The male and female difference
-More older men, fewer older women. 
-
-as long as people are careful, and treat is as what it is- a game
-
-
-"“likes” on Facebook and retweets and Twitter can release a dopamine surge that, in some cases, lead to social media addiction. ":http://www.ft.com/intl/cms/s/0/27514afc-5444-11e2-9d25-00144feab49a.html
-
-""It grants permission for those in our culture to rate others based on physical appearance, and furthermore, it teaches us how to slash an 'X' on those we find unattractive (too old, too short, too much facial hair)," lamented Carlina Duan, a contributor to the University of Michigan's Michigan Daily student newspaper, in a story about Tinder. “It teaches us that dating, then, is a process of physical attraction and only physical attraction."
->> don't we do this on a daily basis anyway? Society tells us this is wrong, but you and I both know this is what we do.
-
-retort to physical attraction: http://www.huffingtonpost.com/2012/06/29/okcupid-profile-picture-experiment_n_1638322.html
-"Millward did find there were huge differences in the attention each profile received. He noticed the two women who were at the top of his attractiveness scale received 581 percent more messages than the other three women combined.
-
-He also found that the most-frequently contacted woman, whom he and the judges had ranked second highest in attractiveness, had nearly 17 times more messages within a week than the most contacted man. The group of five females were also more-frequently contacted than the males, w"
-
-
-
-
-So what are the results of this casually browsing through potential hookups? The commoditization of people, of course. It's shallow, and it's self-boosting. We don't have to work for 
-
-But in the end, are people really only satisfied with physical relationships? Even if many people successfully hook up using Tinder, is it really going to transform people into the shallow commoditized pieces of meat that the media portrays us? Or will it just increase our hunger for more deeper, more fulfilling emotional relationships?
-
-But in the end, have fun, don't be serious. Now if you'll excuse me, I have have more swiping to get back to.
-
-
-
-
-p.s.
-
-The entire database Tinder sits on is like a social rank. Because people vote each other up or down, this is essentially one big popularity contest, showing how people stack up against each other. Would be interesting if that data ever got out. 
-
-
-
-
-
-
-
-
-
-Sources:
 
 div(post-sources). 
-"NickYee.com: 'Everquest: The Virtual Skinner Box'":http://www.nickyee.com/eqt/skinner.html
-"Betabunny.com: Variable Ratio Schedule'":http://www.betabunny.com/behaviorism/VRS.htm
+
+Sources:
+"The Unwritten Rules Of Tinder":http://www.huffingtonpost.com/2013/08/02/unwritten-rules-tinder_n_3689441.html
 "Telegraph.co.uk: 'Tinder review: A Woman's Perspective'":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html
-"ArsTechnica.com: 'It's not just girls asking 'Am I prettyor ugly?' on the Internet'":http://arstechnica.com/business/2013/11/its-not-just-girls-asking-am-i-pretty-or-ugly-on-the-internet/
+"Wikipedia: Operant Conditioning":http://en.wikipedia.org/wiki/Operant_conditioning
+"Wikipedia: Skinner Box":http://en.wikipedia.org/wiki/Skinner_box
+"Betabunny.com: Variable Ratio Schedule'":http://www.betabunny.com/behaviorism/VRS.htm
+"NickYee.com: 'Everquest: The Virtual Skinner Box'":http://www.nickyee.com/eqt/skinner.html
+"Why Tinder Has Us Addicted: The Dating App Gives You Mind-Reading Powers":http://www.huffingtonpost.com/2013/04/09/tinder-dating-app_n_3044472.html
+"Notebook: The superficiality of online dating amplified by new Tinder app":http://www.michigandaily.com/arts/03afraid-of-tinder20
+"Cupid on Trial: A 4-month Online Dating Experiment Using 10 Fictional Singletons":http://jonmillward.com/blog/attraction-dating/cupid-on-trial-a-4-month-online-dating-experiment
+"ArsTechnica.com: 'It's not just girls asking 'Am I pretty or ugly?' on the Internet'":http://arstechnica.com/business/2013/11/its-not-just-girls-asking-am-i-pretty-or-ugly-on-the-internet/
 "ArsTechnica.com: 'Am I pretty or ugly? Exploring an unfortunate YouTube phenomenon'":http://arstechnica.com/business/2013/10/am-i-pretty-or-ugly-exploring-an-unfortunate-youtube-phenomenon/
 Image from "DigitalTrends":http://www.digitaltrends.com/social-media/everything-you-wanted-to-know-about-tinder-but-were-afraid-to-ask/
-
-
 
 

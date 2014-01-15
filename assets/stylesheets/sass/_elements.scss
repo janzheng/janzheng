@@ -5,10 +5,11 @@
 
 //link & button styles
 
-h1 { @include font-body($f1, 300, 1.2em); }
-h2 { @include font-body($f2*1.3, 300, 1.2em); margin-top: 1.6em;}
-h3 { @include font-tip($f2, 300, 1.2em); margin-top: 1.6em; }
-h4 { @include font-tip($f3, 300, 1.2em); margin-top: 0.6em; margin-bottom: 0.5em;}
+h1 { @include font-sans($f1, 300, 1.2em); }
+h2 { @include font-sans($f2, 300, 1.2em); margin-top: 1.6em;}
+h3 { @include font-serif($f3, 300, 1.2em); margin-top: 1.6em; }
+h4 { @include font-serif($f5, 300, 1.2em); margin-top: 0.6em; margin-bottom: 0.5em;}
+h6 { @include font-sans($f6, 300, 1.2em); margin-top: 0.6em; margin-bottom: 0.5em;}
 
 a, a:active, a:visited {color: $color0; text-decoration: underline;}
 a:hover {color: $color2; background-color: $color9; @include ease-transition(200ms);}
@@ -25,7 +26,7 @@ a.bttn {
     border: 1px solid $silver;
     color: $dark-gray; 
 
-    @include font-body($f3*1.3, 300);
+    @include font-sans($f5, 300);
     text-align: center; text-decoration: none;
     @include ease-transition(200ms); margin-bottom: 0.5em;
     @include media($medium){@include set-radius(3px);} /*round corners for medium and up*/
@@ -39,19 +40,30 @@ a.bttn:not(.active):hover, a.bttn:active, a.bttn.clicked {
 .slides a  { text-decoration: none; color: #333;}
 .slides a:hover { text-decoration: none; color: #972020;}
 .flexslider {
+  // position: relative !important; z-index: 0;
+  // ol, ul { padding: 0 !important; border: 0 !important; position: relative !important; z-index: 0;}
   @include media($small){@include span-columns(6); }
   @include media($medium){@include span-columns(12); }
   @include media($large){@include span-columns(12); }
 
 }
 
+// adds a short horizontal line at the top of the class, like a shorter line break
+%topline {
+  &:before {
+    content: ' ';
+    height: 2px; width: 190px; padding-bottom: 10px;
+    display: block; 
+    border-top: 1px solid $color3; 
+  }
+}
+.topline {@extend %topline; }
+
 .prettyprinted {
   margin: 12px auto;
 }
 code {background-color: #333; padding: 3px; color: #ddd;}
 
-blockquote {margin: $base 0; padding: 5px 1em 5px 1em; background-color: $silver; border-left: 3px solid $color1; 
-   p{font-size: 0.9em !important; font-weight: 400; font-style: italic !important; margin-top: 0 !important;}}
 
 
 // Google Prettyprint modifications
@@ -122,19 +134,16 @@ html, body, #container, .expandable, .collapsible-mobile {
 .short-menu {
   .sticky-wrapper {
     min-height: 100%;
-    @include media($medium){margin: 0 auto -21em; }
-    @include media($large){margin: 0 auto -21em; }
+    @include media($medium){margin: 0 auto -22em; }
+    @include media($large){margin: 0 auto -22em; }
 
     footer, .push {
-        @include media($medium){height: 21em;}
-        @include media($large){height: 21em;}
+        @include media($medium){height: 22em;}
+        @include media($large){height: 22em;}
     }
   }
 }
 
-
-footer {@include media($small){height: 4em;}}
-#fine-print {font-size: $base*0.8;}
 
 .left-edge {border-left: 1px solid $color3;}
 

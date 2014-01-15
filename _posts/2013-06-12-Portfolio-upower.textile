@@ -70,17 +70,17 @@ p.
 
 <div class="post-sidebar">
   <div class="post-sidebar-column">
-    <h4>Client</h4>
+    <title>Client</title>
     <span>upower fitness</span>
   </div>
 
   <div class="post-sidebar-column">
-    <h4>Goal</h4>
+    <title>Goal</title>
     <span>To create an attractive, online store-front for all devices</span>
   </div>
 
   <div class="post-sidebar-column">
-    <h4>Roles</h4>
+    <title>Roles</title>
     <span>Information architect</span>
     <span>Interaction design</span>
     <span>Web Design</span>
@@ -89,18 +89,18 @@ p.
   </div>
 
   <div class="post-sidebar-column">
-    <h4>Employer</h4>
+    <title>Employer</title>
     <span>Freelance</span>
   </div>
 
   <div class="post-sidebar-column">
-    <h4>Collaborators</h4>
+    <title>Collaborators</title>
     <span><a href="http://www.chiapponey.com/">John Chiappone</a> (logo design)</span>
     <span><a href="http://www.behance.net/tlyphotography">Tess Yaney</a> (photography)</span>
   </div>
 
   <div class="post-sidebar-column">
-    <h4>Links</h4>
+    <title>Links</title>
     <span><a href="http://upowerfitness.com/">upowerfitness.com</a></span>
     <span><a href="http://share.axure.com/8IEIWL/">Axure wireframes</a></span>
   </div>

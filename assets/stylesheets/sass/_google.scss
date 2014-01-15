@@ -5,25 +5,25 @@
   
   table {
     margin: 2em 0 2em 0;
-    @include font-body($f2, 400, 1.6em); margin-top: 0.8em;
+    @include font-sans($f2, 400, 1.6em); margin-top: 0.8em;
     td { padding-right: 1em;}
     margin-left: 1.3em; 
   }
 
 
   h1 { font-size: $f1*1.2 !important; }
-  h2 { @include font-body($f2*1.8, 300, 1.4em); margin-top: 1.2em;}
-  h3 { @include font-body($f2*1.5, 300, 1.4em); margin-top: 1.5em;}
-  h4 { @include font-body($f2*1.2, 300, 1.4em); margin-top: 1.6em; margin-left: 1.3em;}
+  h2 { @include font-sans($f2*1.8, 300, 1.4em); margin-top: 1.2em;}
+  h3 { @include font-sans($f2*1.5, 300, 1.4em); margin-top: 1.5em;}
+  h4 { @include font-sans($f2*1.2, 300, 1.4em); margin-top: 1.6em; margin-left: 1.3em;}
 
-  ul > li {@include font-body($f2, 400, 1.6em); margin-top: 0.3em; 
+  ul > li {@include font-sans($f2, 400, 1.6em); margin-top: 0.3em; 
       list-style-type: circle; 
       margin-left: 1.5em;
 
       li { list-style-type: circle;}
     }
 
-  ol > li {@include font-body($f2, 400, 1.6em); margin-top: 0.3em;  
+  ol > li {@include font-sans($f2, 400, 1.6em); margin-top: 0.3em;  
       list-style-position:inside;
       margin-left: 1.5em;; 
     }

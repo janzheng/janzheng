@@ -21,7 +21,7 @@
 
 .flex-container a:hover { background: none; }
 
-p.flex-caption { font-size: 0.87em; margin: 0 1em 0 1.5em;}
+p.flex-caption { font-size: 1em; margin: 0 1em 0 1.5em;}
 
 /* FlexSlider Necessary Styles
 *********************************/ 
