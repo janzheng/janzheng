@@ -50,7 +50,7 @@ $('.post-list').each(function(){
    //show / hide functionality
    //initially hide all collapsible areas; moved into CSS instead
    // $(".expandable .collapsible").hide();
-   $(".btn").click(function() {
+   $(".btn").mousedown(function() {
       // console.log("clicked"); 
       $(this).parent().find('.collapsible, .collapsible-mobile').toggle();
       $(this).parent().find('.btn-open-mobile, .btn-close-mobile, .btn-open, .btn-close').toggle();
