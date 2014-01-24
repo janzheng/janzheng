@@ -8,13 +8,13 @@ $(document).ready(function() {
   });
 
 
-// set background images for posts with bg-images on homepage
-$('.post-list').each(function(){
-  var bg = $(this).data("bg");
-  if(typeof $(this).data("bg") != 'undefined') {
-    console.log('exists')
-    $(this).css('background-image', 'url(' + bg + ')');
-  } 
+  // set background images for posts with bg-images on homepage
+  $('.post-list').each(function(){
+    var bg = $(this).data("bg");
+    if(typeof $(this).data("bg") != 'undefined') {
+      console.log('exists')
+      $(this).css('background-image', 'url(' + bg + ')');
+    } 
 });
 
 // ************************************************************
@@ -50,8 +50,9 @@ $('.post-list').each(function(){
    //show / hide functionality
    //initially hide all collapsible areas; moved into CSS instead
    // $(".expandable .collapsible").hide();
-   $(".btn").mousedown(function() {
-      // console.log("clicked"); 
+   // $(".btn").mousedown(function() {
+   $(".btn").bind('mouseup',function() {
+      console.log("clicked"); 
       $(this).parent().find('.collapsible, .collapsible-mobile').toggle();
       $(this).parent().find('.btn-open-mobile, .btn-close-mobile, .btn-open, .btn-close').toggle();
    });
