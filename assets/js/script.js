@@ -51,12 +51,17 @@ $(document).ready(function() {
    //initially hide all collapsible areas; moved into CSS instead
    // $(".expandable .collapsible").hide();
    // $(".btn").mousedown(function() {
-   $(".btn").bind('mouseup',function() {
-      console.log("clicked"); 
-      $(this).parent().find('.collapsible, .collapsible-mobile').toggle();
-      $(this).parent().find('.btn-open-mobile, .btn-close-mobile, .btn-open, .btn-close').toggle();
+   $(".btn-open-mobile").bind('mouseup',function(e) {
+      console.log("OPEN clicked"); 
+      $(this).parent().find('.collapsible, .collapsible-mobile').show();
+      $(this).parent().find('.btn-open-mobile, .btn-close-mobile, .btn-open, .btn-close').show();
    });
 
+   $(".btn-close-mobile").bind('mouseup',function(e) {
+      console.log("CLOSE clicked"); 
+      $(this).parent().find('.collapsible, .collapsible-mobile').show();
+      $(this).parent().find('.btn-open-mobile, .btn-close-mobile, .btn-open, .btn-close').show();
+   });
    //reset all buttons when window resizes, or the open/close buttons will show all weird-like
 
    var delay = (function(){
