@@ -51,49 +51,88 @@ $(document).ready(function() {
    //initially hide all collapsible areas; moved into CSS instead
    // $(".expandable .collapsible").hide();
    // $(".btn").mousedown(function() {
-   $(".btn-open-mobile").bind('mouseup',function(e) {
-      console.log("OPEN clicked"); 
-      $(this).parent().find('.collapsible, .collapsible-mobile').show();
-      $(this).parent().find('.btn-open-mobile, .btn-close-mobile, .btn-open, .btn-close').show();
+   $(".btn").bind('mouseup',function(e) {
+      console.log("btn btn clicked"); 
+      $(this).parent().find('.collapsible, .collapsible-mobile').toggle();
+      $(this).parent().find('.btn-open-mobile, .btn-close-mobile, .btn-open, .btn-close').toggle();
    });
 
-   $(".btn-close-mobile").bind('mouseup',function(e) {
-      console.log("CLOSE clicked"); 
-      $(this).parent().find('.collapsible, .collapsible-mobile').show();
-      $(this).parent().find('.btn-open-mobile, .btn-close-mobile, .btn-open, .btn-close').show();
-   });
-   //reset all buttons when window resizes, or the open/close buttons will show all weird-like
+  //reset all buttons when window resizes, or the open/close buttons will show all weird-like
+  var pause = 500;
+  var newWidth, lastWidth;
+  setInterval(function(){interval()},pause);
 
-   var delay = (function(){
-       var timer = 0;
-       return function(callback, ms){
-           clearTimeout (timer);
-           timer = setTimeout(callback, ms);
-       };
-   })();
+  function interval()
+  {
+    lastWidth = newWidth;
+    newWidth = $(window).width();
+    // console.log('interval tick: ' + lastWidth + ' ' + newWidth)
 
-   $(function() {
-       var pause = 100; // will only process code within delay(function() { ... }) every 100ms.
-       $(window).resize(function() {
-           delay(function() {
-               var width = $(window).width();
+    //show buttons and hide content if in mobile view
+    if(lastWidth != newWidth) {
+      if( newWidth >= 470 ) {
+        // medium and large
+        $('.btn-open-mobile, .btn-close-mobile').hide();
+        $('.collapsible-mobile').show();
+      } else if( newWidth < 470 ) {
+         // code for mobile portrait
+        $('.collapsible-mobile, .btn-close-mobile').hide();
+        $('.btn-open-mobile').show();
+      }
+    }
+  }
+
+
+   // var delay = (function(){
+   //     var timer = 0;
+   //     return function(callback, ms){
+   //         clearTimeout (timer);
+   //         timer = setTimeout(callback, ms);
+   //         console.log('delay tick')
+   //     };
+   // })();
+
+   //     var pause = 1000; // will only process code within delay(function() { ... }) every 100ms.
+   //     delay(function() {
+   //         var width = $(window).width();
+   //         console.log("callback function")
+   
+   //        //show buttons and hide content if in mobile view
+   //         if( width >= 470 ) {
+   //            // medium and large
+   //            $('.btn-open-mobile, .btn-close-mobile').hide();
+   //            $('.collapsible-mobile').show();
+   //         } else if( width < 470 ) {
+   //             // code for mobile portrait
+   //            $('.collapsible-mobile, .btn-close-mobile').hide();
+   //            $('.btn-open-mobile').show();
+   //         }
        
-              //show buttons and hide content if in mobile view
-               if( width >= 470 ) {
-                  // medium and large
-                  $('.btn-open-mobile, .btn-close-mobile').hide();
-                  $('.collapsible-mobile').show();
-               } else if( width < 470 ) {
-                   // code for mobile portrait
-                  $('.collapsible-mobile, .btn-close-mobile').hide();
-                  $('.btn-open-mobile').show();
-               }
-           
-           }, pause );
-       });
-       $(window).resize();
+   //     }, pause );
+   // });
 
-   });
+   // $(function() {
+   //     var pause = 1000; // will only process code within delay(function() { ... }) every 100ms.
+   //     $(window).resize(function() {
+   //         delay(function() {
+   //             var width = $(window).width();
+       
+   //            //show buttons and hide content if in mobile view
+   //             if( width >= 470 ) {
+   //                // medium and large
+   //                $('.btn-open-mobile, .btn-close-mobile').hide();
+   //                $('.collapsible-mobile').show();
+   //             } else if( width < 470 ) {
+   //                 // code for mobile portrait
+   //                $('.collapsible-mobile, .btn-close-mobile').hide();
+   //                $('.btn-open-mobile').show();
+   //             }
+           
+   //         }, pause );
+   //     });
+   //     $(window).resize();
+
+   // });
 
 }); // end .ready
 
