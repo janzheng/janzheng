@@ -362,7 +362,7 @@ body {
           .active:hover:after {
             margin-top: -43px; 
             border: 0px;
-            width: 100%;
+            width: 75px;
             padding: 15px 0 35px 0;
             border: $color3 1px solid;
             // right: -8px; margin-top: -15px;
@@ -445,9 +445,11 @@ body {
       .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none; position: relative;}
       
       // special case for posts with bg image. Only supports 1 line of text, different bg colors
-      .post-list-bg { 
-        height: 350px; background-repeat: no-repeat; 
+      .preview-img { 
+        height: 350px; 
+        background-repeat: no-repeat; 
         background-size: auto 100%; background-position: 50%; @include ease-transition(200ms);
+        margin-bottom: $base;
         .post-info { position: absolute; bottom: 10px; .meta-data { position: relative; top: -7px; }} 
         h1 { display: inline; color: $color6; background-color: rgba(white, 0.8); padding: 0 6px;}
         .post-summary { color: $color6; background-color: rgba(white, 0.8); padding: 0 6px; }

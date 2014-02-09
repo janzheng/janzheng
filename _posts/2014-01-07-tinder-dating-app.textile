@@ -11,8 +11,9 @@ tags : [psychology, user experience, society, thoughts, game design]
 published : true
 portfolio : false
 comments : true
-title-bg : /assets/posts/tinder-dating-app/tinder-android.jpg
-featured : true
+preview-img : /assets/posts/tinder-dating-app/tinder-android.jpg
+preview-height : 350
+featured : false
 ---
 
 !(post-title-img)/assets/posts/tinder-dating-app/tinder-android.jpg!
@@ -34,6 +35,8 @@ Instead, it's a safe environment for social validation and confidence-building. 
 h2. Press the lever
 
 bq. "If at first you don't succeed, try- try- try again!" - Gambling addict
+
+!/assets/posts/tinder-dating-app/SkinnerRatCartoonSM.jpg!
 
 Remember from Psych 101 that behavior can be learned through rewards and punishment ("operant conditioning":http://en.wikipedia.org/wiki/Operant_conditioning), and that a "Skinner Box":http://en.wikipedia.org/wiki/Skinner_box is a tool that conditions animals to new behavior. For example, a rat presses a lever (a _response_) to receive a food pellet. The frequency and types of rewards and punishments are changed to see what kind of behavior can be elicited from the rat. 
 
