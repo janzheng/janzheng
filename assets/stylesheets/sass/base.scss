@@ -450,13 +450,16 @@ body {
         background-repeat: no-repeat; 
         background-size: auto 100%; background-position: 50%; @include ease-transition(200ms);
         margin-bottom: $base;
-        .post-info { position: absolute; bottom: 10px; .meta-data { position: relative; top: -7px; }} 
-        h1 { display: inline; color: $color6; background-color: rgba(white, 0.8); padding: 0 6px;}
-        .post-summary { color: $color6; background-color: rgba(white, 0.8); padding: 0 6px; }
-        .post-taglist {line-height: $base*1.7; li {color: $color6; background-color: rgba(white, 0.5); padding: 2px; &:after {content:''}} }
+        .post-info { width: 100%; position: absolute; bottom: 10px; .meta-data { position: relative; top: -7px; }} 
+        h1 { display: inline; color: $color6; background-color: rgba(white, 0.8); padding: 0 6px; margin-bottom: 10px; }
+        .post-summary { 
+          color: $color6; 
+          .summary-content { display: inline; padding: 4px 6px; background-color: rgba(white, 0.6); }
+        }
+        .post-taglist { line-height: $base*1.7; li {color: $color6; background-color: rgba(white, 0.5); padding: 2px; &:after {content:''}} }
 
         &:hover {
-          h1, .post-summary, .post-taglist li{ color: black; background-color: rgba($color2, 0.8)}
+          h1, .summary-content, .post-taglist li{@include ease-transition(200ms); color: black; background-color: rgba($color2, 0.3)}
           background-size: auto 105%; background-position: 50%; 
         }
       }
@@ -535,7 +538,7 @@ body {
 
         //typography
         h1 {@include font-sans($f1, 300); }
-        .post-summary{@include font-sans($f5, 400); margin-top: 0.3em;}
+        .post-summary{@include font-sans($f5, 400); margin-top: 1em;}
       }
     }
   }

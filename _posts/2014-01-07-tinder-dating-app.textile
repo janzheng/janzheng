@@ -11,8 +11,8 @@ tags : [psychology, user experience, society, thoughts, game design]
 published : true
 portfolio : false
 comments : true
-preview-img : /assets/posts/tinder-dating-app/tinder-android.jpg
-preview-height : 350
+preview-img : /assets/posts/tinder-dating-app/preview2.png
+preview-height : 250
 featured : false
 ---
 

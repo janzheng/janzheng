@@ -12,7 +12,7 @@ published : true
 portfolio : false
 comments : true
 preview-img : /assets/posts/xbox-voice-guide/preview.png
-preview-height : 300
+preview-height : 200
 featured : true
 ---
 
