@@ -1,141 +1,81 @@
 ---
 layout: post
 title: Nanowrito
-summary: Pursuit of the Ultimate Nanowrimo Tool
+summary: The Pursuit of Zen in Writing
 <!-- external: # -->
 <!-- image-path: /assets/# -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
 category : web
-tags : [prototype, angular, writing, ux]
+tags : [prototype, writing, ux, nanowrimo]
 published : true
 portfolio : false
 comments : true
 preview-img : /assets/posts/nanowrito/preview.png
 preview-height : 250
+preview-look : dark
 featured : false
 project : true
+project-link : http://nanowrito.com
 ---
 
-!(post-title-img)/assets/posts/tinder-dating-app/tinder-android.jpg!
 
-h2. "The possibilities feel endless! Potential love connections everywhere!"
+!/assets/posts/nanowrito/4.png!
 
-p(post-first-sentence). That's the sentiment "most people":http://www.huffingtonpost.com/2013/08/02/unwritten-rules-tinder_n_3689441.html share when they fire up the app.
+Check Out "(project-link). Nanowrito":http://nanowrito.com
 
-Ever since my friend convinced me to get Tinder (ahum), I've had this thought: People aren't using Tinder because it's a "dirty hookup app where everyone gets laid":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html, but because it's a well-designed, instantly gratifying skinner box that rewards with social validation. 
+h2. Writing is Hard.
 
-"Though media claims":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html "the quick follow-through from swipe to sex is similarly instinctive for a generation with an appetite for immediacy," I'm not sure many Tinder users actually get from swipe to sex. I do know that Tinder provides something very salient and gratifying, regardless of sex. Tinder is succcessful because it's essentially a marriage of Hot or Not and World of Warcraft: it cleverly uses game mechanics, psychology, and the potential for romance, to take advantage of our craving for immediacy, gratification, and validation. 
+p(post-first-sentence). That probably doesn't come as a surprise, considering my posts are dated a year apart from each other. Maybe writing is just hard for me. I tend to re-read my sentences, correct myself ad nauseam until my sentences seem right. Or I get distracted. And then I erase the entire paragraph because it doesn't fit. Most people call it Writer's Block: the scourge of a writer's productivity.
 
-In the end, Tinder is not a dating app. It's not the scourge upon society that media likes to portray, or the dirty hookup app that reduces us to sex-craving animals. 
-
-Instead, it's a safe environment for social validation and confidence-building. Instead, it's just a game.
+But I'm not so sure that it's a real medical affliction. It's more of a manifestation of doubts and anxieties in theirwork or abilities. It might be the sheer size of the challenge of writing itself that stops would-be writers in their tracks. Or our ability to constantly question our decisions. Or our technology-fueled ability to self-criticize and compare ourselves to the "successes of others":http://www.newyorker.com/online/blogs/elements/2013/09/the-real-reason-facebook-makes-us-unhappy.html.
 
 
+h2. But Writing can be Wonderful.
 
-h2. Press the lever
+p. Creative writing on its own, without any distractions or goals or objectives or spellchecking, can also be a beautiful thing. As a kid I used to write many short stories, if anything, as a way to let my mind loose. When you write creatively, you give yourself this sandbox of unlimited possibilities. You can completely let go; let inner child and sense of wonderment come alive. It doesn't have to make sense. In fact, no one should read it. When you write for yourself, it shouldn't make sense. These are your inner thoughts and your soul at work; your ego and your super-ego wrestling control, and letting loose on the keyboard. 
 
-bq. "If at first you don't succeed, try- try- try again!" - Gambling addict
+A pure, free-flowing writing state is a combination meditation and play; an exhilarating stream of subconsciousness, spilling dreams on paper. 
 
-!/assets/posts/tinder-dating-app/SkinnerRatCartoonSM.jpg!
+Unfortunately, most of us are conditioned to not let our subconscious wander too far. Our pursuits of perfection distract us from retreating into a meditative state. Accordingly,writing subconsciously is suggested to make us both "faster and more creative writers":http://www.creativitypost.com/create/writing_at_the_speed_of_the_unconscious.
 
-Remember from Psych 101 that behavior can be learned through rewards and punishment ("operant conditioning":http://en.wikipedia.org/wiki/Operant_conditioning), and that a "Skinner Box":http://en.wikipedia.org/wiki/Skinner_box is a tool that conditions animals to new behavior. For example, a rat presses a lever (a _response_) to receive a food pellet. The frequency and types of rewards and punishments are changed to see what kind of behavior can be elicited from the rat. 
-
-Also recall that in operant conditioning, one of the most successful ways to shape a behavior (a 'response') is called a "variable ratio schedule":http://www.betabunny.com/behaviorism/VRS.htm of reinforcement. At first, a rat receives a steady number of rewards for their response. For example, one food pellet is given for every lever press. Once the rat has learned the response, a reward is only randomly given after correct responses. Eventually, fewer rewards are given for the same number of button presses, but the rat continues to press the lever (for a while). If the rewards have stopped completely, eventually the rat will press the lever less often (_extinction_).
-
-Examples of variable ratio schedules include slot machines and leveling up in certain video games "(EverQuest was notorious for this)":http://www.nickyee.com/eqt/skinner.html. In these games, players perform a number of responses like pulling a lever or killing a monster, and receive a variable reward like a certain amount of money, experience points. This type of reinforcement scheme convinces players that playing for longer usually yields more rewards. Often, players will continue to play because they feel they will receive more rewards if they play for just a little bit longer.
-
-This is essentially why gambling and some games could become so addictive.
+<br />
 
 
+!/assets/posts/nanowrito/3.png!
 
-h2. "This online dating app is really a judging app"
+h2. Novel Under Deadlines
 
-So what does all of this have to do with an online dating app?
+National Writing Novel Month, or "NaNoWriMo":http://NaNoWriMo.com, is a program that is about using time as a constraint to enable creation. On the first day of November, roughly 340,000 people begin writing their novels from scratch. And by the last day, they must have written at least 50,000 words to be considered winners. This amounts to roughly 1,600 words a day. This isn't a large number for professional writers, but for those who have only fleetingly thought about writing, can be quite a daunting goal. There's the job, friends, and errands. Out of those 340,000 participants, only 40,000 actually finished. 
 
-Tinder turns online dating on its head by embracing a simple mechanic, and by deliberately removing features that are common among traditional dating apps. The app only presents users with one profile at a time, does not allow for users to browse or search profiles, and forces users to browse profiles through an incredibly easy judging mechanic. This combination mimics the Skinner Box environment, where the swipe is the response, and the match is the reward.
-
-In many ways, Tinder is a step backwards from more popular dating apps - it hides a lot of the information that would otherwise make someone look more appealing. But Tinder eschews long-winded descriptors and algorithmic match-making for a more game-like experience, by recognizing the basic fact that we are inherently 'shallow'. It caters to our most primitive instinct of physical attraction to create an exciting experience. It's like a blind version of online dating.
-
-
-h2. More than just a food pellet
-
-bq. "That deeply personal, useful and instantly gratifying information makes Tinder an addictive experience, with each match fueling a kind of emotional high. Research has shown 'likes' on Facebook and retweets and Twitter can release a dopamine surge that lead to social media addiction. It suggests we're all but starving for likes. in our push to figure out which strangers, and how many, think we're hot."
-- "Huffington Post":http://www.huffingtonpost.com/2013/04/09/tinder-dating-app_n_3044472.html
-
-We all know that being complimented makes us happy. Being complimented online is no different.
-
-Tinder uses the feeling of being complimented to drive its game mechanic. Swipe right, and you will know if someone thinks you're hot. If it wasn't a match, maybe they haven't seen your profile yet. But the next one? Oh, s/he's cute - maybe s/he's seen your profile. Maybe there's a match. Swipe right. Eventually, you'll find a match, right?
-
-The app never tells you if a profile rejected you. Maybe they just haven't seen your profile yet. In a large city of hundreds of users, you're bound to match at least a few profiles, right? Well, keep swiping, or you won't ever find out.
-
-Furthermore, any user that has not been matched cannot be messaged. In addition to social validation, matching also shields users from unsolicited messages and any potential for the feelings of rejection. While most dating apps might either result in unreturned or unsolicited messages, Tinder's mechanic sidesteps both of these problems.
-
-In the end, Tinder's success lies in its positiive, variable ratio reinforcement scheme, where a potential match seems right around the corner, and players won't ever be disappotinted. 
+The point of NaNo is for beginners to just start writing. To stop thinking about editing, and to start putting thoughts down on paper. The goal is to complete a sloppy, though finished first draft. To not stop writing, even if the story stops in its tracks. NaNo's mission is to encourage people to spend the month of November to take that leap and focus on putting words down, with the support of a larger community.
 
 
-h2. A Scourge Upon Society
 
-bq. "Tinder grants permission for those in our culture to rate others based on physical appearance, and furthermore, it teaches us how to slash an 'X' on those we find unattractive (too old, too short, too much facial hair)... it teaches us that dating, then, is a process of physical attraction and only physical attraction." - "Michigan Daily":http://www.michigandaily.com/arts/03afraid-of-tinder20 / Any Media outlet ever
+h2. Feature Reduction
 
-Isn't dating already a process of physical attraction? Tinder merely introduces those who find each other attractive. Like an initial flirt at a bar. What the players do with this information is up to them. Even "real" dating sites are not immune to this type of judgment. In "Jon Milward's attraction experiment":http://jonmillward.com/blog/attraction-dating/cupid-on-trial-a-4-month-online-dating-experiment, the two most attractive women received almost six times more messages than the other three women combined. Apparently, attractive people receive more attention.
+!/assets/posts/nanowrito/1.png!"
+Technology has enabled us to do many, many things. In the world of writing, movable type and eventually typewriters allowed us to quickly create and reprint documents. Of course, as the computer came along, text-editors ushered in a new era of tech-fueled features, Like the Backspace, or the Undo. Or the ability to change, reflow, and move anything you've written to anywhere else.
 
-But a more difficult question to answer is: How many people actually use Tinder seriously, as a hookup app? How many use it more than just a way to kill time? How many matches end up in longer, extend online conversations, and how many eventually become face-to-face encounters, and out of those encounters, how many actually end in a hookup? My suspicion: probably not many. I predict that most people use Tinder more as a tool for social validation, rather than for hookups. Tinder's a feel-good app over a hookup app.
+All these technologies have been great at enabling us to do more and more things, but in that pursuit of more features, a certain purity has been lost. Similar to decision paralysis, having the super-heroic abilities to do _anything_ can be daunting. 
 
-Many, especially teens, turn to social media for validation. Many of them resort to "pretty or ugly" threads on sites like "Youtube":http://www.youtube.com/results?search_query=am+i+pretty+or+ugly&oq=am+i+pretty+&gs_l=youtube.1.0.0i3j0l9.472.2004.0.3633.12.9.0.2.2.0.190.1062.4j5.9.0%E2%80%A60.0%E2%80%A61ac.1.11.youtube.5lW30J6q5lY or "Reddit":http://arstechnica.com/business/2013/11/its-not-just-girls-asking-am-i-pretty-or-ugly-on-the-internet/, where some of the feedback "can get pretty nasty":http://arstechnica.com/business/2013/10/am-i-pretty-or-ugly-exploring-an-unfortunate-youtube-phenomenon/.
+Recently, there's a trend that has been going for minimalism and reduction. "Flat UI":http://www.smashingmagazine.com/2013/09/03/flat-and-thin-are-in/ and Durr, the watch that "doesn't have a watchface":http://www.theverge.com/2014/1/30/5361210/skrekkogle-durr-the-watch-without-a-face, is a good example of this trend. 
 
-Tinder offers a similar type of validation for those who seek it, but without the scathing feedback that haunts social media. The also helps reduce the deluge of unsolicited and often nasty messages that seem to overwhelm the attractive female's inbox.  
-
-
-h2. Behind the Scene
-
-I'd be curious to learn how Tinder's algorithm actually works in the background. Tinder requires a user's Facebook profile, location, and a few basic preferences like user gender and preferred gender to start showing matches. But how does it know who to match, and in what order? Does it assume that, since users swipe through profiles so quickly, that it can just show profiles on random? Or is it smarter?
-
-Potentially, the app could choose what profiles to show based on how it wants to shape the user's behavior, just like a Skinner Box. As a user judges more profiles, the app will learn more about a user's preferences, like preferred age and interests. The app will also know how attractive or popular someone is based on how many likes and crosses the person has received. Potentially, it could also learn what type of people the user likes, including race, facial type, profile description, and more. 
-
-The developers could build a score for desirability for each profile, and treat highly desirable profiles as rewards to help shape a user's behavior. Some indicators of desirability could include:
-# Popularity (number of Likes and Crosses)
-# Number of images
-# Number of mutual friends
-# Age
-# Profile description
-# Distance from user
-# Mutual match
-
-With this information, the developers could adjust the displayed profiles to create a variable ratio schedule. If too many desirable profiles are successively shown, users might become jaded and bored. If too few are shown, users might start losing interest. The developers must strike a balance between highly desirable and less-than-desirable profiles to get users to continue using the app.
-
-If the app detects that users are becoming too swipe-happy, it could indicate that there are "no current matches near you," to prevent the user from swiping too much. It might also delay displaying a match, if the user has frequently been receiving them. Thus, the match is saved for moments when a user is less popular.  
-
-In the end, the entire data that Tinder sits on is like a popularity contest, that the developers could use to mold and shift user behavior. Would be interesting if the developers released some analytics.
+Similarly, to enable speedy, undistracted, and subconscious writing, we must remove extraneous features and design for purpose.
 
 
-h2. Tinderitis
 
-As addictive as it is, Tinder is a passing fad. It's a one-trick pony without longevity. After thousands of swipes, users will eventually get bored. The novelty will wear out, and profiles will blur together and look the same. Maybe users will start Liking every profile to see how many matches they get. Maybe matches will eventually get less exciting. Maybe users will eventually want something else.
+h2. Zen Mode
 
-With the fast swiping mechanic, many users will probably exhaust their local cache of profiles. When that happens, will Tinder really transform us into the shallow, commoditized, and sex-depraved pieces of meat that media portrays us? Or will it just increase our hunger for deeper and more emotionally fulfilling relationships?
+"!/assets/posts/nanowrito/2.png!":http://nanowrito.org
 
-The app merely caters to our human nature. It caters to our desire for inclusion, social validation, and acceptance, while safely protecting us from hurtful insults, shameful rejections and nasty creeps. I highly doubt it will change us in any significant ways. 
+I created NanoWrito during the first week of November 2013, after trying to find a better alternative than Word or Sublime. I needed something simple, not distracting, and could tell me the word count easily. Something more similar to a typewriter than a word processor. So I set out to create my own app. 
 
-Its future lies in its capability of establishing validation and building connections... Not in hooking up.
+It's very minimalist, as it consists of a text-box and a word counter, that large 0 looking into your eyes. When users click enter, the text is moved to an uneditable field where users won't be able to go back and fix anything. Anything they write is immutable durig this session. An alternate Zen Mode darkens the screen and blurs out the previously written words, so users can't clearly read the content, but would know that their work is being updated. A Flash module assists in copying the work to somewhere safe, and the Close functionality is guarded from accidentally closing the app. 
 
-Now if you'll excuse me, I have some more swiping to get back to.
+For the month of November, the project was fairly successful. I only put up links on the NanoWrimo apps forum, and on the NaNoWriMo subreddit, and garnered a few thousand unique visitors, with a number of daily recurring visitors.
 
-
-div(post-sources). 
-
-Sources:
-"The Unwritten Rules Of Tinder":http://www.huffingtonpost.com/2013/08/02/unwritten-rules-tinder_n_3689441.html
-"Telegraph.co.uk: 'Tinder review: A Woman's Perspective'":http://www.telegraph.co.uk/men/relationships/10317832/Tinder-review-a-womans-perspective.html
-"Wikipedia: Operant Conditioning":http://en.wikipedia.org/wiki/Operant_conditioning
-"Wikipedia: Skinner Box":http://en.wikipedia.org/wiki/Skinner_box
-"Betabunny.com: Variable Ratio Schedule'":http://www.betabunny.com/behaviorism/VRS.htm
-"NickYee.com: 'Everquest: The Virtual Skinner Box'":http://www.nickyee.com/eqt/skinner.html
-"Why Tinder Has Us Addicted: The Dating App Gives You Mind-Reading Powers":http://www.huffingtonpost.com/2013/04/09/tinder-dating-app_n_3044472.html
-"Notebook: The superficiality of online dating amplified by new Tinder app":http://www.michigandaily.com/arts/03afraid-of-tinder20
-"Cupid on Trial: A 4-month Online Dating Experiment Using 10 Fictional Singletons":http://jonmillward.com/blog/attraction-dating/cupid-on-trial-a-4-month-online-dating-experiment
-"ArsTechnica.com: 'It's not just girls asking 'Am I pretty or ugly?' on the Internet'":http://arstechnica.com/business/2013/11/its-not-just-girls-asking-am-i-pretty-or-ugly-on-the-internet/
-"ArsTechnica.com: 'Am I pretty or ugly? Exploring an unfortunate YouTube phenomenon'":http://arstechnica.com/business/2013/10/am-i-pretty-or-ugly-exploring-an-unfortunate-youtube-phenomenon/
-Image from "DigitalTrends":http://www.digitaltrends.com/social-media/everything-you-wanted-to-know-about-tinder-but-were-afraid-to-ask/
+And where in the previous two years I barely finished using the entire month of November, this year I was also able to finish my novel in less than two weeks.
 
 
+Check out the project here: "(project-link). Nanowrito":http://nanowrito.com

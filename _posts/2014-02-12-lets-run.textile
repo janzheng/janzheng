@@ -9,10 +9,15 @@ summary: A mobile-friendly long-distance runners' map
 <!-- vimeo: # -->
 category : Web
 tags : [prototyping, ux, running]
+preview-img : /assets/posts/lets-run/preview.png
+preview-height : 200
+preview-look : light
 published : true
 portfolio : no
 project: true
 ---
+
+"!/assets/posts/lets-run/1.png!":http://janzheng.com/LetsRun
 
 As much as I love doing anything UX-related, on the weekends I just want to tear myself away and go enjoy the outside. 
 
@@ -22,4 +27,4 @@ The maps for the distances come on printed sheets of paper, and tell us on which
 
 Let's Run! is the mobile equivalent of the paper map. It shows the same information like mileage, turn, street, and water stops, without the hassle of printing out and fumbling with a piece of paper. It also lets runners keep track of which turns they've hit by tapping on the turn they just finished.
 
-Check out "Let's Run!":http://janzheng.com/LetsRun
+Check out "(project-link).Let's Run!":http://janzheng.com/LetsRun

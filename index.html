@@ -23,7 +23,7 @@ Tags
 
 <a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
   <!-- <section class="post-list {% if post.title-bg %}post-list-bg{% endif %}" {% if post.title-bg %}data-bg="{{ post.title-bg }}" {% endif %}> -->
-  <section class="post-list {% if post.preview-img %}preview-img{% endif %}" {% if post.preview-img %}data-bg="{{ post.preview-img }}" style="height:{{ post.preview-height }}px"{% endif %}>
+  <section class="post-list {{ post.preview-look }} {% if post.preview-img %}preview-img{% endif %}" {% if post.preview-img %}data-bg="{{ post.preview-img }}" style="height:{{ post.preview-height }}px"{% endif %}>
   
   <!-- bg image is set in script.js -->
     <div class="post-info">
@@ -90,7 +90,7 @@ Tags
 
 
 <a class="post-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %}">
-<section class="post-list {% if post.preview-img %}preview-img{% endif %}" {% if post.preview-img %}data-bg="{{ post.preview-img }}" style="height:{{ post.preview-height }}px"{% endif %}>
+<section class="post-list {{ post.preview-look }} {% if post.preview-img %}preview-img{% endif %}" {% if post.preview-img %}data-bg="{{ post.preview-img }}" style="height:{{ post.preview-height }}px"{% endif %}>
   <!-- bg image is set in script.js -->
     <div class="post-info">
       <div class="meta-data">

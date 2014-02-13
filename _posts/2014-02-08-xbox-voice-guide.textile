@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Xbox One Kinect Voice Commands Guide
+title: Xbox One Voice Guide
 summary: How to make your Xbox One listen to you
 <!-- external: # -->
 <!-- image-path: /assets/# -->
@@ -13,7 +13,7 @@ portfolio : false
 comments : true
 preview-img : /assets/posts/xbox-voice-guide/preview.png
 preview-height : 200
-featured : true
+featured : false
 ---
 
 "!/assets/posts/xbox-voice-guide/XboxVoiceGuide_sm.png!":/assets/posts/xbox-voice-guide/XboxVoiceGuide.pdf
