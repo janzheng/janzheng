@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Free of the Grid
+title: Breaking Free of the Grid
 <!-- summary: but do it responsively -->
 <!-- external: # -->
 <!-- image-path: /assets/ -->
