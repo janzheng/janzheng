@@ -457,7 +457,7 @@ body {
         }
         &:hover {
           background-color: transparent; @include ease-transition(200ms);
-          h1, .summary-content, { padding: 0 6px; @include ease-transition(200ms); color: black; background-color: rgba(black, 0.06) }
+          h1, .summary-content, { @include ease-transition(200ms); color: black; background-color: rgba(black, 0.06) }
         }
       }
       .post-link, .post-link:active, .post-link:visited {color: $dark-gray; text-decoration: none; position: relative;}
@@ -484,7 +484,7 @@ body {
         
         &:hover {
           h1, .summary-content, .post-taglist li{@include ease-transition(200ms); color: black; background-color: rgba(white, 0.55)}
-           h1, .summary-content {padding-right: 12px; padding-left: 12px; }
+           h1, .summary-content { }
           background-size: auto 105%; background-position: 50%; 
 
           &.dark {
@@ -493,7 +493,6 @@ body {
 
           &.light {
             h1, .summary-content, .post-taglist li { color: black; background-color: rgba(black, 0.06) }
-            h1, .summary-content { padding: 3px 12px; }
           }
         }
 

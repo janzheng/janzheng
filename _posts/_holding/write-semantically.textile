@@ -1,0 +1,63 @@
+---
+layout: post
+title: Semantic-First Design
+summary: Designing for the device-free world
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : web
+tags : [thoughts, design, ux]
+published : true
+portfolio : false
+comments : true
+<!-- preview-img : /assets/posts/nanowrito/preview.png
+preview-height : 250
+preview-look : dark -->
+featured : false
+<!-- project : true
+project-link : http://nanowrito.com -->
+---
+
+
+When designing for the web, don't think mobile first.
+
+Think Content first.
+Then think Semantics. 
+How should the content be told, as a story, as a journey?
+The semantics are the way you will structure that journey.
+
+(
+after this is done
+Think Purpose First.
+- figure out what a user's purpose is
+- does an experience make sense, given the device s/he's on?
+   - this will argue for or against RWD)
+
+
+Then think Semantically.
+
+Structure a content in a way that has no bearing to design.
+What is told first, second, and last. What is louder, and what is softer?
+
+What parts are only interesting to some people?
+
+Use semantics to tell a story. Use Markdown (or HTML) to tell that story.
+Describe that website to a blind person.
+
+What does the site look like, if you could use only words?
+
+After you have the story, move on to wireframes. Illustrate what pieces are most important
+http://alistapart.com/column/start-coding-with-wireframes
+
+Semnatics is important for the old-old browsers, and for the new-new technology that might not support fancy javascripts and other tecknologies. That content may be on a watch or on a pair of glasses. We can't predict the future.
+
+So we prepare for it.
+
+We don't think mobile first anymore- we think of the design of the site, the experience of the site, as a story, or as a journey.
+
+Then we apply that journey to different devices, and add and remove 'features' as appropriate to that journey, and to the capabilities of that device.
+
+What if the device was only able to show text? What if it was an ultra large screen?
+
+Only then can you argue for RWD, or Mobile First

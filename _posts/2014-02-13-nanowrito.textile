@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nanowrito
-summary: The Pursuit of Zen in Writing
+summary: the pursuit of writing zen
 <!-- external: # -->
 <!-- image-path: /assets/# -->
 <!-- youtube: # -->
@@ -15,8 +15,8 @@ preview-img : /assets/posts/nanowrito/preview.png
 preview-height : 250
 preview-look : dark
 featured : false
-project : true
-project-link : http://nanowrito.com
+<!-- project : true
+project-link : http://nanowrito.com -->
 ---
 
 
@@ -46,22 +46,21 @@ Unfortunately, most of us are conditioned to not let our subconscious wander too
 
 h2. Novel Under Deadlines
 
-National Writing Novel Month, or "NaNoWriMo":http://NaNoWriMo.com, is a program that is about using time as a constraint to enable creation. On the first day of November, roughly 340,000 people begin writing their novels from scratch. And by the last day, they must have written at least 50,000 words to be considered winners. This amounts to roughly 1,600 words a day. This isn't a large number for professional writers, but for those who have only fleetingly thought about writing, can be quite a daunting goal. There's the job, friends, and errands. Out of those 340,000 participants, only 40,000 actually finished. 
+National Writing Novel Month, or "NaNoWriMo":http://NaNoWriMo.com, is a program about using time as a constraint for creativity. On the November 1, roughly 340,000 people begin their novels from scratch. On Nov. 30, they must reach 50,000 words, or roughly 1,500 words a day to win. It's an easy goal for professional writers, but hard for us with only a fleeting curiosity in writing. Distractions like work, friends, and errands get in the way. Out of the 340,000 participants, only 40,000 finished. 
 
-The point of NaNo is for beginners to just start writing. To stop thinking about editing, and to start putting thoughts down on paper. The goal is to complete a sloppy, though finished first draft. To not stop writing, even if the story stops in its tracks. NaNo's mission is to encourage people to spend the month of November to take that leap and focus on putting words down, with the support of a larger community.
-
+The point of NaNo is for beginners to stop over-thinking, and start writing. To eschew quality for quantity: to achieve the goal of writing a long piece of narrative. Nano encourages potential writers to put words on paper, and to not worry about quality. They encourage writers to finish their first drafts, and to fight through their Writers' block.
 
 
 h2. Feature Reduction
 
-!/assets/posts/nanowrito/1.png!"
-Technology has enabled us to do many, many things. In the world of writing, movable type and eventually typewriters allowed us to quickly create and reprint documents. Of course, as the computer came along, text-editors ushered in a new era of tech-fueled features, Like the Backspace, or the Undo. Or the ability to change, reflow, and move anything you've written to anywhere else.
+!/assets/posts/nanowrito/1.png!
+Technology has enabled us to do more. In writing, movable type and typewriters have made us more prolific. Computers and text-editors have introduced the freedom of editing: to change, reflow, and to move anything around.
 
-All these technologies have been great at enabling us to do more and more things, but in that pursuit of more features, a certain purity has been lost. Similar to decision paralysis, having the super-heroic abilities to do _anything_ can be daunting. 
+All these technologies have enabled us to do more, but in that pursuit of more, we've lost a sense of purity. Similar to decision paralysis, more option suddenly blocks our ability for action. 
 
-Recently, there's a trend that has been going for minimalism and reduction. "Flat UI":http://www.smashingmagazine.com/2013/09/03/flat-and-thin-are-in/ and Durr, the watch that "doesn't have a watchface":http://www.theverge.com/2014/1/30/5361210/skrekkogle-durr-the-watch-without-a-face, is a good example of this trend. 
+The recent trend for minimalism and reduction reflect this notion, like "Flat UI":http://www.smashingmagazine.com/2013/09/03/flat-and-thin-are-in/ and Durr, "the face-less watch":http://www.theverge.com/2014/1/30/5361210/skrekkogle-durr-the-watch-without-a-face. 
 
-Similarly, to enable speedy, undistracted, and subconscious writing, we must remove extraneous features and design for purpose.
+Minimalism can also give us a distraction-free writing experience, as we strip down the word processor to its basic core, to only keep the bare necessities. In the case of NaNoWriMo, we optimize for writing speed. The best example I could find was that of a typewriter (pictured: my Sears Tower typewriter). 
 
 
 
@@ -77,5 +76,7 @@ For the month of November, the project was fairly successful. I only put up link
 
 And where in the previous two years I barely finished using the entire month of November, this year I was also able to finish my novel in less than two weeks.
 
-
 Check out the project here: "(project-link). Nanowrito":http://nanowrito.com
+
+
+
