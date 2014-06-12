@@ -45,6 +45,7 @@ $(document).ready(function() {
       filterReset();
       $(".filter-btn").removeClass('filter-btn--active');
     } else {
+      $(".filter-btn").removeClass('filter-btn--active');
       filterBy($(this).data('filter'));
       $(this).addClass('filter-btn--active');
     }
