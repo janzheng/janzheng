@@ -1,0 +1,516 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"list-",
+				"list-style-position"
+			],
+			[
+				"background-",
+				"background-size"
+			],
+			[
+				"backgron",
+				"background-color"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"listp",
+				"list-style-type"
+			],
+			[
+				"border",
+				"border-color"
+			],
+			[
+				"backgro",
+				"background-size"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"lis",
+				"list-style-type"
+			],
+			[
+				"bor",
+				"border-radius"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 51.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_sass/_collapsible.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_sass/main.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_sass/__proto-framework.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_sass/_triangles.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/app/posts/lab/left-nav/demo/sticky-sidebar-demo.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/app/js/script.js",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/BullWatch/meteorjs/leaderboard/leaderboard.js",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/BullWatch/meteorjs/leaderboard/leaderboard.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/BullWatch/meteorjs/leaderboard/leaderboard.css",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/about.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/lab/2014-03-20-sticky-sidebar.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_layouts/layout-about.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_layouts/layout-post.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_sass/_design.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_sass/__proto-grid-settings.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_includes/about.html",
+		"/Users/janzheng/Dropbox/Public/Work/SweetGeorgiaBlues/blues.css",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Prototypes/CoastalGlassesThanks/_sass/main.scss",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Prototypes/CoastalGlassesThanks/index.html",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Prototypes/CoastalGlassesThanks/_sass/__proto-framework.scss",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Prototypes/CoastalGlassesThanks/app/js/project.js",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Prototypes/CoastalGlassesThanks/_layouts/framework.html",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Assurant/Assurant.com/prototype/__sass/__proto-framework.scss",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Assurant/Assurant.com/prototype/__sass/__proto-grid-settings.scss",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Assurant/Assurant.com/prototype/__sass/main.scss",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Prototypes/CoastalGlassesThanks/_sass/_design.scss",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Assurant/Assurant.com/prototype/__sass/_design.scss",
+		"/Users/janzheng/Dropbox/Public/Work/Nurun/Prototypes/CoastalGlassesThanks/_includes/proto-header.html",
+		"/Users/janzheng/Dropbox/Public/___Work/___Nurun/___Prototypes/CoastalGlassesThanks/index.html",
+		"/Users/janzheng/Dropbox/Public/___Work/___Nurun/___Prototypes/CoastalGlassesThanks/_config.yml",
+		"/Users/janzheng/Dropbox/Public/___Work/___Nurun/Assurant/Assurant.com/notes.txt",
+		"/Users/janzheng/Dropbox/Public/___Work/___Nurun/Assurant/Assurant.com/prototype/__sass/main.scss",
+		"/Users/janzheng/Dropbox/Public/___Work/___Nurun/Assurant/Assurant.com/prototype/_config.yml",
+		"/Users/janzheng/Dropbox/Public/___Work/SweetGeorgiaBlues/blues.css",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/_holding/2013-04-10-paypal-hack 2.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/about.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_layouts/layout-site.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/base.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/rants/2014-01-07-tinder-dating-app.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/_holding/2014-03-18-wearables-future.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/_holding/2014-04-11-isochronic_tones.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/404.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/idea/2013-06-16-tumblr_integration.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_settings.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/about.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/rants/2014-03-18-broke-the-grid.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/rants/2013-04-9-jekyll-blog.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/rants/2013-05-01-hello-world-again.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/lab/2014-02-13-nanowrito.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/lab/2014-02-12-lets-run.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/index.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/idea/2014-02-08-xbox-voice-guide.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/info/2014-02-08-xbox-voice-guide.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/thoughts/2014-03-18-broke-the-grid.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/2014-03-18-broke-the-grid.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/protoWire/app/js/project.js",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/app/posts/projects/left-nav/demo/sticky-sidebar-demo.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/projects/2014-03-20-sticky-sidebar.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/app/posts/projects/left-nav/left-nav.css",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/projects/2014-03-20-left-nav5.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/2014-02-26-break-the-grid.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/2014-02-12-lets-run.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/app/posts/projects/left-nav/jquery.ba-throttle-debounce.min.js",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/app/posts/projects/left-nav/waypoints.min.js",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/projects/2014-03-20-left-nav.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/projects/2014-03-20-left-nav3_test.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/projects/2014-03-20-left-nav2.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/projects/2014-03-20-left-nav.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/experiments/2014-03-20-left-nav.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/2014-01-07-tinder-dating-app.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/2013-05-01-hello-world-again.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/2014-02-26-break-the-grid-2.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/2014-02-13-nanowrito.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/2014-02-08-xbox-voice-guide.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/toolbox.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/2013-06-16-tumblr_integration.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_config.yml",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_posts/2013-05-04-Portfolio-Verizon-Lost-Elf.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_includes/tags_list",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_includes/taglist.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/index.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_includes/menu.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_config.yml",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_layouts/post.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/nanowrito/_nano-sass/main.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/assets/stylesheets/sass/_elements.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_sass/__proto-main.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/protoWire/__protowire-sass/_design.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/protoWire/app/css/main.css",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/protoWire/index.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/layout.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/jz-v2/_layouts/layout-site-24grid-example.html",
+		"/Users/janzheng/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/janzheng/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_layouts/main.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_layouts/layout-site.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_config.yml",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_includes/menu.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/index.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_includes/script.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_includes/logo.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_includes/facebook.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_includes/contact.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_includes/tags_list",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_includes/taglist.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_includes/about.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/_includes/head.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/v2/notes.txt",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_layouts/google.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_posts/janzheng3.0.txt",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_includes/taglist.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_posts/_holding/write-semantically",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_posts/2014-02-26-break-the-grid.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_posts/2014-02-13-nanowrito.textile",
+		"/Users/janzheng/Dropbox/Public/___Work/___Nurun/Tenzing_Proto_1/dev/__sass/main.scss",
+		"/Users/janzheng/Dropbox/Public/___Work/___Nurun/Tenzing_Proto_1/dev/tenzing.html",
+		"/Users/janzheng/Dropbox/Public/___Work/___Nurun/Tenzing_Proto_1/dev/__sass/_tz-main.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/LetsRun/routes/decatur/10.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/LetsRun/routes/decatur/14.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/LetsRun/routes/decatur/12.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/janzheng.github.com/_posts/2014-02-08-xbox-voice-guide.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/LetsRun/routes/decatur/index.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/LetsRun/__CRR/main.scss",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/LetsRun/_includes/decatur.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/LetsRun/routes/decatur/8.textile",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/LetsRun/index.html",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/LetsRun/app/js/project.js",
+		"/Users/janzheng/Dropbox/_Create/_Code & Build/_Projects/_github/LetsRun/routes/decatur/8.html"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"here",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"select",
+			"fb",
+			"hover",
+			"ease",
+			"font-weight",
+			"red",
+			"$base",
+			"js--preview",
+			"-preview",
+			"expander",
+			"h2",
+			"style-article-h2",
+			"size-h2",
+			"h2",
+			"way",
+			"state_container_top",
+			"for",
+			"each",
+			"nav_container",
+			"border-blue",
+			"bout-",
+			"blockquote-w",
+			"description-container",
+			"expandablejs--full",
+			"btn-show-hide--content",
+			"btn-",
+			"expandable",
+			"article-title",
+			"style-article-title",
+			"article-title",
+			"%display",
+			"style-article-title",
+			"article-h2",
+			"h2",
+			"a:hover",
+			"a:",
+			"linked",
+			".label",
+			"nav--menu",
+			"show-nav-full",
+			"show-nav",
+			"show-nav-",
+			"show-nav",
+			"show-nav-full",
+			"form",
+			"menu",
+			"css",
+			"selected_na",
+			"player",
+			"inc",
+			"$",
+			"inc",
+			"selected_name",
+			"selected_player",
+			"selected_players",
+			"selected_player",
+			"text-blur",
+			"medium",
+			"mdeium",
+			"upto",
+			"right-text",
+			"text-cl",
+			"footer",
+			"urr",
+			"blur",
+			"top: 300",
+			"ease",
+			"cage",
+			"link-block",
+			"dropcap",
+			"size-largest",
+			"about-quote",
+			"size-article-subtitle",
+			"style-article-subtitle",
+			"about-quote",
+			"style-fig",
+			"figcaptio",
+			"logo",
+			"style-post-info-title",
+			"post-info-",
+			"%ease",
+			"info--summary",
+			"about-fill",
+			"eye-icon",
+			"home-fill",
+			"icon",
+			"underline",
+			"orange",
+			"style-p-serif",
+			"ease",
+			"w-std",
+			"select",
+			"style-post-info-title",
+			"style-article-title",
+			"head--title",
+			"%display",
+			"\n                @extend %style-article-subtitle;",
+			"%style-article-subtitle;",
+			"@extend %style-article-subtitle;",
+			"style-article-subtitle",
+			"style-",
+			"style-head",
+			"larger",
+			"code",
+			"stop_nav",
+			"nav_items",
+			"post--left-nav--nav",
+			"post--left-nav--toggle",
+			"post--left-nav--nav-container",
+			"e-wide",
+			"blockquote-wide",
+			"style-blockquote",
+			"rticle--body",
+			"wide",
+			".wide",
+			"antialiased",
+			"style-article-subtitle",
+			"article--",
+			"article-sub",
+			"style-p-",
+			"style-anti",
+			"antialia",
+			"post--container",
+			"lab",
+			"-lab ",
+			"-lab",
+			"-info",
+			"nav-mobile"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"sticky-sidebar-stop",
+			"sticky-sidebar-nav",
+			"sticky-sidebar-toggle",
+			"sticky-sidebar-container",
+			"scroll()",
+			"refresh()",
+			"$.waypoints('viewportHeight')",
+			"$.waypoints('viewportHeight');",
+			"recalculate_waypoints",
+			"nav_container",
+			"position_end",
+			"offset_end",
+			"nav_height",
+			"nav",
+			"is_sticky_down",
+			"is_too_tall",
+			"is_tall",
+			"",
+			"root",
+			"ltblue",
+			"title",
+			"h6",
+			"font-sans",
+			"font-serif",
+			"",
+			"left",
+			"*",
+			"**(",
+			"***(",
+			"****(",
+			"#",
+			"page.root",
+			">\n",
+			"90deg",
+			"$colora",
+			"0deg, #1e5799 0%, #7db9e8 100%",
+			"cover.png",
+			"",
+			".message"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "jz-v2.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 167.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 180.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

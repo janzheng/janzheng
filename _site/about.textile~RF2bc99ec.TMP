@@ -1,0 +1,417 @@
+
+
+
+
+
+<!-- 
+
+  container--shell
+    container
+    /
+  /
+
+
+ 
+ <head>
+  <meta charset="utf-8">
+  <meta name="description" content="Dickson Fong is a digital product designer for web, mobile, tablet, and television.">
+ -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hello there</title>
+  <meta name="description" content="Jan Zheng designs and prototypes experiences.">
+  <meta name="author" content="Jan Zheng">
+  <meta name="keywords" content="user experience, ux, interaction design, digital, advertising, ui design, code, prototyping, resume ,portfolio">
+  
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1" />
+
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600, 700' rel='stylesheet' type='text/css'>
+
+<!-- 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   -->
+  <script src="/app/js/jquery.min.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- import gets all the styles from main.scss in the _scss folder -->
+  <link rel="stylesheet" href="/app/css/import.css">
+<!-- 
+  <link rel="stylesheet" href="/assets/stylesheets/compiled/flexslider.css">
+  <link rel="stylesheet" href="/assets/stylesheets/compiled/slimbox2.css">
+   -->
+</head>
+
+<body>  
+  <div class="color-palette color-top" id="top">
+    <div id="c1"></div><div id="c2"></div><div id="c3"></div><div id="c4"></div><div id="c5"></div>
+    <div id="a1"></div><div id="a2"></div><div id="a3"></div><div id="a4"></div><div id="a5"></div>
+  </div>
+
+
+
+
+  <!-- Navigation -->
+  <!-- Main navigation
+        - stays to the left side >480. Static at the top <480. Mobile nav kicks in with a scroll top.
+   -->
+  <div class="nav">
+
+    <!-- JZ logo -->
+    <div class="nav--logo">
+      <a class="nav--logo-link" href="/">
+
+        <div class="nav--logo--content ">
+          <span class="bracket"></span><span class="j">jan </span><span class="z">zheng</span><span class="bracket"></span>
+        </div>
+        <!-- 
+        <div class="nav--logo--content show-nav-small ">
+          <span class="bracket">{</span><span class="j">j</span><span class="z">z</span><span class="bracket">}</span>
+        </div>
+        <div class="nav--logo--content show-nav-full">
+          <span class="bracket">{</span><span class="j">jan </span><span class="z">zheng</span><span class="bracket">}</span>
+        </div> -->
+      </a>
+
+    </div>
+
+    <!-- Main navigation buttons -->
+    <div class="nav--menu">
+      <div class="nav--menu--content">
+
+
+      <!-- generate links and mark nav as active -->
+       
+              
+        
+        <a href="/">
+          <div class="nav--menu-item nav--menu--home " >
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="speech-bubble-11-icon" d="M50,64.991v293.682h64.501v88.336l131.978-88.336H462V64.991H50z M256,283.567H121.841v-30H256
+            V283.567z M391.841,223.567h-270v-30h270V223.567z M391.841,163.567h-270v-30h270V163.567z"></path> </svg>
+            <div class="label"><span>rants</span></div>
+          </div>
+        </a>
+        
+
+        
+
+        
+
+
+       
+              
+        
+
+        
+        <a href="/about.html">
+          <div class="nav--menu-item nav--menu--about " >
+            
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> 
+
+<path id="favorite-2-icon" d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967
+c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014
+C387.691,314.82,498.41,221.837,450.703,124.225z"></path>
+<!-- 
+              <path id="about-icon" d="M377.055,170.75c0,66.275-53.726,120-120,120s-120-53.725-120-120c0-66.273,53.726-120,120-120
+              S377.055,104.477,377.055,170.75z M356.101,296.41c-27.968,22.084-62.633,34.34-99.046,34.34c-36.835,0-71.839-12.543-99.934-35.051
+              C83.067,322.875,50,417.877,50,461.25h412C462,418.25,428.678,323.926,356.101,296.41z"></path>
+ -->
+              <!-- crazy eye thing<path id="eye-icon" d="M291.75,256c0,18.641-15.11,33.75-33.75,33.75s-33.75-15.109-33.75-33.75c0-18.64,15.11-33.75,33.75-33.75
+  S291.75,237.36,291.75,256z M462,248.666c0,0-73,121.668-205.75,121.668C133,370.334,50,248.666,50,248.666s76.333-107,206.25-107
+  C388.334,141.666,462,248.666,462,248.666z M338,256c0-44.183-35.817-80-80-80s-80,35.817-80,80c0,44.184,35.817,80,80,80
+  S338,300.184,338,256z"></path>-->
+
+            </svg> 
+            <div class="label"><span>about</span></div>
+          </div>
+        </a>
+        
+
+        
+
+
+       
+              
+        
+
+        
+
+        
+        <a href="/toolbox.html" >
+          <div class="nav--menu-item nav--menu--toolbox " >
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="wrench-16-icon" d="M320.312,364.616c-8.046-8.046-19.162-12.297-30.523-11.663c-18.815,1.051-37.98-5.607-52.354-19.981
+  c-19.2-19.2-24.636-46.944-16.321-70.99l43.654,43.654c17.032,1.003,43.364-25.329,42.362-42.359l-43.654-43.656
+  c24.045-8.315,51.787-2.878,70.988,16.321c14.375,14.374,21.033,33.539,19.982,52.354c-0.635,11.371,3.61,22.471,11.663,30.523
+  L462,414.71V138.265H225.087c-12.762,0-25.005-5.056-34.048-14.06L158.35,91.66H50v328.68h326.037L320.312,364.616z"></path> </svg>
+            <div class="label"><span>tools</span></div>
+          </div>
+        </a>
+        
+
+
+      
+
+
+      </div>
+    </div>
+
+
+    
+
+    <!-- Social icons / contact (email, twitter, linkedin) -->
+    <div class="nav--social-menu">
+
+      <div class="nav--social-menu--content">
+
+        <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
+          <div class="nav--social-menu-item nav--social-menu--email ">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="email-3-icon" d="M256.017,273.436L50.847,103.407h410.904L256.017,273.436z M255.983,328.898L50,158.244v250.349h412
+  V158.653L255.983,328.898z"></path> </svg>
+            <div class="label"><span>hello@</span></div>
+          </div>
+        </a>
+
+        <a href="https://twitter.com/janistanian">
+          <div class="nav--social-menu-item nav--social-menu--twitter">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="twitter-icon" d="M462,128.223c-15.158,6.724-31.449,11.269-48.547,13.31c17.449-10.461,30.854-27.025,37.164-46.764
+  c-16.333,9.687-34.422,16.721-53.676,20.511c-15.418-16.428-37.386-26.691-61.698-26.691c-54.56,0-94.668,50.916-82.337,103.787
+  c-70.25-3.524-132.534-37.177-174.223-88.314c-22.142,37.983-11.485,87.691,26.158,112.85c-13.854-0.438-26.891-4.241-38.285-10.574
+  c-0.917,39.162,27.146,75.781,67.795,83.949c-11.896,3.237-24.926,3.978-38.17,1.447c10.754,33.58,41.972,58.018,78.96,58.699
+  C139.604,378.282,94.846,390.721,50,385.436c37.406,23.982,81.837,37.977,129.571,37.977c156.932,0,245.595-132.551,240.251-251.435
+  C436.339,160.061,450.668,145.174,462,128.223z"></path> </svg>
+            <div class="label"><span>chirp</span></div>
+          </div>
+        </a>
+
+
+        <a href="http://www.linkedin.com/in/janzh">
+          <div class="nav--social-menu-item nav--social-menu--linkedin">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="linkedin-icon" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+  C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+  M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+  c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+  s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"></path> </svg>
+            <div class="label"><span>link</span></div>
+          </div>
+        </a>
+
+        <a href="http://janzheng.com/resume.pdf">
+          <div class="nav--social-menu-item nav--social-menu--resume">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="download-2-icon" d="M333.816,231.323h66.258L255.998,375.645L111.926,231.323h66.256V50h155.635V231.323z
+  M375.236,346.828V412H136.764v-65.172h-50V462h338.473V346.828H375.236z"></path> </svg>
+            <div class="label"><span>cv</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- End sidebar navigation -->
+
+
+  <!-- This thing appears fixed on mobile view to let users scroll up to the menu. This is so fixed menu takes less space -->
+  <a href="#top">
+    <div class="nav-mobile-container">
+      <div class="nav-mobile" data-0="display: none" data-100="display: block">
+        <div class="svg-container icon-uptop ">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <polygon id="arrow-25-icon" points="142.332,104.886 197.48,50 402.5,256 197.48,462 142.332,407.113 292.727,256 "></polygon> </svg>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+
+  <div class="clear"></div>
+
+
+
+  <div class="container--shell" id="body--content">
+    <div class="container">
+
+
+      <!-- Main section for content -->
+      <div class="main">
+        <div class="content">
+          <div class="container">
+  <div class="article post-std">
+
+    <!-- begin article content -->
+
+    <div class="article--body container">
+
+      <!-- 
+      <div class="article--summary-container">
+        <div class="article--summary"></div>
+      </div>  -->
+
+
+
+      <div class="article--body--video-container">
+        <div class="article--body--video">
+          
+              
+        </div>
+      </div>
+
+      <div class="article--body--title-image-container">
+           
+      </div>
+
+
+      <div class="article--body--content">
+        <figure class="figure-wide figure-circle">
+!/app/posts/about/teal_tie_sm.png!
+<figcaption>day at the office</figcaption>
+</figure>
+ 
+h1(center h1-display). Well hello there,
+
+
+h4(center about-quote). stay a while, and listen
+
+p(dropcap). These are exciting times: the era of technology as we know it is coming to an end. Machines are no longer confined to desks, laps, or even palms. We have reached a point where mainstream culture is comfortable enough to coexist with technology, where using machines is no longer considered "nerdy," and where everyone - from infants to grandmothers - are increasingly comfortable with trusting technology. 
+
+We are entering an era where designers, developers, and technologists can start to look at how technology can give us more time, more freedom, and peace of mind, and ways to inspire health, creativity, and personal expression.
+
+These are exciting times, and I'm ready to get my hands dirty.
+
+
+
+h2. About Jan
+
+My name is Jan ('yawn'), and I am an design digital experiences. 
+
+I strive for my work to be immersive, memorable, and delightful. Some of these experiences include _responsive websites_, _mobile_, and _data-heavy interfaces_, and experimental games.
+
+For each of my projects, I apply plenty of care, along with user-centered design, research, and lots of iterative design, prototyping, and testing.
+
+bq(blockquote-wide no-quotes). I currently live in *(strong-loud)Atlanta*, and work as a full-time *(strong-loud)Sr. User Experience Architect* with "Nurun":http://www.nurun.com.
+
+I am currently *(strong-loud)not available* for freelance work, but go ahead and say hello anyway: "hello@janzheng.com":mailto:hello@janzheng.com, "twitter":https://twitter.com/janistanian, or "linkedin":http://www.linkedin.com/in/janzh.
+
+
+
+
+
+h2. About This Site
+
+For the second round of redesign, I wanted to reduce the number of artifacts on the page, like lines, curves, outlines, and blocks, and take a more typographic, minimalist approach. Any shapes and lines are only used to accentuate the information I'm presenting, with enough white space to prevent clutter.
+
+This site is now my umpteen+1th portfolio design, but every iteration has seen improvement. The site is built on the static site generator "Jekyll":https://github.com/mojombo/jekyll and is hosted completely for free on "Github Pages":https://github.com/janzheng/janzheng.github.com.
+
+The front-end styling was written in SASS, with the help of "bourbon.io" and "Neat":neat.bourbon.io, with a glass of "Belle Meade":http://www.greenbrierdistillery.com/nelsons_green_brier_products.html on the side.
+
+Icons are sourced from "IconMonstr":http://iconmonstr.com/ and Zurb from <a href="http://www.flaticon.com" title="Flaticon">Flaticon.com</a>
+
+Cheers, 
+Jan
+
+
+
+      </div>
+
+      <div class="clear"></div>
+
+    </div>
+
+    <!-- end article body -->
+
+    <div class="clear"></div>
+      
+
+
+    <div class="article--comments">
+
+       
+
+    </div>
+
+  </div>
+</div>
+        </div>
+        <div class="legal">
+          <p id="fine-print">
+            &copy; 2014. Built on <a href="https://github.com/janzheng/janzheng.github.com">Github</a> &amp; <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+          </p>
+          
+        </div> 
+      </div>
+
+
+    </div>
+    <!-- End container -->
+
+  </div>
+    <!-- End container-shell -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"></script>
+ -->
+  <!-- Google Prettify - https://code.google.com/p/google-code-prettify/wiki/GettingStarted -->
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&lang=html&lang=js&skin=desert"></script>
+
+
+  <!-- <script src="/assets/js/plugins.js"></script> -->
+  <!-- 
+  <script src="/app/js/jquery.flexslider-min.js"></script>
+  <script src="/app/js/slimbox2.js"></script>
+ -->
+
+
+  <script src="/app/js/waypoints.min.js"></script>
+  <script src="/app/js/skrollr.min.js"></script>
+  <script src="/app/js/script.js"></script>
+
+  <!-- 
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+  google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+  </script>
+
+  <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
+
+  <script type="text/javascript">
+      // The variable "tumblr_api_read" is now set.
+      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
+      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
+
+      console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
+  </script>
+   -->
+
+  <!-- new google analytics beta -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39843414-1', 'janzheng.com');
+    ga('send', 'pageview');
+
+  </script>
+
+</body>
+</html>
