@@ -1915,6 +1915,7 @@ a.link-external .btn-inline--large:hover {
 }
 @media screen and (max-width: 479px) {
   .article.post-std .article--body .article--body--content figure {
+    /*test*/
     width: 100%;
   }
 }
