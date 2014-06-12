@@ -24,7 +24,7 @@ navigation:
 
 sass:
   sass_dir: _sass
-  style: :expanded
+  style: :compressed
   # nested
   # expanded
   # compact
