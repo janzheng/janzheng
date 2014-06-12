@@ -340,6 +340,7 @@ body, html {
     &[data-filter="rant"] {background-color: rgba($green, 0.4); &:hover,&.filter-btn--active {background-color: rgba($green, 0.9);}}
     &[data-filter="idea"] {background-color: rgba($dark-orange, 0.4); &:hover,&.filter-btn--active {background-color: rgba($dark-orange, 0.9);}}
 
+
     svg {
       width: 32px; height: 32px; fill: white; position: relative; top: 4px; left: 4px;
       &.svg--lab {top:2px}
@@ -641,7 +642,8 @@ body, html {
           @extend %ease;
 
           .posts--filters {
-            @include media($break-nav-mobile) {padding: 4px $base; }
+
+            @include media($break-nav-mobile) {padding: 4px $base; margin-top: $base*4; @include shift(5);}
             @include media($break-nav-thin) {@include shift(3); }
             @include media($break-nav-wide) {@include shift(3); }
             @include media($break-nav-full) {@include shift(3); }
