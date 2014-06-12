@@ -41,9 +41,9 @@ $(document).ready(function() {
 
   // not MVC but whatever
   $(".filter-btn").bind('mouseup',function(e) {
-    $(".filter-btn").removeClass('filter-btn--active');
     if ($(this).hasClass('filter-btn--active')) {
       filterReset();
+      $(".filter-btn").removeClass('filter-btn--active');
     } else {
       filterBy($(this).data('filter'));
       $(this).addClass('filter-btn--active');
