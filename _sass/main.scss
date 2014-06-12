@@ -643,7 +643,7 @@ body, html {
 
           .posts--filters {
 
-            @include media($break-nav-mobile) {padding: 4px $base; margin-top: $base*4; @include shift(5);}
+            @include media($break-nav-mobile) {padding: 4px $base; margin-top: $base*4; @include shift(2);}
             @include media($break-nav-thin) {@include shift(3); }
             @include media($break-nav-wide) {@include shift(3); }
             @include media($break-nav-full) {@include shift(3); }
