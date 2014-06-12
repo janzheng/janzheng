@@ -146,8 +146,9 @@ $size-preview-tag: $size-smaller;
 $size-form: $base*0.9; $height-form: $base*2;
 
 $size-article-title: $size-larger;
-  $size-article-title-mobile: $base*1.6;
+  $size-article-title-mobile: $base*1.8;
   $height-article-title: golden-ratio($size-article-title, 1);
+  $height-article-title-mobile: golden-ratio($size-article-title-mobile, 1);
 
 $size-article-subtitle: $base*1.1;
   $size-article-subtitle-mobile: $base*1;
@@ -197,7 +198,10 @@ $s1: golden-ratio(14px,  1);
   font-size: $size-article-title;
   line-height: $height-article-title;
   
-  @include media($break-nav-mobile) {font-size: $size-article-title-mobile;}
+  @include media($break-nav-mobile) {
+    font-size: $size-article-title-mobile;
+    line-height: $height-article-title-mobile;
+  }
 }
 
   %style-article-subtitle {
@@ -1161,7 +1165,7 @@ body, html {
                 padding-bottom: $base*2; padding-right: $base*2;
                 @include media($break-nav-wide) {float: left; }
 
-                @include media($break-nav-mobile) {width: 100%;  @include span-columns(32);}
+                @include media($break-nav-mobile) {width: 100%;}
                 @include media($break-nav-thin-atleast) {@include shift(-1); }
                 @include media($break-nav-wide-atleast) {@include shift(-3); }
  

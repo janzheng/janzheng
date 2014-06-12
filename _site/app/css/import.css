@@ -510,7 +510,8 @@ kuler: Norse
 }
 @media screen and (max-width: 479px) {
   .article.post-std .article--head .article--head--title-container .article--head--title, .article.post-std .article--body .article--body--content h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 2.9124rem;
   }
 }
 
@@ -1915,18 +1916,11 @@ a.link-external .btn-inline--large:hover {
 @media screen and (max-width: 479px) {
   .article.post-std .article--body .article--body--content figure {
     width: 100%;
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 177.77778%;
-  }
-  .article.post-std .article--body .article--body--content figure:last-child {
-    margin-right: 0;
   }
 }
 @media screen and (min-width: 480px) {
   .article.post-std .article--body .article--body--content figure {
-    margin-left: -5.55556%;
+    margin-left: -4.16667%;
   }
 }
 @media screen and (min-width: 767px) {
