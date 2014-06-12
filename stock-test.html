@@ -1,0 +1,87 @@
+---
+layout: none
+
+---
+
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="Jan's various ruminations and undertakings.">
+  <meta name="keywords" content="jan zheng, portfolio, site, ux, code, design">
+  <meta name="author" content="Jan Zheng">
+  <meta name="copyright" content="Jan Zheng">
+  
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/app/css/main.css">
+<!-- 
+  <link rel="stylesheet" href="/assets/stylesheets/compiled/flexslider.css">
+  <link rel="stylesheet" href="/assets/stylesheets/compiled/slimbox2.css">
+   -->
+
+
+
+</head>
+
+<body onload="getData()">  
+
+
+  Last Trade price <div id="result"></div>
+  change real time <div id="change"></div>
+  
+  
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"></script>
+
+
+   <script>
+
+      function getData() {
+          var url = 'http://query.yahooapis.com/v1/public/yql';
+          var symbol = 'AIZ';
+          var data = encodeURIComponent("select * from yahoo.finance.quotes where symbol in ('" + symbol + "')");
+
+          $.getJSON(url, 'q=' + data + "&format=json&diagnostics=true&env=http://datatables.org/alltables.env")
+              .done(function (data) {
+                  $('#result').text("Price: " + data.query.results.quote.LastTradePriceOnly);
+                  $('#change').text("Price: " + data.query.results.quote.ChangeRealtime);
+              })
+              .fail(function (jqxhr, textStatus, error) {
+                  var err = textStatus + ", " + error;
+                  console.log('Request failed: ' + err);
+              });
+      }
+
+   </script>
+
+
+  <!-- Google Prettify - https://code.google.com/p/google-code-prettify/wiki/GettingStarted -->
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&lang=html&lang=js&skin=desert"></script>
+
+
+  <!-- <script src="/assets/js/plugins.js"></script> -->
+  <script src="/app/js/jquery.flexslider-min.js"></script>
+  <script src="/app/js/slimbox2.js"></script>
+
+  <script type="text/javascript">
+  google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+  </script>
+
+  <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
+  <!-- 
+  <script type="text/javascript">
+      // The variable "tumblr_api_read" is now set.
+      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
+      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
+
+      console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
+  </script>
+   -->
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+---
+layout: layout-about
+title: Hello there
+source: /app/posts/about
+<!-- preview-img : /app/posts/nanowrito/preview.png -->
+
+---
+
+
+
+<!-- use that new container vertical center code you found! -->
+
+
+<div class="about--intro">
+<figure class="figure-circle">
+!{{page.source}}/teal_tie_sm.png!
+<!-- <figcaption class="about-quote">day at the office</figcaption> -->
+</figure>
+
+h1(h1-display). Hello,
+
+h4(about-quote). stay a while, and listen
+</div>
+
+p(dropcap). My name is Jan (yawn!), and I design experiences. Some of them include _responsive websites_, _mobile apps_, and _data-heavy interfaces_. I also dabble in _experimental games_ and _installation art_. 
+
+I apply a user-centered design approach to my projects, and I aim to strike a balance between satisfying user needs and business goals. My projects involve lots of iterative designing, prototyping, and testing, and I strive for my work to be immersive, elegant, and memorable. 
+
+These times are exceptional. We've elevated technology from our desks, laps, palms, and wrists into into our minds. We're looking at how technology may lend us more time, freedom, peace of mind, and help us be healthier and more creative. 
+
+These times are exceptional, and I'm ready to get my hands dirty.
+
+<notextile>
+  <a href="/resume.pdf" class="link-external"><div class="btn-inline btn-inline--large">Grab my Resume</div></a>
+</notextile>
+
+
+bq(blockquote-wide no-quotes). I am a *(strong-loud)Sr. User Experience Architect* at "Nurun":http://www.nurun.com, and I live in  *(strong-loud)Atlanta*.
+I am currently *(strong-loud)not available* for freelance work, but feel free to say hello anyway at "hello@janzheng.com":mailto:hello@janzheng.com, or on "twitter":https://twitter.com/janistanian or "linkedin":http://www.linkedin.com/in/janzh.
+
+h2. Work & Experience 
+
+I've had the luxury of working with some amazing agencies and clients, some of which include *(strong-orange)Coca-Cola*, *(strong-orange)L'Oreal / Garnier*, *(strong-orange)Verizon Wireless*, *(strong-orange)Home Depot*, *(strong-orange)Nespresso*, and *(strong-orange)Cartoon Network*. I have also seen the client-side at *(strong-orange)Microsoft*, *(strong-orange)Lockheed Martin*, *(strong-orange)Abritron*, and a few smaller firms. Portfolio items will be available soon. 
+
+
+
+
+<notextile>
+
+
+<div class="timeline-container">
+<div class="timeline">
+
+<ul class="timeline--list">
+
+  <div class="sticky-item" >
+    <div class="timeline--year sticky-content">2014</div>
+  </div>
+
+  <li class="expandablejs timeline--list-item">
+    <div class="timeline--preview">
+      <div class="timeline--list-item--headline timeline--list-item--headline__small">
+        <span class="timeline--list-item--headline--client timeline--list-item--headline--client">LaunchKitten</span>
+        <div>
+          <span class="timeline--list-item--headline--title">Startup</span>
+          <span class="timeline--list-item--headline--location">Atlanta, GA</span>
+          <span class="timeline--list-item--headline--date">2014</span>
+        </div>
+        <div class="timeline--list-item--headline--short">Product design, front-end design and development on a startup project jumpstarted by <a href="http://www.switchyards.com">Switchyards</a>.</div>
+      </div>
+    </div>
+  </li>
+
+  <li class="expandablejs timeline--list-item">
+    <div class="expandablejs--preview timeline--preview">
+      {% include expandablejs--expander.html %} 
+      <div class="timeline--list-item--headline">
+        <span class="timeline--list-item--headline--client">Nurun</span>
+        <div>
+          <span class="timeline--list-item--headline--title">Sr. User Experience Architect</span>
+          <span class="timeline--list-item--headline--location">Atlanta, GA</span>
+          <span class="timeline--list-item--headline--date">2012 - current</span>
+        </div>
+        <div class="timeline--list-item--headline--short">User experience, business analysis, product design, and prototyping </div>
+      </div>
+    </div>
+
+    <div class="expandablejs--full">
+      <div class="timeline--full">
+        <p>At Nurun, I bring client projects to life. I help define project scope, functionality, research, and other needs, and help determine the feasibility and schedule. I translate requirements into a tangible experience with flow diagrams, site maps, wireframes, and prototypes, and work with our designers and the technical team to realize the product.</p>
+
+        <p>Lately I've focused on creating a creative and wireframe presentation tool, and a more flexible, agile proess flow that emphasizes earlier research, user experience, and integration among departments.</p>
+
+        <p>Clients include Nespresso, Assurant, Manheim, The Home Depot, General Electric Energy, and Disney.</p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<ul class="timeline--list">
+
+  <div class="sticky-item" >
+    <div class="timeline--year sticky-content">2013</div>
+  </div>
+
+  <li class="expandablejs timeline--list-item">
+    <div class="expandablejs--preview timeline--preview">
+      {% include expandablejs--expander.html %} 
+      <div class="timeline--list-item--headline">
+        <span class="timeline--list-item--headline--client">Freelance Projects</span>
+        <div>
+          <span class="timeline--list-item--headline--title">Freelance</span>
+          <span class="timeline--list-item--headline--location">Atlanta, GA</span>
+          <span class="timeline--list-item--headline--date">2013</span>
+        </div>
+        <div class="timeline--list-item--headline--short">Sometimes I take on smaller side projects.
+      </div>
+    </div>
+
+    <div class="expandablejs--full">
+      <div class="timeline--full">
+        <ul>
+          <li>Designed and built <a href="http://www.upowerfitness.com">upower fitness</a>, a local a boutique gym and personal fitness concept.</li>
+          <li><a href="http://gigagen.com/">GigaGen</a> IA, UX, and wirefames for a DNA sequencing tool through <a href="https://www.5amsolutions.com/">5am Solutions</a></li>
+          <li>Built <a href="http://www.GodandTDM.com">God and The Drum Maschine</a> for an Atlanta-based artist and musician </li>
+          <li>Helped <a href="http://www.callanwolde.com">Callanwolde Fine Arts Center</a> with Wordpress migration and form design </li>
+          <li>Built a quick landing page for <a href="http://www.liztic.com">liztic</a>:, a cloud-based music-syncing service </li>
+          <li>Helped an Atlanta-based artist build her landing page for her personal store at <a href="https://www.facebook.com/Foxboxes">FoxBoxes</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+
+<ul class="timeline--list">
+
+  <div class="sticky-item" >
+    <div class="timeline--year sticky-content">2012</div>
+  </div>
+
+  <li class="expandablejs timeline--list-item">
+    <div class="expandablejs--preview timeline--preview">
+      {% include expandablejs--expander.html %} 
+      <div class="timeline--list-item--headline">
+        <span class="timeline--list-item--headline--client">Moxie</span>
+        <div>
+          <span class="timeline--list-item--headline--title">User Experience Architect</span>
+          <span class="timeline--list-item--headline--location">Atlanta, GA</span>
+          <span class="timeline--list-item--headline--date">2010 - 2012</span>
+        </div>
+        <div class="timeline--list-item--headline--short">UX Architect for projects including Cartoon Network Mobile and Verizon Wireless</div>
+      </div>
+    </div>
+
+    <div class="expandablejs--full">
+      <div class="timeline--full">
+        <p>As a user experience architect, I translated client and business requirements into user flows, site maps, wireframes and technical specs. I developed wireframes, concepts, and functional prototypes, and worked with developers and designers to establish website and app functionality, user flow, information architecture.</p>
+        
+        <ul>
+          <li>Established requirements and functionality through userflows, wireframes, information architecture charts, sitemaps, and other documentation.</li>
+          <li>Explored design concepts through wireframes, paper, and functional prototypes.</li>
+          <li>Participated in campaign concepting and strategy, and provided consultation, market research, and research into pitches and projects.</li>
+          <li>Provided UX-focused QA, design direction, and feedback.</li>
+        </ul>
+
+        <ul>
+          Clients include:
+          <li><span class="style--highlight">Cartoon Network Mobile</span>: Designed new interface and information architecture for Cartoon Network mobile site. (2011)</li>
+          <li><span class="style--highlight">Coca Cola</span>: Site design for Live Positively, Nestea, and various campaigns.</li>
+          <li><span class="style--highlight">Verizon Wireless</span>: Shopping cart and phone purchase funnel, Verizon Developer Center, and many holiday campaigns and apps.</li>
+          <li><span class="style--highlight">Garnier</span>: Many of the apps on Garnier.com including the Style Finder</li>
+          <li>Other clients include BBC America, AMDRO, Pennington Seed, and Autotrader</li>
+        </ul>
+
+      </div>
+    </div>
+  </li>
+
+</ul>
+
+
+
+<ul class="timeline--list">
+
+  <div class="sticky-item" >
+    <div class="timeline--year sticky-content">2010</div>
+  </div>
+
+  <li class="expandablejs timeline--list-item">
+    <div class="timeline--preview">
+      <div class="timeline--list-item--headline timeline--list-item--headline__small">
+        <span class="timeline--list-item--headline--client">Carnegie Mellon University</span>
+        <div>
+          <span class="timeline--list-item--headline--title">Masters in HCI</span>
+          <span class="timeline--list-item--headline--location">Pittsburgh, PA</span>
+          <span class="timeline--list-item--headline--date">2009 - 2010</span>
+        </div>
+        <div class="timeline--list-item--headline--short">Earned a Masters in Human-Computer Interaction degree, which comprised of a combination of classes in interaction design methodologies, user research, interactive prototyping, and design. Relevant Coursework include HCI Project Course, HCI Methods Course, Service Design, Interaction Design, Software Architecture and User Interfaces, and Game Design (at the Entertainment Technology Center)</div>
+      </div>
+    </div>
+  </li>
+
+</ul>
+
+
+<ul class="timeline--list">
+
+  <div class="sticky-item" >
+    <div class="timeline--year sticky-content">2009</div>
+  </div>
+
+  <li class="expandablejs timeline--list-item">
+    <div class="timeline--preview">
+      <div class="timeline--list-item--headline timeline--list-item--headline__small">
+        <span class="timeline--list-item--headline--client">University of Maryland, Baltimore County</span>
+        <div>
+          <span class="timeline--list-item--headline--title">Computer Science &amp; Psychology</span>
+          <span class="timeline--list-item--headline--date">2004 - 2009</span>
+        </div>
+        <div class="timeline--list-item--headline--short">At UMBC, I received a bachelor's degree in computer science, with a minor in psychology. I took the Game Development track, which focused on game design and game-related development, including graphics, artificial intelligence, and algorithms.
+      </div>
+    </div>
+  </li>
+
+</ul>
+
+</div>
+</div>
+
+
+
+</notextile>
+
+
+
+h2. More About Me
+
+I've always had a fascination with learning, doing, and experimenting, and my experience spans across research, design, and writing code.
+I have experience with Adobe Creative Suite, Microsoft Office, Axure, and other design and productivity tools. I prefer to prototype websites in HTML, JavaScript and SASS/CSS, and other experiences in Flash, but I'm familiar with anything from C to Processing.
+
+My eclectic background mirrors my eclectic upbringing. Though born in China, I moved to Stockholm at a young age. I am fluent in English and Swedish, and conversational in Mandarin.
+
+I hold dual citizenship with both the United States and Sweden, which means that I could easily work in and out of the U.S. and countries European Union without a work visa.
+
+On my off days, I enjoy swing dancing, rock climbing, playing indie games, and cooking / stuffing my face with tasty foods.
+
+h2. About This Site
+
+For the second round of redesign, I wanted to reduce the number of artifacts on the page, like shapes and outlines, and take a more typographic, minimalist approach. Any shapes and lines are only used to accentuate the information I'm presenting, with enough white space to prevent clutter.
+
+This site is now my umpteen+1th portfolio design, but every iteration has seen improvement. The site is built on the static site generator "Jekyll":https://github.com/mojombo/jekyll and is hosted completely for free on "Github Pages":https://github.com/janzheng/janzheng.github.com.
+
+The front-end styling was written in SASS, with the help of "bourbon.io" and "Neat":neat.bourbon.io, with a glass of "Belle Meade":http://www.greenbrierdistillery.com/nelsons_green_brier_products.html on the side.
+
+Icons are sourced from "IconMonstr":http://iconmonstr.com/ and Zurb from <a href="http://www.flaticon.com" title="Flaticon">Flaticon.com</a>
+
+Cheers, 
+Jan
+
+

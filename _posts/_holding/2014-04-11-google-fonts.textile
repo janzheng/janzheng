@@ -1,0 +1,19 @@
+---
+layout: post
+title: Textile Primer
+summary: A quick handy guide to writing posts in Textile. 
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Gane Design
+tags : [Gane Design, Narrative]
+published: false
+portfolio: false
+---
+
+
+Handscript Google Fonts
+- Gloria Hallelujah (surgeon sim)
+
+</script>

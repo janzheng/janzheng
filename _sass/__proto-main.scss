@@ -1,0 +1,116 @@
+
+
+
+// *********************************************************
+// PROTOWIRE DESIGN FILE
+// - specifies the ProtoWire-level element styles
+// *********************************************************
+
+
+// *********************************************************
+// DESIGN MIXINS
+// *********************************************************
+
+
+
+// *********************************************************
+// VARIABLES
+// *********************************************************
+
+// basic sizes
+// $base: 1rem;
+// $margin: $base;
+
+// // color
+// $pw-orange: #dd5435; //used as main logo background color
+// $pw-dark: #222;
+// $pw-light: #aaa;
+
+
+
+
+// *********************************************************
+// UNIVERSAL FONTS
+// *********************************************************
+
+// usage: @extend 'fontname' or @extend 'sans-serif'
+// note: using tons of fonts will slow down loading. Since this is a prototype tool, we want to give designers more freedom
+// to find the best fit, instead of optimize for speed.
+
+// Combinations: 
+// Raleway & Georgia 
+// Arial & Georgia
+
+// Libre Baskerville & Ubuntu
+// Bree Serif & Imprima
+// Montserrat & Pontano Sans
+// Oswald & Muli
+// PT Serif & PT Sans
+// Volkorn & Raleway
+// Roboto Sans & Roboto Sans light
+// Josefin Slab & Maven Pro
+// Oxygen & Source Sans Pro
+// Paytone One & Droid Sans
+
+// Raleway
+// clean, crisp and large capital lettering; good display font
+// @import url(http://fonts.googleapis.com/css?family=Raleway:200,400,500,600,700,800,900);
+// %raleway {font-family: 'Raleway', sans-serif;}
+
+// // Montserrat
+// // good for small, capital lettering, as subheaders. Similar to Oswald
+// // https://webdesignersjourney.wordpress.com/tag/montserrat-font-combination/
+// // Proto|Wire headline font
+// @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+// %montserrat {font-family: 'Montserrat', sans-serif;}
+
+// // Oswald
+// // Good skinny sans-serif for both caps and mixed use
+// // Web alternative  Bebas Neue
+// @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+// %oswald {font-family: 'Oswald', sans-serif;}
+
+// // Open Sans
+// // Great all-around font, from Google
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+// %open-sans {font-family: 'Open Sans', sans-serif;}
+
+// // Source Sans
+// // Skinny, a little more versatile than open-sans, great for UIs, but much heavier load times. Light is also good as a display font. From Adobe.
+// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+// %source-sans {font-family: 'Source Sans Pro', sans-serif;}
+
+// // Cousine
+// // Typewriter-like, monospaced font, with fewer serifs than Courier
+// @import url(http://fonts.googleapis.com/css?family=Cousine:400,700,400italic,700italic);
+// %cousine {font-family: 'Cousine', monospace}
+
+// Georgia
+// System font, great serif-font.
+%georgia {font-family: 'Georgia', serif;}
+
+
+// WIRE FONTS
+
+// Redacted
+// Lorem ipsum squiggles that are good for blocking
+@import 'other/font-redacted';
+%redacted {font-family: 'redacted'}
+%redacted-script {font-family: 'redacted script'}
+
+// Archistico
+// Handsketch Font
+@import 'other/font-archistico';
+%archistico {font-family: 'archistico'}
+
+%sans-serif {@extend %open-sans}
+%serif {font-family: Georgia, serif;}
+%display {@extend %raleway}
+%lowcaps {@extend %oswald; text-transform: uppercase;}
+%caps {@extend %montserrat; text-transform: uppercase;} //raleway is another choice
+%sketch {@extend %archistico; text-transform: uppercase;} //raleway is another choice
+
+%wire-sans {@extend %redacted;}
+%wire-script {@extend %redacted-script;}
+
+

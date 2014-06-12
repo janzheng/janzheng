@@ -1,0 +1,23 @@
+---
+layout: post
+title: Teach your designers how to code
+summary: A quick handy guide to writing posts in Textile. 
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Gane Design
+tags : [Gane Design, Narrative]
+published: false
+portfolio: false
+---
+
+
+Format: Lecture
+Title: Teach Your Designers Code // Teach your Coders Design
+
+Description: Design and development are becoming increasingly tight-knit, and turning websites into unique viewing experiences increasingly requires a tighter integration between the design, UX and development team. If designers were more familiar with code, and if developers were more familiar with design, much of the friction that arises from the knowledge gap can be eliminated. 
+
+At Nurun we've taken many steps towards decreasing this knowledge gap and increasing our efficiency, by slowly pushing our deliverables to be code-based and interactive, from style guides to full-fledged interactive prototypes.
+
+These deliverables not only help us cut down on deliverable time, but also increase fidelity and clarity, as clients can interact with our deliverables and get a better sense of the final output earlier in the design process.

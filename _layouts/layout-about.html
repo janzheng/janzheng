@@ -1,0 +1,57 @@
+---
+layout: layout-site
+---
+
+
+<div class="container">
+  <div class="article post-std">
+
+    <!-- begin article content -->
+
+    <div class="article--body container">
+
+      <!-- 
+      <div class="article--summary-container">
+        <div class="article--summary">{{ page.summary }}</div>
+      </div>  -->
+
+
+
+      <div class="article--body--video-container">
+        <div class="article--body--video">
+          {% if page.youtube %}<iframe width="550" height="452" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>{% endif %}
+          {% if page.vimeo %}<iframe src="{{ page.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=0f314a" width="550" height="309" frameborder="0"></iframe>{% endif %}    
+        </div>
+      </div>
+
+      <div class="article--body--title-image-container">
+        {% if page.image-path %}      
+          <div class="article--body--title-image"><img class="article--body--title-image--img" src="{{ page.image-path }}" /></div>
+        {% endif %}   
+      </div>
+
+
+      <div class="article--body--content">
+        {{ content }}
+      </div>
+
+      <div class="clear"></div>
+
+    </div>
+
+    <!-- end article body -->
+
+    <div class="clear"></div>
+      
+
+
+    <div class="article--comments">
+
+      {% if page.comments == true %} 
+        {% include disqus.html %}
+      {% endif %} 
+
+    </div>
+
+  </div>
+</div>

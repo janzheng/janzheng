@@ -1,0 +1,37 @@
+---
+layout: post
+title: User Experience Should Design for Intent, Information, and User Flow
+summary: Websites are becoming responsive. Wireframes need to reflect this
+<!-- external: # -->
+<!-- image-path: /assets/# -->
+<!-- image-icon: /assets/# -->
+<!-- youtube: # -->
+<!-- vimeo: # -->
+category : Gane Design
+tags: [Gane Design, Narrative]
+published: false
+portfolio: false
+---
+
+NOTES from Nurun Mobile Design dev / working together
+
+
+
+
+- working with abstractions
+- preparing assets for delivery from deisgners to developers
+
+- how do you deal with Retina and high density displays?
+- if your device has  
+
+- Ideally / as a way to compromised we work in MDPI, usually defined as: medium (mdpi): 320x480
+  - will scale properly
+
+- when do you change layouts / how wide does it need to be?
+  - landscape + vertical: need to decide how to handle- do I still want to leave the same layout? Will it still look good?
+    - what are the use cases?
+
+- use images, and plan on cropping the image for some apps / sites, where you use an important focus point, where the content is in the center; some devices will crop the sides out, but the most important info in the image is in the middle
+  - ensure content is in the center for mobile devices
+
+- 

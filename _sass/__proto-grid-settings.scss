@@ -1,0 +1,77 @@
+
+
+// basic sizes
+$base: 1rem;
+$margin: $base;
+
+// *********************************************************
+// BREAKPOINTS
+// *********************************************************
+
+// these are intended as "small-first" 
+// - Small will apply to all sizes above Small
+// - Medium will apply to all sizes above Medium, etc.
+// - the -only tag applies to only that size
+// - the -max tag applies to that size and under
+
+
+// 0 	=> 480: 6
+// 481 	=> 767: 8
+// 768  => 979: 12
+// 980  => inf: 12 
+
+// golden ratio size reference:
+// golden-ratio(14px,  1): 22.652
+// golden-ratio(14px,  2): 36.651
+// golden-ratio(14px,  3): 59.301
+// golden-ratio(14px,  4): 95.949
+// golden-ratio(14px,  5): 155.245
+// golden-ratio(14px,  6): 251.186
+// golden-ratio(14px,  7): 406.419
+// golden-ratio(14px,  8): 657.586
+// golden-ratio(14px,  9): 1,063.974
+
+
+
+
+$grid-columns: 24;
+  // type: number (positive, unitless)
+  // default: 12
+
+$column: golden-ratio(1rem, 2);
+  // $column: 30px;
+  // type: number (positive, unit)
+  // default: golden-ratio(1em, 3) //means 3 golden ratio steps up from 1em
+  // Sets the relative width of a single grid column.
+  // The unit used should the same one used to define $gutter.
+
+
+$gutter: 0rem;
+  // type: number (positive, unit)
+  // default: golden-ratio(1em, 1) 
+  // The unit used should the same one used to define $gutter.
+
+$max-width: 960px; //em(1088);
+  // type: number (positive, unit)
+  // default: em(1088)
+  // Sets the max-width property of the element that includes outer-container().
+
+//navigation will be considered into the equation
+//$nav-wide: 120px //wide nav will stay fixed, visible only on large breakpoints or on homepage
+$nav-narrow: 60px;
+
+
+// $visual-grid: true;
+// $visual-grid-color: red;
+// $visual-grid-opacity: 0.05;
+
+
+
+
+// Key Grid Breakpoints. Other breakpoint helpers included in proto_framework, but these will define the main grid.
+// Helpers can't be added here becuase they interfere with Neat's grid system
+$tiny: new-breakpoint(min-width 0px 5);                               // 0 and above
+$small: new-breakpoint(min-width 480px 24);                               // 0 and above
+$medium: new-breakpoint(min-width 767px 24);                            // 481 and above
+$large: new-breakpoint(min-width 1180px 24);                             // 768 and above
+  

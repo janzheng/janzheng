@@ -9,20 +9,23 @@ author :
 
 
 markdown: rdiscount
-pygments: true
+highlighter: rouge
 permalink: /:year/:month/:title.html
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "notes.txt"]
-auto: true
 
 
 navigation:
- - text: blog
+ - text: rants
    url: /
- - text: portfolio
+ - text: about
    url: /about.html
- - text: resume
-   url: /resume.pdf
+ - text: tools
+   url: /toolbox.html
 
-
-# don't forget to separately set Google Analytics and Facebook Comments
-# alternately, use Tumblr to post
+sass:
+  sass_dir: _sass
+  style: :expanded
+  # nested
+  # expanded
+  # compact
+  # compressed
