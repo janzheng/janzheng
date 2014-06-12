@@ -287,6 +287,7 @@ $s1: golden-ratio(14px,  1);
 
 // 
 // UNIVERSAL STYLES
+// general, reusable styles
 // 
 
 body, html {
@@ -325,6 +326,26 @@ body, html {
     color: $red;
   }
 
+  .filter-btn {
+    cursor: pointer;
+    // @extend %style-btn-inline;
+
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; 
+    margin-right: 10px;
+    float: left;
+    @extend %ease;
+    &[data-filter="lab"] {background-color: rgba($teal, 0.4); &:hover,&.filter-btn--active {background-color: rgba($teal, 0.9);}}
+    &[data-filter="rant"] {background-color: rgba($green, 0.4); &:hover,&.filter-btn--active {background-color: rgba($green, 0.9);}}
+    &[data-filter="idea"] {background-color: rgba($dark-orange, 0.4); &:hover,&.filter-btn--active {background-color: rgba($dark-orange, 0.9);}}
+
+    svg {
+      width: 32px; height: 32px; fill: white; position: relative; top: 4px; left: 4px;
+      &.svg--lab {top:2px}
+    }
+
+  }
 }
 
 
@@ -617,6 +638,14 @@ body, html {
 
         .posts {
           padding-top: 30px; //distance from the top of the page
+          @extend %ease;
+
+          .posts--filters {
+            @include media($break-nav-mobile) {padding: 4px $base; }
+            @include media($break-nav-thin) {@include shift(3); }
+            @include media($break-nav-wide) {@include shift(3); }
+            @include media($break-nav-full) {@include shift(3); }
+          }
 
           .post {
 
@@ -655,7 +684,7 @@ body, html {
                       height: 40px; 
                       margin-right: 10px;
                       float: left;
-                      svg {width: 32px; height: 32px; fill: white; position: relative; top: 2px; left: 4px;}
+                      // svg {width: 32px; height: 32px; fill: white; position: relative; top: 2px; left: 4px;}
                     }
 
                     &.post--category-lab {

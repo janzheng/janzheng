@@ -19,6 +19,38 @@ $(document).ready(function() {
   });
 
 
+
+
+  // dashes won't work w/ list.js, have to use camel
+  // sorting for blog posts / uses List.js
+  var options = {
+      valueNames: [ 'sortCategory', 'sortDate' ]
+  };
+
+  var blogPosts = new List('blogList', options);
+
+  function filterBy(cat) {
+    blogPosts.filter(function(post) {
+      return post.values().sortCategory == cat ? true : false;
+    }); 
+  }
+
+  function filterReset() {
+    blogPosts.filter();
+  }
+
+  // not MVC but whatever
+  $(".filter-btn").bind('mouseup',function(e) {
+    $(".filter-btn").removeClass('filter-btn--active');
+    if ($(this).hasClass('filter-btn--active')) {
+      filterReset();
+    } else {
+      filterBy($(this).data('filter'));
+      $(this).addClass('filter-btn--active');
+    }
+  });
+
+
   // 
   // Opens links (in posts and articles) in a new tab
   // 
