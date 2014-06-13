@@ -37,7 +37,7 @@ $break-small: new-breakpoint(min-width 480px 24);                       // bigge
 $break-infinite: new-breakpoint(min-width 1180px 24);                   // 960 + nav size
 
 $break-nav-mobile: new-breakpoint(max-width 479px 18);                      // mobile nav
-$break-nav-thin: new-breakpoint(min-width 480px max-width 1179px 24);       // thin side nav (60px)
+$break-nav-thin: new-breakpoint(min-width 480px max-width 767px 24);       // thin side nav (60px)
 $break-nav-wide: new-breakpoint(min-width 767px  24);                      // in-betweener for content modification only
 $break-nav-full: new-breakpoint(min-width 980px 24);                       // wide side nav (120px) 
 $break-nav-thin-atleast: new-breakpoint(min-width 480px 24);       // thin side nav (60px)
@@ -56,7 +56,7 @@ $break-nav-full-max: new-breakpoint(max-width 980px 24);
 .show-nav-mobile {@include show($break-nav-mobile);} 
 .show-nav-thin {@include show($break-nav-thin);} 
 .show-nav-thin-atleast {@include show($break-nav-thin-atleast);} 
-.show-nav-full {@include show($break-nav-wide-atleast);} 
+.show-nav-full {@include show($break-nav-thin-atleast);} 
 
 .show-nav-small {
    display: none !important;
