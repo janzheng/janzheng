@@ -8,7 +8,14 @@ $(document).ready(function() {
   // });
 
   // Initiate Skrollr for parallax scrolling
-  skrollr.init({forceHeight: false, easing: 'cubic'});
+  // skrollr.init({forceHeight: false, easing: 'cubic'});
+  // don't init on mobile
+  if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    skrollr.init({
+        forceHeight: false,
+        easing: 'cubic'
+    });
+}
 
   // set background images for posts with bg-images on homepage
   $('.post--container').each(function(){
