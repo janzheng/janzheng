@@ -33,13 +33,15 @@
   <!-- <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'> -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600, 700' rel='stylesheet' type='text/css'>
 
+  <link rel="stylesheet" href="/app/css/royalslider.css" > 
+  <link rel="stylesheet" href="/app/css/minimal-white/rs-minimal-white.css" >
+
 <!-- 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    -->
   <script src="/app/js/jquery.min.js"></script>
-  <script src="/app/js/list.min.js"></script>
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
 
   <!-- import gets all the styles from main.scss in the _scss folder -->
   <link rel="stylesheet" href="/app/css/import.css">
@@ -95,7 +97,7 @@
           <div class="nav--menu-item nav--menu--home " >
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="speech-bubble-11-icon" d="M50,64.991v293.682h64.501v88.336l131.978-88.336H462V64.991H50z M256,283.567H121.841v-30H256
             V283.567z M391.841,223.567h-270v-30h270V223.567z M391.841,163.567h-270v-30h270V163.567z"></path> </svg>
-            <div class="label"><span>rants</span></div>
+            <div class="label"><span>blog</span></div>
           </div>
         </a>
         
@@ -113,21 +115,7 @@
         <a href="/about.html">
           <div class="nav--menu-item nav--menu--about " >
             
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> 
-
-<path id="favorite-2-icon" d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967
-c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014
-C387.691,314.82,498.41,221.837,450.703,124.225z"></path>
-<!-- 
-              <path id="about-icon" d="M377.055,170.75c0,66.275-53.726,120-120,120s-120-53.725-120-120c0-66.273,53.726-120,120-120
-              S377.055,104.477,377.055,170.75z M356.101,296.41c-27.968,22.084-62.633,34.34-99.046,34.34c-36.835,0-71.839-12.543-99.934-35.051
-              C83.067,322.875,50,417.877,50,461.25h412C462,418.25,428.678,323.926,356.101,296.41z"></path>
- -->
-              <!-- crazy eye thing<path id="eye-icon" d="M291.75,256c0,18.641-15.11,33.75-33.75,33.75s-33.75-15.109-33.75-33.75c0-18.64,15.11-33.75,33.75-33.75
-  S291.75,237.36,291.75,256z M462,248.666c0,0-73,121.668-205.75,121.668C133,370.334,50,248.666,50,248.666s76.333-107,206.25-107
-  C388.334,141.666,462,248.666,462,248.666z M338,256c0-44.183-35.817-80-80-80s-80,35.817-80,80c0,44.184,35.817,80,80,80
-  S338,300.184,338,256z"></path>-->
-
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="favorite-2-icon" d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"></path>
             </svg> 
             <div class="label"><span>about</span></div>
           </div>
@@ -206,7 +194,7 @@ C387.691,314.82,498.41,221.837,450.703,124.225z"></path>
           <div class="nav--social-menu-item nav--social-menu--resume">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="download-2-icon" d="M333.816,231.323h66.258L255.998,375.645L111.926,231.323h66.256V50h155.635V231.323z
   M375.236,346.828V412H136.764v-65.172h-50V462h338.473V346.828H375.236z"></path> </svg>
-            <div class="label"><span>cv</span></div>
+            <div class="label"><span>resume</span></div>
           </div>
         </a>
 
@@ -247,70 +235,73 @@ C387.691,314.82,498.41,221.837,450.703,124.225z"></path>
 
     <!-- begin article head content (date, title, summary, tags) -->
 
-    <div class="article--head container">
+    <div class="article--head container "  >
 
+      <div class="article--head-container" >
+        <div class="article--head--intro" >
 
-      <div class="article--head--intro">
+          
+          <div class="article--head--category article--head--category-lab" >
 
-        
-        <div class="article--head--category article--head--category-idea">
+            <div class="article--head--category--icon">
 
-          <div class="article--head--category--icon">
+              
+                
+<svg class="svg--lab" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path id="flask-7-icon" d="M253.984,164.94c0,11.354-9.205,20.56-20.56,20.56s-20.559-9.205-20.559-20.56s9.204-20.559,20.559-20.559S253.984,153.586,253.984,164.94z M286.241,66.82c0,9.289-7.531,16.82-16.821,16.82s-16.821-7.531-16.821-16.82c0-9.291,7.531-16.82,16.821-16.82S286.241,57.529,286.241,66.82z M294.34,161.617c-15.916,0-28.865-12.948-28.865-28.864c0-15.917,12.949-28.865,28.865-28.865s28.865,12.948,28.865,28.865C323.205,148.669,310.256,161.617,294.34,161.617z M217.471,126.212c-13.567,0-24.606-11.04-24.606-24.608s11.039-24.607,24.606-24.607c13.569,0,24.608,11.039,24.608,24.607S231.041,126.212,217.471,126.212z M339.707,462H172.293c-22.671,0-37.592-23.729-27.767-44.16l47.632-99.066c13.254-27.564,20.136-57.76,20.136-88.346v-19.641h29.174c0,20.844,2.479,58.704-16.161,105.529h40.978l52.064,109.282c5.748,12.02,22.731,5.53,16.778-6.839c-5.347-11.105-15.295-32.198-41.766-87.253c-26.389-54.882-22.874-99.906-22.874-120.72h29.217v19.641c0,30.586,6.882,60.781,20.136,88.347l47.633,99.064C377.298,438.271,362.379,462,339.707,462z"></path> </svg>
+              
 
-            
+              
 
-            
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve"><path d="M369.036,635.292c2.448,0,4.59,0.918,6.426,2.754s2.754,3.979,2.754,6.426v20.809c0,2.854-0.918,5.202-2.754,7.038s-3.978,2.754-6.426,2.754h-119.34c-6.528,0-9.792-3.266-9.792-9.792v-20.81c0-2.446,0.918-4.59,2.754-6.426s4.182-2.754,7.038-2.754L369.036,635.292L369.036,635.292z M369.036,575.928c2.448,0,4.59,0.918,6.426,2.754s2.754,4.184,2.754,7.038v20.81c0,2.446-0.918,4.59-2.754,6.426s-3.978,2.754-6.426,2.754h-119.34c-2.856,0-5.202-0.918-7.038-2.754s-2.754-3.979-2.754-6.426v-20.81c0-6.526,3.264-9.792,9.792-9.792H369.036z M492.048,386.208c-5.712-0.816-10.606,0.102-14.688,2.754c-4.08,2.652-6.528,6.222-7.346,10.71c-0.814,4.488,0.308,8.772,3.366,12.854c3.062,4.079,7.446,6.526,13.158,7.344l50.796,7.956c5.712,0.814,10.608-0.104,14.688-2.754c4.078-2.652,6.526-6.427,7.344-11.322c0.814-4.488-0.408-8.67-3.672-12.546c-3.266-3.876-7.548-6.222-12.854-7.038L492.048,386.208L492.048,386.208z M486.54,270.54c-4.896,2.04-8.466,5.304-10.71,9.792c-2.244,4.488-2.346,8.976-0.306,13.464c2.04,4.488,5.404,7.446,10.098,8.874c4.692,1.428,9.486,1.122,14.382-0.918l47.124-21.42c5.304-2.04,8.976-5.304,11.016-9.792c2.04-4.488,2.04-8.976,0-13.464c-2.04-4.488-5.404-7.446-10.098-8.874c-4.692-1.428-9.486-0.918-14.382,1.53L486.54,270.54L486.54,270.54z M406.98,192.204c-3.266,4.488-4.488,9.282-3.674,14.382c0.816,5.1,3.266,8.874,7.346,11.322c4.08,2.448,8.466,2.958,13.156,1.53c4.692-1.428,8.672-4.386,11.936-8.874l28.152-43.452c2.854-4.488,3.978-9.18,3.364-14.076c-0.61-4.896-2.958-8.772-7.038-11.628c-4.08-2.448-8.466-2.958-13.156-1.53c-4.692,1.428-8.672,4.386-11.936,8.874L406.98,192.204L406.98,192.204z M126.684,386.208c5.304-0.816,10.098,0.102,14.382,2.754c4.284,2.652,6.834,6.222,7.65,10.71c0.816,4.488-0.408,8.772-3.672,12.854c-3.264,4.079-7.752,6.526-13.464,7.344l-50.796,7.956c-5.304,0.814-10.098-0.104-14.382-2.754c-4.284-2.652-6.834-6.427-7.65-11.322c-0.816-4.488,0.408-8.67,3.672-12.546c3.264-3.876,7.752-6.222,13.464-7.038L126.684,386.208L126.684,386.208z M132.192,270.54c4.896,2.04,8.466,5.304,10.71,9.792c2.244,4.488,2.346,8.976,0.306,13.464c-2.04,4.488-5.508,7.446-10.404,8.874c-4.896,1.428-9.792,1.122-14.688-0.918l-47.124-21.42c-4.896-2.04-8.466-5.304-10.71-9.792c-2.244-4.488-2.346-8.976-0.306-13.464c2.04-4.488,5.406-7.446,10.098-8.874c4.692-1.428,9.69-0.918,14.994,1.53L132.192,270.54L132.192,270.54z M211.14,192.204c3.264,4.488,4.488,9.282,3.672,14.382s-3.264,8.874-7.344,11.322c-3.672,2.448-7.956,2.958-12.852,1.53c-4.896-1.428-8.772-4.386-11.628-8.874l-28.152-43.452c-3.264-4.488-4.488-9.18-3.672-14.076s3.264-8.772,7.344-11.628c3.672-2.448,7.956-2.958,12.852-1.53c4.896,1.428,8.772,4.386,11.628,8.874L211.14,192.204L211.14,192.204z M326.808,176.292c0,5.712-1.632,10.404-4.896,14.076c-3.264,3.672-7.344,5.508-12.24,5.508c-4.488,0-8.364-1.836-11.628-5.508c-3.264-3.672-4.896-8.364-4.896-14.076v-51.408c0-5.712,1.632-10.404,4.896-14.076c3.264-3.672,7.14-5.508,11.628-5.508c4.896,0,8.978,1.836,12.24,5.508c3.264,3.672,4.896,8.364,4.896,14.076V176.292L326.808,176.292z M445.536,340.92c0,0.816-0.104,1.428-0.306,1.836c-0.204,0.408-0.308,1.02-0.308,1.836v1.836c0,7.344-1.02,15.504-3.06,24.48c-2.856,15.504-8.264,31.518-16.219,48.042c-7.955,16.522-16.627,34.17-26.011,52.938c-6.12,12.24-10.402,23.358-12.852,33.354s-4.386,18.666-5.814,26.01c-1.428,7.344-2.958,13.158-4.59,17.442c-1.632,4.282-4.691,6.834-9.18,7.648H250.92c-4.488-0.814-7.548-3.366-9.18-7.648c-1.632-4.284-3.162-10.1-4.59-17.442c-1.428-7.344-3.366-16.014-5.814-26.01c-2.448-9.996-6.732-21.114-12.852-33.354c-9.384-18.768-18.054-36.414-26.01-52.938c-7.956-16.524-13.362-32.538-16.218-48.042c-0.816-4.08-1.428-8.16-1.836-12.24l-1.224-12.24v-5.508c0-19.584,3.366-36.72,10.098-51.408c6.732-14.688,16.116-27.132,28.152-37.332c12.036-10.2,26.316-17.85,42.84-22.95s34.578-7.65,54.162-7.65h0.61h0.612c19.584,0,37.638,2.55,54.162,7.65s30.804,12.75,42.84,22.95c12.036,10.2,21.522,22.644,28.458,37.332C442.068,304.2,445.536,321.336,445.536,340.92z"/></svg>
-            
+              
 
-            
+              
+            </div>
           </div>
+          
+
+          <div class="article--head--date-container" >
+            <div class="article--head--date">June 16, 2013</div>    
+          </div> 
+
         </div>
+
+        <!-- this is for category tags labels -->
         
 
-        <div class="article--head--date-container">
-          <div class="article--head--date">June 16, 2013</div>    
+        <div class="article--head--title-container" >
+          <div class="article--head--title">How to Embed Tumblr Without a Server</div>
         </div> 
 
-      </div>
-
-      <!-- this is for category tags labels -->
-      
-
-      <div class="article--head--title-container">
-        <div class="article--head--title">How to Embed Tumblr Without a Server</div>
-      </div> 
-
-      <div class="article--head--subtitle-container">
-        <div class="article--head--subtitle">How to easily add Tumblr to a static site, without PHP, a server, or any server-side code</div>
-      </div> 
+        <div class="article--head--subtitle-container" >
+          <div class="article--head--subtitle">How to easily add Tumblr to a static site, without PHP, a server, or any server-side code</div>
+        </div> 
 
 
-      <div class="article--head--tags-container">
-        <div class="article--tags">
-          
-             
-              
-              <ul class="article--tags--list">
-
+        <div class="article--head--tags-container" >
+          <div class="article--tags">
+            
+               
                 
-                   
-                    <li>code</li>
-                   
-                    <li>javascript</li>
+                <ul class="article--tags--list">
+
+                  
+                     
+                      <li>code</li>
+                     
+                      <li>javascript</li>
+                    
+                  
                   
                 
                 
-              
-              
-            </ul>
-          
-        </div>
-      </div> 
+              </ul>
+            
+          </div>
+        </div> 
 
-      
+        
 
-
+      </div>
 
 
     </div>
@@ -345,44 +336,36 @@ C387.691,314.82,498.41,221.837,450.703,124.225z"></path>
 <p>So, here&#8217;s how to get a fully-customizable Tumblr feed on your site, with no <span class="caps">PHP</span>.</p>
 <h2>The Simple Way:</h2>
 <p>The easiest way to integrate a tumblr blog into a website is covered in <a href="http://adrifolio.tumblr.com/post/487702548/how-to-embed-tumblr-on-your-website-and-customize-it">adrifolio&#8217;s article</a>:</p>
-<pre class="prettyprint">&lt;script type="text/javascript" src="http://funkability.tumblr.com/js"&gt;&lt;/script&gt;
-</pre>
-<p>Add the above code anywhere in your <span class="caps">HTML</span> file, and an <span class="caps">HTML</span>-formatted tumblr dump will appear on your site. You can then style the output with <span class="caps">CSS</span>.</p>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://funkability.tumblr.com/js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></div><p>Add the above code anywhere in your <span class="caps">HTML</span> file, and an <span class="caps">HTML</span>-formatted tumblr dump will appear on your site. You can then style the output with <span class="caps">CSS</span>.</p>
 <p><a href="/app/posts/idea/tumblr-integration/tumblr-integration.html">Here&#8217;s what the tumblr dump looks like</a></p>
 <p>It&#8217;s ok if you only want a simple feed on your site, but the output is inflexible and hard to work with. You can&#8217;t easily customize the output, you don&#8217;t get meta-data, and can&#8217;t easily add controls like pagination or infinite scroll to this content.</p>
 <h2>The Server-Side Way:</h2>
 <p>There&#8217;s another way to get your Tumblr data: through the Tumblr <span class="caps">API</span>. Finlay covers this method <a href="ttp://finlay.tumblr.com/post/529010691/embed-tumblr-into-your-website">in his article</a>. The idea is that you can retrieve an <span class="caps">XML</span> feed by using the following:</p>
-<pre class="prettyprint">http://funkability.tumblr.com/api/read
-http://funkability.tumblr.com/api/read?start=0&amp;num=1
-http://funkability.tumblr.com/api/read?start=0&amp;num=1&amp;type=text
-</pre>
-<p>Much better! Your feed is returned in a neatly formatted <span class="caps">XML</span> file. Great! You even get to select what and how many posts are returned! I seriously got excited&#8230; until I saw: &#8220;So, using SimpleXML in <span class="caps">PHP</span>, we can tell our <span class="caps">PHP</span> look through for that tag, and then return its entire contents.&#8221;</p>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> http://funkability.tumblr.com/api/read
+<span class="lineno">2</span> http://funkability.tumblr.com/api/read?start=0<span class="err">&amp;</span>num=1
+<span class="lineno">3</span> http://funkability.tumblr.com/api/read?start=0<span class="err">&amp;</span>num=1<span class="err">&amp;</span>type=text</code></pre></div><p>Much better! Your feed is returned in a neatly formatted <span class="caps">XML</span> file. Great! You even get to select what and how many posts are returned! I seriously got excited&#8230; until I saw: &#8220;So, using SimpleXML in <span class="caps">PHP</span>, we can tell our <span class="caps">PHP</span> look through for that tag, and then return its entire contents.&#8221;</p>
 <p>Well, drats. I&#8217;m hosting my site on Github, which isn&#8217;t exactly a full-featured web host (that&#8217;s what I get for being cheap). Github doesn&#8217;t have any server-side scripting enabled, so the many solutions in blogs and on StackExchange to use a server to proxy the tumblr <span class="caps">XML</span> won&#8217;t work for me.</p>
 <p>I can&#8217;t use JS to request the feed, because it&#8217;s sitting on another domain (it&#8217;ll give you a cross-domain error).</p>
 <p>So how do we get around this &#8220;small&#8221; problem of not having <span class="caps">PHP</span>? Well, turns out the answer was on Tumblr&#8217;s <span class="caps">API</span> site the entire time.</p>
 <h2>The Better Way:</h2>
 <p>Apparently, in addition to Finlay&#8217;s method, <a href="http://www.tumblr.com/docs/en/api/v1">Tumblr has a way to return a <span class="caps">JSON</span>-formatted feed</a>.<br />
 Add the following script to the end of the <code>&lt;head&gt;</code> section of your website, replacing &#8216;username&#8217; with your tumblr username:</p>
-<pre class="prettyprint">&lt;script type="text/javascript" src="http://username.tumblr.com/api/read/json"&gt;&lt;/script&gt;
-</pre>
-<p>This snippet assigns a <span class="caps">JSON</span> object of your entire blog to a new variable called <code>tumblr_api_read</code>. Cool! Here&#8217;s <a href="http://funkability.tumblr.com/api/read/json/">the <span class="caps">JSON</span> output of my blog</a>. Notice how we have a much richer set of metadata using this method.</p>
-<p>With this variable, you can now easily extract and control your posts. For example, you can extract the link to your most recent post with <code>tumblr_api_read['posts'][0]['url']</code>.</p>
-<p>Here&#8217;s the example code. After you&#8217;ve inserted the previous code at the end of <code>&lt;head&gt;</code>, insert the following code anywhere you want your link to show up.</p>
-<pre class="prettyprint">
-&lt;script type="text/javascript"&gt;
-    // The variable "tumblr_api_read" is now set to your tumblr feed.
-    document.write(
-        '&lt;a href="' + tumblr_api_read['posts'][0]['url'] + 
-        '"&gt;My most recent Tumblr post&lt;/a&gt;'
-    );
-&lt;/script&gt;
-</pre>
-<p>As an example, here is a link dynamically pulled in from Tumblr to <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
-<script type="text/javascript">
-document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">my most recent Tumblr post.</a>');
-</script>
-</p>
-<p>And there you go. You now have full access to modify, style, and control your Tumblr feed, using only Javascript, and not an ounce of <span class="caps">PHP</span> or server-side.</p>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;pre</span> <span class="na">class=</span><span class="s">&quot;prettyprint&quot;</span><span class="nt">&gt;&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://username.tumblr.com/api/read/json&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="lineno">2</span> <span class="nt">&lt;/pre&gt;</span></code></pre></div><p>This snippet assigns a <span class="caps">JSON</span> object of your entire blog to a new variable called</p>
+<p><div class="highlight"><pre><code class="html"><span class="lineno">1</span> tumblr_api_read</code></pre></div>. Cool! Here&#8217;s <a href="http://funkability.tumblr.com/api/read/json/">the <span class="caps">JSON</span> output of my blog</a>. Notice how we have a much richer set of metadata using this method.</p>
+<p>With this variable, you can now easily extract and control your posts. For example, you can extract the link to your most recent post with</p>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> tumblr_api_read[&#39;posts&#39;][0][&#39;url&#39;]</code></pre></div><p>Here&#8217;s the example code. After you&#8217;ve inserted the previous code at the end of <code>&lt;head&gt;</code>, insert the following code anywhere you want your link to show up.</p>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">2</span>     <span class="c1">// The variable &quot;tumblr_api_read&quot; is now set to your tumblr feed.</span>
+<span class="lineno">3</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span>
+<span class="lineno">4</span>         <span class="s1">&#39;&lt;a href=&quot;&#39;</span> <span class="o">+</span> <span class="nx">tumblr_api_read</span><span class="p">[</span><span class="s1">&#39;posts&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">+</span> 
+<span class="lineno">5</span>         <span class="s1">&#39;&quot;&gt;My most recent Tumblr post&lt;/a&gt;&#39;</span>
+<span class="lineno">6</span>     <span class="p">);</span>
+<span class="lineno">7</span> <span class="nt">&lt;/script&gt;</span></code></pre></div><p>As an example, here is a link dynamically pulled in from Tumblr to</p>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://funkability.tumblr.com/api/read/json&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="lineno">2</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">3</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;a href=&quot;&#39;</span> <span class="o">+</span> <span class="nx">tumblr_api_read</span><span class="p">[</span><span class="s1">&#39;posts&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;my most recent Tumblr post.&lt;/a&gt;&#39;</span><span class="p">);</span>
+<span class="lineno">4</span> <span class="nt">&lt;/script&gt;</span></code></pre></div><p>And there you go. You now have full access to modify, style, and control your Tumblr feed, using only Javascript, and not an ounce of <span class="caps">PHP</span> or server-side.</p>
 
 
         <div class="clear"></div>
@@ -454,8 +437,9 @@ document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">my most rec
 <!-- 
   <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"></script>
  -->
-  <!-- Google Prettify - https://code.google.com/p/google-code-prettify/wiki/GettingStarted -->
+  <!-- Google Prettify - https://code.google.com/p/google-code-prettify/wiki/GettingStarted 
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&lang=html&lang=js&skin=desert"></script>
+  -->
 
 
   <!-- <script src="/assets/js/plugins.js"></script> -->
@@ -464,10 +448,15 @@ document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">my most rec
   <script src="/app/js/slimbox2.js"></script>
  -->
 
-
   <script src="/app/js/waypoints.min.js"></script>
   <script src="/app/js/skrollr.min.js"></script>
+
+  <script src="/app/js/list.min.js"></script>
+  <script src="/app/js/jquery.fluidbox.min.js"></script>
+  <script src="/app/js/jquery.royalslider.min.js"></script>
+  
   <script src="/app/js/script.js"></script>
+
 
   <!-- 
   <script type="text/javascript" src="http://www.google.com/jsapi"></script>

@@ -6,10 +6,7 @@ source: /app/posts/about
 
 ---
 
-
-
 <!-- use that new container vertical center code you found! -->
-
 
 <div class="about--intro">
 <figure class="figure-circle">
@@ -113,7 +110,7 @@ I've had the luxury of working with some amazing agencies and clients, some of w
           <span class="timeline--list-item--headline--location">Atlanta, GA</span>
           <span class="timeline--list-item--headline--date">2013</span>
         </div>
-        <div class="timeline--list-item--headline--short">Sometimes I take on smaller side projects.
+        <div class="timeline--list-item--headline--short">Sometimes I take on smaller side projects.</div>
       </div>
     </div>
 

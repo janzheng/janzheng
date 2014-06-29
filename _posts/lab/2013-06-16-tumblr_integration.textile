@@ -12,7 +12,7 @@ preview-css : post-preview-std
 <!-- vimeo: # -->
 
 <!-- categories: idea, lab, rant, tool, portfolio -->
-category : idea
+category : lab
 tags : [code, javascript]
 
 published : true
@@ -31,8 +31,15 @@ h2. The Simple Way:
 
 The easiest way to integrate a tumblr blog into a website is covered in "adrifolio's article":http://adrifolio.tumblr.com/post/487702548/how-to-embed-tumblr-on-your-website-and-customize-it:
 
-<pre class="prettyprint"><script type="text/javascript" src="http://funkability.tumblr.com/js"></script>
-</pre>
+
+
+{% highlight html linenos %}
+
+<script type="text/javascript" src="http://funkability.tumblr.com/js"></script>
+
+{% endhighlight %}
+
+
 
 Add the above code anywhere in your HTML file, and an HTML-formatted tumblr dump will appear on your site. You can then style the output with CSS.
 
@@ -46,10 +53,14 @@ h2. The Server-Side Way:
 
 There's another way to get your Tumblr data: through the Tumblr API. Finlay covers this method "in his article":ttp://finlay.tumblr.com/post/529010691/embed-tumblr-into-your-website. The idea is that you can retrieve an XML feed by using the following:
 
-<pre class="prettyprint">http://funkability.tumblr.com/api/read
+
+{% highlight html linenos %}
+
+http://funkability.tumblr.com/api/read
 http://funkability.tumblr.com/api/read?start=0&num=1
 http://funkability.tumblr.com/api/read?start=0&num=1&type=text
-</pre>
+
+{% endhighlight %}
 
 p. Much better! Your feed is returned in a neatly formatted XML file. Great! You even get to select what and how many posts are returned! I seriously got excited... until I saw: "So, using SimpleXML in PHP, we can tell our PHP look through for that tag, and then return its entire contents."
 
@@ -67,16 +78,33 @@ h2. The Better Way:
 Apparently, in addition to Finlay's method, "Tumblr has a way to return a JSON-formatted feed":http://www.tumblr.com/docs/en/api/v1.
 Add the following script to the end of the @<head>@ section of your website, replacing 'username' with your tumblr username:
 
+{% highlight html linenos %}
+
 <pre class="prettyprint"><script type="text/javascript" src="http://username.tumblr.com/api/read/json"></script>
 </pre>
 
-This snippet assigns a JSON object of your entire blog to a new variable called @tumblr_api_read@. Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how we have a much richer set of metadata using this method.
+{% endhighlight %}
 
-With this variable, you can now easily extract and control your posts. For example, you can extract the link to your most recent post with @tumblr_api_read['posts'][0]['url']@.
+
+
+This snippet assigns a JSON object of your entire blog to a new variable called 
+
+{% highlight html linenos %} 
+tumblr_api_read 
+{% endhighlight %}. Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how we have a much richer set of metadata using this method.
+
+With this variable, you can now easily extract and control your posts. For example, you can extract the link to your most recent post with 
+
+{% highlight html linenos %}  
+tumblr_api_read['posts'][0]['url']
+{% endhighlight %}
 
 Here's the example code. After you've inserted the previous code at the end of @<head>@, insert the following code anywhere you want your link to show up.
 
-<pre class="prettyprint">
+
+
+{% highlight html linenos %}
+
 <script type="text/javascript">
     // The variable "tumblr_api_read" is now set to your tumblr feed.
     document.write(
@@ -84,14 +112,23 @@ Here's the example code. After you've inserted the previous code at the end of @
         '">My most recent Tumblr post</a>'
     );
 </script>
-</pre>
 
-As an example, here is a link dynamically pulled in from Tumblr to <notextile>
+{% endhighlight %}
+
+
+
+
+As an example, here is a link dynamically pulled in from Tumblr to
+
+
+{% highlight html linenos %}
+
 <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
 <script type="text/javascript">
 document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">my most recent Tumblr post.</a>');
 </script>
-</notextile>
+
+{% endhighlight %}
 
 
 And there you go. You now have full access to modify, style, and control your Tumblr feed, using only Javascript, and not an ounce of PHP or server-side. 

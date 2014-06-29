@@ -76,7 +76,7 @@ h2. On the Pursuit of Zen
 
 <figure class="figure-wide">
 !{{page.source}}/2.png!
-<figcaption>My trusty typewriter. Not that I ever use this thing. But it's cool right? Not too hipster?</a>
+<figcaption>Typewriter emulator. Reducing the word processor to its bare necessities. </a>
 </figcaption>
 </figure>
 

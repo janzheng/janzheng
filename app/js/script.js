@@ -8,7 +8,7 @@ $(document).ready(function() {
   // });
 
   // Initiate Skrollr for parallax scrolling
-  // skrollr.init({forceHeight: false});
+  skrollr.init({forceHeight: false, easing: 'cubic'});
 
   // set background images for posts with bg-images on homepage
   $('.post--container').each(function(){
@@ -18,8 +18,20 @@ $(document).ready(function() {
     } 
   });
 
+  // set header images for posts with bg-images on homepage
+  $('.article--head-img').each(function(){
+    var img = $(this).data("img");
+    if(typeof $(this).data("img") != 'undefined') {
+      $(this).css('background-image', 'url(' + img + ')');
+    } 
+  });
 
 
+
+
+  // 
+  // FILTER SYSTEM
+  // 
 
   // dashes won't work w/ list.js, have to use camel
   // sorting for blog posts / uses List.js
@@ -39,23 +51,68 @@ $(document).ready(function() {
     blogPosts.filter();
   }
 
+  var titleDefault = $(".page--title").text();
   // not MVC but whatever
+
+  if(window.location.hash.length > 0) {
+    var hash = window.location.hash.substring(1);
+    filterBy(hash);
+    $(".filter-btn[data-filter='"+hash+"']").addClass('filter-btn--active');
+  }
+
   $(".filter-btn").bind('mouseup',function(e) {
     if ($(this).hasClass('filter-btn--active')) {
+      window.location.hash = ''
       filterReset();
+      $(".page--title").text(titleDefault);
       $(".filter-btn").removeClass('filter-btn--active');
     } else {
+      window.location.hash = $(this).data('filter');
       $(".filter-btn").removeClass('filter-btn--active');
       filterBy($(this).data('filter'));
       $(this).addClass('filter-btn--active');
+      $(".page--title").text($(this).data('filter') + 's')
     }
   });
+
+  // hover tooltip
+  var hoverdefault = $(".page--title").text();
+
+
+
+
+
+
+  // 
+  // FLUIDBOX
+  // 
+
+  $('figure a, a[rel="lightbox"]').fluidbox();
+
+
+
+
+  //make the title blank so it doesn't flash all the time
+  // $(".posts--filters").bind('mouseenter',function(e) {
+  //   $(".page--title").html('   ');
+  // });
+  // $(".posts--filters").bind('mouseleave',function(e) {
+  //   $(".page--title").text(hoverdefault);
+  // });
+
+
+  // $(".filter-btn").bind('mouseenter',function(e) {
+  //   $(".page--title").text($(this).data('filter') + 's');
+  // });
+  // $(".filter-btn").bind('mouseleave',function(e) {
+  //   $(".page--title").html('   ');
+  // });
 
 
   // 
   // Opens links (in posts and articles) in a new tab
   // 
-  $('.article a[href]').click(function(e) {
+  $('.article a[href]:not(.fluidbox)').click(function(e) {
     var url = $(this).attr('href');
 
     // only do this if not an anchor link
@@ -74,8 +131,6 @@ $(document).ready(function() {
               'stay a while, and listen', 
               'stay a while, and listen', 
               '"To listen is to lean in, softly, with a willingness to be changed by what we hear." - unknown',
-              'welcome to a brand new day!', 
-              'I like turtles!',
               'would you like a cup of tea?',
               "let's go ride bikes!",
               "let's make things happen!",
@@ -106,12 +161,13 @@ $(document).ready(function() {
       target = this.hash,
       $target = $(target);
       
-      $(scrollElement).stop().animate({
-        'scrollTop': $target.offset().top
-      }, 500, 'swing', function() {
-        window.location.hash = target;
-      });
-
+      if( !(typeof $target.offset() === "undefined")) {
+        $(scrollElement).stop().animate({
+          'scrollTop': $target.offset().top
+        }, 500, 'swing', function() {
+          window.location.hash = target;
+        });
+      }
     });
 
 
@@ -184,5 +240,39 @@ function refreshStickyElements() {
     }, { offset: bottom });
 
   });
+
+
+
+
+  // ************************************************************
+  // Initiate the royal slider
+  $('.royalSlider').royalSlider({
+    arrowsNav: true,
+    loop: false,
+    keyboardNavEnabled: true,
+    controlsInside: true,
+    imageScaleMode: 'fit',
+    arrowsNavAutoHide: false,
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 960,     
+    autoScaleSliderHeight: 450, 
+    controlNavigation: 'bullets',
+    thumbsFitInViewport: true,
+    navigateByClick: false,
+    startSlideId: 0,
+    visibleNearby: true,
+    autoPlay: false,
+    transitionType:'move',
+    globalCaption: true,
+    deeplinking: {
+      enabled: true,
+      change: false,
+      prefix: 'slide-'
+    },
+    /* size of all images http://help.dimsemenov.com/kb/royalslider-jquery-plugin-faq/adding-width-and-height-properties-to-images */
+    imgWidth: 1400,
+    imgHeight: 680
+  });
+
 
 }

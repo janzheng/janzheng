@@ -64,15 +64,20 @@ Page Format
     <!-- <span class="sort" data-sort="sortCategory">Sort by Category</span> -->
     <!-- <span class="sort" data-sort="sortDate">Sort by Date</span> -->
 
+    <div class="page--title">
+      blog posts
+    </div>
+
     <div class="posts--filters">
       <div class="filter-btn" class="btn-inline" data-filter="lab">{% include lab-svg.html %}</div>
       <div class="filter-btn" class="btn-inline" data-filter="rant">{% include rant-svg.html %}</div>
       <div class="filter-btn" class="btn-inline" data-filter="idea">{% include idea-svg.html %}</div>
+      <div class="filter-btn" class="btn-inline" data-filter="work">{% include work-svg.html %}</div>
     </div>
+      
 
     <ul class="list">
     {% for post in site.posts %}
-    {% if post.portfolio == false %} 
     {% if post.published == true %} 
 
       <li class="post post--cat--{{post.category}} {% if post.featured %} post--featured {% endif %}">
@@ -104,6 +109,10 @@ Page Format
 
                   {% if post.category == 'rant' %}
                     {% include rant-svg.html %}
+                  {% endif %}
+
+                  {% if post.category == 'work' %}
+                    {% include work-svg.html %}
                   {% endif %}
 
                 </div>
@@ -166,7 +175,6 @@ Page Format
       </li>
       <!-- end post -->
     {% endif %}
-    {% endif %}  
     {% endfor %}
 
     </ul>

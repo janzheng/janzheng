@@ -1,18 +1,31 @@
 ---
-layout: post
+layout: layout-post
 title: upower fitness
-summary: A responsive website for an upscale personal training and gym startup  
+summary: responsive website for an upscale personal training and gym startup  
+
+source: /app/posts/portfolio/upower
+<!-- preview-img : /app/posts/portfolio/nespresso-boutiques/preview.png -->
+preview-css : post-preview-std post-preview-short
+
+project-link : http://www.upowerfitness.com/
+project-link-desc : upower fitness
+
 <!-- external: # -->
-<!-- image-path: /assets/# -->
-image-icon: /assets/posts/Portfolio-upower/polaroid.jpg
 <!-- youtube: # -->
 <!-- vimeo: # -->
-category : Portfolio
+
+<!-- categories: idea, lab, rant, tool, work -->
+category : work
 tags : [Portfolio, Information Architecture, Interaction Design, Web Design, Content Strategy, Copywriting]
-published : true
+
+published : false
 portfolio : true
 comments : false
+featured : false
 ---
+
+
+
 
 <div class="post-maincontent">
 

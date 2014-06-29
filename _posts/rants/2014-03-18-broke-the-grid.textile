@@ -7,10 +7,13 @@ source: /app/posts/rants/break-the-grid
 preview-css : post-preview-std post-preview-break-the-grid
 <!-- post-css : post-std -->
 
-
 <!-- external: # -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
+<!-- 
+header-img: http://placekitten.com/1200/300
+header-styles: article--head-light
+ -->
 
 <!-- categories: info, lab, rant, tool, portfolio -->
 category : rant
@@ -53,9 +56,7 @@ There's a reason why everything last year looked so blocky: it's in the tools. R
 
 But its strength&mdash;the grid&mdash; is also its weakness. Let's take a look at this basic responsive "example from Brad Frost":http://codepen.io/bradfrost/full/cgHtv:
 
-<figure>
-!{{page.source}}/codepen.png!
-<figcaption>look, blocks on blocks!</figcaption>
+<figure><a href="#">!{{page.source}}/codepen.png!</a><figcaption>look, blocks on blocks!</figcaption>
 </figure> The layout grid is extremely powerful, as it allows pieces of content to shift around in a way that fills the space on the page perfectly. However, if used carelessly, the final output might end up looking like the stacks of boxes, and end up a little stale.
 
 
@@ -78,9 +79,8 @@ Smashing Magazine has a "hugely inspirational article":http://www.smashingmagazi
 
 To push the boundaries of the grid would be to employ a much larger grid. Instead of the 12 column grid my last site used, I moved onto a 24 column grid. This offers more flexibility to place content in many different new ways that are closer to magazine layouts.
 
-<figure class="figure-wide">
-!{{page.source}}/24-grid.png!
-<figcaption>my slightly messier but more flexible 24-column grid. Here's an example of <a href="{{page.source}}/layout.html">how it will work</a>
+
+<figure class="figure-wide"><a href="#">!{{page.source}}/24-grid.png!</a><figcaption>my slightly messier but more flexible 24-column grid. Here's an example of <a href="{{page.source}}/layout.html">how it will work</a>
 </figcaption>
 </figure> We're already on the cusp on another evolution: many websites are already starting to develop their own character, all based on responsive design. Sites like "C|Net":http://cnet.com, "Time":http://time.com, and "MSNBC":http://msnbc.com have already taken radical approaches to their designs. We're on the cusp of another web design 'revolution' where many designers will take our current concepts and make their sites uniquely their own. Designers will bring in concepts from Swiss design and art to inspire their layouts.
 

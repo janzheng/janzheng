@@ -9,13 +9,13 @@ author :
 
 
 markdown: rdiscount
-highlighter: rouge
+highlighter: pygments
 permalink: /:year/:month/:title.html
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "notes.txt"]
 
 
 navigation:
- - text: rants
+ - text: blog
    url: /
  - text: about
    url: /about.html

@@ -1,17 +1,27 @@
 ---
-layout: post
+layout: layout-post
 title: Cartoon Network Mobile
-summary: Fun and quirky mobile site for browsing shows and watching videos 
+summary: fun and quirky mobile site for browsing shows and watching videos 
+
+source: /app/posts/portfolio/cartoon-network-mobile
+<!-- preview-img : /app/posts/portfolio/cartoon-network-mobile/preview.png -->
+preview-css : post-preview-std post-preview-short
+
+project-link : http://www.nespresso-us.com/coffee-boutiques/
+project-link-desc : Nespresso Boutiques
+
 <!-- external: # -->
-<!-- image-path: /assets/# -->
-image-icon: /assets/posts/2013-04-18-Portfolio-CN-Mobile/polaroid.jpg
 <!-- youtube: # -->
 <!-- vimeo: # -->
-category : Portfolio
-tags : [Portfolio, Information Architecture, Interaction Design]
-published : true
+
+<!-- categories: idea, lab, rant, tool, work -->
+category : work
+tags : [portfolio, information architecture, interaction design]
+
+published : false
 portfolio : true
 comments : false
+featured : false
 ---
 
 <div class="post-maincontent">

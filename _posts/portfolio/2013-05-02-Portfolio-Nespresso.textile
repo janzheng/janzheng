@@ -1,128 +1,117 @@
 ---
-layout: post
+layout: layout-post
 title: Nespresso Boutiques
-summary: Bringing the essence of the Nespresso Boutique to the web 
+summary: bringing the essence of the Nespresso Boutique to the web 
+
+source: /app/posts/portfolio/nespresso-boutiques
+<!-- preview-img : /app/posts/portfolio/nespresso-boutiques/preview.png -->
+preview-img : /app/posts/portfolio/nespresso-boutiques/preview2.png
+preview-css : post-preview-std post-preview-img-light
+
+project-link : http://www.nespresso-us.com/coffee-boutiques/
+project-link-desc : Nespresso Boutiques
+
+header-img: /app/posts/portfolio/nespresso-boutiques/header.png
+header-styles: article--head-light article--head-light-bg
+
 <!-- external: # -->
-<!-- image-path: http://placehold.it/650x450 -->
-image-icon: /assets/posts/2013-04-18-Portfolio-Nespresso/polaroid.png
 <!-- youtube: # -->
 <!-- vimeo: # -->
-category : Portfolio
-tags : [Portfolio, Information Architecture, Interaction Design]
+
+<!-- categories: idea, lab, rant, tool, work -->
+category : work
+tags : [portfolio, information architecture, interaction design]
+
 published : true
 portfolio : true
 comments : false
+featured : false
 ---
 
+<notextile>
 
-<div class="post-contentwrapper">
-   <div class="post-maincontent">
 
-<div class="flexslider">
-  <ul class="slides">
-    <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/1.png" title="Nespresso Boutique Homepage" rel="lightbox-nespresso">
-         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/1sm.png" />
-         <p class="flex-caption">Nespresso Boutique homepage. The large images and look reflect the mood of the Nespresso boutique experience, while the list of states on the left show store availability.</p>
-      </a>
-    </li>
-    
-    <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/2.png" title="Boutique Gallery" rel="lightbox-nespresso">
-         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/2sm.png" />
-         <p class="flex-caption">Boutique Gallery view. The gallery view allows the distinct architecture and design of each boutique stand out.</p>
-      </a>
-    </li>
+<div class="callout">
+  <div class="callout--row">
+     <span class="title">Client</span><span class="content">Nespresso</span>
+  </div>
 
-    <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/3.png" title="Boutique Landing Page" rel="lightbox-nespresso">
-         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/3sm.png" />
-         <p class="flex-caption">Boutique Landing Page. Each boutique has its own dedicated page that tells each store's unique history, amenities, opening times, and menu.</p>
-      </a>
-    </li>
+  <div class="callout--row">
+     <span class="title">Goal</span><span class="content">To bring the essence of the Nespresso Boutique to the web</span>
+  </div>
 
-    <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/4.png" title="Boutique Locations Page" rel="lightbox-nespresso">
-         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/4sm.png" />
-         <p class="flex-caption">Boutique Locations Page. The locations tab under each boutique page reveals the location of the boutique on a Google Maps plugin.</p>
-      </a>
-    </li>
+  <div class="callout--row">
+     <span class="title">Role</span><span class="content">Information architecture, interaction design</span>
+  </div>
 
-    <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/5.png" title="Wireframe: Boutique Landing Page" rel="lightbox-nespresso">
-         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/5sm.png" />
-         <p class="flex-caption">Wireframe of the Boutique Landing page. This earlier version of the Boutique landing page shows all the page elements and requirements displayed on a single page.</p>
-      </a>
-    </li>
+  <div class="callout--row">
+     <span class="title">Links</span><span class="content"><a href="http://www.nespresso-us.com/coffee-boutiques/">Live site</a>, <a href="http://share.axure.com/3GTDZ6/">wireframes</a></span>
+  </div>
 
-    <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/6.png" title="Wireframe: Boutique Finder" rel="lightbox-nespresso">
-         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/6sm.png" />
-         <p class="flex-caption">Wireframe of the Boutique Finder. This is an alternate exploration of the boutique landing page, focusing on large images of each location.</p>
-      </a>
-    </li>
-
-    <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-Nespresso/7.png" title="Wireframe: Boutique Landing Page" rel="lightbox-nespresso">
-         <img src="/assets/posts/2013-04-18-Portfolio-Nespresso/7sm.png" />
-         <p class="flex-caption">Wireframe of the Boutique Finder. This is an alternate exploration of the Finder, focusing on scalability, and highlighting each location's most important information.</p>
-      </a>
-    </li>
-  </ul>
+  <div class="callout--row">
+     <span class="title">Launched</span><span class="content">Q2, 2013</span>
+  </div>
 </div>
 
-p. "Nespresso":http://www.nespresso-us.com/boutique/ is an espresso coffee machine company who came to us looking to give their exclusive network of coffee shops a stronger online presence. They wanted a place for their fans to learn more about their Boutiques, and needed a site to match the style, elegance, and exclusivity of their local Boutiques.
+</notextile>
 
-p. The online Boutique experience aims to communicate the in-store experience of the boutiques. The large images, typography, and store selection list all aim to reflect the very upscale, detail-oriented experience that Nespresso aims to offer with their stores. 
 
-p. Originally, Nespresso showed a Store Finder system similar to that of Home Depot, Starbucks, and other large retailers. When Nespresso approached us to completely overhaul the web experience in preparation for the launch of their flagship San Francisco boutique, I felt like a store finder was too impersonal. I wanted something that expressed more exclusivity, especially as Nespresso Boutiques are very unique. Instead, I opted for a Boutique list that would both communicate the exclusivity better, and not make Nespresso boutiques feel few and sparse. 
+
+p(dropcap). Nespresso is a "single-serving espresso machine company":http://www.nespresso-us.com/boutique/  who came to us looking to give their exclusive network of coffee shops a stronger online presence. They wanted a place for their fans to learn more about their Boutiques, and needed a site to match the style, elegance, and exclusivity of their local Boutiques.
+
+<figure class="figure-wide"><a href="{{page.source}}/nespresso-home.png">!{{page.source}}/nespresso-home_sm.png!</a><figcaption>The austere use of menu colors accentuates the large images</figcaption>
+</figure>
+
+The online Boutique experience aims to communicate the in-store experience of the boutiques. The large images, typography, and store selection list all aim to reflect the very upscale, detail-oriented experience that Nespresso aims to offer with their stores. 
+
+p. Originally, Nespresso used a Store Finder system similar to that of Home Depot, Starbucks, and other large retailers. When Nespresso approached us to completely overhaul the web experience in preparation for the launch of their flagship San Francisco boutique, I felt like a store finder was too impersonal. I wanted something that expressed more exclusivity, especially as Nespresso Boutiques are very unique. Instead, I opted for a Boutique list that would both communicate the exclusivity better, and not make Nespresso boutiques feel few and sparse. 
+
+<notextile>
+<figure class="figure-wide">
+  <div class="royalSlider rsMinW show-adjacent slider ">
+    <div class="rsContent">
+      <img class="rsImg" src="{{page.source}}/gallery.png" alt="" >
+      <div class="rsCaption">Large images convey the atmosphere of each store.</div>
+    </div>
+
+    <div class="rsContent">
+      <img class="rsImg" src="{{page.source}}/stores.png" alt="" >
+      <div class="rsCaption">Stores are categorized by area to convey scarcity and uniqueness.</div>
+    </div>
+
+    <div class="rsContent">
+      <img class="rsImg" src="{{page.source}}/store.png" alt="" >
+      <div class="rsCaption">Each store tailors their story to their respective audience.</div>
+    </div>
+  </div>
+</figure>
+</notextile>
+
 
 p. In terms of scalability, the current system is slated to support an additional few dozen more Boutiques, which won't be needed to be updated for at least a few years. 
 
 p. My part of the project required me to translate the vast collection of ethnographic and market research, massive amount of requirements, and design goals into a rich web and tablet user experience.
 
 
-p.   
-* Performed rounds of content and requirement audits
-* Created a requirements & site map
-* Created a content grid for clients to populate content
-* Created core interaction concept for the user experience
-* Sketched, designed, and wireframed the interface design
-* Created interface design variations and iterations based on core concepts
-* Client interaction walkthroughs
-* Worked with designers and developers to deliver final product
+<notextile>
+<div class="callout">
+  <h2 class="no-margin">Summary of work</h2>
+  <div class="callout--row">
 
-   </div>
+  </notextile>
+    * Performed rounds of content and requirement audits
+    * Created a requirements & site map
+    * Created a content grid for clients to populate content
+    * Created core interaction concept for the user experience
+    * Sketched, designed, and wireframed the interface design
+    * Created interface design variations and iterations based on core concepts
+    * Client interaction walkthroughs
+    * Worked with designers and developers to deliver final product
+  <notextile>
+  </div>
+</div>
+</notextile>
 
-
-   <div class="post-sidebar">
-      <div class="post-sidebar-column">
-         <title>Client</title>
-         <span>Nespresso</span>
-      </div>
-
-      <div class="post-sidebar-column">
-         <title>Goal</title>
-         <span>To bring the boutique experience online</span>
-      </div>
-
-      <div class="post-sidebar-column">
-         <title>Role</title>
-         <span>Information architect</span>
-         <span>Interaction design</span>
-      </div>
-
-      <div class="post-sidebar-column">
-         <title>Employer</title>
-         <span>Nurun</span>
-      </div>
-
-      <div class="post-sidebar-column">
-         <title>Links</title>
-         <span><a href="http://www.nespresso-us.com/coffee-boutiques/">Nespresso Boutiques</a></span>
-         <span><a href="http://share.axure.com/3GTDZ6/">Axure wireframes</a></span>
-      </div>
-   </div>
-   
 
 </div>
+
