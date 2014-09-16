@@ -10,10 +10,6 @@ preview-css : post-preview-std post-preview-break-the-grid
 <!-- external: # -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
-<!-- 
-header-img: http://placekitten.com/1200/300
-header-styles: article--head-light
- -->
 
 <!-- categories: info, lab, rant, tool, portfolio -->
 category : rant

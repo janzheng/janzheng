@@ -70,8 +70,8 @@ $nav-narrow: 60px;
 
 // Key Grid Breakpoints. Other breakpoint helpers included in proto_framework, but these will define the main grid.
 // Helpers can't be added here becuase they interfere with Neat's grid system
-$tiny: new-breakpoint(min-width 0px 5);                               // 0 and above
-$small: new-breakpoint(min-width 480px 24);                               // 0 and above
-$medium: new-breakpoint(min-width 767px 24);                            // 481 and above
-$large: new-breakpoint(min-width 1180px 24);                             // 768 and above
+// $tiny: new-breakpoint(min-width 0px 18);                               // 0 and above
+// $small: new-breakpoint(min-width 480px 24);                               // 0 and above
+// $medium: new-breakpoint(min-width 767px 24);                            // 481 and above
+// $large: new-breakpoint(min-width 1180px 24);                             // 768 and above
   

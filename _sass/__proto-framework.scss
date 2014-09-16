@@ -29,21 +29,21 @@
 // $largest: new-breakpoint(min-width 980px 12);                         // 980 and above (infinite)
 
 
-$break-tiny: new-breakpoint(min-width 0 18);                            // smallest possible; mobile size and up. Nav changes.
-$break-small-upto: new-breakpoint(max-width 479px 18); 
-$break-small: new-breakpoint(min-width 480px 24);                       // bigger than mobile. Nav shows
+// $break-tiny: new-breakpoint(min-width 0 18);                            // smallest possible; mobile size and up. Nav changes.
+// $break-small-upto: new-breakpoint(max-width 479px 18); 
+// $break-small: new-breakpoint(min-width 480px 24);                       // bigger than mobile. Nav shows
 
 // when the left nav becomes wider
-$break-infinite: new-breakpoint(min-width 1180px 24);                   // 960 + nav size
+// $break-infinite: new-breakpoint(min-width 1180px 24);                   // 960 + nav size
 
-$break-nav-mobile: new-breakpoint(max-width 479px 18);                      // mobile nav
-$break-nav-thin: new-breakpoint(min-width 480px max-width 767px 24);       // thin side nav (60px)
-$break-nav-wide: new-breakpoint(min-width 767px  24);                      // in-betweener for content modification only
-$break-nav-full: new-breakpoint(min-width 980px 24);                       // wide side nav (120px) 
-$break-nav-thin-atleast: new-breakpoint(min-width 480px 24);       // thin side nav (60px)
-$break-nav-wide-atleast: new-breakpoint(min-width 767px 24);       // thin side nav (60px)
+$break-nav-mobile: new-breakpoint(max-width 479px);                      // mobile nav
+$break-nav-thin: new-breakpoint(min-width 480px max-width 767px);       // thin side nav (60px)
+$break-nav-wide: new-breakpoint(min-width 767px);                      // in-betweener for content modification only
+$break-nav-full: new-breakpoint(min-width 980px);                       // wide side nav (120px) 
+$break-nav-thin-atleast: new-breakpoint(min-width 480px);       // thin side nav (60px)
+$break-nav-wide-atleast: new-breakpoint(min-width 767px);       // thin side nav (60px)
 
-$break-nav-full-max: new-breakpoint(max-width 980px 24);
+// $break-nav-full-max: new-breakpoint(max-width 980px 24);
 
 // used in non-mobile. fixed
 $width-nav-menu: 130px;
