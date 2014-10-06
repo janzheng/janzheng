@@ -22,6 +22,13 @@ Use Flexboxes / ProtoWire to rewrite
 - Add more work
 
 
+
+
+
+REDESIGN INSPIRATION:
+https://unclegoose.com/about/
+https://themanual.org/read/staffpicks
+
 —————————
 
 
