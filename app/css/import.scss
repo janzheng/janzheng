@@ -1390,7 +1390,9 @@ body, html {
                 &.figure-wide {
                   // margin: 0 auto;
 
-                  overflow: hidden; // used for slider to show adjacent images
+                  .royalSlider {
+                    overflow: hidden; // used for slider to show adjacent images
+                  }
 
                   width: 100%;
                   @include media($break-nav-thin-atleast) {@include span-columns(32);}
