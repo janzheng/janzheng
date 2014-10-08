@@ -3,9 +3,21 @@
     <title>Jan Zheng</title>
     <link href="http://janzheng.com/atom.xml" rel="self"/>
     <link href="http://janzheng.com/"/>
-    <updated>2014-09-24T15:55:20-04:00</updated>
+    <updated>2014-10-07T21:51:40-04:00</updated>
     <id>http://janzheng.com/</id>
     
+    
+    <entry>
+        <id>janzheng.com:/2014/10/unicorns</id>
+        <title>Stop Hiring Unicorns</title>
+        <link href="http://janzheng.com/2014/10/unicorns.html"/>
+        <updated>2014-10-02T00:00:00-04:00</updated>
+        <summary>Do designers need to learn code?</summary>
+        <author>
+            <name>Jan Zheng</name>
+            <uri>http://janzheng.com/</uri>
+        </author>
+    </entry>
     
     <entry>
         <id>janzheng.com:/2014/03/sticky-sidebar</id>
