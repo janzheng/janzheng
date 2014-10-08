@@ -162,6 +162,9 @@ $size-article-subtitle: $base*1.1;
 $size-h2: golden-ratio($base, 1);
   $height-h2: golden-ratio($size-h2, 1);
 
+$size-h3: golden-ratio($base*0.8, 1);
+  $height-h3: golden-ratio($size-h3, 1);
+
 $size-p: $base*1.05; 
   $height-p: golden-ratio($size-p*1.2, 1);
 
@@ -235,6 +238,17 @@ $s1: golden-ratio(14px,  1);
     margin-top: $size-h2;
     margin-bottom: $size-h2;
   } 
+
+    // Subtitles within a post
+    %style-article-h3 {
+      @extend %serif; 
+      font-size: $size-h3;
+      line-height: $height-h3;
+      color: $slate; 
+      margin-top: $size-h3/2;
+      margin-bottom: $size-h3/2;
+    } 
+
 
   %style-figcaption {
     color: $gray;
@@ -1188,7 +1202,9 @@ body, html {
   
           .article--body {
 
-            overflow: hidden; // used for slider to show adjacent images
+            overflow: visible; //ghost overlay gets hidden if overflow is hidden
+            // overflow: hidden; // used for slider to show adjacent images - needs to be appled to slider container
+
 
             @include span-four(24, 23, 23, 23);
             // @include media($break-nav-thin-atleast) {@include shift(1);}
@@ -1233,6 +1249,7 @@ body, html {
               @extend %style-p-serif;
               @extend %body-align; 
 
+              // main display header
               h1 {
                 @extend %style-article-title;
                 @include media($break-nav-thin-atleast) {@include shift(-2);} 
@@ -1252,9 +1269,18 @@ body, html {
                 margin-bottom: $base * 2;
               }
 
+              // section headers
               h2 { 
                 @extend %style-article-h2;
                 margin-top: $base*4; //h2 is a section separator
+                // @include media($break-nav-thin-atleast) {@include shift(-1);}
+                &.no-margin {margin-top: 0}
+              }
+
+              // output headers
+              h3 { 
+                @extend %style-article-h3;
+                margin-top: $base; //h2 is a section separator
                 // @include media($break-nav-thin-atleast) {@include shift(-1);}
                 &.no-margin {margin-top: 0}
               }
@@ -1363,6 +1389,9 @@ body, html {
  
                 &.figure-wide {
                   // margin: 0 auto;
+
+                  overflow: hidden; // used for slider to show adjacent images
+
                   width: 100%;
                   @include media($break-nav-thin-atleast) {@include span-columns(32);}
                   img {display: block; margin: 0 auto;}

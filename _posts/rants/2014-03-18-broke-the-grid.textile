@@ -2,6 +2,7 @@
 layout: layout-post
 title: I Broke My Grid
 summary: to let loose my content
+
 source: /app/posts/rants/break-the-grid
 <!-- preview-img : /app/posts/nanowrito/preview.png -->
 preview-css : post-preview-std post-preview-break-the-grid
