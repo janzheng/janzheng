@@ -5,7 +5,7 @@ summary: Do designers need to learn code?
 
 source: /app/posts/rants/unicorns
 <!-- preview-img : /app/posts/rants/unicorns/rhino.png -->
-preview-css : post-preview-std post-preview-short post-preview-img-mixed
+preview-css : post-preview-std post__imgPreview--short post__imgPreview--mixed
 
 <!-- external: # -->
 <!-- youtube: # -->
@@ -19,6 +19,7 @@ published : true
 portfolio : false
 comments : true
 featured : false
+type : blog
 ---
 
 
@@ -89,7 +90,7 @@ Besides, a little more knowledge never hurt anyone.
 h2. Part II - Unicorn Tools
 
 
-bq(blockquote-wide no-quotes). If your only tool is a hammer, every problem will look like a nail. If your only tool is email, every minute will be spent checking your inbox. 
+bq(blockquote--wide blockquote--noQuotes). If your only tool is a hammer, every problem will look like a nail. If your only tool is email, every minute will be spent checking your inbox. 
 
 Unicorns are highly sought-after individuals in the creative world. They are considered great visual designers that also understand user experience and interaction design, how to write code, and are generally one-person Swiss army knives that can fill in any missing roles on a project.
 

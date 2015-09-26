@@ -5,7 +5,7 @@ summary: pursuing the zen of writing
 
 source: /app/posts/lab/nanowrito
 preview-img : /app/posts/lab/nanowrito/preview.png
-preview-css : post-preview-std post-preview-img-dark
+preview-css : post-preview-std post__imgPreview--dark
 project-link : http://www.nanowrito.com
 project-link-desc : Nanowrito.com
 <!-- external: # -->
@@ -20,6 +20,7 @@ published : true
 portfolio : false
 comments : true
 featured : false
+type : blog
 ---
 
 
@@ -89,7 +90,7 @@ For the month of November, the project was fairly successful. I only put up link
 And where in the previous two years I barely finished using the entire month of November, this year I was also able to finish my novel in less than two weeks.
 
 <notextile>
-  <div class="article--link-block">
+  <div class="article__linkBlock">
     <a href="http://nanowrito.com" class="link-external">
       <div class="btn-inline">Nanowrito.com</div>
     </a>

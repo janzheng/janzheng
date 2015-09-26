@@ -6,13 +6,13 @@ summary: bringing the essence of the Nespresso Boutique to the web
 source: /app/posts/portfolio/nespresso-boutiques
 <!-- preview-img : /app/posts/portfolio/nespresso-boutiques/preview.png -->
 preview-img : /app/posts/portfolio/nespresso-boutiques/preview2.png
-preview-css : post-preview-std post-preview-img-light
+preview-css : post-preview-std post__imgPreview--light
 
 project-link : http://www.nespresso-us.com/coffee-boutiques/
 project-link-desc : Nespresso Boutiques
 
-header-img: /app/posts/portfolio/nespresso-boutiques/header.png
-header-styles: article--head-light article--head-light-bg
+headerImg: /app/posts/portfolio/nespresso-boutiques/header.png
+header-styles: article__head__img--light article__head__img--lightBg
 
 <!-- external: # -->
 <!-- youtube: # -->

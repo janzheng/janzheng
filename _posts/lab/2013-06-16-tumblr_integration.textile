@@ -19,6 +19,7 @@ published : true
 portfolio : false
 comments : true
 featured : false
+type: blog
 ---
 
 p(dropcap). I've recently started "funkability":http://funkability.tumblr.com, a Tumblr usability and interaction design feed I'll probably get around to updating twice a year. [Edit 1/7/2014: my predictions were spot on!]
@@ -91,7 +92,7 @@ This snippet assigns a JSON object of your entire blog to a new variable called
 
 {% highlight html linenos %} 
 tumblr_api_read 
-{% endhighlight %}. Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how we have a much richer set of metadata using this method.
+{% endhighlight %} Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how we have a much richer set of metadata using this method.
 
 With this variable, you can now easily extract and control your posts. For example, you can extract the link to your most recent post with 
 
@@ -118,8 +119,7 @@ Here's the example code. After you've inserted the previous code at the end of @
 
 
 
-As an example, here is a link dynamically pulled in from Tumblr to
-
+As an example, here is a link dynamically pulled in from Tumblr
 
 {% highlight html linenos %}
 

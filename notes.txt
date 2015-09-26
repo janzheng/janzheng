@@ -1,5 +1,107 @@
 
 
+todo
+------------
+- about
+	- move all the work into about page
+	- year dates overlap on smaller screens- hide them sooner
+- homepage
+	- make each line item smaller, less white space (lol)
+	- instead of circular icons, get rid of the bg and just color the icons themselves
+	- integrate tumblr into the main feed; add a "tumblr" indicator
+	- add a tumblr filter
+	- make the filters look more like filters / "select a filter" etc for better usability
+	- reserve homepage for thought leadership
+- tools
+	- start adding design tools and resources here
+	- filters for different kinds of tools
+	- try to add tumblr feed and filters
+- projects
+	- simplify the header; no silly skrollr effects
+	- make the background of the royalslider white instead of gray
+- experiments
+	- create a "demo" template page, and move all demos over to the demo page
+		- use codepen or similar to show code
+- move code over to a preiew system like codepen
+
+done
+------------
+- about
+	- document icon over the download / "grab resume button"
+	- revamp the about page / focus a bit more, update with recent work, emphasize community, front-end, transactional and prototypes
+- css & html update
+	- get rid of body--content id
+	- get rid of some of the nesting
+	- update better css breakdown
+	- fix all the scss colors // nvm this is a lot of work
+	- don't forget to fix .js w/ correct class names
+- sidebar
+	- move svg to css; take it out from html
+	- resume logo - change to document
+	- add color hover ease to icons if possible
+	- janzheng button getting in the way of blog button? too high somehow
+
+
+
+
+
+
+
+
+
+
+
+articles
+------------
+Portfolio Sites
+	- show thought and process
+	- good examples
+	- show thrown away concepts
+	- show playfulness and experimentation
+	- show mistakes and learnings
+	- more work, but people get a lot more from content
+Unnest that SCSS
+	- much easier to manage
+	- use a better css naming scheme
+		- translates easier to postCSS
+	- don't rely on using & to inherit class names
+		- impossible to CTRL+F anything
+		- (link that BEM article where he suggests this - no no)
+	- more readable code
+	- http://www.sitepoint.com/beware-selector-nesting-sass/
+	- clever but unreadable
+Path to Simplification
+	- so many sites with beautiful pictures
+	- I just want something simple. Simple to read, update, and set aside. Simple but timeless
+	- design for myself: I'm lazy at updating content, but given the right tools, I can write in small doses
+	- less customization, more content
+
+As Things Happen
+- bad user experience happens
+	- short on time, money, schedule tight
+	- late additions and changes
+	- client changes mind; requirements change
+	- despite good ux designers
+	- importance of flexible patterns, systems, and designs
+	- bad ux happens to every site and expeirence
+		- add iterations into the schedule, plan for failure, and add time to address these points of failure
+		- treat ux design iteration as a QA process
+
+- Menus and Corporations
+	- Menus are a story of the constant tug of war between the internal divisions of a corporation
+	- Internal divisions fight over space, over who wants to be first
+	- designers try, but down to the project owners
+	- designers can sell good usability to owners, but menu systems largel reflect the company culture
+
+- Tumblr as a Portfolio
+	- link to Cate's portfolio
+	- flexible, easy to produce content
+	- easy to edit design
+	- free!
+	- great for people who don't want to fuss too much with design
+
+
+
 
 
 Portfolio v2
@@ -9,7 +111,6 @@ BREAK THE GRID
 - use a swiss-like layout system, 36 columns
 - good example on smashing magazine swiss design column
 - severe minimalization - don't use a lot of borders and boxes
-
 
 
 
@@ -165,6 +266,15 @@ http://flatterline.com/
 http://fooforge.com/
 
 
+
+
+
+V3 Inspiration
+---------------------
+http://alistapart.com/about/style-guide
+http://99designs.com/designer-blog/2013/09/30/11-techniques-for-breaking-the-typographic-grid/
+http://www.gv.com/portfolio/
+http://www.journeygroup.com/
 
 
 

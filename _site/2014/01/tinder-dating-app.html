@@ -3,52 +3,31 @@
 
 
 
-<!-- 
-
-  container--shell
-    container
-    /
-  /
-
-
- 
- <head>
-  <meta charset="utf-8">
-  <meta name="description" content="Dickson Fong is a digital product designer for web, mobile, tablet, and television.">
- -->
-
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>The Tinder Game</title>
-  <meta name="description" content="Jan Zheng designs and prototypes experiences.">
+  <meta name="description" content="Jan designs and prototypes experiences.">
   <meta name="author" content="Jan Zheng">
   <meta name="keywords" content="user experience, ux, interaction design, digital, advertising, ui design, code, prototyping, resume ,portfolio">
   
   <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1" />
 
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100' rel='stylesheet' type='text/css'>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'> -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600, 700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="/app/css/royalslider.css" > 
   <link rel="stylesheet" href="/app/css/minimal-white/rs-minimal-white.css" >
 
-<!-- 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-   -->
   <script src="/app/js/jquery.min.js"></script>
 
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
 
   <!-- import gets all the styles from main.scss in the _scss folder -->
   <link rel="stylesheet" href="/app/css/import.css">
-<!-- 
-  <link rel="stylesheet" href="/assets/stylesheets/compiled/flexslider.css">
-  <link rel="stylesheet" href="/assets/stylesheets/compiled/slimbox2.css">
-   -->
+
 </head>
 
 <body id="skrollr-body">  
@@ -58,8 +37,6 @@
   </div>
 
 
-
-
   <!-- Navigation -->
   <!-- Main navigation
         - stays to the left side >480. Static at the top <480. Mobile nav kicks in with a scroll top.
@@ -67,37 +44,27 @@
   <div class="nav">
 
     <!-- JZ logo -->
-    <div class="nav--logo">
-      <a class="nav--logo-link" href="/">
-
-        <div class="nav--logo--content ">
-          <span class="bracket"></span><span class="j">jan </span><span class="z">zheng</span><span class="bracket"></span>
+    <div class="nav__logo">
+      <a class="nav__logo__link" href="/">
+        <div class="nav__logo__content ">
+          <span class="nav__j">jan </span><span class="nav__z">zheng</span>
         </div>
-        <!-- 
-        <div class="nav--logo--content show-nav-small ">
-          <span class="bracket">{</span><span class="j">j</span><span class="z">z</span><span class="bracket">}</span>
-        </div>
-        <div class="nav--logo--content show-nav-full">
-          <span class="bracket">{</span><span class="j">jan </span><span class="z">zheng</span><span class="bracket">}</span>
-        </div> -->
       </a>
-
     </div>
 
     <!-- Main navigation buttons -->
-    <div class="nav--menu">
-      <div class="nav--menu--content">
-
+    <div class="nav__menu">
+      <div class="nav__menu__content">
 
       <!-- generate links and mark nav as active -->
        
-              
+
         
+
         <a href="/">
-          <div class="nav--menu-item nav--menu--home " >
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="speech-bubble-11-icon" d="M50,64.991v293.682h64.501v88.336l131.978-88.336H462V64.991H50z M256,283.567H121.841v-30H256
-            V283.567z M391.841,223.567h-270v-30h270V223.567z M391.841,163.567h-270v-30h270V163.567z"></path> </svg>
-            <div class="label"><span>blog</span></div>
+          <div class="nav__item nav__blog " >
+            <span class="icon icon--blog"></span>
+            <div class="nav__label"><span>blog</span></div>
           </div>
         </a>
         
@@ -108,16 +75,14 @@
 
 
        
-              
+
         
 
         
         <a href="/about.html">
-          <div class="nav--menu-item nav--menu--about " >
-            
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="favorite-2-icon" d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"></path>
-            </svg> 
-            <div class="label"><span>about</span></div>
+          <div class="nav__item nav__about " >
+            <span class="icon icon--about"></span>
+            <div class="nav__label"><span>about</span></div>
           </div>
         </a>
         
@@ -126,19 +91,16 @@
 
 
        
-              
+
         
 
         
 
         
         <a href="/toolbox.html" >
-          <div class="nav--menu-item nav--menu--toolbox " >
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="wrench-16-icon" d="M320.312,364.616c-8.046-8.046-19.162-12.297-30.523-11.663c-18.815,1.051-37.98-5.607-52.354-19.981
-  c-19.2-19.2-24.636-46.944-16.321-70.99l43.654,43.654c17.032,1.003,43.364-25.329,42.362-42.359l-43.654-43.656
-  c24.045-8.315,51.787-2.878,70.988,16.321c14.375,14.374,21.033,33.539,19.982,52.354c-0.635,11.371,3.61,22.471,11.663,30.523
-  L462,414.71V138.265H225.087c-12.762,0-25.005-5.056-34.048-14.06L158.35,91.66H50v328.68h326.037L320.312,364.616z"></path> </svg>
-            <div class="label"><span>tools</span></div>
+          <div class="nav__item nav__tools " >
+            <span class="icon icon--tools"></span>
+            <div class="nav__label"><span>tools</span></div>
           </div>
         </a>
         
@@ -154,112 +116,89 @@
     
 
     <!-- Social icons / contact (email, twitter, linkedin) -->
-    <div class="nav--social-menu">
+    <div class="nav__social">
+      <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
+        <div class="nav__social__item nav__social__email ">
+          <span class="icon icon--small icon--email"></span>
+          <div class="nav__social__label"><span>hello@</span></div>
+        </div>
+      </a>
 
-      <div class="nav--social-menu--content">
-
-        <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
-          <div class="nav--social-menu-item nav--social-menu--email ">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="email-3-icon" d="M256.017,273.436L50.847,103.407h410.904L256.017,273.436z M255.983,328.898L50,158.244v250.349h412
-  V158.653L255.983,328.898z"></path> </svg>
-            <div class="label"><span>hello@</span></div>
-          </div>
-        </a>
-
-        <a href="https://twitter.com/janistanian">
-          <div class="nav--social-menu-item nav--social-menu--twitter">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="twitter-icon" d="M462,128.223c-15.158,6.724-31.449,11.269-48.547,13.31c17.449-10.461,30.854-27.025,37.164-46.764
-  c-16.333,9.687-34.422,16.721-53.676,20.511c-15.418-16.428-37.386-26.691-61.698-26.691c-54.56,0-94.668,50.916-82.337,103.787
-  c-70.25-3.524-132.534-37.177-174.223-88.314c-22.142,37.983-11.485,87.691,26.158,112.85c-13.854-0.438-26.891-4.241-38.285-10.574
-  c-0.917,39.162,27.146,75.781,67.795,83.949c-11.896,3.237-24.926,3.978-38.17,1.447c10.754,33.58,41.972,58.018,78.96,58.699
-  C139.604,378.282,94.846,390.721,50,385.436c37.406,23.982,81.837,37.977,129.571,37.977c156.932,0,245.595-132.551,240.251-251.435
-  C436.339,160.061,450.668,145.174,462,128.223z"></path> </svg>
-            <div class="label"><span>chirp</span></div>
-          </div>
-        </a>
+      <a href="https://twitter.com/janistanian">
+        <div class="nav__social__item nav__social__twitter">
+          <span class="icon icon--small icon--twitter"></span>
+          <div class="nav__social__label"><span>chirp</span></div>
+        </div>
+      </a>
 
 
-        <a href="http://www.linkedin.com/in/janzh">
-          <div class="nav--social-menu-item nav--social-menu--linkedin">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="linkedin-icon" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
-  C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
-  M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
-  c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
-  s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"></path> </svg>
-            <div class="label"><span>link</span></div>
-          </div>
-        </a>
+      <a href="http://www.linkedin.com/in/janzh">
+        <div class="nav__social__item nav__social__linkedin">
+          <span class="icon icon--small icon--linkedin"></span>
+          <div class="nav__social__label"><span>link me</span></div>
+        </div>
+      </a>
 
-        <a href="http://janzheng.com/resume.pdf">
-          <div class="nav--social-menu-item nav--social-menu--resume">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="download-2-icon" d="M333.816,231.323h66.258L255.998,375.645L111.926,231.323h66.256V50h155.635V231.323z
-  M375.236,346.828V412H136.764v-65.172h-50V462h338.473V346.828H375.236z"></path> </svg>
-            <div class="label"><span>resume</span></div>
-          </div>
-        </a>
-
-      </div>
+      <a target="_blank" href="http://janzheng.com/resume.pdf">
+        <div class="nav__social__item nav__social__resume">
+          <span class="icon icon--small icon--resume"></span>
+          <div class="nav__social__label"><span>résumé</span></div>
+        </div>
+      </a>
     </div>
 
   </div>
   <!-- End sidebar navigation -->
 
 
-  <!-- This thing appears fixed on mobile view to let users scroll up to the menu. This is so fixed menu takes less space -->
-  <a href="#top">
-    <div class="nav-mobile-container">
-      <div class="nav-mobile" data-0="display: none" data-100="display: block">
-        <div class="svg-container icon-uptop ">
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <polygon id="arrow-25-icon" points="142.332,104.886 197.48,50 402.5,256 197.48,462 142.332,407.113 292.727,256 "></polygon> </svg>
-        </div>
-      </div>
-    </div>
-  </a>
-
-
-
   <div class="clear"></div>
 
+  <div class="main__container container">
 
-
-  <div class="container--shell" id="body--content">
-    <div class="container">
-
-
-      <!-- Main section for content -->
-      <div class="main">
-        <div class="content">
-          <div class="container">
+    <!-- Main section for content -->
+    <!-- <div class="main"> -->
+    <div class="main__body">
+      <div class="container">
   <div class="article  post-std ">
 
 
     <!-- begin article head content (date, title, summary, tags) -->
 
-    <div class="article--head container "  >
+    <div 
+      class="article__head container "
+       >
 
-      <div class="article--head-container" >
-        <div class="article--head--intro" >
+      <div 
+        
+      >
+        <div class="article__head__intro" >
 
           
-          <div class="article--head--category article--head--category-rant" >
+          <div class="article__head__category article__head__category__rant" >
 
-            <div class="article--head--category--icon">
-
-              
+            <!-- <div class="article__head__category__icon"> -->
 
               
 
               
-                <svg class="svg--rant" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="quote-7-icon" d="M84.068,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C201.584,380.521,104.679,398.248,84.068,324.563z M231.584,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498C82.055,133.672,32.959,253.211,55.178,332.645C85.472,438.556,231.584,417.889,231.584,315.521z M314.484,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C432,380.521,335.095,398.248,314.484,324.563z M462,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498c-124.127,24.498-173.223,144.037-151.004,223.471C315.888,438.556,462,417.889,462,315.521z"></path> </svg>
+
+              
+                <svg class="svg--rant" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M84 324.6c-13.7-49.3 7.2-122 67-161.4-24.4 32-29 68.8-27.8 89 13.8 1 78.8 6 78.4 63.3 0 65-97 82.7-117.5 9zm147.6-9c0-44.7-32.7-81.7-75.5-88.5 4-34.3 29-67 67-81.3l-16.8-36.5c-124 24.5-173.2 144-151 223.4 30.3 106 176.4 85.3 176.4-17zm83 9c-14-49.3 7-122 66.8-161.4-24.4 32-29 68.8-27.8 89 13.8 1 78.8 6 78.4 63.3 0 65-97 82.7-117.5 9zm147.4-9c0-44.7-32.7-81.7-75.5-88.5 3.8-34.3 29-67 67-81.3l-17-36.5c-124 24.5-173 144-151 223.4C316 438.6 462 418 462 315.6z"/>
+</svg>
+<!-- 
+<svg class="svg--rant" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="quote-7-icon" d="M84.068,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C201.584,380.521,104.679,398.248,84.068,324.563z M231.584,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498C82.055,133.672,32.959,253.211,55.178,332.645C85.472,438.556,231.584,417.889,231.584,315.521z M314.484,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C432,380.521,335.095,398.248,314.484,324.563z M462,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498c-124.127,24.498-173.223,144.037-151.004,223.471C315.888,438.556,462,417.889,462,315.521z"></path> </svg> -->
               
 
               
-            </div>
+            <!-- </div> -->
           </div>
           
 
-          <div class="article--head--date-container" >
-            <div class="article--head--date">January 07, 2014</div>    
+          <div class="article__head__date__container" >
+            <div class="article__head__date">
+              January 07, 2014
+            </div>    
           </div> 
 
         </div>
@@ -267,22 +206,21 @@
         <!-- this is for category tags labels -->
         
 
-        <div class="article--head--title-container" >
-          <div class="article--head--title">The Tinder Game</div>
+        <div class="article__head__title__container" >
+          <div class="article__head__title">The Tinder Game</div>
         </div> 
 
-        <div class="article--head--subtitle-container" >
-          <div class="article--head--subtitle">Thoughts on the hookup app that's not entirely about hookups</div>
+        <div class="article__head__subtitle__container" >
+          <div class="article__head__subtitle">Thoughts on the hookup app that's not entirely about hookups</div>
         </div> 
 
 
-        <div class="article--head--tags-container" >
-          <div class="article--tags">
+        <div class="article__tags__container" >
+          <div class="article__tags">
             
                
                 
-                <ul class="article--tags--list">
-
+                <ul class="article__tags__list">
                   
                      
                       <li>psychology</li>
@@ -292,10 +230,9 @@
                       <li>game design</li>
                     
                   
-                  
+                </ul>
                 
                 
-              </ul>
             
           </div>
         </div> 
@@ -308,30 +245,39 @@
     </div>
     <!-- end article head content -->
 
+
+
+
+
     <!-- begin article content -->
 
-    <div class="article--body container">
+    <div class="article__body container">
 
       <!-- 
       <div class="article--summary-container">
         <div class="article--summary">Thoughts on the hookup app that's not entirely about hookups</div>
       </div>  -->
 
-
-
-      <div class="article--body--video-container">
-        <div class="article--body--video">
+      <!-- not yet used -->
+      <!-- 
+      <div class="article__body__video__container">
+        <div class="article__body__video">
           
               
         </div>
       </div>
+      -->
 
-      <div class="article--body--title-image-container">
+
+      <!-- not yet used -->
+      <!-- 
+      <div class="article--body--titleImage-container">
            
-      </div>
+      </div> 
+      -->
 
 
-      <div class="article--body--content">
+      <div class="article__body__content">
         <figure class="figure-wide">
 <p><img src="/app/posts/rants/tinder-dating-app/tinder-android.jpg" alt="" /><br />
 <figcaption>With Tinder, you will find love, happiness, and unicorns!</figcaption></p>
@@ -357,8 +303,8 @@ Potential love connections everywhere!&#8221;</h2>
 <p>Tinder turns online dating on its head by embracing a simple mechanic, and by deliberately removing features that are common among traditional dating apps. The app only presents users with one profile at a time, does not allow for users to browse or search profiles, and forces users to browse profiles through an incredibly easy judging mechanic. This combination mimics the Skinner Box environment, where the swipe is the response, and the match is the reward.</p>
 <p>In many ways, Tinder is a step backwards from more popular dating apps &#8211; it hides a lot of the information that would otherwise make someone look more appealing. But Tinder eschews long-winded descriptors and algorithmic match-making for a more game-like experience, by recognizing the basic fact that we are inherently &#8216;shallow&#8217;. It caters to our most primitive instinct of physical attraction to create an exciting experience. It&#8217;s like a blind version of online dating.</p>
 <h2>More than just a food pellet</h2>
-<blockquote class="blockquote-wide no-quotes">
-<p class="blockquote-wide no-quotes">That deeply personal, useful and instantly gratifying information makes Tinder an addictive experience, with each match fueling a kind of emotional high. Research has shown &#8216;likes&#8217; on Facebook and retweets and Twitter can release a dopamine surge that lead to social media addiction. It suggests we&#8217;re all but starving for likes. in our push to figure out which strangers, and how many, think we&#8217;re hot. &#8211; <a href="http://www.huffingtonpost.com/2013/04/09/tinder-dating-app_n_3044472.html">HuffPo</a></p>
+<blockquote class="blockquote--wide blockquote--noQuotes">
+<p class="blockquote--wide blockquote--noQuotes">That deeply personal, useful and instantly gratifying information makes Tinder an addictive experience, with each match fueling a kind of emotional high. Research has shown &#8216;likes&#8217; on Facebook and retweets and Twitter can release a dopamine surge that lead to social media addiction. It suggests we&#8217;re all but starving for likes. in our push to figure out which strangers, and how many, think we&#8217;re hot. &#8211; <a href="http://www.huffingtonpost.com/2013/04/09/tinder-dating-app_n_3044472.html">HuffPo</a></p>
 </blockquote>
 <p>We all know that being complimented makes us happy. Being complimented online is no different.</p>
 <p>Tinder uses the feeling of being complimented to drive its game mechanic. Swipe right, and you will know if someone thinks you&#8217;re hot. If it wasn&#8217;t a match, maybe they haven&#8217;t seen your profile yet. But the next one? Oh, s/he&#8217;s cute &#8211; maybe s/he&#8217;s seen your profile. Maybe there&#8217;s a match. Swipe right. Eventually, you&#8217;ll find a match, right?</p>
@@ -366,8 +312,8 @@ Potential love connections everywhere!&#8221;</h2>
 <p>Furthermore, any user that has not been matched cannot be messaged. In addition to social validation, matching also shields users from unsolicited messages and any potential for the feelings of rejection. While most dating apps might either result in unreturned or unsolicited messages, Tinder&#8217;s mechanic sidesteps both of these problems.</p>
 <p>In the end, Tinder&#8217;s success lies in its positiive, variable ratio reinforcement scheme, where a potential match seems right around the corner, and players won&#8217;t ever be disappotinted.</p>
 <h2>A Scourge Upon Society</h2>
-<blockquote class="blockquote-wide no-quotes">
-<p class="blockquote-wide no-quotes">Tinder grants permission for those in our culture to rate others based on physical appearance, and furthermore, it teaches us how to slash an &#8216;X&#8217; on those we find unattractive (too old, too short, too much facial hair)&#8230; it teaches us that dating, then, is a process of physical attraction and only physical attraction. &#8211; <a href="http://www.michigandaily.com/arts/03afraid-of-tinder20">Mich Daily</a> (or any media outlet ever)</p>
+<blockquote class="blockquote--wide blockquote--noQuotes">
+<p class="blockquote--wide blockquote--noQuotes">Tinder grants permission for those in our culture to rate others based on physical appearance, and furthermore, it teaches us how to slash an &#8216;X&#8217; on those we find unattractive (too old, too short, too much facial hair)&#8230; it teaches us that dating, then, is a process of physical attraction and only physical attraction. &#8211; <a href="http://www.michigandaily.com/arts/03afraid-of-tinder20">Mich Daily</a> (or any media outlet ever)</p>
 </blockquote>
 <p>Isn&#8217;t dating already a process of physical attraction? Tinder merely introduces those who find each other attractive. Like an initial flirt at a bar. What the players do with this information is up to them. Even &#8220;real&#8221; dating sites are not immune to this type of judgment. In <a href="http://jonmillward.com/blog/attraction-dating/cupid-on-trial-a-4-month-online-dating-experiment">Jon Milward&#8217;s attraction experiment</a>, the two most attractive women received almost six times more messages than the other three women combined. Apparently, attractive people receive more attention.</p>
 <p>But a more difficult question to answer is: How many people actually use Tinder seriously, as a hookup app? How many use it more than just a way to kill time? How many matches end up in longer, extend online conversations, and how many eventually become face-to-face encounters, and out of those encounters, how many actually end in a hookup? My suspicion: probably not many. I predict that most people use Tinder more as a tool for social validation, rather than for hookups. Tinder&#8217;s a feel-good app over a hookup app.</p>
@@ -413,7 +359,7 @@ Image from <a href="http://www.digitaltrends.com/social-media/everything-you-wan
 
         <div class="clear"></div>
 
-        <div class="article--comments">
+        <div class="article__comments">
 
            
             <div id="disqus_thread"></div>
@@ -447,21 +393,16 @@ Image from <a href="http://www.digitaltrends.com/social-media/everything-you-wan
 
   </div>
 </div>
-        </div>
-        <div class="legal">
-          <p id="fine-print">
-            &copy; 2014. Built on <a href="https://github.com/janzheng/janzheng.github.com">Github</a> &amp; <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
-          </p>
-          
-        </div> 
-      </div>
-
-
     </div>
-    <!-- End container -->
+
+    <div class="main__footer">
+        &copy; 2015. Built on <a href="https://github.com/janzheng/janzheng.github.com">Github</a> &amp; <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+    </div> 
+    <!-- </div> -->
 
   </div>
-    <!-- End container-shell -->
+  <!-- End container -->
+
 
 
 

@@ -6,7 +6,7 @@ summary: to let loose my content
 source: /app/posts/rants/break-the-grid
 <!-- preview-img : /app/posts/nanowrito/preview.png -->
 preview-css : post-preview-std post-preview-break-the-grid
-<!-- post-css : post-std -->
+<!-- postCSS : post-std -->
 
 <!-- external: # -->
 <!-- youtube: # -->
@@ -20,6 +20,7 @@ published : true
 portfolio : false
 comments : true
 featured : false
+type : blog
 
 preview-before : When I first created this site, I intended it to be a personal portfolio and a place to voice my thoughts. Turns out the latter was a bit harder than I thought. Writing is hard work, and I haven't been as prolific as I would have liked to be. 
 

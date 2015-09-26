@@ -19,6 +19,7 @@ published : true
 portfolio : false
 comments : true
 featured : false
+type : blog
 ---
 
 <notextile>
@@ -380,7 +381,7 @@ $(document).ready(function() {
 
 
 <notextile>
-  <div class="article--link-block">
+  <div class="article__linkBlock">
     <a href="{{page.source}}/demo/sticky-sidebar-demo.html" class="link-external"><div class="btn-inline">Demo</div></a>
     <a href="{{page.source}}/demo/sticky-sidebar.zip" class="link-external"><div class="btn-inline">Download .zip</div></a>
   </div>

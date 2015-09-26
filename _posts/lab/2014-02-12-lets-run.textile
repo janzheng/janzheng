@@ -5,7 +5,7 @@ summary: A mobile-friendly long-distance runners' map
 
 source: /app/posts/lab/lets-run
 preview-img : /app/posts/lab/lets-run/preview.png
-preview-css : post-preview-std post-preview-img-light
+preview-css : post-preview-std post__imgPreview--light
 
 project-link : http://janzheng.com/LetsRun
 project-link-desc : Let's Run!
@@ -21,6 +21,7 @@ published : true
 portfolio : false
 comments : true
 featured : false
+type : blog
 ---
 
 
@@ -39,6 +40,6 @@ And no, the irony of using a screen to escape screens has not escaped me.
 p(padding-bottom-0). Check out Let's Run below:
 
 <notextile>
-  <div class="article--link-block"><a href="http://janzheng.com/LetsRun" class="link-external"><div class="btn-inline">Let's Run!</div></a>
+  <div class="article__linkBlock"><a href="http://janzheng.com/LetsRun" class="link-external"><div class="btn-inline">Let's Run!</div></a>
   </div>
 </notextile>

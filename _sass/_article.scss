@@ -1,0 +1,467 @@
+
+// *********************************************************
+// ARTICLE (blog post / about / tools)
+// 
+// STRUCTURE
+// 
+//  article
+//  
+//    article--head
+//      article--head--date-container
+//        article--head--date
+//
+//      article--head--title-container
+//        article--head--title
+// 
+//    article--body
+//
+//      **these feel redundant, so hiding them
+//      article--summary-container
+//        tictle--summary
+//
+//      article--tags
+//        article--tags--list
+
+//      article--body--video-container
+//        article--body--video
+
+
+//     article--body--title-image-container
+//         article--body--title-image
+//           article--body--title-image--img
+
+//     article--body--content
+
+//     article--comments
+
+// 
+// *********************************************************
+
+
+// main alignment w/ copy
+%body-align {
+  @include span-four(24, 16, 16, 16);
+  @include media($break-nav-mobile) {padding: 0 $base;}
+  @include media($break-nav-thin-atleast) {@include shift(4);}
+}
+
+
+.article {
+
+  // each post constitutes a row, of the following # columns, stretching across the entire area
+  // margin-top: $base*2;
+  // padding-top: $base*2; 
+  @include span-four(24, 24, 24, 24);
+
+  a, a:active, a:hover, a:link {
+    text-decoration: underline; color: $dark-gray;
+  }
+}
+
+
+
+
+// 
+// ARTICLE HEAD
+// 
+
+.article__head {
+  margin-top: $base*2; 
+  overflow: hidden;
+
+  @include span-four(24, 23, 23, 23);
+  @include media($break-nav-mobile) {padding: 0 $base;}
+  // @include media($break-nav-thin-atleast) {@include shift(1);}
+}
+
+  .article__head__intro {
+      @include media($break-nav-thin-atleast) {@include shift(3);}
+  }
+
+
+  .article__head__category {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; 
+    margin-right: 10px;
+    float: left;
+    svg {width: 32px; height: 32px; fill: white; position: relative; top: 2px; left: 4px;}
+  }
+
+    .article__head__category__lab {
+      background-color: $teal;
+    }
+
+    .article__head__category__idea {
+      background-color: rgba($dark-orange, 0.7);
+    }
+
+    .article__head__category__rant {
+      background-color: rgba($green, 0.7);
+     }
+
+    .article__head__category__work  {
+      background-color: rgba($purple, 0.7);
+    }
+
+
+  .article__head__date__container {
+    padding-top: $base;
+    // @include media($break-nav-thin-atleast) {@include shift(1);}
+  }
+    .article__head__date {
+        @extend %serif; color: $light-gray; display: inline-block;
+      } 
+
+  // posts with header images
+  .article__head__img {
+    margin-top: $base*2;
+    padding-top: $base*3;
+    padding-bottom: $base*2;
+    background-size: cover;
+    background-repeat: none;
+
+    @include media($break-nav-wide) {float: left; }
+    @include media($break-nav-mobile) {width: 100%; margin-top: $base*8;}
+    // @include media($break-nav-thin) {@include shift(3); @include span-columns(20);}
+    // @include media($break-nav-wide-atleast) {@include shift(3); width: 100%; @include span-columns(19);}
+  }
+
+    // special cases
+    .article__head__img--light {
+      .article__head__title {
+        color: white;
+      }
+      .article__head__date, .article__head__subtitle {
+        color: white;
+      }
+    }
+
+    .article__head__img--lightBg {
+      .article__head__title, .article__head__subtitle {
+        background-color: rgba($black,0.5);
+      }
+    }
+
+  .article__head__title__container {
+    @include span-four(24, 18, 18, 18);
+    @include media($break-nav-thin-atleast) {@include shift(3);}
+  }
+    .article__head__title {
+      @extend %style-article-title;
+      margin-top: $base*2; display: inline-block;
+    } 
+
+  .article__head__subtitle__container {
+    @include span-four(24, 18, 18, 18);
+    @include media($break-nav-thin-atleast) {@include shift(4);}
+  }
+    .article__head__subtitle {
+      @extend %style-article-subtitle; display: inline-block;
+    }
+
+
+  .article__tags__container {
+    display: inline-block;
+    @include media($break-nav-thin-atleast) {@include shift(4);}
+    @extend %body-align; @extend %serif; color: $light-gray; 
+    padding-top: $base; padding-bottom: $base; 
+    @extend %style-antialiased;
+  }
+    .article__tags__list {  
+      li {
+        &:before {content: '#'}
+        &:not(:last-child):after{content: ',';}
+        list-style-type: none;
+        display: inline-block;
+      }
+    }
+
+  .article__head__projectLink__container {
+    @include span-four(24, 20, 20, 20);
+    @include media($break-nav-thin-atleast) {@include shift(4);}
+    @extend %body-align; @extend %serif; 
+
+  }
+
+
+  // end head
+
+
+  
+// start article body
+
+.article__body {
+
+  overflow: visible; //ghost overlay gets hidden if overflow is hidden
+  // overflow: hidden; // used for slider to show adjacent images - needs to be appled to slider container
+
+  @include span-four(24, 23, 23, 23);
+  // @include media($break-nav-thin-atleast) {@include shift(1);}
+
+  // background-color: rgba($silversky, 0.2); 
+  margin-top: $base*2;
+  padding-top: $base*2;
+  padding-bottom: $base*2;
+
+  // .article--summary-container {
+  //   @extend %body-align; 
+  //   .article--summary {}
+  // }
+
+}
+  // contains project and external links
+  .article__linkBlock {
+    padding-bottom: $base*2;
+  }
+
+
+  // *********************************************************
+  // ARTICLE / POST CONTENT STYLES
+  // *********************************************************
+
+  .article__body__content {
+    @extend %style-p-serif;
+    @extend %body-align; 
+
+    // main display header
+    h1 {
+      @extend %style-article-title;
+      @include media($break-nav-thin-atleast) {@include shift(-2);} 
+
+    }
+
+    .h1--display {
+      @extend %display;
+      @include media($break-nav-thin-atleast) {@include shift(0);} 
+    }
+
+    .h1--display--spaced { 
+      @extend .h1--display ;
+      margin-bottom: $base * 2;
+    }
+
+    // section headers
+    h2 { 
+      @extend %style-article-h2;
+      margin-top: $base*4; //h2 is a section separator
+      // @include media($break-nav-thin-atleast) {@include shift(-1);}
+      &.no-margin {margin-top: 0}
+    }
+
+    // output headers
+    h3 { 
+      @extend %style-article-h3;
+      margin-top: $base; //h2 is a section separator
+      // @include media($break-nav-thin-atleast) {@include shift(-1);}
+      &.no-margin {margin-top: 0}
+    }
+
+    h4 {
+      @extend %style-article-subtitle;
+      margin-bottom: $base*2;
+    }
+
+    h4.aboutQuote {
+      // font-style: italic;
+      position: relative;
+      left: 4px;
+    }
+
+    .display {
+      @extend %display;
+    }
+
+    p, ol, ul {
+      margin-bottom: golden-ratio($base,  1);
+      // padding-bottom: golden-ratio($base,  1);
+      // @extend %style-antialiased;
+      &.padding-bottom-0 {
+        padding-bottom: 0;
+      }
+    }
+
+    a, a:active, a:link {
+      color: $red;
+    }
+    a:hover {
+      color: rgba($red,0.7);
+    }
+    a:visited {
+      color: $darker-red;
+    }
+
+    em {
+      @extend  %style-em;
+    }
+
+    .center {
+      text-align: center;
+      @include media($break-nav-thin-atleast) {@include shift(0);} 
+    }
+
+    .dropcap:first-letter {
+      float: left; 
+      color: $red; 
+      font-size: $base*4.3; 
+      line-height: 60px;  
+      padding-top: 4px; padding-right: 8px; padding-left: 0px;
+    }
+
+    // callout boxes are used for info, summaries, like in the work sections
+    .callout {
+      @extend %style-blockquote;
+      background-color: $tan;
+      padding: $size-slightly-large; margin-top: $size-largish; margin-bottom: $base*2; margin-right: $base*2;
+      font-size: $base;
+
+      @include media($break-nav-mobile) {@include span-columns(18);}
+      @include media($break-nav-thin-atleast) {@include shift(-1); }
+      @include media($break-nav-wide-atleast) {@include shift(-3); @include span-columns(32);}
+
+      &.callout--large {
+        font-size: $size-slightly-large; line-height: $base*2;
+      }
+
+      .callout--row {
+        @include media($break-nav-mobile) {
+          font-size: $base;
+        }
+        .title {
+          padding-right: $base; 
+          color: rgba($black, 0.6);
+          @include media($break-nav-wide-atleast) {position: absolute;}
+        }
+        .content {
+          @include media($break-nav-wide-atleast) {position: relative; left: 100px;}
+        }
+
+      }
+    }
+
+    // royal slider options
+    .slider {
+      &.show-adjacent .rsOverflow {
+          overflow: visible; // shows adjacent slides
+      }
+      margin-bottom: $base*3;
+      .rsGCaption {
+        @extend %style-figcaption;
+      }
+    }
+
+    // figures are used for images
+    figure {
+      padding-bottom: $base*2; 
+      // padding-right: $base*2;
+      @include media($break-nav-wide) {float: left; }
+      @include media($break-nav-mobile) {width: 100%;}
+      @include media($break-nav-thin-atleast) {@include shift(-1); margin-right: $base;}
+      @include media($break-nav-wide-atleast) {@include shift(-3); }
+
+      &.figure-wide {
+        // margin: 0 auto;
+
+        .royalSlider {
+          overflow: hidden; // used for slider to show adjacent images
+        }
+
+        width: 100%;
+        @include media($break-nav-thin-atleast) {@include span-columns(32);}
+        img {display: block; margin: 0 auto;}
+        figcaption { text-align: center; }
+      } 
+
+      &.figure-rounded {
+        img {border-radius: $base * 4}
+      } 
+
+      &.figure-circle {
+        img {border-radius: $base * 14}
+        @include media($break-nav-mobile) {width: 100%;  img { width: 40%;} }
+      } 
+
+      img {
+        display: block;
+        max-width: 100%;
+        &+br {display:none;} // textile redcloth loves adding these randomly
+      }
+      br {display:none;} // textile redcloth loves adding these randomly
+
+      figcaption {
+        @extend %style-figcaption;
+      }
+
+      & p { padding: 0; margin-bottom: 0}
+      &+p, &+h2 {clear: both;}
+    }
+
+    .quotemarks {
+      &:before {
+        content: '“';
+      }
+      &:after {
+        content: '”';
+      }
+    }
+
+    strong.strong--loud {
+      // font-size: $size-p*1.3;
+      font-weight: 300; 
+      color: $dark-red;
+    }
+
+    strong.strong--orange {
+      color: $light-orange;
+      font-weight: 300;
+    }
+
+    // used mostly as pull-quote. .block uses full block
+    blockquote {
+      @extend %style-blockquote;
+      float: left; margin-top: $base; margin-bottom: $base*2; margin-right: $base*2;
+
+      @include media($break-nav-mobile) {@include span-columns(18);}
+      @include media($break-nav-thin-atleast) {@include shift(-2); @include span-columns(14);}
+
+      p {
+        margin-top: $base; margin-bottom: $base;
+        &:before {
+          content: '“';
+        }
+        &:after {
+          content: '”';
+        }
+      }
+
+      & p { padding: 0;}
+      // &+p, 
+      &+h2 {clear: both;}
+
+
+      &.blockquote--wide {
+        // margin: 0 auto;
+        @extend %style-blockquote--wide;
+      }
+
+      &.blockquote--noQuotes {
+        p:before, p:after {
+          content: '';
+        }
+      }
+    }
+
+    .prettyprinted {
+      @extend %style-antialiased; 
+    }
+
+  }
+
+
+  .article__comments {
+    margin-top: $base*3;
+  }
+// end article body
+
+
+

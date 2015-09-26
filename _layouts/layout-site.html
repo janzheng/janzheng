@@ -3,52 +3,31 @@
 {% assign navlist = site.navigation %}
 
 
-<!-- 
-
-  container--shell
-    container
-    /
-  /
-
-
- 
- <head>
-  <meta charset="utf-8">
-  <meta name="description" content="Dickson Fong is a digital product designer for web, mobile, tablet, and television.">
- -->
-
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{{ page.title }}</title>
-  <meta name="description" content="Jan Zheng designs and prototypes experiences.">
+  <meta name="description" content="Jan designs and prototypes experiences.">
   <meta name="author" content="Jan Zheng">
   <meta name="keywords" content="user experience, ux, interaction design, digital, advertising, ui design, code, prototyping, resume ,portfolio">
   
   <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1" />
 
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100' rel='stylesheet' type='text/css'>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'> -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600, 700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="/app/css/royalslider.css" > 
   <link rel="stylesheet" href="/app/css/minimal-white/rs-minimal-white.css" >
 
-<!-- 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-   -->
   <script src="/app/js/jquery.min.js"></script>
 
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
 
   <!-- import gets all the styles from main.scss in the _scss folder -->
   <link rel="stylesheet" href="/app/css/import.css">
-<!-- 
-  <link rel="stylesheet" href="/assets/stylesheets/compiled/flexslider.css">
-  <link rel="stylesheet" href="/assets/stylesheets/compiled/slimbox2.css">
-   -->
+
 </head>
 
 <body id="skrollr-body">  
@@ -58,8 +37,6 @@
   </div>
 
 
-
-
   <!-- Navigation -->
   <!-- Main navigation
         - stays to the left side >480. Static at the top <480. Mobile nav kicks in with a scroll top.
@@ -67,60 +44,47 @@
   <div class="nav">
 
     <!-- JZ logo -->
-    <div class="nav--logo">
-      <a class="nav--logo-link" href="/">
-
-        <div class="nav--logo--content ">
-          <span class="bracket"></span><span class="j">jan </span><span class="z">zheng</span><span class="bracket"></span>
+    <div class="nav__logo">
+      <a class="nav__logo__link" href="/">
+        <div class="nav__logo__content ">
+          <span class="nav__j">jan </span><span class="nav__z">zheng</span>
         </div>
-        <!-- 
-        <div class="nav--logo--content show-nav-small ">
-          <span class="bracket">{</span><span class="j">j</span><span class="z">z</span><span class="bracket">}</span>
-        </div>
-        <div class="nav--logo--content show-nav-full">
-          <span class="bracket">{</span><span class="j">jan </span><span class="z">zheng</span><span class="bracket">}</span>
-        </div> -->
       </a>
-
     </div>
 
     <!-- Main navigation buttons -->
-    <div class="nav--menu">
-      <div class="nav--menu--content">
-
+    <div class="nav__menu">
+      <div class="nav__menu__content">
 
       <!-- generate links and mark nav as active -->
-      {% for item in navlist %} 
-              
-        {% if item.text == 'blog' || item.text == 'rants'%}
+      {% for item in navlist %}
+      
+        {% if item.text == 'blog' || item.text == 'rants' %}
+
         <a href="{{item.url}}">
-          <div class="nav--menu-item nav--menu--home {% if url == item.url %}active{% endif %}" >
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="speech-bubble-11-icon" d="M50,64.991v293.682h64.501v88.336l131.978-88.336H462V64.991H50z M256,283.567H121.841v-30H256
-            V283.567z M391.841,223.567h-270v-30h270V223.567z M391.841,163.567h-270v-30h270V163.567z"></path> </svg>
-            <div class="label"><span>{{item.text}}</span></div>
+          <div class="nav__item nav__blog 
+                      {% if url == item.url' %} active{% endif %}
+                      {% if page.type == 'blog' %} active{% endif %}" >
+            <span  class="icon icon--blog"></span>
+            <div class="nav__label"><span>{{item.text}}</span></div>
           </div>
         </a>
         {% endif %}
 
         {% if item.text == 'about' %}
         <a href="{{item.url}}">
-          <div class="nav--menu-item nav--menu--about {% if url == item.url %}active{% endif %}" >
-            
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="favorite-2-icon" d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"></path>
-            </svg> 
-            <div class="label"><span>{{item.text}}</span></div>
+          <div class="nav__item nav__about {% if url == item.url %}active{% endif %}" >
+            <span class="icon icon--about"></span>
+            <div class="nav__label"><span>{{item.text}}</span></div>
           </div>
         </a>
         {% endif %}
 
         {% if item.text == 'tools' %}
         <a href="{{item.url}}" >
-          <div class="nav--menu-item nav--menu--toolbox {% if url == item.url %}active{% endif %}" >
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="wrench-16-icon" d="M320.312,364.616c-8.046-8.046-19.162-12.297-30.523-11.663c-18.815,1.051-37.98-5.607-52.354-19.981
-  c-19.2-19.2-24.636-46.944-16.321-70.99l43.654,43.654c17.032,1.003,43.364-25.329,42.362-42.359l-43.654-43.656
-  c24.045-8.315,51.787-2.878,70.988,16.321c14.375,14.374,21.033,33.539,19.982,52.354c-0.635,11.371,3.61,22.471,11.663,30.523
-  L462,414.71V138.265H225.087c-12.762,0-25.005-5.056-34.048-14.06L158.35,91.66H50v328.68h326.037L320.312,364.616z"></path> </svg>
-            <div class="label"><span>{{item.text}}</span></div>
+          <div class="nav__item nav__tools {% if url == item.url %}active{% endif %}" >
+            <span class="icon icon--tools"></span>
+            <div class="nav__label"><span>{{item.text}}</span></div>
           </div>
         </a>
         {% endif %}
@@ -136,97 +100,59 @@
     
 
     <!-- Social icons / contact (email, twitter, linkedin) -->
-    <div class="nav--social-menu">
+    <div class="nav__social">
+      <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
+        <div class="nav__social__item nav__social__email ">
+          <span class="icon icon--small icon--email"></span>
+          <div class="nav__social__label"><span>hello@</span></div>
+        </div>
+      </a>
 
-      <div class="nav--social-menu--content">
-
-        <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
-          <div class="nav--social-menu-item nav--social-menu--email ">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="email-3-icon" d="M256.017,273.436L50.847,103.407h410.904L256.017,273.436z M255.983,328.898L50,158.244v250.349h412
-  V158.653L255.983,328.898z"></path> </svg>
-            <div class="label"><span>hello@</span></div>
-          </div>
-        </a>
-
-        <a href="https://twitter.com/janistanian">
-          <div class="nav--social-menu-item nav--social-menu--twitter">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="twitter-icon" d="M462,128.223c-15.158,6.724-31.449,11.269-48.547,13.31c17.449-10.461,30.854-27.025,37.164-46.764
-  c-16.333,9.687-34.422,16.721-53.676,20.511c-15.418-16.428-37.386-26.691-61.698-26.691c-54.56,0-94.668,50.916-82.337,103.787
-  c-70.25-3.524-132.534-37.177-174.223-88.314c-22.142,37.983-11.485,87.691,26.158,112.85c-13.854-0.438-26.891-4.241-38.285-10.574
-  c-0.917,39.162,27.146,75.781,67.795,83.949c-11.896,3.237-24.926,3.978-38.17,1.447c10.754,33.58,41.972,58.018,78.96,58.699
-  C139.604,378.282,94.846,390.721,50,385.436c37.406,23.982,81.837,37.977,129.571,37.977c156.932,0,245.595-132.551,240.251-251.435
-  C436.339,160.061,450.668,145.174,462,128.223z"></path> </svg>
-            <div class="label"><span>chirp</span></div>
-          </div>
-        </a>
+      <a href="https://twitter.com/janistanian">
+        <div class="nav__social__item nav__social__twitter">
+          <span class="icon icon--small icon--twitter"></span>
+          <div class="nav__social__label"><span>chirp</span></div>
+        </div>
+      </a>
 
 
-        <a href="http://www.linkedin.com/in/janzh">
-          <div class="nav--social-menu-item nav--social-menu--linkedin">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="linkedin-icon" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
-  C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
-  M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
-  c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
-  s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"></path> </svg>
-            <div class="label"><span>link</span></div>
-          </div>
-        </a>
+      <a href="http://www.linkedin.com/in/janzh">
+        <div class="nav__social__item nav__social__linkedin">
+          <span class="icon icon--small icon--linkedin"></span>
+          <div class="nav__social__label"><span>link me</span></div>
+        </div>
+      </a>
 
-        <a href="http://janzheng.com/resume.pdf">
-          <div class="nav--social-menu-item nav--social-menu--resume">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="download-2-icon" d="M333.816,231.323h66.258L255.998,375.645L111.926,231.323h66.256V50h155.635V231.323z
-  M375.236,346.828V412H136.764v-65.172h-50V462h338.473V346.828H375.236z"></path> </svg>
-            <div class="label"><span>resume</span></div>
-          </div>
-        </a>
-
-      </div>
+      <a target="_blank" href="http://janzheng.com/resume.pdf">
+        <div class="nav__social__item nav__social__resume">
+          <span class="icon icon--small icon--resume"></span>
+          <div class="nav__social__label"><span>résumé</span></div>
+        </div>
+      </a>
     </div>
 
   </div>
   <!-- End sidebar navigation -->
 
 
-  <!-- This thing appears fixed on mobile view to let users scroll up to the menu. This is so fixed menu takes less space -->
-  <a href="#top">
-    <div class="nav-mobile-container">
-      <div class="nav-mobile" data-0="display: none" data-100="display: block">
-        <div class="svg-container icon-uptop ">
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <polygon id="arrow-25-icon" points="142.332,104.886 197.48,50 402.5,256 197.48,462 142.332,407.113 292.727,256 "></polygon> </svg>
-        </div>
-      </div>
-    </div>
-  </a>
-
-
-
   <div class="clear"></div>
 
+  <div class="main__container container">
 
-
-  <div class="container--shell" id="body--content">
-    <div class="container">
-
-
-      <!-- Main section for content -->
-      <div class="main">
-        <div class="content">
-          {{ content }}
-        </div>
-        <div class="legal">
-          <p id="fine-print">
-            &copy; 2014. Built on <a href="https://github.com/janzheng/janzheng.github.com">Github</a> &amp; <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
-          </p>
-          
-        </div> 
-      </div>
-
-
+    <!-- Main section for content -->
+    <!-- <div class="main"> -->
+    <div class="main__body">
+      {{ content }}
     </div>
-    <!-- End container -->
+
+    <div class="main__footer">
+        &copy; 2015. Built on <a href="https://github.com/janzheng/janzheng.github.com">Github</a> &amp; <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+    </div> 
+    <!-- </div> -->
 
   </div>
-    <!-- End container-shell -->
+  <!-- End container -->
+
 
 
 

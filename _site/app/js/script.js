@@ -10,6 +10,8 @@ $(document).ready(function() {
   // Initiate Skrollr for parallax scrolling
   // skrollr.init({forceHeight: false, easing: 'cubic'});
   // don't init on mobile
+
+  //  DO WE REALLY NEED THIS?!?
   if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
     skrollr.init({
         forceHeight: false,
@@ -18,7 +20,7 @@ $(document).ready(function() {
 }
 
   // set background images for posts with bg-images on homepage
-  $('.post--container').each(function(){
+  $('.post__container').each(function(){
     var bg = $(this).data("bg");
     if(typeof $(this).data("bg") != 'undefined') {
       $(this).css('background-image', 'url(' + bg + ')');
@@ -26,7 +28,7 @@ $(document).ready(function() {
   });
 
   // set header images for posts with bg-images on homepage
-  $('.article--head-img').each(function(){
+  $('.article__head__img').each(function(){
     var img = $(this).data("img");
     if(typeof $(this).data("img") != 'undefined') {
       $(this).css('background-image', 'url(' + img + ')');
@@ -58,7 +60,7 @@ $(document).ready(function() {
     blogPosts.filter();
   }
 
-  var titleDefault = $(".page--title").text();
+  var titleDefault = $(".page__title").text();
   // not MVC but whatever
 
   if(window.location.hash.length > 0) {
@@ -69,21 +71,21 @@ $(document).ready(function() {
 
   $(".filter-btn").bind('mouseup',function(e) {
     if ($(this).hasClass('filter-btn--active')) {
-      window.location.hash = ''
+      window.location.hash = '';
       filterReset();
-      $(".page--title").text(titleDefault);
+      $(".page__title").text(titleDefault);
       $(".filter-btn").removeClass('filter-btn--active');
     } else {
       window.location.hash = $(this).data('filter');
       $(".filter-btn").removeClass('filter-btn--active');
       filterBy($(this).data('filter'));
       $(this).addClass('filter-btn--active');
-      $(".page--title").text($(this).data('filter') + 's')
+      $(".page__title").text($(this).data('filter') + 's')
     }
   });
 
   // hover tooltip
-  var hoverdefault = $(".page--title").text();
+  var hoverdefault = $(".page__title").text();
 
 
 
@@ -91,7 +93,7 @@ $(document).ready(function() {
 
 
   // 
-  // FLUIDBOX
+  // FLUIDBOX lightbox
   // 
 
   $('figure a, a[rel="lightbox"]').fluidbox();
@@ -119,7 +121,7 @@ $(document).ready(function() {
   // 
   // Opens links (in posts and articles) in a new tab
   // 
-  $('.article a[href]:not(.fluidbox)').click(function(e) {
+  $('.article a[href]:not(.fluidbox):not(.sameTab)').click(function(e) {
     var url = $(this).attr('href');
 
     // only do this if not an anchor link
@@ -133,23 +135,14 @@ $(document).ready(function() {
   // generates random quotes for About page
   // 
   quotes = [
-              'stay a while, and listen', 
-              'stay a while, and listen', 
-              'stay a while, and listen', 
-              'stay a while, and listen', 
-              '"To listen is to lean in, softly, with a willingness to be changed by what we hear." - unknown',
-              'would you like a cup of tea?',
-              "let's go ride bikes!",
-              "let's make things happen!",
-              "there's more than one way to skin a website!",
-              'it is easy to complain, but difficult to improve!',
-              "#yolo. seize the day. make your life extraordinary!",
-              "let's design something fun & messy!",
-              "let's design something clean & elegant!",
+              'stay a while, and listen.', 
+              "let's make it happen.",
+              'to complain is easy, to act is hard.',
+              "seize the day. Be extraordinary.",
             ];
 
   rand = Math.floor(Math.random()*(quotes.length));
-  $('.about-quote').text(quotes[rand]);
+  $('.aboutQuote').text(quotes[rand]);
 
 
   // Math.floor((Math.random()*10));
@@ -211,6 +204,14 @@ $(document).ready(function() {
 
 refreshStickyElements();
 
+
+// only check resize for about page for speed
+if (window.location.pathname == "/about.html") {
+  $( window ).resize(function() {
+    refreshStickyElements();
+  });
+}
+
 function refreshStickyElements() {
   
   // lazy, inefficient (but quick) way of refreshing waypoints
@@ -218,14 +219,14 @@ function refreshStickyElements() {
 
   $( ".sticky-item" ).each(function( index ) {
 
-    var obj_height = parseInt($(this).children(".sticky-content").outerHeight());
+    // outerheight doesn't include margin by default, setting to true fixes this
+    var obj_height = parseInt($(this).children(".sticky-content").outerHeight(true));
     var obj_parent_top = parseInt($(this).parent().offset().top);
     var obj_parent_padbottom = parseInt($(this).parent().css('padding-bottom'));
-    var obj_parent_height = parseInt($(this).parent().outerHeight());
-    var bottom = parseInt(obj_height + obj_parent_padbottom - obj_parent_height);
+    var obj_parent_height = parseInt($(this).parent().outerHeight()); // don't include margin for container, so year doesn't hit bottom edge
+    var bottom = parseInt(obj_height - obj_parent_height);
 
     var topWaypoint = new $(this).waypoint(function(dir) {
-
       if (dir == 'down') {
         $(this).children(".sticky-content").css({"position": "fixed","top": "0"})
       }
@@ -237,6 +238,7 @@ function refreshStickyElements() {
 
     // Going UP
     var bottomWaypoint = new $(this).waypoint(function(dir) {
+      // console.log('HIT: bottom=' + bottom + ' obj_height: ' + obj_height + ' obj_parent_height: ' + obj_parent_height + ' obj_parent_padbottom ' + obj_parent_padbottom);
       if (dir == 'up') {
         $(this).children(".sticky-content").css({"position": "fixed","top": "0"})
       }

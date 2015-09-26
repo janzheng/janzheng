@@ -5,7 +5,7 @@ summary: responsive website for an upscale personal training and gym startup
 
 source: /app/posts/portfolio/upower
 <!-- preview-img : /app/posts/portfolio/nespresso-boutiques/preview.png -->
-preview-css : post-preview-std post-preview-short
+preview-css : post-preview-std post__imgPreview--short
 
 project-link : http://www.upowerfitness.com/
 project-link-desc : upower fitness

@@ -11,7 +11,7 @@ category : Web
 tags : [Web Design, Blogging, Github]
 published : false
 portfolio : no
-
+type : blog
 ---
 
 Using Github pages is incredibly flexible and incredibly free. 

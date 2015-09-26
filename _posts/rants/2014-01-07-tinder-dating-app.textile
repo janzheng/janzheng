@@ -5,7 +5,7 @@ summary: Thoughts on the hookup app that's not entirely about hookups
 
 source: /app/posts/rants/tinder-dating-app
 preview-img : /app/posts/rants/tinder-dating-app/preview3.png
-preview-css : post-preview-std post-preview-img-mixed
+preview-css : post-preview-std post__imgPreview--mixed
 
 <!-- external: # -->
 <!-- youtube: # -->
@@ -19,6 +19,7 @@ published : true
 portfolio : false
 comments : true
 featured : false
+type : blog
 ---
 
 
@@ -69,7 +70,7 @@ In many ways, Tinder is a step backwards from more popular dating apps - it hide
 
 h2. More than just a food pellet
 
-bq(blockquote-wide no-quotes). That deeply personal, useful and instantly gratifying information makes Tinder an addictive experience, with each match fueling a kind of emotional high. Research has shown 'likes' on Facebook and retweets and Twitter can release a dopamine surge that lead to social media addiction. It suggests we're all but starving for likes. in our push to figure out which strangers, and how many, think we're hot. - "HuffPo":http://www.huffingtonpost.com/2013/04/09/tinder-dating-app_n_3044472.html
+bq(blockquote--wide blockquote--noQuotes). That deeply personal, useful and instantly gratifying information makes Tinder an addictive experience, with each match fueling a kind of emotional high. Research has shown 'likes' on Facebook and retweets and Twitter can release a dopamine surge that lead to social media addiction. It suggests we're all but starving for likes. in our push to figure out which strangers, and how many, think we're hot. - "HuffPo":http://www.huffingtonpost.com/2013/04/09/tinder-dating-app_n_3044472.html
 
 We all know that being complimented makes us happy. Being complimented online is no different.
 
@@ -84,7 +85,7 @@ In the end, Tinder's success lies in its positiive, variable ratio reinforcement
 
 h2. A Scourge Upon Society
 
-bq(blockquote-wide no-quotes). Tinder grants permission for those in our culture to rate others based on physical appearance, and furthermore, it teaches us how to slash an 'X' on those we find unattractive (too old, too short, too much facial hair)... it teaches us that dating, then, is a process of physical attraction and only physical attraction. - "Mich Daily":http://www.michigandaily.com/arts/03afraid-of-tinder20 (or any media outlet ever)
+bq(blockquote--wide blockquote--noQuotes). Tinder grants permission for those in our culture to rate others based on physical appearance, and furthermore, it teaches us how to slash an 'X' on those we find unattractive (too old, too short, too much facial hair)... it teaches us that dating, then, is a process of physical attraction and only physical attraction. - "Mich Daily":http://www.michigandaily.com/arts/03afraid-of-tinder20 (or any media outlet ever)
 
 Isn't dating already a process of physical attraction? Tinder merely introduces those who find each other attractive. Like an initial flirt at a bar. What the players do with this information is up to them. Even "real" dating sites are not immune to this type of judgment. In "Jon Milward's attraction experiment":http://jonmillward.com/blog/attraction-dating/cupid-on-trial-a-4-month-online-dating-experiment, the two most attractive women received almost six times more messages than the other three women combined. Apparently, attractive people receive more attention.
 

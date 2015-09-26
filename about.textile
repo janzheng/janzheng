@@ -1,5 +1,5 @@
 ---
-layout: layout-about
+layout: layout-shell
 title: Hello there
 source: /app/posts/about
 <!-- preview-img : /app/posts/nanowrito/preview.png -->
@@ -11,33 +11,95 @@ source: /app/posts/about
 <div class="about--intro">
 <figure class="figure-circle">
 !{{page.source}}/teal_tie_sm.png!
-<!-- <figcaption class="about-quote">day at the office</figcaption> -->
+<!-- <figcaption class="aboutQuote">day at the office</figcaption> -->
 </figure>
 
-h1(h1-display). Hello,
+h1(h1--display). Hello,
 
-h4(about-quote). stay a while, and listen
+h4(aboutQuote). stay a while, and listen
 </div>
 
-p(dropcap). My name is Jan (yawn!), and I design experiences. Some of them include _responsive websites_, _mobile apps_, and _data-heavy interfaces_. I also dabble in _experimental games_ and _installation art_. 
-
-I apply a user-centered design approach to my projects, and I aim to strike a balance between satisfying user needs and business goals. My projects involve lots of iterative designing, prototyping, and testing, and I strive for my work to be immersive, elegant, and memorable. 
-
-These times are exceptional. We've elevated technology from our desks, laps, palms, and wrists into into our minds. We're looking at how technology may lend us more time, freedom, peace of mind, and help us be healthier and more creative. 
-
-These times are exceptional, and I'm ready to get my hands dirty.
+p(dropcap). My name is Jan <span class='style--light'>"yawn"</span>, and I strive to create immersive, memorable, and delightful experiences. My user-centered design approach aims to strike a balance between user needs and business goals. My projects usually focus on iterative design, prototypes, and testing, including _online communities_ and _responsive websites_. I strive for my work to be immersive, elegant, and memorable. 
 
 <notextile>
-  <a href="/resume.pdf" class="link-external"><div class="btn-inline btn-inline--large">Grab my Resume</div></a>
+  <a href="/resume.pdf" class="link-external"><div class="btn-icon btn-inline btn-inline--large"><span class="icon icon--btn icon--resume"></span>Grab my résumé</div></a>
 </notextile>
 
 
-bq(blockquote-wide no-quotes). I am a *(strong-loud)Sr. User Experience Architect* at "Nurun":http://www.nurun.com, and I live in  *(strong-loud)Atlanta*.
-I am currently *(strong-loud)not available* for freelance work, but feel free to say hello anyway at "hello@janzheng.com":mailto:hello@janzheng.com, or on "twitter":https://twitter.com/janistanian or "linkedin":http://www.linkedin.com/in/janzh.
+bq(blockquote--wide blockquote--noQuotes). I am currently at "Ubiquiti Networks":http://www.ubnt.com, in *(strong--loud)Atlanta*.
+I am *(strong--loud)not available* for work. "Say hello anyway":mailto:hello@janzheng.com, "tweet":https://twitter.com/janistanian, or "link me in":http://www.linkedin.com/in/janzh.
 
 h2. Work & Experience 
 
-I've had the luxury of working with some amazing agencies and clients, some of which include *(strong-orange)Coca-Cola*, *(strong-orange)L'Oreal / Garnier*, *(strong-orange)Verizon Wireless*, *(strong-orange)Home Depot*, *(strong-orange)Nespresso*, and *(strong-orange)Cartoon Network*. I have also seen the client-side at *(strong-orange)Microsoft*, *(strong-orange)Lockheed Martin*, *(strong-orange)Abritron*, and a few smaller firms. Portfolio items will be available soon. 
+I've had the luxury of working with some amazing companies and clients, including *(strong--loud)Coca-Cola*, *(strong--loud)L'Oreal / Garnier*, *(strong--loud)Verizon Wireless*, *(strong--loud)Home Depot*, *(strong--loud)Nespresso*, and *(strong--loud)Cartoon Network*. I have also seen the client-side at *(strong--loud)Microsoft*, *(strong--loud)Lockheed Martin*, *(strong--loud)Arbitron*, and a few smaller firms and startups. 
+
+
+
+<notextile>
+
+  <!-- .list is necessary for the list.js sorter -->
+  <!-- 
+  <ul class="list">
+  {% for post in site.posts %}
+  {% if post.published == true %} 
+  {% if post.category == 'work' %}
+
+    <li class="post {% if post.featured %} post--featured {% endif %}">
+
+      <a href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %} ">
+        <div class="post__container {{ post.preview-css }} {% if post.preview-img == nil %} post__imgPreview--noImg {% else %} post__imgPreview" data-bg="{{ post.preview-img }} {% endif %}">
+
+          <div class="post__info">
+
+            <div class="post__date__container">
+              <div class="post__date">{{ post.date | date: "%d %B %Y" }}</div>
+            </div>
+
+            <div class="post__title__container">
+              <div class="post__title">{{ post.title }}</div>
+            </div>
+
+            {% if post.summary %}
+            <div class="post__summary__container">
+              <div class="post__summary">{{ post.summary }}</div>
+            </div>
+            {% endif %}
+
+            {% if post.tags != null %}
+              {% assign tags_list = post.tags %} 
+                {% if tags_list.size > 0 %}
+                  <div class="post__tags__container">
+                    <ul class="post__tags">
+
+                      {% if tags_list.first[0] == null %}
+                        {% for tag in tags_list %} 
+                          <li>{{ tag }}</li>
+                        {% endfor %}
+                      {% else %}
+                        {% for tag in tags_list %} 
+                          <li>{{ tag[0] }}</li>
+                        {% endfor %}
+                      {% endif %}
+                    </ul>
+                  </div>
+                {% endif %}
+                {% assign tags_list = nil %}
+            {% endif %}
+
+            <div class="clear"></div>
+          </div>
+        </div>
+      </a>
+    </li>
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+
+  </ul> -->
+</notextile>
+
+
+
 
 
 
@@ -45,77 +107,103 @@ I've had the luxury of working with some amazing agencies and clients, some of w
 <notextile>
 
 
-<div class="timeline-container">
 <div class="timeline">
 
-<ul class="timeline--list">
+  <ul class="timeline__list">
 
-  <div class="sticky-item" >
-    <div class="timeline--year sticky-content">2014</div>
-  </div>
-
-  <li class="expandablejs timeline--list-item">
-    <div class="timeline--preview">
-      <div class="timeline--list-item--headline timeline--list-item--headline__small">
-        <span class="timeline--list-item--headline--client timeline--list-item--headline--client">LaunchKitten</span>
-        <div>
-          <span class="timeline--list-item--headline--title">Startup</span>
-          <span class="timeline--list-item--headline--location">Atlanta, GA</span>
-          <span class="timeline--list-item--headline--date">2014</span>
-        </div>
-        <div class="timeline--list-item--headline--short">Product design, front-end design and development on a startup project jumpstarted by <a href="http://www.switchyards.com">Switchyards</a>.</div>
-      </div>
-    </div>
-  </li>
-
-  <li class="expandablejs timeline--list-item">
-    <div class="expandablejs--preview timeline--preview">
-      {% include expandablejs--expander.html %} 
-      <div class="timeline--list-item--headline">
-        <span class="timeline--list-item--headline--client">Nurun</span>
-        <div>
-          <span class="timeline--list-item--headline--title">Sr. User Experience Architect</span>
-          <span class="timeline--list-item--headline--location">Atlanta, GA</span>
-          <span class="timeline--list-item--headline--date">2012 - current</span>
-        </div>
-        <div class="timeline--list-item--headline--short">User experience, business analysis, product design, and prototyping </div>
-      </div>
+    <div class="sticky-item" >
+      <div class="timeline__year sticky-content">2015</div>
     </div>
 
-    <div class="expandablejs--full">
-      <div class="timeline--full">
+      <li class="timeline__item expandablejs">
+        <div class="timeline__preview expandablejs--preview">
+          {% include expandablejs--expander.html %} 
+          <div class="timeline__headline">
+            <span class="timeline__client">Ubiquiti Networks</span>
+            <div>
+              <span class="timeline__title">User Experience Architect</span>
+              <span class="timeline__location">Atlanta, GA</span>
+              <span class="timeline__date">2015 &mdash; current</span>
+            </div>
+            <div class="timeline__desc">
+              I define requirements, build site maps and create wireframes, as well as design, prototype, and develop the front-end user interfaces.
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline__full expandablejs--full">
+          <p>At Ubiquiti Networks I am currently designing and developing new customer-facing support and community tools that will launch at the end of 2015.</p>
+        </div>
+      </li>
+
+  </ul>
+
+
+  <ul class="timeline__list">
+
+    <div class="sticky-item" >
+      <div class="timeline__year sticky-content">2014</div>
+    </div>
+
+    <li class="timeline__item expandablejs">
+      <div class="timeline__preview">
+        <div class="timeline__headline">
+          <span class="timeline__client">LaunchKitten</span>
+          <div>
+            <span class="timeline__title">Startup</span>
+            <span class="timeline__location">Atlanta, GA</span>
+            <span class="timeline__date">2014</span>
+          </div>
+          <div class="timeline__desc">Product design, front-end design and development on a startup project jumpstarted by <a href="http://www.switchyards.com">Switchyards</a>.</div>
+        </div>
+      </div>
+    </li>
+
+    <li class="timeline__item expandablejs">
+      <div class="timeline__preview expandablejs--preview">
+        {% include expandablejs--expander.html %} 
+        <div class="timeline__headline">
+          <span class="timeline__client">Nurun</span>
+          <div>
+            <span class="timeline__title">Sr. User Experience Architect</span>
+            <span class="timeline__location">Atlanta, GA</span>
+            <span class="timeline__date">2012 - 2014</span>
+          </div>
+          <div class="timeline__desc">User experience, business analysis, product design, and prototyping </div>
+        </div>
+      </div>
+
+      <div class="timeline__full expandablejs--full">
         <p>At Nurun, I bring client projects to life. I help define project scope, functionality, research, and other needs, and help determine the feasibility and schedule. I translate requirements into a tangible experience with flow diagrams, site maps, wireframes, and prototypes, and work with our designers and the technical team to realize the product.</p>
 
         <p>Lately I've focused on creating a creative and wireframe presentation tool, and a more flexible, agile proess flow that emphasizes earlier research, user experience, and integration among departments.</p>
 
-        <p>Clients include Nespresso, Assurant, Manheim, The Home Depot, General Electric Energy, and Disney.</p>
+        <p>Clients include Nespresso, Assurant, Manheim, The Home Depot, GE Energy, and Disney.</p>
       </div>
+    </li>
+  </ul>
+
+  <ul class="timeline__list">
+
+    <div class="sticky-item" >
+      <div class="timeline__year sticky-content">2013</div>
     </div>
-  </li>
-</ul>
 
-<ul class="timeline--list">
-
-  <div class="sticky-item" >
-    <div class="timeline--year sticky-content">2013</div>
-  </div>
-
-  <li class="expandablejs timeline--list-item">
-    <div class="expandablejs--preview timeline--preview">
-      {% include expandablejs--expander.html %} 
-      <div class="timeline--list-item--headline">
-        <span class="timeline--list-item--headline--client">Freelance Projects</span>
-        <div>
-          <span class="timeline--list-item--headline--title">Freelance</span>
-          <span class="timeline--list-item--headline--location">Atlanta, GA</span>
-          <span class="timeline--list-item--headline--date">2013</span>
+    <li class="timeline__item expandablejs">
+      <div class="timeline__preview expandablejs--preview ">
+        {% include expandablejs--expander.html %} 
+        <div class="timeline__headline">
+          <span class="timeline__client">Freelance Projects</span>
+          <div>
+            <span class="timeline__title">Freelance</span>
+            <span class="timeline__location">Atlanta, GA</span>
+            <span class="timeline__date">2013</span>
+          </div>
+          <div class="timeline__desc">Sometimes I take on smaller side projects.</div>
         </div>
-        <div class="timeline--list-item--headline--short">Sometimes I take on smaller side projects.</div>
       </div>
-    </div>
 
-    <div class="expandablejs--full">
-      <div class="timeline--full">
+      <div class="timeline__full expandablejs--full">
         <ul>
           <li>Designed and built <a href="http://www.upowerfitness.com">upower fitness</a>, a local a boutique gym and personal fitness concept.</li>
           <li><a href="http://gigagen.com/">GigaGen</a> IA, UX, and wirefames for a DNA sequencing tool through <a href="https://www.5amsolutions.com/">5am Solutions</a></li>
@@ -126,34 +214,32 @@ I've had the luxury of working with some amazing agencies and clients, some of w
         </ul>
 
       </div>
+    </li>
+  </ul>
+
+
+
+  <ul class="timeline__list">
+
+    <div class="sticky-item" >
+      <div class="timeline__year sticky-content">2010</div>
     </div>
-  </li>
-</ul>
 
-
-
-<ul class="timeline--list">
-
-  <div class="sticky-item" >
-    <div class="timeline--year sticky-content">2012</div>
-  </div>
-
-  <li class="expandablejs timeline--list-item">
-    <div class="expandablejs--preview timeline--preview">
-      {% include expandablejs--expander.html %} 
-      <div class="timeline--list-item--headline">
-        <span class="timeline--list-item--headline--client">Moxie</span>
-        <div>
-          <span class="timeline--list-item--headline--title">User Experience Architect</span>
-          <span class="timeline--list-item--headline--location">Atlanta, GA</span>
-          <span class="timeline--list-item--headline--date">2010 - 2012</span>
+    <li class="timeline__item expandablejs">
+      <div class="timeline__preview expandablejs--preview">
+        {% include expandablejs--expander.html %} 
+        <div class="timeline__headline">
+          <span class="timeline__client">Moxie</span>
+          <div>
+            <span class="timeline__title">User Experience Architect</span>
+            <span class="timeline__location">Atlanta, GA</span>
+            <span class="timeline__date">2010 - 2012</span>
+          </div>
+          <div class="timeline__desc">UX Architect for projects including Cartoon Network Mobile and Verizon Wireless</div>
         </div>
-        <div class="timeline--list-item--headline--short">UX Architect for projects including Cartoon Network Mobile and Verizon Wireless</div>
       </div>
-    </div>
 
-    <div class="expandablejs--full">
-      <div class="timeline--full">
+      <div class="timeline__full expandablejs--full">
         <p>As a user experience architect, I translated client and business requirements into user flows, site maps, wireframes and technical specs. I developed wireframes, concepts, and functional prototypes, and worked with developers and designers to establish website and app functionality, user flow, information architecture.</p>
         
         <ul>
@@ -173,76 +259,74 @@ I've had the luxury of working with some amazing agencies and clients, some of w
         </ul>
 
       </div>
+    </li>
+
+  </ul>
+
+
+
+  <ul class="timeline__list">
+
+    <div class="sticky-item" >
+      <div class="timeline__year sticky-content">2009</div>
     </div>
-  </li>
 
-</ul>
-
-
-
-<ul class="timeline--list">
-
-  <div class="sticky-item" >
-    <div class="timeline--year sticky-content">2010</div>
-  </div>
-
-  <li class="expandablejs timeline--list-item">
-    <div class="timeline--preview">
-      <div class="timeline--list-item--headline timeline--list-item--headline__small">
-        <span class="timeline--list-item--headline--client">Carnegie Mellon University</span>
-        <div>
-          <span class="timeline--list-item--headline--title">Masters in HCI</span>
-          <span class="timeline--list-item--headline--location">Pittsburgh, PA</span>
-          <span class="timeline--list-item--headline--date">2009 - 2010</span>
+    <li class="timeline__item expandablejs">
+      <div class="timeline__preview">
+        <div class="timeline__headline">
+          <span class="timeline__client">Carnegie Mellon University</span>
+          <div>
+            <span class="timeline__title">Masters in HCI</span>
+            <span class="timeline__location">Pittsburgh, PA</span>
+            <span class="timeline__date">2009 - 2010</span>
+          </div>
+          <div class="timeline__desc">Earned a Masters in Human-Computer Interaction degree, which comprised of a combination of classes in interaction design methodologies, user research, interactive prototyping, and design. Relevant Coursework include HCI Project Course, HCI Methods Course, Service Design, Interaction Design, Software Architecture and User Interfaces, and Game Design (at the Entertainment Technology Center)</div>
         </div>
-        <div class="timeline--list-item--headline--short">Earned a Masters in Human-Computer Interaction degree, which comprised of a combination of classes in interaction design methodologies, user research, interactive prototyping, and design. Relevant Coursework include HCI Project Course, HCI Methods Course, Service Design, Interaction Design, Software Architecture and User Interfaces, and Game Design (at the Entertainment Technology Center)</div>
       </div>
+    </li>
+
+  </ul>
+
+
+  <ul class="timeline__list">
+
+    <div class="sticky-item" >
+      <div class="timeline__year sticky-content">2004</div>
     </div>
-  </li>
 
-</ul>
-
-
-<ul class="timeline--list">
-
-  <div class="sticky-item" >
-    <div class="timeline--year sticky-content">2009</div>
-  </div>
-
-  <li class="expandablejs timeline--list-item">
-    <div class="timeline--preview">
-      <div class="timeline--list-item--headline timeline--list-item--headline__small">
-        <span class="timeline--list-item--headline--client">University of Maryland, Baltimore County</span>
-        <div>
-          <span class="timeline--list-item--headline--title">Computer Science &amp; Psychology</span>
-          <span class="timeline--list-item--headline--date">2004 - 2009</span>
+    <li class="timeline__item expandablejs">
+      <div class="timeline__preview">
+        <div class="timeline__headline">
+          <span class="timeline__client">University of Maryland, Baltimore County</span>
+          <div>
+            <span class="timeline__title">Computer Science &amp; Psychology</span>
+            <span class="timeline__location">Catonsville, MD</span>
+            <span class="timeline__date">2004 - 2009</span>
+          </div>
+          <div class="timeline--list-item--headline--short">I received an bachelor's in computer science, with a minor in psychology, where I both took classes and worked with both the cognitive and behavioral labs. My degree focused on game development, and game design including graphics, artificial intelligence, and algorithms. Our capstone project was an experimental strategy game built on Gamebryo.
         </div>
-        <div class="timeline--list-item--headline--short">At UMBC, I received a bachelor's degree in computer science, with a minor in psychology. I took the Game Development track, which focused on game design and game-related development, including graphics, artificial intelligence, and algorithms.
       </div>
-    </div>
-  </li>
+    </li>
 
-</ul>
+  </ul>
 
+<!-- end timeline -->
 </div>
-</div>
-
 
 
 </notextile>
 
 
 
-h2. More About Me
+h2. tl;dr
 
-I've always had a fascination with learning, doing, and experimenting, and my experience spans across research, design, and writing code.
-I have experience with Adobe Creative Suite, Microsoft Office, Axure, and other design and productivity tools. I prefer to prototype websites in HTML, JavaScript and SASS/CSS, and other experiences in Flash, but I'm familiar with anything from C to Processing.
+I've always had a fascination with learning, doing, and experimenting, and my experiences span across psychology, user research, design, and coding. I frequently use Sketch, Axure, Adobe, and other design and productivity tools. After quickly defining an approach, I prefer to create tangible examples by prototyping them in HTML, JavaScript and SASS/CSS. I am also familiar with anything from C to Processing.
 
-My eclectic background mirrors my eclectic upbringing. Though born in China, I moved to Stockholm at a young age. I am fluent in English and Swedish, and conversational in Mandarin.
+My eclectic background mirrors my eclectic upbringing. Though born in China, I moved to Stockholm at a young age. I am fluent in English and Swedish, and am conversational in Mandarin.
 
-I hold dual citizenship with both the United States and Sweden, which means that I could easily work in and out of the U.S. and countries European Union without a work visa.
+I hold dual citizenship with both the United States and Sweden, which means that I could easily work in and out of the U.S. and countries within the European Union.
 
-On my off days, I enjoy swing dancing, rock climbing, playing indie games, and cooking / stuffing my face with tasty foods.
+On my off days, I enjoy swing dancing, circusing, rock climbing, playing indie games, and cooking / stuffing my face with tasty foods.
 
 h2. About This Site
 
@@ -250,9 +334,9 @@ For the second round of redesign, I wanted to reduce the number of artifacts on 
 
 This site is now my umpteen+1th portfolio design, but every iteration has seen improvement. The site is built on the static site generator "Jekyll":https://github.com/mojombo/jekyll and is hosted completely for free on "Github Pages":https://github.com/janzheng/janzheng.github.com.
 
-The front-end styling was written in SASS, with the help of "bourbon.io" and "Neat":neat.bourbon.io, with a glass of "Belle Meade":http://www.greenbrierdistillery.com/nelsons_green_brier_products.html on the side.
+The front-end styling was written in SASS, with the help of "bourbon.io":http://bourbon.io/ and "Neat":neat.bourbon.io.
 
-Icons are sourced from "IconMonstr":http://iconmonstr.com/ and Zurb from <a href="http://www.flaticon.com" title="Flaticon">Flaticon.com</a>
+Icons are sourced from "IconMonstr":http://iconmonstr.com/ and <a href="http://www.flaticon.com" title="Flaticon">Flaticon.com</a>
 
 Cheers, 
 Jan

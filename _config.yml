@@ -10,7 +10,7 @@ author :
 
 markdown: rdiscount
 highlighter: pygments
-permalink: /:year/:month/:title.html
+permalink: /blog/:year/:month/:title.html
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "notes.txt"]
 
 

@@ -1,0 +1,177 @@
+
+
+// *********************************************************
+// WIREFRAME STYLES + DESIGN
+// - this file specifies variables and design components
+// - don't directly affect IDs and classes from this file
+// *********************************************************
+
+
+
+// *********************************************************
+// DESIGN MIXINS
+// *********************************************************
+
+
+// @mixin placeholder-style($selector){
+//     $selector::-webkit-input-placeholder { /* WebKit browsers */
+//         @content;
+//     }
+//     $selector::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+//         @content;
+//     }
+//     $selector::-moz-placeholder { /* Mozilla Firefox 19+ */
+//         @content;
+//     }
+//     $selector::-ms-input-placeholder { /* Internet Explorer 10+ */
+//         @content;
+//     }
+// }
+
+
+
+// *********************************************************
+// VARIABLES
+// *********************************************************
+
+// basic sizes
+$base: 1rem;
+$margin: $base;
+
+
+// color
+
+// BASE COLORS
+$white: #ffffff;
+
+$red: #972020;
+   $light-red: #a00a00;
+   $dark-red: #c71414;
+   $darker-red: #A63737;
+   // $darker-red: #660200;
+   $matte-red:#C5252B;
+
+$black: #000000;
+   $light-gray: #cccccc;
+   $deep-gray: #0f0f0f;
+   $dark-gray: #333333;
+   $medium-gray: #555555;
+   $gray: #777777;
+   $silver: #f2f2f2;
+   $slate: #3e3e3e;
+   $silvercloud: #f9f9f9;
+   $silverline: #f8f8f8;
+   $silversky: #fcfcfc;
+   $dklight-gray: rgba($gray, 0.7); 
+
+$tan: #FCF9EF;
+
+$green: #209742;
+  $dark-green: #014A16;
+  $light-green: #97b537;
+
+$pink: #f44a56;
+
+$orange: #FF530D;
+  $light-orange: #F59417;
+  $dark-orange: #F6491F;
+  $darker-orange: #C23A19;
+  $orange-red: #E82C0C;
+
+
+$blue: #275d84;
+  $dark-blue: #0B42A7;
+  $light-blue: #44B9EB;
+  $light-light-blue: rgba($light-blue, 0.3);
+  $matte-blue: #244358;
+  $sky-blue: #68C6EE;
+  $deep-blue: #123456;
+
+$purple: #5c2849;
+
+// $orange: $color2-5;
+$teal: #01A7A4;
+
+
+// 
+// DEFINED VARIABLE COLORS
+// 
+
+
+// 
+// social colors
+//
+$color--base: $dklight-gray;
+$color--email: $dark-red;
+$twitter: #55acee;
+$linkedin: #007bb6;
+
+$color-bg: #222;
+$color-highlight: #ccc;
+$highlight: #D95F43;
+$highlight-text: #FFFBDB;
+
+
+$q2: #F7F97F;
+$q5: #891004;
+
+
+/*
+kuler: Lifedots 1
+*/
+$life1: #2A3140;
+$life2: #F2D399;
+$life3: #F29863;
+$life4: #D95F43;
+$life5: #A63737;
+
+
+/*
+kuler: Norse
+*/
+$norse1: #9C001A;
+$norse2: #FFFBDB;
+$norse3: #ACBFCC;
+$norse4: #77838C;
+$norse5: #41484C;
+
+$color1: $norse1;
+$color2: $norse2;
+$color3: $norse3;
+$color4: $norse4;
+$color5: $norse5;
+$color6: $life1;
+$color7: $life2;
+$color8: $life3;
+$color9: $life4;
+$color0: $life5;
+
+$color-text: #ddd;
+$color-text-para: #333;
+$color-text-link: #eee;
+$color-text-link-hover: #aaa;
+$color-btn: #333;
+$color-btn-dark: #333;
+$color-btn-hvr: #777;
+
+$color-menu: rgb(40, 40, 40);
+$color-menu-hover: $gray;
+$color-menu-selected: $silver;
+
+
+.white {color: black; background-color: rgba(255,255,255, 0.95);}
+.orange{background-color: rgba(255,195,40,0.7);}
+.green {color: white; background-color: rgba(109, 152, 71, 0.84)}
+.dark {color: $light-gray; background-color: rgba(70,70,70, 0.8);}
+.lighter {color: $dark-gray; background-color: rgba(255,255,255, 0.88);}
+.light {color: $dark-gray; background-color: rgba(250,250,250, 0.86);}
+.soft {color: $dark-gray; background-color: rgba(255,255,255, 0.56);}
+.cloud{background-color: rgba(100,100,100,0.06);}
+.glass{background-color: rgba(80,80,80,0.46);}
+.glassdark{background-color: rgba(20,20,20,0.59);}
+.txtsilver{color: $silver;}
+
+
+
+
+

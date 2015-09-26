@@ -5,7 +5,7 @@ summary: Get your Kinect to listen
 
 source: /app/posts/idea/xbox-voice-guide
 preview-img : /app/posts/idea/xbox-voice-guide/preview.png
-preview-css : post-preview-std post-preview-img-light
+preview-css : post-preview-std post__imgPreview--light
 
 project-link : /app/posts/idea/xbox-voice-guide/XboxVoiceGuide.pdf
 project-link-desc : Download the Voice Guide
@@ -22,6 +22,7 @@ published : true
 portfolio : false
 comments : true
 featured : false
+type : blog
 ---
 
 <figure>
@@ -41,7 +42,7 @@ As a design exercise for myself, and as a goal to make more cool things geared t
 So here's a quick cheat sheet so you know at least how to get your One to listen. Or why it's not. Though it doesn't work all the time, you just have to keep yelling at it until it does.
 
 <notextile>
-  <div class="article--link-block"><a href="{{page.source}}/XboxVoiceGuide.pdf" class="link-external"><div class="btn-inline">Download the Voice Guide</div></a>
+  <div class="article__linkBlock"><a href="{{page.source}}/XboxVoiceGuide.pdf" class="link-external"><div class="btn-inline">Download the Voice Guide</div></a>
   </div>
 </notextile>
 

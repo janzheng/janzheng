@@ -4,7 +4,7 @@ title: Verizon Lost Elf Storybook
 summary: holiday storybook app for Verizon's 2011 Holiday Campaign  
 
 source: /app/posts/portfolio/vzw-lost-elf
-preview-css : post-preview-std post-preview-short
+preview-css : post-preview-std post__imgPreview--short
 
 <!-- project-link : http://www.nespresso-us.com/coffee-boutiques/ -->
 <!-- project-link-desc : Nespresso Boutiques -->

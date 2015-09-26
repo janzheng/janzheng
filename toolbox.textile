@@ -1,12 +1,12 @@
 ---
-layout: layout-about
+layout: layout-shell
 title: Toolbox
 source: /app/posts/toolbox
 <!-- preview-img : /app/posts/nanowrito/preview.png -->
 
 ---
 
-h1(center h1-display-spaced). All the tools
+h1(center h1--display--spaced). All the tools
 
 p(dropcap). Every designer has his or her own tools, methods, and their own ways of doing things. After spending a few years in the industry, I feel each designer should take a bit of time to expand on their favorite tools, processes, and methods, as a way to both share and to record ideas. 
 

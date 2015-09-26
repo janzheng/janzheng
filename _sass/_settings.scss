@@ -1,0 +1,342 @@
+
+
+// *********************************************************
+// SETTINGS & DEFAULTS
+// *********************************************************
+
+    
+
+// *********************************************************
+// UNIVERSAL
+// - Sizing
+// - Fonts
+// - Colors
+// *********************************************************
+
+// Fonts
+%sans-serif {font-family: "Open Sans", "Helvetica Neue", arial, sans-serif;}
+// %body-font {@extend %sans-serif; font-weight: 300;}
+%helvetica {font-family: "Helvetica Neue", "Open Sans", sans-serif;}
+// %serif {font-family: 'Libre Baskerville', Georgia, serif;}
+
+// @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,300,200,100,600,700,800,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,);
+
+%serif {font-family: Georgia, serif;}
+
+%josefin {font-family: 'Josefin Sans', serif;}
+// %display {font-family: Raleway, "Open Sans", "Helvetica Neue", 'Helvetica', arial, sans-serif !important; }
+// %display {font-family: 'Josefin Sans', "Open Sans", "Helvetica Neue", 'Helvetica', arial, sans-serif !important; }
+%display { @extend %serif; }
+
+
+// highlight font color
+@include selection-color (rgba($light-blue, 0.8), white, none);
+
+
+
+// FONT SIZES
+// 1rem = 16px
+// $base * 0.875 = 14px
+// you can also use the golden ratio calculator
+
+$base: 1rem;
+
+$size-smallish: $base*0.83;
+$size-small: $base*0.98;
+$size-smaller: $base*0.875;
+$size-smallerish: $base*0.86;
+
+$size-slightly-large: $base*1.1;
+$size-slightly-larger: $base*1.3;
+
+$size-largish: $base*1.6;
+$size-large: $base*2;
+$size-larger: $base*2.5;
+$size-largest: $base*3.2;
+
+$size-menu: $size-small;             // 14px
+   $size-menu-social: $size-smaller;      // 12px / social icons
+
+$size-footer: $size-small;  // 14px
+
+
+// Preview Post sizes
+$size-preview-date: $size-small; 
+$size-preview-title: $size-larger;
+$size-preview-tag: $size-smaller;
+
+$size-form: $base*0.9; $height-form: $base*2;
+
+$size-article-title: $size-larger;
+  $size-article-title-mobile: $base*1.8;
+  $height-article-title: golden-ratio($size-article-title, 1);
+  $height-article-title-mobile: golden-ratio($size-article-title-mobile, 1);
+
+$size-article-subtitle: $base*1;
+  $size-article-subtitle-mobile: $base*1;
+  $height-article-subtitle: golden-ratio($size-article-subtitle, 1);
+
+
+$size-h2: golden-ratio($base, 1);
+  $height-h2: golden-ratio($size-h2, 1);
+
+$size-h3: golden-ratio($base*0.8, 1);
+  $height-h3: golden-ratio($size-h3, 1);
+
+$size-p: $base*1; 
+  $height-p: golden-ratio($size-p*1.13, 1);
+
+$s1: golden-ratio(14px,  1);
+
+
+
+
+// 
+// Universal Styles and Settings
+// 
+
+
+a, a:active, a:hover, a:link {
+  text-decoration: none; color: $dark-gray;
+}
+
+  //used for external sources or downloads, especially project pages / lab pages
+  a.link-external {  
+    .btn-inline {
+      @extend %style-btn-inline;
+
+      &--large {
+        padding: 14px 20px;
+        &:hover {
+          padding: 14px 40px;
+        }
+      }
+    }
+  }
+
+.style--highlight {
+  color: $red;
+}
+
+.style--light {
+  color: $light-gray;
+}
+
+
+
+// all svg icons
+.svg-container {
+  // height: 18px; width: 18px;
+  text-align: center; 
+
+  &.icon-uptop {
+     svg {fill: $red; width: 23px; height: 23px; @include transform(rotate(-90deg));}
+     position: relative; top: 4px; 
+  }
+}
+
+%border-blue{
+  border-left: 2px solid rgba($light-blue, 0.7);
+}
+
+// slight font adjustment, makes serif font thinner. Looks better on OS X, but less legible
+// use with care
+%style-antialiased {
+  -webkit-font-smoothing: antialiased;
+}
+
+//for serif paragraph text
+%style-p-serif {
+  @extend %serif; 
+  font-size: $size-p;
+  line-height: $height-p;
+  // @extend %style-antialiased;
+} 
+
+
+%style-post-info-title{
+  display: inline-block; padding: 0 $base; margin-top: $base/2; 
+  @extend %sans-serif; font-weight: 300; 
+  // @extend %display; font-weight: 200;
+  // font-weight: 700; 
+  font-size: $size-preview-title; 
+  // background-color: rgba(red, 0.6);
+  // @extend %ease; 
+}
+
+%style-article-title {
+  @extend %sans-serif; font-weight: 300;
+  // @extend %display; font-weight: 200;
+  font-size: $size-article-title;
+  line-height: $height-article-title;
+  
+  @include media($break-nav-mobile) {
+    font-size: $size-article-title-mobile;
+    line-height: $height-article-title-mobile;
+  }
+}
+
+  %style-article-subtitle {
+    @extend %sans-serif; 
+    // font-style: italic;
+    font-size: $size-article-subtitle;
+    line-height: $height-article-subtitle;
+    // font-weight: 300;
+    // color: $gray;
+    @extend %serif;
+    // @extend %style-antialiased; 
+    
+    @include media($break-nav-mobile) {font-size: $size-article-subtitle-mobile;}
+  }
+
+  // general emphasis style, regardless of sans or serif
+  %style-em {
+    // font-style: italic; 
+    font-style: normal;
+    color: $darker-red;
+  }
+
+  // titles within a post
+  %style-article-h2 {
+    @extend %serif; 
+    font-size: $size-h2;
+    line-height: $height-h2;
+    color: $slate; 
+    margin-top: $size-h2;
+    margin-bottom: $size-h2;
+  } 
+
+    // Subtitles within a post
+    %style-article-h3 {
+      @extend %serif; 
+      font-size: $size-h3;
+      line-height: $height-h3;
+      color: $slate; 
+      margin-top: $size-h3/2;
+      margin-bottom: $size-h3/2;
+    } 
+
+
+  %style-figcaption {
+    color: $gray;
+    @extend %serif;
+    font-style: italic;   
+    font-size: $size-small;
+    padding-top: $base;
+  }
+
+  %style-blockquote {
+    font-size: $size-slightly-larger;
+    @extend %serif; 
+    padding-left: $base;
+    @extend %border-blue;
+  }
+  %style-blockquote--wide {
+    font-size: $base;
+    // background-color: $silversky;
+    @extend %border-blue;
+    @extend %serif; 
+
+    width: 100%; padding: $size-slightly-large; margin-top: $size-largish; margin-bottom: $base*2;
+    // @include media($break-nav-thin-atleast) {@include shift(-3); @include span-columns(32);}
+    padding-top: 0; padding-bottom: 0;
+  }
+
+  %style-btn-inline { 
+    display: inline-block; 
+    color: white;
+    background-color: $gray;
+      padding: 0 $base 0 $base;
+    margin: $base 0;
+    font-size: $size-smaller; 
+    border-radius: 3px;
+    line-height: $base*2;
+    @extend %sans-serif;
+    font-weight: 300;
+    @extend %ease;
+    &:hover {
+      @extend %ease;
+      background-color: $red;
+      padding: 0 $base*3/2 0 $base*3/2;
+      &:after {
+        content: ' → ';
+        @extend %ease;
+      }  
+    }
+    &.btn-icon {
+      padding-left: $base/4;
+    }
+  }
+
+  //small modifications to prettyprinted to make more legible
+  %style-prettyprinted {
+    @extend %style-antialiased;
+  }
+
+
+
+// sticky divs that follow the screen / browser window but stay within contextual container
+
+.sticky-item {
+  position: relative;
+
+  .sticky-content {
+    position: absolute;
+    top: 0;
+  }
+}
+
+
+// controls expandable sections
+.expandablejs--preview {
+  position: relative;
+
+  .expandablejs-expander {
+    position: absolute; top: 10px; left: -3px;
+    @include media($break-nav-thin-atleast) {
+      left: -10px;
+    }
+
+  }
+}
+
+
+//something I used for coloring, but decided to keep at the top
+.color-palette {
+  position: absolute;
+  z-index: 100000;
+  width: 100%;
+  height: auto;
+
+  #c1{background-color: $color1;}
+  #c2{background-color: $color2;}
+  #c3{background-color: $color3;}
+  #c4{background-color: $color4;}
+  #c5{background-color: $color5;}
+  #a1{background-color: $color6;}
+  #a2{background-color: $color7;}
+  #a3{background-color: $color8;}
+  #a4{background-color: $color9;}
+  #a5{background-color: $color0;}
+
+  div {
+    height: 5px;
+    width: 10%;
+    float: left;
+    z-index: 2000;
+    // background-color: $color1;
+  }
+
+  &.color-top {
+    top: 0px;
+    left: 0px;
+  }
+  &.color-bot {
+    // bottom: 0px;
+  }
+}
+
+
+
+

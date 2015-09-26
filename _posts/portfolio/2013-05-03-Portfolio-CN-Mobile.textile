@@ -5,7 +5,7 @@ summary: fun and quirky mobile site for browsing shows and watching videos
 
 source: /app/posts/portfolio/cartoon-network-mobile
 <!-- preview-img : /app/posts/portfolio/cartoon-network-mobile/preview.png -->
-preview-css : post-preview-std post-preview-short
+preview-css : post-preview-std post__imgPreview--short
 
 project-link : http://www.nespresso-us.com/coffee-boutiques/
 project-link-desc : Nespresso Boutiques
