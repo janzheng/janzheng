@@ -9,12 +9,14 @@
   height: 40px; 
   margin-right: 10px;
   display: inline-block;
-  
+
+  .filter-btn--title { opacity: 0.4 }
+   
   @extend %ease;
-  &[data-filter="lab"] {background-color: rgba($teal, 0.2); &:hover,&.filter-btn--active {background-color: rgba($teal, 0.9);}}
-  &[data-filter="rant"] {background-color: rgba($green, 0.2); &:hover,&.filter-btn--active {background-color: rgba($green, 0.9);}}
-  &[data-filter="idea"] {background-color: rgba($dark-orange, 0.2); &:hover,&.filter-btn--active {background-color: rgba($dark-orange, 0.9);}}
-  &[data-filter="work"] {background-color: rgba($purple, 0.2); &:hover,&.filter-btn--active {background-color: rgba($purple, 0.9);}}
+  &[data-filter="lab"] {background-color: rgba($teal, 0.2); &:hover,&.filter-btn--active {background-color: rgba($teal, 0.9); .filter-btn--title { opacity: 1 } }}
+  &[data-filter="rant"] {background-color: rgba($green, 0.2); &:hover,&.filter-btn--active {background-color: rgba($green, 0.9); .filter-btn--title { opacity: 1 } }}
+  &[data-filter="idea"] {background-color: rgba($dark-orange, 0.2); &:hover,&.filter-btn--active {background-color: rgba($dark-orange, 0.9); .filter-btn--title { opacity: 1 } }}
+  &[data-filter="work"] {background-color: rgba($purple, 0.2); &:hover,&.filter-btn--active {background-color: rgba($purple, 0.9); .filter-btn--title { opacity: 1 } }}
 
 }
 
