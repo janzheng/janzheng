@@ -45,21 +45,23 @@ featured : false
     <!-- <span class="sort" data-sort="sortCategory">Sort by Category</span> -->
     <!-- <span class="sort" data-sort="sortDate">Sort by Date</span> -->
 
-    <div class="page__title">
-      blog posts
-    </div>
+    <div class="page__header">
+      <div class="page__title">
+        Words &amp; Thoughts
+      </div>
 
-    <div class="postList__filter">
-      <div class="filter-btn" class="btn-inline" data-filter="lab"><span class="icon icon--filter icon--lab"></span></div>
-      <div class="filter-btn" class="btn-inline" data-filter="rant"><span class="icon icon--filter icon--rant"></span></div>
-      <div class="filter-btn" class="btn-inline" data-filter="idea"><span class="icon icon--filter icon--idea"></div>
-      <div class="filter-btn" class="btn-inline" data-filter="work"><span class="icon icon--filter icon--work"></div>
-    </div>
+      <div class="postList__filter">
+        <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="lab"><span class="icon icon--filter icon--lab"></span><span class="filter-btn--title">lab</span></div>
+        <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="rant"><span class="icon icon--filter icon--rant"></span><span class="filter-btn--title">rants</span></div>
+        <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="idea"><span class="icon icon--filter icon--idea"></span><span class="filter-btn--title">ideas</span></div>
+        <!-- <div class="filter-btn" class="btn-inline" data-filter="work"><span class="icon icon--filter icon--work"></div> -->
+      </div>
+    </span>
       
     <!-- .list is necessary for the list.js sorter -->
     <ul class="list">
     {% for post in site.posts %}
-    {% if post.published == true %} 
+    {% if post.published == true and post.category != 'work' %} 
 
       <li class="post {% if post.featured %} post--featured {% endif %}">
 
@@ -74,19 +76,19 @@ featured : false
                 <div class="post__category__icon">
 
                   {% if post.category == 'lab' %}
-                    <span class="icon icon--filter icon--lab">
+                    <span class="icon icon--filter icon--lab"></span>
                   {% endif %}
 
                   {% if post.category == 'idea' %}
-                    <span class="icon icon--filter icon--idea">
+                    <span class="icon icon--filter icon--idea"></span>
                   {% endif %}
 
                   {% if post.category == 'rant' %}
-                    <span class="icon icon--filter icon--rant">
+                    <span class="icon icon--filter icon--rant"></span>
                   {% endif %}
 
                   {% if post.category == 'work' %}
-                    <span class="icon icon--filter icon--work">
+                    <span class="icon icon--filter icon--work"></span>
                   {% endif %}
 
                 </div>

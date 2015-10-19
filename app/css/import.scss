@@ -81,19 +81,6 @@ body, html {
     }
   }
 
-  .page__title {
-    font-size: $size-slightly-larger; font-style: italic;
-    @extend %serif; color: rgba(black, 0.4);
-    height: 20px;
-
-    // @include span-four(18, 24, 24, 24);
-    @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base;}
-    @include media($break-nav-thin-atleast) {
-    @include shift(3); padding-left: $base*2; 
-    margin-top: $base; margin-bottom: $base;
-    }
-  }
-
 
 
 // *********************************************************

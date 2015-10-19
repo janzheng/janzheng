@@ -29,12 +29,27 @@
 // *********************************************************
 
   .postList__container {
-    padding-top: 30px; //distance from the top of the page
+    @include span-four(24, 18, 18, 18);
+    padding-top: $base; //distance from the top of the page
     @extend %ease;
   }
+
+    .page__header {
+      margin-bottom: $base*2;
+    }
+
+      .page__title {
+        font-size: $size-slightly-larger;
+        @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base;}
+        @include media($break-nav-thin-atleast) {
+          @include shift(3); padding-left: $base*2; 
+          margin-top: $base*1.25; margin-bottom: $base;
+        }
+      }
+
     .postList__filter {
       // @include span-four(18, 24, 24, 24);
-      @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base; margin-bottom: $base*2;}
+      @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base*2; margin-bottom: $base*2;}
       @include media($break-nav-thin-atleast) {@include shift(3); padding-left: $base*2; margin-top: $base; margin-bottom: $base*2;}
     } 
 
@@ -47,6 +62,7 @@
 
     .post__container {
       @extend %style-antialiased;
+      border-top: 1px dashed $light-gray;
 
       // height: 200px;  //every post is a standard 200 
       @include media($break-nav-mobile) {padding: 4px $base; }
@@ -59,6 +75,7 @@
     
 	    //preview title hover effects
 	    &:hover {
+        border-top: 1px dashed $deep-gray;
 	      // background-color: rgba($silversky,0.4); @extend %ease-slow; 
 	      .post__title, .post__summary  {
 	        @extend %ease; 
@@ -74,55 +91,55 @@
           .post__info {
             // display: block; //the container covers the entire block, but each element should be inline-block for highlighting
             // position: relative; bottom: -100px;
-            margin-top: $base*4; margin-bottom: $base*4; 
+            margin: $base*2 0;
             padding-left: $base*2;
 
           } //end post--info
 
 	          .post__category__icon {
 	            border-radius: 50%;
-	            width: 40px;
-	            height: 40px; 
-	            margin-right: 10px;
+	            width: $icon-filter-size;
+	            height: $icon-filter-size;
+
+              @include media($break-nav-wide-atleast) {
+  	             margin-right: 10px;
+               }
 	            float: left;
-	            // svg {width: 32px; height: 32px; fill: white; position: relative; top: 2px; left: 4px;}
 	          }
 
 		          .post__category--lab .post__category__icon {
 	              background-color: rgba($teal, 0.7);
-	              svg {width: 32px; height: 32px; fill: white; position: relative; top: 2px; left: 4px;}
 		          }
 
 	            .post__category--idea .post__category__icon {
 	              background-color: rgba($dark-orange, 0.7);
-	              svg {width: 32px; height: 32px; fill: white; position: relative; top: 4px; left: 4px;}
 	            }
 
 	            .post__category--rant .post__category__icon {
 	              background-color: rgba($green, 0.7);
-	              svg {width: 32px; height: 32px; fill: white; position: relative; top: 4px; left: 4px;}
 	            }
 
 	            .post__category--work .post__category__icon {
 	                background-color: rgba($purple, 0.7);
-	                svg {width: 32px; height: 32px; fill: white; position: relative; top: 2px; left: 4px;}
 	            }
 
 	          .post__category__label {
-	            color: $light-gray;
-	            // &:after { content: ' experiment'}
+	            color: $dark-gray;
+              line-height: 1rem;
+              margin-bottom: 4px;
+              font-size: $size-smaller;
 	          }
 
             .post__date__container {
-              position: relative; left: -$base;
-              .post__date { @extend %serif; font-size: $size-preview-date; color: $light-gray; padding: 0 $base; display: inline-block; }
+              position: relative; left: -$base; top: -$base*0.5;
+              .post__date { @extend %sans-serif; font-size: $size-preview-date; color: $medium-gray; padding: 0 $base; display: inline-block; }
             }
 
             // main title
             .post__title__container {
               // shift a little bit for a padding for the bg hover 
               position: relative; left: -$base;
-              padding-top: 10px;
+              // padding-top: 10px;
               // background-color: rgba(blue, 0.5); 
 
               .post__title { 
@@ -136,7 +153,7 @@
               color: $gray;
 
               .post__summary {
-                display: inline-block; padding: $base/2 $base;
+                display: inline-block; padding: $base/4 $base;
               }
             }
 
@@ -165,13 +182,27 @@
 
 
 
-        //////////////////////////////////////////////// 
-        // 
-        // CUSTOM STYLES for POST PREVIEWS 
-        // 
-        ////////////////////////////////////////////////
+//////////////////////////////////////////////// 
+// 
+// CUSTOM STYLES for POST PREVIEWS 
+// 
+////////////////////////////////////////////////
 
 
+.post__imgPreview {
+  // margin-top: $base;
+  margin-bottom: 0;
+  padding-bottom: $base*2;
+
+  .post__info {
+    margin-bottom: 0;
+    padding-top: $base/2;
+    padding-bottom: $base/2;
+  }
+}
+
+
+/*
         // Custom styles for each blog post
         .post-preview-break-the-grid {
           @include span-four(24, 18, 18, 18); 
@@ -199,5 +230,5 @@
 
           &:hover { .post--preview-before, .post--preview-after { text-shadow: 0 0 3px $gray; @extend %ease-slow;} }
         }
-
+*/
   // end Posts / Preview (index file)

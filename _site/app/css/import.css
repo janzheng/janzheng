@@ -411,7 +411,7 @@ a.link-external .btn-inline, a.link-external .btn-inline:hover:after, .nav__logo
   transition: all 180ms ease;
 }
 
-.icon--hoverOff, .icon--email:before, .icon--twitter:before, .icon--linkedin:before, .icon--resume:before, .icon--blog:before, .icon--about:before, .icon--tools:before, .icon--lab:before, .icon--rant:before, .icon--idea:before, .icon--work:before, .icon--hoverOn, .nav__item:hover .icon, .nav__item:hover .icon--hoverOff, .nav__item:hover .icon--email:before, .nav__item:hover .icon--twitter:before, .nav__item:hover .icon--linkedin:before, .nav__item:hover .icon--resume:before, .nav__item:hover .icon--blog:before, .nav__item:hover .icon--about:before, .nav__item:hover .icon--tools:before, .nav__item:hover .icon--lab:before, .nav__item:hover .icon--rant:before, .nav__item:hover .icon--idea:before, .nav__item:hover .icon--work:before, .nav__item.nav__blog.active .icon, .nav__item.nav__blog.active .icon--hoverOff, .nav__item.nav__blog.active .icon--email:before, .nav__item.nav__blog.active .icon--twitter:before, .nav__item.nav__blog.active .icon--linkedin:before, .nav__item.nav__blog.active .icon--resume:before, .nav__item.nav__blog.active .icon--blog:before, .nav__item.nav__blog.active .icon--about:before, .nav__item.nav__blog.active .icon--tools:before, .nav__item.nav__blog.active .icon--lab:before, .nav__item.nav__blog.active .icon--rant:before, .nav__item.nav__blog.active .icon--idea:before, .nav__item.nav__blog.active .icon--work:before, .nav__item.nav__about.active .icon, .nav__item.nav__about.active .icon--hoverOff, .nav__item.nav__about.active .icon--email:before, .nav__item.nav__about.active .icon--twitter:before, .nav__item.nav__about.active .icon--linkedin:before, .nav__item.nav__about.active .icon--resume:before, .nav__item.nav__about.active .icon--blog:before, .nav__item.nav__about.active .icon--about:before, .nav__item.nav__about.active .icon--tools:before, .nav__item.nav__about.active .icon--lab:before, .nav__item.nav__about.active .icon--rant:before, .nav__item.nav__about.active .icon--idea:before, .nav__item.nav__about.active .icon--work:before, .nav__item.nav__tools.active .icon, .nav__item.nav__tools.active .icon--hoverOff, .nav__item.nav__tools.active .icon--email:before, .nav__item.nav__tools.active .icon--twitter:before, .nav__item.nav__tools.active .icon--linkedin:before, .nav__item.nav__tools.active .icon--resume:before, .nav__item.nav__tools.active .icon--blog:before, .nav__item.nav__tools.active .icon--about:before, .nav__item.nav__tools.active .icon--tools:before, .nav__item.nav__tools.active .icon--lab:before, .nav__item.nav__tools.active .icon--rant:before, .nav__item.nav__tools.active .icon--idea:before, .nav__item.nav__tools.active .icon--work:before, .nav__social__item:hover .icon, .nav__social__item:hover .icon--hoverOff, .nav__social__item:hover .icon--email:before, .nav__social__item:hover .icon--twitter:before, .nav__social__item:hover .icon--linkedin:before, .nav__social__item:hover .icon--resume:before, .nav__social__item:hover .icon--blog:before, .nav__social__item:hover .icon--about:before, .nav__social__item:hover .icon--tools:before, .nav__social__item:hover .icon--lab:before, .nav__social__item:hover .icon--rant:before, .nav__social__item:hover .icon--idea:before, .nav__social__item:hover .icon--work:before, .nav__social__label, .nav__social__label span, body, html, .post__title__container .post__title, .post-preview-break-the-grid .post--preview-before, .post-preview-break-the-grid .post--preview-after, .post-preview-break-the-grid:hover .post--preview-before, .post-preview-break-the-grid:hover .post--preview-after {
+.icon--hoverOff, .icon--email:before, .icon--twitter:before, .icon--linkedin:before, .icon--resume:before, .icon--blog:before, .icon--about:before, .icon--tools:before, .icon--lab:before, .icon--rant:before, .icon--idea:before, .icon--work:before, .icon--hoverOn, .nav__item:hover .icon, .nav__item:hover .icon--hoverOff, .nav__item:hover .icon--email:before, .nav__item:hover .icon--twitter:before, .nav__item:hover .icon--linkedin:before, .nav__item:hover .icon--resume:before, .nav__item:hover .icon--blog:before, .nav__item:hover .icon--about:before, .nav__item:hover .icon--tools:before, .nav__item:hover .icon--lab:before, .nav__item:hover .icon--rant:before, .nav__item:hover .icon--idea:before, .nav__item:hover .icon--work:before, .nav__item.nav__blog.active .icon, .nav__item.nav__blog.active .icon--hoverOff, .nav__item.nav__blog.active .icon--email:before, .nav__item.nav__blog.active .icon--twitter:before, .nav__item.nav__blog.active .icon--linkedin:before, .nav__item.nav__blog.active .icon--resume:before, .nav__item.nav__blog.active .icon--blog:before, .nav__item.nav__blog.active .icon--about:before, .nav__item.nav__blog.active .icon--tools:before, .nav__item.nav__blog.active .icon--lab:before, .nav__item.nav__blog.active .icon--rant:before, .nav__item.nav__blog.active .icon--idea:before, .nav__item.nav__blog.active .icon--work:before, .nav__item.nav__about.active .icon, .nav__item.nav__about.active .icon--hoverOff, .nav__item.nav__about.active .icon--email:before, .nav__item.nav__about.active .icon--twitter:before, .nav__item.nav__about.active .icon--linkedin:before, .nav__item.nav__about.active .icon--resume:before, .nav__item.nav__about.active .icon--blog:before, .nav__item.nav__about.active .icon--about:before, .nav__item.nav__about.active .icon--tools:before, .nav__item.nav__about.active .icon--lab:before, .nav__item.nav__about.active .icon--rant:before, .nav__item.nav__about.active .icon--idea:before, .nav__item.nav__about.active .icon--work:before, .nav__item.nav__tools.active .icon, .nav__item.nav__tools.active .icon--hoverOff, .nav__item.nav__tools.active .icon--email:before, .nav__item.nav__tools.active .icon--twitter:before, .nav__item.nav__tools.active .icon--linkedin:before, .nav__item.nav__tools.active .icon--resume:before, .nav__item.nav__tools.active .icon--blog:before, .nav__item.nav__tools.active .icon--about:before, .nav__item.nav__tools.active .icon--tools:before, .nav__item.nav__tools.active .icon--lab:before, .nav__item.nav__tools.active .icon--rant:before, .nav__item.nav__tools.active .icon--idea:before, .nav__item.nav__tools.active .icon--work:before, .nav__social__item:hover .icon, .nav__social__item:hover .icon--hoverOff, .nav__social__item:hover .icon--email:before, .nav__social__item:hover .icon--twitter:before, .nav__social__item:hover .icon--linkedin:before, .nav__social__item:hover .icon--resume:before, .nav__social__item:hover .icon--blog:before, .nav__social__item:hover .icon--about:before, .nav__social__item:hover .icon--tools:before, .nav__social__item:hover .icon--lab:before, .nav__social__item:hover .icon--rant:before, .nav__social__item:hover .icon--idea:before, .nav__social__item:hover .icon--work:before, .nav__social__label, .nav__social__label span, body, html, .post__title__container .post__title {
   -webkit-transition: all 320ms ease;
   -moz-transition: all 320ms ease;
   -ms-transition: all 320ms ease;
@@ -423,7 +423,7 @@ a.link-external .btn-inline, a.link-external .btn-inline:hover:after, .nav__logo
   padding-top: 100px;
 }
 
-.post__title__container .post__title, .article__head__title, .article__body__content h1, .article__head__subtitle, .article__body__content h4, a.link-external .btn-inline, .timeline__client, body, html {
+.post__title__container .post__title, .article__head__title, .article__body__content h1, .article__head__subtitle, .article__body__content h4, a.link-external .btn-inline, .timeline__client, body, html, .post__date__container .post__date {
   font-family: "Open Sans", "Helvetica Neue", arial, sans-serif;
 }
 
@@ -431,7 +431,7 @@ a.link-external .btn-inline, a.link-external .btn-inline:hover:after, .nav__logo
   font-family: "Helvetica Neue", "Open Sans", sans-serif;
 }
 
-.article__body__content .h1--display, .article__body__content .h1--display--spaced, .article__body__content .display, .article__body__content, .article__head__subtitle, .article__body__content h4, .article__body__content h2, .article__body__content h3, .article__body__content .slider .rsGCaption, .article__body__content figure figcaption, .article__body__content .callout, .article__body__content blockquote, .article__body__content blockquote.blockquote--wide, .nav__label, .nav__social__label span, .timeline__year, .timeline__headline div > span, .page__title, .post__date__container .post__date, .post__tags__container .post__tags li, .article__head__date, .article__tags__container, .article__head__projectLink__container, .main__footer {
+.article__body__content .h1--display, .article__body__content .h1--display--spaced, .article__body__content .display, .article__body__content, .article__head__subtitle, .article__body__content h4, .article__body__content h2, .article__body__content h3, .article__body__content .slider .rsGCaption, .article__body__content figure figcaption, .article__body__content .callout, .article__body__content blockquote, .article__body__content blockquote.blockquote--wide, .nav__label, .nav__social__label span, .timeline__year, .timeline__headline div > span, .post__tags__container .post__tags li, .article__head__date, .article__tags__container, .article__head__projectLink__container, .main__footer {
   font-family: Georgia, serif;
 }
 
@@ -505,9 +505,8 @@ a.link-external .btn-inline--large:hover {
 .post__title__container .post__title {
   display: inline-block;
   padding: 0 1rem;
-  margin-top: 0.5rem;
-  font-weight: 300;
-  font-size: 2.5rem;
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 .article__head__title, .article__body__content h1 {
@@ -742,9 +741,10 @@ a.link-external .btn-icon.btn-inline {
 }
 
 .icon--filter {
-  width: 40px;
-  background-position: center 5px;
-  background-size: 1.9rem;
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: 1.3rem;
 }
 
 .icon--hoverOff, .icon--email:before, .icon--twitter:before, .icon--linkedin:before, .icon--resume:before, .icon--blog:before, .icon--about:before, .icon--tools:before, .icon--lab:before, .icon--rant:before, .icon--idea:before, .icon--work:before {
@@ -846,7 +846,7 @@ a.link-external .btn-icon.btn-inline {
 }
 @media screen and (min-width: 480px) {
   .nav {
-    width: 130px;
+    width: 150px;
     position: fixed;
     left: 0;
     height: 100%;
@@ -892,14 +892,14 @@ a.link-external .btn-icon.btn-inline {
     left: 0.5rem;
     top: 2rem;
     font-size: 1.5rem;
-    width: 130px;
+    width: 150px;
     padding-left: 10px;
   }
 }
 
 @media screen and (min-width: 480px) {
   .nav__menu {
-    width: 130px;
+    width: 150px;
     padding-left: 1rem;
   }
 }
@@ -1038,46 +1038,46 @@ a.link-external .btn-icon.btn-inline {
 
 .filter-btn {
   cursor: pointer;
+  text-align: center;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   margin-right: 10px;
-  float: left;
+  display: inline-block;
 }
 .filter-btn[data-filter="lab"] {
-  background-color: rgba(1, 167, 164, 0.4);
+  background-color: rgba(1, 167, 164, 0.2);
 }
 .filter-btn[data-filter="lab"]:hover, .filter-btn[data-filter="lab"].filter-btn--active {
   background-color: rgba(1, 167, 164, 0.9);
 }
 .filter-btn[data-filter="rant"] {
-  background-color: rgba(32, 151, 66, 0.4);
+  background-color: rgba(32, 151, 66, 0.2);
 }
 .filter-btn[data-filter="rant"]:hover, .filter-btn[data-filter="rant"].filter-btn--active {
   background-color: rgba(32, 151, 66, 0.9);
 }
 .filter-btn[data-filter="idea"] {
-  background-color: rgba(246, 73, 31, 0.4);
+  background-color: rgba(246, 73, 31, 0.2);
 }
 .filter-btn[data-filter="idea"]:hover, .filter-btn[data-filter="idea"].filter-btn--active {
   background-color: rgba(246, 73, 31, 0.9);
 }
 .filter-btn[data-filter="work"] {
-  background-color: rgba(92, 40, 73, 0.4);
+  background-color: rgba(92, 40, 73, 0.2);
 }
 .filter-btn[data-filter="work"]:hover, .filter-btn[data-filter="work"].filter-btn--active {
   background-color: rgba(92, 40, 73, 0.9);
 }
-.filter-btn svg {
-  width: 32px;
-  height: 32px;
-  fill: white;
-  position: relative;
-  top: 4px;
-  left: 4px;
+
+.filter-btn--title {
+  font-size: 0.83rem;
+  margin-top: 0.5rem;
 }
-.filter-btn svg.svg--lab {
-  top: 2px;
+
+.filter-btn--large .icon--filter {
+  width: 40px;
+  height: 40px;
 }
 
 .timeline {
@@ -1207,15 +1207,64 @@ body, html {
 
 @media screen and (min-width: 480px) {
   .main__container {
-    padding-left: 130px;
+    padding-left: 150px;
   }
+}
+
+.postList__container {
+  padding-top: 1rem;
+}
+@media screen and (max-width: 479px) {
+  .postList__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .postList__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .postList__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 75.0%;
+  }
+  .postList__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 767px) {
+  .postList__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 75.0%;
+  }
+  .postList__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  .postList__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 75.0%;
+  }
+  .postList__container:last-child {
+    margin-right: 0;
+  }
+}
+
+.page__header {
+  margin-bottom: 2rem;
 }
 
 .page__title {
   font-size: 1.3rem;
-  font-style: italic;
-  color: rgba(0, 0, 0, 0.4);
-  height: 20px;
 }
 @media screen and (max-width: 479px) {
   .page__title {
@@ -1227,19 +1276,15 @@ body, html {
   .page__title {
     margin-left: 12.5%;
     padding-left: 2rem;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     margin-bottom: 1rem;
   }
-}
-
-.postList__container {
-  padding-top: 30px;
 }
 
 @media screen and (max-width: 479px) {
   .postList__filter {
     padding: 4px 3rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
   }
 }
@@ -1300,6 +1345,9 @@ body, html {
   }
 }
 
+.post__container {
+  border-top: 1px dashed #cccccc;
+}
 @media screen and (max-width: 479px) {
   .post__container {
     padding: 4px 1rem;
@@ -1320,6 +1368,9 @@ body, html {
     margin-left: 12.5%;
   }
 }
+.post__container:hover {
+  border-top: 1px dashed #0f0f0f;
+}
 .post__container:hover .post__title, .post__container:hover .post__summary {
   background-color: rgba(51, 51, 51, 0.12);
 }
@@ -1330,50 +1381,6 @@ body, html {
   background-position: 50%;
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-@media screen and (max-width: 479px) {
-  .post__imgPreview {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 100%;
-  }
-  .post__imgPreview:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .post__imgPreview {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 75.0%;
-  }
-  .post__imgPreview:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 767px) {
-  .post__imgPreview {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 75.0%;
-  }
-  .post__imgPreview:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 980px) {
-  .post__imgPreview {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 75.0%;
-  }
-  .post__imgPreview:last-child {
-    margin-right: 0;
-  }
 }
 .post__imgPreview:hover {
   background-size: auto 105%;
@@ -1498,78 +1505,53 @@ body, html {
 }
 
 .post__info {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin: 2rem 0;
   padding-left: 2rem;
 }
 
 .post__category__icon {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  width: 32px;
+  height: 32px;
   float: left;
+}
+@media screen and (min-width: 767px) {
+  .post__category__icon {
+    margin-right: 10px;
+  }
 }
 
 .post__category--lab .post__category__icon {
   background-color: rgba(1, 167, 164, 0.7);
 }
-.post__category--lab .post__category__icon svg {
-  width: 32px;
-  height: 32px;
-  fill: white;
-  position: relative;
-  top: 2px;
-  left: 4px;
-}
 
 .post__category--idea .post__category__icon {
   background-color: rgba(246, 73, 31, 0.7);
-}
-.post__category--idea .post__category__icon svg {
-  width: 32px;
-  height: 32px;
-  fill: white;
-  position: relative;
-  top: 4px;
-  left: 4px;
 }
 
 .post__category--rant .post__category__icon {
   background-color: rgba(32, 151, 66, 0.7);
 }
-.post__category--rant .post__category__icon svg {
-  width: 32px;
-  height: 32px;
-  fill: white;
-  position: relative;
-  top: 4px;
-  left: 4px;
-}
 
 .post__category--work .post__category__icon {
   background-color: rgba(92, 40, 73, 0.7);
 }
-.post__category--work .post__category__icon svg {
-  width: 32px;
-  height: 32px;
-  fill: white;
-  position: relative;
-  top: 2px;
-  left: 4px;
-}
 
 .post__category__label {
-  color: #cccccc;
+  color: #333333;
+  line-height: 1rem;
+  margin-bottom: 4px;
+  font-size: 0.875rem;
 }
 
 .post__date__container {
   position: relative;
   left: -1rem;
+  top: -0.5rem;
 }
 .post__date__container .post__date {
-  font-size: 0.98rem;
-  color: #cccccc;
+  font-size: 0.7rem;
+  color: #555555;
   padding: 0 1rem;
   display: inline-block;
 }
@@ -1577,7 +1559,6 @@ body, html {
 .post__title__container {
   position: relative;
   left: -1rem;
-  padding-top: 10px;
 }
 
 .post__summary__container {
@@ -1587,7 +1568,7 @@ body, html {
 }
 .post__summary__container .post__summary {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
 }
 
 .post__tags__container .post__tags li {
@@ -1612,102 +1593,45 @@ body, html {
   content: ',';
 }
 
-.post-preview-break-the-grid {
-  margin: 1rem 0;
-  margin-bottom: 2rem;
-  overflow: hidden;
+.post__imgPreview {
+  margin-bottom: 0;
+  padding-bottom: 2rem;
 }
-@media screen and (max-width: 479px) {
-  .post-preview-break-the-grid {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 100%;
-  }
-  .post-preview-break-the-grid:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .post-preview-break-the-grid {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 75.0%;
-  }
-  .post-preview-break-the-grid:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 767px) {
-  .post-preview-break-the-grid {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 75.0%;
-  }
-  .post-preview-break-the-grid:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 980px) {
-  .post-preview-break-the-grid {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 75.0%;
-  }
-  .post-preview-break-the-grid:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .post-preview-break-the-grid {
-    padding-left: 11%;
-  }
-}
-@media screen and (min-width: 767px) {
-  .post-preview-break-the-grid {
-    padding-left: 11%;
-  }
-}
-@media screen and (min-width: 980px) {
-  .post-preview-break-the-grid {
-    padding-left: 110px;
-  }
-}
-.post-preview-break-the-grid .post--info {
-  margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
-}
-@media screen and (min-width: 480px) {
-  .post-preview-break-the-grid .post--info {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 75.0%;
-    margin-left: -20.83333%;
-    padding-left: 3rem !important;
-  }
-  .post-preview-break-the-grid .post--info:last-child {
-    margin-right: 0;
-  }
-}
-.post-preview-break-the-grid .post--preview-before, .post-preview-break-the-grid .post--preview-after {
-  display: inline;
-  color: transparent;
-  opacity: 0.8;
-  text-shadow: 0 0 2px #cccccc;
-}
-@media screen and (max-width: 479px) {
-  .post-preview-break-the-grid .post--preview-before, .post-preview-break-the-grid .post--preview-after {
-    display: none;
-  }
-}
-.post-preview-break-the-grid:hover .post--preview-before, .post-preview-break-the-grid:hover .post--preview-after {
-  text-shadow: 0 0 3px #777777;
+.post__imgPreview .post__info {
+  margin-bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
+/*
+        // Custom styles for each blog post
+        .post-preview-break-the-grid {
+          @include span-four(24, 18, 18, 18); 
+
+          @include media($break-nav-thin) { padding-left: 11%;  }
+          @include media($break-nav-wide) { padding-left: 11%;  }
+          @include media($break-nav-full) { padding-left: 110px;  }
+          
+          margin: $base 0; margin-bottom: $base*2; 
+          overflow: hidden; 
+
+          .post--info {
+            
+            margin-top: $base !important;
+            margin-bottom: $base  !important;
+            @include media($break-nav-thin-atleast) { @include span-columns(18); @include shift(-5); padding-left: 3rem !important; } 
+          }
+
+          .post--preview-before, .post--preview-after {
+            @include media($break-nav-mobile) { display: none; }
+            display: inline; @extend %ease-slow;
+            color: transparent; opacity: 0.8;
+            text-shadow: 0 0 2px $light-gray;
+          }
+
+          &:hover { .post--preview-before, .post--preview-after { text-shadow: 0 0 3px $gray; @extend %ease-slow;} }
+        }
+*/
 @media screen and (max-width: 479px) {
   .article__tags__container, .article__head__projectLink__container, .article__body__content {
     float: left;

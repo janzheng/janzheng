@@ -24,6 +24,45 @@ todo
 		- use codepen or similar to show code
 - move code over to a preiew system like codepen
 
+
+
+Tumblr Conversion
+
+Site
+---
+- type (rant, etc.)
+- type icon (add tumblr!) (tumblr type should appear a little differently)
+- post date
+- title
+- subtitle
+- tags
+
+Tumblr
+---
+> focuses on a VERY different type of media, would be very hard to interchange with regular blog post design
+
+- IMAGES
+- QUOTES
+- cover image
+- text snippet
+- link to source
+- link to permalink
+- via text
+- tags
+
+LAYOUT
+
+1. icon | type | post date
+2. (optional) title || image || quote
+3. subtitle text / text snippet
+4. (optional) tumblr read more cta || via text / source
+5. tags
+
+
+
+
+
+
 done
 ------------
 - about

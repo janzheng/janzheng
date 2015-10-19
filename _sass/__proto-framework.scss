@@ -46,7 +46,7 @@ $break-nav-wide-atleast: new-breakpoint(min-width 767px);       // thin side nav
 // $break-nav-full-max: new-breakpoint(max-width 980px 24);
 
 // used in non-mobile. fixed
-$width-nav-menu: 130px;
+$width-nav-menu: 150px;
 
 @mixin show($size){
    display: none !important;

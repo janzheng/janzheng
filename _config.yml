@@ -15,7 +15,7 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "
 
 
 navigation:
- - text: blog
+ - text: thoughts
    url: /
  - text: about
    url: /about.html

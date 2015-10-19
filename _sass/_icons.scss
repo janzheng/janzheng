@@ -26,11 +26,13 @@
     	background-size: contain;
 	}
 
+	$icon-filter-size: 32px;
 	// sizing for filters
 	.icon--filter {    
-		width: 40px;
-	    background-position: center 5px;
-    	background-size: 1.9rem;
+		width: $icon-filter-size;
+		height: $icon-filter-size;
+	    background-position: center;
+    	background-size: 1.3rem;
 	}
 
 	.icon--hoverOff {

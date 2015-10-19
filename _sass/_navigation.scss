@@ -71,7 +71,7 @@
       }
 
       @include media($break-nav-thin-atleast) {
-			width: 130px;
+			width: $width-nav-menu;
 			padding-left: 1rem;
       }
 

@@ -1,23 +1,32 @@
 
 .filter-btn {
   cursor: pointer;
+  text-align: center;
   // @extend %style-btn-inline;
 
   border-radius: 50%;
   width: 40px;
   height: 40px; 
   margin-right: 10px;
-  float: left;
+  display: inline-block;
+  
   @extend %ease;
-  &[data-filter="lab"] {background-color: rgba($teal, 0.4); &:hover,&.filter-btn--active {background-color: rgba($teal, 0.9);}}
-  &[data-filter="rant"] {background-color: rgba($green, 0.4); &:hover,&.filter-btn--active {background-color: rgba($green, 0.9);}}
-  &[data-filter="idea"] {background-color: rgba($dark-orange, 0.4); &:hover,&.filter-btn--active {background-color: rgba($dark-orange, 0.9);}}
-  &[data-filter="work"] {background-color: rgba($purple, 0.4); &:hover,&.filter-btn--active {background-color: rgba($purple, 0.9);}}
+  &[data-filter="lab"] {background-color: rgba($teal, 0.2); &:hover,&.filter-btn--active {background-color: rgba($teal, 0.9);}}
+  &[data-filter="rant"] {background-color: rgba($green, 0.2); &:hover,&.filter-btn--active {background-color: rgba($green, 0.9);}}
+  &[data-filter="idea"] {background-color: rgba($dark-orange, 0.2); &:hover,&.filter-btn--active {background-color: rgba($dark-orange, 0.9);}}
+  &[data-filter="work"] {background-color: rgba($purple, 0.2); &:hover,&.filter-btn--active {background-color: rgba($purple, 0.9);}}
 
+}
 
-  svg {
-    width: 32px; height: 32px; fill: white; position: relative; top: 4px; left: 4px;
-    &.svg--lab {top:2px}
+.filter-btn--title {
+  font-size: $size-smallish;
+  margin-top: $base/2;
+}
+
+.filter-btn--large {
+  .icon--filter {
+    width: 40px;
+    height: 40px; 
   }
 
 }

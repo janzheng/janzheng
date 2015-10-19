@@ -22,6 +22,7 @@ module.exports = {
 };
 
 var baseURL = 'http://api.tumblr.com/v2';
+var version = require('../package.json').version;
 
 var calls = {
 
@@ -47,7 +48,7 @@ var calls = {
     return function (blogName, options, callback) {
       if (isFunction(options)) { callback = options; options = {}; }
       this._get(blogPath(blogName, path), options, callback);
-    }
+    };
   }
 
 };
@@ -163,7 +164,10 @@ TumblrClient.prototype = {
       url: baseURL + path + '?' + qs.stringify(params),
       json: true,
       oauth: this.credentials,
-      followRedirect: false
+      followRedirect: false,
+      headers : {
+        'User-Agent' : 'tumblr.js/' + version
+      }
     }, requestCallback(callback));
 
   },
@@ -174,8 +178,13 @@ TumblrClient.prototype = {
     delete params.data;
 
     // Sign without multipart data
-    var r = request.post(baseURL + path, function (err, response, body) {
-      body = JSON.parse(body);
+    var r = request.post({
+      url : baseURL + path,
+      headers :  {
+        'User-Agent' : 'tumblr.js/' + version
+      }
+    }, function (err, response, body) {
+      try { body = JSON.parse(body); } catch (e) { body = { error: 'Malformed Response: ' + body }; }
       requestCallback(callback)(err, response, body);
     });
 
@@ -198,7 +207,7 @@ TumblrClient.prototype = {
 
     // Add the form header back
     var headers = form.getHeaders();
-    for (var key in headers) {
+    for (key in headers) {
       r.headers[key] = headers[key];
     }
 
@@ -233,14 +242,18 @@ function blogPath(blogName, path) {
 }
 
 function requestCallback(callback) {
-  if (!callback) return;
+  if (!callback) return undefined;
   return function (err, response, body) {
     if (err) return callback(err);
     if (response.statusCode >= 400) {
-      var err = body.meta ? body.meta.msg : body.error;
-      return callback(new Error('API error: ' + response.statusCode + ' ' + err));
+      var errString = body.meta ? body.meta.msg : body.error;
+      return callback(new Error('API error: ' + response.statusCode + ' ' + errString));
     }
-    return callback(null, body.response);
+    if (body && body.response) {
+      return callback(null, body.response);
+    } else {
+      return callback(new Error('API error (malformed API response): ' + body));
+    }
   };
 }
 
