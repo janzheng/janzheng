@@ -50,7 +50,7 @@
     .post__title, .post__summary, .post__taglist li { color: rgba(white, 0.8) !important; background-color: rgba(black, 0.4) !important; }
   }
 
-  // override svg icons to be mostly transparent
+  // override svg icons to be mosttly transparent
   .post__category__icon {
     background-color: rgba(black, 0.3) !important;
     svg {fill: rgba(white, 0.6) !important;}
