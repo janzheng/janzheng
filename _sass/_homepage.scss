@@ -97,13 +97,10 @@
           } //end post--info
 
 	          .post__category__icon {
-	            border-radius: 50%;
+              border-radius: 50%;
 	            width: $icon-filter-size;
 	            height: $icon-filter-size;
-
-              @include media($break-nav-wide-atleast) {
-  	             margin-right: 10px;
-               }
+  	          margin-right: 10px; 
 	            float: left;
 	          }
 

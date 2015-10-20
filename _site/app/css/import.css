@@ -697,6 +697,7 @@ a.link-external .btn-icon.btn-inline {
   border-width: 6px;
   border-top-color: #A63737;
   margin-top: 6px;
+  margin-right: 4px;
 }
 
 .triangle-up {
@@ -1154,6 +1155,11 @@ a.link-external .btn-icon.btn-inline {
   position: relative;
   left: 0;
 }
+@media screen and (max-width: 479px) {
+  .timeline__preview {
+    padding-left: 1rem;
+  }
+}
 .timeline__preview.expandablejs--preview:hover {
   cursor: pointer;
 }
@@ -1528,12 +1534,8 @@ body, html {
   border-radius: 50%;
   width: 32px;
   height: 32px;
+  margin-right: 10px;
   float: left;
-}
-@media screen and (min-width: 767px) {
-  .post__category__icon {
-    margin-right: 10px;
-  }
 }
 
 .post__category--lab .post__category__icon {

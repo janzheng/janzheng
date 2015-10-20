@@ -47,7 +47,7 @@ featured : false
 
     <div class="page__header">
       <div class="page__title">
-        Words &amp; Thoughts
+        Thoughts &amp; Words
       </div>
 
       <div class="postList__filter">
@@ -63,7 +63,7 @@ featured : false
     {% for post in site.posts %}
     {% if post.published == true and post.category != 'work' %} 
 
-      <li class="post {% if post.featured %} post--featured {% endif %}">
+      <li class="post {% if post.featured %} post--featured {% endif %}" data-date="{{ post.date }}">
 
         <a href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %} ">
           <div class="post__container {{ post.preview-css }} {% if post.preview-img == nil %} post__imgPreview--noImg {% else %} post__imgPreview" data-bg="{{ post.preview-img }} {% endif %}"> <!-- bg image is set in script.js -->

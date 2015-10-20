@@ -34,6 +34,10 @@
       position: relative;
       left: 0;
 
+      @include media($break-nav-mobile) {
+        padding-left: $base;
+      }
+
       // only hover effect if it has an expandablejs attached
       &.expandablejs--preview:hover {
         @extend %ease-fast; 
