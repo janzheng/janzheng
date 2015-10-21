@@ -149,3 +149,16 @@
 		background-image: icon('work', $white, 'width="512" height="512" viewBox="0 -50 512 612"');
 	}
 }
+
+.icon--tumblr {
+	background-image: icon('rant', $white);
+	
+	&:before { // hover state
+		@extend .icon--hoverOff;
+		background-image: icon('rant', $white);
+	}
+}
+
+
+
+

@@ -17,6 +17,7 @@
   &[data-filter="rant"] {background-color: rgba($green, 0.2); &:hover,&.filter-btn--active {background-color: rgba($green, 0.9); .filter-btn--title { opacity: 1 } }}
   &[data-filter="idea"] {background-color: rgba($dark-orange, 0.2); &:hover,&.filter-btn--active {background-color: rgba($dark-orange, 0.9); .filter-btn--title { opacity: 1 } }}
   &[data-filter="work"] {background-color: rgba($purple, 0.2); &:hover,&.filter-btn--active {background-color: rgba($purple, 0.9); .filter-btn--title { opacity: 1 } }}
+  &[data-filter="tumblr"] {background-color: rgba($blue, 0.2); &:hover,&.filter-btn--active {background-color: rgba($blue, 0.9); .filter-btn--title { opacity: 1 } }}
 
 }
 

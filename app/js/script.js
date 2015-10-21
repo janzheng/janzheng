@@ -1,6 +1,12 @@
 
 $(document).ready(function() {
 
+
+
+
+
+
+
   // $('.flexslider').flexslider({
   //   animation: "slide",
   //   slideshow: false,
@@ -283,6 +289,13 @@ function refreshStickyElements() {
     imgHeight: 680
   });
 
+
+
+  // 
+  // tumblr Handler
+  // 
+
+  // console.log(tumblr_api_read);
 
 }
 

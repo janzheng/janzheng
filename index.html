@@ -54,12 +54,18 @@ featured : false
         <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="lab"><span class="icon icon--filter icon--lab"></span><span class="filter-btn--title">lab</span></div>
         <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="rant"><span class="icon icon--filter icon--rant"></span><span class="filter-btn--title">rants</span></div>
         <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="idea"><span class="icon icon--filter icon--idea"></span><span class="filter-btn--title">ideas</span></div>
+        <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="tumblr"><span class="icon icon--filter icon--tumblr"></span><span class="filter-btn--title">tumblr</span></div>
         <!-- <div class="filter-btn" class="btn-inline" data-filter="work"><span class="icon icon--filter icon--work"></div> -->
       </div>
     </span>
       
     <!-- .list is necessary for the list.js sorter -->
     <ul class="list">
+
+
+      <notextile class="tumblr">
+      </notextile>
+
     {% for post in site.posts %}
     {% if post.published == true and post.category != 'work' %} 
 

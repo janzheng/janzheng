@@ -385,6 +385,8 @@ Every Saturday, I run with a running club called the <a href="http://www.crrclub
   <script src="/app/js/jquery.royalslider.min.js"></script>
   
   <script src="/app/js/script.js"></script>
+  
+  <script src="/app/js/tumblriffic.js"></script>
 
 
   
@@ -392,6 +394,7 @@ Every Saturday, I run with a running club called the <a href="http://www.crrclub
   <script type="text/javascript">
   google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
   </script>
+
 
   <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
 
@@ -401,6 +404,8 @@ Every Saturday, I run with a running club called the <a href="http://www.crrclub
       console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
 
       console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
+
+      console.log(JSON.stringify(tumblr_api_read));
   </script>
   
 
