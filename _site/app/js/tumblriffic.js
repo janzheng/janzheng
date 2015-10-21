@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 	console.log('output ' + generate(posts))
 		
-	$('.tumblr').html(generate(posts));
+	// $('.tumblr').html(generate(posts));
 
 	// $('.list').html('banana')
 
