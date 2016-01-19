@@ -112,7 +112,7 @@ I've had the luxury of working with some amazing companies and clients, includin
   <ul class="timeline__list">
 
     <div class="sticky-item" >
-      <div class="timeline__year sticky-content">2015</div>
+      <div class="timeline__year sticky-content">2014</div>
     </div>
 
       <li class="timeline__item expandablejs">
@@ -123,7 +123,7 @@ I've had the luxury of working with some amazing companies and clients, includin
             <div>
               <span class="timeline__title">User Experience Architect</span>
               <span class="timeline__location">Atlanta, GA</span>
-              <span class="timeline__date">2015 &mdash; current</span>
+              <span class="timeline__date">2014 &mdash; current</span>
             </div>
             <div class="timeline__desc">
               I define requirements, build site maps and create wireframes, as well as design, prototype, and develop the front-end user interfaces.
@@ -132,7 +132,7 @@ I've had the luxury of working with some amazing companies and clients, includin
         </div>
 
         <div class="timeline__full expandablejs--full">
-          <p>At Ubiquiti Networks I am currently designing and developing new customer-facing support and community tools that will launch at the end of 2015.</p>
+          <p>At Ubiquiti Networks I am currently designing and developing new customer-facing support and community tools that will launch in the Spring of 2016.</p>
         </div>
       </li>
 
