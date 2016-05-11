@@ -26,7 +26,7 @@ p(dropcap). My name is Jan <span class='style--light'>"yawn"</span>, and I striv
 </notextile>
 
 
-bq(blockquote--wide blockquote--noQuotes). I am currently doing freelancework in *(strong--loud)Atlanta*, but am willing to work remotely.
+bq(blockquote--wide blockquote--noQuotes). I am currently a freelancer in *(strong--loud)Atlanta*, and willing to work remotely.
 I am *(strong--loud)currently under short contract*, but don't let that keep you from "sending me a letter for a quote":mailto:hello@janzheng.com. You could also, "tweet":https://twitter.com/janistanian, or "link me in":http://www.linkedin.com/in/janzh.
 
 h2. Work & Experience 
