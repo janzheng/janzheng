@@ -1871,7 +1871,7 @@ body, html {
 }
 
 .article__head__date__container {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .article__head__date {
