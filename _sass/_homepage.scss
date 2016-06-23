@@ -39,6 +39,7 @@
     }
 
       .page__title {
+        text-transform: capitalize;
         font-size: $size-slightly-larger;
         @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base;}
         @include media($break-nav-thin-atleast) {

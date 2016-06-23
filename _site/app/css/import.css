@@ -1301,6 +1301,7 @@ body, html {
 }
 
 .page__title {
+  text-transform: capitalize;
   font-size: 1.3rem;
 }
 @media screen and (max-width: 479px) {
