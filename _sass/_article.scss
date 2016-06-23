@@ -107,6 +107,7 @@
 
   .article__head__date__container {
     padding-top: $base/2;
+    background: red !important;
     // @include media($break-nav-thin-atleast) {@include shift(1);}
   }
     .article__head__date {
