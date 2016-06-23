@@ -291,7 +291,8 @@ The easiest way to integrate a tumblr blog into a website is covered in "adrifol
 
 
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://funkability.tumblr.com/js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://funkability.tumblr.com/js"</span><span class="nt">&gt;&lt;/script&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 
 
@@ -308,9 +309,12 @@ h2. The Server-Side Way:
 There's another way to get your Tumblr data: through the Tumblr API. Finlay covers this method "in his article":ttp://finlay.tumblr.com/post/529010691/embed-tumblr-into-your-website. The idea is that you can retrieve an XML feed by using the following:
 
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> http://funkability.tumblr.com/api/read
-<span class="lineno">2</span> http://funkability.tumblr.com/api/read?start=0<span class="err">&amp;</span>num=1
-<span class="lineno">3</span> http://funkability.tumblr.com/api/read?start=0<span class="err">&amp;</span>num=1<span class="err">&amp;</span>type=text</code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3</pre></td><td class="code"><pre>http://funkability.tumblr.com/api/read
+http://funkability.tumblr.com/api/read?start=0<span class="err">&amp;</span>num=1
+http://funkability.tumblr.com/api/read?start=0<span class="err">&amp;</span>num=1<span class="err">&amp;</span>type=text<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 p. Much better! Your feed is returned in a neatly formatted XML file. Great! You even get to select what and how many posts are returned! I seriously got excited... until I saw: "So, using SimpleXML in PHP, we can tell our PHP look through for that tag, and then return its entire contents."
 
@@ -328,42 +332,59 @@ h2. The Better Way:
 Apparently, in addition to Finlay's method, "Tumblr has a way to return a JSON-formatted feed":http://www.tumblr.com/docs/en/api/v1.
 Add the following script to the end of the @<head>@ section of your website, replacing 'username' with your tumblr username:
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;pre</span> <span class="na">class=</span><span class="s">&quot;prettyprint&quot;</span><span class="nt">&gt;&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://username.tumblr.com/api/read/json&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="lineno">2</span> <span class="nt">&lt;/pre&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="nt">&lt;pre</span> <span class="na">class=</span><span class="s">"prettyprint"</span><span class="nt">&gt;&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://username.tumblr.com/api/read/json"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/pre&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 
 
 This snippet assigns a JSON object of your entire blog to a new variable called 
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span>  
-<span class="lineno">2</span> tumblr_api_read </code></pre></figure> Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how we have a much richer set of metadata using this method.
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre> 
+tumblr_api_read <span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure> Cool! Here's "the JSON output of my blog":http://funkability.tumblr.com/api/read/json/. Notice how we have a much richer set of metadata using this method.
 
 With this variable, you can now easily extract and control your posts. For example, you can extract the link to your most recent post with 
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span>   
-<span class="lineno">2</span> tumblr_api_read[&#39;posts&#39;][0][&#39;url&#39;]</code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre>  
+tumblr_api_read['posts'][0]['url']<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 Here's the example code. After you've inserted the previous code at the end of @<head>@, insert the following code anywhere you want your link to show up.
 
 
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">2</span>     <span class="c1">// The variable &quot;tumblr_api_read&quot; is now set to your tumblr feed.</span>
-<span class="lineno">3</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span>
-<span class="lineno">4</span>         <span class="s1">&#39;&lt;a href=&quot;&#39;</span> <span class="o">+</span> <span class="nx">tumblr_api_read</span><span class="p">[</span><span class="s1">&#39;posts&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">+</span> 
-<span class="lineno">5</span>         <span class="s1">&#39;&quot;&gt;My most recent Tumblr post&lt;/a&gt;&#39;</span>
-<span class="lineno">6</span>     <span class="p">);</span>
-<span class="lineno">7</span> <span class="nt">&lt;/script&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td><td class="code"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+    <span class="c1">// The variable "tumblr_api_read" is now set to your tumblr feed.</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span>
+        <span class="s1">'&lt;a href="'</span> <span class="o">+</span> <span class="nx">tumblr_api_read</span><span class="p">[</span><span class="s1">'posts'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'url'</span><span class="p">]</span> <span class="o">+</span> 
+        <span class="s1">'"&gt;My most recent Tumblr post&lt;/a&gt;'</span>
+    <span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 
 
 
 As an example, here is a link dynamically pulled in from Tumblr
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://funkability.tumblr.com/api/read/json&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="lineno">2</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">3</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;a href=&quot;&#39;</span> <span class="o">+</span> <span class="nx">tumblr_api_read</span><span class="p">[</span><span class="s1">&#39;posts&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;&quot;&gt;my most recent Tumblr post.&lt;/a&gt;&#39;</span><span class="p">);</span>
-<span class="lineno">4</span> <span class="nt">&lt;/script&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://funkability.tumblr.com/api/read/json"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">'&lt;a href="'</span> <span class="o">+</span> <span class="nx">tumblr_api_read</span><span class="p">[</span><span class="s1">'posts'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">'url'</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'"&gt;my most recent Tumblr post.&lt;/a&gt;'</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 
 And there you go. You now have full access to modify, style, and control your Tumblr feed, using only Javascript, and not an ounce of PHP or server-side. 

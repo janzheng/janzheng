@@ -67,7 +67,6 @@ featured : false
       </notextile>
 
     {% for post in site.posts %}
-    {% if post.published == true and post.category != 'work' %} 
 
       <li class="post {% if post.featured %} post--featured {% endif %}" data-date="{{ post.date }}">
 
@@ -153,7 +152,6 @@ featured : false
 
       </li>
       <!-- end post -->
-    {% endif %}
     {% endfor %}
 
     </ul>

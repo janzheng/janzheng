@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link href="../css/reset.css" rel="stylesheet"/>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../css/formalize-custom.css" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<script src="../js/jquery.1.11.1.min.js"></script>
+<script src="../js/modernizr.min.js"></script>
+<script src="../js/jquery.mask.min.js"></script>
+<script src="../js/form.js"></script>
+
+<title>Flow 1 - Step 4 - Home Confirmation</title>
+
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="intro">
+		<img src="../img/thankyou.jpg" width="700" height="63">
+	</div>
+
+    <div class="column-1">
+	
+    <ol class="progtrckr" data-progtrckr-steps="4">
+                <li class="progtrckr-done">Step 1</li>
+             	 <li class="progtrckr-done">Step 2</li>
+            	 <li class="progtrckr-done">Step 3</li>
+             	<li class="progtrckr-done">Confirmation</li>
+            </ol>
+    
+    
+        <div class="header">
+            <h1>Confirmation</h1>
+        </div> <!--header-->
+
+        <div class="content-area">
+		
+			<form action="#" method="post" enctype="multipart/form-data" onsubmit="return false" class="field_style">
+				
+				
+				<!--=====================================
+				CREDIT APPROVED RATES MODULE - HOME
+				=====================================-->
+				
+						<h2 style="font-size:30px; line-height:1.2em;">We appreciate you choosing Gas South!</h2>
+                
+              <h3>What happens next?</h3>
+                <p>Gas South will send you an email at the email address provided, confirming your enrollment request. If you have questions or need assistance, please contact us at 1-877-332-5442 or <a href="#">customerservice@gas-south.com</a>.
+				<table width="550" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="23">
+							<input type="checkbox" name="paperlessBilling" id="paperlessBilling" value="paperlessBilling" class="trigger" data-rel="showpaperlessBilling" />
+						</td>
+						<td width=""><label for="paperlessBilling"><strong>Setup Paperless Billing</strong><br>
+						<span class="note">With Paperless Billing, you won't receive a mailed statement&mdash;an email notification tells you when your bill is ready to view online.</span></label>
+</td>
+					</tr>
+				</table>
+                
+                <div class="showpaperlessBilling conditionalSection ">
+					
+                    <table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="152">
+								<label>Email</label>
+							</td>
+							<td width="10">&nbsp;</td>
+							<td width="88">&nbsp; </td>  
+						</tr>
+						<tr>
+							<td>
+								<input type="text" name="addFirstName" class="input_medium">
+							</td>
+							<td>&nbsp;</td>
+							<td>
+								<button type="button" class="greenBtn" >Setup</button> 
+						    </td>  
+						</tr>
+					</table>
+					
+					 <!--success message-->
+				  	<p class="success">You are now set up for paperless billing!</p>
+					
+					<div class="red-alert">
+						<p>Invalid email address. Please re-enter.</p>
+					</div>
+                    	
+				</div>
+                
+                
+                
+                
+                
+				<table width="550" border="0" cellspacing="0" cellpadding="0">
+					
+				</table>
+				<table width="550" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						
+						<td width="550">
+						
+							<div class="showAutoDraft conditionalSection ">
+							<table width="550" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td height="20">&nbsp;</td>
+								</tr>
+								<tr>
+									<td width="152">
+										<label>Routing Number *</label><br>
+										<input type="text" name="routingNumber" class="input_medium">
+									</td>
+									<td width="17">&nbsp;</td>
+									<td width="152">
+										<label>Account Number *</label><br>
+										<input type="text" name="accountNumber" class="input_medium">
+									</td>
+									<td width="15">&nbsp;</td>
+									<td width="284">
+										<label>Account Type *</label><br>
+										<select>
+											<option value="" disabled="disabled" selected="selected">- Please select -</option>
+											<option value="checking">Checking</option>
+											<option value="savings">Savings</option>
+											
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td height="20">&nbsp;</td>
+								</tr>
+							</table>
+							<img src="../img/verisign.png" width="107" height="73" alt="Verisign Secured | Norton Secured">
+							</div>
+						
+
+						</td>
+					</tr>
+				</table>
+				<table width="550" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="15">&nbsp;</td>
+					</tr>
+				</table>
+				<table width="550" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="23">
+							<input type="checkbox" name="addPerson" id="addPerson" value="addPerson" class="trigger" data-rel="showAddPerson" />
+						</td>
+						<td width="550"><label for="addPerson"><strong>Add another person</strong><br><span class="note">Would you like to add an additional user to your account? This person will be able to access the account by providing the last four digits of the social security number on the account.</span></label>
+						</td>
+					</tr>
+					
+					
+				</table>
+				<div class="showAddPerson conditionalSection">
+					
+                    <table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="155"><label>First Name</label></td>
+								<td width="8">&nbsp;</td>
+								<td width="155"><label>Last Name</label></td>
+								<td width="8">&nbsp;</td>
+								<td width="276">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="155">
+									
+									<input type="text" name="addFirstName" class="input_medium">
+								</td>
+								<td>&nbsp;</td>
+								<td>
+									
+									<input type="text" name="addLastName" class="input_medium">
+								</td>
+								 <td>&nbsp;</td>
+								 <td><button type="button" class="greenBtn">Add</button> 
+								 </td> 
+                                
+							</tr>
+						</table>
+						
+        			<!--success message-->
+				  	<p class="success">This person has been added to your account!</p>
+						
+					  
+					<div class="red-alert">
+						<p>Please enter a First Name.</p>
+					</div>
+
+                    	
+		
+   
+			
+				</div> <!--optionBox div-->
+				
+				
+				
+				<hr/>
+				
+				<button type="button" class="grayBtn" style="float:right;">Print Order Summary</button> 
+				<h2>Order Summary</h2>
+				
+				<table width="650" border="0" cellspacing="0" cellpadding="0" id="confirmation">
+					<tr>
+						<td><strong>Service Type</strong></td>
+						<td>Turn On</td>
+					</tr>
+					<tr>
+						<td><strong>Requested Service Date and Time</strong></td>
+						<td>08/18/2014 between 8 am and 12 pm</td>
+					</tr>
+					<tr>
+						<td><strong>Instructions for AGL Technician</strong></td>
+						<td>You will be at location. Other Instructions: &quot;none&quot;</td>
+					</tr>
+				</table>
+				
+				<h3>Contact Information</h3>
+				<table width="650" border="0" cellspacing="0" cellpadding="0" id="confirmation">
+					<tr>
+						<td><strong>Name</strong></td>
+						<td>John R. Smith Sr. </td>
+					</tr>
+					<tr>
+						<td><strong>Email</strong></td>
+						<td>JohnRSmith@google.com</td>
+					</tr>
+					<tr>
+						<td><strong>Primary Phone Number</strong></td>
+						<td>(404) 555-1234</td>
+					</tr>
+				</table>
+				
+				<h3>Address Information</h3>
+				<table width="650" border="0" cellspacing="0" cellpadding="0" id="confirmation">
+					<tr>
+						<td><strong>Service Address</strong></td>
+						<td>123 Ponce de Leon APT. 15 Atlanta, Ga 30314</td>
+					</tr>
+					<tr>
+						<td><strong>Billing Address</strong></td>
+						<td>123 Ponce de Leon APT. 15 Atlanta, Ga 30314</td>
+					</tr>
+				</table>
+				
+				
+				<h3>Rate Plan</h3>
+				<table width="650" border="0" cellspacing="0" cellpadding="0" id="confirmation">
+					<tr>
+						<td><strong>Rate Plan</strong></td>
+						<td>12 Month Fixed – 59&cent; per therm</td>
+					</tr>
+					<tr>
+						<td><strong>Customer Service Fee</strong></td>
+						<td>$5.95</td>
+					</tr>
+					<tr>
+						<td><strong>Connection Fee</strong></td>
+						<td>$60</td>
+					</tr>
+				</table>
+				<!--=====================================
+				END BUSINESS RATES & CREDIT REQUIREMENT MODULE - BUSINESS
+				=====================================-->
+			
+			</form> <!--END FORM-->
+        </div><!--content area-->
+    </div><!--column-1-->
+</div> <!--wrapper-->
+
+</body>
+</html>

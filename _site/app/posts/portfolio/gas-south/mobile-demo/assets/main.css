@@ -1,0 +1,1883 @@
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+/* line 2, gassouth-mobile-sass/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*  HTML5 ✰ Boilerplate  */
+/* line 16, gassouth-mobile-sass/____reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, #main form input[type=radio] + .ratebox .contentbox .ratedesc, #main form input[type=checkbox] + .ratebox .contentbox .ratedesc, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 26, gassouth-mobile-sass/____reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, gassouth-mobile-sass/____reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 32, gassouth-mobile-sass/____reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 33, gassouth-mobile-sass/____reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 34, gassouth-mobile-sass/____reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 35, gassouth-mobile-sass/____reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 36, gassouth-mobile-sass/____reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 37, gassouth-mobile-sass/____reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 38, gassouth-mobile-sass/____reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 39, gassouth-mobile-sass/____reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 43, gassouth-mobile-sass/____reset.scss */
+select, input, textarea, button {
+  font: 99% sans-serif;
+}
+
+/* line 44, gassouth-mobile-sass/____reset.scss */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* line 46, gassouth-mobile-sass/____reset.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 47, gassouth-mobile-sass/____reset.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/* line 50, gassouth-mobile-sass/____reset.scss */
+ul, ol {
+  margin-left: 0em;
+}
+
+/* line 51, gassouth-mobile-sass/____reset.scss */
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+/* line 52, gassouth-mobile-sass/____reset.scss */
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+/* line 54, gassouth-mobile-sass/____reset.scss */
+nav ul, nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 55, gassouth-mobile-sass/____reset.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 56, gassouth-mobile-sass/____reset.scss */
+strong, th {
+  font-weight: bold;
+}
+
+/* line 57, gassouth-mobile-sass/____reset.scss */
+td {
+  vertical-align: top;
+}
+
+/* line 59, gassouth-mobile-sass/____reset.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+/* line 60, gassouth-mobile-sass/____reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 61, gassouth-mobile-sass/____reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 63, gassouth-mobile-sass/____reset.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+/* line 64, gassouth-mobile-sass/____reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 65, gassouth-mobile-sass/____reset.scss */
+.ie6 legend, .ie7 legend {
+  margin-left: -7px;
+}
+
+/* line 66, gassouth-mobile-sass/____reset.scss */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* line 67, gassouth-mobile-sass/____reset.scss */
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+/* line 68, gassouth-mobile-sass/____reset.scss */
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+/* line 69, gassouth-mobile-sass/____reset.scss */
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/* line 70, gassouth-mobile-sass/____reset.scss */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer;
+}
+
+/* line 71, gassouth-mobile-sass/____reset.scss */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* line 73, gassouth-mobile-sass/____reset.scss */
+input:invalid, textarea:invalid {
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red;
+}
+
+/* line 74, gassouth-mobile-sass/____reset.scss */
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* line 77, gassouth-mobile-sass/____reset.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* line 78, gassouth-mobile-sass/____reset.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 80, gassouth-mobile-sass/____reset.scss */
+body, select, input, textarea {
+  color: #444;
+}
+
+/* line 85, gassouth-mobile-sass/____reset.scss */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* line 86, gassouth-mobile-sass/____reset.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 87, gassouth-mobile-sass/____reset.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 89, gassouth-mobile-sass/____reset.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 90, gassouth-mobile-sass/____reset.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 91, gassouth-mobile-sass/____reset.scss */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 92, gassouth-mobile-sass/____reset.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 93, gassouth-mobile-sass/____reset.scss */
+.clearfix {
+  zoom: 1;
+}
+
+/* line 25, gassouth-mobile-sass/____framework.scss */
+.article, .section, .row {
+  padding-top: 1.625em;
+  padding-bottom: 1.625em;
+}
+
+/* line 26, gassouth-mobile-sass/____framework.scss */
+.container {
+  *zoom: 1;
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 18, gassouth-mobile-sass/bourbon/addons/_clearfix.scss */
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+/* line 23, gassouth-mobile-sass/bourbon/addons/_clearfix.scss */
+.container:after {
+  clear: both;
+}
+
+/* line 49, gassouth-mobile-sass/____framework.scss */
+.show-small {
+  display: none !important;
+}
+@media screen and (min-width: 0px) {
+  /* line 49, gassouth-mobile-sass/____framework.scss */
+  .show-small {
+    display: block !important;
+  }
+}
+
+/* line 50, gassouth-mobile-sass/____framework.scss */
+.show-small-only {
+  display: none !important;
+}
+@media screen and (max-width: 480px) {
+  /* line 50, gassouth-mobile-sass/____framework.scss */
+  .show-small-only {
+    display: block !important;
+  }
+}
+
+/* line 55, gassouth-mobile-sass/____framework.scss */
+.show-medium {
+  display: none !important;
+}
+@media screen and (min-width: 481px) {
+  /* line 55, gassouth-mobile-sass/____framework.scss */
+  .show-medium {
+    display: block !important;
+  }
+}
+
+/* line 56, gassouth-mobile-sass/____framework.scss */
+.show-medium-only {
+  display: none !important;
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  /* line 56, gassouth-mobile-sass/____framework.scss */
+  .show-medium-only {
+    display: block !important;
+  }
+}
+
+/* line 57, gassouth-mobile-sass/____framework.scss */
+.show-medium-max {
+  display: none !important;
+}
+@media screen and (max-width: 767px) {
+  /* line 57, gassouth-mobile-sass/____framework.scss */
+  .show-medium-max {
+    display: block !important;
+  }
+}
+
+/* line 62, gassouth-mobile-sass/____framework.scss */
+.show-larger {
+  display: none !important;
+}
+@media screen and (min-width: 768px) {
+  /* line 62, gassouth-mobile-sass/____framework.scss */
+  .show-larger {
+    display: block !important;
+  }
+}
+
+/* line 63, gassouth-mobile-sass/____framework.scss */
+.show-larger-only {
+  display: none !important;
+}
+@media screen and (min-width: 768) and (max-width: 979) {
+  /* line 63, gassouth-mobile-sass/____framework.scss */
+  .show-larger-only {
+    display: block !important;
+  }
+}
+
+/* line 64, gassouth-mobile-sass/____framework.scss */
+.show-larger-max {
+  display: none !important;
+}
+@media screen and (max-width: 979px) {
+  /* line 64, gassouth-mobile-sass/____framework.scss */
+  .show-larger-max {
+    display: block !important;
+  }
+}
+
+/* line 67, gassouth-mobile-sass/____framework.scss */
+.show-largest {
+  display: none !important;
+}
+@media screen and (min-width: 980px) {
+  /* line 67, gassouth-mobile-sass/____framework.scss */
+  .show-largest {
+    display: block !important;
+  }
+}
+
+/* line 46, gassouth-mobile-sass/_design.scss */
+.white {
+  color: #fff;
+}
+
+/* line 85, gassouth-mobile-sass/_design.scss */
+body, #main form .form-item .explain, #main form .form-item #needSocial {
+  font-family: 'Quicksand', serif;
+}
+
+/* line 27, gassouth-mobile-sass/main.scss */
+h1 {
+  color: white;
+  font-size: 1.38125em;
+  font-weight: 700;
+  padding-bottom: 0.40625em;
+  line-height: 1.05625em;
+}
+
+/* line 28, gassouth-mobile-sass/main.scss */
+h2 {
+  font-size: 0.975em;
+  font-weight: 700;
+  color: #444444;
+  line-height: 1.21875em;
+}
+
+/* line 29, gassouth-mobile-sass/main.scss */
+h3 {
+  color: white;
+  font-weight: 700;
+}
+
+/* line 30, gassouth-mobile-sass/main.scss */
+p, #main form input[type=radio] + .ratebox .contentbox .ratedesc, #main form input[type=checkbox] + .ratebox .contentbox .ratedesc {
+  font-size: 0.8125em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.625em;
+}
+
+/* line 31, gassouth-mobile-sass/main.scss */
+.ratepromo {
+  font-weight: bold;
+}
+
+/* line 32, gassouth-mobile-sass/main.scss */
+.rates {
+  margin-bottom: 1.625em;
+}
+
+/* line 34, gassouth-mobile-sass/main.scss */
+a:link, a:active, a:visited {
+  color: #444444;
+}
+
+/* line 35, gassouth-mobile-sass/main.scss */
+a:hover {
+  color: white;
+}
+
+/* line 40, gassouth-mobile-sass/main.scss */
+body {
+  background: #fac86e url("bg.png") no-repeat center center;
+  background-size: cover;
+  font-weight: 700;
+}
+
+/* line 48, gassouth-mobile-sass/main.scss */
+.align-left {
+  text-align: left !important;
+}
+
+/* line 49, gassouth-mobile-sass/main.scss */
+.bg-left {
+  background-position: 0% center !important;
+}
+
+/* line 51, gassouth-mobile-sass/main.scss */
+#header {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 0px) {
+  /* line 51, gassouth-mobile-sass/main.scss */
+  #header {
+    padding: 0.65em 1.21875em 1.05625em 1.21875em;
+  }
+}
+
+/* line 55, gassouth-mobile-sass/main.scss */
+.graybg {
+  background: #d7d7d7;
+  padding-bottom: 0.8125em;
+}
+
+/* line 56, gassouth-mobile-sass/main.scss */
+.row {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 0px) {
+  /* line 56, gassouth-mobile-sass/main.scss */
+  .row {
+    padding: 0 1.21875em 0.40625em 1.21875em;
+  }
+}
+
+/* line 60, gassouth-mobile-sass/main.scss */
+#introrow {
+  padding-bottom: 1.625em;
+}
+
+/* line 63, gassouth-mobile-sass/main.scss */
+#footer {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 0px) {
+  /* line 63, gassouth-mobile-sass/main.scss */
+  #footer {
+    padding: 0.60938em 1.21875em 0.60938em 1.21875em;
+  }
+}
+
+/* line 68, gassouth-mobile-sass/main.scss */
+.glow, #main form input[type=radio] + .inline .box, #main form input[type=checkbox] + .inline .box, #main form input[type=radio] + .ratebox .box, #main form input[type=checkbox] + .ratebox .box, #main form input[type=radio] + .ratebox .contentbox, #main form input[type=checkbox] + .ratebox .contentbox {
+  border: 1px solid #aaaaaa;
+  border-radius: 2px;
+  box-shadow: inset 0 0 4px #aaaaaa;
+  text-shadow: -0.9px -0.9px #464646;
+}
+
+/* line 75, gassouth-mobile-sass/main.scss */
+.glow:focus, #main form input[type=radio] + .inline .box:focus, #main form input[type=checkbox] + .inline .box:focus, #main form input[type=radio]:checked + .inline .box, #main form input[type=checkbox]:checked + .inline .box, #main form input[type=radio] + .ratebox .box:focus, #main form input[type=checkbox] + .ratebox .box:focus, #main form input[type=radio] + .ratebox .contentbox:focus, #main form input[type=checkbox] + .ratebox .contentbox:focus, #main form input[type=radio]:checked + .ratebox .box, #main form input[type=checkbox]:checked + .ratebox .box, #main form input[type=radio]:checked + .ratebox .contentbox, #main form input[type=checkbox]:checked + .ratebox .contentbox {
+  outline: none;
+  border-color: #e36f1e;
+  transition: border-color linear 0.4s;
+}
+
+/* line 81, gassouth-mobile-sass/main.scss */
+.fullwidth {
+  background: -webkit-gradient(linear, 180, 180, color-stop(0%, rgba(231, 135, 8, 0.9)), color-stop(100%, rgba(255, 158, 62, 0.3)));
+  background: -webkit-linear-gradient(180, rgba(231, 135, 8, 0.9) 0%, rgba(255, 158, 62, 0.3) 100%);
+  background: -moz-linear-gradient(180, rgba(231, 135, 8, 0.9) 0%, rgba(255, 158, 62, 0.3) 100%);
+  background: -o-linear-gradient(180, rgba(231, 135, 8, 0.9) 0%, rgba(255, 158, 62, 0.3) 100%);
+  background: linear-gradient(180, rgba(231, 135, 8, 0.9) 0%, rgba(255, 158, 62, 0.3) 100%);
+}
+
+/* line 82, gassouth-mobile-sass/main.scss */
+.fullwidth-signup {
+  background: rgba(229, 133, 9, 0.8);
+}
+
+/* line 88, gassouth-mobile-sass/main.scss */
+#header #header-logo {
+  background: url("logo.png") no-repeat center center;
+  background-size: contain;
+  height: 30px;
+}
+
+/* line 95, gassouth-mobile-sass/main.scss */
+#header-signup {
+  width: 10px;
+  display: none;
+}
+@media screen and (min-width: 0px) {
+  /* line 95, gassouth-mobile-sass/main.scss */
+  #header-signup {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #header-signup:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 95, gassouth-mobile-sass/main.scss */
+  #header-signup {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #header-signup:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 95, gassouth-mobile-sass/main.scss */
+  #header-signup {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #header-signup:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 95, gassouth-mobile-sass/main.scss */
+  #header-signup {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #header-signup:last-child {
+    margin-right: 0;
+  }
+}
+
+/* line 106, gassouth-mobile-sass/main.scss */
+#main {
+  color: #464646;
+}
+/* line 109, gassouth-mobile-sass/main.scss */
+#main .promo-area {
+  margin: 0 0 0 0;
+  font-weight: 400;
+}
+@media screen and (min-width: 0px) {
+  /* line 109, gassouth-mobile-sass/main.scss */
+  #main .promo-area {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main .promo-area:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 109, gassouth-mobile-sass/main.scss */
+  #main .promo-area {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main .promo-area:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 109, gassouth-mobile-sass/main.scss */
+  #main .promo-area {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main .promo-area:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 109, gassouth-mobile-sass/main.scss */
+  #main .promo-area {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main .promo-area:last-child {
+    margin-right: 0;
+  }
+}
+/* line 116, gassouth-mobile-sass/main.scss */
+#main .promo-area #promo-label {
+  font-size: 0.4875em;
+  color: white;
+  text-transform: lowercase;
+  font-weight: 700;
+}
+/* line 123, gassouth-mobile-sass/main.scss */
+#main .promo-area #promo-code {
+  font-size: 2.1125em;
+  font-weight: 700;
+  color: #444444;
+  padding: 0 0.65em 0 0.65em;
+}
+@media screen and (min-width: 768px) {
+  /* line 123, gassouth-mobile-sass/main.scss */
+  #main .promo-area #promo-code {
+    padding: 0 0.975em 0 0.975em;
+  }
+}
+/* line 135, gassouth-mobile-sass/main.scss */
+#main .signup-special {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.625em;
+  margin-bottom: 1.21875em;
+  padding: 0.8125em 1.21875em 0.8125em 1.21875em;
+}
+/* line 141, gassouth-mobile-sass/main.scss */
+#main #signup {
+  text-align: center;
+  padding: 0 0 3.25em 0;
+}
+/* line 144, gassouth-mobile-sass/main.scss */
+#main #signup #signup-btn {
+  border: none;
+  font-family: arial, sans-serif;
+  font-size: 1.21875em;
+  color: #4a3d3a;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 700;
+  white-space: normal;
+  padding: 12px 0% 12px 0%;
+  -webkit-transition: all 0.3s false;
+  -moz-transition: all 0.3s false false;
+  -o-transition: all 0.3s false false;
+  transition: all 0.3s;
+  border-radius: 3px;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.85);
+  background: -webkit-gradient(linear, 180, 180, color-stop(0%, #a5b719), color-stop(50%, #a5b719), color-stop(51%, #9cb000), color-stop(100%, #9cb000));
+  background: -webkit-linear-gradient(180, #a5b719 0%, #a5b719 50%, #9cb000 51%, #9cb000 100%);
+  background: -moz-linear-gradient(180, #a5b719 0%, #a5b719 50%, #9cb000 51%, #9cb000 100%);
+  background: -o-linear-gradient(180, #a5b719 0%, #a5b719 50%, #9cb000 51%, #9cb000 100%);
+  background: linear-gradient(180, #a5b719 0%, #a5b719 50%, #9cb000 51%, #9cb000 100%);
+  background-repeat: no-repeat;
+  background-position: 88% 50%;
+  text-align: center;
+}
+@media screen and (min-width: 0px) {
+  /* line 144, gassouth-mobile-sass/main.scss */
+  #main #signup #signup-btn {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main #signup #signup-btn:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 144, gassouth-mobile-sass/main.scss */
+  #main #signup #signup-btn {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main #signup #signup-btn:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 144, gassouth-mobile-sass/main.scss */
+  #main #signup #signup-btn {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main #signup #signup-btn:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 144, gassouth-mobile-sass/main.scss */
+  #main #signup #signup-btn {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main #signup #signup-btn:last-child {
+    margin-right: 0;
+  }
+}
+/* line 151, gassouth-mobile-sass/_design.scss */
+#main #signup #signup-btn:hover {
+  background: -webkit-gradient(linear, 180, 180, color-stop(0%, #b5c91b), color-stop(50%, #b5c91b), color-stop(51%, #abc100), color-stop(100%, #abc100));
+  background: -webkit-linear-gradient(180, #b5c91b 0%, #b5c91b 50%, #abc100 51%, #abc100 100%);
+  background: -moz-linear-gradient(180, #b5c91b 0%, #b5c91b 50%, #abc100 51%, #abc100 100%);
+  background: -o-linear-gradient(180, #b5c91b 0%, #b5c91b 50%, #abc100 51%, #abc100 100%);
+  background: linear-gradient(180, #b5c91b 0%, #b5c91b 50%, #abc100 51%, #abc100 100%);
+  background-repeat: no-repeat;
+  background-position: 92% 50%;
+}
+@media screen and (min-width: 0px) {
+  /* line 150, gassouth-mobile-sass/main.scss */
+  #main #email-form {
+    padding: 0.8125em 1.21875em 1.21875em 1.21875em;
+  }
+}
+/* line 152, gassouth-mobile-sass/main.scss */
+#main form {
+  overflow: hidden;
+  *zoom: 1;
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  clear: both;
+}
+/* line 156, gassouth-mobile-sass/main.scss */
+#main form .headliner {
+  margin: 1.625em 0 0.40625em 0;
+  padding: 0.8125em 0 0.8125em 0.8125em;
+  background: #949494;
+  color: white;
+}
+/* line 163, gassouth-mobile-sass/main.scss */
+#main form #moving-questions {
+  position: relative;
+  float: left;
+  padding: 0 0.8125em 0.8125em 2.4375em;
+  margin-bottom: 1.625em;
+}
+/* line 169, gassouth-mobile-sass/main.scss */
+#main form #moving-questions .form-item:first-child {
+  margin-top: 0;
+}
+/* line 173, gassouth-mobile-sass/main.scss */
+#main form .form-item {
+  margin: 1.21875em 0 1.21875em 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 177, gassouth-mobile-sass/main.scss */
+#main form .form-item label {
+  font-size: 1.3em;
+  padding: 0.40625em 0 0.40625em 0;
+}
+@media screen and (min-width: 0px) {
+  /* line 177, gassouth-mobile-sass/main.scss */
+  #main form .form-item label {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item label:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 177, gassouth-mobile-sass/main.scss */
+  #main form .form-item label {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item label:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 177, gassouth-mobile-sass/main.scss */
+  #main form .form-item label {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item label:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 177, gassouth-mobile-sass/main.scss */
+  #main form .form-item label {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item label:last-child {
+    margin-right: 0;
+  }
+}
+/* line 183, gassouth-mobile-sass/main.scss */
+#main form .form-item input, #main form .form-item select {
+  font-size: 1.09688em;
+  letter-spacing: 0.057em;
+  padding: 0.65em 0.65em 0.65em 0.65em;
+}
+@media screen and (min-width: 0px) {
+  /* line 183, gassouth-mobile-sass/main.scss */
+  #main form .form-item input, #main form .form-item select {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item input:last-child, #main form .form-item select:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 183, gassouth-mobile-sass/main.scss */
+  #main form .form-item input, #main form .form-item select {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item input:last-child, #main form .form-item select:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 183, gassouth-mobile-sass/main.scss */
+  #main form .form-item input, #main form .form-item select {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item input:last-child, #main form .form-item select:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 183, gassouth-mobile-sass/main.scss */
+  #main form .form-item input, #main form .form-item select {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item input:last-child, #main form .form-item select:last-child {
+    margin-right: 0;
+  }
+}
+/* line 190, gassouth-mobile-sass/main.scss */
+#main form .form-item .explain {
+  font-size: 0.8125em;
+  margin-top: 0.40625em;
+  padding: 0.40625em;
+}
+@media screen and (min-width: 0px) {
+  /* line 190, gassouth-mobile-sass/main.scss */
+  #main form .form-item .explain {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item .explain:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 190, gassouth-mobile-sass/main.scss */
+  #main form .form-item .explain {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item .explain:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 190, gassouth-mobile-sass/main.scss */
+  #main form .form-item .explain {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item .explain:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 190, gassouth-mobile-sass/main.scss */
+  #main form .form-item .explain {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item .explain:last-child {
+    margin-right: 0;
+  }
+}
+/* line 195, gassouth-mobile-sass/main.scss */
+#main form .form-item .explain img {
+  vertical-align: middle;
+  float: left;
+  margin-right: 0.40625em;
+  margin-top: -5px;
+}
+/* line 197, gassouth-mobile-sass/main.scss */
+#main form .form-item #needSocial {
+  font-size: 1.05625em;
+  font-weight: bold;
+  display: block;
+  color: #333333;
+}
+@media screen and (max-width: 480px) {
+  /* line 197, gassouth-mobile-sass/main.scss */
+  #main form .form-item #needSocial {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item #needSocial:last-child {
+    margin-right: 0;
+  }
+}
+/* line 204, gassouth-mobile-sass/main.scss */
+#main form .form-item .inlineExplain {
+  display: block;
+  position: relative;
+  left: 35px;
+  top: -20px;
+  padding-right: 50px;
+}
+/* line 209, gassouth-mobile-sass/main.scss */
+#main form .form-item .safe img {
+  vertical-align: middle;
+}
+@media screen and (min-width: 0px) {
+  /* line 212, gassouth-mobile-sass/main.scss */
+  #main form .form-item #submit-btn {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item #submit-btn:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 212, gassouth-mobile-sass/main.scss */
+  #main form .form-item #submit-btn {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item #submit-btn:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 212, gassouth-mobile-sass/main.scss */
+  #main form .form-item #submit-btn {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item #submit-btn:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 212, gassouth-mobile-sass/main.scss */
+  #main form .form-item #submit-btn {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item #submit-btn:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 212, gassouth-mobile-sass/main.scss */
+  #main form .form-item #submit-btn {
+    margin-top: 0.40625em;
+  }
+}
+/* line 217, gassouth-mobile-sass/main.scss */
+#main form .form-item .nogo {
+  border: none;
+  font-family: arial, sans-serif;
+  font-size: 1.21875em;
+  color: #4a3d3a;
+  cursor: default;
+  letter-spacing: 1px;
+  font-weight: 700;
+  white-space: normal;
+  padding: 12px 0% 12px 0%;
+  -webkit-transition: all 0.3s false;
+  -moz-transition: all 0.3s false false;
+  -o-transition: all 0.3s false false;
+  transition: all 0.3s;
+  border-radius: 3px;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.85);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a2a2a2), color-stop(50%, #a2a2a2), color-stop(51%, #949494), color-stop(100%, #949494));
+  background: -webkit-linear-gradient(#a2a2a2 0%, #a2a2a2 50%, #949494 51%, #949494 100%);
+  background: -moz-linear-gradient(#a2a2a2 0%, #a2a2a2 50%, #949494 51%, #949494 100%);
+  background: -o-linear-gradient(#a2a2a2 0%, #a2a2a2 50%, #949494 51%, #949494 100%);
+  background: linear-gradient(#a2a2a2 0%, #a2a2a2 50%, #949494 51%, #949494 100%);
+  background-repeat: no-repeat;
+  background-position: 88% 50%;
+  text-align: center;
+}
+/* line 221, gassouth-mobile-sass/main.scss */
+#main form .form-item .okgo {
+  border: none;
+  font-family: arial, sans-serif;
+  font-size: 1.21875em;
+  color: #4a3d3a;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 700;
+  white-space: normal;
+  padding: 12px 0% 12px 0%;
+  -webkit-transition: all 0.3s false;
+  -moz-transition: all 0.3s false false;
+  -o-transition: all 0.3s false false;
+  transition: all 0.3s;
+  border-radius: 3px;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.85);
+  background: -webkit-gradient(linear, 180, 180, color-stop(0%, #a5b719), color-stop(50%, #a5b719), color-stop(51%, #9cb000), color-stop(100%, #9cb000));
+  background: -webkit-linear-gradient(180, #a5b719 0%, #a5b719 50%, #9cb000 51%, #9cb000 100%);
+  background: -moz-linear-gradient(180, #a5b719 0%, #a5b719 50%, #9cb000 51%, #9cb000 100%);
+  background: -o-linear-gradient(180, #a5b719 0%, #a5b719 50%, #9cb000 51%, #9cb000 100%);
+  background: linear-gradient(180, #a5b719 0%, #a5b719 50%, #9cb000 51%, #9cb000 100%);
+  background-repeat: no-repeat;
+  background-position: 88% 50%;
+  text-align: center;
+}
+/* line 151, gassouth-mobile-sass/_design.scss */
+#main form .form-item .okgo:hover {
+  background: -webkit-gradient(linear, 180, 180, color-stop(0%, #b5c91b), color-stop(50%, #b5c91b), color-stop(51%, #abc100), color-stop(100%, #abc100));
+  background: -webkit-linear-gradient(180, #b5c91b 0%, #b5c91b 50%, #abc100 51%, #abc100 100%);
+  background: -moz-linear-gradient(180, #b5c91b 0%, #b5c91b 50%, #abc100 51%, #abc100 100%);
+  background: -o-linear-gradient(180, #b5c91b 0%, #b5c91b 50%, #abc100 51%, #abc100 100%);
+  background: linear-gradient(180, #b5c91b 0%, #b5c91b 50%, #abc100 51%, #abc100 100%);
+  background-repeat: no-repeat;
+  background-position: 92% 50%;
+}
+/* line 226, gassouth-mobile-sass/main.scss */
+#main form .form-item .submit-wrap {
+  background: blue;
+  width: 400px !important;
+}
+@media screen and (min-width: 0px) {
+  /* line 226, gassouth-mobile-sass/main.scss */
+  #main form .form-item .submit-wrap {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item .submit-wrap:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 226, gassouth-mobile-sass/main.scss */
+  #main form .form-item .submit-wrap {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item .submit-wrap:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 226, gassouth-mobile-sass/main.scss */
+  #main form .form-item .submit-wrap {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item .submit-wrap:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 226, gassouth-mobile-sass/main.scss */
+  #main form .form-item .submit-wrap {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .form-item .submit-wrap:last-child {
+    margin-right: 0;
+  }
+}
+/* line 231, gassouth-mobile-sass/main.scss */
+#main form .form-item .ok {
+  margin-top: 0.40625em;
+  padding: 0.40625em;
+  color: #007336;
+  background: #82ca9c;
+}
+/* line 237, gassouth-mobile-sass/main.scss */
+#main form .form-item .fail {
+  margin-top: 0;
+  padding: 0.40625em;
+  color: #892727;
+  background: #e9b1b1;
+}
+/* line 242, gassouth-mobile-sass/main.scss */
+#main form .form-item .label-fail {
+  color: #892727;
+}
+/* line 245, gassouth-mobile-sass/main.scss */
+#main form .form-item .input-fail {
+  border-color: red;
+}
+/* line 249, gassouth-mobile-sass/main.scss */
+#main form .form-item ul {
+  list-style-type: none;
+}
+/* line 252, gassouth-mobile-sass/main.scss */
+#main form .form-item .inlineCheckSmall {
+  display: block;
+  font-size: 0.73125em;
+  margin: 0 0 0 2.4375em;
+  position: relative;
+  top: -24px;
+}
+/* line 253, gassouth-mobile-sass/main.scss */
+#main form .form-item .inlineCheck {
+  display: block;
+  text-indent: 0em;
+  margin: 0 0 0 1.95em;
+  position: relative;
+  top: -31px;
+}
+/* line 256, gassouth-mobile-sass/main.scss */
+#main form .thanks {
+  padding: 0.40625em;
+  color: #007336;
+  background: #82ca9c;
+  margin: 0;
+}
+@media screen and (min-width: 0px) {
+  /* line 256, gassouth-mobile-sass/main.scss */
+  #main form .thanks {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .thanks:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 256, gassouth-mobile-sass/main.scss */
+  #main form .thanks {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .thanks:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 256, gassouth-mobile-sass/main.scss */
+  #main form .thanks {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .thanks:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 256, gassouth-mobile-sass/main.scss */
+  #main form .thanks {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form .thanks:last-child {
+    margin-right: 0;
+  }
+}
+/* line 265, gassouth-mobile-sass/main.scss */
+#main form input[type=radio], #main form input[type=checkbox] {
+  display: none;
+  *overflow: hidden;
+}
+/* line 271, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .inline, #main form input[type=checkbox] + .inline {
+  color: #333;
+  padding: 0.40625em 0 0.40625em 0 !important;
+  display: block;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+}
+/* line 274, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .inline .box, #main form input[type=checkbox] + .inline .box {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  margin-top: -6px;
+}
+/* line 284, gassouth-mobile-sass/main.scss */
+#main form input[type=radio]:checked + .inline .box .check, #main form input[type=checkbox]:checked + .inline .box .check {
+  width: 12px;
+  height: 12px;
+  margin: auto;
+  margin-top: 8px;
+  background: #faa516;
+  display: block;
+  -webkit-border-radius: 2px 2px;
+  -moz-border-radius: 2px / 2px;
+  border-radius: 2px / 2px;
+  box-shadow: 1px 1px 2px #a2a2a2;
+}
+/* line 290, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox, #main form input[type=checkbox] + .ratebox {
+  position: relative;
+  z-index: 10;
+  display: block;
+  float: left;
+  clear: both;
+  color: #333;
+  padding: 0 !important;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+}
+@media screen and (min-width: 0px) {
+  /* line 290, gassouth-mobile-sass/main.scss */
+  #main form input[type=radio] + .ratebox, #main form input[type=checkbox] + .ratebox {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form input[type=radio] + .ratebox:last-child, #main form input[type=checkbox] + .ratebox:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 290, gassouth-mobile-sass/main.scss */
+  #main form input[type=radio] + .ratebox, #main form input[type=checkbox] + .ratebox {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form input[type=radio] + .ratebox:last-child, #main form input[type=checkbox] + .ratebox:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 290, gassouth-mobile-sass/main.scss */
+  #main form input[type=radio] + .ratebox, #main form input[type=checkbox] + .ratebox {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form input[type=radio] + .ratebox:last-child, #main form input[type=checkbox] + .ratebox:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 290, gassouth-mobile-sass/main.scss */
+  #main form input[type=radio] + .ratebox, #main form input[type=checkbox] + .ratebox {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #main form input[type=radio] + .ratebox:last-child, #main form input[type=checkbox] + .ratebox:last-child {
+    margin-right: 0;
+  }
+}
+/* line 295, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .box, #main form input[type=checkbox] + .ratebox .box {
+  display: inline-block;
+  position: relative;
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  top: 15px;
+  left: 15px;
+  float: left;
+}
+/* line 301, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox, #main form input[type=checkbox] + .ratebox .contentbox {
+  background: #fff;
+  padding: 0.65em;
+  text-align: center;
+  margin-top: -1px;
+}
+/* line 304, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox .money, #main form input[type=checkbox] + .ratebox .contentbox .money {
+  position: relative;
+  left: -15px;
+  display: block;
+}
+/* line 305, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox .dollar, #main form input[type=checkbox] + .ratebox .contentbox .dollar {
+  font-size: 1.625em;
+  color: #e36f1e;
+  position: relative;
+  top: -24px;
+  letter-spacing: -7px;
+  position: relative;
+  left: -7px;
+  display: inline-block;
+}
+/* line 306, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox .rate, #main form input[type=checkbox] + .ratebox .contentbox .rate {
+  font-size: 3.25em;
+  color: #e36f1e;
+  letter-spacing: -4px;
+  line-height: 98%;
+}
+/* line 307, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox .prd, #main form input[type=checkbox] + .ratebox .contentbox .prd {
+  margin-left: -9px;
+  margin-right: 7px;
+}
+/* line 308, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox .cent, #main form input[type=checkbox] + .ratebox .contentbox .cent {
+  font-size: 1.625em;
+  color: #e36f1e;
+  letter-spacing: -7px;
+}
+/* line 309, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox .thermmsg, #main form input[type=checkbox] + .ratebox .contentbox .thermmsg {
+  font-size: 0.8125em;
+  color: #e36f1e;
+  padding: 0.13542em;
+}
+/* line 310, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox .ratemsg, #main form input[type=checkbox] + .ratebox .contentbox .ratemsg {
+  color: #444444;
+  padding: 0.13542em;
+}
+/* line 311, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox .promo, #main form input[type=checkbox] + .ratebox .contentbox .promo {
+  font-size: 0.8125em;
+  color: #444444;
+  padding: 0.13542em;
+}
+/* line 313, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox .promo .code, #main form input[type=checkbox] + .ratebox .contentbox .promo .code {
+  color: #9baf37;
+}
+/* line 315, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] + .ratebox .contentbox .ratedesc, #main form input[type=checkbox] + .ratebox .contentbox .ratedesc {
+  display: block;
+  padding: 0.8125em;
+  font-size: 0.65em;
+}
+/* line 320, gassouth-mobile-sass/main.scss */
+#main form input[type=radio] #last, #main form input[type=checkbox] #last {
+  margin-top: 1000px;
+}
+/* line 324, gassouth-mobile-sass/main.scss */
+#main form input[type=radio]:checked + .ratebox, #main form input[type=checkbox]:checked + .ratebox {
+  z-index: 100;
+}
+/* line 328, gassouth-mobile-sass/main.scss */
+#main form input[type=radio]:checked + .ratebox .box .check, #main form input[type=checkbox]:checked + .ratebox .box .check {
+  width: 12px;
+  height: 12px;
+  margin: auto;
+  margin-top: 8px;
+  background: #faa516;
+  display: block;
+  -webkit-border-radius: 2px 2px;
+  -moz-border-radius: 2px / 2px;
+  border-radius: 2px / 2px;
+  box-shadow: 0px 0px 3px #a2a2a2;
+}
+/* line 333, gassouth-mobile-sass/main.scss */
+#main form input[type=radio]:checked + .ratebox .contentbox, #main form input[type=checkbox]:checked + .ratebox .contentbox {
+  background: rgba(240, 240, 240, 0.6);
+  z-index: 100;
+  box-shadow: 0px 0px 4px #e36f1e;
+}
+
+/* line 350, gassouth-mobile-sass/main.scss */
+#footer {
+  color: #777777;
+}
+
+/* line 355, gassouth-mobile-sass/main.scss */
+#bbb {
+  padding: 0.8125em 0 3.25em 0;
+  font-size: 0.715em;
+}
+@media screen and (min-width: 0px) {
+  /* line 355, gassouth-mobile-sass/main.scss */
+  #bbb {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 47.58542%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #bbb:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 355, gassouth-mobile-sass/main.scss */
+  #bbb {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #bbb:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 355, gassouth-mobile-sass/main.scss */
+  #bbb {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #bbb:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 355, gassouth-mobile-sass/main.scss */
+  #bbb {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #bbb:last-child {
+    margin-right: 0;
+  }
+}
+/* line 360, gassouth-mobile-sass/main.scss */
+#bbb #bbblogo {
+  float: left;
+  margin-right: 0.8125em;
+}
+/* line 361, gassouth-mobile-sass/main.scss */
+#bbb #bbblabel {
+  margin-left: 2.4375em;
+}
+
+/* line 364, gassouth-mobile-sass/main.scss */
+#secure {
+  padding: 0.8125em 0 3.25em 0;
+}
+@media screen and (min-width: 0px) {
+  /* line 364, gassouth-mobile-sass/main.scss */
+  #secure {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 30.11389%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #secure:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 364, gassouth-mobile-sass/main.scss */
+  #secure {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #secure:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 364, gassouth-mobile-sass/main.scss */
+  #secure {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #secure:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 364, gassouth-mobile-sass/main.scss */
+  #secure {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #secure:last-child {
+    margin-right: 0;
+  }
+}
+
+/* line 369, gassouth-mobile-sass/main.scss */
+#legal {
+  font-size: 0.8125em;
+}
+@media screen and (min-width: 0px) {
+  /* line 369, gassouth-mobile-sass/main.scss */
+  #legal {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #legal:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* line 369, gassouth-mobile-sass/main.scss */
+  #legal {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #legal:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 369, gassouth-mobile-sass/main.scss */
+  #legal {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #legal:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  /* line 369, gassouth-mobile-sass/main.scss */
+  #legal {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 54, gassouth-mobile-sass/neat/grid/_span-columns.scss */
+  #legal:last-child {
+    margin-right: 0;
+  }
+}
+/* line 373, gassouth-mobile-sass/main.scss */
+#legal #footer-copyright {
+  padding: 0.8125em 0 0.8125em 0;
+}
+
+/* line 386, gassouth-mobile-sass/main.scss */
+#dotmatrix {
+  display: block;
+  position: absolute;
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  filter: blur(4px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=64);
+  opacity: 0.64;
+  z-index: -100;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 394, gassouth-mobile-sass/main.scss */
+#dotmatrix #dot1 {
+  background: url("dots_flat_38.png") no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  top: 3%;
+  left: 3%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  filter: blur(5px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=54);
+  opacity: 0.54;
+}
+/* line 403, gassouth-mobile-sass/main.scss */
+#dotmatrix #dot2 {
+  background: url("dots_flat_39.png") no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  top: -13%;
+  right: -10%;
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  filter: blur(12px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=84);
+  opacity: 0.84;
+}
+/* line 412, gassouth-mobile-sass/main.scss */
+#dotmatrix #dot3 {
+  background: url("dots_flat_38.png") no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  height: 132px;
+  width: 132px;
+  top: 58%;
+  right: 74%;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  filter: blur(1px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=46);
+  opacity: 0.46;
+}
+/* line 421, gassouth-mobile-sass/main.scss */
+#dotmatrix #dot4 {
+  background: url("dots_flat_39.png") no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  height: 212px;
+  width: 212px;
+  bottom: -32%;
+  right: 9%;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  filter: blur(1px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=86);
+  opacity: 0.86;
+}
+
+/* line 438, gassouth-mobile-sass/main.scss */
+.terms .center {
+  margin: 1.625em 0;
+}
+/* line 439, gassouth-mobile-sass/main.scss */
+.terms .center strong {
+  margin-bottom: 0.40625em;
+  display: block;
+}
+/* line 442, gassouth-mobile-sass/main.scss */
+.terms p, .terms #main form input[type=radio] + .ratebox .contentbox .ratedesc, #main form input[type=radio] + .ratebox .contentbox .terms .ratedesc, .terms #main form input[type=checkbox] + .ratebox .contentbox .ratedesc, #main form input[type=checkbox] + .ratebox .contentbox .terms .ratedesc {
+  margin: 1.21875em 0;
+}
+/* line 444, gassouth-mobile-sass/main.scss */
+.terms .tc_ul li {
+  font-size: 0.8125em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.625em;
+}
+/* line 448, gassouth-mobile-sass/main.scss */
+.terms .note p, .terms .note #main form input[type=radio] + .ratebox .contentbox .ratedesc, #main form input[type=radio] + .ratebox .contentbox .terms .note .ratedesc, .terms .note #main form input[type=checkbox] + .ratebox .contentbox .ratedesc, #main form input[type=checkbox] + .ratebox .contentbox .terms .note .ratedesc {
+  margin: 0;
+}
+/* line 450, gassouth-mobile-sass/main.scss */
+.terms .note p:first-child, .terms .note #main form input[type=radio] + .ratebox .contentbox .ratedesc:first-child, #main form input[type=radio] + .ratebox .contentbox .terms .note .ratedesc:first-child, .terms .note #main form input[type=checkbox] + .ratebox .contentbox .ratedesc:first-child, #main form input[type=checkbox] + .ratebox .contentbox .terms .note .ratedesc:first-child {
+  margin-top: 0.8125em;
+  font-weight: bold;
+}
+/* line 451, gassouth-mobile-sass/main.scss */
+.terms .note p:last-child, .terms .note #main form input[type=radio] + .ratebox .contentbox .ratedesc:last-child, #main form input[type=radio] + .ratebox .contentbox .terms .note .ratedesc:last-child, .terms .note #main form input[type=checkbox] + .ratebox .contentbox .ratedesc:last-child, #main form input[type=checkbox] + .ratebox .contentbox .terms .note .ratedesc:last-child {
+  margin-bottom: 4.0625em;
+}

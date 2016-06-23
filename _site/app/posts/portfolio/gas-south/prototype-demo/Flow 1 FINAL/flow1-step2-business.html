@@ -1,0 +1,432 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link href="../css/reset.css" rel="stylesheet"/>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../css/formalize-custom.css" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<script src="../js/jquery.1.11.1.min.js"></script>
+<script src="../js/modernizr.min.js"></script>
+<script src="../js/jquery.mask.min.js"></script>
+<script src="../js/form.js"></script>
+
+<title>Flow 1 - Step 2 - Business Customer Information</title>
+
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="intro">
+		<img src="../img/header.jpg" width="700" height="63">
+	</div>
+
+    <div class="column-1">
+	<ol class="progtrckr" data-progtrckr-steps="4">
+                <li class="progtrckr-done">Step 1</li>
+             	 <li class="progtrckr-done">Step 2</li>
+            	 <li class="progtrckr-todo">Step 3</li>
+             	<li class="progtrckr-todo">Confirmation</li>
+            </ol>
+    
+        <div class="header">
+            <h1>Business Information</h1>
+        </div> <!--header-->
+
+        <div class="content-area">
+		
+			<form action="#" method="post" enctype="multipart/form-data" onsubmit="return false" class="field_style">
+			
+				<!--=====================================
+				CONTACT INFO MODULE - HOME
+				=====================================-->
+				<h2>Business and Contact Information:</h2>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="202">
+							<label>Business Name *</label><br>
+							<input type="text" name="businessName" class="input_large selected_field">
+						</td>
+						<td width="10">&nbsp;</td>
+						<td width="151">
+							<label>Business Phone *</label><br>
+							<input type="text" name="businessPhone" class="input_medium phoneMask">
+						</td>
+                        <td width="10">&nbsp;</td>
+                      <td width="232">
+							<label>Employer Identification Number (EIN) *</label><br>
+							<input type="text" name="ein" class="input_xlarge">
+						</td>
+						<td width="5">&nbsp;</td>  
+                        
+					</tr>
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="15">&nbsp;</td>
+					</tr>
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="152">
+							<label>Contact First Name *</label><br>
+							<input type="text" name="firstName" class="input_medium error">
+						</td>
+						<td width="10">&nbsp;</td>
+						<td width="52">
+							<label>M.I.</label><br>
+							<input type="text" name="middleInitial" class="input_tiny">
+						</td>
+						<td width="10">&nbsp;</td>
+						<td width="152">
+							<label>Contact Last Name *</label><br>
+							<input type="text" name="lastName" class="input_medium">
+						</td>
+						<td width="10">&nbsp;</td>
+						<td width="52">
+							<label>Suffix</label><br>
+							<input type="text" name="suffix" class="input_tiny">
+						</td>
+						<td width="167">&nbsp;</td>
+					</tr>
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="15">&nbsp;</td>
+					</tr>
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="152">
+							<label>Email *</label><br>
+							<input type="text" name="email" class="input_medium">
+						</td>
+						<td width="10">&nbsp;</td>
+						<td width="453">
+							<label>Confirm Email *</label><br>
+							<input type="text" name="confirmEmail" class="input_medium">
+						</td>
+					</tr>
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="15">&nbsp;</td>
+					</tr>
+				</table>
+				<table width="268" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="154">
+							<label>Primary Phone Number *</label><br>
+							<input type="text" name="email" class="input_medium phoneMask">
+						</td>
+                        
+                      <td width="11">&nbsp;</td>
+						<td width="103">
+							<label>Phone Type *</label><br>
+							<select>
+						    <option value="mobile" selected="selected">Mobile</option>
+							<option value="landline">Landline</option>
+						</select> 
+						</td>  
+					</tr>
+				</table>
+                
+                 <div class="legal"><br>By providing Gas South with a contact phone number, you expressly agree that Gas South may call or text you with important service notifications related to your account using autodialed or prerecorded calls or text.  For wireless customers, standard text rates or other charges may apply.</div>
+				
+				<!--=====================================
+				END CONTACT INFO MODULE - HOME
+				=====================================-->
+				
+				
+				<!--=====================================
+				SERVICE AND BILLING ADDRESS MODULE - HOME
+				=====================================-->
+				
+				<h2>Service Address:</h2>
+				<p>Where will the service be turned on?</p>
+				
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+                    
+						<td width="152">
+							<label>Address 1 *</label><br>
+							<input type="text" name="address1" class="input_xlarge">
+						</td>
+						<td width="20">&nbsp;</td>
+						<td width="453">
+							<label>Address 2 (Suite or Apartment)</label><br>
+							<input type="text" name="address2" class="input_xlarge">
+						</td>
+					</tr>
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="15">&nbsp;</td>
+					</tr>
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="202">
+							<label>City *</label><br>
+							<input type="text" name="city" class="input_large">
+						</td>
+						<td width="12">&nbsp;</td>
+						<td width="57">
+							<label>State *</label><br>
+							<select>
+						    <option value="GA" selected="selected">GA</option>
+							<option value="FL">FL</option>
+						</select> 
+						</td>
+						<td width="15">&nbsp;</td>
+						<td width="325">
+							<label>Zip Code *</label><br>
+							<input type="text" name="zipCode" class="input_small">
+						</td>
+						
+					</tr>
+                    <tr>
+						<td height="15">&nbsp;</td>
+					</tr>
+				</table>
+				
+           <table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+							<label for="differentAddress" class="clearfix">
+								<input type="checkbox" name="service_type" id="differentAddress" value="differentAddress"  /> I have more than one location
+							</label>
+						</td>
+					</tr>
+				</table>
+                
+               
+					   
+                          
+                
+                
+                
+				<div class="orange-alert">
+					<p><strong>Select the Correct Service Address</strong><br>Please select the correct service address from the list below:</p>
+					<p><table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+							<label for="address1" class="clearfix">
+								<input type="radio" name="correctAddress" id="address1" value=""  /> 123 Service Address Option 1, Atlanta, GA, 30309 Address
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td height="5">
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="address2" class="clearfix">
+								<input type="radio" name="correctAddress" id="address2" value=""  /> 123 Service Address Option 1, Atlanta, GA, 30309 Address
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td height="5">
+							
+						</td>
+					</tr>
+                    <tr>
+						<td>
+							<label for="address3" class="clearfix">
+								<input type="radio" name="correctAddress" id="newmeter" value=""  /> This is a new meter
+							</label>
+						</td>
+					</tr>
+                    <tr>
+						<td height="5">
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="address3" class="clearfix">
+								<input type="radio" name="correctAddress" id="address3" value=""  /> My address is not listed
+							</label>
+						</td>
+					</tr>
+					</table></p>
+				
+				</div>
+				
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+							<label for="differentBilling" class="clearfix">
+								<input type="checkbox" name="service_type" id="differentBilling" value="differentBilling" class="trigger" data-rel="showBillingAddress" /> My Billing Address is different from my Service Address
+							</label>
+						</td>
+					</tr>
+				</table>
+                
+               
+					<div class="showBillingAddress conditionalSection">
+						<h2>Billing Address:</h2>
+						<table width="620" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="152">
+									<label>Address 1 *</label><br>
+									<input type="text" name="billingAddress1" class="input_xlarge">
+								</td>
+								<td width="15">&nbsp;</td>
+								<td width="453">
+									<label>Address 2 (Suite or Apt.)</label><br>
+									<input type="text" name="billingAddress2" class="input_xlarge">
+								</td>
+							</tr>
+						</table>
+						<table width="620" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="15">&nbsp;</td>
+							</tr>
+						</table>
+						<table width="620" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="202">
+									<label>City *</label><br>
+									<input type="text" name="billingCity" class="input_large">
+								</td>
+								<td width="12">&nbsp;</td>
+								<td width="57">
+									<label>State *</label><br>
+									<select>
+									<option value="billingGA" selected="selected">GA</option>
+									<option value="billingFL">FL</option>
+								</select> 
+								</td>
+								<td width="15">&nbsp;</td>
+								<td width="325">
+									<label>Zip Code *</label><br>
+									<input type="text" name="billingZipCode" class="input_small">
+								</td>
+								<td width="9">&nbsp;</td>
+							</tr>
+						</table>
+                 
+                        
+					</div>
+					 
+               <h2>Additional Information:</h2>    
+               
+<br>
+             <table width="220" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						
+                <td width="220">     
+				<label>How did you hear about us?</label><br>
+				<select>
+					<option value="" disabled="disabled" selected="selected">- Please select -</option>
+					<option value="ad">Advertisement</option>
+					<option value="chambercommerce">Chamber of Commerce</option>
+					<option value="customerrefferal">Customer Referral</option>
+					<option value="mail">Direct Mail</option>
+                  <option value="email">Email</option>
+                  <option value="GSrep">Gas South Rep Visit</option>
+                  <option value="industryorg">Industry Organization</option>
+                  <option value="other">Other</option>
+                  
+				</select>
+                
+            </td>
+                
+                </tr>
+                </table>
+               <p>&nbsp;</p>
+ 
+				<h3>Referred by:</h3>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="152">
+							<label>First Name</label><br>
+							<input type="text" name="addFirstName" class="input_medium">
+						</td>
+						<td width="15">&nbsp;</td>
+						<td width="453">
+							<label>Last Name</label><br>
+							<input type="text" name="addLastName" class="input_medium">
+						</td>
+					</tr>
+				</table>
+                
+              <p>&nbsp;</p>  
+				<!--=====================================
+				END SERVICE AND BILLING ADDRESS MODULE - HOME
+				=====================================-->
+                <div class="red-alert">		
+                    <p>Please fill the required fields: Contact First Name</p>
+				</div>     
+                
+                
+			
+				<div class="buttonContainer">
+					<button type="button" class="grayBtn">&lsaquo; Back</button> 
+					<button type="button" class="greenBtn">Next &rsaquo;</button> 
+				</div>
+				
+				
+			</form> <!--END FORM-->
+				
+           	
+
+        </div><!--content area-->
+
+    </div><!--column-1-->
+
+   <div class="summary">
+        <h3 class="mainbox">Order Summary</h3>
+		<h3>Service</h3>
+		<p>Business Service</p>
+		
+		<h3>Service Type</h3>
+		<p>Turn On</p>
+		<h3>Contact Information</h3>
+		<p>- Please Select -		</p>
+		
+		<h3>Service &amp; Billing Address</h3>
+		<p>- Please Select -</p>
+		
+		 <div class="promo">
+        	<h2>Get $25 in Bill Credits.</h2>
+           <p>Your enrollment is eligible for $25 in bill credits. You will receive a $5 credit on your first 5 bills.</p>
+        </div>
+    </div> 
+    <!--column-2-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</div> <!--wrapper-->
+
+
+</body>
+</html>

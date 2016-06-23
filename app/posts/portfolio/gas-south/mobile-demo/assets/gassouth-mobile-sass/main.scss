@@ -1,0 +1,454 @@
+
+// Compass frameworks
+@import "compass/css3";
+@import "compass/utilities";
+
+// core frameworks 
+@import 'bourbon/bourbon'; //interferes with Compass background-image
+@import 'neat/neat';
+
+// framework files
+@import '___reset';        //basic reset
+@import '___framework';    //basic framework: breakpoints etc.
+
+@import 'design';          //elements of design
+
+@import "compass/utilities";
+@import "compass/css3";
+@import "compass/css3/images";
+
+
+// *********************************************************  
+// UNIVERSAL
+// *********************************************************
+
+
+
+h1 { color: white; font-size: $base*1.7; font-weight: 700; padding-bottom: $base/2; line-height: $base*1.3;}
+h2 { font-size: $base*1.2; font-weight: 700; color: $gs-gray; line-height: $base*1.5;}
+h3 { color: white; font-weight: 700; }
+p { font-size: $base; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; line-height: $base*2;}
+.ratepromo {font-weight: bold}
+.rates{ margin-bottom: $base*2;}
+
+a:link, a:active, a:visited {color: $gs-gray}
+a:hover {color: white}
+
+
+
+// html { height: 100%}
+body {
+  background: $gs-skin url("bg.png") no-repeat center center;
+  background-size: cover; 
+  @extend %quicksand; 
+  font-weight: 700;
+
+}
+
+.align-left {text-align: left !important; }
+.bg-left {background-position: 0% center !important;}
+
+#header {
+  @include outer-container;
+  @include media($small) {padding: $base*0.8 $side-wrap $base*1.3 $side-wrap;}
+}
+.graybg {background: $gs-vltgray; padding-bottom: $base}
+.row {
+  @include outer-container;
+  @include media($small) {padding: 0 $side-wrap $side-wrap/3 $side-wrap;}
+}
+#introrow {
+  padding-bottom: $base*2;
+}
+#footer{
+  @include outer-container;
+  @include media($small) {padding: $side-wrap/2 $side-wrap $side-wrap/2 $side-wrap;}
+} 
+
+.glow {
+  border: 1px solid $gs-bordercolor;
+  border-radius: 2px;
+  box-shadow: inset 0 0 4px $gs-shadowcolor;
+  text-shadow: -0.9px -0.9px $gs-fontcolor2;
+}
+
+.glow:focus { 
+  outline: none;
+  border-color: $gs-darkorange;
+  transition: border-color linear 0.4s;
+}
+
+.fullwidth { @include background(linear-gradient(180, rgba(231,135 ,8,0.9) 0%, rgba(236,144,57,0.3)*1.1 100%)) }
+.fullwidth-signup { @include background(rgba(229, 133, 9, 0.8)) }
+
+// *********************************************************
+// HEADER
+// *********************************************************
+#header {
+  #header-logo { 
+    background: url("logo.png") no-repeat center center;
+    background-size: contain; 
+    height: 30px;
+  }
+}
+
+#header-signup{
+   @include span-all(6, 12, 12, 12);
+   width: 10px;
+   display: none;
+}
+
+// *********************************************************
+// MAIN
+// *********************************************************
+
+
+#main {
+   color: $gs-fontcolor2;
+
+  .promo-area {
+    @include span-all(6, 12, 12, 12);
+    // text-align: center;
+    margin: 0 0 0 0;
+    font-weight: 400;
+
+    // #promo-label-wrap { @extend .wrap-pad; }
+    #promo-label {
+       font-size: $base*0.6;
+      color: white;
+      text-transform: lowercase;
+      font-weight: 700;
+    }
+
+    #promo-code {
+       font-size: $base*2.6;
+       font-weight: 700;
+       color: $gs-gray;
+       padding: 0 $base*0.8 0 $base*0.8;
+
+       @include media($larger) {
+          padding: 0 $base*1.2 0 $base*1.2;
+       }
+    }
+  }
+
+  .signup-special {
+    @include outer-container;
+    margin-top: $base*2; margin-bottom: $base*1.5;
+    padding: ($base*1.7-$base*0.7) $base*1.5 $base $base*1.5;
+  }
+
+  #signup {
+    text-align: center; 
+    padding: 0 0 $base*4 0;
+    #signup-btn {
+        @include span-all(6, 12, 12, 12);
+        @include gs-button(center, false);
+      }
+  }
+
+  #email-form {@include media($small) {padding: $base $base*1.5 $base*1.5 $base*1.5;}}
+
+  form {
+    @include outer-container;
+    width: 100%; clear: both;
+
+    .headliner {
+      margin: $base*2 0 $base/2 0;
+      padding: $base 0 $base $base;
+      background: $gs-medgray;
+      color: white;
+    }
+
+    #moving-questions {
+      position: relative;
+      float: left;
+      padding: 0 $base $base $base*3;
+      margin-bottom: $base*2;
+      // border: 1px solid $gs-medgray;
+      & .form-item:first-child {margin-top: 0}
+    }
+
+
+    .form-item { 
+      margin: $base*1.5 0 $base*1.5 0;
+      @include clearfix;
+
+      label {
+        font-size: $base*1.6;
+        @include span-all(6, 12, 12, 12);
+        padding: $base/2 0 $base/2 0;
+      }
+
+      input, select {
+        @include span-all(6, 12, 12, 12);
+        font-size: $base*1.35;
+        letter-spacing: 0.057em;
+        padding: $base*0.8 $base*0.8 $base*0.8 $base*0.8;
+      }
+
+      .explain {
+        @extend %quicksand; 
+        font-size: $base*1;
+        margin-top: $base/2; padding: $base/2;
+        @include span-all(6, 12, 12, 12);
+        img {vertical-align: middle; float: left; margin-right: $base/2; margin-top: -5px; }
+      }
+      #needSocial {
+        @extend %quicksand; 
+        font-size: $base*1.3; font-weight: bold; display: block; 
+        color: $gs-darkgray;
+        @include media($small-only){@include span-columns(6); }
+      }
+
+      .inlineExplain {
+        display: block; position: relative; left: 35px; top: -20px; padding-right: 50px;
+      }
+
+      .safe {
+        img {vertical-align: middle;}
+      }
+
+      #submit-btn {
+        @include span-all(6, 12, 12, 12);
+        @include media($small-only) {margin-top: $base/2;}
+      }
+
+      .nogo { 
+        @include gs-button-gray(center, false);
+      }
+
+      .okgo {
+        @include gs-button(center, false);
+      }
+
+
+      .submit-wrap {
+        @include span-all(6, 12, 12, 12);
+        background: blue; width: 400px !important;
+      }
+
+      .ok {
+        margin-top: $base/2; padding: $base/2;
+        color: $gs-oktext;
+        background: $gs-okbg;
+      }
+
+      .fail {
+        margin-top: 0; padding: $base/2; 
+        color: $gs-failtext;
+        background: $gs-failbg;
+      }
+      .label-fail {
+        color: $gs-failtext;
+      }
+      .input-fail {
+        border-color: red;
+      }
+
+      ul{list-style-type: none;}
+
+      // #skiplabel {padding-top: 4px;}
+      .inlineCheckSmall { display: block; font-size: $base*0.9; margin: 0 0 0 $base*3; position: relative; top: -24px; }
+      .inlineCheck { display: block; text-indent: 0em; margin: 0 0 0 $base*2.4; position: relative; top: -31px; }
+    }
+
+    .thanks {
+      @include span-all(6, 8, 8, 8);
+      padding: $base/2;
+      color: $gs-oktext;
+      background: $gs-okbg;
+      margin: 0;
+    }
+
+
+    input[type=radio], input[type=checkbox] {
+      display:none;
+
+      *overflow: hidden;
+
+      // inline radio boxes (am/pm selector)
+      &+.inline {
+        color: #333; padding: $base/2 0 $base/2 0 !important;
+        display: block; vertical-align: middle; cursor: pointer; outline: 0; border: 0;
+        .box {
+          display:inline-block; margin-right: 10px; vertical-align: middle; @extend .glow; 
+          background: #fff; width: 30px; height: 30px;
+          margin-top: -6px;
+        }
+      }
+
+      &:checked + .inline {
+        .box {
+          @extend .glow:focus;
+          .check {
+            width: 12px; height: 12px; margin: auto; margin-top: 8px; background: $gs-orange; display:block;  @include border-radius(2px, 2px); box-shadow: 1px 1px 2px $gs-ltgray;
+          }
+        }
+      }
+
+      & + .ratebox {
+        position: relative;
+        z-index: 10;
+        @include span-all(6, 12, 12, 12);
+        display: block; float: left; clear: both; color: #333; padding: 0 !important; vertical-align: middle; cursor: pointer; outline: 0; border: 0;
+        .box {
+          display:inline-block; @extend .glow; position: relative;
+          background: #fff; width: 30px; height: 30px;
+          top: 15px; left: 15px; float: left;
+        }
+
+        .contentbox {
+          @extend .glow; background: #fff; padding: $base*0.8; text-align: center; margin-top: -1px;
+
+          .money {position: relative; left: -15px; display: block}
+          .dollar{font-size: $base*2; color: $gs-darkorange; position: relative; top: -24px; letter-spacing: -7px; position: relative; left: -7px; display: inline-block}
+          .rate {font-size: $base*4; color: $gs-darkorange; letter-spacing: -4px; line-height: 98%;}
+          .prd {margin-left: -9px; margin-right: 7px;}
+          .cent{font-size: $base*2; color: $gs-darkorange; letter-spacing: -7px;}
+          .thermmsg {font-size: $base; color: $gs-darkorange; padding: $base/6; }
+          .ratemsg {color: $gs-gray; padding: $base/6;}
+          .promo {
+            font-size: $base;  color: $gs-gray; padding: $base/6;
+            .code {color: $gs-green;}
+          }
+        .ratedesc { display: block; padding: $base; @extend p; font-size: $base*0.8; }
+
+        }
+      }
+
+      #last {
+        margin-top: 1000px;
+      }
+
+      &:checked + .ratebox {
+        z-index: 100;
+        .box {
+          @extend .glow:focus;
+          .check {
+            width: 12px; height: 12px; margin: auto; margin-top: 8px; background: $gs-orange; display:block;  @include border-radius(2px, 2px); 
+            box-shadow: 0px 0px 3px $gs-ltgray;
+          }
+        }
+        .contentbox {
+          background: rgba( 240, 240, 240, 0.6) ;
+          z-index: 100;
+          @extend .glow:focus;
+          // border-width: 5px;
+          box-shadow: 0px 0px 4px $gs-darkorange;
+        }
+      }
+    }
+  }
+
+
+}
+
+// *********************************************************
+// FOOTER
+// *********************************************************
+#footer{
+   color: lighten($gs-gray, 20%); 
+   // font-family: arial, sans-serif;
+}
+
+#bbb {
+   @include span-all(3, 4, 3, 3);
+   padding: $base 0 $base*4 0;
+   font-size: $base*0.88;
+
+   #bbblogo{float: left; margin-right: $base}
+   #bbblabel{ margin-left: $base*3}
+}
+
+#secure {
+   @include span-all(2, 6, 3, 3);
+   padding: $base 0 $base*4 0;
+}
+
+#legal {
+   @include span-all(6, 12, 12, 12);
+   font-size: $base;
+
+   #footer-copyright {
+      padding: $base 0 $base 0;
+   }
+
+}
+
+
+
+
+// *********************************************************
+// DOTS
+// *********************************************************
+
+#dotmatrix {
+  display: block;
+  position: absolute;
+  @include filter(blur(4px));
+  @include opacity(0.64);
+  z-index: -100; left: 0px; top: 0px; width: 100%; 
+  overflow: hidden;
+
+  #dot1{ 
+    background: url("dots_flat_38.png") no-repeat center center; background-size: contain; 
+    position: absolute; height: 44px; width: 44px; 
+    top: 3%;
+    left: 3%;
+    @include filter(blur(5px));
+    @include opacity(0.54);
+  }
+
+  #dot2{ 
+    background: url("dots_flat_39.png") no-repeat center center; background-size: contain; 
+    position: absolute; height: 240px; width: 240px; 
+    top: -13%;
+    right: -10%;
+    @include filter(blur(12px));
+    @include opacity(0.84);
+  }
+
+  #dot3{ 
+    background: url("dots_flat_38.png") no-repeat center center; background-size: contain; 
+    position: absolute; height: 132px; width: 132px; 
+    top: 58%;
+    right: 74%;
+    @include filter(blur(1px));
+    @include opacity(0.46);
+  }
+
+  #dot4{ 
+    background: url("dots_flat_39.png") no-repeat center center; background-size: contain; 
+    position: absolute; height: 212px; width: 212px; 
+    bottom: -32%;
+    right: 9%;
+    @include filter(blur(1px));
+    @include opacity(0.86);
+  }
+
+}
+
+
+ 
+ // TERMS & SERVICES
+.terms {
+
+
+  .center {margin: $base*2 0;
+    strong {margin-bottom: $base/2; display: block;}
+  }
+
+  p { margin: $base*1.5 0}
+
+  .tc_ul li {
+    font-size: $base; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; line-height: $base*2;
+  } 
+
+  .note p{
+    margin: 0;
+    &:first-child {margin-top: $base*1; font-weight: bold}
+    &:last-child {margin-bottom: $base*5}
+  }
+
+}

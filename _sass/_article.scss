@@ -227,7 +227,7 @@
     // main display header
     h1 {
       @extend %style-article-title;
-      @include media($break-nav-thin-atleast) {@include shift(-2);} 
+      // @include media($break-nav-thin-atleast) {@include shift(-2);} 
 
     }
 

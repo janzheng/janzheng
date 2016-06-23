@@ -1,0 +1,77 @@
+
+
+Request
+----------------------
+- Improve click-through rate from New Customer homepage to Enrollment page
+- Improve signup rates with Homepage and Enrollment Flow 
+- Test for variables that could improve enrollment and conversion
+
+Execution
+---------------------
+- The execution will be informed by:
+	- the previous Nurun Gas South Registration Recommendations
+	- competitive analysis and best practices
+	- analytics, data, and customer feedback
+
+- The exectuion will:
+	- integrate with Hometown Value campaign for increased brand positioning
+	- focus on value, compare residential rates to competitors' rates, and explain value offered through financial savings with Gas South
+	- simplify and improve the enrollment process
+
+There will be three general executions:
+
+1. Control Execution
+The other executions are used to test against this flow. This is the control, and remains the same as the current pages.
+
+
+
+2. Design Execution
+The second execution will change the visual, copy, and form experience of the current pages. The reskin does not add or remove any type of content to either the homepage or enrollment, and will not alter the homepage and enrollment flow. 
+
+- This execution will impact the design of Homepage, Rate Plans, and Sign-Up for Service form, but will not alter the flow
+- The purpose of the Design execution is to test for effectiveness and differences in both messaging and visual design in the various stages
+- This execution will let us know what kind of visual treatment and messaging will be the most effective in driving the customer through the enrollment process
+- Test different types of value offering and messaging, including compare GS rates with competitor rates, value explanations, and brand positioning
+- Use multivariate testing to better understand what messaging works
+- Introduce modern form design, including inline form validation, and progress tracking
+- Summarize progress and allow for changing varlues
+- Touch-friendly design
+
+Questions / Needs:
+- What are the different ways to position Gas South as a brand
+- What are the value offerings: why should customers choose Gas South?
+- Can we implement AJAX-based validation tools?
+- Do we have control of all content between the header and footer of the homepage, rates page, and enrollment page?
+- Is there any mandatory messaging required in this area?
+
+
+
+3. Alternate Execution
+The alternate execution will look at improving the overall experience of signing up users. The focus is to simplify and integrate the various steps into an easier sign-up flow. This execution uses one of the design variations from the Design Execution, but will focus on the new enrollment flow
+
+- Focus message on Gas South value proposition throughout experience
+- Ease enrollment by reducing and reordering the steps
+- Present Gas South rates early, and provide as few steps as possible
+- Ease users about providing highly personal information through education and assurance of safety and privacy
+- Move Summary page in front of Additional Check page
+- Combine rates page with enrollments page
+- Integrate modern form design cues and design from the Design Execution
+- "How did you hear about us"
+
+*** estimate monthly charge?
+*** suggest most suitable option? (should you choose lock-in or variable? here's what it might cost)
+	*** estimate depending on season; be honest and do what's best for the customer; gain customer loyalty
+
+Questions / Needs:
+- Are there any restrictions to re-ordering sign-up steps? Do some steps needs to come before others?
+- Can we combine the rates page with enrollments page?
+- Do we have access to implement credit-checking in our execution? 
+
+
+
+
+
+
+
+
+

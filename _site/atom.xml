@@ -3,9 +3,33 @@
     <title>Jan Zheng</title>
     <link href="http://janzheng.com/atom.xml" rel="self"/>
     <link href="http://janzheng.com/"/>
-    <updated>2016-04-26T13:00:18-04:00</updated>
+    <updated>2016-06-23T16:53:01-04:00</updated>
     <id>http://janzheng.com/</id>
     
+    
+    <entry>
+        <id>janzheng.com:/blog/2016/06/gassouth</id>
+        <title>Gas South Enrollment Redesign</title>
+        <link href="http://janzheng.com/blog/2016/06/gassouth.html"/>
+        <updated>2016-06-21T00:00:00-04:00</updated>
+        <summary>Optimizing the natural gas enrollment flow</summary>
+        <author>
+            <name>Jan Zheng</name>
+            <uri>http://janzheng.com/</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <id>janzheng.com:/blog/2016/04/back-to-the-future</id>
+        <title>Back to the Future</title>
+        <link href="http://janzheng.com/blog/2016/04/back-to-the-future.html"/>
+        <updated>2016-04-21T00:00:00-04:00</updated>
+        <summary>is now in the past</summary>
+        <author>
+            <name>Jan Zheng</name>
+            <uri>http://janzheng.com/</uri>
+        </author>
+    </entry>
     
     <entry>
         <id>janzheng.com:/blog/2015/10/back-to-the-future</id>

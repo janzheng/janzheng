@@ -186,8 +186,8 @@ p(dropcap). My name is Jan <span class='style--light'>"yawn"</span>, and I striv
 </notextile>
 
 
-bq(blockquote--wide blockquote--noQuotes). I am currently at "Ubiquiti Networks":http://www.ubnt.com, in *(strong--loud)Atlanta*.
-I am *(strong--loud)not available* for work. "Say hello anyway":mailto:hello@janzheng.com, "tweet":https://twitter.com/janistanian, or "link me in":http://www.linkedin.com/in/janzh.
+bq(blockquote--wide blockquote--noQuotes). I am currently a freelancer in *(strong--loud)Atlanta*, and willing to work remotely.
+I am *(strong--loud)currently under short contract*, but don't let that keep you from "sending me a letter for a quote":mailto:hello@janzheng.com. You could also, "tweet":https://twitter.com/janistanian, or "link me in":http://www.linkedin.com/in/janzh.
 
 h2. Work & Experience 
 
@@ -200,6 +200,63 @@ I've had the luxury of working with some amazing companies and clients, includin
   <!-- .list is necessary for the list.js sorter -->
   <!-- 
   <ul class="list">
+  
+   
+  
+
+    <li class="post ">
+
+      <a href=" /blog/2016/06/gassouth.html  ">
+        <div class="post__container post-preview-std post__imgPreview--cover  post__imgPreview--noImg ">
+
+          <div class="post__info">
+
+            <div class="post__date__container">
+              <div class="post__date">21 June 2016</div>
+            </div>
+
+            <div class="post__title__container">
+              <div class="post__title">Gas South Enrollment Redesign</div>
+            </div>
+
+            
+            <div class="post__summary__container">
+              <div class="post__summary">Optimizing the natural gas enrollment flow</div>
+            </div>
+            
+
+            
+               
+                
+                  <div class="post__tags__container">
+                    <ul class="post__tags">
+
+                      
+                         
+                          <li>work</li>
+                         
+                          <li>ux</li>
+                         
+                          <li>prototype</li>
+                        
+                      
+                    </ul>
+                  </div>
+                
+                
+            
+
+            <div class="clear"></div>
+          </div>
+        </div>
+      </a>
+    </li>
+  
+  
+  
+   
+  
+  
   
    
   
@@ -312,6 +369,29 @@ I've had the luxury of working with some amazing companies and clients, includin
   <ul class="timeline__list">
 
     <div class="sticky-item" >
+      <div class="timeline__year sticky-content">2016</div>
+    </div>
+
+    <li class="timeline__item expandablejs">
+      <div class="timeline__preview">
+        <div class="timeline__headline">
+          <span class="timeline__client">Freelance</span>
+          <div>
+            <span class="timeline__title">Design &amp; Development</span>
+            <span class="timeline__location">Anywhere</span>
+            <span class="timeline__date">2016</span>
+          </div>
+          <div class="timeline__desc">Improving usability, understandability and visual design for mobile, web, and desktop applications with a user-centered slant. Also developing and designing custom web apps. </div>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+
+  <ul class="timeline__list">
+
+    <div class="sticky-item" >
       <div class="timeline__year sticky-content">2014</div>
     </div>
 
@@ -323,7 +403,7 @@ I've had the luxury of working with some amazing companies and clients, includin
             <div>
               <span class="timeline__title">User Experience Architect</span>
               <span class="timeline__location">Atlanta, GA</span>
-              <span class="timeline__date">2014 &mdash; current</span>
+              <span class="timeline__date">2014 &mdash; 2016</span>
             </div>
             <div class="timeline__desc">
               I define requirements, build site maps and create wireframes, as well as design, prototype, and develop the front-end user interfaces.
@@ -335,15 +415,6 @@ I've had the luxury of working with some amazing companies and clients, includin
           <p>At Ubiquiti Networks I am currently designing and developing new customer-facing support and community tools that will launch in the Spring of 2016.</p>
         </div>
       </li>
-
-  </ul>
-
-
-  <ul class="timeline__list">
-
-    <div class="sticky-item" >
-      <div class="timeline__year sticky-content">2014</div>
-    </div>
 
     <li class="timeline__item expandablejs">
       <div class="timeline__preview">

@@ -1,0 +1,625 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<link href="../css/reset.css" rel="stylesheet"/>
+	<link href="../css/main.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="../css/formalize-custom.css" />
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<script src="../js/jquery.1.11.1.min.js"></script>
+	<script src="../js/modernizr.min.js"></script>
+	<script src="../js/jquery.mask.min.js"></script>
+	<script src="../js/form.js"></script>
+
+	<!-- Flow 6 scroll -->
+	<script src="../js/waypoints.min.js"></script>
+	<script src="../js/jquery.ba-throttle-debounce.min.js"></script>
+	<script src="../js/flow6.js"></script>
+	<link href="../css/flow6.css" rel="stylesheet" type="text/css" />
+
+	<title>Flow 6-4 - Home Service</title>
+
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="intro">
+			<img src="../img/header.jpg" width="700" height="63">
+		</div>
+		
+		
+    <div class="right-rail-container">
+
+	    <!-- the nav element itself has logic applied to it that will move it up and down the page -->
+	    <div class="right-rail-nav" >
+	      <nav>
+	        <ul class="nav_items">
+
+	          <div class="summarylong">
+					<h3 class="mainbox">Order Summary</h3>
+
+					<h3>Service</h3>
+					<p>Residential Service</p>
+
+					<h3>Service Type</h3>
+					<p>Turn On</p>
+					<p>Your service is scheduled to be turned on <strong>Wednesday, July 13, 2013, between 8am and 12pm.</strong> </p>
+					<p>Other Instructions: "Gate code is 1234"</p>
+
+					<h3>Contact Information</h3>
+					<p>John R. Smith Sr. <br>
+						JohnRSmith@google.com<br>
+						(404) 555-1234		</p>
+
+					<h3>Service &amp; Billing Address</h3>
+					<p><strong>Service Address</strong><br>
+						123 Ponce de Leon<br>
+						Apt. 15<br>
+						Atlanta, GA	30314	</p>
+					<p><strong>Billing Address</strong><br>
+						123 Ponce de Leon<br>
+						Apt. 15<br>
+						Atlanta, GA	30314 </p>
+
+					
+
+					<div class="promo">
+						<h2>Get $25 in Bill Credits.</h2>
+						<p>Your enrollment is eligible for $25 in bill credits. You will receive a $5 credit on your first 5 bills.</p>
+					</div>	
+
+				</div> 
+	        </ul>
+	      </nav>
+	    </div>
+  		
+  		</div>
+  		<!-- right-rail-container -->
+
+
+		<div class="column-1">
+			
+			<div class="header">
+				<h1><strong>Step 1:</strong> Choose Your Service</h1>
+			</div> <!--header-->
+
+			<div class="content-area">
+				
+				
+				<form action="#" method="post" enctype="multipart/form-data" onsubmit="return false" class="field_style">
+					
+				<!--=====================================
+				HOME OR BUSINESS MODULE
+				=====================================-->
+				<h2>I would like Gas Service for:</h2>
+				
+				<label for="home" class="labelBackground radioLabel serviceselector">
+					<input type="radio" name="homeOrBusiness" id="home" value="home"  />
+					<div class="clearfix">  
+						<div>Home</div>
+					</div> <!--labelBackground-->
+				</label>
+				
+				<label for="business" class="labelBackground radioLabel serviceselector">
+					<input type="radio" name="homeOrBusiness" id="business" value="business" />
+					<div class="clearfix">     
+						<div>Business</div>
+					</div> <!--labelBackground-->
+				</label>
+				
+				<!--=====================================
+				END HOME OR BUSINESS MODULE
+				=====================================-->
+				
+				
+				<!--=====================================
+				SERVICE SELECTOR MODULE
+				=====================================-->
+				<h2>Choose your service type:</h2>
+				<label for="turn_on" class="labelBackground radioLabel servtypeselector">
+					<input type="radio" name="service_type" id="turn_on" value="turn_on" class="trigger" data-rel="moveInContent" />
+					<div class="clearfix">
+						<div>Turn On<br/><span>My natural gas is currently off or I do not have service in my name and need to establish service.</span></div>
+					</div> <!--labelBackground-->
+				</label>
+				
+				<!--CHECKED SHOW THIS-->
+				<div class="moveInContent conditionalSection">
+					<table width="620" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td colspan="2"><h3>When would you like to start service?</h3></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<!--INSERT CURRENT CALENDAR PICKER HERE-->
+								<img src="../img/calendar.png" width="158" height="139">
+							</td>
+						</tr>
+						<tr>
+							<td height="25" colspan="2">&nbsp;</td>
+						</tr>
+						<tr>
+							<td colspan="2"><h3>What time will you be available to have your service turned on?</h3></td>
+						</tr>
+						<tr>
+							<td width="30">
+								<input type="radio" id="turnOnTime-8am-12pm" name="turnOnTime" value="8am - 12pm" />
+							</td>
+							<td width="590">
+								<label for="turnOnTime-8am-12pm">8am - 12pm</label>
+							</td>
+						</tr>
+						<tr>
+							<td height="10" colspan="2"></td>
+						</tr>
+						<tr>
+							<td width="30">
+								<input type="radio" id="turnOnTime-12pm-4pm" name="turnOnTime" value="12pm - 4pm" />
+							</td>
+							<td width="590">
+								<label for="turnOnTime-12pm-4pm">12pm - 4pm</label>
+							</td>
+						</tr>
+						<tr>
+							<td height="25" colspan="2">&nbsp;</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<h3>Instructions for AGL Technician? </h3>
+							</td>
+						</tr>
+						<tr>
+							<td width="30">
+								<input type="radio" id="onLocation" value="Will be on location" name="instructionsAGL" />
+							</td>
+							<td width="590">
+								<label for="onLocation">
+									You will be at location<br><span class="note">Adult (18 years or older) will be at location for the time selected above</span>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td height="10" colspan="2"></td>
+						</tr>
+						<tr>
+							<td width="30">
+								<input type="radio" id="callBefore" value="Call before" name="instructionsAGL" />
+							</td>
+							<td width="590">
+								<label for="callBefore">
+									Call before<br><span class="note">AGL technician will call 30 minutes before arrival to verify customer is at location</span>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td height="15" colspan="2">&nbsp;</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<p>Please enter any additional comments or entrance instructions (200 character max):</p>
+								<textarea id="specialInstructions" name="specialInstructions" rows="2" class="input_xlarge"maxlength="200"></textarea>
+							</td>
+							
+						</tr>
+					</table>
+					
+				</div> 
+				<!--sub-container-->
+				
+				<label for="switch" class="labelBackground radioLabel servtypeselector">
+					<input type="radio" name="service_type" id="switch" value="switch" class="trigger" data-rel="changeServiceContent" />
+					<div class="clearfix">  
+						<div>Switch Service Providers<br/><span>I would like to change my gas service to Gas South.</span></div>
+					</div>
+				</label>
+				
+				
+				
+				<table width="350" border="0" cellspacing="0" cellpadding="0">
+					<tr><td>  
+						<div class="conditionalSection changeServiceContent">
+							<h3>Who is your current service provider?</h3>
+							<select>
+								<option value="" disabled="disabled" selected="selected">- Please select -</option>
+								<option value="CommerceEnergy">Commerce Energy</option> 
+								<option value="ConstellationEnergy">Constellation Energy</option> 
+								<option value="FiresideNaturalGas">Fireside Natural Gas</option>
+								<option value="GeorgiaNaturalGas">Georgia Natural Gas</option>
+								<option value="Ignite">Ignite</option>
+								<option value="Infiniteenergy">Infinite Energy</option>
+								<option value="KratosEnergy">Kratos Energy</option>
+								<option value="NorthAmericanPower">North American Power</option>
+								<option value="SCANAEnergy">SCANA Energy</option>
+								<option value="StreamEnergy">Stream Energy</option>
+								<option value="TrueNaturalGas">True Natural Gas</option>
+								<option value="WaltonEMC">Walton EMC Natural Gas</option>
+								<option value="undecided">I don't know</option>
+							</select> 
+						</div>
+					</td></tr>
+				</table>  
+				
+				
+				<label for="transfer" class="labelBackground radioLabel clearfix servtypeselector">
+					<input type="radio" name="service_type" id="transfer" value="transfer" class="trigger" data-rel="transferServiceContent" />
+					<div class=" clearfix">  
+						<div>Transfer my Gas South service<br/><span>I have a Gas South account but I am moving or need to transfer my service to another address.</span></div>
+					</div> <!--labelBackground-->
+				</label>
+				
+				<div class="conditionalSection transferServiceContent">
+					<div class="orange-alert"><p><a href="../www.gas-south.com/residential/moving-services-transfer.aspx">Please follow this link to transfer service to Gas South.</a></p></div>
+				</div>
+				
+				
+				<!--=====================================
+				END SERVICE SELECTOR MODULE
+				=====================================-->
+				
+			</form> <!--END FORM-->
+			<p>&nbsp;</p>	
+
+		</div><!--content area-->
+
+	</div><!--column-1-->
+	
+		
+    <!-------------------------------
+    Contact Information begin 
+    -------------------------------->
+    
+    <div class="column-1">
+    	
+    	<div class="header">
+    		<h1><strong>Step 2:</strong> Contact Information</h1>
+    	</div> <!--header-->
+
+    	<div class="content-area">
+
+    		<form action="#" method="post" enctype="multipart/form-data" onsubmit="return false" class="field_style">
+
+			<!--=====================================
+			CONTACT INFO MODULE - HOME
+			=====================================-->
+			<h2>Name and Contact Information:</h2>
+			<table width="620" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="152">
+						<label>First Name *</label><br>
+						<input type="text" name="firstName" class="input_medium selected_field error">
+					</td>
+					<td width="15">&nbsp;</td>
+					<td width="52">
+						<label>M.I.</label><br>
+						<input type="text" name="middleInitial" class="input_tiny">
+					</td>
+					<td width="15">&nbsp;</td>
+					<td width="152">
+						<label>Last Name *</label><br>
+						<input type="text" name="lastName" class="input_medium">
+					</td>
+					<td width="15">&nbsp;</td>
+					<td width="52">
+						<label>Suffix</label><br>
+						<input type="text" name="suffix" class="input_tiny">
+					</td>
+					<td width="167">&nbsp;</td>
+				</tr>
+			</table>
+			<table width="620" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="15">&nbsp;</td>
+				</tr>
+			</table>
+			<table width="620" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="152">
+						<label>Email *</label><br>
+						<input type="text" name="email" class="input_medium">
+					</td>
+					<td width="15">&nbsp;</td>
+					<td width="453">
+						<label>Confirm Email *</label><br>
+						<input type="text" name="confirmEmail" class="input_medium">
+					</td>
+				</tr>
+			</table>
+			<table width="620" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="15">&nbsp;</td>
+				</tr>
+			</table>
+			<table width="298" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="153">
+						<label>Primary Phone Number *</label><br>
+						<input type="text" name="email" class="input_medium phoneMask">
+					</td>
+					
+					<td width="14">&nbsp;</td>
+					<td width="131">
+						<label>Phone Type *</label><br>
+						<select>
+							<option value="mobile" selected="selected">Mobile</option>
+							<option value="landline">Landline</option>
+						</select> 
+					</td>  
+				</tr>
+			</table>
+			<div class="legal"><div><br>By providing Gas South with a contact phone number, you expressly agree that Gas South may call or text you with important service notifications related to your account using autodialed or prerecorded calls or text.  For wireless customers, standard text rates or other charges may apply.</div></div>  
+			
+		</form> <!--END FORM-->
+		
+		<div class="red-alert">
+			<p>Please fill in the required fields: First Name</p>
+		</div>
+		<p>&nbsp;</p>
+	</div><!--content area-->
+</div><!--column-1-->
+
+	<!--=====================================
+	END CONTACT INFO MODULE - HOME
+	=====================================-->
+	
+	
+ 	<!--
+ 	=====================================
+	SERVICE AND BILLING ADDRESS MODULE - HOME
+	=====================================-->
+	
+	<div class="column-1">
+		
+		<div class="header">
+			<h1><strong>Step 3:</strong> Service Address</h1>
+		</div> <!--header-->
+
+		<div class="content-area"> 
+			<form action="#" method="post" enctype="multipart/form-data" onsubmit="return false" class="field_style">      
+				
+				<h2>Service Address:</h2>
+				<p>Where will the service be turned on?</p>
+				
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="152">
+							<label>Address 1 *</label><br>
+							<input type="text" name="address1" class="input_xlarge">
+						</td>
+						<td width="15">&nbsp;</td>
+						<td width="453">
+							<label>Address 2 (Suite or Apartment)</label><br>
+							<input type="text" name="address2" class="input_xlarge">
+						</td>
+					</tr>
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="15">&nbsp;</td>
+					</tr>
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="202">
+							<label>City *</label><br>
+							<input type="text" name="city" class="input_large">
+						</td>
+						<td width="12">&nbsp;</td>
+						<td width="57">
+							<label>State *</label><br>
+							<select>
+								<option value="GA" selected="selected">GA</option>
+							</select> 
+						</td>
+						<td width="15">&nbsp;</td>
+						<td width="325">
+							<label>Zip Code *</label><br>
+							<input type="text" name="zipCode" class="input_small">
+						</td>
+						<td width="9">&nbsp;</td>
+					</tr>
+				</table>
+				
+				<div class="orange-alert">
+					<p><strong>Select the Correct Service Address</strong><br>Please select the correct service address from the list below:</p>
+					<p><table width="620" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td>
+								<label for="address1" class="clearfix">
+									<input type="radio" name="correctAddress" id="address1" value=""  /> 123 Service Address Option 1, Atlanta, GA, 30309 Address
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td height="5">
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="address2" class="clearfix">
+									<input type="radio" name="correctAddress" id="address2" value=""  /> 123 Service Address Option 1, Atlanta, GA, 30309 Address
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td height="5">
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="address3" class="clearfix">
+									<input type="radio" name="correctAddress" id="address3" value=""  /> 123 Service Address Option 1, Atlanta, GA, 30309 Address
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td height="5">
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="address3" class="clearfix">
+									<input type="radio" name="correctAddress" id="address3" value=""  /> My address is not listed
+								</label>
+							</td>
+						</tr>  
+					</table></p>
+					
+				</div>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+							<label for="differentBilling" class="clearfix">
+								<input type="checkbox" name="service_type" id="differentBilling" value="differentBilling" class="trigger" data-rel="showBillingAddress" /> My Billing Address is different from my Service Address
+							</label>
+						</td>
+					</tr>
+				</table>
+				
+				
+				
+				<div class="showBillingAddress conditionalSection">
+					<h2>Your Billing Address:</h2>
+					<table width="620" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="152">
+								<label>Address 1 *</label><br>
+								<input type="text" name="billingAddress1" class="input_xlarge">
+							</td>
+							<td width="15">&nbsp;</td>
+							<td width="453">
+								<label>Address 2 (Suite or Apartment)</label><br>
+								<input type="text" name="billingAddress2" class="input_xlarge">
+							</td>
+						</tr>
+					</table>
+					<table width="620" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="15">&nbsp;</td>
+						</tr>
+					</table>
+					<table width="620" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="202">
+								<label>City *</label><br>
+								<input type="text" name="billingCity" class="input_large">
+							</td>
+							<td width="12">&nbsp;</td>
+							<td width="57">
+								<label>State *</label><br>
+								<select>
+									<option value="billingGA" selected="selected">GA</option>
+								</select> 
+							</td>
+							<td width="15">&nbsp;</td>
+							<td width="325">
+								<label>Zip Code *</label><br>
+								<input type="text" name="billingZipCode" class="input_small">
+							</td>
+							<td width="9">&nbsp;</td>
+						</tr>
+					</table>
+				</div>
+			</form> <!--END FORM-->
+			<p>&nbsp;</p>
+		</div><!--content area-->
+	</div><!--column-1-->
+	<!--=====================================
+	END SERVICE AND BILLING ADDRESS MODULE - HOME
+	=====================================-->
+	
+	
+	
+	<!--
+	=====================================
+	CREDIT CHECK MODULE - HOME
+	=====================================-->
+	<div class="column-1">
+
+		<div class="header">
+			<h1><strong>Step 4:</strong> Credit Verification</h1>
+		</div> <!--header-->
+
+        <div class="content-area"> 
+        <form action="#" method="post" enctype="multipart/form-data" onsubmit="return false" class="field_style">      
+				<h2>Credit Information:</h2>
+				<p>By submitting this document you hereby authorize Gas South to perform a credit check and establish residential natural gas service with Gas South.</p>
+				<p>Your social security number will only be used to verify your credit score, and will not be used for any other purposes. </p>
+				
+				
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="15">&nbsp;</td>
+					</tr>
+				</table>
+						
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="159">
+							<label>Social Security Number *</label><br>
+							<input type="text" name="socialSecurityNumber" class="input_medium ssnMask">
+						</td>
+						<td width="11">&nbsp;</td>
+						<td width="450">
+							<label>Date of Birth *</label><br>
+							<input type="text" name="dateOfBirth" class="input_medium dateMask error">
+						</td>
+					</tr>
+				</table>
+				<table width="620" border="0" cellspacing="0" cellpadding="0">
+					
+				</table>
+                  <table width="620" border="0" cellspacing="0" cellpadding="0" class="field_style">
+                    <tr>
+						<td width="164"><img src="../img/verisign.png" width="107" height="73" alt="Verisign Secured | Norton Secured">
+</td>
+					</tr>
+               </table>  
+				  
+                <div class="red-alert">
+					<p>Please fill in the required fields: Date of Birth</p>
+				</div>
+                
+               <div class="gray-alert" style="margin:20px 0">
+				  <h4>Please wait while we look up your everyday low rates&hellip;</h4> 
+				  <img src="../img/loader_bar.gif" width="192" height="9" alt="loading">
+				</div> 
+				
+				</form> <!--END FORM-->
+                 </div><!--content area-->
+	</div><!--column-1-->
+	<!--
+	=====================================
+	END CREDIT CHECK MODULE - HOME
+	=====================================-->
+	
+	
+	
+   <!--
+   =====================================
+	ADDITIONAL INFORMATION
+	=====================================-->
+	
+	<!--=====================================
+	CREDIT APPROVED RATES MODULE - HOME
+	=====================================-->
+
+	<div class="column-1">
+
+		<div class="header inactive">
+			<h1><strong>Step 5:</strong> Standard Rates</h1>
+		</div> <!--header-->
+
+	</div><!--column-1-->
+
+</div> <!--wrapper-->
+
+</body>
+</html>

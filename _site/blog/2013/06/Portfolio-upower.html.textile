@@ -1,0 +1,498 @@
+
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>upower fitness</title>
+  <meta name="description" content="Jan designs and prototypes experiences.">
+  <meta name="author" content="Jan Zheng">
+  <meta name="keywords" content="user experience, ux, interaction design, digital, advertising, ui design, code, prototyping, resume ,portfolio">
+  
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1" />
+
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600, 700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/app/css/royalslider.css" > 
+  <link rel="stylesheet" href="/app/css/minimal-white/rs-minimal-white.css" >
+
+  <script src="/app/js/jquery.min.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+
+  <!-- import gets all the styles from main.scss in the _scss folder -->
+  <link rel="stylesheet" href="/app/css/import.css">
+
+</head>
+
+<body id="skrollr-body">  
+  <div class="color-palette color-top" id="top">
+    <div id="c1"></div><div id="c2"></div><div id="c3"></div><div id="c4"></div><div id="c5"></div>
+    <div id="a1"></div><div id="a2"></div><div id="a3"></div><div id="a4"></div><div id="a5"></div>
+  </div>
+
+
+  <!-- Navigation -->
+  <!-- Main navigation
+        - stays to the left side >480. Static at the top <480. Mobile nav kicks in with a scroll top.
+   -->
+  <div class="nav">
+
+    <!-- JZ logo -->
+    <div class="nav__logo">
+      <a class="nav__logo__link" href="/">
+        <div class="nav__logo__content ">
+          <span class="nav__j">jan </span><span class="nav__z">zheng</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Main navigation buttons -->
+    <div class="nav__menu">
+      <div class="nav__menu__content">
+
+      <!-- generate links and mark nav as active -->
+      
+      
+        
+
+        <a href="/">
+          <div class="nav__item nav__blog 
+                      
+                      " >
+            <span  class="icon icon--blog"></span>
+            <div class="nav__label"><span>thoughts</span></div>
+          </div>
+        </a>
+        
+
+        
+
+        
+
+
+      
+      
+        
+
+        
+        <a href="/about.html">
+          <div class="nav__item nav__about " >
+            <span class="icon icon--about"></span>
+            <div class="nav__label"><span>about</span></div>
+          </div>
+        </a>
+        
+
+        
+
+
+      
+      
+        
+
+        
+
+        
+        <a href="/toolbox.html" >
+          <div class="nav__item nav__tools " >
+            <span class="icon icon--tools"></span>
+            <div class="nav__label"><span>tools</span></div>
+          </div>
+        </a>
+        
+
+
+      
+
+
+      </div>
+    </div>
+
+
+    
+
+    <!-- Social icons / contact (email, twitter, linkedin) -->
+    <div class="nav__social">
+      <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
+        <div class="nav__social__item nav__social__email ">
+          <span class="icon icon--small icon--email"></span>
+          <div class="nav__social__label"><span>hello@</span></div>
+        </div>
+      </a>
+
+      <a href="https://twitter.com/janistanian">
+        <div class="nav__social__item nav__social__twitter">
+          <span class="icon icon--small icon--twitter"></span>
+          <div class="nav__social__label"><span>chirp</span></div>
+        </div>
+      </a>
+
+
+      <a href="http://www.linkedin.com/in/janzh">
+        <div class="nav__social__item nav__social__linkedin">
+          <span class="icon icon--small icon--linkedin"></span>
+          <div class="nav__social__label"><span>link me</span></div>
+        </div>
+      </a>
+
+      <a target="_blank" href="http://janzheng.com/resume.pdf">
+        <div class="nav__social__item nav__social__resume">
+          <span class="icon icon--small icon--resume"></span>
+          <div class="nav__social__label"><span>résumé</span></div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+  <!-- End sidebar navigation -->
+
+
+  <div class="clear"></div>
+
+  <div class="main__container container">
+
+    <!-- Main section for content -->
+    <!-- <div class="main"> -->
+    <div class="main__body">
+      <div class="container">
+  <div class="article  post-std ">
+
+
+    <!-- begin article head content (date, title, summary, tags) -->
+
+    <div 
+      class="article__head container "
+       >
+
+      <div 
+        
+      >
+        <div class="article__head__intro" >
+
+          
+          <div class="article__head__category article__head__category__work" >
+
+            <!-- <div class="article__head__category__icon"> -->
+
+              
+
+              
+
+              
+
+              
+                
+<svg class="svg--work" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M416 249l-24.7 173H119.8l-24-173h320zm46-40H50l35 253h341l36-253zm-338-30l-4.2-20H392l-4 20h40.4l10-57H73.6l10 57h40.3zm20.7-84L142 82H370l-2.6 13h35.4l7.8-45H101.6l7.6 45h35.5z"/>
+</svg>
+<!-- 
+<svg class="svg--work" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path id="archive-2-icon" d="M415.904,249.017l-24.615,172.965H119.847L95.915,249.017H415.904z M462,209.017h-0.059H50.061H50
+l35,252.965h341L462,209.017z M123.944,179.018l-4.128-20h272.271l-4.173,20h40.484l10.019-57H73.584l9.889,57H123.944z
+M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144.674z"></path> </svg> -->
+              
+            <!-- </div> -->
+          </div>
+          
+
+          <div class="article__head__date__container" >
+            <div class="article__head__date">
+              June 12, 2013
+            </div>    
+          </div> 
+
+        </div>
+
+        <!-- this is for category tags labels -->
+        
+
+        <div class="article__head__title__container" >
+          <div class="article__head__title">upower fitness</div>
+        </div> 
+
+        <div class="article__head__subtitle__container" >
+          <div class="article__head__subtitle">responsive website for an upscale personal training and gym startup</div>
+        </div> 
+
+
+        <div class="article__tags__container" >
+          <div class="article__tags">
+            
+               
+                
+                <ul class="article__tags__list">
+                  
+                     
+                      <li>Portfolio</li>
+                     
+                      <li>Information Architecture</li>
+                     
+                      <li>Interaction Design</li>
+                     
+                      <li>Web Design</li>
+                     
+                      <li>Content Strategy</li>
+                     
+                      <li>Copywriting</li>
+                    
+                  
+                </ul>
+                
+                
+            
+          </div>
+        </div> 
+
+        
+        <div class="article__head__projectLink__container" >
+          <div class="article__head__projectLink">
+            <a href="http://www.upowerfitness.com/" class="link-external">
+              <div class="btn-inline">upower fitness</div>
+            </a>
+          </div>
+        </div>
+        
+
+      </div>
+
+
+    </div>
+    <!-- end article head content -->
+
+
+
+
+
+    <!-- begin article content -->
+
+    <div class="article__body container">
+
+      <!-- 
+      <div class="article--summary-container">
+        <div class="article--summary">responsive website for an upscale personal training and gym startup</div>
+      </div>  -->
+
+      <!-- not yet used -->
+      <!-- 
+      <div class="article__body__video__container">
+        <div class="article__body__video">
+          
+              
+        </div>
+      </div>
+      -->
+
+
+      <!-- not yet used -->
+      <!-- 
+      <div class="article--body--titleImage-container">
+           
+      </div> 
+      -->
+
+
+      <div class="article__body__content">
+        <div class="post-maincontent">
+
+<div class="flexslider">
+  <ul class="slides">
+
+    <li>
+      <a href="/assets/posts/Portfolio-upower/1.png" title="upower fitness responsive layouts" rel="lightbox-upower">
+         <img src="/assets/posts/Portfolio-upower/1sm.png" />
+         <p class="flex-caption">upower fitness responsive hero layouts. Since the site was designed with both desktop, mobile, and tablets in mind, different viewers see layout adjustments. Mobile viewers see open/close buttons to conserve space. </p>
+      </a>
+    </li>
+    
+    <li>
+      <a href="/assets/posts/Portfolio-upower/2.png" title="upower fitness wireframes" rel="lightbox-upower">
+         <img src="/assets/posts/Portfolio-upower/2sm.png" />
+         <p class="flex-caption">Although the upower fitness layout and information architecture was very simple and flat, the site requires a strong story and hook to interest viewers. The result is a one-page layout that tells one consistent narrative.</p>
+      </a>
+    </li>
+
+  </ul>
+</div>
+
+
+p. 
+"upower fitness":http://www.upowerfitness.com/ is a small startup personal training and gym concept that recently opened up on the edge of Piedmont Park in Atlanta, GA.
+
+The client wanted an online presence for their gym, which targets the more upscale audience of Midtown Atlanta. The gym focuses heavily on personal training, diet, and lifestyle management for its clientele. As such, the site needed to reflect the upscale nature of the business with a simple and elegant design.
+
+Many similar workout, sports, or gym websites tend to be very noisy, so instead of using many gym sites as a foundation, I drew inspiration from the likes of Nike.com, upscale product, architecture, and startup websites. The result is something very simple, more akin to a new startup service than a gym concept. 
+
+The story is also very simple, as the goal of the site is to bring more conversion to the gym. Since personal training makes up the majority of the business of upower, the site aims to establish the connection between the client and the owner, either by enticing the viewer to visit the location or to call the establishment. 
+
+Future phases include integration with mindbodyonline or a similar sign-up service, depending on growth of the gym.
+
+The site is created with the help of Jekyll and is hosted on Github. "The repository may be accessed here":https://github.com/janzheng/upowerfitness.
+
+p. 
+* Gathered and created website and marketing requirements
+* Collaborated with the founder to establish business image and direction
+* Created information architecture and content strategy around the business
+* Collaborated with logo designer and photographer
+* Created copy, established the narrative, and designed the flow 
+* Established visual design around logo and photography shots
+* Sketched, iterated, and created wireframes for layout options
+* Built the site using HTML, SASS, and Javascript
+* Performed limited QA and bug fixing on the final product
+* Established basic SEO patterns
+* Added basic Google Analytics tracking  
+
+
+</div>
+
+
+
+<div class="post-sidebar">
+  <div class="post-sidebar-column">
+    <title>Client</title>
+    <span>upower fitness</span>
+  </div>
+
+  <div class="post-sidebar-column">
+    <title>Goal</title>
+    <span>To create an attractive, online store-front for all devices</span>
+  </div>
+
+  <div class="post-sidebar-column">
+    <title>Roles</title>
+    <span>Information architect</span>
+    <span>Interaction design</span>
+    <span>Web Design</span>
+    <span>Content Strategy</span>
+    <span>Copywriting</span>
+  </div>
+
+  <div class="post-sidebar-column">
+    <title>Employer</title>
+    <span>Freelance</span>
+  </div>
+
+  <div class="post-sidebar-column">
+    <title>Collaborators</title>
+    <span><a href="http://www.chiapponey.com/">John Chiappone</a> (logo design)</span>
+    <span><a href="http://www.behance.net/tlyphotography">Tess Yaney</a> (photography)</span>
+  </div>
+
+  <div class="post-sidebar-column">
+    <title>Links</title>
+    <span><a href="http://upowerfitness.com/">upowerfitness.com</a></span>
+    <span><a href="http://share.axure.com/8IEIWL/">Axure wireframes</a></span>
+  </div>
+</div>
+
+
+
+        <div class="clear"></div>
+
+        <div class="article__comments">
+
+           
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- end article body -->
+
+    <div class="clear"></div>
+      
+
+
+  </div>
+</div>
+    </div>
+
+    <div class="main__footer">
+        &copy; 2015 – Built on <a href="https://github.com/janzheng/janzheng.github.com">Github</a> &amp; <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+    </div> 
+    <!-- </div> -->
+
+  </div>
+  <!-- End container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"></script>
+ -->
+  <!-- Google Prettify - https://code.google.com/p/google-code-prettify/wiki/GettingStarted 
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&lang=html&lang=js&skin=desert"></script>
+  -->
+
+
+  <!-- <script src="/assets/js/plugins.js"></script> -->
+  <!-- 
+  <script src="/app/js/jquery.flexslider-min.js"></script>
+  <script src="/app/js/slimbox2.js"></script>
+ -->
+
+  <script src="/app/js/waypoints.min.js"></script>
+  <script src="/app/js/skrollr.min.js"></script>
+
+  <script src="/app/js/list.min.js"></script>
+  <script src="/app/js/jquery.fluidbox.min.js"></script>
+  <script src="/app/js/jquery.royalslider.min.js"></script>
+  
+  <script src="/app/js/script.js"></script>
+  
+  <script src="/app/js/tumblriffic.js"></script>
+
+
+  
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+  google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+  </script>
+
+
+  <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
+
+  <script type="text/javascript">
+      // The variable "tumblr_api_read" is now set.
+      console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
+      console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
+
+      console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
+
+      console.log(JSON.stringify(tumblr_api_read));
+  </script>
+  
+
+  <!-- new google analytics beta -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39843414-1', 'janzheng.com');
+    ga('send', 'pageview');
+
+  </script>
+
+</body>
+</html>

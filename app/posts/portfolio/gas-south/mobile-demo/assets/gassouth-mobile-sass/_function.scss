@@ -1,0 +1,49 @@
+
+
+
+// *********************************************************
+// Floater
+// *********************************************************
+
+// A Floater class allows its contents to float above other content
+// Useful for floating medfgus and sections
+.floater {position: fixed; @include span-all(6, 12, 12, 12); z-index: 99999;}
+
+
+// *********************************************************
+// Responsive Reveal
+// *********************************************************
+
+// Selectively shows or hides elements based on screen size. 
+// Elements tagged with .mobile-hide will hide in smallest view (controlled by JS).
+// Clicking or tapping on a .mobile-open element will toggle all child .mobile-hide elements
+
+// in a reveal button container, the entire container acts as the button,
+// whereas the reveal-btn sits within the entire container. The latter is useful for separate open/close btns
+.reveal-btn, .reveal-btn-container {
+   @include media($small-only){
+      cursor: hand; cursor: pointer;
+      &:hover {background: rgba(180,180,180,0.4) !important; @include ease-transition(500ms);}
+   }
+}
+// '>' sign
+.reveal-btn:before, .reveal-btn-container:before {
+   @extend %raleway;
+   font-size: $base*1.9; font-weight: 100;
+   content:'>';
+   position: absolute; 
+   right: 25px;
+   line-height: 26px;
+   display: block;
+   @include media($medium){display:none;}
+   transform:rotate(90deg);
+   -ms-transform:rotate(90deg); /* IE 9 */
+   -webkit-transform:rotate(90deg); /* Safari and Chrome */
+}
+
+.reveal-content {
+   @include media($small-only){display:none;}
+}
+
+
+
