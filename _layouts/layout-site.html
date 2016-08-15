@@ -61,7 +61,6 @@
       {% for item in navlist %}
       
         {% if item.text == 'thoughts' || item.text == 'rants' %}
-
         <a href="{{item.url}}">
           <div class="nav__item nav__blog 
                       {% if url == item.url' %} active{% endif %}
@@ -73,17 +72,19 @@
         {% endif %}
 
         {% if item.text == 'about' %}
+        {% assign _url = url | append: '.html' %}
         <a href="{{item.url}}">
-          <div class="nav__item nav__about {% if url == item.url %}active{% endif %}" >
+          <div class="nav__item nav__about {% if _url == item.url %}active{% endif %}" >
             <!-- <span class="icon icon--about"></span> -->
-            <div class="nav__label">{{item.text}}</div>
+            <div class="nav__label">{{item.text}} </div>
           </div>
         </a>
         {% endif %}
 
         {% if item.text == 'tools' %}
+        {% assign _url = url | append: '.html' %}
         <a href="{{item.url}}" >
-          <div class="nav__item nav__tools {% if url == item.url %}active{% endif %}" >
+          <div class="nav__item nav__tools {% if _url == item.url %}active{% endif %}" >
             <!-- <span class="icon icon--tools"></span> -->
             <div class="nav__label">{{item.text}}</div>
           </div>
@@ -155,7 +156,7 @@
     </div>
  -->
     <div class="main__footer">
-        &copy; 2015 – Built on <a href="https://github.com/janzheng/janzheng.github.com">Github</a> &amp; <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+        &copy; 2016 – Built on <a href="https://github.com/mojombo/jekyll">Jekyll</a>. Get the template <a href="https://github.com/janzheng/janzheng.github.com">on Github</a>
     </div> 
     <!-- </div> -->
 

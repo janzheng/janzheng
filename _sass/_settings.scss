@@ -87,10 +87,15 @@ $size-h2: golden-ratio($base, 1);
 $size-h3: golden-ratio($base*0.8, 1);
   $height-h3: golden-ratio($size-h3, 1);
 
-$size-p: $base*1; 
-  $height-p: golden-ratio($size-p*1.13, 1);
+$size-p: $size-slightly-large; 
+  $height-p: golden-ratio($size-slightly-larger, 1);
 
 $s1: golden-ratio(14px,  1);
+
+
+.margin_top {
+  margin-top: $base;
+}
 
 
 
@@ -100,23 +105,39 @@ $s1: golden-ratio(14px,  1);
 // 
 
 
-a, a:active, a:hover, a:link {
-  text-decoration: none; color: $dark-gray;
+.article {
+  a, a:active, a:link, a:visited {
+    color: rgba($color_link,1);
+    border-bottom: 1px solid rgba($color_link,1);
+    @extend %ease;
+  }
+  a:hover {
+    color: rgba($color_link_hover,0.7);
+    border-bottom: 1px solid rgba($color_link_hover,0.5);
+    @extend %ease;
+  }
 }
 
-  //used for external sources or downloads, especially project pages / lab pages
-  // a.link-external {  
-    .btn-inline {
-      @extend %style-btn-inline;
+a, a:active, a:hover, a:link {
+  text-decoration: none; 
+  color: $dark-gray;
+}
+  .link-resume {
+    display: inline-block;
+    // padding-left: 0;
+    // padding-top: $base;
+    margin-bottom: $base;
+    // border: 2px solid rgba($light-blue, 0.7);
+    // background-color: rgba($light-blue, 0);
+    color: rgba($light-blue, 1) !important;
+    border-bottom: 1px solid rgba($light-blue,1) !important;
+    // text-decoration: none !important;
 
-      &--large {
-        padding: 14px 20px;
-        &:hover {
-          padding: 14px 40px;
-        }
-      }
+    &:hover {
+      color: rgba($dark-blue, 1) !important;
+      border-bottom: 1px solid rgba($dark-blue, 1) !important;
     }
-  // }
+  }
 
 .style--highlight {
   color: $red;
@@ -196,9 +217,10 @@ a, a:active, a:hover, a:link {
 
   // general emphasis style, regardless of sans or serif
   %style-em {
-    // font-style: italic; 
-    font-style: normal;
-    color: $darker-red;
+    font-style: italic; 
+    // font-style: bold;
+    // font-s
+    // color: $darker-red;
   }
 
   // titles within a post
@@ -237,12 +259,16 @@ a, a:active, a:hover, a:link {
     @extend %border-blue;
   }
   %style-blockquote--wide {
-    font-size: $base;
+    font-size: $size-p;
     // background-color: $silversky;
     @extend %border-blue;
     @extend %serif; 
 
-    width: 100%; padding: $size-slightly-large; margin-top: $size-largish; margin-bottom: $base*2;
+    width: 100%; 
+    padding: $size-slightly-large; 
+    padding-left: $size-slightly-large*2;
+    margin-top: $size-largish; 
+    margin-bottom: $base*2;
     // @include media($break-nav-thin-atleast) {@include shift(-3); @include span-columns(32);}
     padding-top: 0; padding-bottom: 0;
   }
@@ -274,11 +300,11 @@ a, a:active, a:hover, a:link {
     }
   }
 
+
   //small modifications to prettyprinted to make more legible
   %style-prettyprinted {
     @extend %style-antialiased;
   }
-
 
 
 // sticky divs that follow the screen / browser window but stay within contextual container
@@ -301,6 +327,12 @@ a, a:active, a:hover, a:link {
     position: absolute; top: 10px; left: -3px;
     @include media($break-nav-thin-atleast) {
       left: -10px;
+    }
+
+    .expandablejs--btn-close {
+      // left: 14px;
+      margin-left: -5px;
+      margin-top: 3px;
     }
 
   }
