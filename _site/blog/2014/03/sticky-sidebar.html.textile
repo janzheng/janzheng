@@ -122,14 +122,14 @@
       <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
         <div class="nav__social__item nav__social__email ">
           <span class="icon icon--small icon--email"></span>
-          <div class="nav__social__label"><span>hello@</span></div>
+          <div class="nav__social__label"><span>email me</span></div>
         </div>
       </a>
 
       <a href="https://twitter.com/janistanian">
         <div class="nav__social__item nav__social__twitter">
           <span class="icon icon--small icon--twitter"></span>
-          <div class="nav__social__label"><span>chirp</span></div>
+          <div class="nav__social__label"><span>tweet me</span></div>
         </div>
       </a>
 
@@ -769,6 +769,14 @@ In the future I'll create a separate Github project with a guide on how to use t
 </div>
     </div>
 
+    <div class="main__tumblr">
+      <p>Latest from <a href="http://YOURBLOG.tumblr.com/">our Tumblr blog</a>...</p>
+      <h2 id="blog-headline"></h2>
+      <div id="blog-body"></div>
+      <ul id="blog-more">
+      </ul>
+    </div>
+
     <div class="main__footer">
         &copy; 2015 – Built on <a href="https://github.com/janzheng/janzheng.github.com">Github</a> &amp; <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
     </div> 
@@ -815,7 +823,6 @@ In the future I'll create a separate Github project with a guide on how to use t
   
   <script src="/app/js/script.js"></script>
   
-  <script src="/app/js/tumblriffic.js"></script>
 
 
   
@@ -824,18 +831,50 @@ In the future I'll create a separate Github project with a guide on how to use t
   google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
   </script>
 
-
-  <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
-
+  <!-- old name: funkability -->
+  <script type="text/javascript" src="http://ja-nz.tumblr.com/api/read/json"></script>
   <script type="text/javascript">
       // The variable "tumblr_api_read" is now set.
-      console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
-      console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
+      console.log('LOAD TUMBLR')
+      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
+      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
 
-      console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
+      // console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
 
-      console.log(JSON.stringify(tumblr_api_read));
+      // console.log(JSON.stringify(tumblr_api_read));
+      console.log(tumblr_api_read);
+
+
+      // Get tumblr post
+      function getTumblr() {
+
+        $.ajax({
+          type: 'GET',
+          url: "http://api.tumblr.com/v2/blog/ja-nz.tumblr.com/posts?api_key=inC0HuM2X45UqdQ6RhPJvRXoWEYJiH4JEcrsVD281MSdZUoLao",
+          async: false,
+          jsonpCallback: 'jsonCallback',
+          contentType: "application/json",
+          dataType: 'jsonp',
+          success: function(json) {
+            var posts = json.response.posts;
+            var latest = json.response.posts[0];
+            console.log(posts);
+            $("#blog-headline").text(latest.title);
+            $("#blog-body").html(latest.body);
+            json.response.posts.forEach(function(el, i) {
+              // if(i > 4) return false;
+              $("#blog-more").append("<li><a href='"+ el.post_url +"'>"+ el.title +"</li>");
+            });
+          },
+          error: function(e) {
+            console.log(e.message);
+          }
+        });
+      }
+
+      getTumblr();
   </script>
+  <!-- <script src="/app/js/tumblriffic.js"></script> -->
   
 
   <!-- new google analytics beta -->

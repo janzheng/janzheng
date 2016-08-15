@@ -59,7 +59,7 @@ $size-larger: $base*2.5;
 $size-largest: $base*3.2;
 
 $size-menu: $size-small;             // 14px
-   $size-menu-social: $size-smaller;      // 12px / social icons
+   $size-menu-social: $size-medium;      // 12px / social icons
 
 $size-footer: $size-small;  // 14px
 
@@ -105,7 +105,7 @@ a, a:active, a:hover, a:link {
 }
 
   //used for external sources or downloads, especially project pages / lab pages
-  a.link-external {  
+  // a.link-external {  
     .btn-inline {
       @extend %style-btn-inline;
 
@@ -116,7 +116,7 @@ a, a:active, a:hover, a:link {
         }
       }
     }
-  }
+  // }
 
 .style--highlight {
   color: $red;
@@ -249,7 +249,8 @@ a, a:active, a:hover, a:link {
 
   %style-btn-inline { 
     display: inline-block; 
-    color: white;
+    color: white !important;
+    text-decoration: none !important;
     background-color: $gray;
       padding: 0 $base 0 $base;
     margin: $base 0;

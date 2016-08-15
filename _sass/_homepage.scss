@@ -80,7 +80,7 @@
 	      // background-color: rgba($silversky,0.4); @extend %ease-slow; 
 	      .post__title, .post__summary  {
 	        @extend %ease; 
-	        background-color: rgba($dark-gray, 0.12); //color: white; 
+	        background-color: $hover_color; 
 	      }
 	    }
     }

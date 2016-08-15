@@ -395,7 +395,7 @@ kuler: Norse
   color: #f2f2f2;
 }
 
-a.link-external .btn-inline, a.link-external .btn-inline:hover:after, .nav__logo__link span, .nav__logo__link:hover span, .nav__logo__content, .nav__item, .nav__item:hover, .nav__label, .nav__social__item, .filter-btn, .timeline__preview, .postList__container, .post__container:hover .post__title, .post__container:hover .post__summary, .post__imgPreview {
+.btn-inline, .btn-inline:hover, .btn-inline:hover:after, .nav__item:after, .nav__item:hover:after, .nav__logo__link span, .nav__logo__link:hover span, .nav__logo__content, .nav__item, .nav__item:hover, .nav__label, .filter-btn, .timeline__preview, .postList__container, .post__container:hover .post__title, .post__container:hover .post__summary, .post__imgPreview {
   -webkit-transition: all 230ms ease;
   -moz-transition: all 230ms ease;
   -ms-transition: all 230ms ease;
@@ -403,7 +403,7 @@ a.link-external .btn-inline, a.link-external .btn-inline:hover:after, .nav__logo
   transition: all 230ms ease;
 }
 
-.timeline__preview.expandablejs--preview:hover, .timeline__client {
+.nav__social__item, .nav__social__item:hover, .nav__social__label, .nav__social__label span, .timeline__preview.expandablejs--preview:hover, .timeline__client {
   -webkit-transition: all 180ms ease;
   -moz-transition: all 180ms ease;
   -ms-transition: all 180ms ease;
@@ -411,7 +411,7 @@ a.link-external .btn-inline, a.link-external .btn-inline:hover:after, .nav__logo
   transition: all 180ms ease;
 }
 
-.icon--hoverOff, .icon--email:before, .icon--twitter:before, .icon--linkedin:before, .icon--resume:before, .icon--blog:before, .icon--about:before, .icon--tools:before, .icon--lab:before, .icon--rant:before, .icon--idea:before, .icon--work:before, .icon--tumblr:before, .icon--hoverOn, .nav__item:hover .icon, .nav__item:hover .icon--hoverOff, .nav__item:hover .icon--email:before, .nav__item:hover .icon--twitter:before, .nav__item:hover .icon--linkedin:before, .nav__item:hover .icon--resume:before, .nav__item:hover .icon--blog:before, .nav__item:hover .icon--about:before, .nav__item:hover .icon--tools:before, .nav__item:hover .icon--lab:before, .nav__item:hover .icon--rant:before, .nav__item:hover .icon--idea:before, .nav__item:hover .icon--work:before, .nav__item:hover .icon--tumblr:before, .nav__item.nav__blog.active .icon, .nav__item.nav__blog.active .icon--hoverOff, .nav__item.nav__blog.active .icon--email:before, .nav__item.nav__blog.active .icon--twitter:before, .nav__item.nav__blog.active .icon--linkedin:before, .nav__item.nav__blog.active .icon--resume:before, .nav__item.nav__blog.active .icon--blog:before, .nav__item.nav__blog.active .icon--about:before, .nav__item.nav__blog.active .icon--tools:before, .nav__item.nav__blog.active .icon--lab:before, .nav__item.nav__blog.active .icon--rant:before, .nav__item.nav__blog.active .icon--idea:before, .nav__item.nav__blog.active .icon--work:before, .nav__item.nav__blog.active .icon--tumblr:before, .nav__item.nav__about.active .icon, .nav__item.nav__about.active .icon--hoverOff, .nav__item.nav__about.active .icon--email:before, .nav__item.nav__about.active .icon--twitter:before, .nav__item.nav__about.active .icon--linkedin:before, .nav__item.nav__about.active .icon--resume:before, .nav__item.nav__about.active .icon--blog:before, .nav__item.nav__about.active .icon--about:before, .nav__item.nav__about.active .icon--tools:before, .nav__item.nav__about.active .icon--lab:before, .nav__item.nav__about.active .icon--rant:before, .nav__item.nav__about.active .icon--idea:before, .nav__item.nav__about.active .icon--work:before, .nav__item.nav__about.active .icon--tumblr:before, .nav__item.nav__tools.active .icon, .nav__item.nav__tools.active .icon--hoverOff, .nav__item.nav__tools.active .icon--email:before, .nav__item.nav__tools.active .icon--twitter:before, .nav__item.nav__tools.active .icon--linkedin:before, .nav__item.nav__tools.active .icon--resume:before, .nav__item.nav__tools.active .icon--blog:before, .nav__item.nav__tools.active .icon--about:before, .nav__item.nav__tools.active .icon--tools:before, .nav__item.nav__tools.active .icon--lab:before, .nav__item.nav__tools.active .icon--rant:before, .nav__item.nav__tools.active .icon--idea:before, .nav__item.nav__tools.active .icon--work:before, .nav__item.nav__tools.active .icon--tumblr:before, .nav__social__item:hover .icon, .nav__social__item:hover .icon--hoverOff, .nav__social__item:hover .icon--email:before, .nav__social__item:hover .icon--twitter:before, .nav__social__item:hover .icon--linkedin:before, .nav__social__item:hover .icon--resume:before, .nav__social__item:hover .icon--blog:before, .nav__social__item:hover .icon--about:before, .nav__social__item:hover .icon--tools:before, .nav__social__item:hover .icon--lab:before, .nav__social__item:hover .icon--rant:before, .nav__social__item:hover .icon--idea:before, .nav__social__item:hover .icon--work:before, .nav__social__item:hover .icon--tumblr:before, .nav__social__label, .nav__social__label span, body, html, .post__title__container .post__title {
+.icon--hoverOff, .icon--email:before, .icon--twitter:before, .icon--linkedin:before, .icon--resume:before, .icon--blog:before, .icon--about:before, .icon--tools:before, .icon--lab:before, .icon--rant:before, .icon--idea:before, .icon--work:before, .icon--tumblr:before, .icon--hoverOn, .nav__item:hover .icon, .nav__item:hover .icon--hoverOff, .nav__item:hover .icon--email:before, .nav__item:hover .icon--twitter:before, .nav__item:hover .icon--linkedin:before, .nav__item:hover .icon--resume:before, .nav__item:hover .icon--blog:before, .nav__item:hover .icon--about:before, .nav__item:hover .icon--tools:before, .nav__item:hover .icon--lab:before, .nav__item:hover .icon--rant:before, .nav__item:hover .icon--idea:before, .nav__item:hover .icon--work:before, .nav__item:hover .icon--tumblr:before, .nav__item.nav__blog.active .icon, .nav__item.nav__blog.active .icon--hoverOff, .nav__item.nav__blog.active .icon--email:before, .nav__item.nav__blog.active .icon--twitter:before, .nav__item.nav__blog.active .icon--linkedin:before, .nav__item.nav__blog.active .icon--resume:before, .nav__item.nav__blog.active .icon--blog:before, .nav__item.nav__blog.active .icon--about:before, .nav__item.nav__blog.active .icon--tools:before, .nav__item.nav__blog.active .icon--lab:before, .nav__item.nav__blog.active .icon--rant:before, .nav__item.nav__blog.active .icon--idea:before, .nav__item.nav__blog.active .icon--work:before, .nav__item.nav__blog.active .icon--tumblr:before, .nav__item.nav__about.active .icon, .nav__item.nav__about.active .icon--hoverOff, .nav__item.nav__about.active .icon--email:before, .nav__item.nav__about.active .icon--twitter:before, .nav__item.nav__about.active .icon--linkedin:before, .nav__item.nav__about.active .icon--resume:before, .nav__item.nav__about.active .icon--blog:before, .nav__item.nav__about.active .icon--about:before, .nav__item.nav__about.active .icon--tools:before, .nav__item.nav__about.active .icon--lab:before, .nav__item.nav__about.active .icon--rant:before, .nav__item.nav__about.active .icon--idea:before, .nav__item.nav__about.active .icon--work:before, .nav__item.nav__about.active .icon--tumblr:before, .nav__item.nav__tools.active .icon, .nav__item.nav__tools.active .icon--hoverOff, .nav__item.nav__tools.active .icon--email:before, .nav__item.nav__tools.active .icon--twitter:before, .nav__item.nav__tools.active .icon--linkedin:before, .nav__item.nav__tools.active .icon--resume:before, .nav__item.nav__tools.active .icon--blog:before, .nav__item.nav__tools.active .icon--about:before, .nav__item.nav__tools.active .icon--tools:before, .nav__item.nav__tools.active .icon--lab:before, .nav__item.nav__tools.active .icon--rant:before, .nav__item.nav__tools.active .icon--idea:before, .nav__item.nav__tools.active .icon--work:before, .nav__item.nav__tools.active .icon--tumblr:before, .nav__social__item:hover .icon, .nav__social__item:hover .icon--hoverOff, .nav__social__item:hover .icon--email:before, .nav__social__item:hover .icon--twitter:before, .nav__social__item:hover .icon--linkedin:before, .nav__social__item:hover .icon--resume:before, .nav__social__item:hover .icon--blog:before, .nav__social__item:hover .icon--about:before, .nav__social__item:hover .icon--tools:before, .nav__social__item:hover .icon--lab:before, .nav__social__item:hover .icon--rant:before, .nav__social__item:hover .icon--idea:before, .nav__social__item:hover .icon--work:before, .nav__social__item:hover .icon--tumblr:before, body, html, .post__title__container .post__title {
   -webkit-transition: all 320ms ease;
   -moz-transition: all 320ms ease;
   -ms-transition: all 320ms ease;
@@ -423,7 +423,7 @@ a.link-external .btn-inline, a.link-external .btn-inline:hover:after, .nav__logo
   padding-top: 100px;
 }
 
-.post__title__container .post__title, .article__head__title, .article__body__content h1, .article__head__subtitle, .article__body__content h4, a.link-external .btn-inline, .timeline__client, body, html, .post__date__container .post__date {
+.post__title__container .post__title, .article__head__title, .article__body__content h1, .article__head__subtitle, .article__body__content h4, .btn-inline, .timeline__client, body, html, .post__date__container .post__date {
   font-family: "Open Sans", "Helvetica Neue", arial, sans-serif;
 }
 
@@ -431,7 +431,7 @@ a.link-external .btn-inline, a.link-external .btn-inline:hover:after, .nav__logo
   font-family: "Helvetica Neue", "Open Sans", sans-serif;
 }
 
-.article__body__content .h1--display, .article__body__content .h1--display--spaced, .article__body__content .display, .article__body__content, .article__head__subtitle, .article__body__content h4, .article__body__content h2, .article__body__content h3, .article__body__content .slider .rsGCaption, .article__body__content figure figcaption, .article__body__content .callout, .article__body__content blockquote, .article__body__content blockquote.blockquote--wide, .nav__label, .nav__social__label span, .timeline__year, .timeline__headline div > span, .post__tags__container .post__tags li, .article__head__date, .article__tags__container, .article__head__projectLink__container, .main__footer {
+.article__body__content .h1--display, .article__body__content .h1--display--spaced, .article__body__content .display, .article__body__content, .article__head__subtitle, .article__body__content h4, .article__body__content h2, .article__body__content h3, .article__body__content .slider .rsGCaption, .article__body__content figure figcaption, .article__body__content .callout, .article__body__content blockquote, .article__body__content blockquote.blockquote--wide, .nav__label, .nav__social__item, .nav__social__label span, .timeline__year, .timeline__headline div > span, .post__tags__container .post__tags li, .article__head__date, .article__tags__container, .article__head__projectLink__container, .main__footer {
   font-family: Georgia, serif;
 }
 
@@ -456,10 +456,10 @@ a, a:active, a:hover, a:link {
   color: #333333;
 }
 
-a.link-external .btn-inline--large {
+.btn-inline--large {
   padding: 14px 20px;
 }
-a.link-external .btn-inline--large:hover {
+.btn-inline--large:hover {
   padding: 14px 40px;
 }
 
@@ -574,9 +574,10 @@ a.link-external .btn-inline--large:hover {
   padding-bottom: 0;
 }
 
-a.link-external .btn-inline {
+.btn-inline {
   display: inline-block;
-  color: white;
+  color: white !important;
+  text-decoration: none !important;
   background-color: #777777;
   padding: 0 1rem 0 1rem;
   margin: 1rem 0;
@@ -585,14 +586,14 @@ a.link-external .btn-inline {
   line-height: 2rem;
   font-weight: 300;
 }
-a.link-external .btn-inline:hover {
+.btn-inline:hover {
   background-color: #972020;
   padding: 0 1.5rem 0 1.5rem;
 }
-a.link-external .btn-inline:hover:after {
+.btn-inline:hover:after {
   content: ' → ';
 }
-a.link-external .btn-icon.btn-inline {
+.btn-icon.btn-inline {
   padding-left: 0.25rem;
 }
 
@@ -844,6 +845,30 @@ a.link-external .btn-icon.btn-inline {
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox="0 0 512 512"%3E%3Cpath%20fill%3D%22rgba(255,255,255,1)%22%20stroke%3D%22transparent%22%20stroke-width%3D%220%22%20style%3D%22%22%20d%3D%22M84 324.6c-13.7-49.3 7.2-122 67-161.4-24.4 32-29 68.8-27.8 89 13.8 1 78.8 6 78.4 63.3 0 65-97 82.7-117.5 9zm147.6-9c0-44.7-32.7-81.7-75.5-88.5 4-34.3 29-67 67-81.3l-16.8-36.5c-124 24.5-173.2 144-151 223.4 30.3 106 176.4 85.3 176.4-17zm83 9c-14-49.3 7-122 66.8-161.4-24.4 32-29 68.8-27.8 89 13.8 1 78.8 6 78.4 63.3 0 65-97 82.7-117.5 9zm147.4-9c0-44.7-32.7-81.7-75.5-88.5 3.8-34.3 29-67 67-81.3l-17-36.5c-124 24.5-173 144-151 223.4C316 438.6 462 418 462 315.6z%22%20%2F%3E%3C%2Fsvg%3E');
 }
 
+.nav__item:after {
+  content: ' ';
+  display: block;
+  padding-bottom: 6px;
+  width: 0;
+  background-color: rgba(51, 51, 51, 0.12);
+  opacity: 0.4;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+}
+
+.nav__item:hover:after {
+  content: ' ';
+  display: block;
+  padding-bottom: 6px;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.12);
+  opacity: 0.4;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+}
+
 .nav {
   background-color: white;
 }
@@ -854,21 +879,15 @@ a.link-external .btn-icon.btn-inline {
 }
 @media screen and (min-width: 480px) {
   .nav {
-    width: 150px;
+    width: 180px;
     position: fixed;
     left: 0;
     height: 100%;
   }
 }
 
-@media screen and (min-width: 480px) {
-  .nav__logo {
-    height: 5rem;
-  }
-}
-
 .nav__logo__link:hover span {
-  color: #275d84;
+  color: #F6491F;
 }
 @media screen and (min-width: 480px) {
   .nav__logo__link:hover span:first-child {
@@ -889,26 +908,25 @@ a.link-external .btn-icon.btn-inline {
 }
 @media screen and (max-width: 479px) {
   .nav__logo__content {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
-    padding-top: 0.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
   }
 }
 @media screen and (min-width: 480px) {
   .nav__logo__content {
-    position: relative;
-    left: 0.5rem;
-    top: 2rem;
-    font-size: 1.5rem;
-    width: 150px;
-    padding-left: 10px;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    font-size: 2rem;
   }
 }
 
 @media screen and (min-width: 480px) {
   .nav__menu {
-    width: 150px;
-    padding-left: 1rem;
+    width: 180px;
+    margin-top: 2rem;
+    text-align: center;
   }
 }
 
@@ -922,7 +940,8 @@ a.link-external .btn-icon.btn-inline {
 }
 
 .nav__item {
-  padding: 0.5rem 0;
+  position: relative;
+  padding: 0.7rem 0;
 }
 @media screen and (max-width: 479px) {
   .nav__item {
@@ -937,11 +956,6 @@ a.link-external .btn-icon.btn-inline {
 .nav__item:hover {
   cursor: pointer;
 }
-@media screen and (min-width: 767px) {
-  .nav__item:hover {
-    padding-left: 10px;
-  }
-}
 @media screen and (max-width: 479px) {
   .nav__item:hover {
     padding-top: 2px;
@@ -951,19 +965,22 @@ a.link-external .btn-icon.btn-inline {
   opacity: 1;
 }
 .nav__item:hover.nav__blog .nav__label {
-  color: #972020;
+  color: #a00a00;
+  border-bottom: 2px solid #a00a00;
 }
 .nav__item:hover.nav__about .nav__label {
-  color: #F29863;
+  color: #FF530D;
+  border-bottom: 2px solid #ff530d;
 }
 .nav__item:hover.nav__tools .nav__label {
   color: #01A7A4;
+  border-bottom: 2px solid #01a7a4;
 }
 .nav__item.nav__blog.active .nav__label {
-  color: #972020;
+  color: #a00a00;
 }
 .nav__item.nav__about.active .nav__label {
-  color: #F29863;
+  color: #FF530D;
 }
 .nav__item.nav__tools.active .nav__label {
   color: #01A7A4;
@@ -971,22 +988,14 @@ a.link-external .btn-icon.btn-inline {
 
 .nav__label {
   display: inline-block;
-  padding-top: 12px;
+  border-bottom: 2px solid white;
+  font-size: 1.2rem;
+  padding-bottom: 0.25rem;
 }
 @media screen and (max-width: 479px) {
   .nav__label {
     width: 100%;
     text-align: center;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .nav__label {
-    opacity: 0.1;
-  }
-}
-@media screen and (min-width: 480px) {
-  .nav__label {
-    padding-left: 0.33333rem;
   }
 }
 
@@ -998,15 +1007,19 @@ a.link-external .btn-icon.btn-inline {
 }
 @media screen and (min-width: 480px) {
   .nav__social {
-    width: 110px;
-    padding-left: 18px;
+    margin-top: 3rem;
   }
 }
 
 .nav__social__item {
-  position: relative;
   cursor: pointer;
-  padding: 0.5rem 0;
+  padding: 0.66667rem 0;
+  text-align: center;
+}
+.nav__social__item .nav__social__label {
+  border-bottom: 1px solid rgba(119, 119, 119, 0);
+  padding: 0 7px;
+  padding-bottom: 3px;
 }
 @media screen and (max-width: 479px) {
   .nav__social__item {
@@ -1015,33 +1028,31 @@ a.link-external .btn-icon.btn-inline {
     text-align: center;
   }
 }
-@media screen and (min-width: 480px) {
-  .nav__social__item:hover {
-    padding-left: 4px;
-  }
+.nav__social__item:hover {
+  color: #972020;
 }
 @media screen and (max-width: 479px) {
   .nav__social__item:hover {
     padding-top: 2px;
   }
 }
-.nav__social__item:hover .nav__social__label span {
+.nav__social__item:hover .nav__social__label {
   opacity: 1;
   right: 0px;
 }
+@media screen and (min-width: 480px) {
+  .nav__social__item:hover .nav__social__label {
+    border-bottom: 1px solid rgba(151, 32, 32, 0.8);
+  }
+}
 
 .nav__social__label {
-  position: absolute;
   display: inline-block;
-  padding-left: 8px;
-  padding-top: 2px;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .nav__social__label span {
-  opacity: 0;
+  opacity: 0.6;
   position: relative;
-  right: 10px;
-  top: 3px;
 }
 
 .filter-btn {
@@ -1238,13 +1249,36 @@ a.link-external .btn-icon.btn-inline {
   margin-bottom: 0;
 }
 
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+/* close commented backslash hack */
 body, html {
   color: #333333;
 }
 
 @media screen and (min-width: 480px) {
   .main__container {
-    padding-left: 150px;
+    padding-left: 180px;
   }
 }
 

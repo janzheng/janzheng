@@ -7,6 +7,38 @@
 // Narrow nav bar (icons only) : 60px  //not used anymore, always wide
 // *********************************************************
 
+%interact {
+  &:after {
+    @extend %ease;
+    content: ' '; 
+    display: block;
+    padding-bottom: 6px;
+    width: 0;
+    background-color: $hover_color;
+    opacity: 0.4;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    // border-bottom: 2px solid $red;
+  }
+}
+
+%interact_hover {
+  &:after {
+    @extend %ease;
+    content: ' ';
+    display: block;
+    padding-bottom: 6px;
+    width: 100%;
+    // border-bottom: 2px solid $red;
+    background-color: $hover_color;
+    opacity: 0.4;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+  }
+}
+
 .nav {
   background-color: white;
 
@@ -22,15 +54,16 @@
 }
 
 .nav__logo {
-	@include media($break-nav-thin-atleast) {
-		height: $base*5; 
-	}
+	// @include media($break-nav-thin-atleast) {
+		// height: $base*5; 
+	// }
 }
 	.nav__logo__link {
 		span { @extend %ease; }
 		&:hover {
 			span { 
-				@extend %ease; color: $blue; 
+				@extend %ease;
+        color: $dark-orange; 
 
 				@include media($break-nav-thin-atleast) {
 					&:first-child { padding-left: $base/2 } 
@@ -47,15 +80,17 @@
       .nav__z { font-weight: 300; letter-spacing:-1px; }
 
 		@include media($break-nav-mobile) {
-			font-size: $base*3/2;
+			font-size: $base*2;
 			text-align: center;
-			padding-top: $base/2;
+			padding-top: $base*3;
+      padding-bottom: $base*2;
 		} 
 		@include media($break-nav-thin-atleast) {
-			position: relative; left: $base/2; top: $base*2;
-			font-size: $base*3/2;
-			width: $width-nav-menu;
-			padding-left: 10px;
+			// position: relative;
+      margin-left: $base*2;
+      margin-top: $base*4;
+			font-size: $base*2;
+			// width: $width-nav-menu;
 		}
   }
 
@@ -71,8 +106,10 @@
       }
 
       @include media($break-nav-thin-atleast) {
-			width: $width-nav-menu;
-			padding-left: 1rem;
+  			width: $width-nav-menu;
+  			// margin-left: $base*3;
+        margin-top: $base*2;
+        text-align: center;
       }
 
    }
@@ -85,11 +122,20 @@
   		}
     }
 
-    .nav__item {
 
-  			padding: $base/2 0;
+    .nav__item {
+        $blog: $light-red;
+        $about: $orange;
+        $tools: $teal;
+
+        position: relative;
+  			padding: $base*0.7 0;
   			@extend %ease;
 
+        @extend %interact;
+        .nav__label {
+          // @extend %interact;
+        }
 
   			@include media($break-nav-mobile) {
   				height: 40px;
@@ -99,23 +145,29 @@
   				top: $base*5;
         }
 
+
   			// general hover styles
   			&:hover {
   				@extend %ease;
   				cursor: pointer; 
   				// slight movement animation to icons and label
-  				@include media($break-nav-wide-atleast) {padding-left: 10px; }
+  				// @include media($break-nav-wide-atleast) {padding-left: 10px; }
   				@include media($break-nav-mobile) {padding-top: 2px; }
 
           .icon { @extend .icon--hoverOn; } // turn on hover mode
-  				.nav__label { opacity: 1; }
+
+          @extend %interact_hover;
+  				.nav__label { 
+            opacity: 1; 
+          }
+
   				
-  				&.nav__blog .nav__label { color: $red; }
-  				&.nav__about .nav__label { color: $color8; }
-  				&.nav__tools .nav__label { color: $teal; }
+  				&.nav__blog .nav__label { color: $blog; border-bottom: 2px solid rgba($blog,1) }
+  				&.nav__about .nav__label { color: $about; border-bottom: 2px solid rgba($about,1) }
+  				&.nav__tools .nav__label { color: $tools; border-bottom: 2px solid rgba($tools,1) }
         }
-        &.nav__blog.active  { .icon { @extend .icon--hoverOn; } .nav__label { color: $red; } }
-        &.nav__about.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $color8; } }
+        &.nav__blog.active  { .icon { @extend .icon--hoverOn; } .nav__label { color: $blog; } }
+        &.nav__about.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $about; } }
         &.nav__tools.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $teal; } }
         
       }
@@ -124,14 +176,17 @@
 	      	display: inline-block;
 	      	@extend %serif;
   				@extend %ease;
-  				padding-top: 12px;
+  				// padding-top: $base;
+          border-bottom: 2px solid rgba($white,1);
+          font-size: $base*1.2;
 
   				@include media($break-nav-mobile) {
   					width: 100%;
   					text-align: center;
   				}
-  				@include media($break-nav-thin) { opacity: 0.1;}
-  				@include media($break-nav-thin-atleast) { padding-left: $base/3; }
+  				// @include media($break-nav-thin) { opacity: 0.1;}
+  				// @include media($break-nav-thin-atleast) { padding-bottom: $base/4; }
+          padding-bottom: $base/4;
 	      }
 
 
@@ -148,15 +203,23 @@
          position: relative; bottom: $base;
       } 
       @include media($break-nav-thin-atleast) {
-         width: 110px;
-         padding-left: 18px;
+        margin-top: $base*3;
+         // width: 110px;
+         // padding-left: 18px;
       }
    }
    .nav__social__item {
-      @extend %ease;
-      position: relative;
+      @extend %ease-fast;
+      // position: relative;
       cursor: pointer;
-      padding: $base/2 0;
+      padding: $base*2/3 0;
+      text-align: center;
+      @extend %serif; 
+      .nav__social__label {
+        border-bottom: 1px solid rgba($gray,0);
+        padding: 0 7px;
+        padding-bottom: 3px;
+      }
 
       @include media($break-nav-mobile) {
          width: 25%; float: left;  
@@ -164,32 +227,37 @@
       }
 
       &:hover {
-
-         // animate on hover (left right) for left side rail (up down) for top menu
-         @include media($break-nav-thin-atleast) {padding-left: 4px; }
-         @include media($break-nav-mobile) {padding-top: 2px; }
-         
-         .icon { @extend .icon--hoverOn; } // turn on hover mode
-         .nav__social__label span {opacity: 1; right: 0px; }
+        @extend %ease-fast;
+        // animate on hover (left right) for left side rail (up down) for top menu
+        // @include media($break-nav-thin-atleast) {padding-left: 4px; }
+        @include media($break-nav-mobile) {padding-top: 2px; }
+        color: $red;
+        .icon { @extend .icon--hoverOn; } // turn on hover mode
+        .nav__social__label {
+          opacity: 1; right: 0px; 
+          @include media($break-nav-thin-atleast) {
+            border-bottom: 1px solid rgba($red,0.8);
+          }
+        }
       }
    }
 
       .nav__social__label {
-      	position: absolute;
-			display: inline-block;
-			padding-left: 8px;
-			padding-top: 2px;
-			font-size: $size-menu-social;
-         @extend %ease-slow; 
+        // position: absolute;
+        display: inline-block;
+        // padding-left: 8px;
+        // padding-top: 2px;
+        font-size: $size-menu-social;
+        @extend %ease-fast; 
 
-         span {
-         	@extend .show-nav-full; 
-         	@extend %serif; 
-         	@extend %ease-slow; 
-         	opacity: 0; 
-         	position: relative; 		// creates the slide-in on hover
-         	right: 10px; top: 3px; 
-         }
+        span {
+          @extend .show-nav-full; 
+          @extend %serif; 
+          @extend %ease-fast; 
+          opacity: 0.6; 
+          position: relative; 		// creates the slide-in on hover
+          // right: 10px; top: 3px; 
+        }
          
       }
 

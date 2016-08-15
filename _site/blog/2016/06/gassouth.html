@@ -17,6 +17,7 @@
 
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600, 700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="/app/css/royalslider.css" > 
   <link rel="stylesheet" href="/app/css/minimal-white/rs-minimal-white.css" >
@@ -44,7 +45,7 @@
   <div class="nav">
 
     <!-- JZ logo -->
-    <div class="nav__logo">
+    <div class="nav__logo clearfix">
       <a class="nav__logo__link" href="/">
         <div class="nav__logo__content ">
           <span class="nav__j">jan </span><span class="nav__z">zheng</span>
@@ -65,8 +66,8 @@
           <div class="nav__item nav__blog 
                       
                       " >
-            <span  class="icon icon--blog"></span>
-            <div class="nav__label"><span>thoughts</span></div>
+            <!-- <span class="icon icon--blog"></span> -->
+            <div class="nav__label">thoughts</div>
           </div>
         </a>
         
@@ -83,8 +84,8 @@
         
         <a href="/about.html">
           <div class="nav__item nav__about " >
-            <span class="icon icon--about"></span>
-            <div class="nav__label"><span>about</span></div>
+            <!-- <span class="icon icon--about"></span> -->
+            <div class="nav__label">about</div>
           </div>
         </a>
         
@@ -101,8 +102,8 @@
         
         <a href="/toolbox.html" >
           <div class="nav__item nav__tools " >
-            <span class="icon icon--tools"></span>
-            <div class="nav__label"><span>tools</span></div>
+            <!-- <span class="icon icon--tools"></span> -->
+            <div class="nav__label">tools</div>
           </div>
         </a>
         
@@ -121,30 +122,30 @@
     <div class="nav__social">
       <a href="mailto:hello@janzheng.com?Subject=Hello%20Jan!">
         <div class="nav__social__item nav__social__email ">
-          <span class="icon icon--small icon--email"></span>
-          <div class="nav__social__label"><span>hello@</span></div>
+          <!-- <span class="icon icon--small icon--email"></span> -->
+          <div class="nav__social__label">email</div>
         </div>
       </a>
 
       <a href="https://twitter.com/janistanian">
         <div class="nav__social__item nav__social__twitter">
-          <span class="icon icon--small icon--twitter"></span>
-          <div class="nav__social__label"><span>chirp</span></div>
+          <!-- <span class="icon icon--small icon--twitter"></span> -->
+          <div class="nav__social__label">tweet</div>
         </div>
       </a>
 
 
       <a href="http://www.linkedin.com/in/janzh">
         <div class="nav__social__item nav__social__linkedin">
-          <span class="icon icon--small icon--linkedin"></span>
-          <div class="nav__social__label"><span>link me</span></div>
+          <!-- <span class="icon icon--small icon--linkedin"></span> -->
+          <div class="nav__social__label">link</div>
         </div>
       </a>
 
       <a target="_blank" href="http://janzheng.com/resume.pdf">
         <div class="nav__social__item nav__social__resume">
-          <span class="icon icon--small icon--resume"></span>
-          <div class="nav__social__label"><span>résumé</span></div>
+          <!-- <span class="icon icon--small icon--resume"></span> -->
+          <div class="nav__social__label">résumé</div>
         </div>
       </a>
     </div>
@@ -434,7 +435,15 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
   </div>
 </div>
     </div>
-
+<!-- 
+    <div class="main__tumblr">
+      <p>Latest from <a href="http://YOURBLOG.tumblr.com/">our Tumblr blog</a>...</p>
+      <h2 id="blog-headline"></h2>
+      <div id="blog-body"></div>
+      <ul id="blog-more">
+      </ul>
+    </div>
+ -->
     <div class="main__footer">
         &copy; 2015 – Built on <a href="https://github.com/janzheng/janzheng.github.com">Github</a> &amp; <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
     </div> 
@@ -481,7 +490,6 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
   
   <script src="/app/js/script.js"></script>
   
-  <script src="/app/js/tumblriffic.js"></script>
 
 
   
@@ -490,18 +498,50 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
   google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
   </script>
 
-
-  <script type="text/javascript" src="http://funkability.tumblr.com/api/read/json"></script>
-
+  <!-- old name: funkability -->
+  <script type="text/javascript" src="http://ja-nz.tumblr.com/api/read/json"></script>
   <script type="text/javascript">
       // The variable "tumblr_api_read" is now set.
-      console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
-      console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
+      console.log('LOAD TUMBLR')
+      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
+      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
 
-      console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
+      // console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
 
-      console.log(JSON.stringify(tumblr_api_read));
+      // console.log(JSON.stringify(tumblr_api_read));
+      console.log(tumblr_api_read);
+
+
+      // Get tumblr post
+      function getTumblr() {
+
+        $.ajax({
+          type: 'GET',
+          url: "http://api.tumblr.com/v2/blog/ja-nz.tumblr.com/posts?api_key=inC0HuM2X45UqdQ6RhPJvRXoWEYJiH4JEcrsVD281MSdZUoLao",
+          async: false,
+          jsonpCallback: 'jsonCallback',
+          contentType: "application/json",
+          dataType: 'jsonp',
+          success: function(json) {
+            var posts = json.response.posts;
+            var latest = json.response.posts[0];
+            console.log(posts);
+            $("#blog-headline").text(latest.title);
+            $("#blog-body").html(latest.body);
+            json.response.posts.forEach(function(el, i) {
+              // if(i > 4) return false;
+              $("#blog-more").append("<li><a href='"+ el.post_url +"'>"+ el.title +"</li>");
+            });
+          },
+          error: function(e) {
+            console.log(e.message);
+          }
+        });
+      }
+
+      getTumblr();
   </script>
+  <!-- <script src="/app/js/tumblriffic.js"></script> -->
   
 
   <!-- new google analytics beta -->
