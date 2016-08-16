@@ -37,11 +37,7 @@ The easiest way to integrate a tumblr blog into a website is covered in [adrifol
 
 
 
-{% highlight html linenos %}
-
-<script type="text/javascript" src="http://ja-nz.tumblr.com/js"></script>
-
-{% endhighlight %}
+{% highlight html linenos %}<script type="text/javascript" src="http://ja-nz.tumblr.com/js"></script>{% endhighlight %}
 
 
 
@@ -82,12 +78,8 @@ So how do we get around this "small" problem of not having PHP? Well, turns out 
 Apparently, in addition to Finlay's method, [Tumblr has a way to return a JSON-formatted feed](http://www.tumblr.com/docs/en/api/v1).
 Add the following script to the end of the @<head>@ section of your website, replacing 'username' with your tumblr username:
 
-{% highlight html linenos %}
-
-<pre class="prettyprint"><script type="text/javascript" src="http://username.tumblr.com/api/read/json"></script>
-</pre>
-
-{% endhighlight %}
+{% highlight html linenos %}<pre class="prettyprint"><script type="text/javascript" src="http://username.tumblr.com/api/read/json"></script>
+</pre>{% endhighlight %}
 
 
 
@@ -103,31 +95,23 @@ Here's the example code. After you've inserted the previous code at the end of @
 
 
 
-{% highlight html linenos %}
-
-<script type="text/javascript">
+{% highlight html linenos %}<script type="text/javascript">
     // The variable "tumblr_api_read" is now set to your tumblr feed.
     document.write(
         '<a href="' + tumblr_api_read['posts'][0]['url'] + 
         '">My most recent Tumblr post</a>'
     );
-</script>
-
-{% endhighlight %}
+</script>{% endhighlight %}
 
 
 
 
 As an example, here is a link dynamically pulled in from Tumblr
 
-{% highlight html linenos %}
-
-<script type="text/javascript" src="http://ja-nz.tumblr.com/api/read/json"></script>
+{% highlight html linenos %}<script type="text/javascript" src="http://ja-nz.tumblr.com/api/read/json"></script>
 <script type="text/javascript">
 document.write('<a href="' + tumblr_api_read['posts'][0]['url'] + '">my most recent Tumblr post.</a>');
-</script>
-
-{% endhighlight %}
+</script>{% endhighlight %}
 
 
 And there you go. You now have full access to modify, style, and control your Tumblr feed, using only Javascript, and not an ounce of PHP or server-side. 

@@ -366,9 +366,9 @@
       padding: $size-slightly-large; margin-top: $size-largish; margin-bottom: $base*2; margin-right: $base*2;
       font-size: $base;
 
-      @include media($break-nav-mobile) {@include span-columns(18);}
+      @include media($break-nav-mobile) {@include span-columns(24);}
       @include media($break-nav-thin-atleast) {@include shift(-1); }
-      @include media($break-nav-wide-atleast) {@include shift(-3); @include span-columns(28);}
+      @include media($break-nav-wide-atleast) {@include shift(-2); @include span-columns(26);}
 
       &.callout--large {
         font-size: $size-slightly-large; line-height: $base*2;
@@ -412,13 +412,16 @@
 
       &.figure-wide {
         // margin: 0 auto;
-
+        overflow: hidden;
         .royalSlider {
-          overflow: hidden; // used for slider to show adjacent images
+          overflow: visible;
+          // overflow: hidden; // used for slider to show adjacent images
         }
 
         width: 100%;
-        @include media($break-nav-thin-atleast) {@include span-columns(32);}
+        @include media($break-nav-thin-atleast) {@include shift(-2); margin-right: $base*2;}
+        @include media($break-nav-mobile) {width: 100%; float: none;}
+        @include media($break-nav-wide-atleast) {@include span-columns(28);}
         img {display: block; margin: 0 auto;}
         figcaption { text-align: center; }
       } 

@@ -379,5 +379,19 @@ a, a:active, a:hover, a:link {
 }
 
 
+// royal slider
+.rsMinW .rsThumb.rsNavSelected {
+  padding: 4px;
+  border: 2px solid $light-blue;
+}
+.rsOverflow {
+  margin-top: -$base/2;
+  margin-bottom: $base/2;
+}
+.rsFullscreen {
+  background: rgba(0,0,0,0.8);
+}
+
+
 
 

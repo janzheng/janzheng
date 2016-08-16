@@ -666,6 +666,20 @@ a, a:active, a:hover, a:link {
   left: 0px;
 }
 
+.rsMinW .rsThumb.rsNavSelected {
+  padding: 4px;
+  border: 2px solid #44B9EB;
+}
+
+.rsOverflow {
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.rsFullscreen {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 /*
   Expand + Collapse Menu
   - When SMALL: show open button, hide close button, hide content
@@ -2353,7 +2367,7 @@ body, html {
     float: left;
     display: block;
     margin-right: 0%;
-    width: 75%;
+    width: 100%;
   }
   .article__body__content .callout:last-child {
     margin-right: 0;
@@ -2366,11 +2380,11 @@ body, html {
 }
 @media screen and (min-width: 767px) {
   .article__body__content .callout {
-    margin-left: -12.5%;
+    margin-left: -8.33333%;
     float: left;
     display: block;
     margin-right: 0%;
-    width: 116.66667%;
+    width: 108.33333%;
   }
   .article__body__content .callout:last-child {
     margin-right: 0;
@@ -2432,17 +2446,30 @@ body, html {
   }
 }
 .article__body__content figure:not(.highlight).figure-wide {
+  overflow: hidden;
   width: 100%;
 }
 .article__body__content figure:not(.highlight).figure-wide .royalSlider {
-  overflow: hidden;
+  overflow: visible;
 }
 @media screen and (min-width: 480px) {
+  .article__body__content figure:not(.highlight).figure-wide {
+    margin-left: -8.33333%;
+    margin-right: 2rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .article__body__content figure:not(.highlight).figure-wide {
+    width: 100%;
+    float: none;
+  }
+}
+@media screen and (min-width: 767px) {
   .article__body__content figure:not(.highlight).figure-wide {
     float: left;
     display: block;
     margin-right: 0%;
-    width: 133.33333%;
+    width: 116.66667%;
   }
   .article__body__content figure:not(.highlight).figure-wide:last-child {
     margin-right: 0;
@@ -2569,7 +2596,6 @@ body, html {
 code {
   font-size: 0.9rem;
   background-color: rgba(68, 185, 235, 0.3);
-  padding: 0.5rem;
 }
 
 .highlight .c {

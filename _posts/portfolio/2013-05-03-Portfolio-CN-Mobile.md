@@ -7,8 +7,8 @@ source: /app/posts/portfolio/cartoon-network-mobile
 <!-- preview-img : /app/posts/portfolio/cartoon-network-mobile/preview.png -->
 preview-css : post-preview-std post__imgPreview--short
 
-project-link : http://www.nespresso-us.com/coffee-boutiques/
-project-link-desc : Nespresso Boutiques
+<!-- project-link : http://www.nespresso-us.com/coffee-boutiques/ -->
+<!-- project-link-desc : Nespresso Boutiques -->
 
 <!-- external: # -->
 <!-- youtube: # -->
@@ -24,29 +24,64 @@ comments : false
 featured : false
 ---
 
-<div class="post-maincontent">
+<figure class="figure-wide">
+  <div class="royalSlider rsMinW show-adjacent slider">
+    <a class="rsImg" href="{{page.source}}/1.png">
+      The Cartoon Network Mobile Site, from wireframe to design, to prototype. The site aimed to bring a novel way to interact with and explore Cartoon Network's shows.
+      <img src="{{page.source}}/1sm.png" class="rsTmb" />
+    </a>
+    <a class="rsImg" href="{{page.source}}/2.png">
+      The Cartoon Network Mobile homepage shows a section of main news and features, with additional menu buttons across the bottom of the screen.
+      <img src="{{page.source}}/2sm.png" class="rsTmb" />
+    </a>
+    <a class="rsImg" href="{{page.source}}/3.png">
+      Wireframe of the Cartoon Network Mobile homepage. Originally, more content was planned underneat the promotion area, including daily schedule and links to other content.
+      <img src="{{page.source}}/3sm.png" class="rsTmb" />
+    </a>
+    <a class="rsImg" href="{{page.source}}/4.png">
+      The videos page shows the latest and featured videos across all Cartoon Network properties.
+      <img src="{{page.source}}/4sm.png" class="rsTmb" />
+    </a>
+  </div>
+</figure>
 
+
+<div class="callout">
+  <div class="callout--row">
+     <span class="title">Client</span><span class="content">Cartoon Network</span>
+  </div>
+
+  <div class="callout--row">
+     <span class="title">Goal</span><span class="content">To create a fun mobile-centric website for Cartoon Network</span>
+  </div>
+
+  <div class="callout--row">
+     <span class="title">Role</span><span class="content">Information architecture, interaction design</span>
+  </div>
+
+  <div class="callout--row">
+     <span class="title">Agency</span><span class="content">Moxie</span>
+  </div>
+
+  <div class="callout--row">
+     <span class="title">Links</span>
+     <span class="content">
+      <div><a href="{{page.source}}/cartoon.html">Concept prototype</a></div>
+      <div><a href="{{page.source}}/mobile_web_v4.7_notes_9-23-11.pdf">Wireframe document</a></div>
+    </span>
+  </div>
+
+</div>
+
+<!-- 
 <div class="flexslider">
   <ul class="slides">
 
-    <li>
-      <a href="{{page.source}}/1.png" title="Cartoon Network Mobile Site" rel="lightbox-cnmobile">
-         <img src="{{page.source}}/1sm.png" />
-         <p class="flex-caption">The Cartoon Network Mobile Site, from wireframe to design, to prototype. The site aimed to bring a novel way to interact with and explore Cartoon Network's shows.</p>
-      </a>
-    </li>
-    
-    <li>
-      <a href="{{page.source}}/2.png" title="Cartoon Network Mobile Homepage" rel="lightbox-cnmobile">
-         <img src="{{page.source}}/2sm.png" />
-         <p class="flex-caption">The Cartoon Network Mobile homepage shows a section of main news and features, with additional menu buttons across the bottom of the screen.</p>
-      </a>
-    </li>
 
     <li>
       <a href="{{page.source}}/3.png" title="Cartoon Network Mobile Homepage" rel="lightbox-cnmobile">
          <img src="{{page.source}}/3sm.png" />
-         <p class="flex-caption">Wireframe of the Cartoon Network Mobile homepage. Originally, more content was planned underneat the promotion area, including daily schedule and links to other content.</p>
+         <p class="flex-caption"></p>
       </a>
     </li>
 
@@ -111,10 +146,10 @@ featured : false
     </li>
   </ul>
 </div>
+ -->
 
 
-p. 
-"Cartoon Network":http://www.cartoonnetwork.com/ wanted a mobile site that exuded the fun and quirkiness of their new site.
+[Cartoon Network](http://www.cartoonnetwork.com/) wanted a mobile site that exuded the fun and quirkiness of their new site.
 
 They wanted a playful, mobile-app version of their desktop site that focused on getting show information and watching clips. They also wanted the mobile site to drive more app downloads.
 
@@ -124,43 +159,18 @@ Once the paper prototype was approved, I transferred the sketches into wireframe
 
 After the prototypes were built and I received buy-in, more details and screens, including a flat non-Javascript, Blackberry-friendly version, were fleshed out with input from our clients, culminating into an approved wireframe document. I then helped guide a graphic designer and a developer to translate the wireframes into a final product.
 
-p. 
-* Conceptualized, translated site requirements into a final design
-* Sketched, and iterated various layouts
-* Created a proof of concept prototype for team buy-in
-* Produced several rounds of iterative wireframe designs
-* Collaborated with designers and developers to finalize the site
 
+<div class="callout">
+  <h2 class="no-margin">Summary of work</h2>
+  <div class="callout--row">
+    <ul>
+      <li>Conceptualized, translated site requirements into a final design</li>
+      <li>Sketched, and iterated various layouts</li>
+      <li>Created a proof of concept prototype for team buy-in</li>
+      <li>Created core interaction concept for the user experience</li>
+      <li>Produced several rounds of iterative wireframe designs</li>
+      <li>Collaborated with designers and developers to finalize the site</li>
+    </ul>
+  </div>
 </div>
 
-
-
-<div class="post-sidebar">
-   <div class="post-sidebar-column">
-      <title>Client</title>
-      <span>Cartoon Network</span>
-   </div>
-
-   <div class="post-sidebar-column">
-      <title>Goal</title>
-      <span>To create a fun mobile-centric website for Cartoon Network</span>
-   </div>
-
-   <div class="post-sidebar-column">
-      <title>Role</title>
-      <span>Information architect</span>
-      <span>Interaction design</span>
-   </div>
-
-   <div class="post-sidebar-column">
-      <title>Employer</title>
-      <span>Moxie</span>
-   </div>
-
-   <div class="post-sidebar-column">
-      <title>Link</title>
-      <span><a href="http://m.cartoonnetwork.com/">m.cartoonnetwork.com</a> (mobile only)</span>
-      <span><a href="{{page.source}}/cartoon.html">Concept prototype</a></span>
-      <span><a href="{{page.source}}/mobile_web_v4.7_notes_9-23-11.pdf">Wireframe document</a></span>
-   </div>
-</div>
