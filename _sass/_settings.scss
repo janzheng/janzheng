@@ -84,7 +84,7 @@ $size-article-subtitle: $base*1;
 $size-h2: golden-ratio($base, 1);
   $height-h2: golden-ratio($size-h2, 1);
 
-$size-h3: golden-ratio($base*0.8, 1);
+$size-h3: golden-ratio($size-slightly-large, 1);
   $height-h3: golden-ratio($size-h3, 1);
 
 $size-p: $size-slightly-large; 

@@ -52,7 +52,7 @@ featured : false
   </div>
 
   <div class="callout--row">
-     <span class="title">Goal</span><span class="content">To create a fun mobile-centric website for Cartoon Network</span>
+     <span class="title">Goal</span><span class="content">To create a fun mobile-centric website</span>
   </div>
 
   <div class="callout--row">

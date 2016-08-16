@@ -52,7 +52,7 @@ featured : false
 
 
 
-<p class="dropcap">Nespresso is a "single-serving espresso machine company":http://www.nespresso-us.com/boutique/  who came to us looking to give their exclusive network of coffee shops a stronger online presence. They wanted a place for their fans to learn more about their Boutiques, and needed a site to match the style, elegance, and exclusivity of their local Boutiques.</p>
+<p class="dropcap">Nespresso is a <a href="http://www.nespresso-us.com/boutique/">single-serving espresso machine company</a> who came to us looking to give their exclusive network of coffee shops a stronger online presence. They wanted a place for their fans to learn more about their Boutiques, and needed a site to match the style, elegance, and exclusivity of their local Boutiques.</p>
 
 <figure class="figure-wide"><a href="{{page.source}}/nespresso-home.png">
 <img src="{{page.source}}/nespresso-home_sm.png" /></a><figcaption>The austere use of menu colors accentuates the large images</figcaption>
@@ -68,16 +68,22 @@ Originally, Nespresso used a Store Finder system similar to that of Home Depot, 
     <div class="rsContent">
       <img class="rsImg" src="{{page.source}}/gallery.png" alt="" >
       <div class="rsCaption">Large images convey the atmosphere of each store.</div>
+      <img src="{{page.source}}/gallery.png" class="rsTmb" />
     </div>
-
     <div class="rsContent">
       <img class="rsImg" src="{{page.source}}/stores.png" alt="" >
       <div class="rsCaption">Stores are categorized by area to convey scarcity and uniqueness.</div>
+      <img src="{{page.source}}/stores.png" class="rsTmb" />
     </div>
-
     <div class="rsContent">
       <img class="rsImg" src="{{page.source}}/store.png" alt="" >
       <div class="rsCaption">Each store tailors their story to their respective audience.</div>
+      <img src="{{page.source}}/store.png" class="rsTmb" />
+    </div>
+    <div class="rsContent">
+      <img class="rsImg" src="{{page.source}}/5.png" alt="" >
+      <div class="rsCaption">Each store tailors their story to their respective audience.</div>
+      <img src="{{page.source}}/5.png" class="rsTmb" />
     </div>
   </div>
 </figure>

@@ -17,16 +17,13 @@ preview-css : post-preview-std post__imgPreview--short
 category : work
 tags : [Portfolio, Information Architecture, Interaction Design, Web Design, Content Strategy, Copywriting]
 
-published : false
+published : true
 portfolio : true
 comments : false
 featured : false
 ---
 
 
-
-<div class="post-maincontent">
-   
 <div class="flexslider">
   <ul class="slides">
 
@@ -78,16 +75,13 @@ featured : false
 </div>
 
 
-p. 
-We wanted to create something for "Verizon Wireless":http://www.verizonwireless.com/ for the holidays that didn't involve selling more phones. The app was designed with families with young children in mind, and tied into the 2011 Holiday sales campaign.
+We wanted to create something for [Verizon Wireless](http://www.verizonwireless.com/) for the holidays that didn't involve selling more phones. The app was designed with families with young children in mind, and tied into the 2011 Holiday sales campaign.
 
-p. 
 * Created holiday and storybook app download flow
 * Designed app functionality flow and experience
 * Storyboarding and narrative integration
 * Worked closely with designers and developers to integrate story with interface
 
-</div>
 
 
 <div class="post-sidebar">

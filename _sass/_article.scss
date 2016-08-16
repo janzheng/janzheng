@@ -153,7 +153,7 @@
 
     // special cases
     .article__head__img--light {
-      .article__head__title {
+      .article__head__title, .article__category__label {
         color: white;
       }
       a.btn-inline {
@@ -162,6 +162,14 @@
       }
       .article__head__date, .article__head__subtitle {
         color: white;
+      }
+      .article__head__title, .article__head__subtitle, .article__tags {
+        padding: $base/2 $base;
+      }
+      .article__tags {
+        color: $white;
+        background-color: rgba($black,0.5);
+        display: inline-block;
       }
     }
 
@@ -177,7 +185,9 @@
   }
     .article__head__title {
       @extend %style-article-title;
-      margin-top: $base*2; display: inline-block;
+      margin-top: $base*2; 
+      margin-bottom: 0;
+      display: inline-block;
     } 
 
   .article__head__subtitle__container {
@@ -367,8 +377,8 @@
       font-size: $base;
 
       @include media($break-nav-mobile) {@include span-columns(24);}
-      @include media($break-nav-thin-atleast) {@include shift(-1); }
-      @include media($break-nav-wide-atleast) {@include shift(-2); @include span-columns(26);}
+      @include media($break-nav-thin-atleast) {@include shift(-1); @include span-columns(28); padding-left: $base}
+      @include media($break-nav-wide-atleast) {@include shift(-2); @include span-columns(28); padding-left: $base*2}
 
       &.callout--large {
         font-size: $size-slightly-large; line-height: $base*2;

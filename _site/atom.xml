@@ -3,7 +3,7 @@
     <title>Jan Zheng</title>
     <link href="http://janzheng.com/atom.xml" rel="self"/>
     <link href="http://janzheng.com/"/>
-    <updated>2016-08-16T14:37:35-04:00</updated>
+    <updated>2016-08-16T16:20:00-04:00</updated>
     <id>http://janzheng.com/</id>
     
     
@@ -121,6 +121,18 @@
         <link href="http://janzheng.com/blog/2014/01/tinder-dating-app.html"/>
         <updated>2014-01-07T00:00:00-05:00</updated>
         <summary>Thoughts on the hookup app that's not entirely about hookups</summary>
+        <author>
+            <name>Jan Zheng</name>
+            <uri>http://janzheng.com/</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <id>janzheng.com:/blog/2013/05/Portfolio-Verizon-Lost-Elf</id>
+        <title>Verizon Lost Elf Storybook</title>
+        <link href="http://janzheng.com/blog/2013/05/Portfolio-Verizon-Lost-Elf.html"/>
+        <updated>2013-05-04T00:00:00-04:00</updated>
+        <summary>holiday storybook app for Verizon's 2011 Holiday Campaign</summary>
         <author>
             <name>Jan Zheng</name>
             <uri>http://janzheng.com/</uri>
