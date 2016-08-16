@@ -30,25 +30,35 @@
 
   .postList__container {
     @include span-four(24, 18, 18, 18);
-    padding-top: $base; //distance from the top of the page
+    padding-top: $base*2.9; //distance from the top of the page
     @extend %ease;
   }
 
     .page__header {
       margin-bottom: $base*2;
     }
+      .page__intro {
+        @extend %serif;
+        font-size: $size-p;
 
-      .page__title {
-        text-transform: capitalize;
-        font-size: $size-slightly-larger;
+        .page__introtitle {
+          font-size: $size-large;
+          line-height: $base * 4.5;
+        }
+
         @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base;}
         @include media($break-nav-thin-atleast) {
           @include shift(3); padding-left: $base*2; 
-          margin-top: $base*1.25; margin-bottom: $base;
+          // margin-top: $base*0.25; 
+          margin-bottom: $base;
         }
       }
+      .page__title {
+        text-transform: capitalize;
+        font-size: $size-slightly-larger;
+      }
 
-    .postList__filter {
+    .postList__filter, .page__title {
       // @include span-four(18, 24, 24, 24);
       @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base*2; margin-bottom: $base*2;}
       @include media($break-nav-thin-atleast) {@include shift(3); padding-left: $base*2; margin-top: $base; margin-bottom: $base*2;}
@@ -148,6 +158,7 @@
               .post__title { 
                 @extend %style-post-info-title;
                 @extend %ease-slow; // creates that lag effect on hover-out
+                // @extend %serif;
               }
             }
 

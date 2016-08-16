@@ -89,7 +89,9 @@ $siteroot: '../../';
 body, html {
   @extend %ease-slow;
   @extend %sans-serif;
-  color: $dark-gray;
+  color: $medium-gray;
+  font-size: $base;
+  line-height: $height-p;
 }
 
   // contains the main responsive container that houses the content

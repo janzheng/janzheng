@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Gas South Enrollment Redesign</title>
+  <title>Back to the Future</title>
   <meta name="description" content="Jan designs and prototypes experiences.">
   <meta name="author" content="Jan Zheng">
   <meta name="keywords" content="user experience, ux, interaction design, digital, advertising, ui design, code, prototyping, resume ,portfolio">
@@ -64,7 +64,7 @@
         <a href="/">
           <div class="nav__item nav__blog 
                       
-                      " >
+                       active" >
             <!-- <span class="icon icon--blog"></span> -->
             <div class="nav__label">thoughts</div>
           </div>
@@ -178,7 +178,7 @@
         <div class="article__head__intro" >
 
           
-          <div class="article__head__category article__head__category__work" >
+          <div class="article__head__category article__head__category__rant" >
 
             <!-- <div class="article__head__category__icon"> -->
 
@@ -187,24 +187,21 @@
               
 
               
-
-              
-                
-<svg class="svg--work" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <path d="M416 249l-24.7 173H119.8l-24-173h320zm46-40H50l35 253h341l36-253zm-338-30l-4.2-20H392l-4 20h40.4l10-57H73.6l10 57h40.3zm20.7-84L142 82H370l-2.6 13h35.4l7.8-45H101.6l7.6 45h35.5z"/>
+                <svg class="svg--rant" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M84 324.6c-13.7-49.3 7.2-122 67-161.4-24.4 32-29 68.8-27.8 89 13.8 1 78.8 6 78.4 63.3 0 65-97 82.7-117.5 9zm147.6-9c0-44.7-32.7-81.7-75.5-88.5 4-34.3 29-67 67-81.3l-16.8-36.5c-124 24.5-173.2 144-151 223.4 30.3 106 176.4 85.3 176.4-17zm83 9c-14-49.3 7-122 66.8-161.4-24.4 32-29 68.8-27.8 89 13.8 1 78.8 6 78.4 63.3 0 65-97 82.7-117.5 9zm147.4-9c0-44.7-32.7-81.7-75.5-88.5 3.8-34.3 29-67 67-81.3l-17-36.5c-124 24.5-173 144-151 223.4C316 438.6 462 418 462 315.6z"/>
 </svg>
 <!-- 
-<svg class="svg--work" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path id="archive-2-icon" d="M415.904,249.017l-24.615,172.965H119.847L95.915,249.017H415.904z M462,209.017h-0.059H50.061H50
-l35,252.965h341L462,209.017z M123.944,179.018l-4.128-20h272.271l-4.173,20h40.484l10.019-57H73.584l9.889,57H123.944z
-M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144.674z"></path> </svg> -->
+<svg class="svg--rant" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="quote-7-icon" d="M84.068,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C201.584,380.521,104.679,398.248,84.068,324.563z M231.584,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498C82.055,133.672,32.959,253.211,55.178,332.645C85.472,438.556,231.584,417.889,231.584,315.521z M314.484,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C432,380.521,335.095,398.248,314.484,324.563z M462,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498c-124.127,24.498-173.223,144.037-151.004,223.471C315.888,438.556,462,417.889,462,315.521z"></path> </svg> -->
+              
+
               
             <!-- </div> -->
           </div>
           
-          <div class="article__category__label">work</div>
+          <div class="article__category__label">rant</div>
           <div class="article__head__date__container" >
             <div class="article__head__date">
-              June 21, 2016
+              October 21, 2015
             </div>    
           </div> 
 
@@ -214,11 +211,11 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
         
 
         <div class="article__head__title__container" >
-          <div class="article__head__title">Gas South Enrollment Redesign</div>
+          <div class="article__head__title">Back to the Future</div>
         </div> 
 
         <div class="article__head__subtitle__container" >
-          <div class="article__head__subtitle">Optimizing the natural gas enrollment flow</div>
+          <div class="article__head__subtitle">is now in the past</div>
         </div> 
 
 
@@ -230,11 +227,9 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
                 <ul class="article__tags__list">
                   
                      
-                      <li>work</li>
+                      <li>blogging</li>
                      
-                      <li>ux</li>
-                     
-                      <li>prototype</li>
+                      <li>thoughts</li>
                     
                   
                 </ul>
@@ -262,7 +257,7 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
 
       <!-- 
       <div class="article--summary-container">
-        <div class="article--summary">Optimizing the natural gas enrollment flow</div>
+        <div class="article--summary">is now in the past</div>
       </div>  -->
 
       <!-- not yet used -->
@@ -286,115 +281,110 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
 
       <div class="article__body__content">
         <figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/header.png" />
-<figcaption>Homepage prototype</figcaption>
+!/app/posts/rants/backtothefuture/realb2futuredate.jpg!
+<figcaption>Great Scott, we're in the future!</figcaption>
 </figure>
 
-<h2 id="introduction">Introduction</h2>
 
-<p>The Gas South Enrollment redesign was a massive project that spanned many months to rebrand and overhaul their dot-com site and enrollment signup flow- their main source of new clients.</p>
+h2. the future from 30 years ago
 
-<p>Our goals were to:</p>
+Oh boy, today marks the "future" date of Back to the Future. After this day, all of Back to the Future will have happened in the past. 
 
-<ul>
-  <li>understand the needs of new customers</li>
-  <li>usability of competitor services</li>
-  <li>find bottlenecks of the current enrollment flow</li>
-  <li>optimize the enrollment flow</li>
-  <li>increase number of signups</li>
-</ul>
+Marty McFly and Doc Brown travel thirty years into the future, and October 21 is the date they travel to, where they encounter all kinds of futuristic technology, some of which would still be futuristic by today's standards.
 
-<h2 id="establishing-the-problem">Establishing the Problem</h2>
+Some predictions:
 
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/flowchart_header.png" />
-<figcaption>One of many enrollment flowcharts</figcaption>
-</figure>
+h3. Drones exist!
 
-<p>My immediate goals were to learn as much as I could about Atlanta’s Natural Gas market and the consumers in the space. It turned out that it’s highly competitive and non-differentiating. Basically, everyone offered almost the exact same thing for the exact same price.</p>
+but they're pricey, loud, niche and unwieldy. And they "wild west" days of flying them without a license are soon over.
 
-<p>The only thing they could do was improve the process of signing up.</p>
 
-<p>I looked at competitors’ offerings and poured over Gas South’s customer research led to breaking their signup process down to several key parts, that we wanted to test to find bottlenecks.</p>
+h3. We can pay with our electronics!
 
-<h3 id="artifacts">Artifacts</h3>
+but it's confusing and hardly supported. Google (and now Apple) has been trying for years. Vendors and customers don't seem to be getting onboard.
 
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/enrollment_flow_initial_notes.txt">initial flow notes</a></li>
-</ul>
+h3. We have virtual money!
 
-<p>(all artifacts are developed by me unless noted)</p>
+bq(blockquote--wide blockquote--noQuotes). 'Some bandito stole all of my virtual money! Enjoy your first class flight to Miami, your new Nordstrom jacket and your gas station burrito, because your balls are mine.'
 
-<h2 id="requirements--wireframes">Requirements &amp; Wireframes</h2>
+Again. We have virtual money!! but... bitcoin is unwieldy and not mainstream. You can't easily use bitcoin to pay for a cup of coffee, or get groceries yet. This day remains to be seen, especially with all the bitcoin fraud of late. The irony is probably that once bitcoin gets more regulated, it will catch on with the investors, and eventually with the rest of the world.
 
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/wireframe_header.png" />
-<figcaption>One of the wireframes that mapped to a flowchart</figcaption>
-</figure>
 
-<p>Business requirements and wireframes were developed hand in hand, as each alternate flow required many iterations as I tried to develop the nuances of each enrollment flow, since information from some steps carried over to others. The flow charts and wireframes were updated to reflect not only the data and flow requirements, but also the latest copy and data required from users.</p>
+h3. Video Calling
 
-<h3 id="artifacts-1">Artifacts</h3>
+of all the tech in this list, video calling probably works the best. I use Skype and Google Hangouts for work, and (very occasionally) use FaceTime to speak with family and friends (more occasional are FaceTime butt dials)
 
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/enrollment_system_test_1_flow.png">Test 1 Flowchart (image)</a></li>
-  <li><a href="/app/posts/portfolio/gas-south/observations.png">Notes on flow observations (image)</a>
-<!-- * [Full Gas South Enrollment Test Wireframes (6.7 MB PDF)](/app/posts/portfolio/gas-south/gassouth_wireframes.pdf) --></li>
-</ul>
+h3. Fingerprint scanners exist
 
-<h2 id="wirecomps">Wirecomps</h2>
+but don't trust using these as easy access for your house yet ("although this does exist":http://www.ekeyusa.com/ ...use your own judgment)
 
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/wirecomp.png" />
-<figcaption>Combination of wireframe and comp, with assets</figcaption>
-</figure>
+h3. Wearable technology
 
-<p>After weeks of optimizing and designing the flows, I worked with our visual designer to develop a cross between wireframes and a comp to initiate the layout design. These translated into Photoshop comps (created by a visual designer). These were needed for us to get on the same page with the client.</p>
+wearable is actually catching on, though most of this technology is separate from the actual threads we wear. We do have arduino and capacitive threads, but they're nothing more than works of arts or engineering experiments at this point. Also, what's the point of a self-lacing shoe?
 
-<h3 id="artifacts-2">Artifacts</h3>
+h3. Hover boards
 
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/wirecomp.png">Wirecomp Example</a></li>
-</ul>
+would companies like Lexus even work on these if it weren't for the movie?
 
-<h2 id="prototype--development">Prototype &amp; Development</h2>
+A lot of tech that the movie predicted actually exists today. But we don't really seem to be living in this "high tech" world that the scenes from the movie predict. 
 
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/prototype_header.png" />
-<figcaption>Prototype example</figcaption>
-</figure>
+Technology isn't really the problem- engineering seems to move at a faster speed than cultural adoption. We still like to do things the old-fashioned way, and we're very skeptical about adopting "revolutionary" technology, because we don't understand it (self-driving cars), or we are actually afraid of it (GMO food). Our ignorance gets in the way of the future.
 
-<p>After much back and forth in both the requirements, enrollment flow, and comps stage (at this point we had actually come up with a total of six testable flows), our client wanted us to develop reusable clickable prototypes for testing.</p>
 
-<p>The first one I did <a href="/app/posts/portfolio/gas-south/carousel-demo/carousel.html">was for the homepage</a> – I took a homepage comp our designer had made, cut it up in photoshop, and added RoyalSlider functionality to show what the homepage carousel (this is something the client requested) would feel like.</p>
 
-<p>At this point the <a href="/app/posts/portfolio/gas-south/prototype-demo/Flow_6/flow6_business_1.html">prototype and development work</a> was too much for one person, so the work got out-sourced to other developers which I guided closely so the pages didn’t stray from the original flow. The point of the prototypes were not only to display demonstrate each flow, but to make the transition to development and deployment easier for our client.</p>
+h2. 30 years forward
 
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/mobile_header.png" />
-<figcaption>Mobile prototype</figcaption>
-</figure>
+This year also marks my 30 years of existence (I was born right before the movie came out! I guess I'm still a young'un). I wonder what the world will look like in another 30 years; what will happen during my (perhaps) most productive years, and what the world will look like right before retirement? (kidding, at this pace I'll never get to retire)
 
-<p>I had also suggested a <a href="/app/posts/portfolio/gas-south/mobile-demo/signup.html">mobile version for our client</a>, to capture the sizable number of users who were accessing and even forced to sign up their old non-mobile-friendly signup form (after all, many lower income families around Atlanta only have mobile access to the internet). This suggestion ended up spawning a separate mobile project, which used a modular setup with jQuery, so their developers could easily adapt to later findings frmo testing.</p>
+What will the world look like on October 21, 2045 (man, that feels so far from now)?
 
-<p>Funny enough, our client ended up using most of our code in their final signup form (including my mobile signup code).</p>
 
-<h3 id="artifacts-3">Artifacts</h3>
+h3. Clothing
 
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/carousel-demo/carousel.html">Homepage Carousel Prototype</a></li>
-  <li><a href="http://www.gas-south.com/">Gas South live site</a></li>
-  <li><a href="/app/posts/portfolio/gas-south/prototype-demo/Flow_6/flow6_business_1.html">Desktop Enrollment Prototype</a></li>
-  <li><a href="https://enroll.gas-south.com/flow1/WebEnrollment_UI/frmFlow1Step1.aspx">Gas South live enrollment</a></li>
-  <li><a href="/app/posts/portfolio/gas-south/mobile-demo/signup.html">Mobile Enrollment Prototype</a></li>
-  <li><a href="https://m.gas-south.com/signup/signup.html">Gas South live mobile enrollment</a></li>
-</ul>
+Clothing will remain the same, as it has been for the last 2,000 years. We will probably still not have a lot of wearable clothing. Aside from medical devices, electronics in clothing would just be expensive and kind of pointless.
 
-<h2 id="conclusion">Conclusion</h2>
+h3. Oil is still king
 
-<p>Unfortunately, we were not part of the official testing process, but they had enough of a plan, and enough variation to play with to optimize their signup. The customer life cycle in buying natural gas is very long and seasonal (and we were in the wrong season), so that work was better done internally than through an agency.</p>
+How long have we tried to get fusion technology going? Alternative fuels? Solar? Don't get me wrong, we've made great strides in alternative fuelds. But in 30 years, most of the world will still be running on the good old black gold. Cars might have found another way, but heavy industry and manufacturing will still rely on this grimy goop, despite more frequent and far worse disasters than the Gulf Oil spill.
 
-<p>I eventually left soon after the project was wrapped up, so I didn’t get to know the results (which would have taken a couple of years to go through full customer cycles) Gas South also seems to really have enjoyed our work, as most of the code base we handed over to them have been kept intact a few years after the fact.</p>
+h3. More people will appear in the world
+
+The population will grow denser. But we will still deal with the same problems we're dealing with today. We will find solutions that will deal with our problems, and we will still be stratified by the division of rich and poor (like we have been for the last 2,000 years)
+
+h3. We will not run out of food.
+
+Climate change will occur, and despite more people and less arable land, we will be more efficient raising and delivering hardy crops.
+
+h3. We will still be bigoted
+
+The victimizers and victims will be different, but the same amounts of bigotry and racism will remain. With the muslim population growing and slowly overshadowing the 'white' population, count on more violence and racism on the streets.
+
+h3. TVs will get bigger
+
+If I get all of the others wrong, this is the only one that will be right. Will we get better TV? Maybe. I'm not sure if our current run of great TV-writing will last for that long
+
+h3. Self-driving Vehicles will almost be a thing
+
+We will absolutely see more self-driving assisted technology. Cars will be our "wearable devices" but... we will still be slow in adopting fully-automated technology.
+
+Self-driving trucks will take over the interstates, but they will have an uphill struggle becoming ubiquitous thanks to labor laws and unions
+
+Self driving cars will appear on the streets, but any accident or bug or problem involving one will cast companies in a harsh shadow. We will not have fully embraced this technology, and many will resist its full adoption.
+
+h3. Technology will be transparent; We will stay skeptical
+
+We will be dependent on technology more than we ever have. But technology will not come in the form of more or larger (except for TVs!). We will lose much of the technology fetish we've adopted over the past twenty years. Not quite luddites, we will come to expect technology to always work, but we will not want to tweak dials and tap screens anymore. We will want technology to bring us together more, as people – we will want to crave that personal connection, of presence and mindfulness.
+
+More technology will not mean more screen time.
+
+
+And by the way,
+
+h3. They will still not get VR right
+
+Oculus will almost get it right. Almost.
+
+
 
 
 

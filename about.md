@@ -14,7 +14,7 @@ source: /app/posts/about
 </div>
 
 <p class="dropcap margin_top">
-  My name is Jan (pronounced "yawn") and I design and build functional, useful, and informative services and web experiences. Lately I've been focusing on <em>online communities</em>, <em>responsive sites</em>, and <em>creative apps</em>.
+  My name is Jan (pronounced "yawn") and I design and build functional, useful, and meaningful services and experiences. Lately I've been focusing on <em>online communities</em>, <em>responsive sites</em>, and <em>creative apps</em>.
 </p>
 
 <blockquote class="blockquote--wide blockquote--noQuotes">

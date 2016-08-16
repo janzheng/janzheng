@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Gas South Enrollment Redesign</title>
+  <title>I Broke My Grid</title>
   <meta name="description" content="Jan designs and prototypes experiences.">
   <meta name="author" content="Jan Zheng">
   <meta name="keywords" content="user experience, ux, interaction design, digital, advertising, ui design, code, prototyping, resume ,portfolio">
@@ -64,7 +64,7 @@
         <a href="/">
           <div class="nav__item nav__blog 
                       
-                      " >
+                       active" >
             <!-- <span class="icon icon--blog"></span> -->
             <div class="nav__label">thoughts</div>
           </div>
@@ -178,7 +178,7 @@
         <div class="article__head__intro" >
 
           
-          <div class="article__head__category article__head__category__work" >
+          <div class="article__head__category article__head__category__rant" >
 
             <!-- <div class="article__head__category__icon"> -->
 
@@ -187,24 +187,21 @@
               
 
               
-
-              
-                
-<svg class="svg--work" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <path d="M416 249l-24.7 173H119.8l-24-173h320zm46-40H50l35 253h341l36-253zm-338-30l-4.2-20H392l-4 20h40.4l10-57H73.6l10 57h40.3zm20.7-84L142 82H370l-2.6 13h35.4l7.8-45H101.6l7.6 45h35.5z"/>
+                <svg class="svg--rant" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M84 324.6c-13.7-49.3 7.2-122 67-161.4-24.4 32-29 68.8-27.8 89 13.8 1 78.8 6 78.4 63.3 0 65-97 82.7-117.5 9zm147.6-9c0-44.7-32.7-81.7-75.5-88.5 4-34.3 29-67 67-81.3l-16.8-36.5c-124 24.5-173.2 144-151 223.4 30.3 106 176.4 85.3 176.4-17zm83 9c-14-49.3 7-122 66.8-161.4-24.4 32-29 68.8-27.8 89 13.8 1 78.8 6 78.4 63.3 0 65-97 82.7-117.5 9zm147.4-9c0-44.7-32.7-81.7-75.5-88.5 3.8-34.3 29-67 67-81.3l-17-36.5c-124 24.5-173 144-151 223.4C316 438.6 462 418 462 315.6z"/>
 </svg>
 <!-- 
-<svg class="svg--work" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path id="archive-2-icon" d="M415.904,249.017l-24.615,172.965H119.847L95.915,249.017H415.904z M462,209.017h-0.059H50.061H50
-l35,252.965h341L462,209.017z M123.944,179.018l-4.128-20h272.271l-4.173,20h40.484l10.019-57H73.584l9.889,57H123.944z
-M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144.674z"></path> </svg> -->
+<svg class="svg--rant" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="quote-7-icon" d="M84.068,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C201.584,380.521,104.679,398.248,84.068,324.563z M231.584,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498C82.055,133.672,32.959,253.211,55.178,332.645C85.472,438.556,231.584,417.889,231.584,315.521z M314.484,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C432,380.521,335.095,398.248,314.484,324.563z M462,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498c-124.127,24.498-173.223,144.037-151.004,223.471C315.888,438.556,462,417.889,462,315.521z"></path> </svg> -->
+              
+
               
             <!-- </div> -->
           </div>
           
-          <div class="article__category__label">work</div>
+          <div class="article__category__label">rant</div>
           <div class="article__head__date__container" >
             <div class="article__head__date">
-              June 21, 2016
+              March 18, 2014
             </div>    
           </div> 
 
@@ -214,11 +211,11 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
         
 
         <div class="article__head__title__container" >
-          <div class="article__head__title">Gas South Enrollment Redesign</div>
+          <div class="article__head__title">I Broke My Grid</div>
         </div> 
 
         <div class="article__head__subtitle__container" >
-          <div class="article__head__subtitle">Optimizing the natural gas enrollment flow</div>
+          <div class="article__head__subtitle">to let loose my content</div>
         </div> 
 
 
@@ -230,11 +227,7 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
                 <ul class="article__tags__list">
                   
                      
-                      <li>work</li>
-                     
-                      <li>ux</li>
-                     
-                      <li>prototype</li>
+                      <li>design</li>
                     
                   
                 </ul>
@@ -262,7 +255,7 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
 
       <!-- 
       <div class="article--summary-container">
-        <div class="article--summary">Optimizing the natural gas enrollment flow</div>
+        <div class="article--summary">to let loose my content</div>
       </div>  -->
 
       <!-- not yet used -->
@@ -285,116 +278,68 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
 
 
       <div class="article__body__content">
-        <figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/header.png" />
-<figcaption>Homepage prototype</figcaption>
-</figure>
+        p(dropcap). When I first created this site, I intended it to be a personal portfolio and a place to voice my thoughts. Turns out the latter was a bit harder than I thought. Writing is hard work, and I haven't been as prolific as I would have liked to be. 
 
-<h2 id="introduction">Introduction</h2>
+But as the site is crossing its One Year Mark, I've learned a lot about coding, and even more about myself. I know that I tend to spend a long time on a thought, only to write, then rewrite, then never to publish that thought. Though prolific writing is not my fort&eacute;, long-form writing is something I'll have an easier time with. So my goal for this year is to publish fewer, but more thoughtful posts. And the most wonderful thing about having your own site is: you have total control.
 
-<p>The Gas South Enrollment redesign was a massive project that spanned many months to rebrand and overhaul their dot-com site and enrollment signup flow- their main source of new clients.</p>
+bq. It's your own site. You can do _Whatever you want_. 
 
-<p>Our goals were to:</p>
+You have full control, and no clients to answer to. The world is your oyster. But when you realize how terrible you are producting content for your "blog" regularly, you realize that things need to change. So as my site crosses its One Year Mark, I'm making a vow to create fewer, but more significant posts. 
 
-<ul>
-  <li>understand the needs of new customers</li>
-  <li>usability of competitor services</li>
-  <li>find bottlenecks of the current enrollment flow</li>
-  <li>optimize the enrollment flow</li>
-  <li>increase number of signups</li>
-</ul>
+h2. Fewer but more significant?
 
-<h2 id="establishing-the-problem">Establishing the Problem</h2>
+So how do I push myself towards this fewer but more significant goal? To start, I hit up "mediaqueri.es":http://mediaqueri.es, and  looked at blogs and publications like "Ghost":http://ghost.org, "Medium":https://medium.com/, and "the Verge":http://www.theverge.com/2014/3/26/5447466/fighting-dirty-behind-boxings-brain-damage-crisis.
 
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/flowchart_header.png" />
-<figcaption>One of many enrollment flowcharts</figcaption>
-</figure>
+The pattern that emerged was a heavy emphasize on content. A specific _design_ around content, to elevate the content into experiences. They share an almost magazine-like layout, where content isn't just blocks of copy. The content is still responsive, but plays with the grid loosely to emphasize meaning. These pieces of content use the benefits of the screen and borrow from animation, film, and visual arts and design to convey meaning.
 
-<p>My immediate goals were to learn as much as I could about Atlanta’s Natural Gas market and the consumers in the space. It turned out that it’s highly competitive and non-differentiating. Basically, everyone offered almost the exact same thing for the exact same price.</p>
+It's a nice refreshing breather from last year's blockier, griddier responsive sites.
 
-<p>The only thing they could do was improve the process of signing up.</p>
 
-<p>I looked at competitors’ offerings and poured over Gas South’s customer research led to breaking their signup process down to several key parts, that we wanted to test to find bottlenecks.</p>
 
-<h3 id="artifacts">Artifacts</h3>
+h2. Give a man a hammer and everything looks like a nail
 
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/enrollment_flow_initial_notes.txt">initial flow notes</a></li>
-</ul>
+There's a reason why everything last year looked so blocky: it's in the tools. Responsive web design had taken over, and its reliance on grid structures made sites clean and established a great framework for laying out content that shaped itself to different screen sizes.
 
-<p>(all artifacts are developed by me unless noted)</p>
+But its strength&mdash;the grid&mdash; is also its weakness. Let's take a look at this basic responsive "example from Brad Frost":http://codepen.io/bradfrost/full/cgHtv:
 
-<h2 id="requirements--wireframes">Requirements &amp; Wireframes</h2>
+<figure><a href="#">!/app/posts/rants/break-the-grid/codepen.png!</a><figcaption>look, blocks on blocks!</figcaption>
+</figure> The layout grid is extremely powerful, as it allows pieces of content to shift around in a way that fills the space on the page perfectly. However, if used carelessly, the final output might end up looking like the stacks of boxes, and end up a little stale.
 
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/wireframe_header.png" />
-<figcaption>One of the wireframes that mapped to a flowchart</figcaption>
-</figure>
 
-<p>Business requirements and wireframes were developed hand in hand, as each alternate flow required many iterations as I tried to develop the nuances of each enrollment flow, since information from some steps carried over to others. The flow charts and wireframes were updated to reflect not only the data and flow requirements, but also the latest copy and data required from users.</p>
 
-<h3 id="artifacts-1">Artifacts</h3>
+h2. Design is hard. Inspired design, even harder.
 
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/enrollment_system_test_1_flow.png">Test 1 Flowchart (image)</a></li>
-  <li><a href="/app/posts/portfolio/gas-south/observations.png">Notes on flow observations (image)</a>
-<!-- * [Full Gas South Enrollment Test Wireframes (6.7 MB PDF)](/app/posts/portfolio/gas-south/gassouth_wireframes.pdf) --></li>
-</ul>
+I'm complaining a little. Websites have gone light-years from their interactive CD-ROM-influenced "brethren from the 90's":http://zachholman.com/posts/only-90s-developers/. We've moved away from poor use of "colors, animations, and effects":http://www2.warnerbros.com/spacejam/movie/jam.htm. And with the inception (and eventual passing) of "Flat UI," we're collectively aiming towards designing for context and content. Some designs will be flat and uncomplicated (e.g. this site), will others will be warm and ooze character.
 
-<h2 id="wirecomps">Wirecomps</h2>
+And just as with Skeumorphism, and soon with Flat UI, we'll soon grow tired of our vanilla use of the grid. We'll want to free ourselves from it, think outside of its borders, and eventually break it.
 
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/wirecomp.png" />
-<figcaption>Combination of wireframe and comp, with assets</figcaption>
-</figure>
+http://frankchimero.com/talks/what-screens-want/transcript/
 
-<p>After weeks of optimizing and designing the flows, I worked with our visual designer to develop a cross between wireframes and a comp to initiate the layout design. These translated into Photoshop comps (created by a visual designer). These were needed for us to get on the same page with the client.</p>
 
-<h3 id="artifacts-2">Artifacts</h3>
 
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/wirecomp.png">Wirecomp Example</a></li>
-</ul>
+h2. Break the Grid
 
-<h2 id="prototype--development">Prototype &amp; Development</h2>
+The "Museum of Design Atlanta":http://www.museumofdesign.org/ recently held a Paul Rand exhibit. A thought kept coming back to me&mdash;every layout was based on a grid, and every pattern expertly broke the grid it was based on.
 
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/prototype_header.png" />
-<figcaption>Prototype example</figcaption>
-</figure>
+Smashing Magazine has a "hugely inspirational article":http://www.smashingmagazine.com/2009/07/17/lessons-from-swiss-style-graphic-design/ on employing Swiss design, and how to employ spacing, whitespace, colors etc. to make a layout stand out.
 
-<p>After much back and forth in both the requirements, enrollment flow, and comps stage (at this point we had actually come up with a total of six testable flows), our client wanted us to develop reusable clickable prototypes for testing.</p>
+To push the boundaries of the grid would be to employ a much larger grid. Instead of the 12 column grid my last site used, I moved onto a 24 column grid. This offers more flexibility to place content in many different new ways that are closer to magazine layouts.
 
-<p>The first one I did <a href="/app/posts/portfolio/gas-south/carousel-demo/carousel.html">was for the homepage</a> – I took a homepage comp our designer had made, cut it up in photoshop, and added RoyalSlider functionality to show what the homepage carousel (this is something the client requested) would feel like.</p>
 
-<p>At this point the <a href="/app/posts/portfolio/gas-south/prototype-demo/Flow_6/flow6_business_1.html">prototype and development work</a> was too much for one person, so the work got out-sourced to other developers which I guided closely so the pages didn’t stray from the original flow. The point of the prototypes were not only to display demonstrate each flow, but to make the transition to development and deployment easier for our client.</p>
+<figure class="figure-wide"><a href="#">!/app/posts/rants/break-the-grid/24-grid.png!</a><figcaption>my slightly messier but more flexible 24-column grid. Here's an example of <a href="/app/posts/rants/break-the-grid/layout.html">how it will work</a>
+</figcaption>
+</figure> We're already on the cusp on another evolution: many websites are already starting to develop their own character, all based on responsive design. Sites like "C|Net":http://cnet.com, "Time":http://time.com, and "MSNBC":http://msnbc.com have already taken radical approaches to their designs. We're on the cusp of another web design 'revolution' where many designers will take our current concepts and make their sites uniquely their own. Designers will bring in concepts from Swiss design and art to inspire their layouts.
 
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/mobile_header.png" />
-<figcaption>Mobile prototype</figcaption>
-</figure>
+And we'll also bring in other aspects, like film, animation, puppetry, and flow to inspire our creations. Here is a much longer thought on the evolution of screens, as visualized by "Frank Chimero.":http://frankchimero.com/talks/what-screens-want/transcript/
 
-<p>I had also suggested a <a href="/app/posts/portfolio/gas-south/mobile-demo/signup.html">mobile version for our client</a>, to capture the sizable number of users who were accessing and even forced to sign up their old non-mobile-friendly signup form (after all, many lower income families around Atlanta only have mobile access to the internet). This suggestion ended up spawning a separate mobile project, which used a modular setup with jQuery, so their developers could easily adapt to later findings frmo testing.</p>
 
-<p>Funny enough, our client ended up using most of our code in their final signup form (including my mobile signup code).</p>
+h2. Free Grids and Free Expressions
 
-<h3 id="artifacts-3">Artifacts</h3>
+There is a growing collection of long-form articles that break the traditional grid. It was all started by New York Times' excellent "Snow Fall article":http://www.nytimes.com/projects/2012/snow-fall/. The article isn't excellent because of its novel use of video and parallax (it's actually a bit annoying), but it's excellent because it raises the longform article above a mere clump of copy. Other publications have followed suit, like "the Verge's 'Fanboys' article":http://www.theverge.com/2014/1/21/5307992/inside-the-mind-of-a-fanboy and "Ars Technica's 'Swimming with Spacemen'":http://arstechnica.com/science/2013/03/swimming-with-spacemen/. These are more than mere articles: they are experiences that transcend mere copy, and make use of the advantages of the digital screen.
 
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/carousel-demo/carousel.html">Homepage Carousel Prototype</a></li>
-  <li><a href="http://www.gas-south.com/">Gas South live site</a></li>
-  <li><a href="/app/posts/portfolio/gas-south/prototype-demo/Flow_6/flow6_business_1.html">Desktop Enrollment Prototype</a></li>
-  <li><a href="https://enroll.gas-south.com/flow1/WebEnrollment_UI/frmFlow1Step1.aspx">Gas South live enrollment</a></li>
-  <li><a href="/app/posts/portfolio/gas-south/mobile-demo/signup.html">Mobile Enrollment Prototype</a></li>
-  <li><a href="https://m.gas-south.com/signup/signup.html">Gas South live mobile enrollment</a></li>
-</ul>
+I'm guilty of all the things I complained about. Therefore, I resolve that for 2014, I will push outside of those boundaries, even just a little bit, to let my content breathe and stand out.
 
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Unfortunately, we were not part of the official testing process, but they had enough of a plan, and enough variation to play with to optimize their signup. The customer life cycle in buying natural gas is very long and seasonal (and we were in the wrong season), so that work was better done internally than through an agency.</p>
-
-<p>I eventually left soon after the project was wrapped up, so I didn’t get to know the results (which would have taken a couple of years to go through full customer cycles) Gas South also seems to really have enjoyed our work, as most of the code base we handed over to them have been kept intact a few years after the fact.</p>
+So here's to 2014, to freeing ourselves from the grid, one baby step at a time.
 
 
 

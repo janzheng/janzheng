@@ -423,7 +423,7 @@ kuler: Norse
   padding-top: 100px;
 }
 
-.post__title__container .post__title, .article__head__title, .article__body__content h1, .article__head__subtitle, .article__body__content h4, .timeline__headline div > span, .timeline__client, body, html, .post__date__container .post__date {
+.post__title__container .post__title, .article__head__title, .article__body__content h1, .article__head__subtitle, .article__body__content h4, .timeline__headline div > span, .timeline__client, body, html, .post__date__container .post__date, .article__head__date {
   font-family: "Open Sans", "Helvetica Neue", arial, sans-serif;
 }
 
@@ -431,7 +431,7 @@ kuler: Norse
   font-family: "Helvetica Neue", "Open Sans", sans-serif;
 }
 
-.article__body__content .h1--display, .article__body__content .h1--display--spaced, .article__body__content .display, .article__body__content, .article__head__subtitle, .article__body__content h4, .article__body__content h2, .article__body__content h3, .article__body__content .slider .rsGCaption, .article__body__content figure figcaption, .article__body__content .callout, .article__body__content blockquote, .article__body__content blockquote.blockquote--wide, .nav__label, .nav__social__item, .nav__social__label span, .timeline__year, .post__tags__container .post__tags li, .article__head__date, .article__tags__container, .article__head__projectLink__container, .main__footer {
+.article__body__content .h1--display, .article__body__content .h1--display--spaced, .article__body__content .display, .article__body__content, .article__head__subtitle, .article__body__content h4, .article__body__content h2, .article__body__content h3, .article__body__content .slider .rsGCaption, .article__body__content figure figcaption, .article__body__content .callout, .article__body__content blockquote, .article__body__content blockquote.blockquote--wide, .nav__label, .nav__social__item, .nav__social__label span, .timeline__year, .page__intro, .post__tags__container .post__tags li, .article__tags__container, .article__head__projectLink__container, .main__footer {
   font-family: Georgia, serif;
 }
 
@@ -852,7 +852,7 @@ a, a:active, a:hover, a:link {
   opacity: 0.4;
   position: absolute;
   bottom: 0;
-  height: 100%;
+  height: 90%;
 }
 
 .nav__item:hover:after {
@@ -864,11 +864,12 @@ a, a:active, a:hover, a:link {
   opacity: 0.4;
   position: absolute;
   bottom: 0;
-  height: 100%;
+  height: 90%;
 }
 
 .nav {
   background-color: white;
+  font-size: 1rem;
 }
 @media screen and (max-width: 479px) {
   .nav {
@@ -880,7 +881,6 @@ a, a:active, a:hover, a:link {
     width: 180px;
     position: fixed;
     left: 0;
-    height: 100%;
   }
 }
 
@@ -948,7 +948,11 @@ a, a:active, a:hover, a:link {
     float: left;
     text-align: center;
     position: relative;
+    padding: 0;
     top: 5rem;
+  }
+  .nav__item:hover:after {
+    display: none;
   }
 }
 .nav__item:hover {
@@ -962,33 +966,38 @@ a, a:active, a:hover, a:link {
 .nav__item:hover .nav__label {
   opacity: 1;
 }
-.nav__item:hover.nav__blog .nav__label {
-  color: #a00a00;
-  border-bottom: 2px solid #a00a00;
-}
-.nav__item:hover.nav__about .nav__label {
-  color: #FF530D;
-  border-bottom: 2px solid #ff530d;
-}
-.nav__item:hover.nav__tools .nav__label {
-  color: #01A7A4;
-  border-bottom: 2px solid #01a7a4;
+@media screen and (min-width: 480px) {
+  .nav__item:hover.nav__blog .nav__label {
+    color: #a00a00;
+    border-bottom: 2px solid #a00a00;
+  }
+  .nav__item:hover.nav__about .nav__label {
+    color: #FF530D;
+    border-bottom: 2px solid #ff530d;
+  }
+  .nav__item:hover.nav__tools .nav__label {
+    color: #01A7A4;
+    border-bottom: 2px solid #01a7a4;
+  }
 }
 .nav__item.nav__blog.active .nav__label {
   color: #a00a00;
+  border-bottom: 2px solid #a00a00;
 }
 .nav__item.nav__about.active .nav__label {
   color: #FF530D;
+  border-bottom: 2px solid #ff530d;
 }
 .nav__item.nav__tools.active .nav__label {
   color: #01A7A4;
+  border-bottom: 2px solid #01a7a4;
 }
 
 .nav__label {
   display: inline-block;
   border-bottom: 2px solid white;
+  line-height: 1.8rem;
   font-size: 1.2rem;
-  padding-bottom: 0.25rem;
 }
 @media screen and (max-width: 479px) {
   .nav__label {
@@ -1011,13 +1020,13 @@ a, a:active, a:hover, a:link {
 
 .nav__social__item {
   cursor: pointer;
-  padding: 0.66667rem 0;
   text-align: center;
+  line-height: 1.5rem;
 }
 .nav__social__item .nav__social__label {
   border-bottom: 1px solid rgba(119, 119, 119, 0);
   padding: 0 7px;
-  padding-bottom: 3px;
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 479px) {
   .nav__social__item {
@@ -1263,7 +1272,9 @@ a, a:active, a:hover, a:link {
 
 /* close commented backslash hack */
 body, html {
-  color: #333333;
+  color: #555555;
+  font-size: 1rem;
+  line-height: 2.1034rem;
 }
 
 @media screen and (min-width: 480px) {
@@ -1273,7 +1284,7 @@ body, html {
 }
 
 .postList__container {
-  padding-top: 1rem;
+  padding-top: 2.9rem;
 }
 @media screen and (max-width: 479px) {
   .postList__container {
@@ -1324,34 +1335,41 @@ body, html {
   margin-bottom: 2rem;
 }
 
-.page__title {
-  text-transform: capitalize;
-  font-size: 1.3rem;
+.page__intro {
+  font-size: 1.1rem;
+}
+.page__intro .page__introtitle {
+  font-size: 2rem;
+  line-height: 4.5rem;
 }
 @media screen and (max-width: 479px) {
-  .page__title {
+  .page__intro {
     padding: 4px 3rem;
     margin-top: 1rem;
   }
 }
 @media screen and (min-width: 480px) {
-  .page__title {
+  .page__intro {
     margin-left: 12.5%;
     padding-left: 2rem;
-    margin-top: 1.25rem;
     margin-bottom: 1rem;
   }
 }
 
+.page__title {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
 @media screen and (max-width: 479px) {
-  .postList__filter {
+  .postList__filter, .page__title {
     padding: 4px 3rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 480px) {
-  .postList__filter {
+  .postList__filter, .page__title {
     margin-left: 12.5%;
     padding-left: 2rem;
     margin-top: 1rem;
@@ -1799,7 +1817,7 @@ body, html {
 }
 
 .article__head {
-  margin-top: 2rem;
+  margin-top: 4rem;
   overflow: hidden;
 }
 @media screen and (max-width: 479px) {
@@ -1865,13 +1883,20 @@ body, html {
   margin-right: 10px;
   float: left;
 }
+@media screen and (max-width: 479px) {
+  .article__head__category {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+}
 .article__head__category svg {
-  width: 32px;
-  height: 32px;
+  width: 21px;
+  height: 21px;
   fill: white;
   position: relative;
-  top: 2px;
-  left: 4px;
+  top: 8px;
+  left: 9px;
 }
 
 .article__head__category__lab {
@@ -1890,13 +1915,21 @@ body, html {
   background-color: rgba(92, 40, 73, 0.7);
 }
 
+.article__category__label {
+  font-size: 0.83rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
 .article__head__date__container {
-  padding-top: 0.5rem;
+  line-height: 0.75rem;
+  text-align: center;
 }
 
 .article__head__date {
   color: #cccccc;
   display: inline-block;
+  font-size: 0.83rem;
 }
 
 .article__head__img {
@@ -2113,8 +2146,7 @@ body, html {
 
 .article__body {
   overflow: visible;
-  margin-top: 2rem;
-  padding-top: 2rem;
+  padding-top: 3.2rem;
   padding-bottom: 2rem;
 }
 @media screen and (max-width: 479px) {

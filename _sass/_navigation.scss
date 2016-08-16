@@ -18,7 +18,7 @@
     opacity: 0.4;
     position: absolute;
     bottom: 0;
-    height: 100%;
+    height: 90%;
     // border-bottom: 2px solid $red;
   }
 }
@@ -35,12 +35,13 @@
     opacity: 0.4;
     position: absolute;
     bottom: 0;
-    height: 100%;
+    height: 90%;
   }
 }
 
 .nav {
   background-color: white;
+  font-size: $base;
 
   @include media($break-nav-mobile) {
     height: $base*16;
@@ -48,7 +49,7 @@
   @include media($break-nav-thin-atleast) {
     width: $width-nav-menu;
     position: fixed; left: 0;
-    height: 100%; 
+    // height: 80%; 
   }
 
 }
@@ -142,7 +143,12 @@
   				width: 33%; float: left;
   				text-align: center;
   				position: relative;
+          padding: 0;
   				top: $base*5;
+
+          &:hover:after {
+            display: none;
+          }
         }
 
 
@@ -162,13 +168,15 @@
           }
 
   				
-  				&.nav__blog .nav__label { color: $blog; border-bottom: 2px solid rgba($blog,1) }
-  				&.nav__about .nav__label { color: $about; border-bottom: 2px solid rgba($about,1) }
-  				&.nav__tools .nav__label { color: $tools; border-bottom: 2px solid rgba($tools,1) }
+          @include media($break-nav-thin-atleast) {
+    				&.nav__blog .nav__label { color: $blog; border-bottom: 2px solid rgba($blog,1) }
+    				&.nav__about .nav__label { color: $about; border-bottom: 2px solid rgba($about,1) }
+    				&.nav__tools .nav__label { color: $tools; border-bottom: 2px solid rgba($tools,1) }
+          }
         }
-        &.nav__blog.active  { .icon { @extend .icon--hoverOn; } .nav__label { color: $blog; } }
-        &.nav__about.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $about; } }
-        &.nav__tools.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $teal; } }
+        &.nav__blog.active  { .icon { @extend .icon--hoverOn; } .nav__label { color: $blog; border-bottom: 2px solid rgba($blog,1) } }
+        &.nav__about.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $about; border-bottom: 2px solid rgba($about,1) } }
+        &.nav__tools.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $teal; border-bottom: 2px solid rgba($teal,1) } }
         
       }
 
@@ -178,6 +186,8 @@
   				@extend %ease;
   				// padding-top: $base;
           border-bottom: 2px solid rgba($white,1);
+          line-height: 1.8rem;
+          // padding-bottom: $base/4;
           font-size: $base*1.2;
 
   				@include media($break-nav-mobile) {
@@ -186,7 +196,6 @@
   				}
   				// @include media($break-nav-thin) { opacity: 0.1;}
   				// @include media($break-nav-thin-atleast) { padding-bottom: $base/4; }
-          padding-bottom: $base/4;
 	      }
 
 
@@ -212,13 +221,15 @@
       @extend %ease-fast;
       // position: relative;
       cursor: pointer;
-      padding: $base*2/3 0;
+      // padding: $base*2/3 0;
       text-align: center;
+      line-height: 1.5rem;
+
       @extend %serif; 
       .nav__social__label {
         border-bottom: 1px solid rgba($gray,0);
         padding: 0 7px;
-        padding-bottom: 3px;
+        margin-bottom: $base;
       }
 
       @include media($break-nav-mobile) {

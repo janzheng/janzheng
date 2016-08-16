@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Gas South Enrollment Redesign</title>
+  <title>Let's Run!</title>
   <meta name="description" content="Jan designs and prototypes experiences.">
   <meta name="author" content="Jan Zheng">
   <meta name="keywords" content="user experience, ux, interaction design, digital, advertising, ui design, code, prototyping, resume ,portfolio">
@@ -64,7 +64,7 @@
         <a href="/">
           <div class="nav__item nav__blog 
                       
-                      " >
+                       active" >
             <!-- <span class="icon icon--blog"></span> -->
             <div class="nav__label">thoughts</div>
           </div>
@@ -178,33 +178,31 @@
         <div class="article__head__intro" >
 
           
-          <div class="article__head__category article__head__category__work" >
+          <div class="article__head__category article__head__category__lab" >
 
             <!-- <div class="article__head__category__icon"> -->
 
               
-
-              
-
-              
-
-              
                 
-<svg class="svg--work" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <path d="M416 249l-24.7 173H119.8l-24-173h320zm46-40H50l35 253h341l36-253zm-338-30l-4.2-20H392l-4 20h40.4l10-57H73.6l10 57h40.3zm20.7-84L142 82H370l-2.6 13h35.4l7.8-45H101.6l7.6 45h35.5z"/>
+<svg class="svg--lab" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <path d="M254 165c0 11.3-9.2 20.5-20.6 20.5S213 176.3 213 165s9-20.6 20.4-20.6S254 153.6 254 165zm32.2-98.2c0 9.3-7.5 16.8-16.8 16.8s-16.8-7.5-16.8-16.8S260 50 269.4 50s16.8 7.5 16.8 16.8zm8 94.8c-15.8 0-28.7-13-28.7-28.8 0-16 13-29 28.8-29s29 13 29 29-13 28.8-29 28.8zm-76.7-35.4c-13.6 0-24.6-11-24.6-24.6S204 77 217.4 77 242 88 242 101.6s-11 24.6-24.5 24.6zM339.7 462H172.3c-22.7 0-37.6-23.7-27.8-44.2l47.7-99c13.2-27.6 20-57.8 20-88.4v-19.6h29.3c0 20.8 2.4 58.7-16.2 105.5h41l52 109.3c5.8 12 22.8 5.5 16.8-6.8-5.2-11-15.2-32.2-41.6-87.3-26.4-55-23-100-23-120.7h29.3v19.6c0 30.6 7 60.8 20 88.4l47.8 99c9.8 20.5-5 44.2-27.8 44.2z"/>
 </svg>
 <!-- 
-<svg class="svg--work" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path id="archive-2-icon" d="M415.904,249.017l-24.615,172.965H119.847L95.915,249.017H415.904z M462,209.017h-0.059H50.061H50
-l35,252.965h341L462,209.017z M123.944,179.018l-4.128-20h272.271l-4.173,20h40.484l10.019-57H73.584l9.889,57H123.944z
-M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144.674z"></path> </svg> -->
+<svg class="svg--lab" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path id="flask-7-icon" d="M253.984,164.94c0,11.354-9.205,20.56-20.56,20.56s-20.559-9.205-20.559-20.56s9.204-20.559,20.559-20.559S253.984,153.586,253.984,164.94z M286.241,66.82c0,9.289-7.531,16.82-16.821,16.82s-16.821-7.531-16.821-16.82c0-9.291,7.531-16.82,16.821-16.82S286.241,57.529,286.241,66.82z M294.34,161.617c-15.916,0-28.865-12.948-28.865-28.864c0-15.917,12.949-28.865,28.865-28.865s28.865,12.948,28.865,28.865C323.205,148.669,310.256,161.617,294.34,161.617z M217.471,126.212c-13.567,0-24.606-11.04-24.606-24.608s11.039-24.607,24.606-24.607c13.569,0,24.608,11.039,24.608,24.607S231.041,126.212,217.471,126.212z M339.707,462H172.293c-22.671,0-37.592-23.729-27.767-44.16l47.632-99.066c13.254-27.564,20.136-57.76,20.136-88.346v-19.641h29.174c0,20.844,2.479,58.704-16.161,105.529h40.978l52.064,109.282c5.748,12.02,22.731,5.53,16.778-6.839c-5.347-11.105-15.295-32.198-41.766-87.253c-26.389-54.882-22.874-99.906-22.874-120.72h29.217v19.641c0,30.586,6.882,60.781,20.136,88.347l47.633,99.064C377.298,438.271,362.379,462,339.707,462z"></path> </svg> -->
+              
+
+              
+
+              
+
               
             <!-- </div> -->
           </div>
           
-          <div class="article__category__label">work</div>
+          <div class="article__category__label">lab</div>
           <div class="article__head__date__container" >
             <div class="article__head__date">
-              June 21, 2016
+              February 12, 2014
             </div>    
           </div> 
 
@@ -214,11 +212,11 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
         
 
         <div class="article__head__title__container" >
-          <div class="article__head__title">Gas South Enrollment Redesign</div>
+          <div class="article__head__title">Let's Run!</div>
         </div> 
 
         <div class="article__head__subtitle__container" >
-          <div class="article__head__subtitle">Optimizing the natural gas enrollment flow</div>
+          <div class="article__head__subtitle">A mobile-friendly long-distance runners' map</div>
         </div> 
 
 
@@ -230,11 +228,11 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
                 <ul class="article__tags__list">
                   
                      
-                      <li>work</li>
+                      <li>prototype</li>
+                     
+                      <li>design</li>
                      
                       <li>ux</li>
-                     
-                      <li>prototype</li>
                     
                   
                 </ul>
@@ -244,6 +242,14 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
           </div>
         </div> 
 
+        
+        <div class="article__head__projectLink__container" >
+          <div class="article__head__projectLink">
+            <a href="http://janzheng.com/LetsRun" class="link-external">
+              <div class="btn-inline">Let's Run!</div>
+            </a>
+          </div>
+        </div>
         
 
       </div>
@@ -262,7 +268,7 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
 
       <!-- 
       <div class="article--summary-container">
-        <div class="article--summary">Optimizing the natural gas enrollment flow</div>
+        <div class="article--summary">A mobile-friendly long-distance runners' map</div>
       </div>  -->
 
       <!-- not yet used -->
@@ -285,117 +291,24 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
 
 
       <div class="article__body__content">
-        <figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/header.png" />
-<figcaption>Homepage prototype</figcaption>
-</figure>
+        <figure>
+!/app/posts/lab/lets-run/1.png!
+<figcaption>Decatur, Atlanta route</figcaption>
+</figure>As much as I love technology, on the weekends I try to tear myself away from the screen and go outside. 
+Every Saturday, I run with a running club called the "Chattahoochee Road Runners":http://www.crrclub.com. They way CRR works is that we all convene at the same location in the morning, and we can choose what distances to run, which can range from 7 miles up to 20 or more miles. Each route will include evenly spaced water stops that club members set out before each run. 
 
-<h2 id="introduction">Introduction</h2>
+The maps for the distances come on printed sheets of paper, and tell us on which streets to turn, where the next water stop is, and how far we've run at each turn. Often, the sheets are hard to manage: you fumble with the page while running, and the text can be really small, and the paper can get soggy, and so on.
 
-<p>The Gas South Enrollment redesign was a massive project that spanned many months to rebrand and overhaul their dot-com site and enrollment signup flow- their main source of new clients.</p>
+Let's Run! is the mobile equivalent of the paper map. It shows the same information like mileage, turn, street, and water stops, without the hassle of fumbling with a piece of paper and trying to keep it dry. Let's Run also lets runners keep track of which turns they've hit by tapping on the turn they just finished, as some routes can be criss-crossing and confusing.
 
-<p>Our goals were to:</p>
+And no, the irony of using a screen to escape screens has not escaped me.
 
-<ul>
-  <li>understand the needs of new customers</li>
-  <li>usability of competitor services</li>
-  <li>find bottlenecks of the current enrollment flow</li>
-  <li>optimize the enrollment flow</li>
-  <li>increase number of signups</li>
-</ul>
+p(padding-bottom-0). Check out Let's Run below:
 
-<h2 id="establishing-the-problem">Establishing the Problem</h2>
-
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/flowchart_header.png" />
-<figcaption>One of many enrollment flowcharts</figcaption>
-</figure>
-
-<p>My immediate goals were to learn as much as I could about Atlanta’s Natural Gas market and the consumers in the space. It turned out that it’s highly competitive and non-differentiating. Basically, everyone offered almost the exact same thing for the exact same price.</p>
-
-<p>The only thing they could do was improve the process of signing up.</p>
-
-<p>I looked at competitors’ offerings and poured over Gas South’s customer research led to breaking their signup process down to several key parts, that we wanted to test to find bottlenecks.</p>
-
-<h3 id="artifacts">Artifacts</h3>
-
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/enrollment_flow_initial_notes.txt">initial flow notes</a></li>
-</ul>
-
-<p>(all artifacts are developed by me unless noted)</p>
-
-<h2 id="requirements--wireframes">Requirements &amp; Wireframes</h2>
-
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/wireframe_header.png" />
-<figcaption>One of the wireframes that mapped to a flowchart</figcaption>
-</figure>
-
-<p>Business requirements and wireframes were developed hand in hand, as each alternate flow required many iterations as I tried to develop the nuances of each enrollment flow, since information from some steps carried over to others. The flow charts and wireframes were updated to reflect not only the data and flow requirements, but also the latest copy and data required from users.</p>
-
-<h3 id="artifacts-1">Artifacts</h3>
-
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/enrollment_system_test_1_flow.png">Test 1 Flowchart (image)</a></li>
-  <li><a href="/app/posts/portfolio/gas-south/observations.png">Notes on flow observations (image)</a>
-<!-- * [Full Gas South Enrollment Test Wireframes (6.7 MB PDF)](/app/posts/portfolio/gas-south/gassouth_wireframes.pdf) --></li>
-</ul>
-
-<h2 id="wirecomps">Wirecomps</h2>
-
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/wirecomp.png" />
-<figcaption>Combination of wireframe and comp, with assets</figcaption>
-</figure>
-
-<p>After weeks of optimizing and designing the flows, I worked with our visual designer to develop a cross between wireframes and a comp to initiate the layout design. These translated into Photoshop comps (created by a visual designer). These were needed for us to get on the same page with the client.</p>
-
-<h3 id="artifacts-2">Artifacts</h3>
-
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/wirecomp.png">Wirecomp Example</a></li>
-</ul>
-
-<h2 id="prototype--development">Prototype &amp; Development</h2>
-
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/prototype_header.png" />
-<figcaption>Prototype example</figcaption>
-</figure>
-
-<p>After much back and forth in both the requirements, enrollment flow, and comps stage (at this point we had actually come up with a total of six testable flows), our client wanted us to develop reusable clickable prototypes for testing.</p>
-
-<p>The first one I did <a href="/app/posts/portfolio/gas-south/carousel-demo/carousel.html">was for the homepage</a> – I took a homepage comp our designer had made, cut it up in photoshop, and added RoyalSlider functionality to show what the homepage carousel (this is something the client requested) would feel like.</p>
-
-<p>At this point the <a href="/app/posts/portfolio/gas-south/prototype-demo/Flow_6/flow6_business_1.html">prototype and development work</a> was too much for one person, so the work got out-sourced to other developers which I guided closely so the pages didn’t stray from the original flow. The point of the prototypes were not only to display demonstrate each flow, but to make the transition to development and deployment easier for our client.</p>
-
-<figure class="figure-wide">
-  <img src="/app/posts/portfolio/gas-south/mobile_header.png" />
-<figcaption>Mobile prototype</figcaption>
-</figure>
-
-<p>I had also suggested a <a href="/app/posts/portfolio/gas-south/mobile-demo/signup.html">mobile version for our client</a>, to capture the sizable number of users who were accessing and even forced to sign up their old non-mobile-friendly signup form (after all, many lower income families around Atlanta only have mobile access to the internet). This suggestion ended up spawning a separate mobile project, which used a modular setup with jQuery, so their developers could easily adapt to later findings frmo testing.</p>
-
-<p>Funny enough, our client ended up using most of our code in their final signup form (including my mobile signup code).</p>
-
-<h3 id="artifacts-3">Artifacts</h3>
-
-<ul>
-  <li><a href="/app/posts/portfolio/gas-south/carousel-demo/carousel.html">Homepage Carousel Prototype</a></li>
-  <li><a href="http://www.gas-south.com/">Gas South live site</a></li>
-  <li><a href="/app/posts/portfolio/gas-south/prototype-demo/Flow_6/flow6_business_1.html">Desktop Enrollment Prototype</a></li>
-  <li><a href="https://enroll.gas-south.com/flow1/WebEnrollment_UI/frmFlow1Step1.aspx">Gas South live enrollment</a></li>
-  <li><a href="/app/posts/portfolio/gas-south/mobile-demo/signup.html">Mobile Enrollment Prototype</a></li>
-  <li><a href="https://m.gas-south.com/signup/signup.html">Gas South live mobile enrollment</a></li>
-</ul>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Unfortunately, we were not part of the official testing process, but they had enough of a plan, and enough variation to play with to optimize their signup. The customer life cycle in buying natural gas is very long and seasonal (and we were in the wrong season), so that work was better done internally than through an agency.</p>
-
-<p>I eventually left soon after the project was wrapped up, so I didn’t get to know the results (which would have taken a couple of years to go through full customer cycles) Gas South also seems to really have enjoyed our work, as most of the code base we handed over to them have been kept intact a few years after the fact.</p>
-
+<notextile>
+  <div class="article__linkBlock"><a href="http://janzheng.com/LetsRun" class="link-external"><div class="btn-inline">Let's Run!</div></a>
+  </div>
+</notextile>
 
 
 
