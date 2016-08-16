@@ -250,8 +250,8 @@ M144.674,95.018l-2.553-13h227.664l-2.594,13h35.445l7.781-45H101.584l7.658,45H144
         
         <div class="article__head__projectLink__container" >
           <div class="article__head__projectLink">
-            <a href="http://www.nespresso-us.com/coffee-boutiques/" class="link-external">
-              <div class="btn-inline">Nespresso Boutiques</div>
+            <a href="http://www.nespresso-us.com/coffee-boutiques/" class="link-external btn-inline">
+              Nespresso Boutiques
             </a>
           </div>
         </div>

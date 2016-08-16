@@ -26,10 +26,11 @@ type : blog
 ---
 
 <figure>
-!{{page.source}}/XboxVoiceGuide_sm.png!
+<img src="{{page.source}}/XboxVoiceGuide_sm.png" />
 <figcaption>Preview of yours truly. <a href="{{page.source}}/XboxVoiceGuide.pdf">Get it here.</a></figcaption>
-</figure>So... I got totally excited when the Xbox One came out. You could turn it on and off just using your voice. Like magic!
-But soon I realized that nope, it's nothing like magic. It's not like your personal butler. It's not even as smart as "Samantha!":http://www.rottentomatoes.com/m/her/ 
+</figure>
+<div><p>So... I got totally excited when the Xbox One came out. You could turn it on and off just using your voice. Like magic!
+But soon I realized that nope, it's nothing like magic. It's not like your personal butler. It's not even as smart as <a href="http://www.rottentomatoes.com/m/her/">Samantha!</a></p></div>
 
 And sometimes it doesn't listen to you at all, and soon you'll find yourself yelling at your computer like a twit, trying to make it do things that it wasn't built to do.
 
@@ -41,14 +42,12 @@ As a design exercise for myself, and as a goal to make more cool things geared t
 
 So here's a quick cheat sheet so you know at least how to get your One to listen. Or why it's not. Though it doesn't work all the time, you just have to keep yelling at it until it does.
 
-<notextile>
-  <div class="article__linkBlock"><a href="{{page.source}}/XboxVoiceGuide.pdf" class="link-external"><div class="btn-inline">Download the Voice Guide</div></a>
-  </div>
-</notextile>
+<div class="article__linkBlock"><a href="{{page.source}}/XboxVoiceGuide.pdf" class="link-external"><div class="btn-inline">Download the Voice Guide</div></a>
+</div>
 
-h2. Update! 
+## Update! 
 
-Soon after I started working on this cheat sheet (before the One came out), Microsoft released their "official voice guide":http://hwcdn.libsyn.com/p/4/4/c/44c89c7f273167b4/Xbox_One_Kinect_Voice_Gesture.pdf?c_id=6458139&expiration=1391904000&hwt=8d03bf44dd44ad73fcbd5f4e858f9a92 and I've integrated some of their commands into my list. 
+Soon after I started working on this cheat sheet (before the One came out), Microsoft released their [official voice guide](http://hwcdn.libsyn.com/p/4/4/c/44c89c7f273167b4/Xbox_One_Kinect_Voice_Gesture.pdf) and I've integrated some of their commands into my list. 
 
 My list omits some of the more common commands for increased readability. I've also laid out the commands in a way that leads in each command more naturally. The purpose and design goal of the sheet was to immediately let the reader find the command they needed, which isn't always apparent.
 

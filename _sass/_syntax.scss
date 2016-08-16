@@ -2,18 +2,27 @@
 .highlight {
 
   font-size: $base*0.9;
+  background-color: $light-light-blue;
+  margin-top: $base*2;
+  margin-bottom: $base*2;
+  padding-bottom: 0 !important;
 
   pre {
     @extend %style-antialiased; 
-    border-radius: 12px;
+    // border-radius: 12px;
     padding: $base/4 $base/2;
-    background-color: $light-light-blue;
-    margin-top: $base*2;
-    margin-bottom: $base*2;
+    // margin-bottom: 2rem;
+
   }
 }
 
-.highlight  { background: #ffffff; }
+code {
+  font-size: $base*0.9;
+  background-color: $light-light-blue;
+  padding: $base/2;
+}
+
+// .highlight  { background: #ffffff; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */

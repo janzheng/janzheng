@@ -18,7 +18,7 @@ project-link-desc : Nespresso Boutiques
 category : work
 tags : [portfolio, information architecture, interaction design]
 
-published : false
+published : true
 portfolio : true
 comments : false
 featured : false
@@ -30,82 +30,82 @@ featured : false
   <ul class="slides">
 
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/1.png" title="Cartoon Network Mobile Site" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/1sm.png" />
+      <a href="{{page.source}}/1.png" title="Cartoon Network Mobile Site" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/1sm.png" />
          <p class="flex-caption">The Cartoon Network Mobile Site, from wireframe to design, to prototype. The site aimed to bring a novel way to interact with and explore Cartoon Network's shows.</p>
       </a>
     </li>
     
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/2.png" title="Cartoon Network Mobile Homepage" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/2sm.png" />
+      <a href="{{page.source}}/2.png" title="Cartoon Network Mobile Homepage" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/2sm.png" />
          <p class="flex-caption">The Cartoon Network Mobile homepage shows a section of main news and features, with additional menu buttons across the bottom of the screen.</p>
       </a>
     </li>
 
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/3.png" title="Cartoon Network Mobile Homepage" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/3sm.png" />
+      <a href="{{page.source}}/3.png" title="Cartoon Network Mobile Homepage" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/3sm.png" />
          <p class="flex-caption">Wireframe of the Cartoon Network Mobile homepage. Originally, more content was planned underneat the promotion area, including daily schedule and links to other content.</p>
       </a>
     </li>
 
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/4.png" title="Videos Page" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/4sm.png" />
+      <a href="{{page.source}}/4.png" title="Videos Page" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/4sm.png" />
          <p class="flex-caption">The videos page shows the latest and featured videos across all Cartoon Network properties.</p>
       </a>
     </li>
 
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/5.png" title="Videos Page Wireframe" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/5sm.png" />
+      <a href="{{page.source}}/5.png" title="Videos Page Wireframe" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/5sm.png" />
          <p class="flex-caption">Originally, views, ratings, and other information was slted to be shown on the videos page.</p>
       </a>
     </li>
 
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/6.png" title="Pull-Up Menu" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/6sm.png" />
+      <a href="{{page.source}}/6.png" title="Pull-Up Menu" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/6sm.png" />
          <p class="flex-caption">The show pull-up menu acts as a reverse drop-down menu that display a scrollable list of shows in alphabetical order.</p>
       </a>
     </li>
 
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/7.png" title="Pull-Up Menu Wireframe" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/7sm.png" />
+      <a href="{{page.source}}/7.png" title="Pull-Up Menu Wireframe" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/7sm.png" />
          <p class="flex-caption">The show pull-up menu acts as a reverse drop-down menu that display a scrollable list of shows in alphabetical order.</p>
       </a>
     </li>
 
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/8.png" title="Closing the Pull-Up Menu" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/8sm.png" />
+      <a href="{{page.source}}/8.png" title="Closing the Pull-Up Menu" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/8sm.png" />
          <p class="flex-caption">Wireframe page that shows the action of the Pull-Up menu being closed. Users would either tap or drag the the tab down to close the Pull-Up menu.</p>
       </a>
     </li>
 
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/9.png" title="Simple Mobile Site" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/9sm.png" />
+      <a href="{{page.source}}/9.png" title="Simple Mobile Site" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/9sm.png" />
          <p class="flex-caption">Wireframe of an alternate, easier and cheaper-to-develop mobile site that retains the same themes and functionality, but relies less on JavaScript.</p>
       </a>
     </li>
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/10.png" title="Show Homepage" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/10sm.png" />
+      <a href="{{page.source}}/10.png" title="Show Homepage" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/10sm.png" />
          <p class="flex-caption">Each show has its own custom homepage, with video clips, background info, apps, and other information relevant to the show.</p>
       </a>
     </li>
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/11.png" title="Interim Page" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/11sm.png" />
+      <a href="{{page.source}}/11.png" title="Interim Page" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/11sm.png" />
          <p class="flex-caption">An interim page that asks users if they would like to see the mobile or full site, download the CN app or add the mobile site to the home screen.</p>
       </a>
     </li>
     <li>
-      <a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/12.png" title="Show Info Page" rel="lightbox-cnmobile">
-         <img src="/assets/posts/2013-04-18-Portfolio-CN-Mobile/12sm.png" />
+      <a href="{{page.source}}/12.png" title="Show Info Page" rel="lightbox-cnmobile">
+         <img src="{{page.source}}/12sm.png" />
          <p class="flex-caption">The show info page gives more information about a specific show, like characters, locations, settings, and plot.</p>
       </a>
     </li>
@@ -160,7 +160,7 @@ p.
    <div class="post-sidebar-column">
       <title>Link</title>
       <span><a href="http://m.cartoonnetwork.com/">m.cartoonnetwork.com</a> (mobile only)</span>
-      <span><a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/cartoon.html">Concept prototype</a></span>
-      <span><a href="/assets/posts/2013-04-18-Portfolio-CN-Mobile/mobile_web_v4.7_notes_9-23-11.pdf">Wireframe document</a></span>
+      <span><a href="{{page.source}}/cartoon.html">Concept prototype</a></span>
+      <span><a href="{{page.source}}/mobile_web_v4.7_notes_9-23-11.pdf">Wireframe document</a></span>
    </div>
 </div>

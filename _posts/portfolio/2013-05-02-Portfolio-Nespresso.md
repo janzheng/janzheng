@@ -28,9 +28,6 @@ comments : false
 featured : false
 ---
 
-<notextile>
-
-
 <div class="callout">
   <div class="callout--row">
      <span class="title">Client</span><span class="content">Nespresso</span>
@@ -53,20 +50,19 @@ featured : false
   </div>
 </div>
 
-</notextile>
 
 
+<p class="dropcap">Nespresso is a "single-serving espresso machine company":http://www.nespresso-us.com/boutique/  who came to us looking to give their exclusive network of coffee shops a stronger online presence. They wanted a place for their fans to learn more about their Boutiques, and needed a site to match the style, elegance, and exclusivity of their local Boutiques.</p>
 
-p(dropcap). Nespresso is a "single-serving espresso machine company":http://www.nespresso-us.com/boutique/  who came to us looking to give their exclusive network of coffee shops a stronger online presence. They wanted a place for their fans to learn more about their Boutiques, and needed a site to match the style, elegance, and exclusivity of their local Boutiques.
-
-<figure class="figure-wide"><a href="{{page.source}}/nespresso-home.png">!{{page.source}}/nespresso-home_sm.png!</a><figcaption>The austere use of menu colors accentuates the large images</figcaption>
+<figure class="figure-wide"><a href="{{page.source}}/nespresso-home.png">
+<img src="{{page.source}}/nespresso-home_sm.png" /></a><figcaption>The austere use of menu colors accentuates the large images</figcaption>
 </figure>
 
 The online Boutique experience aims to communicate the in-store experience of the boutiques. The large images, typography, and store selection list all aim to reflect the very upscale, detail-oriented experience that Nespresso aims to offer with their stores. 
 
-p. Originally, Nespresso used a Store Finder system similar to that of Home Depot, Starbucks, and other large retailers. When Nespresso approached us to completely overhaul the web experience in preparation for the launch of their flagship San Francisco boutique, I felt like a store finder was too impersonal. I wanted something that expressed more exclusivity, especially as Nespresso Boutiques are very unique. Instead, I opted for a Boutique list that would both communicate the exclusivity better, and not make Nespresso boutiques feel few and sparse. 
+Originally, Nespresso used a Store Finder system similar to that of Home Depot, Starbucks, and other large retailers. When Nespresso approached us to completely overhaul the web experience in preparation for the launch of their flagship San Francisco boutique, I felt like a store finder was too impersonal. I wanted something that expressed more exclusivity, especially as Nespresso Boutiques are very unique. Instead, I opted for a Boutique list that would both communicate the exclusivity better, and not make Nespresso boutiques feel few and sparse. 
 
-<notextile>
+
 <figure class="figure-wide">
   <div class="royalSlider rsMinW show-adjacent slider ">
     <div class="rsContent">
@@ -85,33 +81,28 @@ p. Originally, Nespresso used a Store Finder system similar to that of Home Depo
     </div>
   </div>
 </figure>
-</notextile>
 
 
-p. In terms of scalability, the current system is slated to support an additional few dozen more Boutiques, which won't be needed to be updated for at least a few years. 
+In terms of scalability, the current system is slated to support an additional few dozen more Boutiques, which won't be needed to be updated for at least a few years. 
 
-p. My part of the project required me to translate the vast collection of ethnographic and market research, massive amount of requirements, and design goals into a rich web and tablet user experience.
+My part of the project required me to translate the vast collection of ethnographic and market research, massive amount of requirements, and design goals into a rich web and tablet user experience.
 
 
-<notextile>
 <div class="callout">
   <h2 class="no-margin">Summary of work</h2>
   <div class="callout--row">
-
-  </notextile>
-    * Performed rounds of content and requirement audits
-    * Created a requirements & site map
-    * Created a content grid for clients to populate content
-    * Created core interaction concept for the user experience
-    * Sketched, designed, and wireframed the interface design
-    * Created interface design variations and iterations based on core concepts
-    * Client interaction walkthroughs
-    * Worked with designers and developers to deliver final product
-  <notextile>
+    <ul>
+      <li>Performed rounds of content and requirement audits</li>
+      <li>Created a requirements &amp; site map</li>
+      <li>Created a content grid for clients to populate content</li>
+      <li>Created core interaction concept for the user experience</li>
+      <li>Sketched, designed, and wireframed the interface design</li>
+      <li>Created interface design variations and iterations based on core concepts</li>
+      <li>Client interaction walkthroughs</li>
+      <li>Worked with designers and developers to deliver final product</li>
+    </ul>
   </div>
 </div>
-</notextile>
 
 
-</div>
 

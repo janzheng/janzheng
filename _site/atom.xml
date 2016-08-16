@@ -3,9 +3,21 @@
     <title>Jan Zheng</title>
     <link href="http://janzheng.com/atom.xml" rel="self"/>
     <link href="http://janzheng.com/"/>
-    <updated>2016-08-16T00:45:09-04:00</updated>
+    <updated>2016-08-16T12:49:34-04:00</updated>
     <id>http://janzheng.com/</id>
     
+    
+    <entry>
+        <id>janzheng.com:/blog/2016/08/tumblr_integration</id>
+        <title>How to Embed Tumblr Without a Server (updated)</title>
+        <link href="http://janzheng.com/blog/2016/08/tumblr_integration.html"/>
+        <updated>2016-08-16T00:00:00-04:00</updated>
+        <summary>How to easily add Tumblr to a static site, without PHP, a server, or any server-side code</summary>
+        <author>
+            <name>Jan Zheng</name>
+            <uri>http://janzheng.com/</uri>
+        </author>
+    </entry>
     
     <entry>
         <id>janzheng.com:/blog/2016/06/gassouth</id>
@@ -116,11 +128,11 @@
     </entry>
     
     <entry>
-        <id>janzheng.com:/blog/2013/06/tumblr_integration</id>
-        <title>How to Embed Tumblr Without a Server</title>
-        <link href="http://janzheng.com/blog/2013/06/tumblr_integration.html"/>
-        <updated>2013-06-16T00:00:00-04:00</updated>
-        <summary>How to easily add Tumblr to a static site, without PHP, a server, or any server-side code</summary>
+        <id>janzheng.com:/blog/2013/05/Portfolio-CN-Mobile</id>
+        <title>Cartoon Network Mobile</title>
+        <link href="http://janzheng.com/blog/2013/05/Portfolio-CN-Mobile.html"/>
+        <updated>2013-05-03T00:00:00-04:00</updated>
+        <summary>fun and quirky mobile site for browsing shows and watching videos</summary>
         <author>
             <name>Jan Zheng</name>
             <uri>http://janzheng.com/</uri>

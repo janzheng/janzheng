@@ -40,9 +40,9 @@
 
 // main alignment w/ copy
 %body-align {
-  @include span-four(24, 16, 16, 16);
+  @include span-four(24, 18, 18, 18);
   @include media($break-nav-mobile) {padding: 0 $base;}
-  @include media($break-nav-thin-atleast) {@include shift(4);}
+  @include media($break-nav-thin-atleast) {@include shift(3);}
 }
 
 
@@ -156,6 +156,10 @@
       .article__head__title {
         color: white;
       }
+      a.btn-inline {
+        background: $light-blue;
+        color: $white !important;
+      }
       .article__head__date, .article__head__subtitle {
         color: white;
       }
@@ -207,9 +211,28 @@
 
   .article__head__projectLink__container {
     @include span-four(24, 20, 20, 20);
-    @include media($break-nav-thin-atleast) {@include shift(4);}
+    @include media($break-nav-thin-atleast) {@include shift(3);}
     @extend %body-align; @extend %serif; 
+  }
 
+  .article {
+    // a {
+      // border: 0 !important;
+    // }
+
+    a.btn-inline, .btn-inline {
+      padding: $base/2 $base;
+      border-radius: 4px;
+      border: 1px solid $light-blue !important;
+      color: $light-blue;
+      display: inline-block;
+      @extend %ease;
+      &:hover {
+        background-color: $light-blue;
+        color: $white;
+        @extend %ease;
+      }
+    }
   }
 
 
@@ -331,6 +354,11 @@
       padding-top: 4px; padding-right: 8px; padding-left: 0px;
     }
 
+    .alert {
+      background-color: $light-light-blue;
+      padding: $base;
+    }
+
     // callout boxes are used for info, summaries, like in the work sections
     .callout {
       @extend %style-blockquote;
@@ -340,7 +368,7 @@
 
       @include media($break-nav-mobile) {@include span-columns(18);}
       @include media($break-nav-thin-atleast) {@include shift(-1); }
-      @include media($break-nav-wide-atleast) {@include shift(-3); @include span-columns(32);}
+      @include media($break-nav-wide-atleast) {@include shift(-3); @include span-columns(28);}
 
       &.callout--large {
         font-size: $size-slightly-large; line-height: $base*2;
@@ -373,8 +401,8 @@
       }
     }
 
-    // figures are used for images
-    figure {
+    // figures are used for images and code
+    figure:not(.highlight) {
       padding-bottom: $base*2; 
       // padding-right: $base*2;
       @include media($break-nav-wide) {float: left; }
@@ -417,7 +445,8 @@
       }
 
       & p { padding: 0; margin-bottom: 0}
-      &+p, &+h2 {clear: both;}
+      // &+p, 
+      &+h2 {clear: both;}
     }
 
     .quotemarks {

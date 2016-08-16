@@ -30,7 +30,8 @@
 
   .postList__container {
     @include span-four(24, 24, 21, 18);
-    padding-top: $base*2.9; //distance from the top of the page
+    padding-top: $base*3.8; //distance from the top of the page
+    padding-right: $base;
     @extend %ease;
   }
 
@@ -44,6 +45,10 @@
         .page__introtitle {
           font-size: $size-large;
           line-height: $base*2.5;
+          display: inline-block;
+          padding-bottom: $base;
+          // @include media($break-nav-mobile) {line-height: $base*2.5; padding-top: 12px; display: block;}
+          // @include media($break-nav-thin) {line-height: $base*2.5; padding-top: 12px; display: block;}
         }
 
         @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base;}
@@ -179,7 +184,9 @@
               color: $gray;
 
               .post__summary {
-                display: inline-block; padding: $base/4 $base;
+                display: inline-block;
+                padding: $base/4 $base;
+                line-height: 1.6rem;
               }
             }
 

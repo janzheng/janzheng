@@ -382,19 +382,19 @@ $(document).ready(function() {
 
 <notextile>
   <div class="article__linkBlock">
-    <a href="{{page.source}}/demo/sticky-sidebar-demo.html" class="link-external"><div class="btn-inline">Demo</div></a>
-    <a href="{{page.source}}/demo/sticky-sidebar.zip" class="link-external"><div class="btn-inline">Download .zip</div></a>
+    <a href="{{page.source}}/demo/sticky-sidebar-demo.html" class="link-external btn-inline">Demo</a>
+    <a href="{{page.source}}/demo/sticky-sidebar.zip" class="link-external btn-inline">Download .zip</a>
   </div>
 </notextile>
 
-p(dropcap). Vertical sidebar menus are great. They allow for much more content than horizontal menus, as they can grow past the bottom of the page. For this reason, sites with long pages of documentation such as "Zurb":http://foundation.zurb.com/docs/, "Bourbon":http://neat.bourbon.io/docs/, "Really Good Emails":http://reallygoodemails.com/ and "Bootstrap":http://getbootstrap.com/components/ tend to employ the vertical navigation design pattern.
+<p class="dropcap"> Vertical sidebar menus are great. They allow for much more content than horizontal menus, as they can grow past the bottom of the page. For this reason, sites with long pages of documentation such as <a href="http://foundation.zurb.com/docs/">Zurb</a>, <a href="http://neat.bourbon.io/docs/">Bourbon</a>, <a href="http://reallygoodemails.com/">Really Good Emails</a> and <a href="http://getbootstrap.com/components/">Bootstrap</a> tend to employ the vertical navigation design pattern.</p>
 
 Keep in mind that I'm not talking about *top-level primary site navigation*. Instead, I'm specifically talking about page-level vertical sidebar menus.
 
-h2(#left-nav--anchor-2). A New Take on an Old Friend
+<h2 id="left-nav--anchor-2">A New Take on an Old Friend</h2>
 
 <figure>
-!(img-caption){{page.source}}/bootstrap3.png! 
+<img src="{{page.source}}/bootstrap3.png"> 
 <figcaption>the sidebar from Bootstrap doesn't always fit</figcaption>
 </figure> Vertical navigation has existed pretty much since the birth of the internet. Though recently, a few design pattern variations have emerged, including the sticky sidebar (Bootstrap) and the scrolling container (Really Good Emails). The scrolling container is self-explanatory: users scroll the menu independently of the main content, and the sidebar is not affected by the scroll position of the main page. In contrast, as users scroll down the page on Bootstrap, the menu sticks to the side as a _fixed position_ css element, and reacts to the user's scroll position. This latter method creates a stronger  "bond" between the sidebar and the content, as clicking on sidebar items will scroll to different parts of the page. 
 
@@ -402,10 +402,10 @@ In addition to the sticky nav, Bootstrap does something else that's very clever:
 
 
 
-h2(#left-nav--anchor-3). Scaling Upwards
+<h2 id="#left-nav--anchor-3">Scaling Upwards</h2>
 
 <figure class="figure-wide">
-!{{page.source}}/up2.jpg!
+<img src="{{page.source}}/up2.jpg" />
 </figure>
 
 
@@ -418,13 +418,13 @@ The one down-side to this implementation is the user won't always see current ac
 I've seen a few implementations of this idea in the wild, but can't remember where. I'll update this post with examples when I find any. Or you could spare me the trouble and "send me some.":mailto:janeazy@gmail.com 
 
 
-h2(#left-nav--anchor-4). Implementation
+<h2 id="#left-nav--anchor-4">Implementation</h2>
 
 There are a few scenarios I used when I built the demo:
 
-# Is the sidebar always fairly short?
-# Is the sidebar most likely going to be very tall?
-# Could the sidebar be either short or tall?
+* Is the sidebar always fairly short?
+* Is the sidebar most likely going to be very tall?
+* Could the sidebar be either short or tall?
 
 1) If the sidebar is usually short, it will most likely never be larger than the browser viewport. In this scenario, the sidebar could easily remain a fixed-position element.
 
@@ -432,7 +432,7 @@ There are a few scenarios I used when I built the demo:
 
 3) This case is a combination of the first two cases. The menu behavior needs to respond to the dynamic size of the navigation element. It adds a small amount of complication, but still adheres to items 1) and 2). This is the scenario that's covered by this demo page.
 
-To approach scenario 3, I used "JQuery Waypoints":http://imakewebthings.com/jquery-waypoints/ to track the positions of menu objects relative to both the viewport and other objects. A much simpler way to implement a sticky menu is using "Skrollr":https://github.com/Prinzhorn/skrollr, but Skrollr lacks the dynamic properties of Waypoints. It would be a good technology for scenario 1, if the menu height and the waypoints weren't dynamic.
+To approach scenario 3, I used [JQuery Waypoints](http://imakewebthings.com/jquery-waypoints/) to track the positions of menu objects relative to both the viewport and other objects. A much simpler way to implement a sticky menu is using [Skrollr](https://github.com/Prinzhorn/skrollr), but Skrollr lacks the dynamic properties of Waypoints. It would be a good technology for scenario 1, if the menu height and the waypoints weren't dynamic.
 
 The implementation using Waypoints is fairly straightforward. On every element change or viewport interaction (like the size of the menu changing, the page is scrolled, or the browser resized) I update the relative waypoint offsets, and the positions where the menu should stick. I'm using Waypoints to track for the scroll condition, and set the appropriate values when a certain scroll condition has been met. 
 
@@ -440,7 +440,7 @@ I also make sure to implement deduplication and other barriers to prevent the sy
 
 
 
-h2(#left-nav--anchor-5). Bugs and Issues
+<h2 id="#left-nav--anchor-5">Bugs and Issues</h2>
 
 After several code rewrites and iterations, most bugs have been squashed. Though there are still a few bugs:
 
@@ -450,14 +450,14 @@ After several code rewrites and iterations, most bugs have been squashed. Though
 
 3) I'm accounting for page focus and page resize, but I'm not accounting for repositioning the menu while the browser window is being resized. At the end of window resize, the menu position will be wrong until the viewport hits another waypoint.
 
-4) Finally, this method will not work properly on mobile and tablet devices, as scrolling won't fire until the scrolling stops. "ScrollMagic":https://github.com/janpaepke/ScrollMagic seems to have bypassed this issue by using iScroll, but at this point it might make more sense to use an independent sidebar or an "off-canvas":http://www.lukew.com/ff/entry.asp?1514s pattern. 
+4) Finally, this method will not work properly on mobile and tablet devices, as scrolling won't fire until the scrolling stops. [ScrollMagic](https://github.com/janpaepke/ScrollMagic) seems to have bypassed this issue by using iScroll, but at this point it might make more sense to use an independent sidebar or an [off-canvas](http://www.lukew.com/ff/entry.asp?1514s) pattern. 
 
-If you have found issues or have any ideas to how to speed up, improve, or fix anything, please "send me a note!":mailto:janeazy@gmail.com
+If you have found issues or have any ideas to how to speed up, improve, or fix anything, please [send me a note!](mailto:janeazy@gmail.com)
 
-p(sticky-sidebar-stop). This is the last section that the sidebar will follow, as denoted by the class @.sticky-sidebar-stop@.
+<p class="sticky-sidebar-stop"> This is the last section that the sidebar will follow, as denoted by the class <code>.sticky-sidebar-stop</code>.</p>
 
 
-h2(#left-nav--anchor-6). Lastly
+<h2 id="left-nav--anchor-6">Lastly</h2>
 
 Sometimes a little more effort is required to add subtle pieces of details, something most might not even recognize, but the extra effort definitely can make a product or functionality shine.
 
@@ -465,7 +465,5 @@ All the code for this repository is free to use. It is experimental and a proof 
 
 In the future I'll create a separate Github project with a guide on how to use the code.
 
-<notextile>
-  <a href="{{page.source}}/demo/sticky-sidebar-demo.html" class="link-external"><div class="btn-inline">Demo</div></a>
-  <a href="{{page.source}}/demo/sticky-sidebar.zip" class="link-external"><div class="btn-inline">Download .zip</div></a>
-</notextile>
+<a href="{{page.source}}/demo/sticky-sidebar-demo.html" class="link-external btn-inline">Demo</a>
+<a href="{{page.source}}/demo/sticky-sidebar.zip" class="link-external btn-inline">Download .zip</a>
