@@ -1068,19 +1068,31 @@ a, a:active, a:hover, a:link {
   cursor: pointer;
   text-align: center;
   display: inline-block;
-  padding: 0 0.5rem;
+  padding: 0 0.25rem;
 }
 .filter-btn:first-of-type {
   padding-left: 0;
 }
 .filter-btn ~ .filter-clear {
-  display: inline-block;
+  display: block;
   opacity: 0;
-  position: relative;
-  bottom: 1.5rem;
-  margin-left: 1rem;
   font-size: 0.83rem;
   color: #972020;
+}
+@media screen and (max-width: 479px) {
+  .filter-btn ~ .filter-clear {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 767px) {
+  .filter-btn ~ .filter-clear {
+    display: inline-block;
+    position: inherit;
+    margin-left: 1rem;
+    bottom: 1.5rem;
+    position: relative;
+  }
 }
 .filter-btn ~ .filter-clear:hover {
   color: #FF530D;
@@ -1376,7 +1388,7 @@ body, html {
 }
 .page__intro .page__introtitle {
   font-size: 2rem;
-  line-height: 4.5rem;
+  line-height: 2.5rem;
 }
 @media screen and (max-width: 479px) {
   .page__intro {
@@ -1386,7 +1398,7 @@ body, html {
 }
 @media screen and (min-width: 480px) {
   .page__intro {
-    margin-left: 12.5%;
+    margin-left: 4.16667%;
     padding-left: 2rem;
     margin-bottom: 1rem;
   }
@@ -1398,6 +1410,12 @@ body, html {
 }
 
 @media screen and (max-width: 479px) {
+  .postList__filter {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 479px) {
   .postList__filter, .page__title {
     padding: 4px 3rem;
     margin-top: 2rem;
@@ -1406,7 +1424,7 @@ body, html {
 }
 @media screen and (min-width: 480px) {
   .postList__filter, .page__title {
-    margin-left: 12.5%;
+    margin-left: 4.16667%;
     padding-left: 2rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -1480,17 +1498,17 @@ body, html {
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .post__container {
-    margin-left: 12.5%;
+    margin-left: 4.16667%;
   }
 }
 @media screen and (min-width: 767px) {
   .post__container {
-    margin-left: 12.5%;
+    margin-left: 4.16667%;
   }
 }
 @media screen and (min-width: 980px) {
   .post__container {
-    margin-left: 12.5%;
+    margin-left: 4.16667%;
   }
 }
 

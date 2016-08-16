@@ -43,12 +43,12 @@
 
         .page__introtitle {
           font-size: $size-large;
-          line-height: $base * 4.5;
+          line-height: $base*2.5;
         }
 
         @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base;}
         @include media($break-nav-thin-atleast) {
-          @include shift(3); padding-left: $base*2; 
+          @include shift(1); padding-left: $base*2; 
           // margin-top: $base*0.25; 
           margin-bottom: $base;
         }
@@ -58,10 +58,15 @@
         font-size: $size-slightly-larger;
       }
 
+    .postList__filter {
+      @include media($break-nav-mobile) { 
+        text-align: center;
+      }
+    }
     .postList__filter, .page__title {
       // @include span-four(18, 24, 24, 24);
       @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base*2; margin-bottom: $base*2;}
-      @include media($break-nav-thin-atleast) {@include shift(3); padding-left: $base*2; margin-top: $base; margin-bottom: $base*2;}
+      @include media($break-nav-thin-atleast) {@include shift(1); padding-left: $base*2; margin-top: $base; margin-bottom: $base*2;}
     } 
 
     .post {
@@ -96,9 +101,9 @@
       // @include media($break-nav-thin)   {padding: 4px $base; }
 
       // standard format should generally spread across the entire column, but larger leaves a little padding on sides for column-breaking
-      @include media($break-nav-thin) {@include shift(3); }
-      @include media($break-nav-wide) {@include shift(3); }
-      @include media($break-nav-full) {@include shift(3); }
+      @include media($break-nav-thin) {@include shift(1); }
+      @include media($break-nav-wide) {@include shift(1); }
+      @include media($break-nav-full) {@include shift(1); }
     
     }
 

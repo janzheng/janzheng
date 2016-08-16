@@ -7,19 +7,30 @@
   text-align: center;
   display: inline-block;
   // @extend %style-btn-inline;
-  padding: 0 $base/2;
+  padding: 0 $base/4;
 
   &:first-of-type {
     padding-left: 0;
   }
 
   &~.filter-clear {
-    display: inline-block;
+    display: block;
+    @include media($break-nav-mobile) { 
+      margin-top: $base;
+      text-align: center;
+    }
+    @include media($break-nav-wide-atleast) { 
+      display: inline-block; 
+      position: inherit;
+      margin-left: $base;
+      bottom: $base*1.5;
+      position: relative;
+    }
+    // @include media($break-nav-wide) {@include shift(3); }
+    // @include media($break-nav-full) {@include shift(3); }
+    
     opacity: 0;
-    position: relative;
     // top: 0;
-    bottom: $base*1.5;
-    margin-left: $base;
     font-size: $size-smallish;
     color: $red;
     @extend %ease;
