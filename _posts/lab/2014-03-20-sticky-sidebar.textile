@@ -11,7 +11,7 @@ preview-css : post-preview-std
 <!-- youtube: # -->
 <!-- vimeo: # -->
 
-<!-- categories: info, lab, rant, tool, portfolio -->
+<!-- categories: info, lab, thought, tool, portfolio -->
 category : lab
 tags : [prototype, design, ux]
 

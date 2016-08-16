@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 	              
 	            //     <!-- needs to be on one line for sort.js -->
-	            //     <div class="post__category__label sortCategory">rant</div>
+	            //     <div class="post__category__label sortCategory">thought</div>
 	            //   </div>
 	              
 	            //   <div class="post__date__container">
@@ -139,12 +139,12 @@ $(document).ready(function() {
 	          <div class="post__container post-preview-std post__imgPreview--short post__imgPreview--mixed  post__imgPreview--noImg "> <!-- bg image is set in script.js -->
 	            <div class="post__info">
 	              <!-- this is for category tags labels -->
-	              <div class="post__category post__category--rant">
+	              <div class="post__category post__category--thought">
 	                <div class="post__category__icon">
-						<span class="icon icon--filter icon--rant"></span>
+						<span class="icon icon--filter icon--thought"></span>
 	                </div>
 	                <!-- needs to be on one line for sort.js -->
-	                <div class="post__category__label sortCategory">rant</div>
+	                <div class="post__category__label sortCategory">thought</div>
 	              </div>
 	              
 	              <div class="post__date__container">

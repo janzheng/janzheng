@@ -73,7 +73,7 @@ $size-form: $base*0.9; $height-form: $base*2;
 
 $size-article-title: $size-larger;
   $size-article-title-mobile: $base*1.8;
-  $height-article-title: golden-ratio($size-article-title, 1);
+  $height-article-title: $base*3.445;
   $height-article-title-mobile: golden-ratio($size-article-title-mobile, 1);
 
 $size-article-subtitle: $base*1;
@@ -186,15 +186,19 @@ a, a:active, a:hover, a:link {
   // @extend %display; font-weight: 200;
   // font-weight: 700; 
   font-size: $size-preview-title; 
+  line-height: 3.2rem;
   // background-color: rgba(red, 0.6);
   // @extend %ease; 
 }
 
 %style-article-title {
-  @extend %sans-serif; font-weight: 300;
+  // @extend %sans-serif;
+  @extend %serif;
+  font-weight: 300;
   // @extend %display; font-weight: 200;
   font-size: $size-article-title;
   line-height: $height-article-title;
+  margin-bottom: $base;
   
   @include media($break-nav-mobile) {
     font-size: $size-article-title-mobile;
@@ -203,7 +207,7 @@ a, a:active, a:hover, a:link {
 }
 
   %style-article-subtitle {
-    @extend %sans-serif; 
+    // @extend %sans-serif; 
     // font-style: italic;
     font-size: $size-article-subtitle;
     line-height: $height-article-subtitle;

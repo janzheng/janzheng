@@ -12,7 +12,7 @@ project-link-desc : Nanowrito.com
 <!-- youtube: # -->
 <!-- vimeo: # -->
 
-<!-- categories: idea, lab, rant, tool, portfolio -->
+<!-- categories: idea, lab, thought, tool, portfolio -->
 category : lab
 tags : [prototype, design, ux]
 

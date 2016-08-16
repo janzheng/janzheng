@@ -3,16 +3,16 @@ layout: layout-post
 title: Stop Hiring Unicorns
 summary: Do designers need to learn code?
 
-source: /app/posts/rants/unicorns
-<!-- preview-img : /app/posts/rants/unicorns/rhino.png -->
+source: /app/posts/thoughts/unicorns
+<!-- preview-img : /app/posts/thoughts/unicorns/rhino.png -->
 preview-css : post-preview-std post__imgPreview--short post__imgPreview--mixed
 
 <!-- external: # -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
 
-<!-- categories: tutorial, project, rant, tool, portfolio -->
-category : rant
+<!-- categories: tutorial, project, thought, tool, portfolio -->
+category : thought
 tags : [ux, design, code, freelance, unicorn]
 
 published : true

@@ -185,7 +185,7 @@ I have also worked on the client side with **Ubiquiti Networks**, **Microsoft**,
 
         <p>Lately I've focused on creating a creative and wireframe presentation tool, and a more flexible, agile proess flow that emphasizes earlier research, user experience, and integration among departments.</p>
 
-        <p>Clients include Nespresso, Assurant, Manheim, The Home Depot, GE Energy, and Disney.</p>
+        <p>Clients include Nespresso, Assuthought, Manheim, The Home Depot, GE Energy, and Disney.</p>
       </div>
     </div>
   </div>

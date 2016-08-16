@@ -107,7 +107,7 @@
       background-color: rgba($dark-orange, 0.7);
     }
 
-    .article__head__category__rant {
+    .article__head__category__thought {
       background-color: rgba($green, 0.7);
      }
 
@@ -118,11 +118,15 @@
     .article__category__label {
       font-size: $size-smallish;
       line-height: $base*3/2;
-      text-align: center;
+      @include media($break-nav-mobile) {
+        text-align: center;
+      }
     }
   .article__head__date__container {
     line-height: $base*3/4;
-    text-align: center;
+    @include media($break-nav-mobile) {
+      text-align: center;
+    }
     // padding-top: $base*2/3;
     // @include media($break-nav-thin-atleast) {@include shift(1);}
   }
@@ -164,7 +168,7 @@
     }
 
   .article__head__title__container {
-    @include span-four(24, 18, 18, 18);
+    @include span-four(24, 20, 20, 20);
     @include media($break-nav-thin-atleast) {@include shift(3);}
   }
     .article__head__title {
@@ -173,8 +177,8 @@
     } 
 
   .article__head__subtitle__container {
-    @include span-four(24, 18, 18, 18);
-    @include media($break-nav-thin-atleast) {@include shift(4);}
+    @include span-four(24, 20, 20, 20);
+    @include media($break-nav-thin-atleast) {@include shift(3);}
   }
     .article__head__subtitle {
       @extend %style-article-subtitle; display: inline-block;
@@ -183,10 +187,14 @@
 
   .article__tags__container {
     display: inline-block;
-    @include media($break-nav-thin-atleast) {@include shift(4);}
-    @extend %body-align; @extend %serif; color: $light-gray; 
-    padding-top: $base; padding-bottom: $base; 
+    @include media($break-nav-thin-atleast) {@include shift(3);}
+    @extend %body-align; @extend %serif; color: $gray; 
+    // padding-top: $base; 
+    padding-bottom: $base; 
     @extend %style-antialiased;
+    @include media($break-nav-mobile) {
+      padding: 0;
+    }
   }
     .article__tags__list {  
       li {

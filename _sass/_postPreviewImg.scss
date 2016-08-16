@@ -22,7 +22,8 @@
   }
 
   .post__imgPreview--short .post__info {
-    margin-top: 2rem !important; margin-bottom: 2rem !important;
+    margin-top: $base !important; 
+    margin-bottom: $base !important;
     padding-top: 0; padding-bottom: 0;
 
     .post--info {

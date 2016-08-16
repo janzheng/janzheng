@@ -10,8 +10,8 @@ preview-css : post-preview-std
 <!-- youtube: # -->
 <!-- vimeo: # -->
 
-<!-- categories: tutorial, project, rant, tool, portfolio -->
-category : rant
+<!-- categories: tutorial, project, thought, tool, portfolio -->
+category : thought
 tags : [misc]
 
 published : true
@@ -28,7 +28,7 @@ I'll admit, I'm not the most prolific of writers. Most of my blogs have kind of.
 
 As an active practitioner in User Experience, design, electronics and game design, I've always wanted to sound off my ideas, tips, and opinions on things, maybe even help someone out along the way.
 
-The UX and web design community is vibrant and full of smart people, many of whom share knowledge on their own blogs. Despite not being a particularly prolific writer, I feel like we're obliged as professionals to voice our own opinions, share our techniques, and to give a little feedback back to the community.
+The UX and web design community is vibthought and full of smart people, many of whom share knowledge on their own blogs. Despite not being a particularly prolific writer, I feel like we're obliged as professionals to voice our own opinions, share our techniques, and to give a little feedback back to the community.
 
 This blog will mostly focus on User Experience, Interaction and Experiential Design and Game Design topics.
 

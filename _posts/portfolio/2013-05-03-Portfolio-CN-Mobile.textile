@@ -14,7 +14,7 @@ project-link-desc : Nespresso Boutiques
 <!-- youtube: # -->
 <!-- vimeo: # -->
 
-<!-- categories: idea, lab, rant, tool, work -->
+<!-- categories: idea, lab, thought, tool, work -->
 category : work
 tags : [portfolio, information architecture, interaction design]
 

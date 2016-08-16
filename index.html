@@ -26,8 +26,8 @@ external: #
 youtube: #
 vimeo: #
 
-// categories: project, rant, tool, portfolio 
-category : rant
+// categories: project, thought, tool, portfolio 
+category : thought
 tags : [design, another tag]
 
 published : true
@@ -56,19 +56,19 @@ featured : false
     <div class="page__header">
       <div class="postList__filter">
         <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="lab"><span class="icon icon--filter icon--lab"></span><span class="filter-btn--title">lab</span></div>
-        <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="rant"><span class="icon icon--filter icon--rant"></span><span class="filter-btn--title">rants</span></div>
+        <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="thought"><span class="icon icon--filter icon--thought"></span><span class="filter-btn--title">thoughts</span></div>
         <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="idea"><span class="icon icon--filter icon--idea"></span><span class="filter-btn--title">ideas</span></div>
         <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="tumblr"><span class="icon icon--filter icon--tumblr"></span><span class="filter-btn--title">tumblr</span></div>
         <div class="filter-btn filter-btn--large" class="btn-inline" data-filter="work"><span class="icon icon--filter icon--work"></span><span class="filter-btn--title">work</span></div>
+        <a href="#" class="filter-clear">clear filters</a>
       </div>
-    </span>
+    </div>
       
     <!-- .list is necessary for the list.js sorter -->
     <ul class="list">
 
-
-      <notextile class="tumblr">
-      </notextile>
+    <notextile class="tumblr">
+    </notextile>
 
     {% for post in site.posts %}
 
@@ -92,8 +92,8 @@ featured : false
                     <span class="icon icon--filter icon--idea"></span>
                   {% endif %}
 
-                  {% if post.category == 'rant' %}
-                    <span class="icon icon--filter icon--rant"></span>
+                  {% if post.category == 'thought' %}
+                    <span class="icon icon--filter icon--thought"></span>
                   {% endif %}
 
                   {% if post.category == 'work' %}

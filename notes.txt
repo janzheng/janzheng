@@ -30,7 +30,7 @@ Tumblr Conversion
 
 Site
 ---
-- type (rant, etc.)
+- type (thought, etc.)
 - type icon (add tumblr!) (tumblr type should appear a little differently)
 - post date
 - title

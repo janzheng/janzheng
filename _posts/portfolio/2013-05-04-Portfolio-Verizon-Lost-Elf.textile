@@ -13,7 +13,7 @@ preview-css : post-preview-std post__imgPreview--short
 <!-- youtube: # -->
 <!-- vimeo: # -->
 
-<!-- categories: idea, lab, rant, tool, work -->
+<!-- categories: idea, lab, thought, tool, work -->
 category : work
 tags : [Portfolio, Information Architecture, Interaction Design, Web Design, Content Strategy, Copywriting]
 

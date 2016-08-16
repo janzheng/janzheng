@@ -3,7 +3,7 @@ layout: layout-post
 title: I Broke My Grid
 summary: to let loose my content
 
-source: /app/posts/rants/break-the-grid
+source: /app/posts/thoughts/break-the-grid
 <!-- preview-img : /app/posts/nanowrito/preview.png -->
 preview-css : post-preview-std post-preview-break-the-grid
 <!-- postCSS : post-std -->
@@ -12,8 +12,8 @@ preview-css : post-preview-std post-preview-break-the-grid
 <!-- youtube: # -->
 <!-- vimeo: # -->
 
-<!-- categories: info, lab, rant, tool, portfolio -->
-category : rant
+<!-- categories: info, lab, thought, tool, portfolio -->
+category : thought
 tags : [design]
 
 published : true

@@ -18,7 +18,7 @@ header-styles: article__head__img--light article__head__img--lightBg
 <!-- youtube: # -->
 <!-- vimeo: # -->
 
-<!-- categories: idea, lab, rant, tool, work -->
+<!-- categories: idea, lab, thought, tool, work -->
 category : work
 tags : [portfolio, information architecture, interaction design]
 

@@ -123,12 +123,12 @@
 	}
 }
 
-.icon--rant {
-	background-image: icon('rant', $white);
+.icon--thought {
+	background-image: icon('thought', $white);
 	
 	&:before { // hover state
 		@extend .icon--hoverOff;
-		background-image: icon('rant', $white);
+		background-image: icon('thought', $white);
 	}
 }
 
@@ -151,11 +151,11 @@
 }
 
 .icon--tumblr {
-	background-image: icon('rant', $white);
+	background-image: icon('thought', $white);
 	
 	&:before { // hover state
 		@extend .icon--hoverOff;
-		background-image: icon('rant', $white);
+		background-image: icon('thought', $white);
 	}
 }
 

@@ -14,7 +14,7 @@ project-link-desc : Download the Voice Guide
 <!-- youtube: # -->
 <!-- vimeo: # -->
 
-<!-- categories: idea, lab, rant, tool, portfolio -->
+<!-- categories: idea, lab, thought, tool, portfolio -->
 category : idea
 tags : [design, ux]
 

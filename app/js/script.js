@@ -74,6 +74,12 @@ $(document).ready(function() {
     filterBy(hash);
     $(".filter-btn[data-filter='"+hash+"']").addClass('filter-btn--active');
   }
+  $(".filter-clear").bind('mouseup',function(e) {
+    window.location.hash = '';
+    filterReset();
+    $(".page__title").text(titleDefault);
+    $(".filter-btn").removeClass('filter-btn--active');
+  });
 
   $(".filter-btn").bind('mouseup',function(e) {
     if ($(this).hasClass('filter-btn--active')) {

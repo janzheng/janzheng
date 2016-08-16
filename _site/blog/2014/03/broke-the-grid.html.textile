@@ -178,7 +178,7 @@
         <div class="article__head__intro" >
 
           
-          <div class="article__head__category article__head__category__rant" >
+          <div class="article__head__category article__head__category__thought" >
 
             <!-- <div class="article__head__category__icon"> -->
 
@@ -187,18 +187,18 @@
               
 
               
-                <svg class="svg--rant" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <svg class="svg--thought" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <path d="M84 324.6c-13.7-49.3 7.2-122 67-161.4-24.4 32-29 68.8-27.8 89 13.8 1 78.8 6 78.4 63.3 0 65-97 82.7-117.5 9zm147.6-9c0-44.7-32.7-81.7-75.5-88.5 4-34.3 29-67 67-81.3l-16.8-36.5c-124 24.5-173.2 144-151 223.4 30.3 106 176.4 85.3 176.4-17zm83 9c-14-49.3 7-122 66.8-161.4-24.4 32-29 68.8-27.8 89 13.8 1 78.8 6 78.4 63.3 0 65-97 82.7-117.5 9zm147.4-9c0-44.7-32.7-81.7-75.5-88.5 3.8-34.3 29-67 67-81.3l-17-36.5c-124 24.5-173 144-151 223.4C316 438.6 462 418 462 315.6z"/>
 </svg>
 <!-- 
-<svg class="svg--rant" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="quote-7-icon" d="M84.068,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C201.584,380.521,104.679,398.248,84.068,324.563z M231.584,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498C82.055,133.672,32.959,253.211,55.178,332.645C85.472,438.556,231.584,417.889,231.584,315.521z M314.484,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C432,380.521,335.095,398.248,314.484,324.563z M462,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498c-124.127,24.498-173.223,144.037-151.004,223.471C315.888,438.556,462,417.889,462,315.521z"></path> </svg> -->
+<svg class="svg--thought" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <path id="quote-7-icon" d="M84.068,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C201.584,380.521,104.679,398.248,84.068,324.563z M231.584,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498C82.055,133.672,32.959,253.211,55.178,332.645C85.472,438.556,231.584,417.889,231.584,315.521z M314.484,324.563c-13.78-49.268,7.118-121.859,66.929-161.4c-24.437,32.14-29.024,68.81-27.774,89.164c13.75,1.021,78.75,5.771,78.361,63.194C432,380.521,335.095,398.248,314.484,324.563z M462,315.521c0-44.646-32.703-81.654-75.459-88.385c3.725-34.4,28.92-67.135,66.943-81.465l-16.887-36.498c-124.127,24.498-173.223,144.037-151.004,223.471C315.888,438.556,462,417.889,462,315.521z"></path> </svg> -->
               
 
               
             <!-- </div> -->
           </div>
           
-          <div class="article__category__label">rant</div>
+          <div class="article__category__label">thought</div>
           <div class="article__head__date__container" >
             <div class="article__head__date">
               March 18, 2014
@@ -302,7 +302,7 @@ There's a reason why everything last year looked so blocky: it's in the tools. R
 
 But its strength&mdash;the grid&mdash; is also its weakness. Let's take a look at this basic responsive "example from Brad Frost":http://codepen.io/bradfrost/full/cgHtv:
 
-<figure><a href="#">!/app/posts/rants/break-the-grid/codepen.png!</a><figcaption>look, blocks on blocks!</figcaption>
+<figure><a href="#">!/app/posts/thoughts/break-the-grid/codepen.png!</a><figcaption>look, blocks on blocks!</figcaption>
 </figure> The layout grid is extremely powerful, as it allows pieces of content to shift around in a way that fills the space on the page perfectly. However, if used carelessly, the final output might end up looking like the stacks of boxes, and end up a little stale.
 
 
@@ -326,7 +326,7 @@ Smashing Magazine has a "hugely inspirational article":http://www.smashingmagazi
 To push the boundaries of the grid would be to employ a much larger grid. Instead of the 12 column grid my last site used, I moved onto a 24 column grid. This offers more flexibility to place content in many different new ways that are closer to magazine layouts.
 
 
-<figure class="figure-wide"><a href="#">!/app/posts/rants/break-the-grid/24-grid.png!</a><figcaption>my slightly messier but more flexible 24-column grid. Here's an example of <a href="/app/posts/rants/break-the-grid/layout.html">how it will work</a>
+<figure class="figure-wide"><a href="#">!/app/posts/thoughts/break-the-grid/24-grid.png!</a><figcaption>my slightly messier but more flexible 24-column grid. Here's an example of <a href="/app/posts/thoughts/break-the-grid/layout.html">how it will work</a>
 </figcaption>
 </figure> We're already on the cusp on another evolution: many websites are already starting to develop their own character, all based on responsive design. Sites like "C|Net":http://cnet.com, "Time":http://time.com, and "MSNBC":http://msnbc.com have already taken radical approaches to their designs. We're on the cusp of another web design 'revolution' where many designers will take our current concepts and make their sites uniquely their own. Designers will bring in concepts from Swiss design and art to inspire their layouts.
 

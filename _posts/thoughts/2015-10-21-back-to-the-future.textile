@@ -8,8 +8,8 @@ preview-css : post-preview-std post__imgPreview--cover
 <!-- image-icon: /assets/# -->
 <!-- youtube: # -->
 <!-- vimeo: # -->
-source: /app/posts/rants/backtothefuture
-category : rant
+source: /app/posts/thoughts/backtothefuture
+category : thought
 tags : [blogging, thoughts]
 published : true
 comments : true
