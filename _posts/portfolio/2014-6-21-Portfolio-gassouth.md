@@ -1,7 +1,7 @@
 ---
 layout: layout-post
 title: Gas South Enrollment Redesign
-summary: Optimizing the natural gas enrollment flow
+summary: Optimized the natural gas signup and enrollment flow
 <!-- external: # -->
 preview-css : post-preview-std post__imgPreview--cover
 

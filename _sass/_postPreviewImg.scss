@@ -13,10 +13,10 @@
 
   &:hover {
     // background-size: auto 105%; background-position: 50%; 
-      $scale: 1.02;
-      -ms-transform: scale($scale, $scale); /* IE 9 */
-      -webkit-transform: scale($scale, $scale); /* Safari */
-      transform: scale($scale, $scale);
+    // $scale: 1.02;
+    // -ms-transform: scale($scale, $scale); /* IE 9 */
+    // -webkit-transform: scale($scale, $scale); /* Safari */
+    // transform: scale($scale, $scale);
 
   }
 }

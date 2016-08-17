@@ -32,10 +32,10 @@
     opacity: 0;
     // top: 0;
     font-size: $size-smallish;
-    color: $red;
+    // color: $red;
     @extend %ease;
     &:hover {
-      color: $orange;
+      // color: $orange;
     }
   }
 

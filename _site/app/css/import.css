@@ -395,7 +395,7 @@ kuler: Norse
   color: #f2f2f2;
 }
 
-.article a, .article a:active, .article a:link, .article a:visited, .article a:hover, .nav__item:after, .nav__item:hover:after, .nav__logo__link span, .nav__logo__link:hover span, .nav__logo__content, .nav__item, .nav__item:hover, .nav__label, .filter-btn *, .filter-btn *:hover, .filter-btn ~ .filter-clear, .filter-btn[data-filter="lab"].filter-btn--active ~ .filter-clear, .filter-btn[data-filter="thought"].filter-btn--active ~ .filter-clear, .filter-btn[data-filter="idea"].filter-btn--active ~ .filter-clear, .filter-btn[data-filter="work"].filter-btn--active ~ .filter-clear, .filter-btn[data-filter="tumblr"].filter-btn--active ~ .filter-clear, .filter-btn, .timeline__preview, .postList__container, .page__header a, .page__header a:active, .page__header a:hover, .page__header a:link, .page__header a:active:hover, .page__header a:link:hover, .post:hover .post__container .post__title, .post:hover .post__container .post__summary, .post__imgPreview, .article a.btn-inline, .article .btn-inline, .article a.btn-inline:hover, .article .btn-inline:hover {
+.article a, .article a:active, .article a:link, .article a:visited, .article a:hover, .nav__item:after, .nav__item:hover:after, .nav__logo__link span, .nav__logo__link:hover span, .nav__logo__content, .nav__item, .nav__item:hover, .nav__label, .filter-btn *, .filter-btn *:hover, .filter-btn ~ .filter-clear, .filter-btn[data-filter="lab"].filter-btn--active ~ .filter-clear, .filter-btn[data-filter="thought"].filter-btn--active ~ .filter-clear, .filter-btn[data-filter="idea"].filter-btn--active ~ .filter-clear, .filter-btn[data-filter="work"].filter-btn--active ~ .filter-clear, .filter-btn[data-filter="tumblr"].filter-btn--active ~ .filter-clear, .filter-btn, .timeline__preview, .postList__container, .page__header a, .page__header a:active, .page__header a:hover, .page__header a:link, .page__header a:active:hover, .page__header a:link:hover, .post, .post:hover, .post:hover .post__container .post__title, .post:hover .post__container .post__summary, .post__imgPreview, .article a.btn-inline, .article .btn-inline, .article a.btn-inline:hover, .article .btn-inline:hover {
   -webkit-transition: all 230ms ease;
   -moz-transition: all 230ms ease;
   -ms-transition: all 230ms ease;
@@ -1091,7 +1091,6 @@ a, a:active, a:hover, a:link {
   display: block;
   opacity: 0;
   font-size: 0.83rem;
-  color: #972020;
 }
 @media screen and (max-width: 479px) {
   .filter-btn ~ .filter-clear {
@@ -1107,9 +1106,6 @@ a, a:active, a:hover, a:link {
     bottom: 1.5rem;
     position: relative;
   }
-}
-.filter-btn ~ .filter-clear:hover {
-  color: #FF530D;
 }
 .filter-btn[data-filter="lab"] .icon, .filter-btn[data-filter="lab"] .icon--hoverOff, .filter-btn[data-filter="lab"] .icon--email:before, .filter-btn[data-filter="lab"] .icon--twitter:before, .filter-btn[data-filter="lab"] .icon--linkedin:before, .filter-btn[data-filter="lab"] .icon--resume:before, .filter-btn[data-filter="lab"] .icon--blog:before, .filter-btn[data-filter="lab"] .icon--about:before, .filter-btn[data-filter="lab"] .icon--tools:before, .filter-btn[data-filter="lab"] .icon--lab:before, .filter-btn[data-filter="lab"] .icon--thought:before, .filter-btn[data-filter="lab"] .icon--idea:before, .filter-btn[data-filter="lab"] .icon--work:before, .filter-btn[data-filter="lab"] .icon--tumblr:before {
   background-color: rgba(1, 167, 164, 0.2);
@@ -1504,6 +1500,13 @@ body, html {
     margin-right: 0;
   }
 }
+.post:hover {
+  -ms-transform: scale(1.02, 1.02);
+  /* IE 9 */
+  -webkit-transform: scale(1.02, 1.02);
+  /* Safari */
+  transform: scale(1.02, 1.02);
+}
 .post:hover .post__container {
   border-top: 1px dashed #0f0f0f;
 }
@@ -1516,6 +1519,7 @@ body, html {
 
 .post__container {
   border-top: 1px dashed #cccccc;
+  width: 100% !important;
 }
 @media screen and (max-width: 479px) {
   .post__container {
@@ -1543,13 +1547,6 @@ body, html {
   background-size: cover;
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.post__imgPreview:hover {
-  -ms-transform: scale(1.02, 1.02);
-  /* IE 9 */
-  -webkit-transform: scale(1.02, 1.02);
-  /* Safari */
-  transform: scale(1.02, 1.02);
 }
 
 .post__imgPreview--rightAlign {
@@ -2613,9 +2610,6 @@ body, html {
 }
 .article .post__title {
   color: #333333;
-}
-.article .post__container {
-  width: 100%;
 }
 .article .post__imgPreview {
   padding-top: 1rem;
