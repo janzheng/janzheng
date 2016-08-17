@@ -57,9 +57,13 @@ $(document).ready(function() {
   var blogPosts = new List('blogList', options);
 
   function filterBy(cat) {
-    blogPosts.filter(function(post) {
-      return post.values().sortCategory == cat ? true : false;
-    }); 
+    try {
+      blogPosts.filter(function(post) {
+        return post.values().sortCategory == cat ? true : false;
+      }); 
+    } catch(e) {
+      // do nothing
+    }
   }
 
   function filterReset() {

@@ -2,7 +2,9 @@
 
 
 .timeline {
-  width: 100%; margin-top: $size-largish; margin-bottom: $base*2;
+  width: 100%; 
+  // margin-top: $size-largish;
+  margin-bottom: $base*2;
   @include media($break-nav-thin-atleast) {@include shift(-3); @include span-columns(30);}
 }
 

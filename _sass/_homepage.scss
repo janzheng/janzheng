@@ -37,6 +37,18 @@
 
     .page__header {
       margin-bottom: $base*2;
+
+      a, a:active, a:hover, a:link {
+        text-decoration: none; 
+        color: $light-blue;
+        border-bottom: 1px solid $light-blue;
+        @extend %ease;
+        &:hover {
+          color: $dark-blue;
+          border-bottom-color: $dark-blue;
+          @extend %ease;
+        }
+      }
     }
       .page__intro {
         @extend %serif;
@@ -75,6 +87,7 @@
     } 
 
     .post {
+      overflow: hidden;
       // each post constitutes a row, of the following # columns, stretching across the entire area
       @include span-four(24, 24, 24, 24);
       list-style-type: none;
@@ -90,10 +103,15 @@
             background-color: $hover_color; 
           }
         }
-        &~.post .post__container {
+        &+.post .post__container {
           border-top: 1px dashed $deep-gray;
         }
       }
+
+      // HIDE ALL WORK
+      // &.work {
+      //   display: none;
+      // }
     }
     
 

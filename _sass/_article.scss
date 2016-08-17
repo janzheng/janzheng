@@ -236,12 +236,17 @@
       border: 1px solid $light-blue !important;
       color: $light-blue;
       display: inline-block;
+      margin-right: $base/2;
       @extend %ease;
       &:hover {
         background-color: $light-blue;
         color: $white;
         @extend %ease;
       }
+    }
+
+    .post__container {
+      margin: 0;
     }
   }
 
@@ -313,7 +318,7 @@
     // output headers
     h3 { 
       @extend %style-article-h3;
-      margin-top: $base; //h2 is a section separator
+      // margin-top: $base; //h2 is a section separator
       // @include media($break-nav-thin-atleast) {@include shift(-1);}
       &.no-margin {margin-top: 0}
     }
@@ -495,7 +500,7 @@
 
       @include media($break-nav-mobile) {@include span-columns(18);}
       // @include media($break-nav-thin-atleast) {@include shift(-2); @include span-columns(14);}
-      margin-left: -$base;
+      // margin-left: -$base;
 
       p {
         margin-top: $base; margin-bottom: $base;
@@ -535,6 +540,36 @@
     margin-top: $base*3;
   }
 // end article body
+
+
+
+// ABOUT ME page special
+
+.blockquote--aboutme {
+  margin-top: $base*2;
+}
+
+.article {
+  .post__date__container {
+    top: 0;
+  }
+  .post__date {
+    font-size: $base;
+  }
+  .post__title {
+    color: $dark-gray;
+  }
+  .post__container {
+    width: 100%;
+  }
+  .post__imgPreview {
+    padding-top: $base;
+    // padding-bottom: $base;
+  }
+  .post__info {
+    padding-bottom: $base;
+  }
+}
 
 
 

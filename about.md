@@ -17,7 +17,7 @@ source: /app/posts/about
   My name is Jan (pronounced "yawn") and I design and build functional, useful, and meaningful services and experiences. Lately I've been focusing on <em>online communities</em>, <em>responsive sites</em>, and <em>creative apps</em>.
 </p>
 
-<blockquote class="blockquote--wide blockquote--noQuotes">
+<blockquote class="blockquote--aboutme blockquote--wide blockquote--noQuotes">
   <p>I currently <strong>freelance in Atlanta</strong> and am willing to relocate, travel, and work remotely.
   </p>
   <p>If you'd like to work together, <a href="mailto:hello@janzheng.com">send me an email</a>. You could also <a href="https://twitter.com/janistanian">tweet</a> or <a href="http://www.linkedin.com/in/janzh">find me on linkedin</a>.
@@ -35,70 +35,57 @@ I have also worked on the client side with **Ubiquiti Networks**, **Microsoft**,
 
 
 
-<notextile>
-  <!-- .list is necessary for the list.js sorter -->
-  <!-- 
-  <ul class="list">
-  {% for post in site.posts %}
-  {% if post.published == true %} 
-  {% if post.category == 'work' %}
+<!-- .list is necessary for the list.js sorter -->
 
-    <li class="post {% if post.featured %} post--featured {% endif %}">
+<span id="work"></span>
 
-      <a href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %} ">
-        <div class="post__container {{ post.preview-css }} {% if post.preview-img == nil %} post__imgPreview--noImg {% else %} post__imgPreview" data-bg="{{ post.preview-img }} {% endif %}">
+## Portfolio 
 
-          <div class="post__info">
+<div class="container" >
+<div class="page" >
+<ul class="list">
+{% for post in site.posts %}
+{% if post.published == true %} 
+{% if post.category == 'work' %}
 
-            <div class="post__date__container">
-              <div class="post__date">{{ post.date | date: "%d %B %Y" }}</div>
-            </div>
+  <li class="post {% if post.featured %} post--featured {% endif %}">
 
-            <div class="post__title__container">
-              <div class="post__title">{{ post.title }}</div>
-            </div>
+    <a href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %} ">
+      <div class="post__container {{ post.preview-css }} {% if post.preview-img == nil %} post__imgPreview--noImg {% else %} post__imgPreview" data-bg="{{ post.preview-img }} {% endif %}">
 
-            {% if post.summary %}
-            <div class="post__summary__container">
-              <div class="post__summary">{{ post.summary }}</div>
-            </div>
-            {% endif %}
+        <div class="post__info">
 
-            {% if post.tags != null %}
-              {% assign tags_list = post.tags %} 
-                {% if tags_list.size > 0 %}
-                  <div class="post__tags__container">
-                    <ul class="post__tags">
-
-                      {% if tags_list.first[0] == null %}
-                        {% for tag in tags_list %} 
-                          <li>{{ tag }}</li>
-                        {% endfor %}
-                      {% else %}
-                        {% for tag in tags_list %} 
-                          <li>{{ tag[0] }}</li>
-                        {% endfor %}
-                      {% endif %}
-                    </ul>
-                  </div>
-                {% endif %}
-                {% assign tags_list = nil %}
-            {% endif %}
-
-            <div class="clear"></div>
+          <div class="post__date__container">
+            <div class="post__date">{{ post.date | date: "%Y" }}</div>
           </div>
+
+          <div class="post__title__container">
+            <div class="post__title">{{ post.title }}</div>
+          </div>
+
+          {% if post.summary %}
+          <div class="post__summary__container">
+            <div class="post__summary">{{ post.summary }}</div>
+          </div>
+          {% endif %}
+
+
+          <div class="clear"></div>
         </div>
-      </a>
-    </li>
-  {% endif %}
-  {% endif %}
-  {% endfor %}
+      </div>
+    </a>
+  </li>
+{% endif %}
+{% endif %}
+{% endfor %}
 
-  </ul> -->
-</notextile>
+</ul>
+</div>
+</div>
 
 
 
+## Background 
 
 <div class="timeline">
 
@@ -117,7 +104,7 @@ I have also worked on the client side with **Ubiquiti Networks**, **Microsoft**,
             <span class="timeline__location">Anywhere</span>
             <span class="timeline__date">2016</span>
           </div>
-          <div class="timeline__desc">Improving usability, understandability and visual design for mobile, web, and desktop applications with a user-centered slant. Also developing and designing custom web apps. </div>
+          <div class="timeline__desc">I improve usability, understandability and visual design for mobile, web, and desktop applications with a user-centered slant. I'm also developing and designing custom web apps. </div>
         </div>
       </div>
     </div>
@@ -142,13 +129,13 @@ I have also worked on the client side with **Ubiquiti Networks**, **Microsoft**,
               <span class="timeline__date">2014 &mdash; 2016</span>
             </div>
             <div class="timeline__desc">
-              I define requirements, build site maps and create wireframes, as well as design, prototype, and develop the front-end user interfaces.
+              I defined requirements, build site maps and create wireframes, as well as design, prototype, and develop the front-end user interfaces.
             </div>
           </div>
         </div>
 
         <div class="timeline__full expandablejs--full">
-          <p>At Ubiquiti Networks I am currently designing and developing new customer-facing support and community tools that will launch in the Spring of 2016.</p>
+          <p>At Ubiquiti Networks I designed and developed new customer-facing support and community tools that was supposed to launch in the Spring of 2016. The project was unfortunately cut a couple of weeks before we launched public beta.</p>
         </div>
       </div>
 
@@ -164,6 +151,14 @@ I have also worked on the client side with **Ubiquiti Networks**, **Microsoft**,
           <div class="timeline__desc">Product design, front-end design and development on a startup project jumpstarted by <a href="http://www.switchyards.com">Switchyards</a>.</div>
         </div>
       </div>
+    </div>
+
+  </div>
+
+  <div class="timeline__list">
+
+    <div class="sticky-item" >
+      <div class="timeline__year sticky-content">2012</div>
     </div>
 
     <div class="timeline__item expandablejs">
@@ -188,23 +183,16 @@ I have also worked on the client side with **Ubiquiti Networks**, **Microsoft**,
         <p>Clients include Nespresso, Assuthought, Manheim, The Home Depot, GE Energy, and Disney.</p>
       </div>
     </div>
-  </div>
-
-  <div class="timeline__list">
-
-    <div class="sticky-item" >
-      <div class="timeline__year sticky-content">2013</div>
-    </div>
 
     <div class="timeline__item expandablejs">
       <div class="timeline__preview expandablejs--preview ">
         {% include expandablejs--expander.html %} 
         <div class="timeline__headline">
-          <span class="timeline__client">Freelance Projects</span>
+          <span class="timeline__client">Freelance</span>
           <div>
-            <span class="timeline__title">Freelance</span>
+            <span class="timeline__title">Design &amp; Development</span>
             <span class="timeline__location">Atlanta, GA</span>
-            <span class="timeline__date">2013</span>
+            <span class="timeline__date">2012</span>
           </div>
           <div class="timeline__desc">Sometimes I take on smaller side projects. Here are a few:</div>
         </div>

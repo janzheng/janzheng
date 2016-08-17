@@ -1,7 +1,7 @@
 ---
 layout: layout-post
 title: Verizon Lost Elf Storybook
-summary: holiday storybook app for Verizon's 2011 Holiday Campaign  
+summary: Holiday storybook app for Verizon's 2011 Holiday Campaign  
 
 source: /app/posts/portfolio/vzw-lost-elf
 preview-css : post-preview-std post__imgPreview--short

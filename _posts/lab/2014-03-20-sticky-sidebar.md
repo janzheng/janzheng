@@ -415,7 +415,7 @@ In this case, one solution is to allow the viewport to keep scrolling continue s
 
 The one down-side to this implementation is the user won't always see current active menu item, since if the menu is very tall, the active link might either be above or below the viewport.
 
-I've seen a few implementations of this idea in the wild, but can't remember where. I'll update this post with examples when I find any. Or you could spare me the trouble and "send me some.":mailto:janeazy@gmail.com 
+I've seen a few implementations of this idea in the wild, but can't remember where. I'll update this post with examples when I find any. Or you could spare me the trouble and [send me some](mailto:janeazy@gmail.com).
 
 
 <h2 id="#left-nav--anchor-4">Implementation</h2>

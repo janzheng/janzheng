@@ -1,7 +1,7 @@
 ---
 layout: layout-post
 title: Cartoon Network Mobile
-summary: fun and quirky mobile site for browsing shows and watching videos 
+summary: Fun and quirky mobile site for browsing shows and watching videos 
 
 source: /app/posts/portfolio/cartoon-network-mobile
 <!-- preview-img : /app/posts/portfolio/cartoon-network-mobile/preview.png -->

@@ -1,7 +1,7 @@
 ---
 layout: layout-post
 title: Nespresso Boutiques
-summary: bringing the essence of the Nespresso Boutique to the web 
+summary: Bringing the essence of the Nespresso Boutique to the web 
 
 source: /app/posts/portfolio/nespresso-boutiques
 <!-- preview-img : /app/posts/portfolio/nespresso-boutiques/preview.png -->
