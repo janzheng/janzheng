@@ -3,9 +3,33 @@
     <title>Jan Zheng</title>
     <link href="http://janzheng.com/atom.xml" rel="self"/>
     <link href="http://janzheng.com/"/>
-    <updated>2016-08-16T23:00:49-04:00</updated>
+    <updated>2016-08-20T16:06:54-04:00</updated>
     <id>http://janzheng.com/</id>
     
+    
+    <entry>
+        <id>janzheng.com:/blog/2016/08/tumblr-bookmarks</id>
+        <title>Repurposing tumblr for better bookmarks</title>
+        <link href="http://janzheng.com/blog/2016/08/tumblr-bookmarks.html"/>
+        <updated>2016-08-17T00:00:00-04:00</updated>
+        <summary>Tumblr is a surprisingly great tool for storing bookmarks</summary>
+        <author>
+            <name>Jan Zheng</name>
+            <uri>http://janzheng.com/</uri>
+        </author>
+    </entry>
+    
+    <entry>
+        <id>janzheng.com:/blog/2016/08/Portfolio-Diamax</id>
+        <title>Diamax Korea</title>
+        <link href="http://janzheng.com/blog/2016/08/Portfolio-Diamax.html"/>
+        <updated>2016-08-16T00:00:00-04:00</updated>
+        <summary>A light-weight, meteor-based product catalogue and CMS</summary>
+        <author>
+            <name>Jan Zheng</name>
+            <uri>http://janzheng.com/</uri>
+        </author>
+    </entry>
     
     <entry>
         <id>janzheng.com:/blog/2016/08/tumblr_integration</id>
@@ -24,7 +48,7 @@
         <title>Double the Donation</title>
         <link href="http://janzheng.com/blog/2016/08/Portfolio-Dtd.html"/>
         <updated>2016-08-15T00:00:00-04:00</updated>
-        <summary>Doubled the number of signups (freelance)</summary>
+        <summary>Increasing customer signups</summary>
         <author>
             <name>Jan Zheng</name>
             <uri>http://janzheng.com/</uri>

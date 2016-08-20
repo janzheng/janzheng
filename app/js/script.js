@@ -137,7 +137,7 @@ $(document).ready(function() {
   // 
   // Opens links (in posts and articles) in a new tab
   // 
-  $('.article a[href]:not(.fluidbox):not(.sameTab)').click(function(e) {
+  $('.article a[href]:not(.fluidbox):not(.sameTab):not(.about-link)').click(function(e) {
     var url = $(this).attr('href');
 
     // only do this if not an anchor link
@@ -276,14 +276,14 @@ function refreshStickyElements() {
     loop: false,
     keyboardNavEnabled: true,
     controlsInside: true,
-    imageScaleMode: 'fit',
+    // imageScaleMode: 'fit',
     arrowsNavAutoHide: false,
     autoScaleSlider: true, 
     autoScaleSliderWidth: 960,     
     autoScaleSliderHeight: 500, 
     // controlNavigation: 'bullets',
     thumbsFitInViewport: true,
-    navigateByClick: false,
+    // navigateByClick: false,
     controlNavigation: 'thumbnails',
     startSlideId: 0,
     visibleNearby: true,

@@ -10,7 +10,7 @@ preview-css : post-preview-std post__imgPreview--cover
 <!-- vimeo: # -->
 source: /app/posts/portfolio/gas-south
 category : work
-tags : [work, ux, prototype]
+tags : [information architecture, mobile, interaction design, business analytics]
 published : true
 comments : true
 portfolio : no
@@ -21,6 +21,39 @@ portfolio : no
   <img src="{{page.source}}/header.png">
 <figcaption>Homepage prototype</figcaption>
 </figure>
+
+
+
+<div class="callout">
+  <div class="callout--row">
+     <span class="title">Client</span><span class="content">Gas South</span>
+  </div>
+
+  <div class="callout--row">
+     <span class="title">Goal</span><span class="content">To create a fun mobile-centric website</span>
+  </div>
+
+  <div class="callout--row">
+     <span class="title">Role</span><span class="content">Information architecture, interaction design, business analytics</span>
+  </div>
+
+  <div class="callout--row">
+     <span class="title">Agency</span><span class="content">Nurun</span>
+  </div>
+
+  <div class="callout--row">
+     <span class="title">Links</span>
+     <span class="content">
+      <div><a href="http://www.gas-south.com/">Gas South</a></div>
+      <div><a href="https://enroll.gas-south.com/flow1/WebEnrollment_UI/frmFlow1Step1.aspx">Gas South Enrollment</a></div>
+      <div><a href="https://m.gas-south.com/signup/signup.html">Gas South Mobile Enrollment</a></div>
+    </span>
+  </div>
+
+</div>
+
+
+
 
 ## Introduction
 
@@ -110,14 +143,17 @@ I had also suggested a [mobile version for our client]({{page.source}}/mobile-de
 Funny enough, our client ended up using most of our code in their final signup form (including my mobile signup code).
 
 
-### Artifacts
+### Links
 
-* [Homepage Carousel Prototype]({{page.source}}/carousel-demo/carousel.html)
+#### Live Links
 * [Gas South live site](http://www.gas-south.com/)
-* [Desktop Enrollment Prototype]({{page.source}}/prototype-demo/Flow_6/flow6_business_1.html)
 * [Gas South live enrollment](https://enroll.gas-south.com/flow1/WebEnrollment_UI/frmFlow1Step1.aspx)
-* [Mobile Enrollment Prototype]({{page.source}}/mobile-demo/signup.html)
 * [Gas South live mobile enrollment](https://m.gas-south.com/signup/signup.html)
+
+#### Prototypes
+* [Homepage Carousel Prototype]({{page.source}}/carousel-demo/carousel.html)
+* [Desktop Enrollment Prototype]({{page.source}}/prototype-demo/Flow_6/flow6_business_1.html)
+* [Mobile Enrollment Prototype]({{page.source}}/mobile-demo/signup.html)
 
 
 

@@ -16,16 +16,17 @@ source: /app/posts/about
 <p class="dropcap margin_top">
   My name is Jan (pronounced "yawn") and I design and build functional, useful, and meaningful services and experiences. Lately I've been focusing on <em>online communities</em>, <em>responsive sites</em>, and <em>creative apps</em>.
 </p>
+<!-- 
+<blockquote class="blockquote--aboutme blockquote--wide blockquote--noQuotes"> -->
+I am currently *freelancing* and *floating in and around Atlanta* looking for collaborators to work on *civic* or *hard-to-tackle startup projects*.
 
-<blockquote class="blockquote--aboutme blockquote--wide blockquote--noQuotes">
-  <p>I currently <strong>freelance in Atlanta</strong> and am willing to relocate, travel, and work remotely.
-  </p>
-  <p>If you'd like to work together, <a href="mailto:hello@janzheng.com">send me an email</a>. You could also <a href="https://twitter.com/janistanian">tweet</a> or <a href="http://www.linkedin.com/in/janzh">find me on linkedin</a>.
-  </p>
-  <a href="/resume.pdf" class="link-resume">
-      Here's my résumé
-  </a>
-</blockquote>
+I am also willing to relocate, travel, and work remotely.
+If you'd like to work together, <a href="mailto:hello@janzheng.com">send me an email</a>. You could also <a href="https://twitter.com/janistanian">tweet</a> or <a href="http://www.linkedin.com/in/janzh">find me on linkedin</a>.
+
+<a href="/resume.pdf" class="link-resume">
+    Here's my résumé.
+</a>
+<!-- </blockquote> -->
 
 ## Work & Experience 
 
@@ -35,22 +36,24 @@ I have also worked on the client side with **Ubiquiti Networks**, **Microsoft**,
 
 
 
-<!-- .list is necessary for the list.js sorter -->
+<!-- .list class is necessary for the list.js sorter -->
 
 <span id="work"></span>
 
 ## Portfolio 
 
+Here's a small sample of projects I've worked on.
+
 <div class="container" >
 <div class="page" >
-<ul class="list">
+<ul class="list about-list">
 {% for post in site.posts %}
 {% if post.published == true %} 
 {% if post.category == 'work' %}
 
   <li class="post {% if post.featured %} post--featured {% endif %}">
 
-    <a href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %} ">
+    <a class="about-link" href="{% if post.external %} {{ post.external }} {% else %} {{ post.url }} {% endif %} ">
       <div class="post__container {{ post.preview-css }} {% if post.preview-img == nil %} post__imgPreview--noImg {% else %} post__imgPreview" data-bg="{{ post.preview-img }} {% endif %}">
 
         <div class="post__info">
@@ -333,5 +336,8 @@ Icons are sourced from [IconMonstr](http://iconmonstr.com/) and <a href="http://
 
 Cheers,
 <br/> Jan
+
+
+
 
 

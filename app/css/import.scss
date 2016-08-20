@@ -138,3 +138,8 @@ body, html {
 @import 'other';                    // for experiments / playing around
 
 
+// royalslider overrides
+.rsFullscreenIcn {
+  background-color: $gray !important;
+}
+

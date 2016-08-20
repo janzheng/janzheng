@@ -58,7 +58,7 @@
           font-size: $size-large;
           line-height: $base*2.5;
           display: inline-block;
-          padding-bottom: $base;
+          padding-bottom: $base*2.45;
           // @include media($break-nav-mobile) {line-height: $base*2.5; padding-top: 12px; display: block;}
           // @include media($break-nav-thin) {line-height: $base*2.5; padding-top: 12px; display: block;}
         }
@@ -67,7 +67,7 @@
         @include media($break-nav-thin-atleast) {
           @include shift(1); padding-left: $base*2; 
           // margin-top: $base*0.25; 
-          margin-bottom: $base;
+          margin-bottom: $base*3;
         }
       }
       .page__title {
@@ -86,6 +86,8 @@
       @include media($break-nav-thin-atleast) {@include shift(1); padding-left: $base*2; margin-top: $base; margin-bottom: $base*2;}
     } 
 
+    // these actually also affect the iterator items on about.md
+    // too lazy to break these out
     .post {
       overflow: hidden;
       // each post constitutes a row, of the following # columns, stretching across the entire area
@@ -98,9 +100,9 @@
       &:hover {
         @extend %ease;
         $scale: 1.02;
-        -ms-transform: scale($scale, $scale); /* IE 9 */
-        -webkit-transform: scale($scale, $scale); /* Safari */
-        transform: scale($scale, $scale);
+        // -ms-transform: scale($scale, $scale); /* IE 9 */
+        // -webkit-transform: scale($scale, $scale); /* Safari */
+        // transform: scale($scale, $scale);
 
         .post__container {
           border-top: 1px dashed $deep-gray;
@@ -218,6 +220,7 @@
 
             .post__tags__container {
               .post__tags {
+                margin-left: 0;
                 li{
                   @extend %serif; font-size: $size-preview-tag; 
                   display: inline; color: $light-gray;

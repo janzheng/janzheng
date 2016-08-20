@@ -76,7 +76,7 @@ $size-article-title: $size-larger;
   $height-article-title: $base*3.445;
   $height-article-title-mobile: golden-ratio($size-article-title-mobile, 1);
 
-$size-article-subtitle: $base*1;
+$size-article-subtitle: $size-slightly-large;
   $size-article-subtitle-mobile: $base*1;
   $height-article-subtitle: golden-ratio($size-article-subtitle, 1);
 
@@ -96,6 +96,13 @@ $s1: golden-ratio(14px,  1);
 .margin_top {
   margin-top: $base;
 }
+
+.margin_bottom {
+  margin-bottom: $base;
+}
+  .margin_bottom_x2 {
+    margin-bottom: $base*2 !important;
+  }
 
 
 
@@ -250,8 +257,9 @@ a, a:active, a:hover, a:link {
 
   %style-figcaption {
     color: $gray;
-    @extend %serif;
-    font-style: italic;   
+    @extend %sans-serif;
+    font-weight: 300;
+    // font-style: italic;   
     font-size: $size-small;
     padding-top: $base;
   }
@@ -390,6 +398,9 @@ a, a:active, a:hover, a:link {
 }
 .rsFullscreen {
   background: rgba(0,0,0,0.8);
+}
+.rsGCaption {
+  @extend %ease;
 }
 
 

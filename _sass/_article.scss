@@ -325,7 +325,7 @@
 
     h4 {
       @extend %style-article-subtitle;
-      margin-bottom: $base*2;
+      margin-bottom: $base;
     }
 
     h4.aboutQuote {
@@ -390,6 +390,9 @@
       }
 
       .callout--row {
+        @include media($break-nav-wide-atleast) {
+          width: 80%;
+        }
         @include media($break-nav-mobile) {
           font-size: $base;
         }
@@ -418,15 +421,25 @@
 
     // figures are used for images and code
     figure:not(.highlight) {
-      padding-bottom: $base*2; 
+      // padding-bottom: $base*2; 
       // padding-right: $base*2;
       @include media($break-nav-wide) {float: left; }
       @include media($break-nav-mobile) {width: 100%;}
       @include media($break-nav-thin-atleast) {@include shift(-2); margin-right: $base*2;}
       @include media($break-nav-wide-atleast) {@include shift(-4); margin-right: $base*2;}
 
+      &.figure-frame {
+        border: 1px solid $silver;
+        padding-top: $base;
+        .rsCaption {
+          padding: $base;
+          background: $silver;
+          color: $black;
+        }
+      }
       &.figure-wide {
         // margin: 0 auto;
+        margin-bottom: $base;
         overflow: hidden;
         .royalSlider {
           overflow: visible;
@@ -440,6 +453,33 @@
         img {display: block; margin: 0 auto;}
         figcaption { text-align: center; }
       } 
+      &.figure-narrow {
+        overflow: hidden;
+        max-width: 300px;
+
+        .royalSlider {
+          // height: 1200px !important;
+        }
+      }
+      .royal-500 {
+        height: 800px !important;
+      }
+      .royal-800 {
+        height: 800px !important;
+      }
+      .royal-1600 {
+        height: 1600px !important;
+      }
+      .royal-1800 {
+        height: 1800px !important;
+      }
+      .royal-2100 {
+        height: 2100px !important;
+      }
+      .royal-2400 {
+        height: 2400px !important;
+      }
+
 
       &.figure-rounded {
         img {border-radius: $base * 4}
@@ -569,6 +609,12 @@
   .post__info {
     padding-bottom: $base;
   }
+}
+
+// nested lists
+
+li ul {
+  margin-left: $base;
 }
 
 
