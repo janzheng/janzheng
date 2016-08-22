@@ -63,7 +63,7 @@ Diamax approached me to create a tool for their sister company Diamax Korea. The
 
 ## Choosing a Technology
 
-To tackle this seemingly gargantuan project (I'm still not sure how I agreed to do this single-handedly, with only a deadline of a month and a half), I decided to use the most rapid prototyping technology I knew – [Meteor](http://meteor.com). Meteor combines front-end with its templating tool Blaze, and a very easy to manage backend built on Node and MongoDB.
+To tackle this seemingly gargantuan project (I'm still not sure how I agreed to do this single-handedly, with only a deadline of a month and a half), I decided to use the most rapid prototyping technology I knew – [Meteor](http://meteor.com). Meteor combines front-end with its templating tool Blaze, and a very easy to manage back-end built on Node and MongoDB.
 
 <figure class="figure-wide margin_bottom">
   <img src="{{page.source}}/meteorreact.png">
@@ -81,7 +81,7 @@ I also yearned to learn Facebook's new front-end tool React, and had discovered 
 
 ## Design
 
-The business and design requirements were straightforward. I already had a [parent site](http://diamaxinc.com) and physical product catalogue materias, though I did reorganize and categorize product information to be more flexible yet indexable and future proof.
+The business and design requirements were straightforward. I already had a [parent site](http://diamaxinc.com) and physical product catalogue materials, though I did reorganize and categorize product information to be more flexible yet indexable and future proof.
 
 <figure class="figure-wide figure-frame margin_bottom_x2 ">
   <div class="royalSlider rsMinW show-adjacent slider royal-500">
@@ -120,7 +120,7 @@ Many small design and engineering tweaks have been added to increase the usabili
 
 ## Developing a Style 
 
-I developed a color palette and typographic systen for Diamax Korea inspired from the parent site and Diamax's online videos. The idea was to create a reserved yet modern feel that felt strong and trustworthy. 
+I developed a color palette and typographic system for Diamax Korea inspired from the parent site and Diamax's online videos. The idea was to create a reserved yet modern feel that felt strong and trustworthy. 
 
 <figure class="figure-wide margin_bottom">
   <img src="{{page.source}}/guide_small.jpg">

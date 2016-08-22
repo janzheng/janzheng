@@ -20,7 +20,7 @@ portfolio : true
 <figure class="figure-wide">
   <div class="royalSlider rsMinW show-adjacent slider">
     <a class="rsImg" data-rsBigImg="{{page.source}}/home_full.jpg" href="{{page.source}}/header.jpg">
-      Revamped Homepage attempts to direect users down a conversion funnel using copy, calls to action, and the navigation menu.
+      Revamped Homepage attempts to direct users down a conversion funnel using copy, calls to action, and the navigation menu.
       <img src="{{page.source}}/header_sm.jpg" class="rsTmb" />
     </a>
     <a class="rsImg" href="{{page.source}}/wire_home.jpg">
@@ -80,7 +80,7 @@ Double the Donation approached me to improve their conversion rate through a sit
 
 ## Weaving a Story
 
-When I approached the project, DtD had a treasure trove of information, from how-tos to client testimonials, all buried deep wihtin the depts of menus and FAQs. Understanding the value of DtD and how it worked required a fair amount of digging and connecting of the dots.
+When I approached the project, DtD had a treasure trove of information, from how-tos to client testimonials, all buried deep within the depths of menus and FAQs. Understanding the value of DtD and how it worked required a fair amount of digging and connecting of the dots.
 
 I essentially dug through the site and created a narrative, and created content aimed specifically at explaining DtD's value proposition for nonprofit organizations. I would create concise, bite-sized content with a clear intent (What does DtD do? How do they do it? How much does it cost?), and trustworthiness (backing up claims with research and client testimonials). While showing value and ease of implementation, it would also _dissuade other audiences_ like individual donors, who might think they could donate through DtD which isn't the case (this wasn't common, but it certainly happened). 
 
@@ -96,7 +96,7 @@ It would a provide hook for users to want to know the product further.
 ## Constructing the Content
 
 
-We didn't want to just convert anyone. We wanted quality conversions, and not people who "accidentally" signed up. To create a barrier, we asked for users' credit card information at sign up. At the same time, we wanted qualified, curious users to sign up to try our service risk free, so we added a lot of language to convince potential customers to try our service.
+We didn't want to just convert anyone. We wanted quality conversions, and not people who "accidentally" signed up. To ensure only our target users would sign up, we asked for users' credit card information at sign up as a gatekeeper. At the same time, we added languate to build up trust for qualified, curious postential customers and to encourage them to sign up without fear of our service being sketchy.
 
 In the end, I wanted something informative and effortless. This is the reason for the long pages. _The fewest number of clicks for the audience to decide if this product was suited for them_.
 

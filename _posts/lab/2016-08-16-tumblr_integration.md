@@ -1,7 +1,7 @@
 ---
 layout: layout-post
-title: How to Embed Tumblr Without a Server (updated)
-summary: How to easily add Tumblr to a static site, without PHP, a server, or any server-side code
+title: How to Embed tumblr Without a Server (updated)
+summary: How to easily add tumblr to a static site, without PHP, a server, or any server-side code
 
 source: /app/posts/idea/tumblr-integration
 <!-- preview-img : /app/posts/tinder-dating-app/preview2.png -->

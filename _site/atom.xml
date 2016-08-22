@@ -3,7 +3,7 @@
     <title>Jan Zheng</title>
     <link href="http://janzheng.com/atom.xml" rel="self"/>
     <link href="http://janzheng.com/"/>
-    <updated>2016-08-20T16:06:54-04:00</updated>
+    <updated>2016-08-22T11:22:08-04:00</updated>
     <id>http://janzheng.com/</id>
     
     
@@ -33,10 +33,10 @@
     
     <entry>
         <id>janzheng.com:/blog/2016/08/tumblr_integration</id>
-        <title>How to Embed Tumblr Without a Server (updated)</title>
+        <title>How to Embed tumblr Without a Server (updated)</title>
         <link href="http://janzheng.com/blog/2016/08/tumblr_integration.html"/>
         <updated>2016-08-16T00:00:00-04:00</updated>
-        <summary>How to easily add Tumblr to a static site, without PHP, a server, or any server-side code</summary>
+        <summary>How to easily add tumblr to a static site, without PHP, a server, or any server-side code</summary>
         <author>
             <name>Jan Zheng</name>
             <uri>http://janzheng.com/</uri>
