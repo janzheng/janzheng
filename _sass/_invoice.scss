@@ -78,6 +78,12 @@
   .invoice--client {
     @include span-four(24, 18, 18, 18);
 
+
+    th, td {
+      padding-top: $base/2;
+      padding-bottom: $base/2;
+    }
+    
     @media print {
       margin-top: $base*2;
     }
@@ -121,7 +127,8 @@
     table {
       width: 100%;
       td {
-        padding-right: $base;
+        padding: $base;
+        padding-left: 0;
       }
     }
     .item--desc {
@@ -182,5 +189,14 @@
       // tbody {
       //   width: 100%;
       // }
+
+      th, td {
+        padding-top: $base/2;
+        padding-bottom: $base/2;
+      }
+      td {
+        text-align: right;
+        padding-right: $base;
+      }
     }
   }

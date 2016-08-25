@@ -3273,6 +3273,10 @@ code {
     margin-right: 0;
   }
 }
+.invoice--client th, .invoice--client td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 @media print {
   .invoice--client {
     margin-top: 2rem;
@@ -3446,7 +3450,8 @@ code {
   width: 100%;
 }
 .invoice--items table td {
-  padding-right: 1rem;
+  padding: 1rem;
+  padding-left: 0;
 }
 .invoice--items .item--desc {
   color: #999;
@@ -3586,6 +3591,14 @@ td.invoice-date {
 }
 .invoice--payment table th {
   width: 50%;
+}
+.invoice--payment table th, .invoice--payment table td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.invoice--payment table td {
+  text-align: right;
+  padding-right: 1rem;
 }
 
 #layout-test .row .content {

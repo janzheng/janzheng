@@ -1,0 +1,289 @@
+
+<!-- no left-menu, used for standalone pages like Invoices -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Invoice - Nurun-1</title>
+  <meta name="description" content="Jan Zheng designs and prototypes experiences.">
+  <meta name="author" content="Jan Zheng">
+  <meta name="keywords" content="user experience, ux, interaction design, digital, advertising, ui design, code, prototyping, resume ,portfolio">
+  
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1" />
+
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600, 700' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'> -->
+
+<!-- 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   -->
+  <script src="/app/js/jquery.min.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+
+  <!-- import gets all the styles from main.scss in the _scss folder -->
+  <link rel="stylesheet" href="/app/css/import.css">
+<!-- 
+  <link rel="stylesheet" href="/assets/stylesheets/compiled/flexslider.css">
+  <link rel="stylesheet" href="/assets/stylesheets/compiled/slimbox2.css">
+   -->
+</head>
+
+<body id="skrollr-body">  
+  <div class="color-palette color-top" id="top">
+    <div id="c1"></div><div id="c2"></div><div id="c3"></div><div id="c4"></div><div id="c5"></div>
+    <div id="a1"></div><div id="a2"></div><div id="a3"></div><div id="a4"></div><div id="a5"></div>
+  </div>
+
+
+
+
+
+  <!-- This thing appears fixed on mobile view to let users scroll up to the menu. This is so fixed menu takes less space -->
+  <a href="#top">
+    <div class="nav-mobile-container">
+      <div class="nav-mobile" data-0="display: none" data-100="display: block">
+        <div class="svg-container icon-uptop ">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"> <polygon id="arrow-25-icon" points="142.332,104.886 197.48,50 402.5,256 197.48,462 142.332,407.113 292.727,256 "></polygon> </svg>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <div class="clear"></div>
+
+
+  <!-- don't need shell bc it adds padding for menu -->
+  <!-- <div class="container--shell" id="body--content"> -->
+    
+  <div class="main__container">
+
+    <!-- Main section for content -->
+    <!-- <div class="main"> -->
+    <div class="main__body">
+      <!-- 
+
+Invoice File.
+
+Requires:
+
+Invoice Header bar:
+  [    INVOICE    ] 
+
+From:
+  Jan Zheng
+
+Address:
+  950 W Peachtree St NW # 1904
+  Atlanta, GA, 30309
+  (443) 280-4381
+
+Client (larger, ex):
+  Nurun
+  271 17th Street NW, Suit
+  Due Date:e 1500
+  Atlanta, GA, 30363
+
+Invoice (usualy to right of client)
+  Invoice Number:
+  Nurun-1
+
+  Date:
+  August 26, 2014
+
+  September 26, 2014
+
+Invoice Lines:
+
+  Description (each on a line):
+    1 hour of work to fix side bar for Gas South Flow 5 prototype
+
+  Quantity
+    1
+
+  Rate
+    $50.00
+
+  Amount
+    $50.00
+
+Subtotal:
+  $50
+
+Amount Paid: 
+  $0.00
+
+Balance:
+  $0.00
+
+
+Additional Notes
+(optional)
+-->
+
+
+
+
+<!-- <div class="container"> -->
+  <div class="content--invoice">
+
+    <div class="row">
+      <div class="invoice--header">
+        Invoice 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="invoice--from">
+        <div class="label invoice--from--label">from</div>
+        <div class="invoice--from--name">
+          <span class="j">jan </span><span class="z">zheng</span>
+        </div>
+        <div class="address invoice--from--address">
+          <div>950 W Peachtree St NW # 1904</div>
+          <div>Atlanta, GA, 30309</div>
+        </div>
+        <div class="half-row invoice--from--phone">
+          <a href="tel:4432804381">(443) 280-4381</a>
+        </div>
+        <div class="half-row invoice--from--site">
+          <a href="http://janzheng.com">janzheng.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="invoice--client">
+
+        <div class="invoice--client--information">
+          <div class="label invoice--to--label">to</div>
+          <div class="invoice--client--name">
+            Nurun
+          </div>
+          <div class="address invoice--client--address"> 
+            <div>271 17th Street NW, Suite 1500</div>
+            <div>Atlanta, GA, 30363</div>
+          </div>
+        </div>
+
+        <div class="invoice--client--invoice">
+          <div class="label invoice--to--label">invoice</div>
+          <table>
+            <tbody>
+              <tr>
+                <th class="invoice-num"><span>Invoice #:</span></th>
+                <td><span>Nurun-1</span></td>
+              </tr>
+              <tr>
+                <th><span>Invoice Date:</span></th>
+                <td class="invoice-date"><span>August 26, 2014</span></td>
+              </tr>
+              <tr>
+                <th><span>Due Date:</span></th>
+                <td class="invoice-date"><span>September 26, 2014</span></td>
+              </tr>
+              <tr>
+                <th class="invoice-amount"><span>Amount Due:</span></th>
+                <td><span id="prefix">$</span><span>50.00</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="invoice--items">
+
+        <div class="label invoice--items--label">itemization</div>
+        <table>
+          <thead>
+            <tr>
+              <th><span>Item</span></th>
+              <th><span>Description</span></th>
+              <th><span>Rate</span></th>
+              <th><span>Quantity</span></th>
+              <th><span>Price</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td><span>Gas South Flow 5 sidebar fix</span></td>
+              <td class="item--desc"><span>added code and javascript to fix Flow 5 sidebar issue on prototype</span></td>
+              <td><span>$</span><span>50.00</span></td>
+              <td><span>1</td>
+              <td><span>$</span><span>50.00</span></td>
+            </tr>
+            
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="invoice--payment">
+        <div class="invoice--payment--table-container">
+          <div class="label invoice--payment--label">total</div>
+          <table>
+            <tbody>
+              <tr>
+                <th><span>Total</span></th>
+                <td><span data-prefix="">$</span><span>50.00</span></td>
+              </tr>
+              <tr>
+                <th><span>Amount Paid</span></th>
+                <td><span data-prefix="">$</span><span>0.00</span></td>
+              </tr>
+              <tr>
+                <th><span>Balance Due</span></th>
+                <td><span data-prefix="">$</span><span>50.00</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<!-- </div> -->
+<!-- end outer-container -->
+
+
+
+
+
+    </div>
+
+    <div class="main__footer">
+        &copy; 2016 - Built on <a href="https://github.com/janzheng/janzheng.github.com">Github</a> &amp; <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+    </div> 
+    <!-- </div> -->
+
+  </div>
+
+
+
+  <script src="/app/js/script.js"></script>
+
+  <!-- new google analytics beta -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39843414-1', 'janzheng.com');
+    ga('send', 'pageview');
+
+  </script>
+
+</body>
+</html>
