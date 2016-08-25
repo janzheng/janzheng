@@ -63,6 +63,13 @@
           // @include media($break-nav-thin) {line-height: $base*2.5; padding-top: 12px; display: block;}
         }
 
+        p {
+          @extend .margin_bottom;
+        }
+        em {
+          color: $orange;
+        }
+
         @include media($break-nav-mobile) {padding: 4px $base*3; margin-top: $base;}
         @include media($break-nav-thin-atleast) {
           @include shift(1); padding-left: $base*2; 

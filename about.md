@@ -326,7 +326,9 @@ On my off days, I enjoy swing dancing, circusing, rock climbing, playing indie g
 
 ## About This Site
 
-For the second round of redesign, I wanted to reduce the number of artifacts on the page, like shapes and outlines, and take a more typographic, minimalist approach. Any shapes and lines are only used to accentuate the information I'm presenting, with enough white space to prevent clutter.
+For the second round of redesign, I wanted to reduce the number of artifacts on the page, like shapes and outlines, and take a more typographic, minimalist approach. Any shapes and lines are only used to accentuate the information I'm presenting, with enough white space to prevent clutter. 
+
+The goal is to reflect my design ideology: reduce shiny, fluff elements that distract from the main design goal. In my case, it's presenting my work. If you think my portfolio doesn't look fancy, pretty, or "cool" enough, then we are probably not a good fit to begin with.
 
 This site has gone through many variations, and every iteration has seen improvement. The site is built on the static site generator [Jekyll](https://github.com/mojombo/jekyll) and is hosted completely for free on [Github Pages](https://github.com/janzheng/janzheng.github.com).
 

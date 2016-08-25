@@ -455,7 +455,7 @@ kuler: Norse
   margin-top: 1rem;
 }
 
-.margin_bottom {
+.margin_bottom, .page__intro p {
   margin-bottom: 1rem;
 }
 
@@ -872,7 +872,7 @@ a, a:active, a:hover, a:link {
   display: block;
   padding-bottom: 6px;
   width: 0;
-  background-color: rgba(51, 51, 51, 0.12);
+  background-color: rgba(68, 185, 235, 0.4);
   opacity: 0.4;
   position: absolute;
   bottom: 0;
@@ -884,7 +884,7 @@ a, a:active, a:hover, a:link {
   display: block;
   padding-bottom: 6px;
   width: 100%;
-  background-color: rgba(51, 51, 51, 0.12);
+  background-color: rgba(68, 185, 235, 0.4);
   opacity: 0.4;
   position: absolute;
   bottom: 0;
@@ -1419,6 +1419,9 @@ body, html {
   display: inline-block;
   padding-bottom: 2.45rem;
 }
+.page__intro em {
+  color: #FF530D;
+}
 @media screen and (max-width: 479px) {
   .page__intro {
     padding: 4px 3rem;
@@ -1512,7 +1515,7 @@ body, html {
   border-top: 1px dashed #0f0f0f;
 }
 .post:hover .post__container .post__title, .post:hover .post__container .post__summary {
-  background-color: rgba(51, 51, 51, 0.12);
+  background-color: rgba(68, 185, 235, 0.4);
 }
 .post:hover + .post .post__container {
   border-top: 1px dashed #0f0f0f;
