@@ -101,10 +101,10 @@
 
         
         
-        <a href="/toolbox.html" >
-          <div class="nav__item nav__tools " >
+        <a href="/bookmarks.html" >
+          <div class="nav__item nav__bookmarks " >
             <!-- <span class="icon icon--tools"></span> -->
-            <div class="nav__label">tools</div>
+            <div class="nav__label">bookmarks</div>
           </div>
         </a>
         
@@ -186,10 +186,9 @@
 <p>I am also willing to relocate, travel, and work remotely.
 If you’d like to work together, <a href="mailto:hello@janzheng.com">send me an email</a>. You could also <a href="https://twitter.com/janistanian">tweet</a> or <a href="http://www.linkedin.com/in/janzh">find me on linkedin</a>.</p>
 
-<p><a href="/resume.pdf" class="link-resume">
-    Here’s my résumé.
-</a>
-<!-- </blockquote> --></p>
+<p>Take a look at <a href="/resume.pdf">my résumé</a>.</p>
+
+<!-- </blockquote> -->
 
 <h2 id="work--experience">Work &amp; Experience</h2>
 
@@ -270,7 +269,7 @@ If you’d like to work together, <a href="mailto:hello@janzheng.com">send me an
 
           
           <div class="post__summary__container">
-            <div class="post__summary">Increasing customer signups</div>
+            <div class="post__summary">Doubling customer signups with better content</div>
           </div>
           
 
@@ -757,13 +756,6 @@ If you’d like to work together, <a href="mailto:hello@janzheng.com">send me an
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&lang=html&lang=js&skin=desert"></script>
   -->
 
-
-  <!-- <script src="/assets/js/plugins.js"></script> -->
-  <!-- 
-  <script src="/app/js/jquery.flexslider-min.js"></script>
-  <script src="/app/js/slimbox2.js"></script>
- -->
-
   <script src="/app/js/waypoints.min.js"></script>
   <script src="/app/js/skrollr.min.js"></script>
 
@@ -775,57 +767,6 @@ If you’d like to work together, <a href="mailto:hello@janzheng.com">send me an
   
 
 
-  
-  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-  <script type="text/javascript">
-  google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
-  </script>
-
-  <!-- old name: funkability -->
-  <script type="text/javascript" src="http://ja-nz.tumblr.com/api/read/json"></script>
-  <script type="text/javascript">
-      // The variable "tumblr_api_read" is now set.
-      console.log('LOAD TUMBLR')
-      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
-      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
-
-      // console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
-
-      // console.log(JSON.stringify(tumblr_api_read));
-      console.log(tumblr_api_read);
-
-
-      // Get tumblr post
-      function getTumblr() {
-
-        $.ajax({
-          type: 'GET',
-          url: "http://api.tumblr.com/v2/blog/ja-nz.tumblr.com/posts?api_key=inC0HuM2X45UqdQ6RhPJvRXoWEYJiH4JEcrsVD281MSdZUoLao",
-          async: false,
-          jsonpCallback: 'jsonCallback',
-          contentType: "application/json",
-          dataType: 'jsonp',
-          success: function(json) {
-            var posts = json.response.posts;
-            var latest = json.response.posts[0];
-            console.log(posts);
-            $("#blog-headline").text(latest.title);
-            $("#blog-body").html(latest.body);
-            json.response.posts.forEach(function(el, i) {
-              // if(i > 4) return false;
-              $("#blog-more").append("<li><a href='"+ el.post_url +"'>"+ el.title +"</li>");
-            });
-          },
-          error: function(e) {
-            console.log(e.message);
-          }
-        });
-      }
-
-      getTumblr();
-  </script>
-  <!-- <script src="/app/js/tumblriffic.js"></script> -->
-  
 
   <!-- new google analytics beta -->
   <script>

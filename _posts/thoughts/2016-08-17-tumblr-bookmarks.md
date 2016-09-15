@@ -1,7 +1,7 @@
 ---
 layout: layout-post
-title: Repurposing tumblr for better bookmarks
-summary: Tumblr is a surprisingly great tool for storing bookmarks
+title: Repurposing tumblr for social bookmarks
+summary: Tumblr is a surprisingly great tool for sharing bookmarks
 <!-- external: # -->
 preview-css : post-preview-std post__imgPreview--cover
 

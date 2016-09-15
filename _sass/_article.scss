@@ -382,8 +382,10 @@
       font-size: $base;
 
       @include media($break-nav-mobile) {@include span-columns(24);}
-      @include media($break-nav-thin-atleast) {@include shift(-1); @include span-columns(28); padding-left: $base}
-      @include media($break-nav-wide-atleast) {@include shift(-2); @include span-columns(28); padding-left: $base*2}
+      @include media($break-nav-thin-atleast) {@include shift(-1); @include span-columns(28); padding-left: $base;}
+      @include media($break-nav-wide-atleast) {@include shift(-2); @include span-columns(28); padding-left: $base*2;}
+
+      @extend %no-float;
 
       &.callout--large {
         font-size: $size-slightly-large; line-height: $base*2;
@@ -423,10 +425,11 @@
     figure:not(.highlight) {
       // padding-bottom: $base*2; 
       // padding-right: $base*2;
-      @include media($break-nav-wide) {float: left; }
+      // @include media($break-nav-wide) {float: left; }
       @include media($break-nav-mobile) {width: 100%;}
       @include media($break-nav-thin-atleast) {@include shift(-2); margin-right: $base*2;}
       @include media($break-nav-wide-atleast) {@include shift(-4); margin-right: $base*2;}
+      float: left;
 
       &.figure-frame {
         border: 1px solid $silver;
@@ -452,7 +455,10 @@
         @include media($break-nav-wide-atleast) {@include span-columns(28);}
         img {display: block; margin: 0 auto;}
         figcaption { text-align: center; }
+        @extend %no-float;
       } 
+
+
       &.figure-narrow {
         overflow: hidden;
         max-width: 300px;

@@ -60,6 +60,11 @@ portfolio : true
 Diamax approached me to create a tool for their sister company Diamax Korea. The tool was to be simple to use for both administrators and users, as it would be an important asset for salespeople, resellers, and engineers traveling through tradeshows and showing off products to potential customers. 
 
 
+<figure class="figure-wide margin_bottom">
+  <img src="{{page.source}}/sketch1.jpg">
+<figcaption>Initial conceptual sketch</figcaption>
+</figure>
+
 
 ## Choosing a Technology
 

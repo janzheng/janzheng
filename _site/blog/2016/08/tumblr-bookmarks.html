@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Repurposing tumblr for better bookmarks</title>
+  <title>Repurposing tumblr for social bookmarks</title>
   <meta name="description" content="Jan designs and prototypes experiences.">
   <meta name="author" content="Jan Zheng">
   <meta name="keywords" content="user experience, ux, interaction design, digital, advertising, ui design, code, prototyping, resume ,portfolio">
@@ -101,10 +101,10 @@
 
         
         
-        <a href="/toolbox.html" >
-          <div class="nav__item nav__tools " >
+        <a href="/bookmarks.html" >
+          <div class="nav__item nav__bookmarks " >
             <!-- <span class="icon icon--tools"></span> -->
-            <div class="nav__label">tools</div>
+            <div class="nav__label">bookmarks</div>
           </div>
         </a>
         
@@ -211,11 +211,11 @@
         
 
         <div class="article__head__title__container" >
-          <div class="article__head__title">Repurposing tumblr for better bookmarks</div>
+          <div class="article__head__title">Repurposing tumblr for social bookmarks</div>
         </div> 
 
         <div class="article__head__subtitle__container" >
-          <div class="article__head__subtitle">Tumblr is a surprisingly great tool for storing bookmarks</div>
+          <div class="article__head__subtitle">Tumblr is a surprisingly great tool for sharing bookmarks</div>
         </div> 
 
 
@@ -257,7 +257,7 @@
 
       <!-- 
       <div class="article--summary-container">
-        <div class="article--summary">Tumblr is a surprisingly great tool for storing bookmarks</div>
+        <div class="article--summary">Tumblr is a surprisingly great tool for sharing bookmarks</div>
       </div>  -->
 
       <!-- not yet used -->
@@ -418,13 +418,6 @@
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&lang=html&lang=js&skin=desert"></script>
   -->
 
-
-  <!-- <script src="/assets/js/plugins.js"></script> -->
-  <!-- 
-  <script src="/app/js/jquery.flexslider-min.js"></script>
-  <script src="/app/js/slimbox2.js"></script>
- -->
-
   <script src="/app/js/waypoints.min.js"></script>
   <script src="/app/js/skrollr.min.js"></script>
 
@@ -436,57 +429,6 @@
   
 
 
-  
-  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-  <script type="text/javascript">
-  google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
-  </script>
-
-  <!-- old name: funkability -->
-  <script type="text/javascript" src="http://ja-nz.tumblr.com/api/read/json"></script>
-  <script type="text/javascript">
-      // The variable "tumblr_api_read" is now set.
-      console.log('LOAD TUMBLR')
-      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
-      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
-
-      // console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
-
-      // console.log(JSON.stringify(tumblr_api_read));
-      console.log(tumblr_api_read);
-
-
-      // Get tumblr post
-      function getTumblr() {
-
-        $.ajax({
-          type: 'GET',
-          url: "http://api.tumblr.com/v2/blog/ja-nz.tumblr.com/posts?api_key=inC0HuM2X45UqdQ6RhPJvRXoWEYJiH4JEcrsVD281MSdZUoLao",
-          async: false,
-          jsonpCallback: 'jsonCallback',
-          contentType: "application/json",
-          dataType: 'jsonp',
-          success: function(json) {
-            var posts = json.response.posts;
-            var latest = json.response.posts[0];
-            console.log(posts);
-            $("#blog-headline").text(latest.title);
-            $("#blog-body").html(latest.body);
-            json.response.posts.forEach(function(el, i) {
-              // if(i > 4) return false;
-              $("#blog-more").append("<li><a href='"+ el.post_url +"'>"+ el.title +"</li>");
-            });
-          },
-          error: function(e) {
-            console.log(e.message);
-          }
-        });
-      }
-
-      getTumblr();
-  </script>
-  <!-- <script src="/app/js/tumblriffic.js"></script> -->
-  
 
   <!-- new google analytics beta -->
   <script>

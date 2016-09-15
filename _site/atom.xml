@@ -3,16 +3,16 @@
     <title>Jan Zheng</title>
     <link href="http://janzheng.com/atom.xml" rel="self"/>
     <link href="http://janzheng.com/"/>
-    <updated>2016-08-25T18:28:20-04:00</updated>
+    <updated>2016-09-15T19:36:59-04:00</updated>
     <id>http://janzheng.com/</id>
     
     
     <entry>
         <id>janzheng.com:/blog/2016/08/tumblr-bookmarks</id>
-        <title>Repurposing tumblr for better bookmarks</title>
+        <title>Repurposing tumblr for social bookmarks</title>
         <link href="http://janzheng.com/blog/2016/08/tumblr-bookmarks.html"/>
         <updated>2016-08-17T00:00:00-04:00</updated>
-        <summary>Tumblr is a surprisingly great tool for storing bookmarks</summary>
+        <summary>Tumblr is a surprisingly great tool for sharing bookmarks</summary>
         <author>
             <name>Jan Zheng</name>
             <uri>http://janzheng.com/</uri>
@@ -48,7 +48,7 @@
         <title>Double the Donation</title>
         <link href="http://janzheng.com/blog/2016/08/Portfolio-Dtd.html"/>
         <updated>2016-08-15T00:00:00-04:00</updated>
-        <summary>Increasing customer signups</summary>
+        <summary>Doubling customer signups with better content</summary>
         <author>
             <name>Jan Zheng</name>
             <uri>http://janzheng.com/</uri>

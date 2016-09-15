@@ -23,9 +23,8 @@ I am currently *freelancing* and *floating in and around Atlanta* looking for co
 I am also willing to relocate, travel, and work remotely.
 If you'd like to work together, <a href="mailto:hello@janzheng.com">send me an email</a>. You could also <a href="https://twitter.com/janistanian">tweet</a> or <a href="http://www.linkedin.com/in/janzh">find me on linkedin</a>.
 
-<a href="/resume.pdf" class="link-resume">
-    Here's my résumé.
-</a>
+Take a look at <a href="/resume.pdf">my résumé</a>.
+
 <!-- </blockquote> -->
 
 ## Work & Experience 

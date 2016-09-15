@@ -70,8 +70,6 @@ $(document).ready(function() {
     blogPosts.filter();
   }
 
-  var titleDefault = $(".page__title").text();
-  // not MVC but whatever
 
   if(window.location.hash.length > 0) {
     var hash = window.location.hash.substring(1);
@@ -81,7 +79,6 @@ $(document).ready(function() {
   $(".filter-clear").bind('mouseup',function(e) {
     window.location.hash = '';
     filterReset();
-    $(".page__title").text(titleDefault);
     $(".filter-btn").removeClass('filter-btn--active');
   });
 
@@ -89,22 +86,14 @@ $(document).ready(function() {
     if ($(this).hasClass('filter-btn--active')) {
       window.location.hash = '';
       filterReset();
-      $(".page__title").text(titleDefault);
       $(".filter-btn").removeClass('filter-btn--active');
     } else {
       window.location.hash = $(this).data('filter');
       $(".filter-btn").removeClass('filter-btn--active');
       filterBy($(this).data('filter'));
       $(this).addClass('filter-btn--active');
-      $(".page__title").text($(this).data('filter') + 's')
     }
   });
-
-  // hover tooltip
-  var hoverdefault = $(".page__title").text();
-
-
-
 
 
 

@@ -127,7 +127,7 @@
     .nav__item {
         $blog: $light-red;
         $about: $orange;
-        $tools: $teal;
+        $bookmarks: $teal;
 
         position: relative;
   			padding: $base*0.7 0;
@@ -171,12 +171,12 @@
           @include media($break-nav-thin-atleast) {
     				&.nav__blog .nav__label { color: $blog; border-bottom: 2px solid rgba($blog,1) }
     				&.nav__about .nav__label { color: $about; border-bottom: 2px solid rgba($about,1) }
-    				&.nav__tools .nav__label { color: $tools; border-bottom: 2px solid rgba($tools,1) }
+    				&.nav__bookmarks .nav__label { color: $bookmarks; border-bottom: 2px solid rgba($bookmarks,1) }
           }
         }
         &.nav__blog.active  { .icon { @extend .icon--hoverOn; } .nav__label { color: $blog; border-bottom: 2px solid rgba($blog,1) } }
         &.nav__about.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $about; border-bottom: 2px solid rgba($about,1) } }
-        &.nav__tools.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $teal; border-bottom: 2px solid rgba($teal,1) } }
+        &.nav__bookmarks.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $bookmarks; border-bottom: 2px solid rgba($bookmarks,1) } }
         
       }
 

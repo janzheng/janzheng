@@ -9,7 +9,12 @@
 %ease{@include ease(230ms);}
 %ease-fast{@include ease(180ms);}
 %ease-slow{@include ease(320ms);}
-
+%ease-none{
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
 
  @function remCalc($values){
       $max: length($values);

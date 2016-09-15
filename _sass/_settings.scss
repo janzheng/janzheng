@@ -29,6 +29,9 @@
 // %display {font-family: 'Josefin Sans', "Open Sans", "Helvetica Neue", 'Helvetica', arial, sans-serif !important; }
 %display { @extend %serif; }
 
+%no-float {
+  float: none !important;
+}
 
 // highlight font color
 @include selection-color (rgba($light-blue, 0.8), white, none);
@@ -262,6 +265,7 @@ a, a:active, a:hover, a:link {
     // font-style: italic;   
     font-size: $size-small;
     padding-top: $base;
+    padding-bottom: $base;
   }
 
   %style-blockquote {

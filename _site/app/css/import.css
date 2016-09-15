@@ -411,7 +411,7 @@ kuler: Norse
   transition: all 180ms ease;
 }
 
-.icon--hoverOff, .icon--email:before, .icon--twitter:before, .icon--linkedin:before, .icon--resume:before, .icon--blog:before, .icon--about:before, .icon--tools:before, .icon--lab:before, .icon--thought:before, .icon--idea:before, .icon--work:before, .icon--tumblr:before, .icon--hoverOn, .nav__item:hover .icon, .nav__item:hover .icon--hoverOff, .nav__item:hover .icon--email:before, .nav__item:hover .icon--twitter:before, .nav__item:hover .icon--linkedin:before, .nav__item:hover .icon--resume:before, .nav__item:hover .icon--blog:before, .nav__item:hover .icon--about:before, .nav__item:hover .icon--tools:before, .nav__item:hover .icon--lab:before, .nav__item:hover .icon--thought:before, .nav__item:hover .icon--idea:before, .nav__item:hover .icon--work:before, .nav__item:hover .icon--tumblr:before, .nav__item.nav__blog.active .icon, .nav__item.nav__blog.active .icon--hoverOff, .nav__item.nav__blog.active .icon--email:before, .nav__item.nav__blog.active .icon--twitter:before, .nav__item.nav__blog.active .icon--linkedin:before, .nav__item.nav__blog.active .icon--resume:before, .nav__item.nav__blog.active .icon--blog:before, .nav__item.nav__blog.active .icon--about:before, .nav__item.nav__blog.active .icon--tools:before, .nav__item.nav__blog.active .icon--lab:before, .nav__item.nav__blog.active .icon--thought:before, .nav__item.nav__blog.active .icon--idea:before, .nav__item.nav__blog.active .icon--work:before, .nav__item.nav__blog.active .icon--tumblr:before, .nav__item.nav__about.active .icon, .nav__item.nav__about.active .icon--hoverOff, .nav__item.nav__about.active .icon--email:before, .nav__item.nav__about.active .icon--twitter:before, .nav__item.nav__about.active .icon--linkedin:before, .nav__item.nav__about.active .icon--resume:before, .nav__item.nav__about.active .icon--blog:before, .nav__item.nav__about.active .icon--about:before, .nav__item.nav__about.active .icon--tools:before, .nav__item.nav__about.active .icon--lab:before, .nav__item.nav__about.active .icon--thought:before, .nav__item.nav__about.active .icon--idea:before, .nav__item.nav__about.active .icon--work:before, .nav__item.nav__about.active .icon--tumblr:before, .nav__item.nav__tools.active .icon, .nav__item.nav__tools.active .icon--hoverOff, .nav__item.nav__tools.active .icon--email:before, .nav__item.nav__tools.active .icon--twitter:before, .nav__item.nav__tools.active .icon--linkedin:before, .nav__item.nav__tools.active .icon--resume:before, .nav__item.nav__tools.active .icon--blog:before, .nav__item.nav__tools.active .icon--about:before, .nav__item.nav__tools.active .icon--tools:before, .nav__item.nav__tools.active .icon--lab:before, .nav__item.nav__tools.active .icon--thought:before, .nav__item.nav__tools.active .icon--idea:before, .nav__item.nav__tools.active .icon--work:before, .nav__item.nav__tools.active .icon--tumblr:before, .nav__social__item:hover .icon, .nav__social__item:hover .icon--hoverOff, .nav__social__item:hover .icon--email:before, .nav__social__item:hover .icon--twitter:before, .nav__social__item:hover .icon--linkedin:before, .nav__social__item:hover .icon--resume:before, .nav__social__item:hover .icon--blog:before, .nav__social__item:hover .icon--about:before, .nav__social__item:hover .icon--tools:before, .nav__social__item:hover .icon--lab:before, .nav__social__item:hover .icon--thought:before, .nav__social__item:hover .icon--idea:before, .nav__social__item:hover .icon--work:before, .nav__social__item:hover .icon--tumblr:before, body, html, .post__title__container .post__title {
+.icon--hoverOff, .icon--email:before, .icon--twitter:before, .icon--linkedin:before, .icon--resume:before, .icon--blog:before, .icon--about:before, .icon--tools:before, .icon--lab:before, .icon--thought:before, .icon--idea:before, .icon--work:before, .icon--tumblr:before, .icon--hoverOn, .nav__item:hover .icon, .nav__item:hover .icon--hoverOff, .nav__item:hover .icon--email:before, .nav__item:hover .icon--twitter:before, .nav__item:hover .icon--linkedin:before, .nav__item:hover .icon--resume:before, .nav__item:hover .icon--blog:before, .nav__item:hover .icon--about:before, .nav__item:hover .icon--tools:before, .nav__item:hover .icon--lab:before, .nav__item:hover .icon--thought:before, .nav__item:hover .icon--idea:before, .nav__item:hover .icon--work:before, .nav__item:hover .icon--tumblr:before, .nav__item.nav__blog.active .icon, .nav__item.nav__blog.active .icon--hoverOff, .nav__item.nav__blog.active .icon--email:before, .nav__item.nav__blog.active .icon--twitter:before, .nav__item.nav__blog.active .icon--linkedin:before, .nav__item.nav__blog.active .icon--resume:before, .nav__item.nav__blog.active .icon--blog:before, .nav__item.nav__blog.active .icon--about:before, .nav__item.nav__blog.active .icon--tools:before, .nav__item.nav__blog.active .icon--lab:before, .nav__item.nav__blog.active .icon--thought:before, .nav__item.nav__blog.active .icon--idea:before, .nav__item.nav__blog.active .icon--work:before, .nav__item.nav__blog.active .icon--tumblr:before, .nav__item.nav__about.active .icon, .nav__item.nav__about.active .icon--hoverOff, .nav__item.nav__about.active .icon--email:before, .nav__item.nav__about.active .icon--twitter:before, .nav__item.nav__about.active .icon--linkedin:before, .nav__item.nav__about.active .icon--resume:before, .nav__item.nav__about.active .icon--blog:before, .nav__item.nav__about.active .icon--about:before, .nav__item.nav__about.active .icon--tools:before, .nav__item.nav__about.active .icon--lab:before, .nav__item.nav__about.active .icon--thought:before, .nav__item.nav__about.active .icon--idea:before, .nav__item.nav__about.active .icon--work:before, .nav__item.nav__about.active .icon--tumblr:before, .nav__item.nav__bookmarks.active .icon, .nav__item.nav__bookmarks.active .icon--hoverOff, .nav__item.nav__bookmarks.active .icon--email:before, .nav__item.nav__bookmarks.active .icon--twitter:before, .nav__item.nav__bookmarks.active .icon--linkedin:before, .nav__item.nav__bookmarks.active .icon--resume:before, .nav__item.nav__bookmarks.active .icon--blog:before, .nav__item.nav__bookmarks.active .icon--about:before, .nav__item.nav__bookmarks.active .icon--tools:before, .nav__item.nav__bookmarks.active .icon--lab:before, .nav__item.nav__bookmarks.active .icon--thought:before, .nav__item.nav__bookmarks.active .icon--idea:before, .nav__item.nav__bookmarks.active .icon--work:before, .nav__item.nav__bookmarks.active .icon--tumblr:before, .nav__social__item:hover .icon, .nav__social__item:hover .icon--hoverOff, .nav__social__item:hover .icon--email:before, .nav__social__item:hover .icon--twitter:before, .nav__social__item:hover .icon--linkedin:before, .nav__social__item:hover .icon--resume:before, .nav__social__item:hover .icon--blog:before, .nav__social__item:hover .icon--about:before, .nav__social__item:hover .icon--tools:before, .nav__social__item:hover .icon--lab:before, .nav__social__item:hover .icon--thought:before, .nav__social__item:hover .icon--idea:before, .nav__social__item:hover .icon--work:before, .nav__social__item:hover .icon--tumblr:before, body, html, .post__title__container .post__title, .post__tumblr li, .post__tumblr:hover li, .post__tumblr li:hover, .post__tumblr .post__info {
   -webkit-transition: all 320ms ease;
   -moz-transition: all 320ms ease;
   -ms-transition: all 320ms ease;
@@ -419,11 +419,18 @@ kuler: Norse
   transition: all 320ms ease;
 }
 
+.post__tumblr {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 .header-spacing {
   padding-top: 100px;
 }
 
-.post__title__container .post__title, .article__body__content .slider .rsGCaption, .article__body__content figure:not(.highlight) figcaption, .timeline__headline div > span, .timeline__client, body, html, .post__date__container .post__date, .article__head__date {
+.post__title__container .post__title, .article__body__content .slider .rsGCaption, .article__body__content figure:not(.highlight) figcaption, .timeline__headline div > span, .timeline__client, body, html, .post, .post__date__container .post__date, .article__head__date, .container.bookmarks .tumblr__search, .container.bookmarks .sidebar__container {
   font-family: "Open Sans", "Helvetica Neue", arial, sans-serif;
 }
 
@@ -431,12 +438,16 @@ kuler: Norse
   font-family: "Helvetica Neue", "Open Sans", sans-serif;
 }
 
-.article__body__content .h1--display, .article__body__content .h1--display--spaced, .article__body__content .display, .article__body__content, .article__head__title, .article__body__content h1, .article__head__subtitle, .article__body__content h4, .article__body__content h2, .article__body__content h3, .article__body__content .callout, .article__body__content blockquote, .article__body__content blockquote.blockquote--wide, .nav__label, .nav__social__item, .nav__social__label span, .timeline__year, .page__intro, .post__tags__container .post__tags li, .article__tags__container, .article__head__projectLink__container, .main__footer {
+.article__body__content .h1--display, .article__body__content .h1--display--spaced, .article__body__content .display, .article__body__content, .article__head__title, .article__body__content h1, .article__head__subtitle, .article__body__content h4, .article__body__content h2, .article__body__content h3, .article__body__content .callout, .article__body__content blockquote, .article__body__content blockquote.blockquote--wide, .nav__label, .nav__social__item, .nav__social__label span, .timeline__year, .page__intro, .article__tags__container, .article__head__projectLink__container, .main__footer {
   font-family: Georgia, serif;
 }
 
 .invoice--from--name .bracket {
   font-family: 'Josefin Sans', serif;
+}
+
+.article__body__content .callout, .article__body__content figure.figure-wide:not(.highlight) {
+  float: none !important;
 }
 
 ::-moz-selection {
@@ -583,6 +594,7 @@ a, a:active, a:hover, a:link {
   font-weight: 300;
   font-size: 0.98rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .article__body__content .callout, .article__body__content blockquote {
@@ -776,7 +788,7 @@ a, a:active, a:hover, a:link {
   opacity: 0;
 }
 
-.icon--hoverOn:before, .nav__item:hover .icon:before, .nav__item:hover .icon--hoverOff:before, .nav__item:hover .icon--email:before, .nav__item:hover .icon--twitter:before, .nav__item:hover .icon--linkedin:before, .nav__item:hover .icon--resume:before, .nav__item:hover .icon--blog:before, .nav__item:hover .icon--about:before, .nav__item:hover .icon--tools:before, .nav__item:hover .icon--lab:before, .nav__item:hover .icon--thought:before, .nav__item:hover .icon--idea:before, .nav__item:hover .icon--work:before, .nav__item:hover .icon--tumblr:before, .nav__item.nav__blog.active .icon:before, .nav__item.nav__blog.active .icon--hoverOff:before, .nav__item.nav__blog.active .icon--email:before, .nav__item.nav__blog.active .icon--twitter:before, .nav__item.nav__blog.active .icon--linkedin:before, .nav__item.nav__blog.active .icon--resume:before, .nav__item.nav__blog.active .icon--blog:before, .nav__item.nav__blog.active .icon--about:before, .nav__item.nav__blog.active .icon--tools:before, .nav__item.nav__blog.active .icon--lab:before, .nav__item.nav__blog.active .icon--thought:before, .nav__item.nav__blog.active .icon--idea:before, .nav__item.nav__blog.active .icon--work:before, .nav__item.nav__blog.active .icon--tumblr:before, .nav__item.nav__about.active .icon:before, .nav__item.nav__about.active .icon--hoverOff:before, .nav__item.nav__about.active .icon--email:before, .nav__item.nav__about.active .icon--twitter:before, .nav__item.nav__about.active .icon--linkedin:before, .nav__item.nav__about.active .icon--resume:before, .nav__item.nav__about.active .icon--blog:before, .nav__item.nav__about.active .icon--about:before, .nav__item.nav__about.active .icon--tools:before, .nav__item.nav__about.active .icon--lab:before, .nav__item.nav__about.active .icon--thought:before, .nav__item.nav__about.active .icon--idea:before, .nav__item.nav__about.active .icon--work:before, .nav__item.nav__about.active .icon--tumblr:before, .nav__item.nav__tools.active .icon:before, .nav__item.nav__tools.active .icon--hoverOff:before, .nav__item.nav__tools.active .icon--email:before, .nav__item.nav__tools.active .icon--twitter:before, .nav__item.nav__tools.active .icon--linkedin:before, .nav__item.nav__tools.active .icon--resume:before, .nav__item.nav__tools.active .icon--blog:before, .nav__item.nav__tools.active .icon--about:before, .nav__item.nav__tools.active .icon--tools:before, .nav__item.nav__tools.active .icon--lab:before, .nav__item.nav__tools.active .icon--thought:before, .nav__item.nav__tools.active .icon--idea:before, .nav__item.nav__tools.active .icon--work:before, .nav__item.nav__tools.active .icon--tumblr:before, .nav__social__item:hover .icon:before, .nav__social__item:hover .icon--hoverOff:before, .nav__social__item:hover .icon--email:before, .nav__social__item:hover .icon--twitter:before, .nav__social__item:hover .icon--linkedin:before, .nav__social__item:hover .icon--resume:before, .nav__social__item:hover .icon--blog:before, .nav__social__item:hover .icon--about:before, .nav__social__item:hover .icon--tools:before, .nav__social__item:hover .icon--lab:before, .nav__social__item:hover .icon--thought:before, .nav__social__item:hover .icon--idea:before, .nav__social__item:hover .icon--work:before, .nav__social__item:hover .icon--tumblr:before {
+.icon--hoverOn:before, .nav__item:hover .icon:before, .nav__item:hover .icon--hoverOff:before, .nav__item:hover .icon--email:before, .nav__item:hover .icon--twitter:before, .nav__item:hover .icon--linkedin:before, .nav__item:hover .icon--resume:before, .nav__item:hover .icon--blog:before, .nav__item:hover .icon--about:before, .nav__item:hover .icon--tools:before, .nav__item:hover .icon--lab:before, .nav__item:hover .icon--thought:before, .nav__item:hover .icon--idea:before, .nav__item:hover .icon--work:before, .nav__item:hover .icon--tumblr:before, .nav__item.nav__blog.active .icon:before, .nav__item.nav__blog.active .icon--hoverOff:before, .nav__item.nav__blog.active .icon--email:before, .nav__item.nav__blog.active .icon--twitter:before, .nav__item.nav__blog.active .icon--linkedin:before, .nav__item.nav__blog.active .icon--resume:before, .nav__item.nav__blog.active .icon--blog:before, .nav__item.nav__blog.active .icon--about:before, .nav__item.nav__blog.active .icon--tools:before, .nav__item.nav__blog.active .icon--lab:before, .nav__item.nav__blog.active .icon--thought:before, .nav__item.nav__blog.active .icon--idea:before, .nav__item.nav__blog.active .icon--work:before, .nav__item.nav__blog.active .icon--tumblr:before, .nav__item.nav__about.active .icon:before, .nav__item.nav__about.active .icon--hoverOff:before, .nav__item.nav__about.active .icon--email:before, .nav__item.nav__about.active .icon--twitter:before, .nav__item.nav__about.active .icon--linkedin:before, .nav__item.nav__about.active .icon--resume:before, .nav__item.nav__about.active .icon--blog:before, .nav__item.nav__about.active .icon--about:before, .nav__item.nav__about.active .icon--tools:before, .nav__item.nav__about.active .icon--lab:before, .nav__item.nav__about.active .icon--thought:before, .nav__item.nav__about.active .icon--idea:before, .nav__item.nav__about.active .icon--work:before, .nav__item.nav__about.active .icon--tumblr:before, .nav__item.nav__bookmarks.active .icon:before, .nav__item.nav__bookmarks.active .icon--hoverOff:before, .nav__item.nav__bookmarks.active .icon--email:before, .nav__item.nav__bookmarks.active .icon--twitter:before, .nav__item.nav__bookmarks.active .icon--linkedin:before, .nav__item.nav__bookmarks.active .icon--resume:before, .nav__item.nav__bookmarks.active .icon--blog:before, .nav__item.nav__bookmarks.active .icon--about:before, .nav__item.nav__bookmarks.active .icon--tools:before, .nav__item.nav__bookmarks.active .icon--lab:before, .nav__item.nav__bookmarks.active .icon--thought:before, .nav__item.nav__bookmarks.active .icon--idea:before, .nav__item.nav__bookmarks.active .icon--work:before, .nav__item.nav__bookmarks.active .icon--tumblr:before, .nav__social__item:hover .icon:before, .nav__social__item:hover .icon--hoverOff:before, .nav__social__item:hover .icon--email:before, .nav__social__item:hover .icon--twitter:before, .nav__social__item:hover .icon--linkedin:before, .nav__social__item:hover .icon--resume:before, .nav__social__item:hover .icon--blog:before, .nav__social__item:hover .icon--about:before, .nav__social__item:hover .icon--tools:before, .nav__social__item:hover .icon--lab:before, .nav__social__item:hover .icon--thought:before, .nav__social__item:hover .icon--idea:before, .nav__social__item:hover .icon--work:before, .nav__social__item:hover .icon--tumblr:before {
   opacity: 1;
 }
 
@@ -999,7 +1011,7 @@ a, a:active, a:hover, a:link {
     color: #FF530D;
     border-bottom: 2px solid #ff530d;
   }
-  .nav__item:hover.nav__tools .nav__label {
+  .nav__item:hover.nav__bookmarks .nav__label {
     color: #01A7A4;
     border-bottom: 2px solid #01a7a4;
   }
@@ -1012,7 +1024,7 @@ a, a:active, a:hover, a:link {
   color: #FF530D;
   border-bottom: 2px solid #ff530d;
 }
-.nav__item.nav__tools.active .nav__label {
+.nav__item.nav__bookmarks.active .nav__label {
   color: #01A7A4;
   border-bottom: 2px solid #01a7a4;
 }
@@ -1741,13 +1753,17 @@ body, html {
   line-height: 1.6rem;
 }
 
+.post__tags__container {
+  font-size: 0.875rem;
+  display: inline;
+  color: #aaa;
+  font-weight: 300;
+}
 .post__tags__container .post__tags {
   margin-left: 0;
 }
 .post__tags__container .post__tags li {
-  font-size: 0.875rem;
   display: inline;
-  color: #cccccc;
   /* once we have clickable tags
   border: 1px solid $gray;
   background-color: $gray;
@@ -2459,10 +2475,8 @@ body, html {
 .article__body__content .slider.show-adjacent .rsOverflow {
   overflow: visible;
 }
-@media screen and (min-width: 767px) {
-  .article__body__content figure:not(.highlight) {
-    float: left;
-  }
+.article__body__content figure:not(.highlight) {
+  float: left;
 }
 @media screen and (max-width: 479px) {
   .article__body__content figure:not(.highlight) {
@@ -2661,6 +2675,351 @@ body, html {
 
 li ul {
   margin-left: 1rem;
+}
+
+.container.bookmarks {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media screen and (max-width: 479px) {
+  .container.bookmarks .article__body__content {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .article__body__content:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container.bookmarks .article__body__content {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .article__body__content:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container.bookmarks .article__body__content {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .article__body__content:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  .container.bookmarks .article__body__content {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .article__body__content:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 480px) {
+  .container.bookmarks .article__body__content {
+    margin-left: 0%;
+  }
+}
+.container.bookmarks .tumblr__search {
+  padding: 1rem;
+  width: 100%;
+}
+.container.bookmarks .main__container {
+  padding-left: 0;
+}
+@media screen and (max-width: 479px) {
+  .container.bookmarks .main__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .main__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container.bookmarks .main__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .main__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container.bookmarks .main__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 75%;
+  }
+  .container.bookmarks .main__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  .container.bookmarks .main__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 75%;
+  }
+  .container.bookmarks .main__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 479px) {
+  .container.bookmarks .tumblr__load {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .tumblr__load:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container.bookmarks .tumblr__load {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .tumblr__load:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container.bookmarks .tumblr__load {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .tumblr__load:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  .container.bookmarks .tumblr__load {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .tumblr__load:last-child {
+    margin-right: 0;
+  }
+}
+.container.bookmarks .sidebar__container {
+  padding-left: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  display: none !important;
+}
+@media screen and (max-width: 479px) {
+  .container.bookmarks .sidebar__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 100%;
+  }
+  .container.bookmarks .sidebar__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container.bookmarks .sidebar__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 25%;
+  }
+  .container.bookmarks .sidebar__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container.bookmarks .sidebar__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 25%;
+  }
+  .container.bookmarks .sidebar__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  .container.bookmarks .sidebar__container {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 25%;
+  }
+  .container.bookmarks .sidebar__container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container.bookmarks .sidebar__container {
+    display: block !important;
+  }
+}
+.container.bookmarks .sidebar__container .sidebar {
+  padding: 1rem 0;
+}
+.container.bookmarks .sidebar__container .sidebar .tag-filter {
+  cursor: pointer;
+}
+.container.bookmarks .sidebar__container .sidebar .tag-filter:hover {
+  color: #FF530D !important;
+}
+.container.bookmarks .sidebar__container .sidebar.tag-active .tag-filter {
+  color: #aaa;
+}
+.container.bookmarks .sidebar__container .sidebar.tag-active .tag-filter--active {
+  color: #972020;
+}
+.container.bookmarks .sidebar__container .tag__list li {
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+  display: block;
+}
+
+.tumblr__load {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  padding-left: 0;
+}
+.tumblr__load a {
+  cursor: pointer;
+}
+
+.post__tumblr {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  float: none;
+}
+.post__tumblr a {
+  color: #333333;
+}
+.post__tumblr li {
+  opacity: 1;
+}
+.post__tumblr:hover li {
+  opacity: 0.8;
+}
+.post__tumblr li:hover {
+  opacity: 1;
+  border: 0;
+}
+.post__tumblr li:hover .post__info {
+  border: 1px solid #01A7A4;
+}
+.post__tumblr .post__date {
+  font-size: 0.8rem;
+}
+.post__tumblr .post__container {
+  border: 0;
+}
+.post__tumblr .post__info {
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  border: 1px solid transparent;
+}
+.post__tumblr .tumblr__item:first-of-type .post__info {
+  margin-top: 0;
+}
+.post__tumblr .post__publisher {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+.post__tumblr .post__title {
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  padding-bottom: 1rem;
+  width: 92%;
+  color: #972020;
+}
+.post__tumblr .post__title:after {
+  content: "›";
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  white-space: nowrap;
+  display: inline;
+  color: #aaa;
+}
+.post__tumblr .post__excerpt {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  max-height: 400px;
+  overflow: scroll;
+  color: #333333;
+}
+.post__tumblr .post__source {
+  padding: 1rem;
+  border: 1px solid #eee;
+}
+.post__tumblr .post__source .post__photos {
+  width: 25%;
+  float: left;
+  padding-right: 1rem;
+  padding-top: 4px;
+}
+.post__tumblr .post__source .post__photos img {
+  width: 100%;
+}
+.post__tumblr .post__source .post__source-description {
+  width: 75%;
+  float: left;
+}
+.post__tumblr .post__source .post__tags {
+  margin: 0;
+}
+.post__tumblr .post__source:hover .post__title {
+  color: #FF530D;
+}
+.post__tumblr .post__description-container {
+  background: #f2f2f2;
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+.post__tumblr .post__description-container p {
+  margin-bottom: 1rem;
+}
+.post__tumblr .post__description-container p:first-of-type {
+  display: inline-block;
+}
+.post__tumblr .post__description-container p:last-of-type {
+  margin-bottom: 0;
+}
+.post__tumblr .post__date {
+  color: #aaa;
+}
+
+.tumblr__item.photo .post__photos, .tumblr__item.video .post__photos {
+  width: 100%;
+  padding-right: 0;
+  padding-top: 0;
 }
 
 .main__footer {
@@ -2999,6 +3358,11 @@ code {
 }
 
 /* Literal.Number.Integer.Long */
+@media print {
+  * {
+    font-size: 9pt !important;
+  }
+}
 .nav-mobile {
   display: none !important;
 }

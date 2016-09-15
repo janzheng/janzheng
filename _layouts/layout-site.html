@@ -81,10 +81,10 @@
         </a>
         {% endif %}
 
-        {% if item.text == 'tools' %}
+        {% if item.text == 'bookmarks' %}
         {% assign _url = url | append: '.html' %}
         <a href="{{item.url}}" >
-          <div class="nav__item nav__tools {% if _url == item.url %}active{% endif %}" >
+          <div class="nav__item nav__bookmarks {% if _url == item.url %}active{% endif %}" >
             <!-- <span class="icon icon--tools"></span> -->
             <div class="nav__label">{{item.text}}</div>
           </div>
@@ -185,13 +185,6 @@
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&lang=html&lang=js&skin=desert"></script>
   -->
 
-
-  <!-- <script src="/assets/js/plugins.js"></script> -->
-  <!-- 
-  <script src="/app/js/jquery.flexslider-min.js"></script>
-  <script src="/app/js/slimbox2.js"></script>
- -->
-
   <script src="/app/js/waypoints.min.js"></script>
   <script src="/app/js/skrollr.min.js"></script>
 
@@ -203,57 +196,6 @@
   
 
 
-  
-  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-  <script type="text/javascript">
-  google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
-  </script>
-
-  <!-- old name: funkability -->
-  <script type="text/javascript" src="http://ja-nz.tumblr.com/api/read/json"></script>
-  <script type="text/javascript">
-      // The variable "tumblr_api_read" is now set.
-      console.log('LOAD TUMBLR')
-      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
-      // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
-
-      // console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
-
-      // console.log(JSON.stringify(tumblr_api_read));
-      console.log(tumblr_api_read);
-
-
-      // Get tumblr post
-      function getTumblr() {
-
-        $.ajax({
-          type: 'GET',
-          url: "http://api.tumblr.com/v2/blog/ja-nz.tumblr.com/posts?api_key=inC0HuM2X45UqdQ6RhPJvRXoWEYJiH4JEcrsVD281MSdZUoLao",
-          async: false,
-          jsonpCallback: 'jsonCallback',
-          contentType: "application/json",
-          dataType: 'jsonp',
-          success: function(json) {
-            var posts = json.response.posts;
-            var latest = json.response.posts[0];
-            console.log(posts);
-            $("#blog-headline").text(latest.title);
-            $("#blog-body").html(latest.body);
-            json.response.posts.forEach(function(el, i) {
-              // if(i > 4) return false;
-              $("#blog-more").append("<li><a href='"+ el.post_url +"'>"+ el.title +"</li>");
-            });
-          },
-          error: function(e) {
-            console.log(e.message);
-          }
-        });
-      }
-
-      getTumblr();
-  </script>
-  <!-- <script src="/app/js/tumblriffic.js"></script> -->
-  
 
   <!-- new google analytics beta -->
   <script>

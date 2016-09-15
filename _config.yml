@@ -22,8 +22,8 @@ navigation:
    url: /
  - text: about
    url: /about.html
- - text: tools
-   url: /toolbox.html
+ - text: bookmarks
+   url: /bookmarks.html
 
 sass:
   sass_dir: _sass

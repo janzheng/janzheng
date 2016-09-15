@@ -1,0 +1,899 @@
+---
+layout: layout-shell-bookmarks
+title: Bookmarks
+source: /app/posts/bookmarks
+<!-- preview-img : /app/posts/nanowrito/preview.png -->
+
+---
+
+<h1 class="center h1--display--spaced">Bookmarks</h1>
+
+<p class="dropcap"> 
+  Bookmarks is where I share content I find interesting or exciting to the rest of the world. I try to focus the content on design and technology, but might add public policy, psychology, and a few other topics from time to time. These are pulled in from my tumblr, which I've <a href="/blog/2016/08/tumblr-bookmarks.html">converted into a social bookmarking system</a>.
+</p>
+
+<div class="post__tumblr__container clearfix">
+  <!-- .list is used with List.js -->
+  <div class="main__container">
+    <div id="tumblrList">
+      <input class="tumblr__search search" placeholder="Search" />
+      <ul class="post post__tumblr list">
+      </ul>
+    </div>
+  </div>
+
+  <div class="sidebar__container">
+    <div class="sidebar">
+      <!-- <div class="tag__title">Tags</div> -->
+      <ul class="tag__list">
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="tumblr__load" >
+  <div class="sidebar__bottom"></div>
+  <a class="loadMore">Load more posts</a>
+</div>
+
+
+<!-- <script src="{{page.source}}/waypoints.min.js"></script> -->
+<script type="text/javascript" src="/app/js/moment.js"></script>
+<script type="text/javascript" src="/app/js/underscore.js"></script>
+<script type="text/javascript" src="/app/js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/app/js/waypoints.min.js"></script>
+<script src="/app/js/jquery.ba-throttle-debounce.min.js"></script>
+
+
+<script>
+
+$(document).ready(function() {
+
+  /* 
+     9/14/2016 UPDATES
+     ok so the original code is a little janky for many reason. This makes the code less janky,
+     
+            HOW IT WORKS
+    START   –––––––––––––––––––––––––––––– content_container – clearfix to get vertical container height
+    TOP     [main content] [   sidebar   ] sidebar_container – positions the sidebar horizontally
+            [            ] [             ]
+            [            ] [             ]
+    BOTTOM  [            ] [             ]
+            [            ]
+            [            ]
+            [            ]
+            
+    END     –––––––––––––––––––––––––––––– 
+
+            Waypoints tracks the viewport in relation to screen objects
+
+            The easy scenario:
+
+            If Sidebar isn't taller than viewport:
+              [WP1] Top of container 
+                Viewport hits top of content_container
+                – UP:     Sidebar stops moving – static / top: 0px
+                – DOWN:   Nothing
+
+              [WP2] Top of Sidebar
+                Viewport hits top of [sidebar]
+                – UP:     Sidebar stick to Top of viewport (useful past bottom of container) – fixed / top: 0px
+                – DOWN:   Sidebar sticks to Top of viewport – fixed / top: 0px
+
+              [WP4] Bottom of container
+                > [sidebar].bottom hits the bottom of content_container
+                – UP:     Sidebar stick to Top of viewport (redundancy)
+                – DOWN:   Sidebar stops moving – absolute / bottom: 0px
+
+
+            The more complex scenario:
+
+            If Sidebar is taller than viewport:
+              [WP1] Top of Container
+                > Viewport hits top of content_container
+                – UP:     Sidebar stops moving – static / top: 0px
+                – DOWN:   Nothing
+
+              [WP2] Top of Sidebar
+                Viewport hits top of [sidebar]
+                – UP:     Sidebar stick to Top of viewport (useful past bottom of container) – fixed / top: 0px
+                – DOWN:   Nothing
+
+
+              [WP3] Bottom of Sidebar
+                Viewport bottom hits bottom of [sidebar]
+                – UP:     Nothing
+                – DOWN:   Sidebar bottom sticks to the bottom of viewport
+
+              [WP4] Bottom of Container
+                > [sidebar].bottom hits the bottom of content_container
+                – UP:     Sidebar stick to Top of viewport (redundancy)
+                – DOWN:   Sidebar stops moving – absolute / bottom: 0px
+
+              Direction change:
+              If sidebar is taller than viewport, we have to look for scroll direction change when viewport is in the 
+              middle of the scrolling content container, because no waypoints will trigger here.
+              When a scroll direction changes, we must absolutely position the menu at that part of the page
+              until the viewport scrolls to the top or bottom edge, which triggers a WP2 or WP3 action
+
+
+  */
+
+
+  /*
+      OBJECT DEFINITIONS
+  */
+
+  var sticky = {
+    // determines top and bottom of scroll area. we know the height of the container
+    container: $('.post__tumblr__container'), 
+    content: $('.post__tumblr'), // only needed if shorter than nav
+    // the navigation container that aligns the menu horizontally, and determines the start position.
+    // this element floats, so we don't always know its true size.
+    nav_container: $('.sidebar__container'),
+
+    // the floating navigation menu element; travels inside nav_container. Don't know size
+    nav: $('.sidebar'),
+
+    current_waypoint: 0, // 0 is the initial setting; this prevents some waypoints from triggering when they're not supposed to
+
+    // useful for tracking behavior
+    states: {top: 0, middle: 1, bottom: 2},
+    state: -1, // initialize to -1 since it doesn't have a state yet (hasn't passed a WP)
+    directions: {up: 0, down: 1, none: 2},
+    direction: -1,
+  };
+
+  // turn on / off console logs
+  // sticky['log'] = true;
+  sticky['log'] = false;
+
+
+  // All calculations initiated in reset()
+
+  sticky.viewportHeight = () => (Waypoint.viewportHeight());
+
+  sticky.setWaypoint = function(element, offset, handler) {
+    return new Waypoint({
+      element: element,
+      offset: offset,
+      handler: handler
+    })
+  }
+
+  sticky.setOffset = function(waypoint, offset) {
+    waypoint.triggerPoint = offset;
+  }
+
+
+
+
+  // 
+  //  WAYPOINT Triggers
+  // 
+
+  sticky.initWaypoints = function() {
+
+    sticky.waypoints = {
+
+      //  WAYPOINT 1: Top of the Container; the top of the page / parent element
+      wp1:  sticky.setWaypoint(
+              sticky.container,
+              function() { return sticky.offset.start },
+              function(dir) {
+                sticky.triggers.start(sticky.nav, dir); 
+              }
+            ),
+
+      // WAYPOINT 2: Top of the Navigation Element; top of the menu, but not necessarily at top of page
+      wp2:  sticky.setWaypoint(
+              sticky.nav, 
+              function() { return sticky.offset.top },
+              function(dir) {
+                sticky.triggers.top(sticky.nav, dir); 
+              }
+            ),
+
+      // WAYPOINT 3: Bottom of the Navigation Element;
+      wp3:  sticky.setWaypoint(
+              sticky.nav, 
+              function() { return sticky.viewportHeight() - sticky.nav.height }, // this shortcut unfortunately doesn't recalculate...?
+              function(dir) {
+                sticky.triggers.bottom(sticky.nav, dir); 
+              }
+            ),
+
+      //  WAYPOINT 4: Bottom of the Container
+      wp4:  sticky.setWaypoint(
+              sticky.container, 
+              function() { return  sticky.offset.end },
+              function(dir) {
+                sticky.triggers.end(sticky.nav, dir); 
+              }
+            )
+    }; 
+  }
+
+
+  // 
+  //  TRIGGERS / CONTROLLERS
+  //  These are actions that the current state of the menu, and are separated from the triggers
+
+
+  sticky.triggers = {
+    start: function (_this, dir) {
+      if (sticky.log) console.log('CONTAINER_TOP > waypoint 1 : ' + dir);
+      sticky.current_waypoint = 1;
+
+      // if the viewport's at the very top, we set the position to static, so menu stays at the top of the container
+      if (dir==='up') {
+        if (sticky.log) console.log('waypoint 1 action 1');
+        sticky.nav.css({
+          'position' : 'static'
+        });
+
+        sticky.state = sticky.states.top;
+        sticky.direction = sticky.directions.down;
+
+        // reset the offset for the bottom of the nav
+        // these are absolute values / document-positioned values!!
+        sticky.setOffset(sticky.waypoints.wp2, sticky.container.offsetTop);
+        sticky.setOffset(sticky.waypoints.wp3, sticky.container.offsetTop + sticky.nav.height - sticky.viewportHeight());
+      }
+    },
+    top: function (_this, dir) {
+      if (sticky.log) console.log('MENU_TOP > waypoint 2 : ' + dir)
+      sticky.current_waypoint = 2;
+
+      if(!sticky.isTallerThanContent) {
+        // // this happens when we're scrolling the viewport up, and we hit the top of the nav element
+        if (dir==='up' && sticky.state != sticky.states.top) {
+          if (sticky.log) console.log('waypoint 2 action 1');
+          // note, don't set the waypoint element as sticky, as it'll cause problems
+          $(_this).css({
+            'position' : 'fixed',
+            'top' : 0,
+            'bottom' : ''
+          });
+
+          sticky.state = sticky.states.middle;
+          sticky.direction = sticky.directions.up;
+
+        } else if (!sticky.isTallerThanViewport && sticky.state != sticky.states.bottom) {
+          if (sticky.log) console.log('waypoint 2 action 2');
+          $(_this).css({
+            'position' : 'fixed',
+            'top' : 0,
+            'bottom' : ''
+          });
+        }
+      }
+    },
+    bottom: function (_this, dir) {
+      if (sticky.log) console.log('MENU_BOTTOM > waypoint 3 : ' + dir)
+      sticky.current_waypoint = 3;
+
+      // if user's scrolling down and menu is too tall, set to fixed at the bottom
+
+      if(!sticky.isTallerThanContent) {
+        if(dir==='down' && sticky.isTallerThanViewport && sticky.state !== sticky.states.bottom) {
+          if (sticky.log) console.log('waypoint 3 action 1');
+          // note, don't set the waypoint element as sticky, as it'll cause problems
+          $(_this).css({
+            'position' : 'fixed',
+            // hack / bug fix. If we place the menu at 0, Waypoints will think we're scrolling up.
+            // this places the menu 1 pixel below the viewport (bottom: -1), so when scrolling down, the
+            // waypoint event will fire properly. Unfortunately this creates a 'jumping' effect when
+            // scrolling downwards too quickly, right after page load
+            'bottom' : -1, 
+            'top' : ''
+          });
+
+          sticky.state = sticky.states.middle;
+          sticky.direction = sticky.directions.down;
+        }
+      }
+    },
+    end: function (_this, dir) {
+      if (sticky.log) console.log('CONTAINER_BOTTOM > waypoint 4 : ' + dir)
+      sticky.current_waypoint = 4;
+
+      // if the viewport's at the very bottom, we set the position to static no matter the size of the menu
+      if(!sticky.isTallerThanContent) {
+        if (dir==='down') {
+          if (sticky.log) console.log('waypoint 4 action 1');
+          sticky.nav.css({
+            'position' : 'absolute',
+            'top' : '',
+            'bottom' : 0
+          });
+
+          sticky.state = sticky.states.bottom;
+          sticky.setOffset(sticky.waypoints.wp2, sticky.container.height + sticky.container.offsetTop - sticky.nav.height); // reset the offset for the top of the nav
+
+        } else if (dir==='up') {
+
+          if(sticky.isTallerThanContent) {
+            if (sticky.log) console.log('waypoint 4 action 2');
+            // if sticky is taller than the content, set it relative to the window
+            $(_this).css({
+              'position' : 'absolute',
+              'bottom' : '', 
+              'top' : $(window).scrollTop() - sticky.container.offsetTop
+            });
+          } else {
+            if (sticky.log) console.log('waypoint 4 action 3? window: ' + ($(window).scrollTop() + sticky.viewportHeight()) + ' containerH ' + (sticky.container.offsetTop + sticky.container.height)  );
+            // the extra -## is to add a little 'padding' – when content loads, WP4 will always hit on pageload
+            // adding this padding ensures WP2 gets triggered correctly (when scrolling back up)
+            if($(window).scrollTop() + sticky.viewportHeight() < sticky.container.offsetTop + sticky.container.height - 50) {
+              if (sticky.log) console.log('waypoint 4 action 3');
+              // gets triggered when viewport loads 'in the middle' of the page, so we stick the content into the viewport
+              $(_this).css({
+                'position' : 'absolute',
+                'bottom' : '', 
+                'top' : $(window).scrollTop() - sticky.container.offsetTop
+              });
+            }
+          }
+
+          sticky.state = sticky.states.middle;
+          sticky.direction = sticky.directions.up;
+
+        } 
+      }
+    }
+  }
+
+  // used when changing direction in between viewpoints
+  // Resize + Scroll debouncer from: http://benalman.com/code/projects/jquery-throttle-debounce/examples/throttle/
+  sticky.scroll = function () {
+
+    // direction changing in the 'middle'
+    if(sticky.state == sticky.states.middle) {
+      sticky.last_direction = sticky.direction;
+      sticky.direction = (sticky.last_scrollPosition < $(window).scrollTop()) ? sticky.directions.down : sticky.directions.up;
+
+      if (sticky.last_direction != sticky.direction) {
+        if (sticky.log) console.log('direction change --  last: ' + sticky.last_scrollPosition + ' new: ' + $(window).scrollTop())
+        sticky.refresh();
+        new_position = sticky.nav.offset().top;
+        absolute_position = new_position - sticky.container['offsetTop'];
+
+        if(sticky.isTallerThanViewport) {
+          $(sticky.nav).css({
+            'position' : 'absolute',
+            'top' : absolute_position
+          });
+        }
+      }
+    }
+    sticky.last_scrollPosition = $(window).scrollTop();
+
+
+
+
+    // if content is smaller than both nav and viewport, we can just stick it to the top...
+    if(sticky.content.height < sticky.nav.height && sticky.content.height < sticky.viewportHeight() ) {
+      sticky.content.css({
+        'width' : sticky.content.width,
+      })
+
+      // the extra 60 is manual padding for the 'search' area
+      if( ($(window).scrollTop() > sticky.container.offsetTop + 60)) {
+        
+        // if at bottom...
+        if ($(window).scrollTop() + sticky.content.outerHeight() > (sticky.container.offsetTop + sticky.container.outerHeight()) ) {
+          if(sticky.log) console.log('floating action – go to bottom');
+          sticky.content.css({
+            'position' : 'absolute',
+            'top' : '',
+            'bottom' : 0,
+            'width' : sticky.content.width,
+          })
+        } else {
+          if(sticky.log) console.log('floating action – stick!');
+          sticky.content.css({
+            'position' : 'fixed',
+            'top' : 0,
+            'bottom' : '',
+            'width' : sticky.content.width,
+          })
+        }
+      }
+      else {
+        if(sticky.log) console.log('floating action – go to top');
+        sticky.content.css({
+          'position' : 'static',
+          'top' : '',
+          'bottom' : '',
+          'width' : ''
+        })
+      }
+    }
+  }
+
+
+  sticky.refresh = function() {
+
+    if(sticky.log) console.log('Refreshing Sticky');
+
+    // we make sure the container is relative, or positioning won't work properly
+    sticky.container.css({
+      'position' : 'relative'
+    });
+
+    // force sticky.container to be as tall as either content or the nav
+    sticky.container.css({
+      'height' : (sticky.content.outerHeight() < sticky.nav.outerHeight()) ? sticky.nav.outerHeight() : sticky.content.outerHeight()
+    })
+
+    // calculate heights
+    sticky.container['height'] = sticky.container.outerHeight();
+    sticky.container['width'] = sticky.container.outerWidth();
+    sticky.container['offsetTop'] = sticky.container.offset().top; 
+    sticky.nav['height'] = sticky.nav.outerHeight();
+    sticky.content['height'] = sticky.content.outerHeight();
+    sticky.content['width'] = sticky.content.outerWidth();
+    sticky.content['offsetTop'] = sticky.content.offset().top; 
+    sticky.nav['offsetTop'] = sticky.nav.offset().top;
+    sticky.isTallerThanViewport = (sticky.viewportHeight() < sticky.nav.height) ? true : false; 
+    sticky.isTallerThanContent = (sticky.nav.height >= sticky.content.height) ? true : false;
+    // if (!isTallerThanViewport) {offset_end = last_element.height() - container_position + nav_height;}
+
+    // 
+    // OFFSET TRIGGERS
+    // offsets tell the waypoints when they should be triggered.
+    // all offsets are relative to the navigation menu, and will trigger waypoints
+    // – offset is the distance between top of viewport and top of the reference element
+    // 
+    sticky.offset = {
+      start:  0,        // very top of the container
+      top:    0,        // top of the sidebar element
+      bottom: sticky.viewportHeight() - sticky.nav.height,  // distance of bottom of viewport (viewport height) to the bottom of the nav      
+      end:    0 - sticky.container.height + (sticky.viewportHeight()) // distance of the bottom of container (container's height) to the bottom of the nav (nav height)
+    }
+    if (!sticky.isTallerThanViewport) {sticky.offset.end = 0 - sticky.container.height + sticky.nav.height;}
+    
+    // check if the menu is out of range (if the page loads in the middle and not at the top)
+    if (sticky.log) console.log('nav offsetTop: ' + sticky.nav.offset().top + ' window: ' + $(window).scrollTop() + ' navheight: ' + Math.abs(sticky.viewportHeight() - sticky.nav.height))
+
+    if(sticky.nav.offset().top < ($(window).scrollTop() - (Math.abs(sticky.nav.height))) ) {
+      if (sticky.log) console.log('refresh action stick to top / middle of page');
+      sticky.nav.css({
+        'position' : 'absolute',
+        'bottom' : '', 
+        'top' : $(window).scrollTop()
+      });
+    }
+
+
+    Waypoint.refreshAll();
+    // console.log(sticky)
+
+    // if nav is higher than content, we make sure the nav is static
+    if (sticky.isTallerThanContent) {
+      sticky.nav.css({
+        'position' : 'static',
+        'bottom' : '', 
+        'top' : 0
+      });
+    } 
+
+    // make sure the floating content area is back where it belongs
+
+    if(sticky.content.height < sticky.nav.height && sticky.content.height < sticky.viewportHeight() ) {
+
+    } else {
+      sticky.content.css({
+        'position' : 'static',
+        'top' : '',
+        'bottom' : '',
+        'width' : ''
+      })
+    }
+
+
+    // recalc scroll; make sure no circular
+    sticky.scroll();
+  }
+
+  // if page loads and the viewport is not at the top
+  sticky.init = function() {
+    sticky.refresh(); // first initialization
+    sticky.initWaypoints();
+  }
+
+  sticky.init();
+
+
+
+  // 
+  // de-duplication and error-correction
+  // 
+
+  // Resize + Scroll debouncer from: http://benalman.com/code/projects/jquery-throttle-debounce/examples/throttle/
+  $(window).resize( $.throttle( 130, window_resize ) );   // Bind the throttled handler to the resize event.
+
+  // this isn't strictly necessary but if window resizes or other things happen can force it to fix itself
+  $(window).scroll( $.throttle( 150, sticky.scroll ) );           // Bind the throttled handler to the scroll event.
+
+  function window_resize() {
+    // on resize needs to call the scroll function for a refresh, or all the waypoints will be wrong
+    sticky.refresh();
+  }
+
+  // when users focus back on the tab, they might have resized the browser.
+  $(window).focus(function() {
+    sticky.refresh();
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+  // 
+  // 
+  // 
+  //    TUMBLR CODE
+  // 
+  // 
+  // 
+
+
+
+
+
+  var _limit = 20; // load 20 is default posts every time
+
+  var __tags = [];
+
+
+  // The variable "tumblr_api_read" is now set.
+  // console.log('LOAD TUMBLR')
+  // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
+  // console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
+
+  // console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
+
+  // console.log(JSON.stringify(tumblr_api_read));
+  // console.log(tumblr_api_read);
+
+
+  var posts = [], latest = null, index = 0;
+  // Get tumblr post
+  function getTumblr(opt) {
+
+    // http://stackoverflow.com/questions/8264446/jquery-ajax-tumblr-api-v2
+    var params = "";
+    if(("offset" in opt) && ("limit" in opt)){params = "limit=" + opt.limit + "&offset=" + opt.offset;}
+
+
+    $.ajax({
+      type: 'GET',
+      url: "http://api.tumblr.com/v2/blog/ja-nz.tumblr.com/posts?" + params + "&api_key=inC0HuM2X45UqdQ6RhPJvRXoWEYJiH4JEcrsVD281MSdZUoLao",
+      async: false,
+      jsonpCallback: 'jsonCallback',
+      contentType: "application/json",
+      dataType: 'jsonp',
+      success: function(json, payload) {
+        if(json.response.posts.length != 0) {
+          posts.push(json.response.posts);
+          latest = json.response.posts[0];
+          // console.log(posts);
+          populate(posts[posts.length-1]);
+          populateTags(); // tags built in populate
+          filterInit();   // initialize tag bindings
+          // console.log('refreshing sticky again')
+          // sticky.refresh() // refresh the sidebar since content's changed
+        }
+      },
+      error: function(e) {
+        console.log(e.message);
+      }
+    });
+  }
+
+  getTumblr({limit: _limit, offset: 0});
+
+  // load more
+  $('.loadMore').click(function() {loadmore()});
+  function loadmore() {
+    filterReset(); // must reset, or the previously filtered posts will be gone!
+    sticky.refresh();
+    index = posts.length * _limit;
+    getTumblr({limit: _limit, offset: index});
+  }
+
+
+  function populate(postList) {
+    // always check if we've already rendered this info by checking w/ index
+    // console.log(postList)
+    let container = $('.post__tumblr');
+    postList.forEach(function(post, i) {
+
+      let source = post.source_url ? post.source_url : '#';
+      let excerpt = post.excerpt ? post.excerpt : '';
+
+      function getDescription(str) {
+        return (`<div class="post__description-container">
+                <div class="post__description">${str}</div>
+              </div>`)
+      }
+      let description = post.description ? getDescription(post.description) : '';
+
+              
+      let tags = post.tags ? post.tags.map( ( tag ) => {
+                __tags.push(tag); 
+                return (
+                  " <span class='tag'>#" + tag + "</span>"
+                )}) : '';
+      let publisher = post.publisher ? `<div class="post__publisher"><span class="post__date">${moment(post.date).format('L')}</span> | ${post.publisher}</div>` : '';
+      let title = post.title ? `<div class="post__title">${post.title}</div>` : '';
+          if (title == '' && post.text) title = "“" + post.text + "”"; // quotes won't have title
+          if (title == '' && post.caption) description = getDescription(post.caption); // caption display
+          if (title == '' && description == '' && post.summary) description = getDescription(post.summary); // fallback – not formatted but almost always visible; can be long, so coerced into the description area
+
+
+      let photos = post.photos ?  (
+                                    '<div class="post__photos">' +
+                                    post.photos.map( ( photo ) => {
+                                              if (photo.alt_sizes.length > 0) {
+                                                return (
+                                                  `<div class='photo'><img src='${photo.alt_sizes[1].url}'/></div>`
+                                                )
+                                              } else {
+                                                return (
+                                                  `<div class='photo'><img src='${photo.original_size.url}'/></div>`
+                                                )
+                                              }
+
+                                    })
+                                    + '</div>'
+                                  )
+
+                    : '';
+      if(post.type == 'video') {
+        photos = `<div class="post__photos">${post.player[post.player.length-1].embed_code}</div>`
+      }
+
+      container.append(`
+          <li class="list tumblr__item ${post.type} ">
+            <div class="post__info tagCategory">
+              <a href="${source}" target="_blank">
+                <div class="post__source clearfix">
+                  ${publisher}
+                  ${title}
+                  ${photos}
+                  <div class="post__source-description">
+                    <div class="post__excerpt">${excerpt}</div>
+                    <div class="post__tags__container">
+                      <ul class="post__tags">${tags}</ul>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              ${description}
+            </div>
+          </li>
+      `)
+    // NOTES
+
+    // Summary seems like the title repeated...? Excluding
+    // <div class="post-summary">${post.summary}</div>
+
+    //   $("#blog-more").append("<li><a href='"+ el.post_url +"'>"+ el.title +"</li>");
+    });
+
+  }
+
+  function populateTags() {
+
+    // rebuild all tags on every reload, since we might have duplicates, etc.
+
+
+    // sort tags
+    __tags = _.sortBy(__tags, function (i) { return i.toLowerCase(); });
+
+    // dedup and sort tags
+    __tags = _.uniq(__tags, true); 
+
+    // load next # posts and append to posts object
+    // console.log(__tags)
+
+    let container = $('.tag__list');
+    container.html('');
+
+    __tags.forEach(function(tag, i) {
+      container.append(`<li><span class="tag-filter" data-tag="${tag}">#${tag}</span></li>`)
+    });
+
+    // re-initialize sort for all the new contents
+    sticky.refresh() // refresh the sidebar since content's changed
+    
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // 
+  // FILTER SYSTEM
+  // 
+
+  // dashes won't work w/ list.js, have to use camel
+  // sorting for blog posts / uses List.js
+  var options = {
+      valueNames: [ 'tagCategory' ]
+  };
+
+  var tumblrList = {};
+
+  function filterBy(cat) {
+    // console.log('filter calling: ' + cat)
+    try {
+      tumblrList.filter(function(post) {
+        // console.log('matching filter: ' + post.values().tagCategory)
+        return post.values().tagCategory.includes(cat) ? true : false;
+      }); 
+    } catch(e) {
+      // do nothing
+    }
+  }
+
+  function filterReset() {
+    tumblrList.filter();
+    $('.sidebar').removeClass('tag-active');
+    $(".tag-filter").removeClass('tag-filter--active');
+  }
+
+  var titleDefault = $(".page__title").text();
+  // not MVC but whatever
+
+  // initialize all the tag bindings when data is loaded
+  function filterInit() {
+    // console.log('Iniitializing Filters')
+    tumblrList = new List('tumblrList', options);
+
+    // if(window.location.hash.length > 0) {
+    //   var hash = window.location.hash.substring(1);
+    //   filterBy(hash);
+    //   $(".tag-filter[data-tag='"+hash+"']").addClass('tag-filter--active');
+    //   sticky.refresh();
+    // }
+
+    // remove filters
+    // $(".filter-clear").bind('mouseup',function(e) {
+    //   window.location.hash = '';
+    //   filterReset();
+    //   $(".page__title").text(titleDefault);
+    //   $(".tag-filter").removeClass('tag-filter--active');
+    //   $('.sidebar').removeClass('tag-active');
+    // });
+
+    // click a filter
+    $(".tag-filter").bind('mouseup',function(e) {
+      if ($(this).hasClass('tag-filter--active')) {
+        // window.location.hash = '';
+        filterReset();
+        sticky.refresh();
+        $(".page__title").text(titleDefault);
+        $('.sidebar').removeClass('tag-active');
+        $(".tag-filter").removeClass('tag-filter--active');
+      } else {
+        // window.location.hash = $(this).data('tag');
+        $(".tag-filter").removeClass('tag-filter--active');
+        console.log('filtering by: ' + $(this).html())
+        filterBy($(this).html());
+        sticky.refresh();
+        $(this).addClass('tag-filter--active');
+        $('.sidebar').addClass('tag-active');
+        $(".page__title").text($(this).data('tag') + 's')
+      }
+    });
+
+    // tumblrList.filter();
+  }
+
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+

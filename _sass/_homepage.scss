@@ -102,6 +102,7 @@
       list-style-type: none;
       // padding-top: $base*2; padding-bottom: $base*2;
       @extend %ease;
+      @extend %sans-serif;
 
       //preview title hover effects
       &:hover {
@@ -128,6 +129,7 @@
       // &.work {
       //   display: none;
       // }
+
     }
     
 
@@ -149,7 +151,6 @@
 
     	// styles for previewing images in the list
     	@import "postPreviewImg";
-
 
           .post__info {
             // display: block; //the container covers the entire block, but each element should be inline-block for highlighting
@@ -226,11 +227,14 @@
             }
 
             .post__tags__container {
+              font-size: $size-preview-tag; 
+              display: inline; color: $lighter-gray;
+              font-weight: 300;
               .post__tags {
                 margin-left: 0;
-                li{
-                  @extend %serif; font-size: $size-preview-tag; 
-                  display: inline; color: $light-gray;
+                li {
+                  // @extend %serif; 
+                  display: inline;
                   &:before {content: '#'}
                   &:not(:last-child):after{content: ',';}
 
@@ -301,3 +305,8 @@
         }
 */
   // end Posts / Preview (index file)
+
+
+
+
+

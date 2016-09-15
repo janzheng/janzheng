@@ -10,6 +10,13 @@
   $invoice-small: $base*0.9;
   $invoice-larger: $base*3/2;
 
+
+  @media print {
+    * {
+      font-size: 9pt !important;
+    }
+  }
+
   //hide the mobile nav arrows
   .nav-mobile {
     display: none !important;
@@ -83,7 +90,7 @@
       padding-top: $base/2;
       padding-bottom: $base/2;
     }
-    
+
     @media print {
       margin-top: $base*2;
     }

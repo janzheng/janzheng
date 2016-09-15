@@ -1,7 +1,7 @@
 ---
 layout: layout-post
 title: Double the Donation
-summary: Increasing customer signups
+summary: Doubling customer signups with better content 
 <!-- external: # -->
 preview-css : post-preview-std post__imgPreview--cover
 
