@@ -48,6 +48,14 @@
     .sidebar {
       padding: $base 0;
 
+      .filter-clear {
+        cursor: pointer;
+        color: $red;
+        display: none;
+        &:hover {
+          color: $orange;
+        }
+      }
       .tag-filter {
         cursor: pointer;
         &:hover {
@@ -55,6 +63,10 @@
         }
       }
       &.tag-active {
+        .filter-clear {
+          display: block;
+          text-decoration: underline;
+        }
         .tag-filter {
           color: $lighter-gray;
         }

@@ -740,7 +740,7 @@ $(document).ready(function() {
     // console.log(__tags)
 
     let container = $('.tag__list');
-    container.html('');
+    container.html(`<li class="filter-clear">clear</li>`);
 
     __tags.forEach(function(tag, i) {
       container.append(`<li><span class="tag-filter" data-tag="${tag}">#${tag}</span></li>`)
@@ -822,13 +822,13 @@ $(document).ready(function() {
     // }
 
     // remove filters
-    // $(".filter-clear").bind('mouseup',function(e) {
-    //   window.location.hash = '';
-    //   filterReset();
-    //   $(".page__title").text(titleDefault);
-    //   $(".tag-filter").removeClass('tag-filter--active');
-    //   $('.sidebar').removeClass('tag-active');
-    // });
+    $(".filter-clear").bind('mouseup',function(e) {
+      window.location.hash = '';
+      filterReset();
+      $(".page__title").text(titleDefault);
+      $(".tag-filter").removeClass('tag-filter--active');
+      $('.sidebar').removeClass('tag-active');
+    });
 
     // click a filter
     $(".tag-filter").bind('mouseup',function(e) {

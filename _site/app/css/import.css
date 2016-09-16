@@ -430,7 +430,7 @@ kuler: Norse
   padding-top: 100px;
 }
 
-.post__title__container .post__title, .article__body__content .slider .rsGCaption, .article__body__content figure:not(.highlight) figcaption, .timeline__headline div > span, .timeline__client, body, html, .post, .post__date__container .post__date, .article__head__date, .container.bookmarks .tumblr__search, .container.bookmarks .sidebar__container {
+.post__title__container .post__title, .article__body__content .slider .rsGCaption, .article__body__content figure:not(.highlight) figcaption, .timeline__headline div > span, .timeline__client, body, html, .post, .post__date__container .post__date, .article__head__date, .bookmarks .tumblr__search, .bookmarks .sidebar__container {
   font-family: "Open Sans", "Helvetica Neue", arial, sans-serif;
 }
 
@@ -2677,225 +2677,237 @@ li ul {
   margin-left: 1rem;
 }
 
-.container.bookmarks {
+.bookmarks {
   padding-left: 2rem;
   padding-right: 2rem;
 }
 @media screen and (max-width: 479px) {
-  .container.bookmarks .article__body__content {
+  .bookmarks .article__body__content {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .article__body__content:last-child {
+  .bookmarks .article__body__content:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .container.bookmarks .article__body__content {
+  .bookmarks .article__body__content {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .article__body__content:last-child {
+  .bookmarks .article__body__content:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 767px) {
-  .container.bookmarks .article__body__content {
+  .bookmarks .article__body__content {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .article__body__content:last-child {
+  .bookmarks .article__body__content:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 980px) {
-  .container.bookmarks .article__body__content {
+  .bookmarks .article__body__content {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .article__body__content:last-child {
+  .bookmarks .article__body__content:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 480px) {
-  .container.bookmarks .article__body__content {
+  .bookmarks .article__body__content {
     margin-left: 0%;
   }
 }
-.container.bookmarks .tumblr__search {
+.bookmarks .tumblr__search {
   padding: 1rem;
   width: 100%;
 }
-.container.bookmarks .main__container {
+.bookmarks .main__container {
   padding-left: 0;
 }
 @media screen and (max-width: 479px) {
-  .container.bookmarks .main__container {
+  .bookmarks .main__container {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .main__container:last-child {
+  .bookmarks .main__container:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .container.bookmarks .main__container {
+  .bookmarks .main__container {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .main__container:last-child {
+  .bookmarks .main__container:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 767px) {
-  .container.bookmarks .main__container {
+  .bookmarks .main__container {
     float: left;
     display: block;
     margin-right: 0%;
     width: 75%;
   }
-  .container.bookmarks .main__container:last-child {
+  .bookmarks .main__container:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 980px) {
-  .container.bookmarks .main__container {
+  .bookmarks .main__container {
     float: left;
     display: block;
     margin-right: 0%;
     width: 75%;
   }
-  .container.bookmarks .main__container:last-child {
+  .bookmarks .main__container:last-child {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 479px) {
-  .container.bookmarks .tumblr__load {
+  .bookmarks .tumblr__load {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .tumblr__load:last-child {
+  .bookmarks .tumblr__load:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .container.bookmarks .tumblr__load {
+  .bookmarks .tumblr__load {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .tumblr__load:last-child {
+  .bookmarks .tumblr__load:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 767px) {
-  .container.bookmarks .tumblr__load {
+  .bookmarks .tumblr__load {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .tumblr__load:last-child {
+  .bookmarks .tumblr__load:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 980px) {
-  .container.bookmarks .tumblr__load {
+  .bookmarks .tumblr__load {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .tumblr__load:last-child {
+  .bookmarks .tumblr__load:last-child {
     margin-right: 0;
   }
 }
-.container.bookmarks .sidebar__container {
+.bookmarks .sidebar__container {
   padding-left: 2rem;
   font-size: 0.9rem;
   line-height: 1.4rem;
   display: none !important;
 }
 @media screen and (max-width: 479px) {
-  .container.bookmarks .sidebar__container {
+  .bookmarks .sidebar__container {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%;
   }
-  .container.bookmarks .sidebar__container:last-child {
+  .bookmarks .sidebar__container:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  .container.bookmarks .sidebar__container {
+  .bookmarks .sidebar__container {
     float: left;
     display: block;
     margin-right: 0%;
     width: 25%;
   }
-  .container.bookmarks .sidebar__container:last-child {
+  .bookmarks .sidebar__container:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 767px) {
-  .container.bookmarks .sidebar__container {
+  .bookmarks .sidebar__container {
     float: left;
     display: block;
     margin-right: 0%;
     width: 25%;
   }
-  .container.bookmarks .sidebar__container:last-child {
+  .bookmarks .sidebar__container:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 980px) {
-  .container.bookmarks .sidebar__container {
+  .bookmarks .sidebar__container {
     float: left;
     display: block;
     margin-right: 0%;
     width: 25%;
   }
-  .container.bookmarks .sidebar__container:last-child {
+  .bookmarks .sidebar__container:last-child {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 767px) {
-  .container.bookmarks .sidebar__container {
+  .bookmarks .sidebar__container {
     display: block !important;
   }
 }
-.container.bookmarks .sidebar__container .sidebar {
+.bookmarks .sidebar__container .sidebar {
   padding: 1rem 0;
 }
-.container.bookmarks .sidebar__container .sidebar .tag-filter {
+.bookmarks .sidebar__container .sidebar .filter-clear {
+  cursor: pointer;
+  color: #972020;
+  display: none;
+}
+.bookmarks .sidebar__container .sidebar .filter-clear:hover {
+  color: #FF530D;
+}
+.bookmarks .sidebar__container .sidebar .tag-filter {
   cursor: pointer;
 }
-.container.bookmarks .sidebar__container .sidebar .tag-filter:hover {
+.bookmarks .sidebar__container .sidebar .tag-filter:hover {
   color: #FF530D !important;
 }
-.container.bookmarks .sidebar__container .sidebar.tag-active .tag-filter {
+.bookmarks .sidebar__container .sidebar.tag-active .filter-clear {
+  display: block;
+  text-decoration: underline;
+}
+.bookmarks .sidebar__container .sidebar.tag-active .tag-filter {
   color: #aaa;
 }
-.container.bookmarks .sidebar__container .sidebar.tag-active .tag-filter--active {
+.bookmarks .sidebar__container .sidebar.tag-active .tag-filter--active {
   color: #972020;
 }
-.container.bookmarks .sidebar__container .tag__list li {
+.bookmarks .sidebar__container .tag__list li {
   font-size: 0.7rem;
   line-height: 1.5rem;
   display: block;
