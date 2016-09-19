@@ -14,12 +14,15 @@
     display: block;
     padding-bottom: 6px;
     width: 0;
-    background-color: $hover_color;
     opacity: 0.4;
     position: absolute;
     bottom: 0;
     height: 90%;
+
     // border-bottom: 2px solid $red;
+    @include media($break-nav-thin-atleast) {
+      background-color: $hover_color;
+    }
   }
 }
 
@@ -31,11 +34,14 @@
     padding-bottom: 6px;
     width: 100%;
     // border-bottom: 2px solid $red;
-    background-color: $hover_color;
     opacity: 0.4;
     position: absolute;
     bottom: 0;
     height: 90%;
+
+    @include media($break-nav-thin-atleast) {
+      background-color: $hover_color;
+    }
   }
 }
 
@@ -48,8 +54,13 @@
   }
   @include media($break-nav-thin-atleast) {
     width: $width-nav-menu;
-    position: fixed; left: 0;
+    position: fixed;
+    height: 100%;
+    overflow: scroll;
     // height: 80%; 
+  }
+  @include media($break-nav-wide-atleast) {
+    position: fixed; left: 0;
   }
 
 }
@@ -158,7 +169,7 @@
   				cursor: pointer; 
   				// slight movement animation to icons and label
   				// @include media($break-nav-wide-atleast) {padding-left: 10px; }
-  				@include media($break-nav-mobile) {padding-top: 2px; }
+  				// @include media($break-nav-mobile) {padding-top: 2px; }
 
           .icon { @extend .icon--hoverOn; } // turn on hover mode
 
@@ -174,9 +185,35 @@
     				&.nav__bookmarks .nav__label { color: $bookmarks; border-bottom: 2px solid rgba($bookmarks,1) }
           }
         }
-        &.nav__blog.active  { .icon { @extend .icon--hoverOn; } .nav__label { color: $blog; border-bottom: 2px solid rgba($blog,1) } }
-        &.nav__about.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $about; border-bottom: 2px solid rgba($about,1) } }
-        &.nav__bookmarks.active { .icon { @extend .icon--hoverOn; } .nav__label { color: $bookmarks; border-bottom: 2px solid rgba($bookmarks,1) } }
+
+        
+        &.nav__blog.active  { 
+          .icon { @extend .icon--hoverOn; }  
+          .nav__label { 
+            color: $blog; 
+            @include media($break-nav-thin-atleast) {
+              border-bottom: 2px solid rgba($blog,1) 
+            } 
+          } 
+        }
+        &.nav__about.active  { 
+          .icon { @extend .icon--hoverOn; }  
+          .nav__label { 
+            color: $about; 
+            @include media($break-nav-thin-atleast) {
+              border-bottom: 2px solid rgba($about,1) 
+            } 
+          } 
+        }
+        &.nav__bookmarks.active  { 
+          .icon { @extend .icon--hoverOn; }  
+          .nav__label { 
+            color: $bookmarks; 
+            @include media($break-nav-thin-atleast) {
+              border-bottom: 2px solid rgba($bookmarks,1) 
+            } 
+          } 
+        }
         
       }
 
