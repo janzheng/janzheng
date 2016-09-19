@@ -16,7 +16,7 @@ source: /app/posts/bookmarks
   <!-- .list is used with List.js -->
   <div class="main__container">
     <div id="tumblrList">
-      <input class="tumblr__search search" placeholder="Search" />
+      <input pattern=".*\S.*" class="tumblr__search search" placeholder="Search" />
       <ul class="post post__tumblr list">
       </ul>
     </div>
@@ -183,7 +183,7 @@ $(document).ready(function() {
 
   // All calculations initiated in reset()
 
-  sticky.viewportHeight = () => (Waypoint.viewportHeight());
+  sticky.viewportHeight = function() {return(Waypoint.viewportHeight())};
 
   sticky.setWaypoint = function(element, offset, handler) {
     return new Waypoint({
@@ -499,6 +499,7 @@ $(document).ready(function() {
     }
 
 
+
     Waypoint.refreshAll();
     // console.log(sticky)
 
@@ -584,6 +585,11 @@ $(document).ready(function() {
 
   var _limit = 20; // load 20 is default posts every time
 
+  // Load fewer posts on mobile
+  if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    _limit = 5;
+  }
+
   var __tags = [];
 
 
@@ -632,7 +638,11 @@ $(document).ready(function() {
     });
   }
 
+  // Iniitialize Tumblr
   getTumblr({limit: _limit, offset: 0});
+
+
+
 
   // load more
   $('.loadMore').click(function() {loadmore()});
@@ -647,35 +657,35 @@ $(document).ready(function() {
   function populate(postList) {
     // always check if we've already rendered this info by checking w/ index
     // console.log(postList)
-    let container = $('.post__tumblr');
+    var container = $('.post__tumblr');
     postList.forEach(function(post, i) {
 
-      let source = post.source_url ? post.source_url : '#';
-      let excerpt = post.excerpt ? post.excerpt : '';
+      var source = post.source_url ? post.source_url : '#';
+      var excerpt = post.excerpt ? post.excerpt : '';
 
       function getDescription(str) {
         return (`<div class="post__description-container">
                 <div class="post__description">${str}</div>
               </div>`)
       }
-      let description = post.description ? getDescription(post.description) : '';
+      var description = post.description ? getDescription(post.description) : '';
 
               
-      let tags = post.tags ? post.tags.map( ( tag ) => {
+      var tags = post.tags ? post.tags.map( function( tag ) {
                 __tags.push(tag); 
                 return (
                   " <span class='tag'>#" + tag + "</span>"
                 )}) : '';
-      let publisher = post.publisher ? `<div class="post__publisher"><span class="post__date">${moment(post.date).format('L')}</span> | ${post.publisher}</div>` : '';
-      let title = post.title ? `<div class="post__title">${post.title}</div>` : '';
+      var publisher = post.publisher ? `<div class="post__publisher"><span class="post__date">${moment(post.date).format('L')}</span> | ${post.publisher}</div>` : '';
+      var title = post.title ? `<div class="post__title">${post.title}</div>` : '';
           if (title == '' && post.text) title = "“" + post.text + "”"; // quotes won't have title
           if (title == '' && post.caption) description = getDescription(post.caption); // caption display
           if (title == '' && description == '' && post.summary) description = getDescription(post.summary); // fallback – not formatted but almost always visible; can be long, so coerced into the description area
 
 
-      let photos = post.photos ?  (
+      var photos = post.photos ?  (
                                     '<div class="post__photos">' +
-                                    post.photos.map( ( photo ) => {
+                                    post.photos.map( function( photo ) {
                                               if (photo.alt_sizes.length > 0) {
                                                 return (
                                                   `<div class='photo'><img src='${photo.alt_sizes[1].url}'/></div>`
@@ -739,7 +749,7 @@ $(document).ready(function() {
     // load next # posts and append to posts object
     // console.log(__tags)
 
-    let container = $('.tag__list');
+    var container = $('.tag__list');
     container.html(`<li class="filter-clear">clear</li>`);
 
     __tags.forEach(function(tag, i) {

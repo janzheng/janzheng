@@ -24,6 +24,10 @@
     width: 100%;
     // margin-bottom: $base;
     @extend %sans-serif;
+    outline: none;
+
+    // &:invalid { outline: solid red 2px; }
+    // &:valid { outline: solid blue 2px; }
   }
 
   .main__container {
@@ -160,7 +164,14 @@
 
   }
 
+
+  @-webkit-keyframes appear { from { opacity:0; } to { opacity:1; } }
+  @-moz-keyframes appear { from { opacity:0; } to { opacity:1; } }
+  @keyframes appear { from { opacity:0; } to { opacity:1; } }
+
   .tumblr__item {
+    animation: appear .6s forwards;
+
     &:first-of-type {
       .post__info {
         margin-top: 0;
