@@ -18,6 +18,13 @@ type : blog
 ---
 
 
+<div class="callout">
+  <div class="callout--row">
+     <span class="content">Note: This article was modified and republished on Medium as <a href="https://medium.com/@janistanian/tumblr-is-the-best-bookmark-manager-e137a0354895#.adjexwz8r">Using Tumblr for Bookmarks</a></span>
+  </div>
+</div>
+
+
 ## A World of Bookmark Managers
 
 There are probably more bookmark managers out there than we really need. I'm a former Delicious user and I've been using [Diigo](http://diigo.com) for a few years, and it works fairly well. I also use Chrome, and I like the way Google synchronizes my bookmarks across all my devices.

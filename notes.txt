@@ -2,6 +2,8 @@
 
 todo
 ------------
+– accessibility: wrap timeline__list as <a> so keyboard tabbing works through them
+
 - about
 	- move all the work into about page
 	- year dates overlap on smaller screens- hide them sooner
