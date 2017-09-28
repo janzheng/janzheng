@@ -161,20 +161,20 @@ $(document).ready(function() {
     // Smooth scrolling for internal links
     $("a[href^='#']").click(function(event) {
       event.preventDefault();
-      
+
       var $this = $(this),
       target = this.hash,
       $target = $(target);
-      
-      if( !(typeof $target.offset() === "undefined")) {
+      offset = $this.data('offset-scroll') || 0; // <... data-offset-scroll="400"> 
+
+      if( typeof $target.offset() !== "undefined") {
         $(scrollElement).stop().animate({
-          'scrollTop': $target.offset().top
+          'scrollTop': $target.offset().top + offset
         }, 500, 'swing', function() {
           window.location.hash = target;
         });
       }
     });
-
 
 
 // ************************************************************
