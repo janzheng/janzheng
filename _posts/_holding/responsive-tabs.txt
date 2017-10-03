@@ -1,6 +1,0 @@
-http://webtrendset.com/demo/easy-responsive-tabs/Index.html
-
-- side by side, top/down, icon tabs
-- roll into accordion, or sidebyside
-- data / icon grid
-- flexible jquery, extensible

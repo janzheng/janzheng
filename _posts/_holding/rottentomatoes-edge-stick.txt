@@ -1,5 +1,0 @@
-http://www.rottentomatoes.com/m/superman-man-of-steel/
-
-note how the left column is too big for most windows
-
-scrolling down the page will make the left column stick to the browser (fixed position), but since the panel is too large, scrolling down the page will reveal only the bottom=most area of the panel. Scrolling up will scroll the panel up and stick at the top of the panel, thus only showing the top of the panel. Interesting...
