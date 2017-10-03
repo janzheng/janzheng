@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+  <head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="google" content="notranslate">
+  <meta http-equiv="Content-Language" content="en">
+  <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+  <!-- Use the title from a page's frontmatter if it has one -->
+  <!-- <title>Middleman</title> -->
+
+  <link rel="icon" type="image/png" href="images/me-6b16620f.png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  <!-- 
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet"> -->
+
+  <!-- because middleman is too dumb- for build -->
+  <script src="javascripts/jquery.min-ae49e569.js"></script>
+  <script src="javascripts/site-95a51d89.js?=v0.259"></script>
+  <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
+  <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
+  <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
+  <link href="stylesheets/site-370aea7b.css?=v0.742" rel="stylesheet">
+
+
+
+  <!-- because middleman is too dumb- for server -->
+  <!-- <script src="javascripts/jquery.min-ae49e569.js"></script>
+  <script src="javascripts/site-95a51d89.js?=v0.259"></script>
+  <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
+  <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
+  <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
+  <link href="stylesheets/site-370aea7b.css?=v0.742" rel="stylesheet">
+ -->
+
+  <link href="stylesheets/site-370aea7b.css" rel="stylesheet" />
+  <script src="javascripts/site-95a51d89.js"></script>
+    <title>jan zheng—product designer</title>
+  </head>
+  <body>
+    
+<div class="_hero-page">
+
+  <section class="_hero _color-bg-blue-light ">
+    <figure>
+      <!-- <img src="./images/pic4_2.jpg"> -->
+      <!-- <img src="https://unsplash.it/1300/700/"> -->
+    </figure>
+    <div class="_hero-content _content ">
+      <div class="_grid-one _margin-center _width-content-max-narrow ">
+       <h2 class="_margin-top-none _font-light _color-whiter">Companies we are <br /><strong>proud to have served.</strong></h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="_container-large _content _color-bg-silver-lighter _padding-bottom-large ">
+    <div class=" _margin-center _width-content-max-narrow">
+      <h3 class="_font-light _header ">We have worked with some clients for <span class="_font-normal">over a decade.</span> We blame it on our <span class="_font-normal"> customer experience.</span></h3>
+
+      <p class="_padding-top">
+        Over the years, we’ve accomplished some amazing things for clients both large and small. Here are just a select few companies we’ve worked for:
+      </p>
+
+      <div class="_padding-top-2">
+        
+<div class="owl-carousel _carouselGrid">
+  <div> 
+    <img src="./images/clients/CoxDark.png" alt="Cox" /> 
+  </div>
+  <div> 
+    <img src="./images/clients/PorterNovelliDark.png" alt="Porter Novelli" />
+  </div>
+  <div> 
+    <img src="./images/clients/DekalbDark.png" alt="Dekalb Chamber of Commerce" />
+  </div>
+  <div> 
+    <img src="./images/clients/GradyDark.png" alt="Grady" />
+  </div>
+  <div> 
+    <img src="./images/clients/JVCDark.png" alt="JVC" />
+  </div>
+  <div> 
+    <img src="./images/clients/TurnerDark.png" alt="Turner" />
+  </div>
+  <div> 
+    <img src="./images/clients/ComplyRXDark.png" alt="ComplyRX" />
+  </div>
+  <div> 
+    <img src="./images/clients/GroupHousingDark.png" alt="Group Housing" />
+  </div>
+  <div> 
+    <img src="./images/clients/UFDark.png" alt="University of Florida" />
+  </div>
+</div>
+
+<script>
+  var carousel = $(".owl-carousel");
+  var timer;
+
+  function initOwl() {
+    window.clearInterval(timer);
+
+    if( $(window).width() < 768) 
+    { // ensure mobile, or we display everything     
+      carousel.owlCarousel({loop: true});
+      
+      // auto play
+      timer = setInterval(function(){ 
+        carousel.trigger('next.owl.carousel'); 
+      }, 3000);
+    } else {
+      carousel.trigger('destroy.owl.carousel');
+    }
+  }
+  $(document).ready(function() {
+    initOwl();
+  });
+  $( "html" ).change(function() {
+    initOwl();
+  });
+
+  jQuery(window).on('resize', _.throttle(initOwl, 500));
+
+</script>
+
+
+      </div>
+    </div>
+  </section>
+
+  <div class="">
+    <!-- <h3 class="_font-light _padding-top-2">Select Clients </h3> -->
+
+    <div id="gh" class="_case _content">
+      <div class="_grid-one-four _width-content-max-narrow _margin-center">
+        <div class="_case-logo">
+          <img src="./images/clients/GroupHousingDark.png" alt="Group Housing" />
+        </div>
+        <div class="_case-copy">
+          <h4>Group Housing</h4>
+          <div class="_case-tags">??, ??</div>
+          <p>
+            ????
+          </p>
+          <div class="_case-test">
+            <p>
+              "These web experts went above and beyond to help make my new company. The new company would not have made it if it wasn't for Webxperts and the true dedication they have for their clients. The best group of people that I have ever worked with and will always recommend."
+            </p>
+            <div class="_case-test-author">
+              — Group Housing, Michael Bower
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="complyrx" class="_case _content">
+      <div class="_grid-one-four _width-content-max-narrow _margin-center">
+        <div class="_case-logo">
+          <img src="./images/clients/ComplyRXDark.png" alt="ComplyRX" />
+        </div>
+        <div class="_case-copy">
+          <h4>Comply RX</h4>
+          <div class="_case-tags">iOS, Android &amp; Mobile dev</div>
+          <p>
+            Managed over 20 mobile (iOS and Android) apps, added functionality, maintained complicated hosting environment
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="dekalb" class="_case _content">
+      <div class="_grid-one-four _width-content-max-narrow _margin-center">
+        <div class="_case-logo">
+          <img src="./images/clients/DekalbDark.png" alt="Dekalb County Magistrate Court" />
+        </div>
+        <div class="_case-copy">
+          <h4>DeKalb County Chamber of Commerce</h4>
+          <div class="_case-tags">Web design, Localization</div>
+          <p>
+            What have you done for the DK Chamber of Commerce??
+          </p>
+          <div class="_case-test">
+            <p>
+              "Web Experts has been my organization's web designer and we found them to be thorough, well informed and on the cutting edges of web development, SEO and the Internet in general. The Web Experts team are out of the box thinkers that will constantly push the envelope. They make a great addition to any marketing/business development team."
+            </p>
+            <div class="_case-test-author">
+              — L McClarty, The DeKalb Chamber of Commerce, Decatur, GA
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="turner" class="_case _content">
+      <div class="_grid-one-four _width-content-max-narrow _margin-center">
+        <div class="_case-logo">
+          <img src="./images/clients/TurnerDark.png" alt="ComplyRX" />
+        </div>
+        <div class="_case-copy">
+          <h4>Turner Enterprises</h4>
+          <div class="_case-tags">Web design, Localization</div>
+          <p>
+            Turner Enterprises, Inc. needed a custom content management system along with a redesigned website that would allow them to display all the the business interests, land holdings and investments of Ted Turner, as well as his philanthropic and charitable interests.
+          </p>
+          <div class="_case-test">
+            <p>
+              "Web Experts are very skilled IT professionals that I have had the pleasure of working with at Turner Broadcasting and S.E. Services. They are wonderful with clients and come up with innovative, detailed solutions. I continue to call on them when expertise is needed! They are extremely dependable and have great follow through as well."
+            </p>
+            <div class="_case-test-author">
+              — Turner Broadcasting
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="cox" class="_case _content">
+      <div class="_grid-one-four _width-content-max-narrow _margin-center">
+        <div class="_case-logo">
+          <img src="./images/clients/CoxDark.png" alt="Cox" />
+        </div>
+        <div class="_case-copy">
+          <h4>Cox Business Services</h4>
+          <div class="_case-tags">Web design, Localization</div>
+          <p>
+            Cox business services website, contact system, B2C to learn about services offered; intranet nationwide, B2B, allowed diff. Entities to share best practices... ??
+          </p>
+          <div class="_case-test">
+            <p>
+              "Web Experts has done an outstanding job developing and supporting our business site. From their initial recommendations on building an effective site, to their ongoing support and ideas on how to make the site better for users, they have continued to demonstrate a "can-do" attitude and willingness to go the extra mile. Their insight into technology and applications gave us the capability to manage our site with very little maintenance while providing a robust database for lead generation and profiling."
+            </p>
+            <div class="_case-test-author">
+              — Cox Business Services
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="grady" class="_case _content">
+      <div class="_grid-one-four _width-content-max-narrow _margin-center">
+        <div class="_case-logo">
+          <img src="./images/clients/GradyDark.png" alt="Cox" />
+        </div>
+        <div class="_case-copy">
+          <h4>Grady Health System</h4>
+          <div class="_case-tags">Web design</div>
+          <p>
+            Web Experts created and hosted Grady Health System's primary website, the Henry W. Grady Foundation's website, the Grady Schools of Radiology's website and a built a custom, large scale procurement application for the in-house Procurement Department and its vendors.
+          </p>
+          <div class="_case-test">
+            <p>
+              "Web Experts was able to launch Grady Health System's website and develop a complex online vendor application for our Purchasing department. They brought our site back up within 6 hours after it was hacked on a Saturday night. They also provided hosting for a few of our subsidiaries. They are fast, accurate, detail-oriented and an excellent service value in my book."
+            </p>
+            <div class="_case-test-author">
+              — K Frashier, Grady Health System, Atlanta GA
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
+
+  </body>
+</html>
