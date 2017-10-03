@@ -1,0 +1,37 @@
+
+
+$code-size: $base-smaller;
+$code-color-bg: $color-ui;
+$code-radius: $radius;
+
+
+$code-color-bg-darker: $color-ui-dark;
+
+code {
+  font-size: $code-size;
+  padding: $base/2 $base;
+  background-color: $code-color-bg;
+  // line-height: $base-p4;
+  white-space: pre-wrap;
+}
+
+pre {
+  // code block
+  background-color: $code-color-bg;
+  // padding-left: 0;
+  
+  border-radius: $code-radius;
+  margin-bottom: $base;
+  code {
+    line-height: $base !important;
+    padding-left: 0 !important;
+  }
+}
+
+
+// special circumstances
+._message {
+  code, pre {
+    background-color: $code-color-bg-darker;
+  }
+}

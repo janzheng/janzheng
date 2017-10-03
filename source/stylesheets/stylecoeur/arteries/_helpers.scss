@@ -1,0 +1,356 @@
+
+
+
+
+
+// 
+//    TAG POSITIONING
+// 
+
+._block {
+  display: block;
+}
+
+._inline {
+  display: inline !important;
+}
+
+
+
+// 
+//    DISPLAY STYLES
+// 
+
+._hidden {
+  display: none !important;
+}
+  ._hidden-xs {
+    @include screen-xs-only {
+      display: none;
+    }
+  }
+  ._hidden-sm-down {
+    @include screen-sm-down {
+      display: none;
+    }
+  }
+._pointer {
+  cursor: pointer;
+}
+._transparent {
+  opacity: 0.001; // setting to 0 invokes browser bugs
+}
+
+
+// 
+//    HEIGHT
+// 
+._width-full {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+
+
+// 
+//    SPACING, MARGINS, PADDING
+// 
+
+%margin-section {
+  margin: $base*3 auto;
+}
+
+
+
+// 
+//    MARGIN
+// 
+
+._margin-half {
+  margin-top: $base/2;
+  margin-bottom: $base/2;
+}
+._margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+._margin-none {
+  margin: 0 !important;
+}
+  ._margin-top {
+    margin-top: $base;
+  }
+    ._margin-top-none {
+      margin-top: 0 !important;
+    }
+    ._margin-top-2 {
+      margin-top: $base*2;
+    }
+
+  ._margin-bottom {
+    margin-bottom: $base;
+  }
+    ._margin-2-i {
+      margin: 0 $base*2 !important;
+    }
+    ._margin-bottom-i {
+      margin-bottom: $base !important;
+    }
+    ._margin-bottom-none {
+      margin-bottom: 0 !important;
+    }
+    ._margin-bottom-2 {
+      margin-bottom: $base*2;
+    }
+    ._margin-bottom-xs {
+      @include screen-xs-only {
+        margin-bottom: $base;
+      }
+    }
+
+  ._margin-left {
+    margin-left: $base;
+  }
+    ._margin-left-2 {
+      margin-left: $base*2;
+    }
+    ._margin-left_none {
+      margin-left: 0 !important;
+    }
+
+  ._margin-right {
+    margin-right: $base;
+  }
+    ._margin-right-2 {
+      margin-right: $base*2;
+    }
+    ._margin-right-none {
+      margin-right: 0 !important;
+    }
+
+
+// 
+//    PADDING
+// 
+
+%padding-container-top {
+  padding-top: $base*3;
+}
+
+%padding-container-bottom {
+  padding-top: $base*3;
+}
+
+%padding-section {
+  // padding: $base*3;
+  padding-bottom: $base*3;
+}
+
+._padding-top-bottom {
+  padding-top: $base;
+  padding-bottom: $base;
+}
+._padding-top-bottom-2 {
+  padding-top: $base*2;
+  padding-bottom: $base*2;
+}
+
+._padding-none {
+  padding: 0 !important;
+}
+  ._padding {
+    padding: $base
+  }
+    ._padding-2 {
+      padding: $base*2;
+      &-i {
+        padding: $base*2 !important;
+      }
+    }
+  ._padding-half {
+    padding: $base/2;
+  }
+  ._padding-top {
+    padding-top: $base;
+  }
+    ._padding-top-sm {
+      @include screen-sm {
+        padding-top: $base;
+      }
+    }
+    ._padding-top-2 {
+      padding-top: $base*2;
+    }
+    ._padding-top-3 {
+      padding-top: $base*3;
+    }
+    ._padding-top-half {
+      padding-top: $base/2;
+    }
+    ._padding-top-none {
+      padding-top: 0;
+    }
+  ._padding-bottom {
+    padding-bottom: $base;
+  }
+    ._padding-bottom-large {
+      padding-bottom: 12vh;
+    }
+    ._padding-bottom-none {
+      padding-bottom: 0;
+      &.--i { padding-bottom: 0 !important;}
+    }
+      ._padding-bottom-none-i {
+        padding-bottom: 0 !important;
+      }
+    ._padding-bottom-half {
+      padding-bottom: $base/2;
+    }
+    ._padding-bottom-2 {
+      padding-bottom: $base*2;
+    }
+    ._padding-bottom-xs {
+      @media (max-width: $width-xs-max) {
+        padding-bottom: $base !important;
+      }
+    }
+    ._padding-bottom-sm_up {
+      @media (min-width: $width-sm-min) {
+        padding-bottom: $base !important;
+      }
+    }
+
+      ._padding-bottom-three-xs {
+        @include screen-xs {
+          padding-bottom: $base*3;
+        }
+      }
+
+    ._padding-bottom-none {
+      padding-bottom: 0;
+    }
+  ._padding-left-right {
+    padding-left: $base/2;
+    padding-right: $base/2;
+  }
+
+  ._padding-right {
+    padding-right: $base;
+  }
+    ._padding-right-half {
+      padding-right: $base/2;
+    }
+    ._padding-right-none {
+      padding-right: 0;
+    }
+  ._padding-left {
+    padding-left: $base;
+  }
+    ._padding-left-2 {
+      padding-left: $base*2;
+    }
+    ._padding-left-half {
+      padding-left: $base/2;
+    }
+    ._padding-left_none {
+      padding-left: 0 !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+// 
+//    ALIGNMENT 
+// 
+// 
+
+._center {
+  text-align: center;
+}
+  ._center-xs {
+    @media (max-width: $width-xs-max) {
+      text-align: center !important;
+    }
+  }
+._left {
+  text-align: left;
+}
+._right {
+  text-align: right;
+}
+  ._right-sm,
+  ._right-unless-xs {
+    text-align: right;
+    @media (max-width: $width-xs-max) {
+      text-align: inherit;
+    }
+  }
+
+._justify {
+  text-align: justify;
+}
+
+
+._float-right {
+  float: right;
+}
+
+._clear-both {
+  clear: both;
+}
+
+
+
+
+// prevents double click highlighting
+// use on buttons and text CTAs
+%user-select-none {
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+%hide-scrollbar{
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { 
+      display: none; 
+   }
+}
+
+._v-top {
+  vertical-align: top;
+}
+._v-middle {
+  vertical-align: middle;
+}
+._v-bottom {
+  vertical-align: bottom;
+}
+
+
+
+
+

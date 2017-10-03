@@ -1,0 +1,233 @@
+
+
+// 
+//    BUTTONS
+// 
+
+/*
+
+    Attempt to give all buttons the same height.
+    - but don't really worry about baseline for now
+    - define solid-color buttons w/ same-color borders
+
+    Regular / Solid Button
+    - solid color background
+    - 
+
+    Pill Button
+    - similar to regular button but narrower with larger radius
+
+    Outline Button
+    - thick colored outline
+    - text color usually same as outline
+    - 'transparent' center (same color as bg)
+
+    Text / Transparent Button
+    - looks a lot like a link rather than button
+    - transparent bg and border
+    - on hover effects can give it more button-y looks
+      - border or underline on hover
+    - sometimes good to inherit button dimensins for baseline
+
+
+
+    Colors & Styles
+    - the standard buttons are black/white
+
+*/
+
+$button-border-width:           $border-thin;
+$button-border-radius:          $radius;
+
+
+
+// default variation
+
+$button-color-main:             $color-white;
+$button-color-bg:               $color-copy;
+$button-color-main-hover:       $button-color-main;
+$button-color-bg-hover:         $color-gray;
+
+
+// pill
+
+$button-pill-radius:            $radius-lg;
+
+
+// outline
+$button-outline-border:             $border-thin;
+$button-outline-color-main:         $color-copy;
+$button-outline-color-border:       $color-copy;
+$button-outline-color-bg:           transparent; // $color-black;
+$button-outline-color-main-hover:   $color-gray-lighter;
+$button-outline-color-border-hover: $color-gray-lighter;
+$button-outline-color-bg-hover:     transparent;
+
+
+
+
+%button-shadow {
+  box-shadow: 3px 3px 6px rgba($color-black, 0.3);
+}
+%button-shadow-hover {
+  box-shadow: 3px 3px 6px rgba($color-black, 0.44);
+}
+
+
+%button {
+  cursor: pointer;
+  @extend %ease;
+  outline: none;
+  display: inline-block; 
+
+  margin-bottom: $base;
+  margin-right: $base;
+
+  &:last-child { 
+    margin-right: 0; // margin in a row of buttons
+  }
+
+  background-color: transparent;
+  border-width: $button-border-width;
+  border-style: solid; 
+  border-radius: $button-border-radius;
+  // border: 0; // transparent border for regular buttons
+  border-color: transparent;
+  padding: ($base - 0.5) $base*3/2;
+
+  // @extend %font-sans;
+}
+
+
+button,
+._button {
+
+  @extend %button;
+  @extend %ease;
+  display: inline-block;
+
+  color: $button-color-main;
+  background-color: $button-color-bg;
+  font-size: $font-ui;
+  
+  // default
+  &:hover {
+    @extend %ease; 
+    color: $button-color-main-hover;
+    background-color: $button-color-bg-hover;
+  }
+}
+
+
+
+// Pill button
+._button-pill, ._button.--pill {
+  border-radius: $button-pill-radius;
+}
+
+._button-outline, ._button.--outline {
+  border-width: $button-outline-border;
+  border-style: solid;
+
+  color: $button-outline-color-main;
+  border-color: $button-outline-color-border;
+  background-color: $button-outline-color-bg;
+
+  &:hover {
+    color: $button-outline-color-main-hover;
+    border-color: $button-outline-color-border-hover;
+    background-color: $button-outline-color-bg-hover;
+  }
+}
+
+._button-text,
+._button-transparent {
+  background-color: transparent !important;
+  font-size: $base-m1 !important;
+  padding-left: $base/2;
+  padding-right: $base/2;
+
+}
+
+
+
+// 
+//    Button Attributes
+// 
+
+  ._button-active {
+    border-width: $border-massive;
+  }
+
+  ._button-disabled {
+    &, &:hover {
+      background-color: $color-gray-lightest;
+      color: $color-white;
+    }
+  }
+
+  ._button-opacity-half {
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+
+  ._button-thin {
+    line-height: $base/2;
+    // text-transform: lowercase;
+  }
+    ._button-thin-light {
+      line-height: $base;
+      // text-transform: lowercase;
+      border-width: $border-thin;
+    }
+    ._button-tiny {
+      line-height: $base-m1;
+      // text-transform: lowercase;
+      font-size: $base-m1;
+      border-width: $border-line;
+    }
+
+  ._button-short {
+    padding-top: $base-m3;
+    padding-bottom: $base-m3;
+  }
+
+  ._button-tall {
+    padding-top: $base*2;
+    padding-bottom: $base*2;
+  }
+
+  ._button-width-inherit {
+    width: inherit;
+  }
+
+  ._button-wide {
+    padding-left: $base*4;
+    padding-right: $base*4;
+  }
+
+button,
+._button {
+  &.--width-full {
+    width: 100%;
+  }
+}
+
+
+._button-shadow {
+  @extend %button-shadow;
+
+  &:hover {
+    @extend %button-shadow-hover;
+  }
+}
+
+
+
+
+
+
+

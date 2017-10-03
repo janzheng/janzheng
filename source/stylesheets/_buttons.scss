@@ -1,0 +1,37 @@
+
+  $button-radius: 0;
+
+._button-main {
+  color: $color-white;
+  background-color: $color-main;
+
+  &:hover {
+    background: transparent; // darken($color-main, 0.5);
+    color: $color-main;
+    border-color: $color-main;
+  }
+}
+
+button, 
+._button {
+  border-radius: $button-radius !important;
+  border-width: $border-medium;
+  
+  @extend ._button-main;
+
+  &.--outline {
+    color: $color-main;
+    border: $border-medium solid $color-main;
+    background: transparent;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-main;
+      border: $border-medium solid $color-main;
+    }
+  }
+}
+
+a._button {
+  @extend ._button-main;
+}

@@ -1,0 +1,16 @@
+
+
+<div>
+  <!-- <a href="/styleguide.html">Intro</a> -->
+  <% sitemap.resources.select { |r| r.data.type == 'styleguide' }
+    .sort_by{|r| r.url }
+    .each do |resource| 
+  %>
+    <!-- <div>
+      <%= current_link_to resource.data.title, resource.url, aria_current: "step" %>
+    </div> -->
+    <div> 
+      <a href="../<%= resource.path %>" class="<%= '--active' if current_page.data.name == resource.data.name %>" ><%= resource.data.title %></a>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,48 @@
+
+
+$link-color-copy: $color-copy;
+$link-color-hover: $color-hover;
+$link-color-border: $color-copy;
+
+$link-color-hover: $color-hover;
+$link-color-hover-border: $link-color-hover;
+
+$link-color-active: $color-active;
+$link-color-active-border: $color-active;
+
+$link-color-inactive: $color-inactive;
+$link-color-inactive-border: transparent; // $color-inactive;
+
+
+
+a {
+  // color: rgba(#000, 0.7);
+  text-decoration: none;
+  @extend %ease;
+  // padding-bottom: $base/8;
+  border-bottom: solid 1px $link-color-border;
+
+  &, &:focus, &:active, &:visited {
+    color: $link-color-copy;
+    @extend %ease;
+  }
+
+  &:hover {
+    color: $link-color-hover;
+    border-color: $link-color-hover-border;
+    @extend %ease;
+  }
+
+  &.--active {
+    color: $link-color-active !important;
+    border-color: $link-color-active-border !important;
+    @extend %ease;
+  }
+
+  &.--inactive, &.--tbd {
+    color: $link-color-inactive !important;
+    border-color: $link-color-inactive-border !important;
+    @extend %ease;
+  }
+
+}

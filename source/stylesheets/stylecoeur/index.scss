@@ -1,0 +1,145 @@
+
+
+// 
+//  The Heart.
+//  [ core dependencies ]
+// 
+
+@import 'heart'; // coeur
+
+// @import 'arteries/index'; // mass import the _index.scss file
+@import 'arteries/reset';   
+@import 'arteries/screen';
+@import 'arteries/colors';
+@import 'arteries/helpers';
+@import 'arteries/animation';
+@import 'arteries/typography';
+@import 'arteries/griddick'; 
+@import 'arteries/mixins'; 
+
+// 
+//  The Vessels.
+//  [ dependent on heart and arteries ]
+// 
+
+// @import 'vessels/index'; 
+@import 'vessels/links'; 
+@import 'vessels/buttons'; 
+@import 'vessels/message'; 
+@import 'vessels/card'; 
+@import 'vessels/code';
+
+@import 'vessels/layout';
+// 
+//  The Components 
+//  [ larger components that will be most likely overridden ]
+// 
+
+// @import 'components/index';
+@import 'components/footer'; 
+@import 'components/nav'; 
+@import 'components/sidebar'; 
+@import 'components/forms'; 
+@import 'components/styleguide'; 
+@import 'components/tabs'; 
+@import 'components/buttonGroups'; 
+@import 'components/toggle'; 
+@import 'components/modal'; 
+
+
+// re-import to let colors take precedence
+@import 'arteries/colors';
+
+
+// 
+//    Basics. 
+//    Every site should probably override these
+//    Keep stuff here until it's large enough to warrant another file
+// 
+
+
+
+// 
+// base layout styles
+// 
+body {
+  @extend %font-body;
+  background-color: $color-bg;
+  color: $color-copy;
+  margin: 0;
+}
+
+
+
+
+// 
+// nav
+// // 
+// ._nav ._logo {
+//   width: 200px;
+//   font-size: $base * 2.8;
+//   background-color: transparent;
+//   @extend %ease;
+// }
+//   // separator
+//   ._nav--separator {
+//     margin-left: $base;
+//     &:before {
+//       content: ' ';
+//       display: block;
+//       position: absolute;
+
+//       // border-left: $border-medium;
+//       // border-left-color: $border-light;
+//       // border-left-style: solid;
+
+//       width: 10px;
+//       height: 42px;
+//       left: -18px;
+//       top: -6px;
+
+//     }
+//   }
+
+
+
+// .nav-logo {
+//   @include screen-xs {
+//     padding-bottom: $base*2;
+//     text-align: center;
+//   }
+// }
+
+
+// 
+// Main Page / Deliverable
+// 
+._main, ._styleguide-main {
+  @extend %grid-one-three;
+}
+
+
+// 
+// landing page
+// 
+._intro {
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+
+  h1 {
+    margin: 0;
+  }
+  button {
+    margin: 4vh 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+

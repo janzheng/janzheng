@@ -1,0 +1,217 @@
+
+
+
+// 
+// MIXINS & Functions
+// 
+
+
+ @function remCalc($values) {
+  $max: length($values);
+  $remValues: '';
+  @for $i from 1 through $max {
+    $value: (nth($values, $i));
+    $value: $value / ($value * 0 + 1);
+    $remValues: #{$remValues + $value}rem;
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+  @return $remValues;
+}
+
+
+@mixin selection-color($bg-color: white, $text-color: black, $text-shadow: none) {
+  ::-moz-selection{ background: $bg-color; color: $text-color; text-shadow: $text-shadow; }
+  ::selection { background: $bg-color; color: $text-color; text-shadow: $text-shadow; }
+}
+
+// *********************************************************
+// DESIGN CLASSES
+// *********************************************************
+
+%shadow-internal-light {box-shadow: 0 0px 50px rgba(20, 20, 20, 0.07), 0 0 70px rgba(0, 0, 0, 0.08) inset;}
+%shadow-internal-dark {box-shadow: 0 0px 50px rgba(20, 20, 20, 0.22), 0 0 80px rgba(0, 0, 0, 0.42) inset;}
+%shadow-gray {box-shadow:1px 1px 4px rgba(120,120,120,0.4),inset 1px 0 1px rgba(255,255,255,0.6);}
+
+
+// // placed at the top of the first element on pages, to give the floater some cleared space
+// .header-spacing {
+//    // padding: $base*3 0;
+//    padding-top: 100px;
+// }
+
+// %shadow-inset {
+//   box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
+//   text-shadow: 0 1px 3px rgba(0,0,0,.5);
+// }
+// %shadow-hover {
+//   box-shadow: 1px 1px 1px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
+//   text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+// }
+
+// %shadow-drop {
+//   box-shadow: 0 5px 23px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,1);
+// }
+
+// %box-shade-light {
+//   -moz-box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
+//   -webkit-box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
+//   box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
+// }
+
+// // used for header-float bar
+// %box-shadow-under {
+//   -moz-box-shadow: 0 0 3px 3px rgba(#888,0.4);
+//   -webkit-box-shadow: 0 0 3px 3px rgba(#888,0.4);
+//   box-shadow: 0 0 5px 3px rgba(#888,0.4);
+// }
+
+
+
+
+// // Button hover effect
+// %hover-effect {
+//   @include selection-color (rgba($light-blue, 0.8), white, none);
+
+//   @extend %ease-fast;
+//   @extend %shadow-hover;
+//   position:relative; bottom: 1px; right: 1px;
+// }
+// %slide-effect {
+//   @extend %ease-fast;
+//   padding: $base*0.65 $base*1.25; //slide effect
+// }
+// %active-effect {
+//   @extend %ease-fast;
+//   @extend %shadow-inset;
+//   text-decoration: none;
+// }
+
+// Clearfix - Usage: @include clearfix();
+@mixin clearfix() {
+    & {
+        *zoom: 1;
+    }
+
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// PX to REM - Usage: font-size: rem(37px);
+@function rem($px, $base: $base-font-size) {
+    @return ($px / $base) * 1rem;
+}
+
+// Opacity - Usage: @include opacity(0.8);
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie);
+}
+
+// Transitions - Usage: @include transition(all .2s ease);
+@mixin transition($args...) {
+    -webkit-transition: $args;
+       -moz-transition: $args;
+        -ms-transition: $args;
+         -o-transition: $args;
+            transition: $args;
+}
+
+// Retina Background Images - Usage: @include background-image-retina(logo, png);
+@mixin background-image-retina($file, $type) {
+    background-image: url($file + '.' + $type);
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (-moz-min-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx){
+        & {
+            background-image: url($file + '@2x.' + $type);
+        }
+    }
+}
+
+// Input Placeholder
+// Usage:
+// @include input-placeholder {
+//     font-size: 18px;
+// }
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+
+@mixin box-shadow($options...) {
+  -webkit-box-shadow: $options;
+  -moz-box-shadow: $options;
+  box-shadow: $options;
+}
+
+
+// chrome has a weird color problem: http://stackoverflow.com/questions/39268675/css-div-background-color-bug-on-chrome
+%chrome-fix, .chrome-fix {
+    -webkit-transform: translateZ(0); // fixes chrome bug
+    // -webkit-transform: translate3d(0,0,0); 
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: scale(1);
+}
+
+// Background Color mixin is a temporary fix for Chrome fill bug
+@mixin background($color) {
+    background-color: $color;
+    @extend %chrome-fix;
+
+    // sometimes child element is the prob
+    div {
+        @extend %chrome-fix;
+    }
+}
+// * {
+  // @extend %chrome-fix;
+// }
+
+// selection / highlight color
+// @include selection {
+//     color: green;
+// }
+@mixin selection {
+    &::selection {
+      @content;
+    }
+    &::-moz-selection {
+      @content;
+    }
+}
+
+@mixin transform($property: none) {
+//  none | <transform-function>
+  @include prefixer(transform, $property, webkit moz ms o spec);
+}
+
+@mixin transform-origin($axes: 50%) {
+// x-axis - left | center | right  | length | %
+// y-axis - top  | center | bottom | length | %
+// z-axis -                          length
+  @include prefixer(transform-origin, $axes, webkit moz ms o spec);
+}
+
+@mixin transform-style ($style: flat) {
+  @include prefixer(transform-style, $style, webkit moz ms o spec);
+}
+
+
+
+

@@ -1,0 +1,136 @@
+
+// 
+//    NAV 
+// 
+
+
+$nav-color-bg: $color-bg;
+
+
+nav {
+  font-size: $base;
+
+ a {
+    border-bottom: 0;
+  }
+
+  ._nav-content,
+  ._nav-links,
+  svg {
+    text-align: right;
+    vertical-align: middle;
+  }
+}
+
+
+
+// down the left
+@media (min-height: 600px) 
+       and (min-width: $width-xs-max)  {
+  body {
+    display: grid;
+    grid-template-columns: 80px auto;
+  }
+
+  nav {
+    position: relative;
+    height: 100vh;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    ._nav-content {
+      transform: rotate(-90deg);
+      width: 100vh;
+      transform-origin: 100%;
+      text-align: right;
+      position: absolute;
+      right: 50%;
+      top: $base;
+    }
+  }
+
+
+  ._nav-more {
+    margin-right: $base;
+    &:after {
+      content: "\2192";
+      display: inline-block;
+      padding-left: $base/2;
+    }
+  }
+}
+
+// across top
+@media (max-height: 599px) 
+       , (max-width: $width-xs-max)  {
+
+  ._nav-content {
+    padding: $base $base;
+    display: grid;
+  }
+  ._nav-more {
+    white-space: nowrap;
+    margin: 0;
+
+    &:after {
+      content: '\2191';
+      display: inline-block;
+      padding-left: $base/2;
+      margin-right: $base*2;
+    }
+  }
+  ._nav-links {
+    grid-row-start: 2;
+  }
+
+
+}
+
+
+
+
+
+// ._nav {
+//   margin-top: $base;
+//   position: relative; 
+//   text-transform: capitalize;
+//   // padding-top: $base;
+//   // padding-bottom: $base;
+//   padding: $base;
+
+//   background-color: transparent;
+//   @extend %ease-slow;
+
+//   &.--pinned {
+//     @extend %ease-slow;
+//     background-color: $nav-color-bg;
+//     // @extend %box_shadow-raised;
+//     top: 0 !important;
+//   }
+
+//   a {
+//     font-size: $base;
+//     position: relative; 
+//     display: inline-block;
+//     border-bottom: none;
+//     margin-right: $base;
+//     // @extend ._font-light;
+//   }
+
+//   .nav-links {
+//     text-align: right;
+//     @include screen-xs {
+//       text-align: center;
+//     }
+//   }
+
+//   &.--simple {
+//     background-color: $color-bg;
+//     padding-left: 0;
+//     &.--pinned {
+//       box-shadow: none;
+//       background-color: $color-bg;
+//     }
+//   }
+
+// }

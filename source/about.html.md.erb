@@ -1,0 +1,265 @@
+---
+layout: main
+name: about
+---
+
+
+
+<div class="_grid-markers" data-cols="6">
+</div>
+
+<div>
+<div class="_form-checkbox --inline">
+  <button id="randomize" class="_font-small _button --outline _button-short">randomize layout</button>
+  <label class="_inline _padding-right _font-small " for="dense">
+    <input id="dense" type="checkbox" name="dense" />
+    <span for="dense">dense layout</span>
+  </label>
+  <label class="_inline _font-small " for="showGrid">
+    <input id="showGrid" type="checkbox" name="showGrid" />
+    <span for="showGrid">show grid</span>
+  </label>
+</div>
+</div>
+<div class="_grid-six">
+<div class="_font-small _font-italic _padding-bottom-2 _span-col-4">
+&rarr; what’s going on here? this page is dynamically jiggered around within some css grid rules combined with randomized javascript. If it looks weird, refresh and see what happens! Dense layout means the browser will try to fill as much white space as possible, so some things might get out of order. Try it! <a href="https://github.com/janzheng/janzheng.github.com">Github source</a>
+</div>
+</div>
+
+<hr class="_border-medium" />
+
+<div class="about _grid-six _grid-markers-basis " markdown="1">
+
+  <h2 class="_page-header _grid-span-between" data-colstart="1to3" data-colspan="2to6" markdown="1">stuff for the _really curious_</h2>
+
+  <div class="_headshot _grid-span-between" data-colstart="1to3" data-colspan="2to3" ><img class="_pointer" src="./images/me.jpg" alt="jan headshot" /></div>
+
+  <div class="_grid-span-between" data-colstart="1to1" data-colspan="1to4" markdown="1">
+  Oh hey&mdash;thanks reading about me and my stuff
+  </div>
+
+  <div class="_grid-span-between" data-colstart="1to3" data-colspan="3to5" markdown="1">
+  I’m an Atlanta-based UX designer/prototyper with a background in computer science, psychology, and game design, and have previously worked with:
+  </div>
+
+  <div class="_grid-span-between" data-colstart="1to2" data-colspan="5to6" >
+    <div class="_grid-four _grid-xs-autofit _grid-gap-small" >
+      <span markdown="1" >_Coca-Cola_</span>
+      <span markdown="1" >_L’Oreal/Garnier_</span>
+      <span markdown="1" >_Verizon Wireless_</span>
+      <span markdown="1" >_The Home Depot_</span>
+      <span markdown="1" >_Manheim_</span>
+      <span markdown="1" >_AutoTrader_</span>
+      <span markdown="1" >_GE Energy_</span>
+      <span markdown="1" >_Disney_</span>
+      <span markdown="1" >_Nespresso_</span>
+      <span markdown="1" >_Cartoon Network_</span>
+      <span markdown="1" >_BBC America_</span>
+      <span markdown="1" >_Peak 10_</span>
+      <span markdown="1" >_Gas South_</span>
+      <span markdown="1" >_Assurant_</span>
+      <span markdown="1" >_AMDRO_</span>
+      <span markdown="1" >_Nespresso_</span>
+      <span markdown="1" >_Ubiquiti Networks_</span> 
+      <span markdown="1" >_Microsoft_</span>
+      <span markdown="1" >_Lockheed Martin_</span>
+      <span markdown="1" >_Arbitron_</span>
+    </div>
+  </div>
+
+  <h3 class="_span-col-6">design stuff</h3>
+
+  <div class="_grid-span-between" data-colstart="1to3" data-colspan="2to4" >
+  what I consider UX design slightly differs from what you see on dribbble and popular UX design blogs (which is awesome, but not what I do). I’m honestly not good at making “gorgeous interfaces” and if you’re looking for that, I’m not really your person. My focus is on complex data organization, information-dense interfaces, and design based problem-solving. I also type a lot.
+  </div>
+
+  <h3 class="_grid-span-between" data-colstart="1to3" data-colspan="4to6">stuff I’ve been up to</h3>
+
+  <div class="about-work _grid-six _span-col-6 _grid-gap-large ">
+
+  <%= partial '/partials/work', 
+      :locals => { 
+        :caption => 'school of hard knocks',
+        :company => 'Freelance',
+        :position => 'UX Design, Web Design, Full-Stack Web Development / 2014+',
+        :short => 'Built some sites for circus, weddings, for writing novels and content management. Designed an interface for understanding RNA sequences. '
+      } 
+  %>
+
+  <%= partial '/partials/work', 
+      :locals => { 
+        :caption => 'product-side',
+        :company => 'Ubiquiti Networks',
+        :position => 'UX Architect, Front-End Developer / 2014–2016',
+        :short => 'Defined requirements, build site maps and create wireframes, estabilshed visual framework, and designed/prototyped/developed the front-end user interface. '
+      } 
+  %>
+
+  <%= partial '/partials/work', 
+      :locals => { 
+        :caption => 'agency',
+        :company => 'nurun',
+        :position => 'Sr. User Experience Architect / 2012–2014',
+        :short => 'User experience, business analysis, product design, and prototyping. Nespresso, Assurant, Manheim, The Home Depot, GE Energy, and Disney and more '
+      } 
+  %>
+
+  <%= partial '/partials/work', 
+      :locals => { 
+        :caption => 'agency',
+        :company => 'moxie',
+        :position => 'User Experience Architect / 2010–2012',
+        :short => 'interaction designer and business analysis for clients like Coca Cola, Verizon Wireless, Cartoon Network, and more '
+      } 
+  %>
+
+  <%= partial '/partials/work', 
+      :locals => { 
+        :caption => 'masters',
+        :company => 'Carnegie Mellon University',
+        :position => 'Masters in Human-Computer Interaction / 2010',
+        :short => 'Interaction design, service design, user research, interactive prototyping, user interfaces, game design'
+      } 
+  %>
+
+  <%= partial '/partials/work', 
+      :locals => { 
+        :caption => 'undergraduate',
+        :company => 'UMBC',
+        :position => 'Computer Science, Psychology / 2009',
+        :short => 'Game development+design, graphics, artificial intelligence, and algorithms. Experimental strategy game built on Gamebryo and cognitive and behavioral computational psych lab work'
+      } 
+  %>
+
+  </div>
+
+  <h3 class="_grid-span-between" data-colstart="1to3" data-colspan="4to6">other stuff</h3>
+
+  <div class="_grid-span-between" data-colstart="1to3" data-colspan="4to6">
+  factoids and stuff I like to do...
+  </div>
+
+  <div class="about-grid _grid-four _dense _span-col-4 _span-xs-col-6 _span-sm-col-6">
+    <div>I’m Chinese/Swedish, with both Swedish and American passports</div>
+    <div>I enjoy riding my Suzuki SV 650 or Fuji cyclocross when it’s nice out</div>
+    <div>mess around with code &amp; side projects</div>
+    <div class=" ">climb rocks &amp; boulders &amp; going to places pretty high up. even though I don’t like heights.</div>
+    <div>I spend too much time in front of a ’puter</div>
+    <div class=" _span-row-2 ">I like to lindy hop, blues dance, west coast swing or uh zouk. Sometimes I dance a lot...</div>
+    <div>I like to go hiking or yogaing or other stuff</div>
+    <div>I really don’t like heights</div>
+    <div class=" _span-col-2" >I speak English, Swedish and Chinese, and French and Spanish very poorly</div>
+    <div>I like to make delicious foods (and eat ’em too)</div>
+    <div class=" _span-col-2 ">I like to read about design, typography, and usability, and spend too much time on designer news or dribbble</div>
+    <div class="_span-col-2">I once joined the circus (for three years, part-time), so sometimes I’ll still do trapeze or lyra things</div>
+  </div>
+  <div class="_span-col-6">and of course, redesign my site ;)</div>
+
+  <h3 class="_grid-span-between" data-colstart="1to3" data-colspan="4to6">site stuff</h3>
+
+<div class="_grid-span-between" data-colstart="1to3" data-colspan="4to6" markdown="1">
+  Hosted on <a href="https://github.com/janzheng/janzheng.github.com">Github</a>, powered by [Middleman](http://middlemanapp.com), and my homebrew styleguide and “framework” [Stylecoeur](https://github.com/janzheng/stylecoeur) and Kramdown.
+
+  Super experimental, yo.
+</div>
+
+<div class="_grid-span-between" data-colstart="1to2" data-colspan="4to6"  markdown="1">
+  _Mini FAQ just because:_
+
+<div class="_grid-three" >
+<span class="_span-xs-col-6 _span-sm-col-6 _padding-bottom-xs" markdown="1">
+Q: _Why your site so goofy??_ <br/> A: Because life's short and this is more fun! (or really, having a “professional” site was dry and boring. this reflects my personality a lot better)
+</span>
+<span class="_span-xs-col-6 _span-sm-col-6 _padding-bottom-xs" markdown="1">
+Q: _Will it cost you clients?_ <br/> A: Maybe, but life’s about more than just about getting work and making money yeah? It’s about freedom (cue [<s>eagle shriek</s>](http://www.npr.org/templates/story/story.php?storyId=156187375)) and play
+</span>
+<span class="_span-xs-col-6 _span-sm-col-6 _padding-bottom-xs" markdown="1">
+Q: _Are you drunk?_ <br/> A: Actually, no, but this site is my answer to “brutal” design. This isn’t brutal by any means, but it IS more whimsical and it IS me (I don’t care much for brutality)
+</span>
+<span class="_span-col-3 _span-xs-col-6" markdown="1">
+Q: _But this site isn’t usable..._ <br/> A: Sometimes fun trumps usability. Sometimes there are things more important than _usability_. Also, that’s not a question, bub. It’ll be my playground and will change over time. also, why don’t designers like to talk about themselves? hmm. too much clutter? oops
+</span>
+</div>
+</div>
+
+</div>
+
+<div class="_padding-top-2">
+Cheers to being free and expressive, online and offline!
+
+&mdash; Jan
+</div>
+
+
+
+<script>
+  $('._headshot img').on('mouseenter', function() {
+    $(this).attr("src","./images/alsome.jpg");
+  });
+  $('._headshot img').on('mouseleave', function() {
+    $(this).attr("src","./images/me.jpg");
+  });
+
+  function randomize() {
+    console.log('hoooold on')
+    // all the weird grid stuff happens here
+    $('._grid-span-between').each(function(obj) {
+
+      var colStart = $(this).data('colstart');
+      var colStartFrom = parseInt(colStart.substr(0,colStart.indexOf('to')));
+      var colStartTo = parseInt(colStart.substr(colStart.indexOf('to')+2));
+      var randColstart = Math.floor(Math.random() * (colStartTo - colStartFrom + 1)) + colStartFrom;
+
+      var colStr = $(this).data('colspan');
+      var colFrom = parseInt(colStr.substr(0,colStr.indexOf('to')));
+      var colTo = parseInt(colStr.substr(colStr.indexOf('to')+2));
+
+      // calc horiz span 
+      // if( colFrom && colTo ) {
+        var randColspan = Math.floor(Math.random() * (colTo - colFrom + 1)) + colFrom ; 
+
+      if(randColstart > 5) randColstart = 5;
+      if(randColstart + randColspan > 5) randColspan = 6 - randColstart;
+
+        // console.log('grid-span-between: ' , colFrom, colTo, randColspan, randColstart);
+        $(this).css({
+          'grid-column': randColstart + ' / ' + (randColstart + randColspan),
+          // 'grid-column-end': randColspan,
+          // 'height': randColstart,
+        })
+      // }
+    })
+  }
+
+
+  $(window).on('resize', _.throttle(randomize, 500));
+
+  $(document).ready(function() {
+    $('._grid-markers').hide();
+    randomize();
+  });
+
+  $('#randomize').on('click', function() {
+    randomize();
+    if($('#dense').prop( "checked" )) {
+      $('.about').addClass('_dense');
+    }
+  });
+
+  $('#showGrid').on('change', function() {
+    if($(this).prop('checked')) {
+      console.log('checked yo grid')
+      $('._grid-markers').show();
+    } else {
+      $('._grid-markers').hide();
+    }
+  });
+  
+  
+</script>
+
+
+
+
+

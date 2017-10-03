@@ -1,0 +1,132 @@
+
+// 
+//    Basic Colors
+//    - most themes will want to define their own / not use this at all
+//
+
+// fun colors
+
+$color-blue:          #366EA6 !default;    ._color-blue { color: $color-blue; }                        ._color-bg-blue { background: $color-blue; }
+$color-yellow:        #FFC107 !default;    ._color-yellow { color: $color-yellow; }                    ._color-bg-yellow{ background: $color-yellow; }                     ._color-border-yellow{border-color: $color-yellow;} 
+$color-orange:        #F36C00 !default;    ._color-orange { color: $color-orange; }                    ._color-bg-orange{ background: $color-orange; }
+$color-red:           #BD5843 !default;    ._color-red { color: $color-red; }                          ._color-bg-red { background: $color-red; }
+$color-green:         #8BC34A !default;    ._color-green { color: $color-green; }                      ._color-bg-green { background: $color-green; }
+$color-mint:          #31E3C3 !default;    ._color-mint { color: $color-mint; }                        ._color-bg-mint { background: $color-mint; }
+
+// social media colors
+$color-facebook:      #3B5998 !default;    ._color-facebook { color: $color-facebook; }                ._color-bg-facebook { background: $color-facebook; }
+$color-google:        #E93F2E !default;    ._color-google { color: $color-google; }                    ._color-bg-google { background: $color-google; }
+$color-reddit:        #8BBBE3 !default;    ._color-reddit { color: $color-reddit; }                    ._color-bg-reddit { background: $color-reddit; }
+$color-twitter:       #26C4F1 !default;    ._color-twitter { color: $color-twitter; }                  ._color-bg-twitter { background: $color-twitter; }
+
+// white, grays, blacks
+$color-purewhite:     #FFFFFF !default;    ._color-purewhite { color: $color-purewhite; }              ._color-bg-purewhite { background: $color-purewhite; }
+$color-whiter:        #FCFCFC !default;    ._color-whiter { color: $color-whiter; }                    ._color-bg-whiter { background: $color-whiter; }
+$color-white:         #FAFAFA !default;    ._color-white { color: $color-white; }                      ._color-bg-white { background: $color-white; }
+
+$color-silver-lighter:#F7F7F7 !default;    ._color-silver-lighter { color: $color-silver-lighter; }   ._color-bg-silver-lighter { background: $color-silver-lighter; }
+$color-silver-light:  #EEEEEE !default;    ._color-silver-light { color: $color-silver-light; }        ._color-bg-silver-light { background: $color-silver-light; }
+$color-silver:        #DDDDDD !default;    ._color-silver { color: $color-silver; }                    ._color-bg-silver { background: $color-silver; }
+$color-silver-dark:   #CCCCCC !default;    ._color-silver-dark { color: $color-silver-dark; }          ._color-bg-silver-dark { background: $color-silver-dark; }
+
+$color-gray-lightest: #BBBBBB !default;    ._color-gray-lightest { color: $color-gray-lightest; }      ._color-bg-gray-lightest { background: $color-gray-lightest; }
+$color-gray-lighter:  #ADADAD !default;    ._color-gray-lighter { color: $color-gray-lighter; }        ._color-bg-gray-lighter { background: $color-gray-lighter; }
+$color-gray-light:    #888888 !default;    ._color-gray-light { color: $color-gray-light; }            ._color-bg-gray-light { background: $color-gray-light; }
+$color-gray:          #666666 !default;    ._color-gray { color: $color-gray; }                        ._color-bg-gray { background: $color-gray; }
+$color-gray-dark:     #4A4A4A !default;    ._color-gray-dark { color: $color-gray-dark; }              ._color-bg-gray-dark { background: $color-gray-dark; }
+
+$color-black:         #333333 !default;    ._color-black { color: $color-black; }                      ._color-bg-black { background: $color-black; }
+$color-blacker:       #1A1A1A !default;    ._color-blacker { color: $color-blacker; }                  ._color-bg-blacker { background: $color-blacker; }
+$color-blackest:      #111111 !default;    ._color-blackest { color: $color-blackest; }                ._color-bg-blackest { background: $color-blackest; } 
+$color-pureblack:     #000000 !default;    ._color-pureblack { color: $color-pureblack; }              ._color-bg-pureblack { background: $color-pureblack; }
+
+
+
+
+// 
+//    CONTEXTUAL THEMES
+// 
+
+$color-main:        $color-blue !default;      ._color-main { color: $color-main }                 ._color-bg-main { background-color: $color-main; }
+$color-secondary:   $color-yellow !default;    ._color-secondary { color: $color-secondary }       ._color-bg-secondary { background-color: $color-secondary; }
+
+//     Supporting Colors
+
+$color-bg: $color-white !default;              ._color-bg { color: $color-bg }                     ._color-bg-bg { background-color: $color-bg; }
+
+$color-hover: $color-yellow !default;          ._color-hover { color: $color-hover }               ._color-bg-hover { background-color: $color-hover; }
+$color-active: $color-orange !default;         ._color-active { color: $color-active; }            ._color-bg-active { background-color: $color-active; }
+$color-inactive: $color-gray-light !default;   ._color-inactive { color: $color-inactive; }        ._color-bg-inactive { background-color: $color-inactive; }
+
+$color-warning: $color-yellow !default;        ._color-warning { color: $color-warning; }          ._color-bg-warning { background-color: $color-warning; }
+$color-danger: $color-red !default;            ._color-danger { color: $color-danger; }            ._color-bg-danger { background-color: $color-danger; }
+$color-success: $color-green !default;         ._color-success { color: $color-success; }          ._color-bg-success { background-color: $color-success; }
+$color-disabled: $color-gray-light !default;   ._color-disabled { color: $color-disabled; }        ._color-bg-success { background-color: $color-success; }
+
+$color-transparent: transparent !default; // sometimes this actually needs to be a solid color; using a var can re-define it
+
+$color-body: $color-black !default;  // UI, copy, etc.
+$color-copy: $color-body !default;   // text-specific color; sometimes should be lighter
+
+
+// UI Colors
+// for borders and stuff
+$color-ui-light: $color-silver-light !default;  ._color-ui-light { color: $color-ui-light; }        ._color-bg-ui-light { background-color: $color-ui-light; }
+$color-ui: $color-silver !default;              ._color-ui { color: $color-ui; }                    ._color-bg-ui { background-color: $color-ui; }
+$color-ui-dark: $color-gray-lightest !default;  ._color-ui-dark { color: $color-ui-dark; }          ._color-bg-ui-dark { background-color: $color-ui-dark; }
+$color-ui-hover: $color-silver-dark !default;   ._color-ui-hover { color: $color-ui-hover; }        ._color-bg-ui-hover { background-color: $color-ui-hover; }
+
+
+// 
+//    SHADOWS, GRADIENTS
+// 
+
+// used for card styles; fairly subtle
+$box_shadow-raised: 0px 4px 6px rgba($color-black, 0.16); // looks like a raised shadow
+%box_shadow-raised { box-shadow: $box_shadow-raised; }
+
+
+// 
+//    On Focus Styles
+// 
+
+%focus-yellow {
+  border: $border-thin solid darken($color-yellow, 5%);
+  // border-color: $color-yellow;
+
+  outline: none;
+  // box-shadow: 2px 2px 6px rgba($color-yellow, 0.6);
+  // above is too light
+  box-shadow: 0px 0px 12px rgba($color-yellow, 1);
+}
+%focus-blue {
+  border-color: rgba($color-blue, 0.64);
+  outline: none;
+  box-shadow: 0px 0px 2px 0px rgba($color-blue, 0.6);
+}
+
+%color-sepia {
+  -webkit-filter: sepia(0.2) saturate(0.5);
+  filter: sepia(0.2) saturate(0.5);
+}
+
+
+
+
+// 
+//    SHADOWS
+// 
+
+$shadow_gridbox: 0 3px 15px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.43);
+$shadow_gridbox_hover: 0 4px 16px rgba(0,0,0,0.89), 0 10px 10px rgba(0,0,0,0.18);
+$shadow_edge: 0px 5px 14px rgba(0,0,0,1);
+$shadow_edgetop: 0px -6px 12px rgba(0,0,0,0.8);
+
+
+
+
+
+
+
+
+

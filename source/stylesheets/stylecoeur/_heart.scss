@@ -1,0 +1,96 @@
+
+$base: 16px;
+$baseline: $base * 1.5; // baseline; base lineheight; line-heights follow 1.5 rule
+
+// attempt at using "standardized" sizes. success may vary. (fonts are different sized, etc.)
+$base-m4:       4px;
+$base-m3:       7px;
+$base-m2:       9px;
+$base-m1:       12px; // Minus Sizes [m]
+$base-smaller:  14px; // dumb but super useful
+$base:          16px; $base-2: $base*2;
+$base-larger:   19px; // dumb but super useful
+$base-p1:       21px; // Plus Sizes [p]
+$base-p2:       28px;
+$base-p3:       37px;
+$base-p4:       50px;
+$base-p5:       67px;
+$base-p6:       89px;
+$base-p7:       119px;
+$base-p8:       159px;
+
+// radius sizes
+$radius: 4px;       ._radius { border-radius: $radius }
+$radius-md: $base;  ._radius-md { border-radius: $radius-md }
+$radius-lg: 24px;   ._radius-lg { border-radius: $radius-lg }
+$radius-xl: 36px;   ._radius-xl { border-radius: $radius-xl }
+$radius-sm: 2px;    ._radius-sm { border-radius: $radius-sm }// subtle borders; nothing should be a jagged 90 degrees
+$gutter: $base/2;
+
+// border sizes
+$border-line: 1px;      ._border-line { border-width: $border-line }
+$border-thin: 2px;      ._border-thin { border-width: $border-thin }
+$border-medium: 3px;    ._border-medium { border-width: $border-medium }
+$border-thick: 6px;     ._border-thick { border-width: $border-thick }
+$border-massive: 12px;  ._border-massive { border-width: $border-massive }
+
+// general border width
+$border-width: $border-thin;
+
+
+// these are just the bootstrap defaults converted to my own vars
+
+// xs 0   - 767
+// sm 768 - 991
+// md 992 - 1199
+// lg 1200 + 
+
+// b/c of pixel density, these descriptions are just for ease of describing width
+// shouldn't matter what devices people use
+
+// "mobile"
+$width-site-min: 360px; // absolute minimum site width
+$width-xs-min: 0px !default; 
+$width-xs-max: 767px !default;
+
+// "tablet"
+$width-sm-min: 768px !default;
+$width-sm-max: 991px !default;
+
+// "desktop"
+$width-md-min: 992px !default;
+$width-md-max: 1199px !default;
+
+// "wide"
+$width-lg-min: 1200px !default;
+$width-lg-max: 2100px !default;
+
+// sometimes sites have a 'magical' breakpoint based on content structure
+$width-magic: 640px !default;
+
+
+$width-content-max: $width-sm-max; // max content block width
+%width-content-max,
+  ._width-content-max { max-width: $width-content-max; }
+
+$width-content-max-narrow: $width-magic; // max content block width
+%width-content-max-narrow { max-width: $width-content-max-narrow; }
+  ._width-content-max-narrow { @extend %width-content-max-narrow; }
+
+
+// // max-width for any type of content
+// width-content-max: $base * 38;
+// $max-container-width: $base * 40;
+// $max-container-width-smaller: $base * 30;
+// $max-widest: $width-lg-min;
+
+// %max-widest {
+//   padding-left: $base;
+//   padding-right: $base;
+//   max-width: $max-widest;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+
+

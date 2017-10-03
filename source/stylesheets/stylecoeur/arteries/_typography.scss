@@ -1,0 +1,151 @@
+
+// Typography
+
+// size, baseline, line-heights defined in main index file
+// don't add any color-dependent copy here. use layout
+// or create another component-contextual sheet
+
+
+%font-sans,
+%font-basic,
+%font-body {
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif;
+}
+
+%font-serif {
+  font-family: "Georgia", serif;
+}
+
+%font-mono {
+  font-family: Courier, Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', monospace;
+} ._font-mono, ._font-code { @extend %font-mono; }
+
+%font-display {
+  // reduce relational in core
+  @extend %font-sans;
+}
+
+
+%font-300, ._font-300 { font-weight: 300; }
+%font-400, ._font-400 { font-weight: 400; }
+%font-500, ._font-500 { font-weight: 500; }
+%font-600, ._font-600 { font-weight: 600; }
+%font-700, ._font-700 { font-weight: 700; }
+%font-800, ._font-800 { font-weight: 800; }
+%font-900, ._font-900 { font-weight: 900; }
+
+
+%font-light, ._font-light {@extend %font-300;}
+%font-normal, ._font-normal {@extend %font-500;}
+%font-bold, ._font-bold {@extend %font-700;}
+  strong {@extend %font-bold}
+%font-heavy, ._font-heavy {@extend %font-900;}
+
+%font-bigger, ._font-bigger { font-size: $base + 6px; line-height: ($base + 6px) * 1.5; }
+%font-big, ._font-big { font-size: $base + 3px; line-height: ($base + 2px) * 1.5; }
+%font-small, ._font-small { font-size: $base - 2px; line-height: ($base - 1px) * 1.5; }
+%font-smaller, ._font-smaller { font-size: $base - 6px; /*line-height: ($base - 5px) * 1.5 !important;*/ }
+// %font-smallest, ._font-smallest { font-size: $base-m3 !important; }
+
+%font-lower, ._font-lower { text-transform: lowercase; }
+%font-upper, ._font-upper { text-transform: uppercase; }
+%font-capitalize, ._font-capitalize { text-transform: capitalize; }
+
+$font-size: $base;
+$font-lineheight: $base * 1.5;
+
+$font-ui: $base + 2px;
+$font-ui-lineheight: $font-ui * 1.5;
+
+// 
+// Contextual typography styles
+// 
+
+%font-italic, ._font-italic {
+  font-style: italic;
+}
+  em {@extend %font-italic}
+
+%font-body {
+  @extend %font-sans;
+  font-size: $font-size;
+  line-height: $font-lineheight;
+  // color: $color-copy;
+}
+
+// side note: use padding instead of margin
+// to prevent margin-folding headers w/ paragraphs
+
+h1 {
+  font-size: $base * 3;
+  line-height: ($base * 3) * 1.5;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  padding: $base 0;
+  padding-bottom: $base*2;
+  @extend %font-display;
+}
+
+h2 {
+  font-size: $base * 2.2;
+  line-height: $base * 2.2 * 1.5;
+  font-weight: 700;
+  padding: $base 0;
+  // padding-bottom: $base*3;
+  @extend %font-display;
+}
+
+h3 {
+  font-size: $base * 2.2;
+  line-height: $base * 2.2 * 1.5;
+  padding: $base 0;
+  @extend %font-display;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: $base * 1.5;
+  line-height: $base * 1.5 * 1.5;
+  font-weight: 700;
+  padding-top: $base/2;
+  padding-bottom: $base;
+  @extend %font-display;
+}
+
+h5 {
+  font-weight: 700;
+  @extend %font-sans;
+  padding-bottom: $base;
+}
+
+h6 {
+  // font-weight: 700;
+  @extend %font-sans;
+  padding-bottom: $base;
+}
+
+p {
+  @extend %font-body;
+  // padding-bottom: $base;
+
+  // using margins here allows for margin folding
+  // margin-top: $base;
+  margin-bottom: $base;
+}
+
+  // p+p,
+  // p+ul,
+  // p+ol, { 
+  //   padding-top: $base;
+  // }
+
+  // p+h1, p+h2, p+h3, p+h4, p+h5, p+h6,
+  // pre+h1, pre+h2, pre+h3, pre+h4,  {
+  //   padding-top: $base*2;
+  //   padding-bottom: $base;
+  // }
+
+
+
+
+

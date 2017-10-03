@@ -1,0 +1,26 @@
+
+<!-- <div class="_grid-xs-full _grid-span-between" data-colstart="1to3" data-colspan="2to6"> -->
+<div class="_grid-xs-full _span-col-3" >
+<div class="about-work">
+  <% if locals.has_key? :caption %> 
+    <div class="about-work-caption"><%= caption %></div> 
+  <% end %>
+
+  <% if locals.has_key? :company %> 
+    <div class="about-work-company _color-red"><%= company %></div>
+  <% end %>
+
+  <% if locals.has_key? :position %> 
+    <div class="about-work-position"><%= position %></div>
+  <% end %>
+
+  <% if locals.has_key? :short %> 
+    <div class="about-work-short"><%= short %></div>
+  <% end %>
+
+  <% if locals.has_key? :long %> 
+    <div class="about-work-short"><%= long %></div>
+  <% end %>
+
+</div>
+</div>

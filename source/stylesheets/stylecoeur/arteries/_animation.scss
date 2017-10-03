@@ -1,0 +1,190 @@
+
+// 
+//    Animation
+// 
+
+
+// Variables
+
+$speed-vslow: 410ms;
+$speed-slow: 320ms;
+$speed-medium: 230ms;
+$speed-fast: 180ms;
+
+
+
+
+// Mixins
+
+@mixin animate($effect, $speed) {
+  -webkit-animation-name: fadeInFromNone;
+  animation-name: fadeInFromNone;
+
+  -webkit-animation-duration: $speed;
+  animation-duration: $speed;
+}
+
+@mixin ease($speed, $elem:all){
+    -webkit-transition: $elem $speed ease;
+    -moz-transition: $elem $speed ease;
+    -ms-transition: $elem $speed ease;
+    -o-transition: $elem $speed ease;
+    transition: $elem $speed ease;
+}
+
+@mixin ease-background{
+    @include ease($speed-medium, background);
+}
+
+@mixin ease-in($speed, $elem:all){
+    -webkit-transition: $elem $speed cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -moz-transition: $elem $speed cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -ms-transition: $elem $speed cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    -o-transition: $elem $speed cubic-bezier(0.420, 0.000, 1.000, 1.000);
+    transition: $elem $speed cubic-bezier(0.420, 0.000, 1.000, 1.000);
+}
+
+
+@mixin ease-out($speed){
+    -webkit-transition: all $speed ease-out 0;
+    -moz-transition: all $speed ease-out 0;
+    -ms-transition: all $speed ease-out 0;
+    -o-transition: all $speed ease-out 0;
+    transition: all $speed ease-out 0;
+}
+
+// http://codepen.io/sawmac/pen/cayhK
+// @include transition(background-color 1s .5s, color 2s);
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+
+
+
+%ease-in{@include ease-in($speed-medium);}
+
+%ease{@include ease($speed-medium);}
+%ease-fast{@include ease($speed-fast);}
+%ease-slow{@include ease($speed-slow);}
+%ease-vslow{@include ease($speed-slow);}
+%ease-none {
+    -webkit-transition: initial !important;
+    -moz-transition: initial !important;
+    -ms-transition: initial !important;
+    -o-transition: initial !important;
+    transition: initial !important;
+} ._ease-none { @extend %ease-none; }
+
+
+
+
+
+
+// 
+// CSS3 ANIMATIONS / KEYFRAMES
+// 
+
+// animation speeds are set in the mixins
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display:none; 
+        opacity: 0;
+    }
+
+    1% {
+        display: block ; 
+        opacity: 0;
+    }
+
+    100% {
+        display: block ; 
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOutToNone {
+    0% {
+        display: block ; 
+        opacity: 1;
+    }
+
+    1% {
+        display: none ; 
+        opacity: 1;
+    }
+
+    100% {
+        display:none; 
+        opacity: 0;
+    }
+}
+
+
+@keyframes rotate {
+  from { transform: rotate( 0deg ); }
+  to   { transform: rotate( 360deg ); }
+}
+
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate( 0deg );   }
+  to   { -webkit-transform: rotate( 360deg ); }
+}
+
+
+
+@keyframes filter-animation {
+  0% {
+    -webkit-filter: sepia(0) saturate(2);
+  }
+  
+  50% {
+    -webkit-filter: sepia(1) saturate(8);
+  }
+  
+  100% {
+    -webkit-filter: sepia(0) saturate(2);
+  }
+}
+
+@-webkit-keyframes filter-animation {
+  0% {
+    -webkit-filter: sepia(0) saturate(2);
+  }
+  
+  50% {
+    -webkit-filter: sepia(1) saturate(8);
+  }
+  
+  100% {
+    -webkit-filter: sepia(0) saturate(2);
+  }
+}
+
+

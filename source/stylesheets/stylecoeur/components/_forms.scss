@@ -1,0 +1,605 @@
+
+
+// all forms should try to adhere to vertical rhythm
+
+$color-form-bg: $color-silver; // rgba($color-silver-dark, 0.25);
+$color-form-bg-hover: $color-silver-light; // rgba($color-silver-dark, 0.25);
+
+
+$color-input-bg: $color-silver-lighter; //rgba($color-white, 0.84);
+$color-input-bg-hover: $color-silver-light;
+$color-input-border: $color-gray-lightest;
+$color-input-active: $color-blue;
+
+$color-input-underline: $color-gray-light; // color-input-bg
+$color-input-underline-hover: $color-gray;
+
+
+$form-border-width: $border-thin;
+$form-border: $form-border-width solid $color-input-border;
+
+$height-input: $base*3 + 4px;
+
+
+$color-input-checked: $color-blue;
+$color-focus: $color-yellow;
+$color-selected: $color-blue;
+$color-loading: $color-yellow;
+
+
+
+
+// General form styling
+
+// use .griddick to keep things vertically aligned, centered, or spaced out
+// 
+// _form-group or _form-group-inline
+//    _form-element or _form-element-inline
+//        input
+//        radio
+
+// $font-size-form: $base-p1;
+$font-size-form: $font-size; // $base ;
+
+
+%form-style {
+  @extend %ease-fast;
+  // @extend %font-sans;
+  font-size: $font-size-form;
+  // @extend %font-bold;
+  // @extend %font-light;
+  // border-radius: $radius;
+
+  @include input-placeholder {
+    color: $color-gray-lighter;
+    // color: rgba($color-yellow, 0.7);
+  }
+
+  &:focus, &:hover {
+    @extend %ease-fast;
+  }
+  &:focus {
+    @extend %focus-blue;
+    background-color: transparent; // $color-white !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// 
+//  Form Organizational Containers
+// 
+._form-container-bg {
+  background: $color-form-bg;
+  padding: $base;
+  border-radius: $radius;
+  margin-bottom: $base;
+}
+._form-container-outline {
+  padding: $base;
+  margin-bottom: $base;
+  border: $form-border;
+  border-radius: $radius-sm;
+
+  @include screen-xs {
+    padding-left: $base;
+    padding-right: $base;
+  }
+}
+
+
+
+._form-control {
+  position: relative;
+  margin-bottom: $base;
+}
+._form-label {
+  padding-bottom: $base/4;
+
+  &[for=message] {
+    // spacing for these is a bit off
+    padding-bottom: $base/2;
+  }
+}
+// this icon is placed inside inputs
+._form-label-icon {
+  display: inline-block;
+  vertical-align: middle;
+  // background-color: $color-input-bg;
+  // padding: $base/2;
+  // height: $height-input;
+  position: absolute;
+  left: $base;
+  top: calc(50% + 2px);
+  & + input {
+    display: inline-block;
+    // margin-left: -6px;
+    padding-left: $base*3;
+  }
+}
+._form-input {
+}
+// group elements together 
+._form-group {
+  // margin-top: $base;
+  margin-bottom: $base;
+}
+
+
+
+// error handling; jquery validation
+._form-control .error,
+input .error,
+textarea + .error,
+._form-error {
+  color: $color-danger;
+  @extend ._font-small;
+}
+
+
+  ._form-note {
+    @extend ._font-small;
+  }
+
+  ._form-element-inline {
+    display: inline-block;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+//  Individual Element Styling
+// 
+
+label {
+  display: block;
+  // @extend %font-sans;
+  vertical-align: top;
+  cursor: default;
+}
+
+input, .input {
+  @extend %form-style;
+  // display: inline-block;
+  display: block;
+  padding: 0 $base;
+  background: $color-input-bg;
+  height: $height-input; // use height instead of base to help baseline height
+
+  // @extend %theme-input-paper;
+  // @extend ._margin-bottom-2;
+
+  // border: $form-border-width solid $color-input-border;
+  border-color: $color-input-underline;
+  border-style: solid;
+
+  margin-right: $base/2;
+
+  &:focus {
+    // padding: $base*2 $base;
+  }
+
+  &.--width-full {
+    width: 100%;
+  }
+  &.--width-medium {
+    width: 300px;
+  }
+
+  &.--width-short {
+    width: 100px;
+  }
+
+  &.--button {
+    display: inline-block;
+    margin-right: 0;
+    vertical-align: top;
+    & + button,
+    & + ._button {
+      margin-left: -6px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+}
+
+  input[type="email"], input[type="text"], input[type="number"], input[type="password"] {
+    // width: 100%;
+    @extend %ease-fast;
+
+    border-width: 0;
+    border-bottom: $color-input-underline $border-thin solid;
+
+    &:hover {
+      @extend %ease-fast;
+      background-color: $color-input-bg-hover;
+      border-color: $color-input-underline-hover;
+
+    }
+    &:hover:focus {
+      @extend %ease-fast;
+      background-color: transparent;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      color: $color-disabled;
+    }
+  }
+
+
+  // https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
+  input[type="file"] {
+    border: none;
+    padding: 0; padding-top: $base;
+    background: 0;
+    @extend %font-small;
+
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    & + label {
+      border: $border-thin solid transparent;
+    }
+  }
+    ._form-input-file:focus {
+      @extend %focus-yellow;
+    }
+
+    ._form-input-file {
+      &.--success {
+        background-color: $color-success;
+      }
+      &.--loading {
+        background-color: $color-loading;
+      }
+    }
+
+
+
+
+
+
+
+
+textarea, .textarea {
+  @extend %form-style;
+  display: inline-block;
+  // height: $base*2;
+  padding: $base;
+  background: $color-input-bg;
+  width: 100%;
+
+  // @extend %theme-input-paper;
+  // @extend ._margin-bottom-2;
+
+  // border: $form-border-width solid $color-input-border;
+  border-color: transparent !important;
+  margin-right: $base/2;
+
+  &:hover {
+    @extend %ease-fast;
+    background-color: $color-input-bg-hover;
+    // @extend %focus-blue;
+  }
+
+  &:focus {
+    background-color: transparent; //$color-white !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+// Checkboxes and Radio
+// 
+
+  ._form-checkbox {
+
+    // margin-bottom: $base/2;
+    
+    &, * { 
+      @extend %user-select-none;
+      cursor: pointer;
+    }
+
+    &.--inline {
+      input, span {
+        height: $base*2;
+        display: inline;
+        vertical-align: middle;
+      }
+    }
+
+    input:focus {
+      border: 0;
+      box-shadow: none;
+
+      & + span {
+        // border-bottom: $border-thin solid $color-blue-light;
+      }
+    }
+    input:checked {
+      & + span {
+        color: $color-input-checked;
+        // border-color: $color-blue-light;
+      }
+    }
+    input[disabled] {
+      & + span {
+        cursor: not-allowed;
+        color: $color-disabled;
+        // border-color: $color-blue-light;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+// 
+//    Radio Buttons / Radio Group
+// 
+
+._form-radiogroup {
+  // @extend ._margin-bottom-2;
+  // margin-top: $base/2;
+}
+  ._form-radiogroup-title {
+    @extend %font-bold;
+  }
+
+  ._form-radio {
+
+    // margin-bottom: $base/2;
+    label {
+      line-height: 0;
+      cursor: pointer;
+    }
+
+    &, * { 
+      @extend %user-select-none;
+    }
+
+    &.--inline {
+      input, span {
+        height: $base*2;
+        display: inline;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+    }
+
+    input:focus {
+      border: 0;
+      box-shadow: none;
+
+      & + span {
+        border-bottom: $border-thin solid $color-focus;
+      }
+    }
+    input:checked {
+      & + span {
+        color: $color-selected;
+        // border-color: $color-blue-light;
+      }
+    }
+    input[disabled] {
+      & + span {
+        cursor: not-allowed;
+        color: $color-disabled;
+        // border-color: $color-blue-light;
+      }
+    }
+
+  }
+
+
+
+// 
+// Option / Select / Dropdowns 
+// 
+
+._form-select {
+  position: relative;
+  // white-space: nowrap; // or the dropdown does misalignment things
+}
+  ._form-select-element {
+    position: relative;
+    @include screen-xs {
+      
+    }
+  }
+
+._form-select-dropdown {
+  z-index: 9;
+  position: absolute;
+  right: 20px;
+
+  .fa {
+    vertical-align: bottom;
+    // line-height: 12px;
+  }
+  
+  & + select {
+    @extend %form-style;
+    min-width: 200px;
+    cursor: pointer;
+
+    padding: $base/2;
+    padding-right: $base * 2;
+
+    z-index: 10;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-appearance: none;
+    -moz-border-radius: 0;
+    background: transparent;
+
+    position: relative;
+    top: -2px; // align with label
+    
+    &:focus {
+      @extend %focus-blue;
+    }
+
+    option {
+      padding: $base/4;
+    }
+      option:checked {
+        background-color: $color-red;
+      }
+
+    @include screen-xs {
+      width: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+
+  }
+}
+
+
+
+
+// 
+// Range Slider
+// adapted from: https://codepen.io/seanstopnik/pen/CeLqA
+// 
+$range-handle-color: $color-main !default;
+$range-handle-color-hover: $color-hover !default;
+$range-handle-size: $base !default;
+
+$range-track-color: $color-ui !default;
+$range-track-height: $base/4 !default;
+
+
+._form-slider {
+
+  margin-bottom: $base * 2;
+
+  label {
+    padding-bottom: $base;
+  }
+
+  input {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    height: $range-track-height;
+    border-radius: $radius;
+    background: $range-track-color;
+    outline: none;
+    padding: 0;
+    margin: 0;
+
+    // Range Handle
+    &::-webkit-slider-thumb,
+    &::-moz-slider-thumb,
+     {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: $range-handle-size;
+      height: $range-handle-size;
+      border-radius: 50%;
+      background: $range-handle-color;
+      cursor: pointer;
+      transition: background $speed-fast ease-in-out;
+
+      &:hover {
+        background: $range-handle-color-hover;
+        transition: background $speed-fast ease-in-out;
+      }
+    }
+
+    &:active::-webkit-slider-thumb,
+    &:active::-moz-slider-thumb, {
+      background: $range-handle-color-hover;
+      transition: background $speed-fast ease-in-out;
+    }
+
+    &::-moz-range-thumb {
+      width: $range-handle-size;
+      height: $range-handle-size;
+      border: 0;
+      border-radius: 50%;
+      background: $range-handle-color;
+      cursor: pointer;
+      transition: background $speed-fast ease-in-out;
+
+      &:hover {
+        background: $range-handle-color-hover;
+        transition: background $speed-fast ease-in-out;
+      }
+    }
+
+  }
+
+  &:active::-moz-range-thumb {
+    background: $range-handle-color-hover;
+  }
+
+  &:focus {
+    border: 0; 
+    @extend %focus-blue;
+    background: $color-ui-hover;
+  }
+
+}
+
+// Firefox Overrides
+::-moz-range-track {
+    background: $range-track-color;
+    border: 0;
+}
+
+
+
+
+
+
+

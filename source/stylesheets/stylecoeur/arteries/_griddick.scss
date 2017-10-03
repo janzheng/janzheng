@@ -1,0 +1,613 @@
+
+// 
+// Chronicles of Griddick — 
+//    The Diesel of Grids
+//      Combines media and grids
+// 
+// this is not a grid framework. It's a simple way to use CSS grids.
+// it is NOT as extensible as twitter bootstrap, etc.
+// it also doesn't have polyfills for older browsers
+// 
+
+// 
+//  New CSS Grid-based Layout 
+//  http://learncssgrid.com/
+//  https://css-tricks.com/snippets/css/complete-guide-grid/
+// 
+
+
+
+// notes
+// instead of align-items, use align-self and justify-self
+
+
+
+
+// 
+// Base griddick setup
+// 
+
+%gr {
+  display: grid;
+  grid-gap: $base;
+}
+
+@mixin griddick($areas, $number) {
+  grid-template-areas:  $areas;
+  grid-template-rows:    1fr;
+  grid-template-columns: repeat($number, 1fr);
+}
+
+
+// Mobile Setup
+
+// take up the entire row
+// on mobile screens
+%grid-xs-full,
+  ._grid-xs-full {
+  @include screen-xs {
+    @include griddick("one", 1);
+    grid-gap: 0;
+
+    // center on mobile
+    & > * {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+
+
+// 
+// Helpers
+// 
+
+
+
+
+
+
+
+
+// applies to grid children
+._grid-center {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center; // middle (left/right)
+  align-items: center; // middle (top/down)
+  // height: 100%; // sometimes required? maybe when set explicit height?
+}
+  ._grid-center-h { // only horizontally center, not left/right
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    // justify-items: center; // middle (left/right)
+    align-items: center; // middle (top/down)
+    // height: 100%; // sometimes required? maybe when set explicit height?
+  }
+
+%grid-center {
+  // create centered grids for immediate child content
+  & > * {
+    @extend ._grid-center;
+  }
+}
+
+
+
+
+
+// 
+//    ONE CONTAINER SECTIONS
+// 
+
+// Row Organized Grids
+// grid-row-one means one row, multi columns
+// responsive will remain column-oriented
+%grid-row-one, ._grid-row-one {
+  display: grid;
+  grid-gap: $base; 
+  grid-template-rows:    1fr;
+  grid-template-columns: repeat(auto-fit, 350px);
+  @extend %grid-xs-full;
+
+  @include screen-xs {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
+}
+
+// Column Organized Grids
+// grid-one means one column, multi rows
+
+%grid-one, ._grid-one {
+  @extend %gr;
+  @include griddick("one", 1);
+}
+
+
+%grid-two, ._grid-two {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    @include griddick("two two", 2);
+  }
+
+}
+
+%grid-three, ._grid-three {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    @include griddick("three three three", 3);
+  }
+}
+
+%grid-four, ._grid-four {
+  @extend %gr;
+
+  @include screen-xs {
+    @include griddick("one", 1);
+  }
+  @include griddick("four four four four", 4);
+}
+
+%grid-five, ._grid-five {
+  @extend %gr;
+
+  @include screen-xs {
+    @include griddick("one", 1);
+  }
+  @include griddick("five five five five five", 5);
+}
+
+%grid-six, ._grid-six {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    @include griddick("six six six six six six", 6);
+  }
+}
+
+%grid-seven, ._grid-seven {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    @include griddick("seven seven seven seven seven seven seven ", 7);
+  }
+}
+  %grid-seven-xs-four, ._grid-seven-xs-four {
+    @extend %gr;
+    @include screen-xs {
+      @include griddick("four four four four ", 4);
+    }
+    @include screen-sm {
+      @include griddick("seven seven seven seven seven seven seven ", 7);
+    }
+  }
+  %grid-seven-always, ._grid-seven-always {
+    @extend %gr;
+    @include screen-xs {
+      @include griddick("seven seven seven seven seven seven seven ", 7);
+    }
+  }
+
+
+
+
+
+// 
+//    TWO CONTAINER SECTIONS
+// 
+
+%grid-one-three, ._grid-one-three {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    grid-template-areas: "one three";
+    grid-template-rows:    1fr;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+  %grid-one-three-always, ._grid-one-three-always {
+    @extend %gr;
+
+    grid-template-areas: "one three";
+    grid-template-rows:    1fr;
+    grid-template-columns: 1fr 3fr;
+  }
+
+%grid-one-four, ._grid-one-four {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    grid-template-areas: "one four";
+    grid-template-rows:    1fr;
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+%grid-one-seven, ._grid-one-seven {
+  @extend %gr;
+  grid-template-areas: "one seven";
+  grid-template-rows:    1fr;
+  grid-template-columns: 1fr 7fr;
+}
+
+%grid-two-one, ._grid-two-one {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    grid-template-areas: "two one";
+    grid-template-rows:    1fr;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+%grid-three-one, ._grid-three-one {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    grid-template-areas: "three one";
+    grid-template-rows:    1fr;
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+%grid-two-four, ._grid-two-four {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    grid-template-areas: "two four";
+    grid-template-rows:    1fr;
+    grid-template-columns: 2fr 4fr;
+  }
+}
+
+%grid-four-one, ._grid-four-one {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    grid-template-areas: "four one";
+    grid-template-rows:    1fr;
+    grid-template-columns: 4fr 1fr;
+  }
+}
+
+%grid-seven-one, ._grid-seven-one {
+  @extend %gr;
+  @extend %grid-xs-full;
+
+  @include screen-sm {
+    grid-template-areas: "seven one";
+    grid-template-rows:    1fr;
+    grid-template-columns: 7fr 1fr;
+  }
+}
+
+
+
+
+
+
+// 
+//    THREE CONTAINER SECTIONS
+// 
+
+
+%grid-one-six-one, ._grid-one-six-one {
+  @extend %gr;
+
+  @include screen-sm {
+    grid-template-areas: "one six one";
+    grid-template-rows:    1fr;
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+
+  @extend %grid-xs-full;
+}
+
+%grid-two-one-one, ._grid-two-one-one {
+  @extend %gr;
+
+  @include screen-sm {
+    grid-template-areas: "two one one";
+    grid-template-rows:    1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  @extend %grid-xs-full;
+}
+%grid-two-two-one, ._grid-two-two-one {
+  @extend %gr;
+
+  @include screen-sm {
+    grid-template-areas: "two two one";
+    grid-template-rows:    1fr;
+    grid-template-columns: 2fr 2fr 1fr;
+  }
+
+  @extend %grid-xs-full;
+}
+
+
+
+
+
+
+// 
+//    CONTAINER PATTERNS & LAYOUTS
+//    - https://gridbyexample.com/patterns/
+// 
+
+/* 
+      - Grids work with the 'display: grid' 
+      - many grid attributes like align and justify only affect the grid's children
+        - but align would still be added to the PARENT class
+
+      - in this example, both h1 and p elements will act like they're text-align: right
+        because they're both children under the grid.
+
+          <div class="grid align-right">
+            <h1>header</h1>
+            <p>some paragraph text</p>
+          </div>
+
+      - if you want the header and paragraph to still be text-align: left, but 
+        be positioned on the right side of the grid container, wrap it up in a div:
+
+          <div class="grid align-right">
+            <div>
+              <h1>header</h1>
+              <p>some paragraph text</p>
+            </div>
+          </div>
+ */
+
+._grid-block {
+  /* 
+
+      [ screen-sm
+          _grid-block     _grid-block     _grid-block
+      ] 
+      [ screen-xs
+          _grid-block    
+          _grid-block
+          _grid-block
+      ] 
+  */
+  padding: $base;
+  // @include screen-xs {
+  //   // padding-bottom: $base;
+  //   &:last-child {
+  //     padding-bottom: 0;
+  //   }
+  // }
+
+  &.--silver {
+    @extend ._color-bg-silver-light;
+    @extend %box_shadow-raised;
+  }
+}
+
+
+$width-block-max: 55%;
+
+._grid-content-image {
+  /* 
+      [ screen-sm
+          _grid-content     _grid-image
+
+        content is close to centerline, and narrower
+        image can extend all the way to edge of screen
+      ] 
+      [ screen-xs   
+          _grid-image
+          _grid-content 
+
+        neatly centered
+      ] 
+  */
+
+  @extend ._grid-two;
+  @extend ._align-center;
+
+  // left-side copy
+  // _grid-content-image--content 
+  &--content {
+    @extend ._align-right;
+    @extend ._grid-block;
+    @include screen-xs {
+      justify-items: center;
+      grid-row-start: 2;
+    }
+    * {
+      width: $width-block-max;
+    }
+  }
+  // _grid-content-image--image
+  &--image {
+    @extend ._align-middle;
+    @extend ._grid-block;
+    @include screen-xs {
+      justify-items: center;
+      grid-row-start: 1; // reflow so image is on top
+    }
+  }
+
+}
+
+._grid-image-content {
+  /* 
+      [ screen-sm
+          _grid-image     _grid-content
+
+        content is close to centerline, and narrower
+        image can extend all the way to edge of screen
+      ] 
+      [ screen-xs
+          _grid-image    
+          _grid-content
+
+        neatly centered; NOTE this reflows content
+      ] 
+  */
+
+  @extend ._grid-two;
+  @extend ._align-center;
+
+  // left-side copy
+  // _grid-image-content--content
+  &--content {
+    @extend ._align-left;
+    @extend ._grid-block;
+
+    @include screen-xs {
+      justify-items: center;
+    }
+    * {
+      width: $width-block-max;
+    }
+  }
+  // _grid-image-content--image
+  &--image {
+    @extend ._align-middle;
+    @extend ._grid-block;
+
+    @include screen-xs {
+      justify-items: center;
+    }
+  }
+}
+
+
+
+._grid-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15ch, 1fr));
+  grid-gap: $base;
+}
+
+._dense {
+  grid-auto-flow: dense;
+}
+
+
+
+
+
+
+
+// 
+//    HELPFUL OVERRIDES 
+// 
+
+
+
+// 
+//  Alignment w/ grids can be confusing, so I use the same words, but:
+//  [ justify-items ]:  start/middle/end — left/"center"/right horizontal alignment 
+//  [ align-items ]:    start/middle/end — top/center/bottom vertical alignment 
+// 
+._align-left {
+  display: grid;
+  justify-items: start; // align to left
+}
+._align-right {
+  display: grid;
+  justify-items: end; // align to right
+}
+._align-middle,
+._align-horizontally {
+  display: grid;
+  justify-items: center; // horizontally align middle
+}
+  ._align-middle-xs {
+    @include screen-xs {
+      display: grid;
+      justify-items: center; // align to right
+    }
+  }
+
+
+._align-top {
+  display: grid;
+  align-items: end; // bottom of grid
+}
+._align-center,
+._align-vertically {
+  display: grid;
+  align-items: center; // vertical middle of grid
+}
+._align-bottom {
+  display: grid;
+  align-items: end; // bottom of grid
+}
+
+._grid-gap-none {
+  grid-gap: 0;
+}
+  ._grid-gap-row-none {grid-row-gap: 0;}
+  ._grid-gap-column-none {grid-row-gap: 0;}
+
+._grid-gap-small {grid-gap: $base/2;}
+  ._grid-gap-row-small {grid-row-gap: $base/2;}
+  ._grid-gap-column-small {grid-row-gap: $base/2;}
+
+._grid-gap-large {
+  grid-gap: $base*2;
+}
+  ._grid-gap-row-large {grid-row-gap: $base*2;}
+  ._grid-gap-column-large {grid-row-gap: $base*2;}
+
+._grid-gap-larger {
+  grid-gap: $base*4;
+}
+  ._grid-gap-row-larger {grid-row-gap: $base*2;}
+  ._grid-gap-column-larger {grid-row-gap: $base*2;}
+
+// item spans
+// these are not generated b/c I like extending them :\ (I know I know)
+._span-row-2 { grid-row: span 2; }
+._span-row-3 { grid-row: span 3; }
+._span-row-4 { grid-row: span 4; }
+._span-row-5 { grid-row: span 5; }
+._span-row-6 { grid-row: span 6; }
+._span-row-7 { grid-row: span 7; }
+._span-row-8 { grid-row: span 8; }
+
+._span-col-2 { grid-column: span 2; } ._span-xs-col-2 { @include screen-xs-only {grid-column: span 2;} } ._span-sm-col-2 { @include screen-sm-only {grid-column: span 2;} }
+._span-col-3 { grid-column: span 3; } ._span-xs-col-3 { @include screen-xs-only {grid-column: span 3;} } ._span-sm-col-3 { @include screen-sm-only {grid-column: span 3;} }
+._span-col-4 { grid-column: span 4; } ._span-xs-col-4 { @include screen-xs-only {grid-column: span 4;} } ._span-sm-col-4 { @include screen-sm-only {grid-column: span 4;} }
+._span-col-5 { grid-column: span 5; } ._span-xs-col-5 { @include screen-xs-only {grid-column: span 5;} } ._span-sm-col-5 { @include screen-sm-only {grid-column: span 5;} }
+._span-col-6 { grid-column: span 6; } ._span-xs-col-6 { @include screen-xs-only {grid-column: span 6;} } ._span-sm-col-6 { @include screen-sm-only {grid-column: span 6;} }
+._span-col-7 { grid-column: span 7; } ._span-xs-col-7 { @include screen-xs-only {grid-column: span 7;} } ._span-sm-col-7 { @include screen-sm-only {grid-column: span 7;} }
+._span-col-8 { grid-column: span 8; } ._span-xs-col-8 { @include screen-xs-only {grid-column: span 8;} } ._span-sm-col-8 { @include screen-sm-only {grid-column: span 8;} }
+
+
+
+
+// for xs screen,
+// overrides default 1 row behavior
+// to try to fit as much stuff as possible
+// into one row. useful for lists
+._grid-xs-autofit {
+  @include screen-xs {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+

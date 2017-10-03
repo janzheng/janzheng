@@ -1,0 +1,47 @@
+
+// 
+//    TABS 
+// 
+._tabs {
+  margin-top: $base;
+  margin-bottom: $base;
+  position: relative; 
+  text-transform: capitalize;
+
+  a {
+    font-size: $base;
+    position: relative; 
+    display: inline-block;
+    border-bottom: none;
+    @extend ._font-light;
+    padding: $base/2 $base;
+    position: relative;
+    bottom: -$border-line;
+
+    &.--active {
+      color: $color-active;
+    }
+  }
+
+  &.--border {
+    border-bottom: $color-ui solid $border-line;
+    @extend %ease;
+
+    ._tabs-item {
+      border: transparent solid $border-line;
+    }
+    .--active {
+      // border: $color-ui solid $border-line;
+      border-bottom-color: $color-active;
+      @extend %ease;
+    }
+  }
+}
+
+._tabs-content {
+  display: none;
+
+  &.--selected {
+    display: inherit;
+  }
+}

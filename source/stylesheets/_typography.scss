@@ -1,0 +1,81 @@
+
+// Typography
+
+%font-sans {
+  font-family: "Lato", arial, sans-serif !important;
+}
+
+%font-serif {
+  font-family: "Georgia", "Crimson Text", serif !important;
+}
+
+%font-display {
+  // font-family: "Georgia", helvetica, arial, sans-serif;
+  @extend %font-serif;
+}
+
+
+%font-body {
+  font-size: $base + 2px;
+  line-height: ($base + 4px) * 1.5;
+  font-weight: 400;
+  color: $color-copy;
+  @extend %font-serif;
+}
+
+// typography reset
+body, input, textarea, select, button {
+  @extend %font-body;
+}
+
+
+// most styles inherited from the core
+// these are to adjust for the Quicksand family
+
+h1 {
+  font-weight: 700;
+  @extend %font-display;
+  // font-size: 74px;
+  font-size: $base-p4;
+  line-height: 74px * 1.2;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-weight: 400;
+  @extend %font-display;
+  // font-size: $base-p2;
+  font-size: $base * 2.4;
+  line-height: $base * 2.4 * 1.2;
+  // letter-spacing: -1.5px;
+}
+
+h3 {
+  font-weight: 400;
+  @extend %font-display;
+  font-size: $base*2;
+  letter-spacing: 0px;
+}
+
+h4 {
+  font-weight: 400;
+  @extend %font-display;
+  font-size: 26px;
+  letter-spacing: 0px;
+}
+
+
+// h4 {
+//   font-size: $base * 1.5;
+//   font-weight: 700;
+//   padding-bottom: $base/2;
+//   @extend %font-display;
+// }
+
+
+
+
+
+
+
+

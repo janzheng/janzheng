@@ -1,0 +1,107 @@
+
+// 
+//    Toggle Switch (on/off state checkboxes)
+//    Inspired by: https://www.w3schools.com/howto/howto_css_switch.asp
+// 
+
+$toggle-width: $base*3;
+$toggle-height: $base-p2;
+$toggle-slider-height: $toggle-height * 0.8;
+$toggle-slider-width: $base/2;
+
+$toggle-color-bg: $color-silver;
+$toggle-color-bg-active: $color-active;
+
+$toggle-color-slider: $color-white;
+
+
+
+
+ /* The switch - the box around the slider */
+._toggle {
+  position: relative;
+  display: inline-block;
+  width: $toggle-width; // set to button-thin height for now; need a baseline later
+  height: $toggle-height; 
+
+  input {
+    display:none;
+
+    &:checked + ._toggle-slider {
+      background-color: $toggle-color-bg-active;
+    }
+    &:focus + ._toggle-slider {
+      box-shadow: 0 0 3px $toggle-color-bg-active;
+    }
+    &:checked {
+       & + ._toggle-slider {
+        justify-items: end;
+        @extend %ease;
+      }
+      & ~ ._off {
+        display: none !important;
+      }
+      & ~ ._on {
+        display: inline-block !important;
+      }
+    }
+  }
+
+
+  &.--pill {
+    ._toggle-slider {
+      border-radius: $radius-lg;
+      &:before {
+        border-radius: 50%;
+        width: $toggle-slider-height;
+      }
+    }
+  }
+
+
+  // handling labels
+  overflow-x: visible;
+  white-space: nowrap; // lets labels flow to the right
+  label {
+    display: inline-block;
+    padding-left: $toggle-width + $base;
+    position: absolute;
+    top: 0;
+  }
+  ._off {
+    display: inline-block;
+  }
+  ._on {
+    display: none;
+  }
+}
+
+/* The slider */
+._toggle-slider {
+  cursor: pointer;
+  background-color: $toggle-color-bg;
+  position: relative;
+  z-index: 10;
+
+  display: grid;
+  align-items: center;
+  justify-items: start;
+
+  @extend %ease;
+
+  &:before {
+    content: "";
+    height: $toggle-slider-height;
+    width: $toggle-slider-width;
+
+    position: relative;
+    margin: $base/4;
+
+
+    background-color: $toggle-color-slider;
+    @extend %ease;
+  }
+
+}
+
+

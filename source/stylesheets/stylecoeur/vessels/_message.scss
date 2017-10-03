@@ -1,0 +1,42 @@
+
+
+// message: like a Bert-style popup message on page
+// or an on-page one/two-liner alert
+// v1.0.0--8-28-17
+
+$color-message-copy: $color-copy;
+$color-message-bg: $color-ui-light;
+
+$color-danger-copy: $color-white;
+$color-danger-bg: $color-danger;
+
+$color-warning-copy: $color-black;
+$color-warning-bg: $color-warning;
+
+$color-success-copy: $color-white;
+$color-success-bg: $color-success;
+
+
+._message {
+  border-radius: $radius;
+  padding: $base/2 $base;
+  margin-bottom: $base;
+
+  color: $color-message-copy;
+  background-color: $color-message-bg;
+
+  &.--danger {
+    color: $color-danger-copy;
+    background-color: $color-danger-bg;
+  }
+
+  &.--warning {
+    color: $color-warning-copy;
+    background-color: $color-warning-bg;
+  }
+
+  &.--success {
+    color: $color-success-copy;
+    background-color: $color-success-bg;
+  }
+}

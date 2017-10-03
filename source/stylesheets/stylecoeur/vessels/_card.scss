@@ -1,0 +1,37 @@
+
+// card w/ shadows style for "popped" look.
+// google-style card
+// v1.0.0--8-28-17
+
+$card-width-max: $width-magic;
+
+
+$card-color: $color-black !default;
+$card-color-bg: $color-whiter !default;
+$card-radius: $radius !default;
+
+
+%card-shadow {
+  box-shadow: $box_shadow-raised;
+}
+
+._card {
+  @extend %card-shadow;
+  color: $card-color;
+  background-color: $card-color-bg;
+  max-width: $card-width-max;
+  width: 100%; //$card-width;
+  border-radius: $card-radius;
+  padding: $base*2;
+  margin-bottom: $base*2;
+
+  label {
+    padding-bottom: $base/2;
+  }
+
+  // transparent card / only organizational
+  &.--transparent {
+    padding: 0;
+    box-shadow: none;
+  }
+}

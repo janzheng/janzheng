@@ -1,0 +1,72 @@
+
+
+
+form {
+  $color-border-off: rgba($color-main, 0.3);
+  $color-border-on: $color-active;
+
+  %form-style {
+    @extend %font-body;
+    font-size: $base + 2px;
+    @extend %ease;
+  }
+
+  ._inline {
+    margin-left: $base/2;
+    margin-right: $base/2;
+  }
+  p {
+    line-height: $base*3;
+  }
+
+  input {
+    border: 0;
+    border-bottom: $border-medium solid $color-border-off !important;
+    background-color: transparent;
+    border-radius: 0;
+
+    &:active, &:focus, &:hover {
+      border-bottom: $border-medium solid $color-border-on !important;
+      @extend %ease;
+      box-shadow: none !important;
+    }
+    @extend %form-style;
+
+  }
+
+  textarea {
+    max-width: 450px;
+    outline: $border-medium solid $color-border-off;
+    // outline: none !important;
+    border:  $border-medium solid $color-border-off;
+    // box-shadow: 0 0 10px $color-border-off;
+    @extend %form-style;
+
+    &:active, &:focus, &:hover {
+    outline: $border-medium solid $color-border-on;
+    border:  $border-medium solid $color-border-on;
+      @extend %ease;
+    }
+  }
+
+  ._form-select-dropdown {
+
+    @include screen-xs {
+      & + select {
+        border: $border-medium solid $color-border-off;
+        margin-right: 4px !important; // alignment
+
+        &:active, &:focus, &:hover {
+          // outline: $border-medium solid $color-border-on;
+          border:  $border-medium solid $color-border-on;
+          outline: none;
+        }
+      }
+    .fa {
+      vertical-align: bottom;
+      line-height: 9px;
+    }
+    }
+    
+  }
+}

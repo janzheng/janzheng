@@ -1,0 +1,86 @@
+
+
+
+// 
+// Layouts / Lost and found / Parts Bin
+// random typography elements like code, etc.
+// 
+
+
+// 
+//  Basic Styles
+// 
+
+body {
+  @extend %font-body;
+}
+
+summary,
+article,
+section, ._section,
+// footer {
+{
+  padding: $base 0;
+  border-radius: 0;
+
+  margin: 0 auto;
+  @extend %width-content-max;
+}
+
+
+// container for content for verticality
+._container {
+  // padding: 0 $base*2;
+  // padding-top: 4vh;
+  // padding-bottom: 4vh;
+  padding: 0 $base;
+}
+
+._container-large {
+  // padding: 0 $base*2;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+}
+
+// 
+._content {
+  // padding-left: $base*2;
+  // padding-right: $base*2;
+  padding: 4vh $base*2;
+}
+// only perform content padding on mobile elements
+._content-responsive {
+  @include screen-xs {
+    padding: 4vh $base*2;
+  }
+}
+
+._block {
+  padding-bottom: $base*2;
+}
+
+._element {
+  margin: $base*2;
+}
+
+
+
+._narrow {
+  max-width: width-content-max-narrow;
+  margin: 0 auto;
+}
+
+
+ul, ol {
+  padding-bottom: $base;
+}
+
+li {
+  margin-bottom: $base/2;
+  list-style-position: outside;
+  margin-left: $base + 3px; // this shifts wrapped text 'inside' the list 
+}
+
+
+
+

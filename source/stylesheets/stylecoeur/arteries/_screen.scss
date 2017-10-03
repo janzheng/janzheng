@@ -1,0 +1,184 @@
+
+
+// 
+//    RESPONSIVE STUFF
+//    usage:
+//      @include screen-mobile {
+//        color: red;
+//      }
+// 
+
+@mixin screen-xs-only {
+  @media (max-width: $width-xs-max) {
+    @content;
+  }
+}
+  @mixin screen-xs {
+    @include screen-xs-only {
+      @content;
+    }
+  }
+
+// below 'magic' point
+@mixin screen-magic-down {
+  @media (max-width: $width-magic) {
+    @content;
+  }
+}
+  // above 'magic' point
+  @mixin screen-magic-up {
+    @media (min-width: $width-magic) {
+      @content;
+    }
+  }
+
+// tablet and bigger
+@mixin screen-sm {
+  @media (min-width: $width-sm-min) {
+    @content;
+  }
+}
+  // tablet and smaller
+  @mixin screen-sm-down {
+    @media (min-width: $width-xs-min) and (max-width: $width-sm-max){
+      @content;
+    }
+  }
+  @mixin screen-sm-only {
+    @media (min-width: $width-sm-min) and (max-width: $width-sm-max){
+      @content;
+    }
+  }
+
+// desktop and bigger
+@mixin screen-md {
+  @media (min-width: $width-md-min) {
+    @content;
+  }
+}
+  // desktop and smaller
+  @mixin screen-md-down {
+    @media (min-width: $width-xs-min) and (max-width: $width-md-max){
+      @content;
+    }
+  }
+  @mixin screen-md-only {
+    @media (min-width: $width-md-min) and (max-width: $width-md-max){
+      @content;
+    }
+  }
+
+// wide (and up)
+// wide and smaller would just be everything
+@mixin screen-lg {
+  @media (min-width: $width-lg-min) {
+    @content;
+  }
+}
+
+
+// custom scenarios
+
+@mixin screen-above ($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin screen-below ($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+// show & hide;
+
+
+
+._hidden-mobile {
+  @media (max-width: $width-xs-max) {
+    display: none !important;
+  }
+}
+._hidden-tablet-down {
+  @media (max-width: $width-sm-max) {
+    display: none;
+  }
+}
+  ._hidden-tablet-only {
+    @media (min-width: $width-sm-min) and (max-width: $width-sm-max) {
+      display: none;
+    }
+  }
+  ._hidden-tablet-up {
+    @media (min-width: $width-sm-min) {
+      display: none;
+    }
+  }
+._hidden-desktop-down {
+  @media (max-width: $width-md-max) {
+    display: none;
+  }
+}
+  ._hidden-tablet-up {
+    @media (min-width: $width-md-min) {
+      display: none;
+    }
+  }
+
+._hidden-magic-up {
+  @media (min-width: $width-magic) {
+    display: none;
+  }
+}
+
+  ._hidden-magic-to-tablet {
+    @media (min-width: $width-magic) and (max-width: $width-sm-min) {
+      display: none;
+    }
+  }
+
+
+
+._show-xs-only {
+  display: none;
+  @media (max-width: $width-xs-max) {
+    display: inherit;
+  }
+}
+._show-sm-up {
+  display: none;
+  @media (min-width: $width-sm-min) {
+    display: inherit;
+  }
+}
+._show-magic-to-tablet {
+  display: none;
+  @media (min-width: $width-magic) and (max-width: $width-sm-min) {
+    display: inherit;
+  }
+}
+
+
+
+// 
+// Special User Agent detection classes
+//
+
+// only for tablet, mobile, regardless of breakpoint
+// ._hideHandheld, %_hideHandheld {
+.handheld {
+  ._hideHandheld {
+    display: none !important;
+  }
+  ._showHandheld {
+    display: block !important;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+---
+layout: main
+---
+
+<div class="index" id="landing" markdown="1">
+
+  <div class="index-intro">
+    <h2 class="_page-header">Product &amp; Experience Designer</h2>
+   <!--  <p>
+      Hello! my name’s Jan&mdash;<em>yawn</em>&mdash;and I <em>strive</em> to design and build functional, useful, and meaningful experiences for people who like to use things and don’t like to get frustrated.
+    </p> -->
+    <p>
+      Hello! My name’s <em class="index-jan _red _pointer">Jan*</em> and I <em class="index-exp _red _pointer">design &amp; build experiences*</em> for <em class="index-s _red _pointer"> people who like to use things that feel good and work well*</em>. <a href="#contact">Come say hi?</a>
+    </p>
+
+    Pardon the dust, yeah?
+
+  </div>
+
+
+</div>
+
+<script>
+  // for fun
+
+  $('.index-jan').on('click', function() {
+    $(this).html($(this).html() + '&mdash;<em>yawn. it’s Swedish</em>&mdash;');
+  });
+
+  $('.index-exp').on('click', function() {
+    $(this).html($(this).html() + ' subjectively fun or functional digital experiences');
+  });
+
+  $('.index-s').on('click', function() {
+    $(this).html($(this).html() + ' and are not frustrating. and probably usable and other buzzwords too');
+  });
+</script>
+
+

@@ -1,0 +1,212 @@
+
+
+<div id="contact" class="_margin-top-2 _padding-top-2 _radius _width-full ">
+
+<hr class="_border-medium" />
+
+  <div class="_message _color-gray _font-small">
+    &rarr; <em>currently swamped and not available for large jobs, but say hello anyway :P </em>
+  </div>
+
+  <div class=" _grid-one">
+    <form id="form" action="https://script.google.com/macros/s/AKfycbyXDgzgf3_A3Z4qENnwbcZXXP-dVGg5jGpRo0zv0u5txuwqeTI/exec">
+
+      <h4 class="_padding-bottom-none">Hello,</h4>
+      <p>my name is 
+        <input id="name" class="_form-input _inline " type="text" name="name" placeholder="coolest name ever *" required/> 
+
+        at 
+
+        <input id="email" class="_form-input _inline " type="text" name="email" placeholder="awesome@email.com *" /> 
+
+        and <input id="shortMessage" class=" _form-input _inline " type="text" name="shortMessage" placeholder="I think ... *" required/>
+
+        <button class=" _inline _button _button-short --outline">send away!</button>
+      </p>
+      <!-- <div class="_padding-bottom">
+        <textarea rows="2" id="message" class="_form-input"  type="text" name="message" placeholder="leave a message *" ></textarea>
+      </div> -->
+    </form>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
+<script>
+
+  var action;
+
+  $(document).ready(function() {
+
+    console.log('init form validation')
+    let rules = {
+      name: {
+        required: true,
+      },
+      email: {
+        required: true,
+      },
+      message: {
+        required: true,
+      },
+    };
+    let messages = {
+      name: {
+        required: '(psst what’s your name?)',
+      },
+      email: {
+        required: '(oops email please!)',
+      },
+      message: {
+        required: '(whatchu sayin?)',
+      },
+    };
+
+    $('#form').submit(function(event){
+      // event.preventDefault();
+      action = event.target.action;
+    }).validate({
+    // $('#form').validate({
+        // debug: true,
+        rules,
+        messages,
+        submitHandler(form) {
+          console.log('submitting...');
+          // form.submit(false);
+
+          var data = getFormData();
+
+          document.getElementById('form').style.display = 'none'; // hide form
+          document.getElementById('loading').style.display = 'block';
+
+          var url = action; // event.target.action;  //
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', url);
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.onreadystatechange = function() {
+            console.log( xhr.status, xhr.statusText )
+            console.log(xhr.responseText);
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('form').style.display = 'none'; // hide form
+            document.getElementById('thankyou_message').style.display = 'block';
+            return;
+          };
+          // url encode form data for sending as post data
+          var encoded = Object.keys(data).map(function(k) {
+              return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+          }).join('&')
+          xhr.send(encoded);
+
+        },
+        invalidHandler(event, validator) { 
+          console.log('form is wrong :(')
+          var errors = validator.numberOfInvalids();
+          if (errors) {
+            var message = errors == 1
+              ? 'You missed 1 field. It has been highlighted'
+              : 'You missed ' + errors + ' fields. They have been highlighted';
+            $("div.error span").html(message);
+            $("div.error").show();
+          } else {
+            $("div.error").hide();
+          }
+
+          console.log(message)
+          // props.onSubmit();
+        },
+      });
+
+  });
+
+
+// 
+//  Form Sending Script
+//  https://www.npmjs.com/package/html-form-send-email-via-google-script-without-server
+// 
+
+
+// get all data in form and return object
+function getFormData() {
+  var elements = document.getElementById("form").elements; // all form elements
+  var fields = Object.keys(elements).map(function(k) {
+    if(elements[k].name !== undefined) {
+      return elements[k].name;
+    // special case for Edge's html collection
+    }else if(elements[k].length > 0){
+      return elements[k].item(0).name;
+    }
+  }).filter(function(item, pos, self) {
+    return self.indexOf(item) == pos && item;
+  });
+  var data = {};
+  fields.forEach(function(k){
+    data[k] = elements[k].value;
+    var str = ""; // declare empty string outside of loop to allow
+                  // it to be appended to for each item in the loop
+    if(elements[k].type === "checkbox"){ // special case for Edge's html collection
+      str = str + elements[k].checked + ", "; // take the string and append 
+                                              // the current checked value to 
+                                              // the end of it, along with 
+                                              // a comma and a space
+      data[k] = str.slice(0, -2); // remove the last comma and space 
+                                  // from the  string to make the output 
+                                  // prettier in the spreadsheet
+    }else if(elements[k].length){
+      for(var i = 0; i < elements[k].length; i++){
+        if(elements[k].item(i).checked){
+          str = str + elements[k].item(i).value + ", "; // same as above
+          data[k] = str.slice(0, -2);
+        }
+      }
+    }
+  });
+  // console.log(data);
+  return data;
+}
+
+
+// https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js
+// function handleFormSubmit(event) {  // handles form submit withtout any jquery
+//   event.preventDefault();           // we are submitting via xhr below
+//   var data = getFormData();         // get the values submitted in the form
+//   console.log('form data:' , event, data);
+
+//   // set 'loading' state 
+
+//   document.getElementById('form').style.display = 'none'; // hide form
+//   // document.getElementById('loading').style.display = 'block';
+
+//   var url = action; //event.target.action;  //
+//   var xhr = new XMLHttpRequest();
+//   xhr.open('POST', url);
+//   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//   xhr.onreadystatechange = function() {
+//     console.log( xhr.status, xhr.statusText )
+//     console.log(xhr.responseText);
+//     // document.getElementById('loading').style.display = 'none';
+//     document.getElementById('form').style.display = 'none'; // hide form
+//     document.getElementById('thankyou_message').style.display = 'block';
+//     return;
+//   };
+//   // url encode form data for sending as post data
+//   var encoded = Object.keys(data).map(function(k) {
+//       return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+//   }).join('&')
+//   // xhr.send(encoded);
+// }
+
+// function loaded() {
+//   console.log('contact form submission handler loaded successfully');
+//   // bind to the submit event of our form
+//   var form = document.getElementById('form');
+//   form.addEventListener("submit", handleFormSubmit, false);
+// };
+
+// document.addEventListener('DOMContentLoaded', loaded, false);
+
+
+
+
+</script>

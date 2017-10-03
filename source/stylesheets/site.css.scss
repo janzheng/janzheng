@@ -1,0 +1,279 @@
+
+// base styles from a "framework" collection
+
+@import 'stylecoeur/heart'; 
+
+@import 'stylecoeur/arteries/index';   
+
+  // Babu Colors
+  $color-blue:            #0543A2;  ._color-blue {color:$color-blue} ._color-bg-blue { background-color: $color-blue }
+  $color-silver:          #F8F9F9;  ._color-silver {color:$color-silver} ._color-bg-silver { background-color: $color-silver }
+  $color-orange:          #F67736;  ._color-orange {color:$color-orange} ._color-bg-orange { background-color: $color-orange }
+  $color-teal:            #2CB9A8;  ._color-teal {color:$color-teal} ._color-bg-teal { background-color: $color-teal }
+  $color-blue-dark:       #101F44;  ._color-blue-dark {color:$color-blue-dark} ._color-bg-blue-dark { background-color: $color-blue-dark }
+  $color-red:             #971F1F;  ._color-red {color:$color-red} ._color-bg-red { background-color: $color-red }
+
+  $color-blue-light:      #547FBF;  ._color-bg-blue-light {background-color: $color-blue-light}
+  
+
+  $color-body: $color-gray;
+  $color-body-light: $color-gray;
+  $color-copy: $color-black;
+  $color-hover: $color-red;
+  $color-success: $color-green; //$color-blue-light;
+  $color-warning: $color-orange;
+
+  // contextual colors
+  $color-main:        $color-red;       
+  $color-secondary:   $color-red;   
+  $color-tertiary:    $color-orange;    
+  $color-active:      $color-red;   
+
+
+@import 'stylecoeur/vessels/_card'; 
+@import 'stylecoeur/vessels/_buttons'; 
+@import 'stylecoeur/vessels/_layout'; 
+@import 'stylecoeur/vessels/_links'; 
+@import 'stylecoeur/vessels/_message'; 
+
+// @import 'stylecoeur/components/_footer';
+@import 'stylecoeur/components/_forms';
+@import 'stylecoeur/components/_modal';
+@import 'stylecoeur/components/_nav';
+
+// style override
+@import 'stylecoeur/arteries/colors';  
+@import 'stylecoeur/arteries/typography';   
+
+
+
+
+
+// 
+//    Local Styles 
+// 
+%font-uppercase {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+// redefined
+%width-content-max,
+  ._width-content-max { max-width: $width-sm-min - 100; }
+
+@import 'nav';
+@import 'typography';
+@import 'buttons';
+
+@import 'contact';
+
+
+///////////////////////////////// site styles
+
+
+body {
+  width: 100%;
+  position: relative;
+
+  // hide ugly loader
+  @extend %ease-slow;
+  opacity: 0;
+  top: 10px;
+
+  &.--loaded {
+    @extend %ease-slow;
+    opacity: 1;
+    top: 0;
+  }
+
+  @extend %font-body;
+  color: $color-copy;
+  margin: 0;
+}
+
+
+section, ._section {
+  // max-width: 991px;
+  max-width: 100%;
+}
+
+
+
+em {
+  &._red {
+    font-style: none;
+    color: $color-red;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////// content styles
+
+._main {
+  padding: $base*2;
+  h2._page-header {
+    padding-top: 0;
+    // line-height: 28px;
+  }
+
+}
+
+// index page / main landing page
+// > MOST STUFF is going to happen on this page
+
+.index {
+  @extend %width-content-max;
+}
+  .index-intro {
+
+    p {
+      @extend %font-serif;
+      // color: $color-body-light;
+      // font-size: 21px;
+      // line-height: 32px;
+      // padding-top: $base;
+
+    }
+
+  }
+
+
+
+
+
+
+
+
+.about {
+  // display: grid;
+  // grid-template-columns: repeat(6, 1fr);
+  // grid-gap: $base;
+  position: relative;
+  z-index: 0;
+
+
+
+  ////////////////////////////////////
+  ////////////////////////////////////
+  ////////////////////////////////////
+  // layout grid for about page
+  h2 {
+    padding-bottom: $base*2;
+  }
+  ._headshot {
+    // max-width: 300px;
+    height: auto;
+    // float: left; // fallback
+    img {
+      max-width: 100%;
+      border-radius: $radius-md;
+    }
+  }
+  
+
+  h3 {
+    padding-bottom: 0;
+  }
+
+  .about-grid {
+    div {
+      padding: $base;
+      background: $color-silver-light;
+    }
+  }
+  ////////////////////////////////////
+  ////////////////////////////////////
+  ////////////////////////////////////
+}
+
+  // work portfolio items
+  .about-work-caption {
+    font-size: 14px;
+    font-style: italic;
+  }
+  .about-work-company {
+    font-size: 24px;
+  }
+  .about-work-position {
+    font-size: 16px;
+    font-style: italic;
+    padding-bottom: $base/2;
+  }
+  .about-work-short {
+    
+  }
+  .about-work-long {
+    
+  }
+
+
+._grid-markers {
+  display: grid;
+  // grid-template-columns: repeat(6, 1fr);
+  grid-gap: 16px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  div {
+    background-color: $color-whiter;
+  }
+
+}
+
+
+._grid-span-between {
+  // display: grid;
+}
+
+
+
+#form {
+  label.error {
+    display: inline-block;
+    // padding: $base/2;
+    @extend %font-small;
+    line-height: 50px;
+    color: $color-danger;
+  }
+  p {
+    line-height: $base*4;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
