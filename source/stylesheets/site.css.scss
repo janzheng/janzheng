@@ -41,7 +41,9 @@
 @import 'stylecoeur/components/_modal';
 @import 'stylecoeur/components/_nav';
 
-// style override
+// style redeclaration override
+@import 'stylecoeur/heart'; 
+@import 'stylecoeur/arteries/helpers'; 
 @import 'stylecoeur/arteries/colors';  
 @import 'stylecoeur/arteries/typography';   
 
@@ -65,6 +67,7 @@
 @import 'nav';
 @import 'typography';
 @import 'buttons';
+@import 'topper';
 
 @import 'contact';
 
@@ -120,7 +123,6 @@ em {
 ///////////////////////////////// content styles
 
 ._main {
-  padding: $base*2;
   h2._page-header {
     padding-top: 0;
     // line-height: 28px;
@@ -132,7 +134,9 @@ em {
 // > MOST STUFF is going to happen on this page
 
 .index {
-  @extend %width-content-max;
+  ._amp {
+    font-size: 29px;
+  }
 }
   .index-intro {
 
@@ -146,7 +150,6 @@ em {
     }
 
   }
-
 
 
 
@@ -252,6 +255,19 @@ em {
     line-height: $base*4;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

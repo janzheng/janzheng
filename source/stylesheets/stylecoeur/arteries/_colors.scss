@@ -71,10 +71,11 @@ $color-copy: $color-body !default;   // text-specific color; sometimes should be
 
 // UI Colors
 // for borders and stuff
-$color-ui-light: $color-silver-light !default;  ._color-ui-light { color: $color-ui-light; }        ._color-bg-ui-light { background-color: $color-ui-light; }
-$color-ui: $color-silver !default;              ._color-ui { color: $color-ui; }                    ._color-bg-ui { background-color: $color-ui; }
-$color-ui-dark: $color-gray-lightest !default;  ._color-ui-dark { color: $color-ui-dark; }          ._color-bg-ui-dark { background-color: $color-ui-dark; }
-$color-ui-hover: $color-silver-dark !default;   ._color-ui-hover { color: $color-ui-hover; }        ._color-bg-ui-hover { background-color: $color-ui-hover; }
+$color-ui-lighter: $color-silver-lighter !default;  ._color-ui-lighter { color: $color-ui-lighter; }        ._color-bg-ui-lighter { background-color: $color-ui-lighter; }    ._color-border-ui-lighter { border-color: $color-ui-lighter; }
+$color-ui-light: $color-silver-light !default;    ._color-ui-light { color: $color-ui-light; }            ._color-bg-ui-light { background-color: $color-ui-light; }        ._color-border-ui-light { border-color: $color-ui-light; }
+$color-ui: $color-silver !default;                ._color-ui { color: $color-ui; }                        ._color-bg-ui { background-color: $color-ui; }                    ._color-border-ui { border-color: $color-ui; }
+$color-ui-dark: $color-gray-lightest !default;    ._color-ui-dark { color: $color-ui-dark; }              ._color-bg-ui-dark { background-color: $color-ui-dark; }          ._color-border-ui-dark { border-color: $color-ui-dark; }
+$color-ui-hover: $color-silver-dark !default;     ._color-ui-hover { color: $color-ui-hover; }            ._color-bg-ui-hover { background-color: $color-ui-hover; }        ._color-border-ui-hover { border-color: $color-ui-hover; }
 
 
 // 

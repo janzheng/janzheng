@@ -1,0 +1,47 @@
+
+.color-palette {
+  position: absolute;
+  z-index: 100000;
+  width: 100%;
+  height: auto;
+}
+.color-palette #c1 {
+  background-color: #9C001A;
+}
+.color-palette #c2 {
+  background-color: #FFFBDB;
+}
+.color-palette #c3 {
+  background-color: #ACBFCC;
+}
+.color-palette #c4 {
+  background-color: #77838C;
+}
+.color-palette #c5 {
+  background-color: #41484C;
+}
+.color-palette #a1 {
+  background-color: #2A3140;
+}
+.color-palette #a2 {
+  background-color: #F2D399;
+}
+.color-palette #a3 {
+  background-color: #F29863;
+}
+.color-palette #a4 {
+  background-color: #D95F43;
+}
+.color-palette #a5 {
+  background-color: #A63737;
+}
+.color-palette div {
+  height: 5px;
+  width: 10%;
+  float: left;
+  z-index: 2000;
+}
+.color-palette.color-top {
+  top: 0px;
+  left: 0px;
+}

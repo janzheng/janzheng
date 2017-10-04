@@ -14,10 +14,11 @@ nav {
   }
 }
 
+$nav-border: $border-line solid $color-silver-light;
 
 
 // down the left
-@media (min-height: 600px) 
+@media (min-height: 500px) 
        and (min-width: $width-xs-max)  {
   body {
     display: grid;
@@ -26,18 +27,22 @@ nav {
 
   nav {
     position: relative;
-    height: 100vh;
+    height: 100%;
     grid-column-start: 1;
     grid-column-end: 2;
+    border-right: $nav-border;
 
     ._nav-content {
       transform: rotate(-90deg);
-      width: 100vh;
+      width: 400px;
       transform-origin: 100%;
-      text-align: right;
-      position: absolute;
-      right: 50%;
-      top: 26px;
+      // text-align: right;
+      // position: absolute;
+      // right: 50%;
+      // top: 26px;
+      position: fixed;
+      left: -360px;
+      top: $base*2;
     }
   }
 
@@ -53,29 +58,60 @@ nav {
 }
 
 // across top
-@media (max-height: 599px) 
+@media (max-height: 499px) 
        , (max-width: $width-xs-max)  {
 
   ._nav-content {
     padding: $base $base;
-    display: grid;
+    // display: grid;
+    span, a {
+      display: inline-block;
+    }
   }
   ._nav-more {
-    white-space: nowrap;
-    margin: 0;
+    // white-space: nowrap;
+    // margin: 0;
+    grid-column-start: 1;
 
     &:after {
-      content: '\2191';
+      content: '\2192';
       display: inline-block;
-      padding-left: $base/2;
+      // padding-left: $base/2;
       margin-right: $base*2;
     }
   }
-  ._nav-links {
-    grid-row-start: 2;
+  // ._nav-links {
+  //   grid-row-start: 2;
+  // }
+  nav {
+    border-bottom: $nav-border;
   }
-
 
 }
 
+// v-small screens
+@media (max-width: 420px) {
+  ._nav-content { 
+    display: grid;
+  }
+  ._nav-links {
+    grid-row-start: 2;
+    // white-space: nowrap;
+    // white-space: pre;
+    a { display: block; }
+  }
+  ._nav-logo {
+    grid-row-start: 1;
+  }
+  o {
+    display: none;
+  }
+  ._nav-more {
+    &:after {
+      // padding-left: $base;
+      margin: 0;
+      content: '';
+    }
+  }
+} 
 

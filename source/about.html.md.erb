@@ -8,6 +8,7 @@ name: about
 <div class="_grid-markers" data-cols="6">
 </div>
 
+<div class="_message _padding-2 _radius-none _color-bg-ui-lighter _hidden-xs">
 <div>
 <div class="_form-checkbox --inline">
   <button id="randomize" class="_font-small _button --outline _button-short">randomize layout</button>
@@ -22,14 +23,13 @@ name: about
 </div>
 </div>
 <div class="_grid-six">
-<div class="_font-small _font-italic _padding-bottom-2 _span-col-4">
+<div class="_font-small _font-italic _span-col-4">
 &rarr; what’s going on here? this page is dynamically jiggered around within some css grid rules combined with randomized javascript. If it looks weird, refresh and see what happens! Dense layout means the browser will try to fill as much white space as possible, so some things might get out of order. Try it! <a href="https://github.com/janzheng/janzheng.github.com">Github source</a>
 </div>
 </div>
+</div>
 
-<hr class="_border-medium" />
-
-<div class="about _grid-six _grid-markers-basis " markdown="1">
+<div class="about _padding-2 _grid-six _grid-markers-basis " markdown="1">
 
   <h2 class="_page-header _grid-span-between" data-colstart="1to3" data-colspan="2to6" markdown="1">stuff for the _really curious_</h2>
 
@@ -40,7 +40,7 @@ name: about
   </div>
 
   <div class="_grid-span-between" data-colstart="1to3" data-colspan="3to5" markdown="1">
-  I’m an Atlanta-based UX designer/prototyper with a background in computer science, psychology, and game design, and have previously worked with:
+  I’m an Atlanta-based UX designer/prototyper with a background in computer science, psychology, and game design, and more than eight years of client and agency experience. Brands and companies I’ve worked with:
   </div>
 
   <div class="_grid-span-between" data-colstart="1to2" data-colspan="5to6" >
@@ -83,7 +83,7 @@ name: about
         :caption => 'school of hard knocks',
         :company => 'Freelance',
         :position => 'UX Design, Web Design, Full-Stack Web Development / 2014+',
-        :short => 'Built some sites for circus, weddings, for writing novels and content management. Designed an interface for understanding RNA sequences. '
+        :short => 'Built sites from circus pages, to wedding prep to novel writing experitments and mini-CMS tools. Also worked on an interface for users to quickly parse RNA sequence results. '
       } 
   %>
 
@@ -185,7 +185,7 @@ Q: _But this site isn’t usable..._ <br/> A: Sometimes fun trumps usability. So
 
 </div>
 
-<div class="_padding-top-2">
+<div class="_padding-2">
 Cheers to being free and expressive, online and offline!
 
 &mdash; Jan
@@ -202,7 +202,6 @@ Cheers to being free and expressive, online and offline!
   });
 
   function randomize() {
-    console.log('hoooold on')
     // all the weird grid stuff happens here
     $('._grid-span-between').each(function(obj) {
 

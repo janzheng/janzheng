@@ -20,6 +20,7 @@ $base-p7:       119px;
 $base-p8:       159px;
 
 // radius sizes
+$radius-none: 0px;  ._radius-none { border-radius: 0 }
 $radius: 4px;       ._radius { border-radius: $radius }
 $radius-md: $base;  ._radius-md { border-radius: $radius-md }
 $radius-lg: 24px;   ._radius-lg { border-radius: $radius-lg }
