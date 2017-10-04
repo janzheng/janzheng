@@ -611,3 +611,11 @@ $width-block-max: 55%;
   }
 }
 
+
+._span-xs-reset { // forces xs to start at first column for responsive views
+  @include screen-xs {
+    grid-column-start: 1 !important;
+  }
+}
+
+
