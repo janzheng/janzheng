@@ -10,6 +10,12 @@
 ._block {
   display: block;
 }
+  ._block-xs {
+    @include screen-xs-only {
+      display: block;
+    }
+  }
+
 
 ._inline {
   display: inline !important;
@@ -85,6 +91,11 @@
 ._margin-none {
   margin: 0;
 }
+  ._margin-none-xs {
+    @include screen-xs {
+      margin: 0;
+    }
+  }
   ._margin-top {
     margin-top: $base;
   }
@@ -109,7 +120,7 @@
     }
     ._margin-bottom-none { margin-bottom: 0; }
       ._margin-bottom-none-i { margin-bottom: 0 !important; }
-      
+
     ._margin-bottom-2 {
       margin-bottom: $base*2;
     }
@@ -122,6 +133,11 @@
   ._margin-left {
     margin-left: $base;
   }
+    ._margin-left-sm {
+      @include screen-sm {
+        margin-left: $base;
+      }
+    }
     ._margin-left-2 {
       margin-left: $base*2;
     }
