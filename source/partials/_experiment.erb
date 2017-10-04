@@ -1,0 +1,39 @@
+
+<div id="experiment" class="_expander _hidden-xs">
+  <div class="_font-small _expander-icon"> 
+    <span class="_anim-right">&rarr;</span> 
+  </div>
+  <div class="_expander-content">
+    <div class="_font-small  _expander-title ">
+      psst, try this...
+    </div>
+    
+    <div class=" _radius-none _padding-top ">
+    <div>
+    <div class="_form-checkbox --inline">
+      <button id="randomize" class="_font-small _button --outline _button-short">randomize layout</button>
+      <label class="_inline _padding-right _font-small " for="dense">
+        <input id="dense" type="checkbox" name="dense" />
+        <span for="dense">dense layout</span>
+      </label>
+      <label class="_inline _font-small " for="showGrid">
+        <input id="showGrid" type="checkbox" name="showGrid" />
+        <span for="showGrid">show grid</span>
+      </label>
+    </div>
+    </div>
+    <div class="_grid-six">
+    <div class="_font-small _font-italic _span-col-4">
+    &rarr; what’s going on here? this dynamically jiggers stuff around the page, based on loose css grid rules and randomization. If it’s weird, refresh and see what happens! Dense layout means the browser will try to fill as much white space as possible, so some things might get out of order. Try it! <a href="https://github.com/janzheng/janzheng.github.com">Github source</a>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $('._expander').on('click', function() {
+    $(this).toggleClass('--open');
+  });
+</script>

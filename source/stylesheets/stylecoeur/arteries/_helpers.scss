@@ -88,6 +88,11 @@
   ._margin-top {
     margin-top: $base;
   }
+    ._margin-top-xs {
+      @include screen-xs-only {
+        margin-top: $base;
+      }
+    }
     ._margin-top-none {
       margin-top: 0;
     }
@@ -102,9 +107,9 @@
     ._margin-bottom-i {
       margin-bottom: $base !important;
     }
-    ._margin-bottom-none {
-      margin-bottom: 0;
-    }
+    ._margin-bottom-none { margin-bottom: 0; }
+      ._margin-bottom-none-i { margin-bottom: 0 !important; }
+      
     ._margin-bottom-2 {
       margin-bottom: $base*2;
     }
@@ -123,6 +128,7 @@
     ._margin-left-none {
       margin-left: 0 ;
     }
+    ._margin-left-none-i { margin-left: 0 !important; }
 
   ._margin-right {
     margin-right: $base;
@@ -133,6 +139,7 @@
     ._margin-right-none {
       margin-right: 0;
     }
+    ._margin-right-none-i { margin-right: 0 !important; }
 
 
 // 

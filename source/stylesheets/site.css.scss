@@ -40,6 +40,7 @@
 @import 'stylecoeur/components/_forms';
 @import 'stylecoeur/components/_modal';
 @import 'stylecoeur/components/_nav';
+@import 'stylecoeur/components/_expander';
 
 // style redeclaration override
 @import 'stylecoeur/heart'; 
@@ -63,6 +64,10 @@
 // redefined
 %width-content-max,
   ._width-content-max { max-width: $width-sm-min - 100; }
+
+%width-content-large,
+  ._width-content-large { max-width: $width-md-min - 100; }
+
 
 @import 'nav';
 @import 'typography';
@@ -274,10 +279,6 @@ p { // p reset
     line-height: $base*4;
   }
 }
-
-
-
-
 
 
 

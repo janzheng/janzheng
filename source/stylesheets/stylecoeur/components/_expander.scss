@@ -1,0 +1,80 @@
+
+
+/*
+
+  requires js:
+
+  <script>
+    $('._expander').on('click', function() {
+      $(this).toggleClass('--open');
+    });
+  </script>
+
+*/
+
+._expander {
+  // border:  $border-line solid $color-ui; 
+  padding: $base;
+  // border-radius: $radius;
+  cursor: pointer;
+  @extend %ease-fast;
+
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+
+  ._expander-icon {
+    text-align: center;
+    color: $color-hover;
+    @extend %ease-fast;
+    height: $base*2; // keeps the rotation in check
+  }
+
+  ._anim-right { 
+    color: $color-hover;
+    position: relative;
+    left: 0;
+    @extend %ease-fast;
+  }
+  &:hover {
+    color: $color-hover;
+    background-color: $color-silver-light;
+    ._anim-right {
+      color: $color-hover;
+      left: $base/2;
+      @extend %ease-fast;
+
+      // don't animate on mobile, or it does weird things
+      @include screen-xs {
+        left: 0 !important;
+      }
+    }
+  }
+
+  ._expander-content {
+    ._expander-title {
+
+      & ~ * {
+        display: none;
+        height: 0;
+        opacity: 0;
+      }
+    }
+  }
+
+  &.--open {
+    @extend %ease-fast;
+    ._expander-icon {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg); 
+    }
+    ._expander-title {
+      & ~ * {
+        overflow: inherit;
+        display: block;
+        height: 100%;
+        opacity: 1;
+      }
+    }
+
+  }
+}
