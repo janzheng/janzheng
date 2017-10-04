@@ -64,6 +64,15 @@ h4 {
   letter-spacing: 0px;
 }
 
+h6 {
+  font-weight: 400;
+  @extend %font-serif;
+  font-size: $base;
+  line-height: $base * 1.5;
+  // letter-spacing: 0.4px;
+  font-style: italic;
+  color: $color-gray;
+}
 
 // h4 {
 //   font-size: $base * 1.5;

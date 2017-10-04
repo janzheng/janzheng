@@ -103,14 +103,38 @@ section, ._section {
 
 
 
-em {
-  &._red {
-    font-style: none;
-    color: $color-red;
+// fancy trendy fat links
+
+a {
+  position: relative;
+  border: 0;
+  @extend %ease;
+  &:before {
+    content: ' ';
+    // display: block;
+    padding: 0;
+    background: rgba($color-active,0.12);
+    width: 0%;
+    position: absolute;
+    height: 8px;
+    bottom: 0;
+    @extend %ease;
+  }
+  &:hover:before {
+    width: 100%;
+    @extend %ease;
   }
 }
 
+// body links
+._main div a {
+  color: $color-active;
+}
 
+p { // p reset
+  padding-bottom: $base*2;
+  margin-bottom: 0;
+}
 
 
 
@@ -134,23 +158,18 @@ em {
 // > MOST STUFF is going to happen on this page
 
 .index {
-  ._amp {
+  ._ampersand {
     font-size: 29px;
   }
 }
-  .index-intro {
-
-    p {
-      @extend %font-serif;
-      // color: $color-body-light;
-      // font-size: 21px;
-      // line-height: 32px;
-      // padding-top: $base;
-
-    }
-
+  .index-intro-message {
+    font-size: 24px;
+    line-height: 24px * 1.5;
   }
 
+  ._screen-height-half {
+    height: 30vh;
+  }
 
 
 

@@ -4,16 +4,26 @@ layout: main
 
 <div class="index _width-content-max" id="landing" markdown="1">
 
-  <div class="index-intro _padding-2">
-    <h2 class="_page-header">product <span class="_amp">&amp;</span> prototype design </h2>
-   <!--  <p>
-      Hello! my name’s Jan&mdash;<em>yawn</em>&mdash;and I <em>strive</em> to design and build functional, useful, and meaningful experiences for people who like to use things and don’t like to get frustrated.
-    </p> -->
-    <p>
-      Hello! My name’s <em class="index-jan _red _pointer">Jan*</em> and I <em class="index-exp _red _pointer">design &amp; build experiences*</em> for <em class="index-s _red _pointer"> people who like to use things that feel good and work well*</em>. <a href="#contact">Come say hi?</a>
-    </p>
 
-    Pardon the dust, yeah?
+  <div class="index-intro _padding-2">
+
+    <div class="_size" data-height="18">
+      <h2 class="_page-header">products <span class="_ampersand">&amp;</span> prototypes </h2>
+
+      <div class="index-intro-sub _padding-bottom-2">
+        <h6>strategy / info arch / design / dev</h6>
+      </div>
+    </div>
+
+    <div class="_size" data-height="50">
+      <p class="index-intro-message _padding-top-2">
+        Hello! My name’s <a class="index-jan _pointer">Jan<span class="_hidden">&mdash;yawn. it’s Swedish&mdash;</span></a> and I <a class="index-exp _pointer">design and build products and prototypes <span class="_hidden">&mdash;subjectively fun and functional digital experiences&mdash;</span></a> for <a class="index-s _pointer"> people who like to use things<span class="_hidden"> that feel good and work well. and are not frustrating. and probably usable and other buzzwords too</span></a>. <a class="_font-small" href="#contact">Say hello!</a>
+      </p>
+    </div>
+
+    <p>
+      Pardon the dust, yeah?
+    </p>
 
   </div>
 
@@ -24,16 +34,34 @@ layout: main
   // for fun
 
   $('.index-jan').on('click', function() {
-    $(this).html($(this).html() + '&mdash;<em>yawn. it’s Swedish</em>&mdash;');
+    console.log('click')
+    $(this).find('._hidden').removeClass('_hidden');
   });
 
   $('.index-exp').on('click', function() {
-    $(this).html($(this).html() + ' subjectively fun or functional digital experiences');
+    $(this).find('._hidden').removeClass('_hidden');
   });
 
   $('.index-s').on('click', function() {
-    $(this).html($(this).html() + ' and are not frustrating. and probably usable and other buzzwords too');
+    $(this).find('._hidden').removeClass('_hidden');
   });
+
+
+
+
+  // dynamic height dispenser
+  // don't rely on vh as browser bugs and annoyances like iOS chrome
+  // vw more reliable
+  // syntax: class="_size" data-height="30" is calculated 30 vh
+  $(window).load(function() {
+    $('._size').each(function() {
+      // calculate vh manually, and set it dynamically
+      console.log($(this).data())
+      var height = $(window).height() * ($(this).data('height') * 0.01);
+      $(this).css({'height': height})
+    });
+  });
+
 </script>
 
 
