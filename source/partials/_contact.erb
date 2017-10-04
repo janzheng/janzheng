@@ -9,7 +9,7 @@
     &rarr; <em>currently swamped and not available for large jobs, but say hello anyway :P </em>
   </div>
 
-    <form id="form" action="https://script.google.com/macros/s/AKfycbyXDgzgf3_A3Z4qENnwbcZXXP-dVGg5jGpRo0zv0u5txuwqeTI/exec">
+    <form id="form" action="https://script.google.com/macros/s/AKfycby01BhE83Qmd8ARcKdviWgZjsY1aPxLDs3p9qAMLMt0GTwUKtXx/exec">
 
       
       <div class=" _grid-three-one">
@@ -37,6 +37,14 @@
         <textarea rows="2" id="message" class="_form-input"  type="text" name="message" placeholder="leave a message *" ></textarea>
       </div> -->
     </form>
+    
+    <div style="display:none;" id="loading">
+      Sending...
+    </div>
+
+    <div style="display:none;" id="thankyou_message">
+      Thanks for sending me a message, I will get back to you as soon as I can!
+    </div>
 </div>
 
 
@@ -57,19 +65,19 @@
       email: {
         required: true,
       },
-      message: {
+      shortMessage: {
         required: true,
       },
     };
     let messages = {
       name: {
-        required: '(psst what’s your name?)',
+        required: '(psst, what’s your name?)',
       },
       email: {
-        required: '(oops email please!)',
+        required: '(oops, email please!)',
       },
-      message: {
-        required: '(whatchu sayin?)',
+      shortMessage: {
+        required: '(what u wanna say?)',
       },
     };
 

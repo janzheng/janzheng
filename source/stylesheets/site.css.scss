@@ -245,7 +245,7 @@ em {
 
 #form {
   label.error {
-    display: inline-block;
+    display: block;
     // padding: $base/2;
     @extend %font-small;
     line-height: 50px;
