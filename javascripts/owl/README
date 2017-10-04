@@ -1,0 +1,110 @@
+<h1 id="owlcarousel2-is-currently-being-transferred-to-a-new-owner">OwlCarousel2 is currently being transferred to a new owner</h1>
+
+<p>Stay tuned while the new owner sorts through some stuff. (Oh, hi, I'm <a href="https://github.com/daviddeutsch">David</a>!)</p>
+
+<h2 id="owl-carousel-2">Owl Carousel 2</h2>
+
+<p>Touch enabled <a href="https://jquery.com/">jQuery</a> plugin that lets you create a beautiful, responsive carousel slider. <strong>To get started, check out https://owlcarousel2.github.io/OwlCarousel2/.</strong></p>
+
+<h2 id="quick-start">Quick start</h2>
+
+<h3 id="install">Install</h3>
+
+<p>This package can be installed with:</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/owl.carousel">npm</a>: <code>npm install --save owl.carousel</code></li>
+  <li><a href="http://bower.io/search/?q=owl.carousel">bower</a>: <code>bower install --save owl.carousel</code></li>
+</ul>
+
+<p>Or download the <a href="https://github.com/OwlCarousel2/OwlCarousel2/releases">latest release</a>.</p>
+
+<h3 id="load">Load</h3>
+
+<h4 id="webpack">Webpack</h4>
+
+<p>Load the required stylesheet and JS:</p>
+
+<p><code>js
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import $ from 'jquery';
+import 'imports?jQuery=jquery!owl.carousel';
+</code></p>
+
+<h4 id="static-html">Static HTML</h4>
+
+<p>Put the required stylesheet at the <a href="https://developer.yahoo.com/performance/rules.html#css_top">top</a> of your markup:</p>
+
+<p>```html</p>
+<link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+
+<p>```</p>
+
+<p>```html</p>
+<link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
+
+<p>```</p>
+
+<p><strong>NOTE:</strong> If you want to use the default navigation styles, you will also need to include <code>owl.theme.default.css</code>.</p>
+
+<p>Put the script at the <a href="https://developer.yahoo.com/performance/rules.html#js_bottom">bottom</a> of your markup right after jQuery:</p>
+
+<p><code>html
+&lt;script src="/node_modules/jquery/dist/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"&gt;&lt;/script&gt;
+</code></p>
+
+<p><code>html
+&lt;script src="/bower_components/jquery/dist/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="/bower_components/owl.carousel/dist/owl.carousel.min.js"&gt;&lt;/script&gt;
+</code></p>
+
+<h3 id="usage">Usage</h3>
+
+<p>Wrap your items (<code>div</code>, <code>a</code>, <code>img</code>, <code>span</code>, <code>li</code> etc.) with a container element (<code>div</code>, <code>ul</code> etc.). Only the class <code>owl-carousel</code> is mandatory to apply proper styles:</p>
+
+<p>```html</p>
+<div class="owl-carousel owl-theme">
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+  <div> Your Content </div>
+</div>
+<p>```
+<strong>NOTE:</strong> The <code>owl-theme</code> class is optional, but without it, you will need to style navigation features on your own.</p>
+
+<p>Call the <a href="https://learn.jquery.com/plugins/">plugin</a> function and your carousel is ready.</p>
+
+<p><code>javascript
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel();
+});
+</code></p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>The documentation, included in this repo in the root directory, is built with <a href="http://assemble.io/">Assemble</a> and publicly available at https://owlcarousel2.github.io/OwlCarousel2/. The documentation may also be run locally.</p>
+
+<h2 id="building">Building</h2>
+
+<p>This package comes with <a href="http://gruntjs.com/">Grunt</a> and <a href="http://bower.io/">Bower</a>. The following tasks are available:</p>
+
+<ul>
+  <li><code>default</code> compiles the CSS and JS into <code>/dist</code> and builds the doc.</li>
+  <li><code>dist</code> compiles the CSS and JS into <code>/dist</code> only.</li>
+  <li><code>watch</code> watches source files and builds them automatically whenever you save.</li>
+  <li><code>test</code> runs <a href="http://www.jshint.com/">JSHint</a> and <a href="http://qunitjs.com/">QUnit</a> tests headlessly in <a href="http://phantomjs.org/">PhantomJS</a>.</li>
+</ul>
+
+<p>To define which plugins are build into the distribution just edit <code>/_config.json</code> to fit your needs.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Please read <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+
+<h2 id="license">License</h2>
+
+<p>The code and the documentation are released under the <a href="/javascripts/owl/LICENSE">MIT License</a>.</p>
