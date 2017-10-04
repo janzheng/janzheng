@@ -1457,6 +1457,10 @@ p {
   ._grid-xs-autofit {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); } }
 
+@media (max-width: 767px) {
+  ._span-xs-reset {
+    grid-column-start: 1 !important; } }
+
 .chrome-fix {
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
