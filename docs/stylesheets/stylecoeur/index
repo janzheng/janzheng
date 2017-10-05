@@ -584,6 +584,10 @@ input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdo
 ._block {
   display: block; }
 
+@media (max-width: 767px) {
+  ._block-xs {
+    display: block; } }
+
 ._inline {
   display: inline !important; }
 
@@ -625,6 +629,10 @@ input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdo
 ._margin-none {
   margin: 0; }
 
+@media (max-width: 767px) {
+  ._margin-none-xs {
+    margin: 0; } }
+
 ._margin-top {
   margin-top: 16px; }
 
@@ -659,6 +667,10 @@ input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdo
 
 ._margin-left {
   margin-left: 16px; }
+
+@media (min-width: 768px) {
+  ._margin-left-sm {
+    margin-left: 16px; } }
 
 ._margin-left-2 {
   margin-left: 32px; }

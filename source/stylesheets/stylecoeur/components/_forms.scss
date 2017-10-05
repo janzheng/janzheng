@@ -598,8 +598,12 @@ $range-track-height: $base/4 !default;
 }
 
 
-
-
+// honeypot 
+._form-fake {
+  position: fixed;
+  z-index: -100;
+  opacity: 0;
+}
 
 
 
