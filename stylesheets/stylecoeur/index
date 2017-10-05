@@ -2008,6 +2008,11 @@ textarea, .textarea {
   background: #DDDDDD;
   border: 0; }
 
+._form-fake {
+  position: fixed;
+  z-index: -100;
+  opacity: 0; }
+
 ._swatch-color {
   height: 120px;
   width: 100%;

@@ -4,7 +4,7 @@
 var navOffset = -60;
 
 function verticalScroll(_target) {
-  console.log('scrolling to ', _target)
+  // console.log('scrolling to ', _target)
   var scrollElement = 'html, body';
   event.preventDefault();
   
@@ -82,7 +82,7 @@ $(window).load(function() {
 
   // intercept hash load
   let hash = location.hash;
-  console.log(hash);
+  // console.log(hash);
 
   if(hash !== '') {
     verticalScroll(hash);
@@ -113,10 +113,10 @@ function onResize() {
   var heroHeight_xs = 612; // 0.9 * $(window).height(); // 0.6vh
 
   if(isMobile()) {
-    console.log('setting at fixed', heroHeight_xs)
+    // console.log('setting at fixed', heroHeight_xs)
     $('._hero, ._hero figure').css({'height': heroHeight_xs})
   } else {
-    console.log('setting at ', heroHeight)
+    // console.log('setting at ', heroHeight)
     $('._hero, ._hero figure').css({'height': heroHeight})
   }
 
@@ -137,7 +137,7 @@ function onResize() {
   // for drawing grids for _grid-markers
   var mainWidth = parseInt($('._grid-markers-basis').css( "width" )) - parseInt($('._grid-markers-basis').css( "padding-right" )) - parseInt($('._grid-markers-basis').css( "padding-left" ));
   var cols = $('._grid-markers').data('cols');
-  console.log('grid marker width: ', mainWidth, ' cols', cols, $('._grid-markers').innerWidth());
+  // console.log('grid marker width: ', mainWidth, ' cols', cols, $('._grid-markers').innerWidth());
 
   var emptyDivs = '';
   for(i=0; i<cols; i++) {

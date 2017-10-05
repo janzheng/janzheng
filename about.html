@@ -31,25 +31,25 @@
 
   <!-- because middleman is too dumb- for build -->
   <script src="javascripts/jquery.min-ae49e569.js"></script>
-  <script src="javascripts/site-802d2c30.js?=v0.259"></script>
+  <script src="javascripts/site-e04b88ea.js?=v0.259"></script>
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-b6109fc1.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-09eb079d.css?=v0.742" rel="stylesheet">
 
 
 
   <!-- because middleman is too dumb- for server -->
   <!-- <script src="javascripts/jquery.min-ae49e569.js"></script>
-  <script src="javascripts/site-802d2c30.js?=v0.259"></script>
+  <script src="javascripts/site-e04b88ea.js?=v0.259"></script>
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-b6109fc1.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-09eb079d.css?=v0.742" rel="stylesheet">
  -->
 
-  <link href="stylesheets/site-b6109fc1.css" rel="stylesheet" />
-  <script src="javascripts/site-802d2c30.js"></script>
+  <link href="stylesheets/site-09eb079d.css" rel="stylesheet" />
+  <script src="javascripts/site-e04b88ea.js"></script>
   </head>
   <body class="">
 
@@ -120,7 +120,7 @@
   </div>
 
   <div class="_grid-span-between _span-col-4 _span-xs-col-6 " data-colstart="1to3" data-colspan="3to5">
-    <p>I’m an Atlanta-based UX designer/prototyper with a background in computer science, psychology, and game design, and more than eight years of client and agency experience. </p><p>At the moment, I am a freelance consultant and work with startups, but I have previously worked with brands and companies like:
+    <p>I’m an Atlanta-based UX designer/prototyper with degrees in human-computer interaction, computer science, psychology, and game design, and more than eight years of client and agency experience. </p><p>At the moment I am a freelance consultant for startups, but I have previously worked with brands like
     </p>
   </div>
 
@@ -276,7 +276,7 @@
     <div class=" _span-row-2 ">I like to lindy hop, blues dance, west coast swing or uh zouk. Sometimes I dance a lot...</div>
     <div>I like to go hiking or yogaing or other stuff</div>
     <div>I really don’t like heights</div>
-    <div class=" _span-col-2">I speak English, Swedish and Chinese, and French and Spanish very poorly</div>
+    <div class=" _span-col-2">I speak English, Swedish and Chinese fluently... and French and Spanish very, very poorly</div>
     <div>I like to make delicious foods (and eat ’em too)</div>
     <div class=" _span-col-2 ">I like to read about design, typography, and usability, and spend too much time on designer news or dribbble</div>
     <div class="_span-col-2">I once joined the circus (for three years, part-time), so sometimes I’ll still do trapeze or lyra things</div>
@@ -389,7 +389,7 @@ Cheers to being free and expressive, online and offline!
   $(window).load(function() {
     $('._span-column').each(function() {
       if($(window).width() < $(this).data('span-min-width')) {
-        console.log('heyy')
+        // console.log('heyy')
         // if window is less than the min-width required for this to execute,
         // we just quit
         return false;
@@ -415,7 +415,7 @@ Cheers to being free and expressive, online and offline!
 
 
   <div class="_message _color-gray _font-small">
-    &rarr; <em>currently swamped and not available for large jobs, but say hello anyway :P </em>
+    &rarr; <em>currently I’m swamped, and not available for large jobs, but be a rebel and say hello anyway </em>
   </div>
 
     <form id="form" action="https://script.google.com/macros/s/AKfycby01BhE83Qmd8ARcKdviWgZjsY1aPxLDs3p9qAMLMt0GTwUKtXx/exec">
@@ -437,6 +437,11 @@ Cheers to being free and expressive, online and offline!
           <div class="_right">
             and <input id="shortMessage" class=" _form-input _inline _margin-right-none-i" type="text" name="shortMessage" placeholder="I think..." required/>
           </div>
+
+          <div class="_right _form-fake">
+            fake <input id="fake" class=" _form-input _inline _margin-right-none-i" type="text" name="fake" placeholder="umm..."/>
+          </div>
+
         </div>
         <div class="_align-vertically _align-bottom">
           <button class="_margin-top-xs _margin-bottom-none _padding-left-half _padding-right-half _margin-left-none _inline _button _button-short --outline">send away!</button>
@@ -503,6 +508,10 @@ Cheers to being free and expressive, online and offline!
           // form.submit(false);
 
           var data = getFormData();
+          if(data.fake) {
+            console.log('fake! ', data)
+            return false; // honey
+          }
 
           document.getElementById('form').style.display = 'none'; // hide form
           document.getElementById('loading').style.display = 'block';
@@ -591,48 +600,6 @@ function getFormData() {
   // console.log(data);
   return data;
 }
-
-
-// https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js
-// function handleFormSubmit(event) {  // handles form submit withtout any jquery
-//   event.preventDefault();           // we are submitting via xhr below
-//   var data = getFormData();         // get the values submitted in the form
-//   console.log('form data:' , event, data);
-
-//   // set 'loading' state 
-
-//   document.getElementById('form').style.display = 'none'; // hide form
-//   // document.getElementById('loading').style.display = 'block';
-
-//   var url = action; //event.target.action;  //
-//   var xhr = new XMLHttpRequest();
-//   xhr.open('POST', url);
-//   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-//   xhr.onreadystatechange = function() {
-//     console.log( xhr.status, xhr.statusText )
-//     console.log(xhr.responseText);
-//     // document.getElementById('loading').style.display = 'none';
-//     document.getElementById('form').style.display = 'none'; // hide form
-//     document.getElementById('thankyou_message').style.display = 'block';
-//     return;
-//   };
-//   // url encode form data for sending as post data
-//   var encoded = Object.keys(data).map(function(k) {
-//       return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-//   }).join('&')
-//   // xhr.send(encoded);
-// }
-
-// function loaded() {
-//   console.log('contact form submission handler loaded successfully');
-//   // bind to the submit event of our form
-//   var form = document.getElementById('form');
-//   form.addEventListener("submit", handleFormSubmit, false);
-// };
-
-// document.addEventListener('DOMContentLoaded', loaded, false);
-
-
 
 
 </script>

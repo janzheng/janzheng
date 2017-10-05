@@ -31,25 +31,25 @@
 
   <!-- because middleman is too dumb- for build -->
   <script src="javascripts/jquery.min-ae49e569.js"></script>
-  <script src="javascripts/site-802d2c30.js?=v0.259"></script>
+  <script src="javascripts/site-e04b88ea.js?=v0.259"></script>
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-b6109fc1.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-09eb079d.css?=v0.742" rel="stylesheet">
 
 
 
   <!-- because middleman is too dumb- for server -->
   <!-- <script src="javascripts/jquery.min-ae49e569.js"></script>
-  <script src="javascripts/site-802d2c30.js?=v0.259"></script>
+  <script src="javascripts/site-e04b88ea.js?=v0.259"></script>
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-b6109fc1.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-09eb079d.css?=v0.742" rel="stylesheet">
  -->
 
-  <link href="stylesheets/site-b6109fc1.css" rel="stylesheet" />
-  <script src="javascripts/site-802d2c30.js"></script>
+  <link href="stylesheets/site-09eb079d.css" rel="stylesheet" />
+  <script src="javascripts/site-e04b88ea.js"></script>
   </head>
   <body class="">
 
@@ -89,7 +89,7 @@
 
 
   <div class="_message _color-gray _font-small">
-    &rarr; <em>currently swamped and not available for large jobs, but say hello anyway :P </em>
+    &rarr; <em>currently I’m swamped, and not available for large jobs, but be a rebel and say hello anyway </em>
   </div>
 
     <form id="form" action="https://script.google.com/macros/s/AKfycby01BhE83Qmd8ARcKdviWgZjsY1aPxLDs3p9qAMLMt0GTwUKtXx/exec">
@@ -111,6 +111,11 @@
           <div class="_right">
             and <input id="shortMessage" class=" _form-input _inline _margin-right-none-i" type="text" name="shortMessage" placeholder="I think..." required/>
           </div>
+
+          <div class="_right _form-fake">
+            fake <input id="fake" class=" _form-input _inline _margin-right-none-i" type="text" name="fake" placeholder="umm..."/>
+          </div>
+
         </div>
         <div class="_align-vertically _align-bottom">
           <button class="_margin-top-xs _margin-bottom-none _padding-left-half _padding-right-half _margin-left-none _inline _button _button-short --outline">send away!</button>
@@ -177,6 +182,10 @@
           // form.submit(false);
 
           var data = getFormData();
+          if(data.fake) {
+            console.log('fake! ', data)
+            return false; // honey
+          }
 
           document.getElementById('form').style.display = 'none'; // hide form
           document.getElementById('loading').style.display = 'block';
@@ -265,48 +274,6 @@ function getFormData() {
   // console.log(data);
   return data;
 }
-
-
-// https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js
-// function handleFormSubmit(event) {  // handles form submit withtout any jquery
-//   event.preventDefault();           // we are submitting via xhr below
-//   var data = getFormData();         // get the values submitted in the form
-//   console.log('form data:' , event, data);
-
-//   // set 'loading' state 
-
-//   document.getElementById('form').style.display = 'none'; // hide form
-//   // document.getElementById('loading').style.display = 'block';
-
-//   var url = action; //event.target.action;  //
-//   var xhr = new XMLHttpRequest();
-//   xhr.open('POST', url);
-//   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-//   xhr.onreadystatechange = function() {
-//     console.log( xhr.status, xhr.statusText )
-//     console.log(xhr.responseText);
-//     // document.getElementById('loading').style.display = 'none';
-//     document.getElementById('form').style.display = 'none'; // hide form
-//     document.getElementById('thankyou_message').style.display = 'block';
-//     return;
-//   };
-//   // url encode form data for sending as post data
-//   var encoded = Object.keys(data).map(function(k) {
-//       return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-//   }).join('&')
-//   // xhr.send(encoded);
-// }
-
-// function loaded() {
-//   console.log('contact form submission handler loaded successfully');
-//   // bind to the submit event of our form
-//   var form = document.getElementById('form');
-//   form.addEventListener("submit", handleFormSubmit, false);
-// };
-
-// document.addEventListener('DOMContentLoaded', loaded, false);
-
-
 
 
 </script>
