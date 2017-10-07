@@ -1,44 +1,17 @@
-<!doctype html>
-<html>
-  <head>
-    <title>jan zheng—product designer</title>
-    <%= partial '/partials/head' %>
-  </head>
-  <body class="_styleguide _content _container">
-    <div class="_styleguide-nav">
-    </div>
+<!-- layouts can't have yaml -->
+<% wrap_layout :main do %>
+<div class="_styleguide _content _container">
+  <div class="_styleguide-nav">
+  </div>
 
-    <div class="_styleguide-main _grid-one-three">
+  <div class="_styleguide-main">
+    <!-- no nav for mini styleguide -->
+    <%= yield %>
+  </div>
 
-      <aside>
-        <h1 class="_transparent">menu</h1>
-        <span class="_sticky-tr"></span>
-        <div class="_sidebar">
-          <%= partial '/partials/style-menu' %>
-        </div>
-      </aside>
-
-      <%= yield %>
-    </div>
-
-    <div class="_styleguide-footer">
-    </div>
-  </body>
-</html>
+  <!-- <div class="_styleguide-footer">
+  </div> -->
+</div>
 
 
-<script>
-
-// var max_search_entries = 50;
-
-// var result = []; //initialize empty array
-
-// lunrIndex.search(request.term).forEach( function (item, index) {
-//   if ( index < max_search_entries ) {
-//     result.push(lunrData.docs[item.ref]);
-//   }
-// });
-
-// console.log(result)
-
-</script>
+<% end %>

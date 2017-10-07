@@ -285,9 +285,32 @@ p { // p reset
 
 
 
+// portfolio
+%tag {
+  font-size: $base - 2px;
+  line-height: ($base - 2px) * 1.5;
+}
 
+.portfolio {
+}
 
+  .portfolio-item {
+    height: 140px;
+    @extend ._align-bottom;
 
+    background-color: $color-ui-light;
+    padding: $base;
+    border-radius: $radius;
+
+    .portfolio-tags {
+      @extend %tag;
+    }
+
+    &:nth-child(2n+1) {
+      position: relative;
+      top: -$base*2
+    }
+  }
 
 
 

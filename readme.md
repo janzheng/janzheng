@@ -65,6 +65,11 @@ activate :asset_hash
 
 
 
+## License and Use
+
+This project is filed under an MIT license. Attribution/a nod to the source would be nice in your readme file but doesn't really matter. Have fun adapting it to your own needs
+
+
 
 
 
