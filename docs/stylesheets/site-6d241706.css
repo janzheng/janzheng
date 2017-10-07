@@ -1327,7 +1327,7 @@ p {
   display: grid;
   align-items: center; }
 
-._align-bottom {
+._align-bottom, .portfolio-item {
   display: grid;
   align-items: end; }
 
@@ -3155,3 +3155,16 @@ p {
   color: #BD5843; }
 #form p {
   line-height: 64px; }
+
+.portfolio-item .portfolio-tags {
+  font-size: 14px;
+  line-height: 21px; }
+
+.portfolio-item {
+  height: 140px;
+  background-color: #EEEEEE;
+  padding: 16px;
+  border-radius: 4px; }
+  .portfolio-item:nth-child(2n+1) {
+    position: relative;
+    top: -32px; }
