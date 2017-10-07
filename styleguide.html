@@ -1,3 +1,4 @@
+<!-- layouts can't have yaml -->
 <!doctype html>
 <html>
   <head>
@@ -67,98 +68,111 @@
 </nav>
 
     <div class="_main">
-      <div class="index _width-content-max" id="landing">
-
-  <div class="index-intro _padding-2">
-
-    <div class="_size" data-height="25">
-      <h2 class="_page-header">products <span class="_ampersand">&amp;</span> prototypes </h2>
-
-      <div class="index-intro-sub _padding-bottom-2">
-        <h6>strategy / info arch / design / dev</h6>
-      </div>
-    </div>
-
-    <div class="_size" data-height="50">
-      <p class="index-intro-message _padding-top-2">
-        Hello! My name’s <a class="index-jan _pointer">Jan<span class="_hidden">&mdash;yawn. it’s Swedish&mdash;</span></a> and I love to make complicated things simple. I <a class="index-exp _pointer">design and build products and prototypes<span class="_hidden">&mdash;subjectively fun and functional digital experiences&mdash;</span></a> for <a class="index-s _pointer"> people<span class="_hidden"> who like things that feel good and work well and are not frustrating</span></a>. <span class="_font-small"><a href="./about.html">read  more about me</a> or <a href="#contact">say hello!</a></span>
-      </p>
-    </div>
-
-    
-<div class="portfolio _grid-two">
-
-  <div class="portfolio-item ">
-    <div>
-      <div class="portfolio-image"></div>
-      <div class="portfolio-title">Web Design</div>
-      <div class="portfolio-tags">ux, branding, web consulting</div>
-    </div>
+      <div class="_styleguide _content _container">
+  <div class="_styleguide-nav">
   </div>
 
-  <div class="portfolio-item">
-    <div>
-      <div class="portfolio-image"></div>
-      <div class="portfolio-title">Gas South</div>
-      <div class="portfolio-tags">ux, information architecture, user testing, prototype, mobile</div>
-    </div>
+  <div class="_styleguide-main">
+    <!-- no nav for mini styleguide -->
+    <main>
+
+  <h2> design thoughts </h2>
+
+  <h3 id="homepage-content-design">homepage content design</h3>
+
+  <p>As a user enters the homepage they should see promintently:</p>
+
+  <ul>
+    <li>portfolio pieces that portrays depth and width of expertise, also the kind of work you want to attract</li>
+    <li>a simple yet obvious tool for selecting content types (tabs or filter?)</li>
+  </ul>
+
+  <p>filters:</p>
+
+  <ul>
+    <li>portfolio (recent 4 highlighted, plus archived underneath), no filter for it</li>
+    <li>projects (active projects, gigs, whatever)</li>
+    <li>lab/experiment (small number, republish in medium if you can, as you get better exposure in one place)</li>
+    <li>bookmarks — (very many, from tumblr, rsstojson)</li>
+    <li>thoughts — medium blog (some, from medium, rsstojson)</li>
+  </ul>
+
+  <p>Each content piece on the homepage inherits from a content piece. Should be easy to quickly parse content, moreso than seeing each content beautifull and (largely/blockingly) - emphasize density over largeness and whitespace.</p>
+
+  <h4>portfolio pieces</h4>
+
+  <ul>
+    <li>always four pieces</li>
+    <li>
+      <p>content: project image, year, title, subtitle (opt), platform (web, mobile, react, etc.), tags</p>
+    </li>
+    <li>freelance web consultant
+      <ul>
+        <li>goal: to describe variety of freelance gigs, to attract similar gigs in the future; show various projects together</li>
+        <li>ux design, branding, web, consulting</li>
+      </ul>
+    </li>
+    <li>gas south
+      <ul>
+        <li>goal: onboard flows, heavy ux/IA flows, testing, designing for conversion, prototype building</li>
+        <li>ux design, user testing, information architecture, conversion, prototype, mobile</li>
+      </ul>
+    </li>
+    <li>diamax korea
+      <ul>
+        <li>goal: focus on design + prototyping from scratch a reactive / accounts-based system</li>
+        <li>prototyping, react</li>
+      </ul>
+    </li>
+    <li>double the donation
+      <ul>
+        <li>goal: focus on copywriting, IA, UX, marketing and conversion improvement</li>
+        <li>copywriting, IA, UX, conversion, marketing</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>small way to "look at more projects"?</p>
+
+  <h4>main content object</h4>
+
+  <ul>
+    <li>title</li>
+    <li>subtitle/preview (short)</li>
+    <li>link: link to the larger article or portfolio or whatever</li>
+    <li>linkUrl: displaying the url or url base (e.g. codepen.io) for tumblr</li>
+    <li>date: when was this created?</li>
+    <li>preview: preview text / content of post</li>
+    <li>image (optional)</li>
+    <li>tags</li>
+    <li>content type</li>
+    <li>comment (specifically for bookmarks)</li>
+  </ul>
+
+  <h4>content types</h4>
+
+  <p>As far as blogging / building experiments and writing about them on Medium, it's fine. I don't really care about traffic to the site, and having Medium as a place where people is go is probably better anyway, as I don't have time to manage traffic myself.</p>
+
+  <h4>tags</h4>
+
+  <p>tumblr tags are way too random right now. Need to establish a system and clean that shit up.</p>
+
+  <ul>
+    <li><code>_inspiration</code> - references and inspiration, but not directly applicable</li>
+    <li><code>_example</code> - example code, design, and other things to come back and use</li>
+    <li><code>_lesson</code> - things with educational value that might be worth coming back to</li>
+    <li><code>_thought</code> - thought pieces, psychology, and not directly-applicable items</li>
+  </ul>
+
+</main>
+
+
   </div>
 
-  <div class="portfolio-item">
-    <div>
-      <div class="portfolio-image"></div>
-      <div class="portfolio-title">Diamax Korea</div>
-      <div class="portfolio-tags">ux, prototyping, react, meteor</div>
-    </div>
-  </div>
-
-  <div class="portfolio-item">
-    <div>
-      <div class="portfolio-image"></div>
-      <div class="portfolio-title">Double the Donation</div>
-      <div class="portfolio-tags">ux, information architecture, conversion funnel design, wordpress</div>
-    </div>
-  </div>
-
+  <!-- <div class="_styleguide-footer">
+  </div> -->
 </div>
 
-  </div>
-
-</div>
-
-<script>
-  // for fun
-
-  $('.index-jan').on('click', function() {
-    // console.log('click')
-    $(this).find('._hidden').removeClass('_hidden');
-  });
-
-  $('.index-exp').on('click', function() {
-    $(this).find('._hidden').removeClass('_hidden');
-  });
-
-  $('.index-s').on('click', function() {
-    $(this).find('._hidden').removeClass('_hidden');
-  });
-
-
-
-  // css/js hybrid
-  // dynamic height dispenser
-  // don't rely on vh as browser bugs and annoyances like iOS chrome
-  // vw more reliable
-  // syntax: class="_size" data-height="30" is calculated 30 vh
-  $(window).load(function() {
-    $('._size').each(function() {
-      // calculate vh manually, and set it dynamically
-      // console.log($(this).data())
-      var height = $(window).height() * ($(this).data('height') * 0.01);
-      $(this).css({'height': height})
-    });
-  });
-
-</script>
 
 
       
