@@ -2925,8 +2925,8 @@ h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .inpu
   font-family: "Georgia", "Crimson Text", serif !important; }
 
 p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select {
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 17px;
+  line-height: 28.5px;
   font-weight: 400;
   color: #333333; }
 
