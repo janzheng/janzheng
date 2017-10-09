@@ -9,6 +9,9 @@ This project is written in a combination of ERB (Ruby on Rails templating code),
 
 Note: The site uses the mostly-supported CSS Grids, but may require fallbacks for much older browsers, which have not been written. Oh well!
 
+The content here is generated from [https://github.com/janzheng/janzheng](https://github.com/janzheng/janzheng) but actually deploys to [https://github.com/janzheng/janzheng.github.io](https://github.com/janzheng/janzheng.github.io) as the root site. The root site is awkward in that all pages have to exist in the base folder at the `master` branch. Super annoying. So this source deploys to that destination.
+
+
 
 ## Installation
 

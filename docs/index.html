@@ -35,7 +35,7 @@
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-6d241706.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-499db6ec.css?=v0.742" rel="stylesheet">
 
 
 
@@ -45,10 +45,10 @@
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-6d241706.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-499db6ec.css?=v0.742" rel="stylesheet">
  -->
 
-  <link href="stylesheets/site-6d241706.css" rel="stylesheet" />
+  <link href="stylesheets/site-499db6ec.css" rel="stylesheet" />
   <script src="javascripts/site-e04b88ea.js"></script>
   </head>
   <body class="">
@@ -225,13 +225,16 @@
             fake <input id="fake" class=" _form-input _inline _margin-right-none-i" type="text" name="fake" placeholder="umm..."/>
           </div>
 
+          <!-- <div class="_padding-top" >
+            <textarea rows="2" id="message" class="_form-input"  type="text" name="message" placeholder="leave a message *" ></textarea>
+          </div> -->
+
         </div>
-        <div class="_align-vertically _align-bottom">
+
+        <div class="_align-vertically _align-bottom" >
           <button class="_margin-top-xs _margin-bottom-none _padding-left-half _padding-right-half _margin-left-none _inline _button _button-short --outline">send away!</button>
         </div>
-      </div>
-      <div class="_padding-bottom">
-        <textarea rows="2" id="message" class="_form-input"  type="text" name="message" placeholder="leave a message *" ></textarea>
+
       </div>
     </form>
     
@@ -291,11 +294,11 @@
           // form.submit(false);
 
           var data = getFormData();
-          if(data.fake || data.message) {
-            console.log('fake! ', data)
-            return false; // honey
+          if(data.fake || data.message ) {
+            // console.log('fake! ', data)
+            // return false; // honey
           } else {
-
+            
             document.getElementById('form').style.display = 'none'; // hide form
             document.getElementById('loading').style.display = 'block';
 

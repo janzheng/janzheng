@@ -52,7 +52,6 @@ function verticalScroll(_target) {
 $(document).ready(function() {
 
   // hide loader; reveal page
-  $('body').addClass('--loaded');
   window.setTimeout(onLoadPage, 400)
 
   $("a[href^='#'], html, body").unbind();
@@ -128,11 +127,11 @@ function onResize() {
   var stickyController = new ScrollMagic.Controller();
 
   // scroll delay on effects
-  if( !isMobile() ) {
-    var navFx = new ScrollMagic.Scene({triggerElement: "body", triggerHook: "onLeave", offset: 50})
-          .setClassToggle("#nav", "--pinned") // add class toggle
-          .addTo(stickyController);
-  }
+  // if( !isMobile() ) {
+  //   var navFx = new ScrollMagic.Scene({triggerElement: "body", triggerHook: "onLeave", offset: 50})
+  //         .setClassToggle("#nav", "--pinned") // add class toggle
+  //         .addTo(stickyController);
+  // }
 
   // for drawing grids for _grid-markers
   var mainWidth = parseInt($('._grid-markers-basis').css( "width" )) - parseInt($('._grid-markers-basis').css( "padding-right" )) - parseInt($('._grid-markers-basis').css( "padding-left" ));
@@ -143,6 +142,7 @@ function onResize() {
   for(i=0; i<cols; i++) {
     emptyDivs += '<div></div>'; // create empty divs for markers
   }
+  
   $('._grid-markers')
     .html(emptyDivs)
     .width(mainWidth)
@@ -158,7 +158,7 @@ function onResize() {
 $(window).on('resize', _.throttle(onResize, 500));
 
 function onLoadPage() {
-  $('body').addClass('--loaded');
+  $('body').addClass('--loaded')
 }
 
 

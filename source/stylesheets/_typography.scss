@@ -2,7 +2,7 @@
 // Typography
 
 %font-sans {
-  font-family: "Lato", arial, sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, "Lato", "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif;
 }
 
 %font-serif {
@@ -16,8 +16,16 @@
 
 
 %font-body {
-  font-size: $base + 2px;
-  line-height: ($base + 4px) * 1.5;
+  font-size: $base + 1px;
+  line-height: ($base + 3px) * 1.5;
+  font-weight: 400;
+  color: $color-copy;
+  @extend %font-serif;
+}
+
+%font-body-small {
+  font-size: $base - 1px;
+  line-height: ($base - 1px) * 1.5;
   font-weight: 400;
   color: $color-copy;
   @extend %font-serif;

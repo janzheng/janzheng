@@ -6,7 +6,7 @@
 
 
   <div class="_message _color-gray _font-small">
-    &rarr; <em>currently I’m swamped, and not available for large jobs, but be a rebel and say hello anyway </em>
+    &rarr; <em>currently not available for large jobs, but say hello anyway </em>
   </div>
 
     <form id="form" action="https://script.google.com/macros/s/AKfycby01BhE83Qmd8ARcKdviWgZjsY1aPxLDs3p9qAMLMt0GTwUKtXx/exec">
@@ -102,9 +102,9 @@
           // form.submit(false);
 
           var data = getFormData();
-          if(data.fake || data.message) {
-            console.log('fake! ', data)
-            return false; // honey
+          if(data.fake || data.message ) {
+            // console.log('fake! ', data)
+            // return false; // honey
           } else {
 
             document.getElementById('form').style.display = 'none'; // hide form
