@@ -67,84 +67,20 @@
 </nav>
 
     <div class="_main">
-      <div class="index _width-content-max" id="landing">
+      <div class="bookmarks _width-content-max" id="landing">
 
   <div class="index-intro _padding-2">
 
     <div class="_size" data-height="25">
-      <h2 class="_page-header">products <span class="_ampersand">&amp;</span> prototypes </h2>
+      <h2 class="_page-header">bookmarks  </h2>
 
-      <div class="index-intro-sub _padding-bottom-2">
-        <h6>strategy / info arch / design / dev</h6>
-      </div>
+      social bookmarks coming soon
     </div>
-
-    <div class="_size" data-height="50">
-      <p class="index-intro-message _padding-top-2">
-        Hello! My name’s <a class="index-jan _pointer">Jan<span class="_hidden">&mdash;yawn. it’s Swedish&mdash;</span></a> and I love to make complicated things simple. I <a class="index-exp _pointer">design and build products and prototypes<span class="_hidden">&mdash;subjectively fun and functional digital experiences&mdash;</span></a> for <a class="index-s _pointer"> people<span class="_hidden"> who like things that feel good and work well and are not frustrating</span></a>. <span class="_font-small"><a href="./about.html">read  more about me</a> or <a href="#contact">say hello!</a></span>
-        <!-- <div class="_color-gray _font-small">
-          <em>based in Atlanta </em>
-        </div> -->
-
-      </p>
-    </div>
-
-    
-<div class="portfolio _grid-two">
-
-  <a href="./work/webdesign.html" class="portfolio-item" style="background-image: url('images/teeth2-24f3f58a.jpg')">
-    <div>
-      <div class="portfolio-title"><span>Web Design</span></div>
-      <div class="portfolio-tags"><span>ux, branding, web consulting</span></div>
-    </div>
-  </a>
-
-  <a href="./work/gs.html" class="portfolio-item" style="background-image: url('images/gs-a977a1c3.jpg')">
-    <div>
-      <div class="portfolio-title"><span>Gas South</span></div>
-      <div class="portfolio-tags"><span>ux, information architecture, user testing, prototype, mobile</span></div>
-    </div>
-  </a>
-
-  <a href="./work/dk.html" class="portfolio-item" style="background-image: url('images/dk-2c025a1b.jpg')">
-    <div>
-      <div class="portfolio-image"></div>
-      <div class="portfolio-title"><span>Diamax Korea</span></div>
-      <div class="portfolio-tags"><span>ux, prototyping, react, meteor</span></div>
-    </div>
-  </a>
-
-  <a href="./work/dtd.html" class="portfolio-item" style="background-image: url('images/dtd-f64a31d1.jpg')">
-    <div>
-      <div class="portfolio-image"></div>
-      <div class="portfolio-title"><span>Double the Donation</span></div>
-      <div class="portfolio-tags"><span>ux, information architecture, conversion funnel design, wordpress</span></div>
-    </div>
-  </a>
-
-</div>
-
   </div>
 
 </div>
 
 <script>
-  // for fun
-
-  $('.index-jan').on('click', function() {
-    // console.log('click')
-    $(this).find('._hidden').removeClass('_hidden');
-  });
-
-  $('.index-exp').on('click', function() {
-    $(this).find('._hidden').removeClass('_hidden');
-  });
-
-  $('.index-s').on('click', function() {
-    $(this).find('._hidden').removeClass('_hidden');
-  });
-
-
 
   // css/js hybrid
   // dynamic height dispenser
@@ -164,135 +100,6 @@
 
 
       
-      
-<div id="generator" class="_generator _padding-2">
-  <!-- <div class="generator-ctrl">
-    <a class="active">thoughts</a>
-    <a>experiments</a>
-    <a>bookmarks</a>
-    <a>projects</a>
-  </div> -->
-  <div class="_grid-three-one">
-
-    <div class="generator-main">
-      <div class="generator-content _tumblr">
-        <h4 class="_inline">social bookmarks</h4><a class="_padding-left _font-italic _font-small" href="./bookmarks.html">all bookmarks</a>
-        <div id="output"></div>
-      </div>
-    </div>
-    <aside class="generator-aside">
-      <!-- aside -->
-    </aside>
-
-  </div>
-
-</div>
-
-
-<script>
-
-$(document).ready(function() {
-
-
-
-});
-
-</script>
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">
-google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="javascripts/tumblr-f69649a2.js"></script>
-<script>
-
-
-var _limit = 5; // 20; // load 20 is default posts every time
-// Load fewer posts on mobile
-if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-  _limit = 5;
-}
-var __tags = [], posts = [], latest = null, index = 0, total = 0, objs = "";
-var times = 0; // temp
-
-
-$(document).ready(function() {
-
-// console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
-// console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
-// console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
-// console.log(JSON.stringify(tumblr_api_read), tumblr_api_read);
-
-
-  // Iniitialize Tumblr
-  getTumblr({limit: _limit, offset: 0}, tumblrSuccess);
-
-  // load more
-  // $('.loadMore').click(function() {loadmore()});
-  // function loadmore() {
-  //   filterReset(); // must reset, or the previously filtered posts will be gone!
-  //   sticky.refresh();
-  //   index = posts.length * _limit;
-  //   getTumblr({limit: _limit, offset: index}, tumblrSuccess);
-  // }
-
-});
-
-
-function tumblrSuccess(json, payload) {
-  if(json.response.posts.length != 0) {
-    posts.push(json.response.posts);
-    objs += JSON.stringify(json.response.posts)
-    latest = json.response.posts[0];
-    total = json.response.total_posts
-
-    // console.log('posts: ', total, posts, json.response, json.response.posts);
-    // times++;
-
-    // // $('#output').html($('#output').html + objs)
-    // if(times >= total/_limit) {
-    //   console.log('obj done', posts, objs);
-    // }
-
-    // if(times <= total/_limit+1) {
-    //   console.log(_limit*times)
-    //   getTumblr({limit: _limit, offset: times*_limit}, tumblrSuccess);
-    // }
-
-    populateShort(posts[posts.length-1], $('#output'));
-    // populateTags(); // tags built in populate
-    // filterInit();   // initialize tag bindings
-    // console.log('refreshing sticky again')
-    // sticky.refresh() // refresh the sidebar since content's changed
-  }
-}
-
-
-</script>
-
-
-
 
       
 

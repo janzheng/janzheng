@@ -43,7 +43,7 @@ section, ._section,
 
 /*  HTML5 ✰ Boilerplate  */
 html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, #generator div a._tumblr-item ._tumblr-title, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -846,21 +846,21 @@ input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdo
 
 button,
 ._button, button:hover,
-._button:hover, a, a:focus, a:active, a:visited, a:hover, a.--active, a.--inactive, a.--tbd, ._modal-popup-container, ._modal-popup-container.--open, ._modal, ._modal-overlay, ._modal-content, ._modal-effect-slideUp, ._modal-effect-slideUp *, .--open._modal-effect-slideUp, .--open._modal-effect-slideUp *, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, form input:active, form input:focus, form input:hover, form textarea:active, form textarea:focus, form textarea:hover, a:before, a:hover:before {
+._button:hover, a, a:focus, a:active, a:visited, a:hover, a.--active, a.--inactive, a.--tbd, ._modal-popup-container, ._modal-popup-container.--open, ._modal, ._modal-overlay, ._modal-content, ._modal-effect-slideUp, ._modal-effect-slideUp *, .--open._modal-effect-slideUp, .--open._modal-effect-slideUp *, a:before, a:hover:before, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, form input:active, form input:focus, form input:hover, form textarea:active, form textarea:focus, form textarea:hover, .portfolio-item, .portfolio-item:hover {
   -webkit-transition: all 230ms ease;
   -moz-transition: all 230ms ease;
   -ms-transition: all 230ms ease;
   -o-transition: all 230ms ease;
   transition: all 230ms ease; }
 
-input, .input, textarea, .textarea, ._form-select-dropdown + select, form input, form textarea, input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdown + select:focus, form input:focus, form textarea:focus, input:hover, .input:hover, textarea:hover, .textarea:hover, ._form-select-dropdown + select:hover, form input:hover, form textarea:hover, input[type="email"], input[type="text"], input[type="number"], input[type="password"], input[type="email"]:hover, input[type="text"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="email"]:hover:focus, input[type="text"]:hover:focus, input[type="number"]:hover:focus, input[type="password"]:hover:focus, ._expander, ._expander ._expander-icon, ._expander ._anim-right, ._expander:hover ._anim-right, ._expander.--open {
+input, .input, textarea, .textarea, ._form-select-dropdown + select, form input, form textarea, input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdown + select:focus, form input:focus, form textarea:focus, input:hover, .input:hover, textarea:hover, .textarea:hover, ._form-select-dropdown + select:hover, form input:hover, form textarea:hover, input[type="email"], input[type="text"], input[type="number"], input[type="password"], input[type="email"]:hover, input[type="text"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="email"]:hover:focus, input[type="text"]:hover:focus, input[type="number"]:hover:focus, input[type="password"]:hover:focus, ._expander, ._expander ._expander-icon, ._expander ._anim-right, ._expander:hover ._anim-right, ._expander.--open, .portfolio-item:hover span:first-child {
   -webkit-transition: all 180ms ease;
   -moz-transition: all 180ms ease;
   -ms-transition: all 180ms ease;
   -o-transition: all 180ms ease;
   transition: all 180ms ease; }
 
-body, body.--loaded {
+body, body.--loaded, .portfolio-item span, .portfolio-item:hover span {
   -webkit-transition: all 320ms ease;
   -moz-transition: all 320ms ease;
   -ms-transition: all 320ms ease;
@@ -918,7 +918,7 @@ body, body.--loaded {
     -webkit-filter: sepia(1) saturate(8); }
   100% {
     -webkit-filter: sepia(0) saturate(2); } }
-h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, h6,
+h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, #generator div a._tumblr-item ._tumblr-title, h6,
 p,
 body,
 input,
@@ -932,7 +932,7 @@ form .textarea,
 form ._form-select-dropdown + select {
   font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif; }
 
-h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h6 {
+h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, #generator div a._tumblr-item ._tumblr-excerpt, #generator div a._tumblr-item ._tumblr-description p, h6 {
   font-family: "Georgia", serif; }
 
 ._font-mono, ._font-code {
@@ -967,7 +967,7 @@ strong, ._form-radiogroup-title, ._font-bold, ._font-700 {
   font-size: 19px;
   line-height: 27px; }
 
-input[type="file"], #form label.error, ._font-small, ._form-control .error,
+input[type="file"], #form label.error, .portfolio-item .portfolio-tags, div.generator-ctrl, #generator div a._tumblr-item ._tumblr-meta, #generator div a._tumblr-item ._tumblr-tags, ._font-small, ._form-control .error,
 input .error,
 textarea + .error,
 ._form-error, ._form-note {
@@ -987,7 +987,7 @@ textarea + .error,
 ._font-capitalize {
   text-transform: capitalize; }
 
-em, ._font-italic {
+em, div.generator-ctrl, #generator div a._tumblr-item ._tumblr-tags, ._font-italic {
   font-style: italic; }
 
 p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select {
@@ -1021,7 +1021,7 @@ h4 {
   padding-top: 8px;
   padding-bottom: 16px; }
 
-h5 {
+h5, #generator div a._tumblr-item ._tumblr-title {
   font-weight: 700;
   padding-bottom: 16px; }
 
@@ -2728,7 +2728,7 @@ input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdo
   outline: none;
   box-shadow: 0px 0px 2px 0px rgba(5, 67, 162, 0.6); }
 
-h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, h6,
+h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, #generator div a._tumblr-item ._tumblr-title, h6,
 p,
 body,
 input,
@@ -2742,7 +2742,7 @@ form .textarea,
 form ._form-select-dropdown + select {
   font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif; }
 
-h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h6 {
+h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, #generator div a._tumblr-item ._tumblr-excerpt, #generator div a._tumblr-item ._tumblr-description p, h6 {
   font-family: "Georgia", serif; }
 
 ._font-mono, ._font-code {
@@ -2777,7 +2777,7 @@ strong, ._form-radiogroup-title, ._font-bold, ._font-700 {
   font-size: 19px;
   line-height: 27px; }
 
-input[type="file"], #form label.error, ._font-small, ._form-control .error,
+input[type="file"], #form label.error, .portfolio-item .portfolio-tags, div.generator-ctrl, #generator div a._tumblr-item ._tumblr-meta, #generator div a._tumblr-item ._tumblr-tags, ._font-small, ._form-control .error,
 input .error,
 textarea + .error,
 ._form-error, ._form-note {
@@ -2797,7 +2797,7 @@ textarea + .error,
 ._font-capitalize {
   text-transform: capitalize; }
 
-em, ._font-italic {
+em, div.generator-ctrl, #generator div a._tumblr-item ._tumblr-tags, ._font-italic {
   font-style: italic; }
 
 p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select {
@@ -2831,7 +2831,7 @@ h4 {
   padding-top: 8px;
   padding-bottom: 16px; }
 
-h5 {
+h5, #generator div a._tumblr-item ._tumblr-title {
   font-weight: 700;
   padding-bottom: 16px; }
 
@@ -2918,15 +2918,21 @@ nav {
   ._nav-more:after {
     margin: 0;
     content: ''; } }
-h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, h6 {
-  font-family: "Lato", arial, sans-serif !important; }
+h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, #generator div a._tumblr-item ._tumblr-title, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, "Lato", "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif; }
 
-h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h6 {
+h1, h2, h3, h4, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, #generator div a._tumblr-item ._tumblr-excerpt, #generator div a._tumblr-item ._tumblr-description p, h6 {
   font-family: "Georgia", "Crimson Text", serif !important; }
 
 p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select {
   font-size: 17px;
   line-height: 28.5px;
+  font-weight: 400;
+  color: #333333; }
+
+#generator div a._tumblr-item ._tumblr-excerpt, #generator div a._tumblr-item ._tumblr-description p {
+  font-size: 15px;
+  line-height: 22.5px;
   font-weight: 400;
   color: #333333; }
 
@@ -3029,39 +3035,6 @@ button,
   top: 0px;
   left: 0px; }
 
-form .input, form .textarea, form ._form-select-dropdown + select, form input, form textarea {
-  font-size: 18px; }
-form ._inline {
-  margin-left: 8px;
-  margin-right: 8px; }
-form p {
-  line-height: 48px; }
-form input {
-  border: 0;
-  border-bottom: 3px solid rgba(151, 31, 31, 0.3) !important;
-  background-color: transparent;
-  border-radius: 0; }
-  form input:active, form input:focus, form input:hover {
-    border-bottom: 3px solid #971F1F !important;
-    box-shadow: none !important; }
-form textarea {
-  max-width: 450px;
-  outline: 3px solid rgba(151, 31, 31, 0.3);
-  border: 3px solid rgba(151, 31, 31, 0.3); }
-  form textarea:active, form textarea:focus, form textarea:hover {
-    outline: 3px solid #971F1F;
-    border: 3px solid #971F1F; }
-@media (max-width: 767px) {
-  form ._form-select-dropdown + select {
-    border: 3px solid rgba(151, 31, 31, 0.3);
-    margin-right: 4px !important; }
-    form ._form-select-dropdown + select:active, form ._form-select-dropdown + select:focus, form ._form-select-dropdown + select:hover {
-      border: 3px solid #971F1F;
-      outline: none; }
-  form ._form-select-dropdown .fa {
-    vertical-align: bottom;
-    line-height: 9px; } }
-
 body {
   width: 100%;
   position: relative;
@@ -3156,15 +3129,132 @@ p {
 #form p {
   line-height: 64px; }
 
-.portfolio-item .portfolio-tags {
-  font-size: 14px;
-  line-height: 21px; }
+form .input, form .textarea, form ._form-select-dropdown + select, form input, form textarea {
+  font-size: 18px; }
+form ._inline {
+  margin-left: 8px;
+  margin-right: 8px; }
+form p {
+  line-height: 48px; }
+form input {
+  border: 0;
+  border-bottom: 3px solid rgba(151, 31, 31, 0.3) !important;
+  background-color: transparent;
+  border-radius: 0; }
+  form input:active, form input:focus, form input:hover {
+    border-bottom: 3px solid #971F1F !important;
+    box-shadow: none !important; }
+form textarea {
+  max-width: 450px;
+  outline: 3px solid rgba(151, 31, 31, 0.3);
+  border: 3px solid rgba(151, 31, 31, 0.3); }
+  form textarea:active, form textarea:focus, form textarea:hover {
+    outline: 3px solid #971F1F;
+    border: 3px solid #971F1F; }
+@media (max-width: 767px) {
+  form ._form-select-dropdown + select {
+    border: 3px solid rgba(151, 31, 31, 0.3);
+    margin-right: 4px !important; }
+    form ._form-select-dropdown + select:active, form ._form-select-dropdown + select:focus, form ._form-select-dropdown + select:hover {
+      border: 3px solid #971F1F;
+      outline: none; }
+  form ._form-select-dropdown .fa {
+    vertical-align: bottom;
+    line-height: 9px; } }
 
 .portfolio-item {
-  height: 140px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 200px;
   background-color: #EEEEEE;
   padding: 16px;
-  border-radius: 4px; }
+  box-shadow: 0 22.4px 48px rgba(0, 0, 0, 0.05); }
+  .portfolio-item span {
+    color: #333333;
+    display: inline-block;
+    padding: 4px;
+    padding-bottom: 0;
+    background-color: rgba(252, 252, 252, 0.9); }
+  .portfolio-item .portfolio-title {
+    font-size: 21px; }
+  .portfolio-item .portfolio-tags {
+    padding-bottom: 8px; }
   .portfolio-item:nth-child(2n+1) {
     position: relative;
     top: -32px; }
+  .portfolio-item:hover {
+    -webkit-transform: scale(0.98, 0.98);
+    transform: scale(0.98, 0.98);
+    box-shadow: 0px 0px 14px 0px rgba(175, 170, 170, 0.28); }
+
+div.generator-ctrl {
+  margin-bottom: 16px;
+  cursor: pointer; }
+  div.generator-ctrl:before {
+    content: ' ';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #971F1F;
+    margin-bottom: 16px; }
+  div.generator-ctrl a {
+    margin-right: 8px;
+    color: #333333; }
+  div.generator-ctrl .active {
+    color: #971F1F;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #971F1F; }
+
+/*
+  ._tumblr-item
+    ._tumblr-info
+      _tumblr-meta
+        ._tumblr-publisher
+        ._tumblr-date
+      ._tumblr-title
+      ._tumblr-photos
+        ._tumblr-photo
+      ._tumblr-source-description
+        ._tumblr-excerpt
+        ._tumblr-tags-container
+          ._tumblr-tags-list
+            ._tumblr-tag
+
+    ._tumblr-description
+*/
+#generator div a._tumblr-item {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #EEEEEE;
+  display: inline-block;
+  color: #333333; }
+  #generator div a._tumblr-item ._tumblr-title {
+    padding-bottom: 0;
+    margin-top: 16px; }
+    #generator div a._tumblr-item ._tumblr-title:before {
+      content: '\021E5 ';
+      display: inline-block;
+      padding-right: 4px; }
+  #generator div a._tumblr-item ._tumblr-excerpt {
+    color: #ADADAD;
+    padding-bottom: 4px; }
+  #generator div a._tumblr-item ._tumblr-meta ._tumblr-date {
+    text-align: right; }
+  #generator div a._tumblr-item ._tumblr-meta ._tumblr-publisher {
+    color: #666666;
+    display: inline-block; }
+    #generator div a._tumblr-item ._tumblr-meta ._tumblr-publisher:after {
+      content: ' | '; }
+  #generator div a._tumblr-item ._tumblr-meta ._tumblr-date {
+    color: #BBBBBB;
+    display: inline-block; }
+  #generator div a._tumblr-item ._tumblr-tags {
+    color: #ADADAD; }
+  #generator div a._tumblr-item ._tumblr-description {
+    padding-top: 8px; }
+    #generator div a._tumblr-item ._tumblr-description p {
+      padding-bottom: 0; }
+  #generator div a._tumblr-item:hover ._tumblr-title {
+    color: #971F1F; }

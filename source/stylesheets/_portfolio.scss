@@ -41,8 +41,17 @@
     }
 
     &:nth-child(2n+1) {
-      position: relative;
-      top: -$base*2
+      @include screen-sm {
+        position: relative;
+        top: -$base*2
+      }
+    }
+
+    @include screen-xs-only {
+      margin-bottom: $base*2;
+      background-position: right;
+      background-size: contain;
+      background-color: $color-purewhite;
     }
 
     &:hover {

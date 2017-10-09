@@ -1,20 +1,21 @@
-<!-- 
-<div id="generator" class="_padding-2">
-  <div class="generator-ctrl">
-    <span>projects</span>
-    <span>thoughts</span>
-    <span>experiments</span>
-    <span>bookmarks</span>
-  </div>
+
+<div id="generator" class="_generator _padding-2">
+  <!-- <div class="generator-ctrl">
+    <a class="active">thoughts</a>
+    <a>experiments</a>
+    <a>bookmarks</a>
+    <a>projects</a>
+  </div> -->
   <div class="_grid-three-one">
 
     <div class="generator-main">
-      <div class="generator-content">
-        content generator content
+      <div class="generator-content _tumblr">
+        <h4 class="_inline">social bookmarks</h4><a class="_padding-left _font-italic _font-small" href="./bookmarks.html">all bookmarks</a>
+        <div id="output"></div>
       </div>
     </div>
     <aside class="generator-aside">
-      aside
+      <!-- aside -->
     </aside>
 
   </div>
@@ -24,4 +25,104 @@
 
 <script>
 
-</script> -->
+$(document).ready(function() {
+
+
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./javascripts/tumblr.js"></script>
+<script>
+
+
+var _limit = 5; // 20; // load 20 is default posts every time
+// Load fewer posts on mobile
+if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+  _limit = 5;
+}
+var __tags = [], posts = [], latest = null, index = 0, total = 0, objs = "";
+var times = 0; // temp
+
+
+$(document).ready(function() {
+
+// console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
+// console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
+// console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
+// console.log(JSON.stringify(tumblr_api_read), tumblr_api_read);
+
+
+  // Iniitialize Tumblr
+  getTumblr({limit: _limit, offset: 0}, tumblrSuccess);
+
+  // load more
+  // $('.loadMore').click(function() {loadmore()});
+  // function loadmore() {
+  //   filterReset(); // must reset, or the previously filtered posts will be gone!
+  //   sticky.refresh();
+  //   index = posts.length * _limit;
+  //   getTumblr({limit: _limit, offset: index}, tumblrSuccess);
+  // }
+
+});
+
+
+function tumblrSuccess(json, payload) {
+  if(json.response.posts.length != 0) {
+    posts.push(json.response.posts);
+    objs += JSON.stringify(json.response.posts)
+    latest = json.response.posts[0];
+    total = json.response.total_posts
+
+    // console.log('posts: ', total, posts, json.response, json.response.posts);
+    // times++;
+
+    // // $('#output').html($('#output').html + objs)
+    // if(times >= total/_limit) {
+    //   console.log('obj done', posts, objs);
+    // }
+
+    // if(times <= total/_limit+1) {
+    //   console.log(_limit*times)
+    //   getTumblr({limit: _limit, offset: times*_limit}, tumblrSuccess);
+    // }
+
+    populateShort(posts[posts.length-1], $('#output'));
+    // populateTags(); // tags built in populate
+    // filterInit();   // initialize tag bindings
+    // console.log('refreshing sticky again')
+    // sticky.refresh() // refresh the sidebar since content's changed
+  }
+}
+
+
+</script>
+
+

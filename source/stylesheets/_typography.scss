@@ -14,6 +14,8 @@
   @extend %font-serif;
 }
 
+%font-smaller, ._font-smaller { font-size: $base - 4px; /*line-height: ($base - 5px) * 1.5 !important;*/ }
+
 
 %font-body {
   font-size: $base + 1px;
@@ -25,7 +27,7 @@
 
 %font-body-small {
   font-size: $base - 1px;
-  line-height: ($base - 1px) * 1.5;
+  line-height: ($base - 2px) * 1.5;
   font-weight: 400;
   color: $color-copy;
   @extend %font-serif;
