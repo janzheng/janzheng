@@ -776,6 +776,9 @@ input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdo
 ._padding-right {
   padding-right: 16px; }
 
+._padding-right-2 {
+  padding-right: 32px; }
+
 ._padding-right-half {
   padding-right: 8px; }
 

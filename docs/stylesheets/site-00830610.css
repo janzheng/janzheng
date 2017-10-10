@@ -776,6 +776,9 @@ input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdo
 ._padding-right {
   padding-right: 16px; }
 
+._padding-right-2 {
+  padding-right: 32px; }
+
 ._padding-right-half {
   padding-right: 8px; }
 
@@ -967,7 +970,7 @@ strong, ._form-radiogroup-title, ._font-bold, ._font-700 {
   font-size: 19px;
   line-height: 27px; }
 
-input[type="file"], #form label.error, .portfolio-item .portfolio-tags, div.generator-ctrl, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full ._tumblr-meta, ._font-small, ._form-control .error,
+input[type="file"], ._sidebar-section_title, #form label.error, .portfolio-item .portfolio-tags, div.generator-ctrl, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full ._tumblr-meta, .tag-filter, ._font-small, ._form-control .error,
 input .error,
 textarea + .error,
 ._form-error, ._form-note {
@@ -987,7 +990,7 @@ div ._tumblr-item.--full ._tumblr-tags, ._font-smaller {
 ._font-capitalize {
   text-transform: capitalize; }
 
-em, div.generator-ctrl, ._font-italic {
+em, div.generator-ctrl, .filter-clear, .tag-filter, ._font-italic {
   font-style: italic; }
 
 p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select {
@@ -2146,6 +2149,41 @@ nav {
     height: 100%;
     opacity: 1; }
 
+._sidebar {
+  max-width: 200px;
+  width: 200px;
+  overflow-y: scroll;
+  padding-bottom: 32px; }
+  ._sidebar a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    margin-right: 32px;
+    display: inline-block;
+    color: #971F1F;
+    border-color: #971F1F; }
+    ._sidebar a:hover {
+      color: #971F1F;
+      border-color: #971F1F; }
+  @media (max-width: 767px) {
+    ._sidebar {
+      margin: 0; } }
+  @media (min-width: 768px) {
+    ._sidebar.--pinned {
+      height: 100vh;
+      padding-bottom: 32px;
+      position: sticky;
+      top: 0; }
+    ._sidebar.--divider {
+      border-right: 1px solid #DDDDDD; } }
+
+._sidebar-section_title {
+  margin-top: 16px;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #DDDDDD; }
+
 ._radius-none {
   border-radius: 0; }
 
@@ -2382,6 +2420,9 @@ section, ._section,
 
 ._padding-right {
   padding-right: 16px; }
+
+._padding-right-2 {
+  padding-right: 32px; }
 
 ._padding-right-half {
   padding-right: 8px; }
@@ -2777,7 +2818,7 @@ strong, ._form-radiogroup-title, ._font-bold, ._font-700 {
   font-size: 19px;
   line-height: 27px; }
 
-input[type="file"], #form label.error, .portfolio-item .portfolio-tags, div.generator-ctrl, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full ._tumblr-meta, ._font-small, ._form-control .error,
+input[type="file"], ._sidebar-section_title, #form label.error, .portfolio-item .portfolio-tags, div.generator-ctrl, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full ._tumblr-meta, .tag-filter, ._font-small, ._form-control .error,
 input .error,
 textarea + .error,
 ._form-error, ._form-note {
@@ -2797,7 +2838,7 @@ div ._tumblr-item.--full ._tumblr-tags, ._font-smaller {
 ._font-capitalize {
   text-transform: capitalize; }
 
-em, div.generator-ctrl, ._font-italic {
+em, div.generator-ctrl, .filter-clear, .tag-filter, ._font-italic {
   font-style: italic; }
 
 p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select {
@@ -3270,7 +3311,8 @@ div ._tumblr-item {
 
 div ._tumblr-item.--full {
   display: block;
-  padding: 16px 32px; }
+  padding: 16px 32px;
+  margin: 0; }
   div ._tumblr-item.--full ._tumblr-front {
     opacity: 0.2;
     grid-template-areas: "two two";
@@ -3299,14 +3341,36 @@ div ._tumblr-item.--full {
     display: inline-block; }
   div ._tumblr-item.--full ._tumblr-tags {
     color: #ADADAD; }
-    div ._tumblr-item.--full ._tumblr-tags ._tumblr-tag:before {
-      content: '#'; }
   div ._tumblr-item.--full ._tumblr-description p {
     padding-bottom: 8px; }
   div ._tumblr-item.--full:hover {
     background-color: #FAFAFA; }
     div ._tumblr-item.--full:hover ._tumblr-front {
       opacity: 1; }
+
+.filter-clear {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #971F1F;
+  cursor: pointer; }
+
+.tag-filter {
+  display: block;
+  cursor: pointer; }
+  .tag-filter.--active {
+    color: #971F1F;
+    position: relative; }
+    .tag-filter.--active:after {
+      content: ' [x] '; }
+  .tag-filter:hover {
+    color: #971F1F; }
+
+._tumblr-sidebar {
+  padding-top: 48px;
+  margin-right: 16px;
+  border: 0;
+  width: inherit;
+  max-width: inherit; }
 
 .color-palette {
   position: absolute;

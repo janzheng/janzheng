@@ -35,7 +35,7 @@
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-95a1e92f.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-00830610.css?=v0.742" rel="stylesheet">
 
 
 
@@ -45,10 +45,10 @@
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-95a1e92f.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-00830610.css?=v0.742" rel="stylesheet">
  -->
 
-  <link href="stylesheets/site-95a1e92f.css" rel="stylesheet" />
+  <link href="stylesheets/site-00830610.css" rel="stylesheet" />
   <script src="javascripts/site-e965d80c.js"></script>
   </head>
   <body class="">
@@ -67,8 +67,8 @@
 </nav>
 
     <div class="_main">
-      <div class="bookmarks" id="landing">
-  <div class="index-intro ">
+      <div class="_grid-four-one bookmarks" id="tumblrList">
+  <div class="index-intro">
 
     <div class="_width-content-max-narrow _size _padding-2" data-height="25">
       <h2 class="_page-header">bookmarks  </h2>
@@ -78,27 +78,58 @@
       </p>
       <div>
         <span class="loadAll">
-          <a href="#">load all links</a> <span class="_font-small _font-italic">this will cause a 10 mb+ download</span></span>
+          <a href="#">load all links</a> <span class="_font-small _font-italic">(300 links @10 mb+ download)</span></span>
       </div>
       <div class="loading">
       </div>
     </div>
 
-    <div class="_grid-four-one">
-      <div class="_bookmarks" id="output">
+    <div class="">
+      <ul class="list _bookmarks" id="output">
         
-      </div>
-      <div class="_tags">
-        <div>search</div>
-        <div>tags</div>
-      </div>
+      </ul>
+
     </div>
   </div>
+
+  <aside>
+    <!-- <h1 class="_transparent">menu</h1> -->
+    <div class="_tumblr-sidebar _sidebar --pinned _padding-right-2 _padding-top-half">
+      <div class="_filter"><input pattern=".*\S.*" class="tumblr__search search" placeholder="Search" /> </div>
+      <div class="_tags _padding-top">tags</div>
+    </div>
+  </aside>
+
+  <!-- <div id="users">
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+
+  <ul class="list">
+    <li>
+      <h3 class="name">Jonny Stromberg</h3>
+      <p class="born">1986</p>
+    </li>
+    <li>
+      <h3 class="name">Jonas Arnklint</h3>
+      <p class="born">1985</p>
+    </li>
+    <li>
+      <h3 class="name">Martina Elm</h3>
+      <p class="born">1986</p>
+    </li>
+    <li>
+      <h3 class="name">Gustaf Lindqvist</h3>
+      <p class="born">1983</p>
+    </li>
+  </ul>
+
+</div> -->
 
 </div>
 
 <script>
-
   // css/js hybrid
   // dynamic height dispenser
   // don't rely on vh as browser bugs and annoyances like iOS chrome
@@ -125,19 +156,27 @@
 google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
 </script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
 <script src="javascripts/tumblrdata-b2303d74.js"></script>
 
-<script src="javascripts/tumblr-44fcf8f6.js"></script>
+<script src="javascripts/tumblr-7bdd96b2.js"></script>
+
+<!-- <script>
+var options = {
+  valueNames: [ 'name', 'born' ]
+};
+
+var userList = new List('users', options);
+</script> -->
 
 <script>
-
-
 var _limit = 20; // 20; // load 20 is default posts every time
 // Load fewer posts on mobile
 if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
   _limit = 5;
 }
-var __tags = [], posts = [], latest = null, index = 0, total = 0, loadAll = false;
+var tags = [], posts = [], latest = null, index = 0, total = 0, loadAll = false;
 var times = 0; // temp
 
 
@@ -153,7 +192,6 @@ $(document).ready(function() {
   getTumblr({limit: _limit, offset: 0}, tumblrSuccess);
 
   // check imported tumblr data
-
 
   // load more
   // $('.loadMore').click(function() {loadmore()});
@@ -204,17 +242,15 @@ function tumblrSuccess(json, payload) {
         var combined = _.merge(_tmblrData["objects"], posts)
         console.log('combined: ', combined)
         // populate(_tmblrData['objects'], $('#output'));
-        populate(combined, $('#output'));
+        populate(combined, $('#output'), tags);
         $('.loading').html(''); // clear first for dupes
       }
     } else {
-      populate(posts, $('#output'));
+      populate(posts, $('#output'), tags);
     }
 
-    // populateTags(); // tags built in populate
-    // filterInit();   // initialize tag bindings
-    // console.log('refreshing sticky again')
-    // sticky.refresh() // refresh the sidebar since content's changed
+    populateTags(tags, $('._tags')); // tags built in populate
+    filterInit('tumblrList');   // initialize tag bindings
   }
 }
 

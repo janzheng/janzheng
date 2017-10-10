@@ -231,7 +231,7 @@ function getTumblr(opt, success) {
 
 
   // simpler population script
-  function populateShort(postList, container, tagList) {
+  function populateShort(postList, container) {
     postList.forEach(function(post, i) {
       var source = post.source_url ? post.source_url : '#';
       var excerpt = post.excerpt ? `: <div class="_tumblr-excerpt _inline">${post.excerpt}</div>` : '';
@@ -247,7 +247,7 @@ function getTumblr(opt, success) {
           
               
       var tags = post.tags ? post.tags.map( function( tag ) {
-                tagList.push(tag); 
+                // tagList.push(tag); 
                 return (
                   " <span class='_tumblr-tag'>" + tag + "</span>"
                 )}) : '';
