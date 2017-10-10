@@ -3348,6 +3348,11 @@ div ._tumblr-item.--full {
     div ._tumblr-item.--full:hover ._tumblr-front {
       opacity: 1; }
 
+._tumblr-edit {
+  float: right; }
+  ._tumblr-edit a {
+    color: #EEEEEE !important; }
+
 .filter-clear {
   display: inline-block;
   margin-bottom: 16px;

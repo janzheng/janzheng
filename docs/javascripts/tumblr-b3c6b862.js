@@ -140,7 +140,7 @@ function getTumblr(opt, success) {
 
   function populate(postList, container, tagList) {
     postList.forEach(function(post, i) {
-      // console.log('post #'+i, post)
+      console.log('post #'+i, post)
       var source = post.source_url ? post.source_url : '#';
       var excerpt = post.excerpt ? post.excerpt : '';
 
@@ -213,6 +213,7 @@ function getTumblr(opt, success) {
             </div>
             <div class="_tumblr-tags">
               <div class="_tumblr-tags-list">${tags}</div>
+              <div class="_tumblr-edit"><a target="_blank" href="https://www.tumblr.com/edit/${post.id}">edit<a></div>
             </div>
           </div>
         </li>
