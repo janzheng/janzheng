@@ -177,6 +177,13 @@ div ._tumblr-item.--full {
 
 ._tumblr-tags {
 }
+  ._tumblr-edit {
+    float: right;
+    a {
+      color: $color-ui-light !important;
+    }
+  }
+
   .filter-clear {
     display: inline-block;
     margin-bottom: $base;
