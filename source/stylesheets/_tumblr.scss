@@ -91,6 +91,7 @@ div ._tumblr-item.--full {
   // border: $border-line solid $color-ui-light;
   // border-radius: $radius;
   padding: $base $base*2;
+  margin: 0;
 
   // source and date
   ._tumblr-front {
@@ -152,9 +153,9 @@ div ._tumblr-item.--full {
     @extend %font-sans;
 
     ._tumblr-tag {
-      &:before {
-        content: '#';
-      }
+      // &:before {
+      //   content: '#';
+      // }
     }
   }
 
@@ -174,10 +175,41 @@ div ._tumblr-item.--full {
 
 
 
+._tumblr-tags {
+}
+  .filter-clear {
+    display: inline-block;
+    margin-bottom: $base;
+    color: $color-active;
+    @extend %font-italic;
+    cursor: pointer;
+  }
+
+  .tag-filter {
+    display: block;
+    @extend %font-italic;
+    @extend %font-small;
+    cursor: pointer;
+    &.--active {
+      color: $color-active;
+      position: relative;
+      &:after {
+        content: ' [x] ';
+      }
+    }
+    &:hover {
+      color: $color-active;
+    }
+  } 
 
 
-
-
+._tumblr-sidebar {
+  padding-top: $base*3;
+  margin-right: $base;
+  border: 0;
+  width: inherit;
+  max-width: inherit;
+}
 
 
 

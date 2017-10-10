@@ -35,7 +35,7 @@
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-86872553.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-95a1e92f.css?=v0.742" rel="stylesheet">
 
 
 
@@ -45,10 +45,10 @@
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-86872553.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-95a1e92f.css?=v0.742" rel="stylesheet">
  -->
 
-  <link href="stylesheets/site-86872553.css" rel="stylesheet" />
+  <link href="stylesheets/site-95a1e92f.css" rel="stylesheet" />
   <script src="javascripts/site-e965d80c.js"></script>
   </head>
   <body class="">
@@ -67,14 +67,31 @@
 </nav>
 
     <div class="_main">
-      <div class="bookmarks _width-content-max" id="landing">
+      <div class="bookmarks" id="landing">
+  <div class="index-intro ">
 
-  <div class="index-intro _padding-2">
-
-    <div class="_size" data-height="25">
+    <div class="_width-content-max-narrow _size _padding-2" data-height="25">
       <h2 class="_page-header">bookmarks  </h2>
+      <p>
+        This social bookmarking experiment turned out rather useful.
+        I use it to access my favorite links on an almost daily basis. <a href="/blog/2016/08/tumblr-bookmarks.html">read more here</a>
+      </p>
+      <div>
+        <span class="loadAll">
+          <a href="#">load all links</a> <span class="_font-small _font-italic">this will cause a 10 mb+ download</span></span>
+      </div>
+      <div class="loading">
+      </div>
+    </div>
 
-      social bookmarks coming soon
+    <div class="_grid-four-one">
+      <div class="_bookmarks" id="output">
+        
+      </div>
+      <div class="_tags">
+        <div>search</div>
+        <div>tags</div>
+      </div>
     </div>
   </div>
 
@@ -95,6 +112,112 @@
       $(this).css({'height': height})
     });
   });
+
+</script>
+
+<!-- tumblr code -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+</script>
+
+<script src="javascripts/tumblrdata-b2303d74.js"></script>
+
+<script src="javascripts/tumblr-44fcf8f6.js"></script>
+
+<script>
+
+
+var _limit = 20; // 20; // load 20 is default posts every time
+// Load fewer posts on mobile
+if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+  _limit = 5;
+}
+var __tags = [], posts = [], latest = null, index = 0, total = 0, loadAll = false;
+var times = 0; // temp
+
+
+$('.loadAll').on('mouseup', function() {
+  console.log('loading everything ...')
+  loadAll = true;
+  $('.loading').html('loading everything...!'); // clear first for dupes
+  $('#output').html(''); // clear first for dupes
+  getTumblr({limit: _limit, offset: 0}, tumblrSuccess);
+})
+
+$(document).ready(function() {
+  getTumblr({limit: _limit, offset: 0}, tumblrSuccess);
+
+  // check imported tumblr data
+
+
+  // load more
+  // $('.loadMore').click(function() {loadmore()});
+  // function loadmore() {
+  //   filterReset(); // must reset, or the previously filtered posts will be gone!
+  //   sticky.refresh();
+  //   index = posts.length * _limit;
+  //   getTumblr({limit: _limit, offset: index}, tumblrSuccess);
+  // }
+});
+
+
+function tumblrSuccess(json, payload) {
+
+  if(json.response.posts.length != 0) {
+    // posts.push(json.response.posts);
+    posts = posts.concat(json.response.posts) // merge arrays instead of pushing to build a single array
+    latest = json.response.posts[0];
+    total = json.response.total_posts;
+
+    // console.log('posts: ', total, posts, json.response, json.response.posts);
+    // times++;
+
+    // $('#output').html($('#output').html + objs)
+    // if(times >= total/_limit) {
+    //   // print objects
+    //   var output = '{ "objects": [';
+    //   posts.forEach(function(post, i){
+    //     // console.log('obj:', post);
+    //     output += JSON.stringify(post);
+    //     if(i != posts.length-1) {output += ","; }
+    //   });
+    //   output += "]}"; // close object
+    //   console.log('json ------------------------------------------------ :' , json);
+    // }
+
+    // if(times <= total/_limit+1) {
+    //   console.log(_limit*times, times, total/_limit)
+    //   getTumblr({limit: _limit, offset: times*_limit}, tumblrSuccess);
+    //   times++;
+    // }
+
+    // combine local and fetched data
+    // takes a LONG time and loads in all images so expect 10 MB+ of data
+    if(loadAll) {
+      if (typeof(_tmblrData) !== 'undefined') {
+        console.log('oy', _tmblrData);
+        var combined = _.merge(_tmblrData["objects"], posts)
+        console.log('combined: ', combined)
+        // populate(_tmblrData['objects'], $('#output'));
+        populate(combined, $('#output'));
+        $('.loading').html(''); // clear first for dupes
+      }
+    } else {
+      populate(posts, $('#output'));
+    }
+
+    // populateTags(); // tags built in populate
+    // filterInit();   // initialize tag bindings
+    // console.log('refreshing sticky again')
+    // sticky.refresh() // refresh the sidebar since content's changed
+  }
+}
+
 
 </script>
 
@@ -168,7 +291,6 @@
 
   $(document).ready(function() {
 
-    console.log('init form validation')
     let rules = {
       name: {
         required: true,

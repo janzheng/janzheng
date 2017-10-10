@@ -2,7 +2,6 @@
 
 
 
-
 // 
 //  Get Tumblr
 //    getTubmlr({offset: 10, limit: 20})
@@ -118,6 +117,7 @@ function getTumblr(opt, success) {
 
   function populate(postList, container) {
     postList.forEach(function(post, i) {
+      // console.log('post #'+i, post)
       var source = post.source_url ? post.source_url : '#';
       var excerpt = post.excerpt ? post.excerpt : '';
 
@@ -135,10 +135,11 @@ function getTumblr(opt, success) {
                 return (
                   " <span class='_tumblr-tag'>" + tag + "</span>"
                 )}) : '';
+
       // var publisher = post.publisher ? `<div class="_tumblr-publisher"><span class="_tumblr-date">${moment(post.date).format('L')}</span> | ${post.publisher}</div>` : '';
-      var publisher = post.publisher ? `<div class="_tumblr-publisher">${post.publisher}</div>` : '';
+      var publisher = post.publisher ? `${post.publisher}` : '';
       var date = post.date ? `<div class="_tumblr-date"><span class="_tumblr-date">${moment(post.date, "YYYY-MM-DD").format('L')}</span></div>` : '';
-      var title = post.title ? `<div class="_tumblr-title">${post.title}</div>` : '';
+      var title = post.title ? `<div class="_tumblr-title">${i}. ${post.title}</div>` : '';
           if (title == '' && post.text) title = "“" + post.text + "”"; // quotes won't have title
           if (title == '' && post.caption) description = getDescription(post.caption); // caption display
           if (title == '' && description == '' && post.summary) description = getDescription(post.summary); // fallback – not formatted but almost always visible; can be long, so coerced into the description area
@@ -149,7 +150,8 @@ function getTumblr(opt, success) {
                                     post.photos.map( function( photo ) {
                                               if (photo.alt_sizes.length > 0) {
                                                 return (
-                                                  `<div class='_tumblr-photo'><img src='${photo.alt_sizes[1].url}'/></div>`
+                                                  // returns a reasonably middle-sized image for thumb
+                                                  `<div class='_tumblr-photo'><img src='${photo.alt_sizes[Math.floor(photo.alt_sizes.length/2)].url}'/></div>`
                                                 )
                                               } else {
                                                 return (
@@ -166,28 +168,28 @@ function getTumblr(opt, success) {
         photos = `<div class="_tumblr-photos">${post.player[post.player.length-1].embed_code}</div>`
       }
 
+      // console.log(description);
+
       container.append(`
-        <a class="tagCategory _tumblr-item --${post.type} " href="${source}" target="_blank">
-          <div class="_tumblr-info">
+        <div class="tagCategory _tumblr-item --full --${post.type} " target="_blank">
+          <a href="${source}" class="_tumblr-info">
+            <div class="_tumblr-front">
+              <div class="_tumblr-publisher">${publisher}</div>
+              ${date}
+            </div>
             ${title}
             ${photos}
             <div class="_tumblr-source-description">
               <div class="_tumblr-excerpt">${excerpt}</div>
-              <div class="_tumblr-meta">
-                <div class="_tumblr-tags">
-                  <div class="_tumblr-tags-list">${tags}</div>
-                </div>
-                <div class="_tumblr-meta-right">
-                  ${publisher}
-                  ${date}
-                </div>
-              </div>
             </div>
-          </div>
+          </a>
           <div class="_tumblr-description">
             ${description}
           </div>
-        </a>
+          <div class="_tumblr-tags">
+            <div class="_tumblr-tags-list">${tags}</div>
+          </div>
+        </div>
       `)
     // NOTES
 
@@ -231,7 +233,7 @@ function getTumblr(opt, success) {
   function populateShort(postList, container) {
     postList.forEach(function(post, i) {
       var source = post.source_url ? post.source_url : '#';
-      var excerpt = post.excerpt ? `<div class="_tumblr-excerpt _inline">${post.excerpt}</div>` : '';
+      var excerpt = post.excerpt ? `: <div class="_tumblr-excerpt _inline">${post.excerpt}</div>` : '';
 
       function getDescription(str) {
         return  ( `<div class="_tumblr-description-container">
@@ -253,7 +255,7 @@ function getTumblr(opt, success) {
       var date = post.date ? `<div class="_tumblr-date"><span class="_tumblr-date">${moment(post.date, "YYYY-MM-DD").format('L')}</span></div>` : '';
       var title = post.title ? `<div class="_tumblr-title _inline">${post.title}</div>` : '';
           if (title == '' && post.text) title = "“" + post.text + "”"; // quotes won't have title
-          if (title == '' && post.caption) description = getDescription(post.caption); // caption display
+          // if (title == '' && post.caption) description = getDescription(post.caption); // caption display
           if (title == '' && description == '' && post.summary) description = getDescription(post.summary); // fallback – not formatted but almost always visible; can be long, so coerced into the description area
 
 
@@ -282,7 +284,7 @@ function getTumblr(opt, success) {
       container.append(`
         <a class="tagCategory _tumblr-item --${post.type} " href="${source}" target="_blank">
           <div class="_tumblr-info">
-            ${title}: ${excerpt}
+            ${title}${excerpt}
           </div>
           ${description}
         </a>
