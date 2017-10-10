@@ -197,7 +197,7 @@ function getTumblr(opt, success) {
       container.append(`
         <li class="list _tumblr-item --full --${post.type} " target="_blank">
           <div class="tagCategory">
-            <a href="${source}" class="_tumblr-info">
+            <a target="_blank" href="${source}" class="_tumblr-info">
               <div class="_tumblr-front">
                 <div class="_tumblr-publisher">${publisher}</div>
                 ${date}

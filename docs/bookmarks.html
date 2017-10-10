@@ -35,7 +35,7 @@
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-00830610.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-1bbc0b5c.css?=v0.742" rel="stylesheet">
 
 
 
@@ -45,10 +45,10 @@
   <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
   <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
   <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-00830610.css?=v0.742" rel="stylesheet">
+  <link href="stylesheets/site-1bbc0b5c.css?=v0.742" rel="stylesheet">
  -->
 
-  <link href="stylesheets/site-00830610.css" rel="stylesheet" />
+  <link href="stylesheets/site-1bbc0b5c.css" rel="stylesheet" />
   <script src="javascripts/site-e965d80c.js"></script>
   </head>
   <body class="">
@@ -77,14 +77,22 @@
         I use it to access my favorite links on an almost daily basis. <a href="/blog/2016/08/tumblr-bookmarks.html">read more here</a>
       </p>
       <div>
+        <span class="loadMore">
+          <a href="#">load more</a>
+        </span>
+        /
         <span class="loadAll">
-          <a href="#">load all links</a> <span class="_font-small _font-italic">(300 links @10 mb+ download)</span></span>
+          <a href="#">load all</a> <span class="_font-small _font-italic">(300 links @10 mb+ download)</span></span>
       </div>
       <div class="loading">
       </div>
     </div>
 
     <div class="">
+      <div class="_padding-top _padding-left-2 _padding-bottom">
+        <span class="_tag-title"></span>
+        <span class="_search-title"></span>
+      </div>
       <ul class="list _bookmarks" id="output">
         
       </ul>
@@ -92,10 +100,10 @@
     </div>
   </div>
 
-  <aside>
+  <aside class="_hidden-xs">
     <!-- <h1 class="_transparent">menu</h1> -->
     <div class="_tumblr-sidebar _sidebar --pinned _padding-right-2 _padding-top-half">
-      <div class="_filter"><input pattern=".*\S.*" class="tumblr__search search" placeholder="Search" /> </div>
+      <div class="_filter"><input id="_tumblr-search" pattern=".*\S.*" class="tumblr__search search" placeholder="Filter" /> </div>
       <div class="_tags _padding-top">tags</div>
     </div>
   </aside>
@@ -160,7 +168,7 @@ google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
 
 <script src="javascripts/tumblrdata-b2303d74.js"></script>
 
-<script src="javascripts/tumblr-7deff8a4.js"></script>
+<script src="javascripts/tumblr-757cdd10.js"></script>
 
 <!-- <script>
 var options = {
@@ -181,7 +189,6 @@ var times = 0; // temp
 
 
 $('.loadAll').on('mouseup', function() {
-  console.log('loading everything ...')
   loadAll = true;
   $('.loading').html('loading everything...!'); // clear first for dupes
   $('#output').html(''); // clear first for dupes
@@ -194,18 +201,17 @@ $(document).ready(function() {
   // check imported tumblr data
 
   // load more
-  // $('.loadMore').click(function() {loadmore()});
-  // function loadmore() {
-  //   filterReset(); // must reset, or the previously filtered posts will be gone!
-  //   sticky.refresh();
-  //   index = posts.length * _limit;
-  //   getTumblr({limit: _limit, offset: index}, tumblrSuccess);
-  // }
+  $('.loadMore').click(function() {loadmore()});
+  function loadmore() {
+    filterReset(); // must reset, or the previously filtered posts will be gone!
+    index = posts.length + 1; // * _limit;
+    $('#output').html('');
+    getTumblr({limit: _limit, offset: index}, tumblrSuccess);
+  }
 });
 
 
 function tumblrSuccess(json, payload) {
-
   if(json.response.posts.length != 0) {
     // posts.push(json.response.posts);
     posts = posts.concat(json.response.posts) // merge arrays instead of pushing to build a single array
@@ -238,9 +244,7 @@ function tumblrSuccess(json, payload) {
     // takes a LONG time and loads in all images so expect 10 MB+ of data
     if(loadAll) {
       if (typeof(_tmblrData) !== 'undefined') {
-        console.log('oy', _tmblrData);
         var combined = _.merge(_tmblrData["objects"], posts)
-        console.log('combined: ', combined)
         // populate(_tmblrData['objects'], $('#output'));
         populate(combined, $('#output'), tags);
         $('.loading').html(''); // clear first for dupes
@@ -253,6 +257,17 @@ function tumblrSuccess(json, payload) {
     filterInit('tumblrList');   // initialize tag bindings
   }
 }
+
+$('#_tumblr-search').on('keyup', function(e) {
+  var filterVal = $(this).val();
+  var searchTitle = $('._search-title');
+  var tagTitle = $('._tag-title');
+  if (tagTitle.html() !== '') {
+    $(searchTitle).html(` and <h5 class="_inline">${filterVal}</h5>`);
+  } else {
+    $(searchTitle).html(`Showing <h5 class="_inline">${filterVal}</h5>`);
+  }
+})
 
 
 </script>

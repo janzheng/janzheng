@@ -849,7 +849,7 @@ input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdo
 
 button,
 ._button, button:hover,
-._button:hover, a, a:focus, a:active, a:visited, a:hover, a.--active, a.--inactive, a.--tbd, ._modal-popup-container, ._modal-popup-container.--open, ._modal, ._modal-overlay, ._modal-content, ._modal-effect-slideUp, ._modal-effect-slideUp *, .--open._modal-effect-slideUp, .--open._modal-effect-slideUp *, a:before, a:hover:before, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, form input:active, form input:focus, form input:hover, form textarea:active, form textarea:focus, form textarea:hover, .portfolio-item, .portfolio-item:hover, div ._tumblr-item, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full:hover, div ._tumblr-item.--full:hover ._tumblr-front {
+._button:hover, a, a:focus, a:active, a:visited, a:hover, a.--active, a.--inactive, a.--tbd, ._modal-popup-container, ._modal-popup-container.--open, ._modal, ._modal-overlay, ._modal-content, ._modal-effect-slideUp, ._modal-effect-slideUp *, .--open._modal-effect-slideUp, .--open._modal-effect-slideUp *, a:before, a:hover:before, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, form input:active, form input:focus, form input:hover, form textarea:active, form textarea:focus, form textarea:hover, .portfolio-item, .portfolio-item:hover, div ._tumblr-item, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full:hover, div ._tumblr-item.--full:hover ._tumblr-front, ._tags, ._tumblr-sidebar.--active ._tags {
   -webkit-transition: all 230ms ease;
   -moz-transition: all 230ms ease;
   -ms-transition: all 230ms ease;
@@ -3371,6 +3371,8 @@ div ._tumblr-item.--full {
   border: 0;
   width: inherit;
   max-width: inherit; }
+  ._tumblr-sidebar.--active ._tags {
+    color: #BBBBBB; }
 
 .color-palette {
   position: absolute;
