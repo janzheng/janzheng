@@ -140,16 +140,18 @@
   // for fun
 
   $('.index-jan').on('click', function() {
-    // console.log('click')
-    $(this).find('._hidden').removeClass('_hidden');
+    $(this).find('._hidden').removeClass('_hidden'); 
+    $(this).replaceWith($('<span class="_color-red">' + this.innerHTML + '</span>')); // not clickable anymore
   });
 
   $('.index-exp').on('click', function() {
     $(this).find('._hidden').removeClass('_hidden');
+    $(this).replaceWith($('<span class="_color-red">' + this.innerHTML + '</span>')); // not clickable anymore
   });
 
   $('.index-s').on('click', function() {
     $(this).find('._hidden').removeClass('_hidden');
+    $(this).replaceWith($('<span class="_color-red">' + this.innerHTML + '</span>')); // not clickable anymore
   });
 
 
