@@ -48,10 +48,9 @@ function getTumblr(opt, success) {
   var tumblrList = {};
 
   function filterBy(cat) {
-    console.log('filter calling: ' + cat)
     try {
       tumblrList.filter(function(post) {
-        console.log('matching filter: ', post.values(), post.values().tagCategory)
+        // console.log('matching filter: ', post.values(), post.values().tagCategory)
         return post.values().tagCategory.includes(cat) ? true : false;
       }); 
     } catch(e) {
@@ -62,7 +61,7 @@ function getTumblr(opt, success) {
 
   function filterReset() {
     tumblrList.filter();
-    $('.sidebar').removeClass('tag-active');
+    $('._sidebar').removeClass('--active');
     $(".tag-filter").removeClass('--active');
   }
 
@@ -71,10 +70,9 @@ function getTumblr(opt, success) {
 
   // initialize all the tag bindings when data is loaded
   function filterInit(wrapperId) {
-    console.log('Iniitializing Filters for', $('#tumblrList'), options)
+    // console.log('Iniitializing Filters for', $('#tumblrList'), options)
     // output is the id of the container div
     tumblrList = new List(wrapperId, options);
-    console.log(tumblrList)
 
     // if(window.location.hash.length > 0) {
     //   var hash = window.location.hash.substring(1);
@@ -86,9 +84,9 @@ function getTumblr(opt, success) {
     // remove filters
     $(".filter-clear").bind('mouseup',function(e) {
       filterReset();
-      $(".page-title").text(titleDefault);
+      $("._tag-title").text(titleDefault);
       $(".tag-filter").removeClass('--active');
-      $('.sidebar').removeClass('tag-active');
+      $('._sidebar').removeClass('--active');
     });
 
     // click a filter
@@ -97,18 +95,18 @@ function getTumblr(opt, success) {
         // window.location.hash = '';
         filterReset();
         // sticky.refresh();
-        $(".page-title").text(titleDefault);
-        $('.sidebar').removeClass('tag-active');
+        $("._tag-title").text(titleDefault);
+        $('._sidebar').removeClass('--active');
         $(".tag-filter").removeClass('--active');
       } else {
         // window.location.hash = $(this).data('tag');
         $(".tag-filter").removeClass('--active');
-        console.log('filtering by: ' + $(this).html())
+        // console.log('filtering by: ' + $(this).html())
         filterBy($(this).html());
         // sticky.refresh();
         $(this).addClass('--active');
-        $('.sidebar').addClass('tag-active');
-        $(".page-title").text($(this).data('tag') + 's')
+        $('._sidebar').addClass('--active');
+        $("._tag-title").html(`Showing <h5 class="_inline">${$(this).data('tag') + ''}</h5>`)
       }
     });
 

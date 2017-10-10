@@ -184,6 +184,9 @@ div ._tumblr-item.--full {
     @extend %font-italic;
     cursor: pointer;
   }
+  ._tags {
+    @extend %ease;
+  }
 
   .tag-filter {
     display: block;
@@ -209,6 +212,13 @@ div ._tumblr-item.--full {
   border: 0;
   width: inherit;
   max-width: inherit;
+
+  &.--active {
+    ._tags {
+      color: $color-ui-dark;
+      @extend %ease;
+    }
+  }
 }
 
 

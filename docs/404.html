@@ -135,7 +135,7 @@ $(document).ready(function() {
 google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
 </script>
 
-<script src="javascripts/tumblr-7bdd96b2.js"></script>
+<script src="javascripts/tumblr-7deff8a4.js"></script>
 <script>
 
 
@@ -191,7 +191,7 @@ function tumblrSuccess(json, payload) {
     //   getTumblr({limit: _limit, offset: times*_limit}, tumblrSuccess);
     // }
 
-    populateShort(posts[posts.length-1], $('#output'), tags);
+    populateShort(posts[posts.length-1], $('#output'));
     // populateTags(); // tags built in populate
     // filterInit();   // initialize tag bindings
     // console.log('refreshing sticky again')
