@@ -22,6 +22,7 @@
   }
 
   figure {
+    margin-bottom: $base*2;
     img {
       width: 100%;
     }
@@ -32,6 +33,10 @@
   }
 
   aside {
+    @include screen-xs-only {
+      grid-row-start: 1;
+    }
+
     div {
       .title {
         display: block;

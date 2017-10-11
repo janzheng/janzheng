@@ -612,6 +612,9 @@ input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdo
   width: 100%;
   max-width: 100%; }
 
+._margin-center {
+  margin: 0 auto; }
+
 ._margin-half {
   margin-top: 8px;
   margin-bottom: 8px; }
