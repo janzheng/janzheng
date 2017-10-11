@@ -70,11 +70,8 @@
   ._width-content-large { max-width: $width-md-min - 100; }
 
 
-@import 'nav';
-@import 'typography';
-@import 'buttons';
-@import 'topper';
 
+// @imports at bottom
 
 
 
@@ -300,11 +297,15 @@ p { // p reset
 
 
 // 
+@import 'nav';
+@import 'typography';
+
 @import 'contact';
 @import 'portfolio';
 @import 'generator';
 @import 'tumblr';
 @import 'topper';
+@import 'work';
 
 
 

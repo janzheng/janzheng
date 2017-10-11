@@ -1,0 +1,102 @@
+---
+layout: light
+---
+
+<script type="text/javascript" src="./plugins/lity/lity.min.js"></script>
+<link href="./plugins/lity/lity.min.css" rel="stylesheet">
+
+
+<!-- this one has gallery http://photoswipe.com/ http://photoswipe.com/documentation/getting-started.html-->
+<script type="text/javascript" src="./plugins/photoswipe/photoswipe.min.js"></script>
+<link href="./plugins/photoswipe/photoswipe.css" rel="stylesheet">
+<script type="text/javascript" src="./plugins/photoswipe/photoswipe-ui-default.min.js"></script>
+<link href="./plugins/photoswipe/default-skin/default-skin.css" rel="stylesheet">
+<script type="text/javascript" src="./plugins/photoswipe/init.js"></script>
+<%= partial '/plugins/photoswipe/init.html' %>
+<script>
+  $(document).ready(function() {
+    initPhotoSwipeFromDOM('.gallery');
+  });
+</script>
+
+
+
+<div class="work " id="landing" markdown="1">
+
+  <div class="work-intro _width-content-max _margin-center">
+    <div class="_size _align-vertically" data-height="40">
+      <h2 class="_padding-none _page-header">Diamax Korea </h2>
+    </div>
+    <div class="_size" data-height="10">
+      <h4 class="_page-summary">A powerful yet light-weight product catalogue and content management system </h4>
+    </div>
+
+  </div>
+
+
+  <div class="work-container _margin-center  _width-content-large">
+
+    <main class="_width-content-max-narrow">
+      <section>
+        <summary>
+        </summary>
+        <div>
+          <p>Diamax approached me to create a light-weight, and mobile-friendly product catalogue for product management, salespeople, and resellers.
+          </p>
+          <p>The company wanted the catalogue to be easily mangeable on road, as it’s to be used as a major sales tool for trade shows and expos.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <aside class="">
+      <div>
+         <span class="title">Client</span>
+         <span class="content">Diamax</span>
+      </div>
+
+      <div class="callout--row">
+         <span class="title">Roles</span>
+         <span class="content">Design, Development</span>
+      </div>
+
+      <div class="callout--row">
+        <span class="title">Visit</span>
+        <a href="http://diamaxkorea.com" class="content">Diamax Korea</a>
+      </div>
+    </aside>
+
+  </div>
+  
+
+  <div class="gallery _grid-three _margin-center  _width-content-large">
+    <figure itemprop="associatedMedia">
+      <a href="./files/work/dk/header.jpg" itemprop="contentUrl" data-size="911x981">
+        <img class="_pointer" src="./files/work/dk/header.jpg" itemprop="thumbnail" />
+      </a>
+      <figcaption itemprop="caption description">Homepage</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia">
+      <a href="./files/work/dk/product_1_half.jpg" itemprop="contentUrl" data-size="817x744">
+        <img class="_pointer" src="./files/work/dk/product_1_half.jpg" itemprop="thumbnail" />
+      </a>
+      <figcaption itemprop="caption description">Product Search</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia">
+      <a href="./files/work/dk/product.jpg" itemprop="contentUrl" data-size="700x1282">
+        <img class="_pointer" src="./files/work/dk/product.jpg" itemprop="thumbnail" />
+      </a>
+      <figcaption itemprop="caption description">Product Page</figcaption>
+    </figure>
+  </div>
+
+
+
+</div>
+
+
+
+
+

@@ -192,6 +192,7 @@ $('.loadAll').on('mouseup', function() {
   loadAll = true;
   $('.loading').html('loading everything...!'); // clear first for dupes
   $('#output').html(''); // clear first for dupes
+  posts = []; // clear posts to reload everything
   getTumblr({limit: _limit, offset: 0}, tumblrSuccess);
 })
 

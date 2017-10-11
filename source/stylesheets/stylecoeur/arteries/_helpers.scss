@@ -73,6 +73,10 @@
 //    MARGIN
 // 
 
+._margin-center {
+  margin: 0 auto;
+}
+
 ._margin-half {
   margin-top: $base/2;
   margin-bottom: $base/2;
