@@ -3,6 +3,8 @@
   <head>
     <title>jz: products &amp; prototypes</title>
     
+  
+
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="google" content="notranslate">
@@ -15,7 +17,7 @@
   <!-- Use the title from a page's frontmatter if it has one -->
   <!-- <title>Middleman</title> -->
 
-  <link rel="icon" type="image/png" href="images/me-6b16620f.png">
+  <link rel="icon" type="image/png" href=./images/me.png >
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
@@ -30,26 +32,34 @@
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet"> -->
 
   <!-- because middleman is too dumb- for build -->
-  <script src="javascripts/jquery.min-ae49e569.js"></script>
-  <script src="javascripts/site-d8dcec9a.js?=v0.259"></script>
-  <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
-  <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
-  <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-4fd2ad90.css?=v0.742" rel="stylesheet">
+  <script src= ./javascripts/jquery.min.js ></script>
+  <script src= ././javascripts/site.js?=v0.259></script>
+  <link href= ././javascripts/owl/assets/owl.carousel.min.css rel="stylesheet">
+  <script src= ././javascripts/owl/owl.carousel.min.js></script>
+  <link href= ././javascripts/owl/assets/owl.theme.default.min.css rel="stylesheet">
+  <link href= ././stylesheets/site.css?=v0.742 rel="stylesheet">
 
 
 
   <!-- because middleman is too dumb- for server -->
-  <!-- <script src="javascripts/jquery.min-ae49e569.js"></script>
-  <script src="javascripts/site-d8dcec9a.js?=v0.259"></script>
-  <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
-  <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
-  <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-4fd2ad90.css?=v0.742" rel="stylesheet">
+  <!-- <script src="javascripts/jquery.min.js"></script>
+  <script src="javascripts/site.js?=v0.259"></script>
+  <link href="javascripts/owl/assets/owl.carousel.min.css" rel="stylesheet">
+  <script src="javascripts/owl/owl.carousel.min.js"></script>
+  <link href="javascripts/owl/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="stylesheets/site.css?=v0.742" rel="stylesheet">
  -->
 
-  <link href="stylesheets/site-4fd2ad90.css" rel="stylesheet" />
-  <script src="javascripts/site-d8dcec9a.js"></script>
+  <link href="stylesheets/site.css" rel="stylesheet" />
+  <script src="javascripts/site.js"></script>
+
+
+
+
+
+
+
+
   </head>
   <body class="">
 
@@ -70,7 +80,7 @@
       <div class="_grid-four-one bookmarks" id="tumblrList">
   <div class="index-intro">
 
-    <div class="_width-content-max-narrow _size _padding-2" data-height="25">
+    <div class="_width-content-max-narrow _size-vheight _padding-2" data-vheight="25">
       <h2 class="_page-header">bookmarks  </h2>
       <p>
         This social bookmarking experiment turned out rather useful.
@@ -137,23 +147,6 @@
 
 </div>
 
-<script>
-  // css/js hybrid
-  // dynamic height dispenser
-  // don't rely on vh as browser bugs and annoyances like iOS chrome
-  // vw more reliable
-  // syntax: class="_size" data-height="30" is calculated 30 vh
-  $(window).load(function() {
-    $('._size').each(function() {
-      // calculate vh manually, and set it dynamically
-      // console.log($(this).data())
-      var height = $(window).height() * ($(this).data('height') * 0.01);
-      $(this).css({'height': height})
-    });
-  });
-
-</script>
-
 <!-- tumblr code -->
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -166,9 +159,9 @@ google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 
-<script src="javascripts/tumblrdata-b2303d74.js"></script>
+<script src="./javascripts/tumblrdata.js"></script>
 
-<script src="javascripts/tumblr-b3c6b862.js"></script>
+<script src="./javascripts/tumblr.js"></script>
 
 <!-- <script>
 var options = {

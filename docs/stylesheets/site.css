@@ -36,14 +36,23 @@ summary,
 article,
 section, ._section,
 ._width-content-max {
-  max-width: 991px; }
+  max-width: 100%; }
+  @media (min-width: 991px) {
+    summary,
+    article,
+    section, ._section,
+    ._width-content-max {
+      max-width: 991px; } }
 
 ._width-content-max-narrow {
-  max-width: 640px; }
+  max-width: 100%; }
+  @media (min-width: 640px) {
+    ._width-content-max-narrow {
+      max-width: 640px; } }
 
 /*  HTML5 ✰ Boilerplate  */
 html, body, div, span, object, iframe,
-h1, h2, h3, h4, .work .work-container summary, h5, div ._tumblr-item ._tumblr-title, h6, p, blockquote, pre,
+h1, h2, h3, h4, .work summary, h5, div ._tumblr-item ._tumblr-title, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -924,7 +933,7 @@ body, body.--loaded, .portfolio-item span, .portfolio-item:hover span {
     -webkit-filter: sepia(1) saturate(8); }
   100% {
     -webkit-filter: sepia(0) saturate(2); } }
-h1, h2, h3, h4, .work .work-container summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, div ._tumblr-item ._tumblr-title, h6, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full ._tumblr-tags,
+h1, h2, h3, h4, .work summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, div ._tumblr-item ._tumblr-title, h6, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full ._tumblr-tags,
 p,
 body,
 input,
@@ -938,7 +947,7 @@ form .textarea,
 form ._form-select-dropdown + select {
   font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif; }
 
-h1, h2, h3, h4, .work .work-container summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, div ._tumblr-item ._tumblr-excerpt, div ._tumblr-item ._tumblr-description p, h6 {
+h1, h2, h3, h4, .work summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, div ._tumblr-item ._tumblr-excerpt, div ._tumblr-item ._tumblr-description p, h6 {
   font-family: "Georgia", serif; }
 
 ._font-mono, ._font-code {
@@ -1020,7 +1029,7 @@ h3 {
   padding: 16px 0;
   font-weight: 300; }
 
-h4, .work .work-container summary {
+h4, .work summary {
   font-size: 24px;
   line-height: 36px;
   font-weight: 700;
@@ -1037,18 +1046,18 @@ h6 {
 p {
   margin-bottom: 16px; }
 
-._grid-one, ._grid-two, ._grid-content-image, ._grid-image-content, ._grid-three, ._grid-four, ._grid-five, ._grid-six, ._grid-seven, ._grid-seven-xs-four, ._grid-seven-always, ._grid-one-three, .work .work-container section, ._grid-one-three-always, ._grid-one-four, ._grid-one-seven, ._grid-two-one, ._grid-three-one, .work .work-container, ._grid-two-four, ._grid-four-one, ._grid-seven-one, ._grid-one-six-one, ._grid-two-one-one, ._grid-two-two-one, div ._tumblr-item.--full ._tumblr-front {
+._grid-one, ._grid-two, ._grid-content-image, ._grid-image-content, ._grid-three, ._grid-four, ._grid-five, ._grid-six, ._grid-seven, ._grid-seven-xs-four, ._grid-seven-always, ._grid-one-three, .work section, ._grid-one-three-always, ._grid-one-four, ._grid-one-seven, ._grid-two-one, ._grid-three-one, .work .aside-container, ._grid-two-four, ._grid-four-one, ._grid-seven-one, ._grid-one-six-one, ._grid-two-one-one, ._grid-two-two-one, div ._tumblr-item.--full ._tumblr-front {
   display: grid;
   grid-gap: 16px; }
 
 @media (max-width: 767px) {
-  ._grid-row-one, ._grid-two, ._grid-content-image, ._grid-image-content, ._grid-three, ._grid-six, ._grid-seven, ._grid-one-three, .work .work-container section, ._grid-one-four, ._grid-two-one, ._grid-three-one, .work .work-container, ._grid-two-four, ._grid-four-one, ._grid-seven-one, ._grid-one-six-one, ._grid-two-one-one, ._grid-two-two-one,
+  ._grid-row-one, ._grid-two, ._grid-content-image, ._grid-image-content, ._grid-three, ._grid-six, ._grid-seven, ._grid-one-three, .work section, ._grid-one-four, ._grid-two-one, ._grid-three-one, .work .aside-container, ._grid-two-four, ._grid-four-one, ._grid-seven-one, ._grid-one-six-one, ._grid-two-one-one, ._grid-two-two-one,
   ._grid-xs-full {
     grid-template-areas: "one";
     grid-template-rows: 1fr;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 0; }
-    ._grid-row-one > *, ._grid-two > *, ._grid-content-image > *, ._grid-image-content > *, ._grid-three > *, ._grid-six > *, ._grid-seven > *, ._grid-one-three > *, .work .work-container section > *, ._grid-one-four > *, ._grid-two-one > *, ._grid-three-one > *, .work .work-container > *, ._grid-two-four > *, ._grid-four-one > *, ._grid-seven-one > *, ._grid-one-six-one > *, ._grid-two-one-one > *, ._grid-two-two-one > *,
+    ._grid-row-one > *, ._grid-two > *, ._grid-content-image > *, ._grid-image-content > *, ._grid-three > *, ._grid-six > *, ._grid-seven > *, ._grid-one-three > *, .work section > *, ._grid-one-four > *, ._grid-two-one > *, ._grid-three-one > *, .work .aside-container > *, ._grid-two-four > *, ._grid-four-one > *, ._grid-seven-one > *, ._grid-one-six-one > *, ._grid-two-one-one > *, ._grid-two-two-one > *,
     ._grid-xs-full > * {
       margin: 0 auto;
       width: 100%; } }
@@ -1142,7 +1151,7 @@ p {
     grid-template-columns: repeat(7, 1fr); } }
 
 @media (min-width: 768px) {
-  ._grid-one-three, .work .work-container section {
+  ._grid-one-three, .work section {
     grid-template-areas: "one three";
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 3fr; } }
@@ -1170,7 +1179,7 @@ p {
     grid-template-columns: 2fr 1fr; } }
 
 @media (min-width: 768px) {
-  ._grid-three-one, .work .work-container {
+  ._grid-three-one, .work .aside-container {
     grid-template-areas: "three one";
     grid-template-rows: 1fr;
     grid-template-columns: 3fr 1fr; } }
@@ -2224,10 +2233,19 @@ summary,
 article,
 section, ._section,
 ._width-content-max {
-  max-width: 991px; }
+  max-width: 100%; }
+  @media (min-width: 991px) {
+    summary,
+    article,
+    section, ._section,
+    ._width-content-max {
+      max-width: 991px; } }
 
 ._width-content-max-narrow {
-  max-width: 640px; }
+  max-width: 100%; }
+  @media (min-width: 640px) {
+    ._width-content-max-narrow {
+      max-width: 640px; } }
 
 ._block {
   display: block; }
@@ -2775,7 +2793,7 @@ input:focus, .input:focus, textarea:focus, .textarea:focus, ._form-select-dropdo
   outline: none;
   box-shadow: 0px 0px 2px 0px rgba(5, 67, 162, 0.6); }
 
-h1, h2, h3, h4, .work .work-container summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, div ._tumblr-item ._tumblr-title, h6, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full ._tumblr-tags,
+h1, h2, h3, h4, .work summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, div ._tumblr-item ._tumblr-title, h6, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full ._tumblr-tags,
 p,
 body,
 input,
@@ -2789,7 +2807,7 @@ form .textarea,
 form ._form-select-dropdown + select {
   font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif; }
 
-h1, h2, h3, h4, .work .work-container summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, div ._tumblr-item ._tumblr-excerpt, div ._tumblr-item ._tumblr-description p, h6 {
+h1, h2, h3, h4, .work summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, div ._tumblr-item ._tumblr-excerpt, div ._tumblr-item ._tumblr-description p, h6 {
   font-family: "Georgia", serif; }
 
 ._font-mono, ._font-code {
@@ -2871,7 +2889,7 @@ h3 {
   padding: 16px 0;
   font-weight: 300; }
 
-h4, .work .work-container summary {
+h4, .work summary {
   font-size: 24px;
   line-height: 36px;
   font-weight: 700;
@@ -2942,6 +2960,10 @@ p {
   font-size: 24px;
   line-height: 36px; }
 
+.index-intro-sub {
+  font-size: 16px;
+  color: #ADADAD; }
+
 ._screen-height-half {
   height: 30vh; }
 
@@ -2991,7 +3013,7 @@ p {
 #form p {
   line-height: 64px; }
 
-._size {
+._size-vheight {
   min-height: fit-content; }
 
 nav {
@@ -3062,10 +3084,10 @@ nav {
   ._nav-more:after {
     margin: 0;
     content: ''; } }
-h1, h2, h3, h4, .work .work-container summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, div ._tumblr-item ._tumblr-title, h6, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full ._tumblr-tags {
+h1, h2, h3, h4, .work summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, h5, div ._tumblr-item ._tumblr-title, h6, div ._tumblr-item.--full ._tumblr-front, div ._tumblr-item.--full ._tumblr-tags {
   font-family: -apple-system, BlinkMacSystemFont, system-ui, "Lato", "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif; }
 
-h1, h2, h3, h4, .work .work-container summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, div ._tumblr-item ._tumblr-excerpt, div ._tumblr-item ._tumblr-description p, h6 {
+h1, h2, h3, h4, .work summary, p, body, input, textarea, select, button, form input, form .input, form textarea, form .textarea, form ._form-select-dropdown + select, div ._tumblr-item ._tumblr-excerpt, div ._tumblr-item ._tumblr-description p, h6 {
   font-family: "Georgia", "Crimson Text", serif !important; }
 
 div ._tumblr-item.--full ._tumblr-tags, ._font-smaller {
@@ -3100,7 +3122,7 @@ h3 {
   font-size: 32px;
   letter-spacing: 0px; }
 
-h4, .work .work-container summary {
+h4, .work summary {
   font-weight: 400;
   font-size: 26px;
   letter-spacing: 0px; }
@@ -3264,6 +3286,8 @@ div ._tumblr-item.--full {
   div ._tumblr-item.--full ._tumblr-photos {
     float: left;
     margin-right: 16px; }
+    div ._tumblr-item.--full ._tumblr-photos img {
+      width: 100%; }
   div ._tumblr-item.--full ._tumblr-meta ._tumblr-date {
     text-align: right; }
   div ._tumblr-item.--full ._tumblr-meta ._tumblr-publisher {
@@ -3360,16 +3384,20 @@ div ._tumblr-item.--full {
   top: 0px;
   left: 0px; }
 
-.work .work-container {
+.work .aside-container {
   display: grid;
   grid-gap: 32px;
   padding: 32px; }
-  .work .work-container section {
-    display: grid;
-    padding-top: 0;
-    padding-bottom: 64px; }
-  .work .work-container article {
-    padding-top: 0; }
+.work section {
+  display: grid;
+  padding-top: 0;
+  padding-bottom: 64px; }
+.work summary {
+  color: #BBBBBB; }
+.work article {
+  padding-top: 0; }
+.work p:last-child {
+  padding-bottom: 0; }
 .work figure {
   margin-bottom: 32px; }
   .work figure img {

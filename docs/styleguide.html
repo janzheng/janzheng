@@ -1,9 +1,11 @@
-<!-- layouts can't have yaml -->
+<!-- layouts can't have yaml, so this wraps the layout -->
 <!doctype html>
 <html>
   <head>
     <title>jz: products &amp; prototypes</title>
     
+  
+
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="google" content="notranslate">
@@ -16,7 +18,7 @@
   <!-- Use the title from a page's frontmatter if it has one -->
   <!-- <title>Middleman</title> -->
 
-  <link rel="icon" type="image/png" href="images/me-6b16620f.png">
+  <link rel="icon" type="image/png" href=./images/me.png >
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
@@ -31,34 +33,36 @@
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet"> -->
 
   <!-- because middleman is too dumb- for build -->
-  <script src="javascripts/jquery.min-ae49e569.js"></script>
-  <script src="javascripts/site-d8dcec9a.js?=v0.259"></script>
-  <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
-  <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
-  <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-4fd2ad90.css?=v0.742" rel="stylesheet">
+  <script src= ./javascripts/jquery.min.js ></script>
+  <script src= ././javascripts/site.js?=v0.259></script>
+  <link href= ././javascripts/owl/assets/owl.carousel.min.css rel="stylesheet">
+  <script src= ././javascripts/owl/owl.carousel.min.js></script>
+  <link href= ././javascripts/owl/assets/owl.theme.default.min.css rel="stylesheet">
+  <link href= ././stylesheets/site.css?=v0.742 rel="stylesheet">
 
 
 
   <!-- because middleman is too dumb- for server -->
-  <!-- <script src="javascripts/jquery.min-ae49e569.js"></script>
-  <script src="javascripts/site-d8dcec9a.js?=v0.259"></script>
-  <link href="javascripts/owl/assets/owl.carousel.min-73d8a692.css" rel="stylesheet">
-  <script src="javascripts/owl/owl.carousel.min-1a99890b.js"></script>
-  <link href="javascripts/owl/assets/owl.theme.default.min-31f27f63.css" rel="stylesheet">
-  <link href="stylesheets/site-4fd2ad90.css?=v0.742" rel="stylesheet">
+  <!-- <script src="javascripts/jquery.min.js"></script>
+  <script src="javascripts/site.js?=v0.259"></script>
+  <link href="javascripts/owl/assets/owl.carousel.min.css" rel="stylesheet">
+  <script src="javascripts/owl/owl.carousel.min.js"></script>
+  <link href="javascripts/owl/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="stylesheets/site.css?=v0.742" rel="stylesheet">
  -->
 
-  <link href="stylesheets/site-4fd2ad90.css" rel="stylesheet" />
-  <script src="javascripts/site-d8dcec9a.js"></script>
+  <link href="stylesheets/site.css" rel="stylesheet" />
+  <script src="javascripts/site.js"></script>
+
+
+
+
+
+
+
+
   </head>
   <body class="">
-
-    
-<div class="color-palette color-top" id="top">
-  <div id="c1"></div><div id="c2"></div><div id="c3"></div><div id="c4"></div><div id="c5"></div>
-  <div id="a1"></div><div id="a2"></div><div id="a3"></div><div id="a4"></div><div id="a5"></div>
-</div>
 
     
 <nav>
@@ -74,13 +78,38 @@
 </nav>
 
     <div class="_main">
-      <div class="_styleguide _content _container">
+      
+<div class="_styleguide _content _container">
   <div class="_styleguide-nav">
   </div>
 
-  <div class="_styleguide-main">
-    <!-- no nav for mini styleguide -->
-    <main>
+
+  <div class="_styleguide-main _grid-one-three">
+
+    <aside>
+      <!-- <h1 class="_transparent">menu</h1> -->
+      <span class="_sticky-tr"></span>
+      <div class="_sidebar --divider">
+        
+
+<div> 
+  <a href=./styleguide.html >styleguide</a>
+</div>
+
+<div>
+  <!-- <a href="/styleguide.html">Intro</a> -->
+    <!-- <div>
+      <a href="/styleguide/portfolio.html">portfolio</a>
+    </div> -->
+    <div> 
+      <a href="../styleguide/portfolio.html" class="" >portfolio</a>
+    </div>
+</div>
+      </div>
+    </aside>
+
+    <div>
+      <main>
 
   <h2> design thoughts </h2>
 
@@ -173,7 +202,9 @@
 </main>
 
 
+    </div>
   </div>
+  
 
   <!-- <div class="_styleguide-footer">
   </div> -->
@@ -182,336 +213,6 @@
 
 
       
-      
-<div id="generator" class="_generator _padding-2">
-  <!-- <div class="generator-ctrl">
-    <a class="active">thoughts</a>
-    <a>experiments</a>
-    <a>bookmarks</a>
-    <a>projects</a>
-  </div> -->
-  <div class="_grid-three-one">
-
-    <div class="generator-main">
-      <div class="generator-content _tumblr">
-        <h4 class="_inline">social bookmarks</h4><a class="_padding-left _font-italic _font-small" href="./bookmarks.html">all bookmarks</a>
-        <div id="output"></div>
-      </div>
-    </div>
-    <aside class="generator-aside">
-      <!-- aside -->
-    </aside>
-
-  </div>
-
-</div>
-
-
-<script>
-
-$(document).ready(function() {
-
-
-
-});
-
-</script>
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">
-google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
-</script>
-
-<script src="javascripts/tumblr-b3c6b862.js"></script>
-<script>
-
-
-var _limit = 5; // 20; // load 20 is default posts every time
-// Load fewer posts on mobile
-if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-  _limit = 5;
-}
-var __tags = [], posts = [], latest = null, index = 0, total = 0, objs = "";
-var times = 0; // temp
-
-
-$(document).ready(function() {
-
-// console.log('tumblr json: ' + JSON.stringify(tumblr_api_read['tumblelog'] ));
-// console.log('tumblr json: ' + JSON.stringify(tumblr_api_read["posts"][0]['url'] ));
-// console.log('<a href="' + tumblr_api_read['posts'][0]['url'] + '">Most recent Tumblr post</a>');
-// console.log(JSON.stringify(tumblr_api_read), tumblr_api_read);
-
-
-  // Iniitialize Tumblr
-  getTumblr({limit: _limit, offset: 0}, tumblrSuccess);
-
-  // load more
-  // $('.loadMore').click(function() {loadmore()});
-  // function loadmore() {
-  //   filterReset(); // must reset, or the previously filtered posts will be gone!
-  //   sticky.refresh();
-  //   index = posts.length * _limit;
-  //   getTumblr({limit: _limit, offset: index}, tumblrSuccess);
-  // }
-
-});
-
-
-function tumblrSuccess(json, payload) {
-  if(json.response.posts.length != 0) {
-    posts.push(json.response.posts);
-    objs += JSON.stringify(json.response.posts)
-    latest = json.response.posts[0];
-    total = json.response.total_posts
-
-    // console.log('posts: ', total, posts, json.response, json.response.posts);
-    // times++;
-
-    // // $('#output').html($('#output').html + objs)
-    // if(times >= total/_limit) {
-    //   console.log('obj done', posts, objs);
-    // }
-
-    // if(times <= total/_limit+1) {
-    //   console.log(_limit*times)
-    //   getTumblr({limit: _limit, offset: times*_limit}, tumblrSuccess);
-    // }
-
-    populateShort(posts[posts.length-1], $('#output'));
-    // populateTags(); // tags built in populate
-    // filterInit();   // initialize tag bindings
-    // console.log('refreshing sticky again')
-    // sticky.refresh() // refresh the sidebar since content's changed
-  }
-}
-
-
-</script>
-
-
-
-
-      
-
-<hr class="_border-line _color-border-ui-light" />
-
-<div id="contact" class="_width-content-max _padding-2 _radius _width-full ">
-
-
-  <div class="_message _color-gray _font-small">
-    &rarr; <em>currently not available for large jobs, but say hello anyway </em>
-  </div>
-
-    <form id="form" action="https://script.google.com/macros/s/AKfycby01BhE83Qmd8ARcKdviWgZjsY1aPxLDs3p9qAMLMt0GTwUKtXx/exec">
-
-      
-      <div class=" _grid-three-one">
-        <div>
-          <div class="_right">
-            <h4 class="_padding-bottom-none _inline">Hello,</h4>
-            my name is 
-            <input id="name" class="_form-input _inline _margin-right-none-i" type="text" name="name" placeholder="coolest name ever" required/> 
-          </div>
-          <div class="_right">
-            at 
-
-            <input id="email" class="_form-input _inline _margin-right-none-i" type="text" name="email" placeholder="awesome@email.com" /> 
-          </div>
-
-          <div class="_right">
-            and <input id="shortMessage" class=" _form-input _inline _margin-right-none-i" type="text" name="shortMessage" placeholder="I think..." required/>
-          </div>
-
-          <div class="_right _form-fake">
-            fake <input id="fake" class=" _form-input _inline _margin-right-none-i" type="text" name="fake" placeholder="umm..."/>
-          </div>
-
-          <!-- <div class="_padding-top" >
-            <textarea rows="2" id="message" class="_form-input"  type="text" name="message" placeholder="leave a message *" ></textarea>
-          </div> -->
-
-        </div>
-
-        <div class="_align-vertically _align-bottom" >
-          <button class="_margin-top-xs _margin-bottom-none _padding-left-half _padding-right-half _margin-left-none _inline _button _button-short --outline">send away!</button>
-        </div>
-
-      </div>
-    </form>
-    
-    <div style="display:none;" id="loading">
-      Sending...
-    </div>
-
-    <div style="display:none;" id="thankyou_message">
-      Thanks for sending me a message, I will get back to you as soon as I can!
-    </div>
-</div>
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-
-<script>
-
-  var action;
-
-  $(document).ready(function() {
-
-    let rules = {
-      name: {
-        required: true,
-      },
-      email: {
-        required: true,
-      },
-      shortMessage: {
-        required: true,
-      },
-    };
-    let messages = {
-      name: {
-        required: '(psst, what’s your name?)',
-      },
-      email: {
-        required: '(oops, email please!)',
-      },
-      shortMessage: {
-        required: '(what u wanna say?)',
-      },
-    };
-
-    $('#form').submit(function(event){
-      // event.preventDefault();
-      action = event.target.action;
-    }).validate({
-    // $('#form').validate({
-        // debug: true,
-        rules,
-        messages,
-        submitHandler(form) {
-          console.log('submitting...');
-          // form.submit(false);
-
-          var data = getFormData();
-          if(data.fake || data.message ) {
-            // console.log('fake! ', data)
-            // return false; // honey
-          } else {
-
-            document.getElementById('form').style.display = 'none'; // hide form
-            document.getElementById('loading').style.display = 'block';
-
-            var url = action; // event.target.action;  //
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', url);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onreadystatechange = function() {
-              console.log( xhr.status, xhr.statusText )
-              console.log(xhr.responseText);
-              document.getElementById('loading').style.display = 'none';
-              document.getElementById('form').style.display = 'none'; // hide form
-              document.getElementById('thankyou_message').style.display = 'block';
-              return;
-            };
-            // url encode form data for sending as post data
-            var encoded = Object.keys(data).map(function(k) {
-                return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-            }).join('&')
-            xhr.send(encoded);
-          }
-
-        },
-        invalidHandler(event, validator) { 
-          console.log('form is wrong :(')
-          var errors = validator.numberOfInvalids();
-          if (errors) {
-            var message = errors == 1
-              ? 'You missed 1 field. It has been highlighted'
-              : 'You missed ' + errors + ' fields. They have been highlighted';
-            $("div.error span").html(message);
-            $("div.error").show();
-          } else {
-            $("div.error").hide();
-          }
-
-          console.log(message)
-          // props.onSubmit();
-        },
-      });
-
-  });
-
-
-// 
-//  Form Sending Script
-//  https://www.npmjs.com/package/html-form-send-email-via-google-script-without-server
-// 
-
-
-// get all data in form and return object
-function getFormData() {
-  var elements = document.getElementById("form").elements; // all form elements
-  var fields = Object.keys(elements).map(function(k) {
-    if(elements[k].name !== undefined) {
-      return elements[k].name;
-    // special case for Edge's html collection
-    }else if(elements[k].length > 0){
-      return elements[k].item(0).name;
-    }
-  }).filter(function(item, pos, self) {
-    return self.indexOf(item) == pos && item;
-  });
-  var data = {};
-  fields.forEach(function(k){
-    data[k] = elements[k].value;
-    var str = ""; // declare empty string outside of loop to allow
-                  // it to be appended to for each item in the loop
-    if(elements[k].type === "checkbox"){ // special case for Edge's html collection
-      str = str + elements[k].checked + ", "; // take the string and append 
-                                              // the current checked value to 
-                                              // the end of it, along with 
-                                              // a comma and a space
-      data[k] = str.slice(0, -2); // remove the last comma and space 
-                                  // from the  string to make the output 
-                                  // prettier in the spreadsheet
-    }else if(elements[k].length){
-      for(var i = 0; i < elements[k].length; i++){
-        if(elements[k].item(i).checked){
-          str = str + elements[k].item(i).value + ", "; // same as above
-          data[k] = str.slice(0, -2);
-        }
-      }
-    }
-  });
-  // console.log(data);
-  return data;
-}
-
-
-</script>
-      
-<footer class="_footer _padding-2">
-  <div class="_footer-left _align-center">
-    <div class="_font-light _font-small">
-      © <span class="_currentYear"><script>$('._currentYear').html(new Date().getFullYear())</script></span>
-
-      <a class="_margin-left" href="https://github.com/janzheng/janzheng.github.com">Github</a><a class="_margin-left" href="mailto:hello@janzheng.com">hello@janzheng.com</a>
-
-      <span class="_margin-left-sm">Atlanta/remote/travel</span>
-    </div>
-  </div>
-</footer>
     </div>
 
   </body>

@@ -213,7 +213,7 @@ function getTumblr(opt, success) {
             </div>
             <div class="_tumblr-tags">
               <div class="_tumblr-tags-list">${tags}</div>
-              <div class="_tumblr-edit"><a target="_blank" href="https://www.tumblr.com/edit/${post.id}">edit<a></div>
+              <div class="_tumblr-edit"><a target="_blank" href="https://www.tumblr.com/edit/${post.id}">edit</a></div>
             </div>
           </div>
         </li>

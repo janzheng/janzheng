@@ -36,10 +36,19 @@ summary,
 article,
 section, ._section,
 ._width-content-max {
-  max-width: 991px; }
+  max-width: 100%; }
+  @media (min-width: 991px) {
+    summary,
+    article,
+    section, ._section,
+    ._width-content-max {
+      max-width: 991px; } }
 
 ._width-content-max-narrow {
-  max-width: 640px; }
+  max-width: 100%; }
+  @media (min-width: 640px) {
+    ._width-content-max-narrow {
+      max-width: 640px; } }
 
 /*  HTML5 ✰ Boilerplate  */
 html, body, div, span, object, iframe,

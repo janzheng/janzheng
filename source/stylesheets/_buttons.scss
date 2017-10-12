@@ -21,7 +21,7 @@ button,
 
   &.--outline {
     color: $color-main;
-    border: $border-medium solid $color-main;
+    border: $border-medium solid $color-active;
     background: transparent;
 
     &:hover {
