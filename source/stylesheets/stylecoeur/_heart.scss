@@ -72,10 +72,20 @@ $width-magic: 640px !default;
 
 $width-content-max: $width-sm-max; // max content block width
 %width-content-max,
-  ._width-content-max { max-width: $width-content-max; }
+  ._width-content-max { 
+    max-width: 100%;
+    @media (min-width: $width-content-max) {
+      max-width: $width-content-max; 
+    }
+  }
 
 $width-content-max-narrow: $width-magic; // max content block width
-%width-content-max-narrow { max-width: $width-content-max-narrow; }
+%width-content-max-narrow { 
+    max-width: 100%;
+    @media (min-width: $width-content-max-narrow) {
+      max-width: $width-content-max-narrow;
+    } 
+}
   ._width-content-max-narrow { @extend %width-content-max-narrow; }
 
 

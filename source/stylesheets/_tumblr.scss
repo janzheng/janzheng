@@ -121,6 +121,10 @@ div ._tumblr-item.--full {
     // padding-top: $base/2; 
     float: left;
     margin-right: $base;
+
+    img {
+      width: 100%;
+    }
   }
 
   ._tumblr-meta {

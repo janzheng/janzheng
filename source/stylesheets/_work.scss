@@ -1,23 +1,30 @@
 
 .work {
 
-  .work-container {
+  .aside-container {
     display: grid;
     grid-gap: $base*2;
     @extend ._grid-three-one;
     padding: $base*2;
+  }
 
-    section {
-      display: grid;
-      @extend ._grid-one-three;
-      padding-top: 0; 
-      padding-bottom: $base*4;
-    }
-    summary {
-      @extend h4;
-    }
-    article {
-      padding-top: 0;
+  section {
+    display: grid;
+    @extend ._grid-one-three;
+    padding-top: 0; 
+    padding-bottom: $base*4;
+  }
+  summary {
+    @extend h4;
+    color: $color-ui-dark;
+  }
+  article {
+    padding-top: 0;
+  }
+
+  p {
+    &:last-child {
+      padding-bottom: 0;
     }
   }
 

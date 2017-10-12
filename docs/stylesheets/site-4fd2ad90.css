@@ -3370,10 +3370,15 @@ div ._tumblr-item.--full {
     padding-bottom: 64px; }
   .work .work-container article {
     padding-top: 0; }
-.work figure img {
-  width: 100%; }
-.work figure figcaption {
-  color: #666666; }
+.work figure {
+  margin-bottom: 32px; }
+  .work figure img {
+    width: 100%; }
+  .work figure figcaption {
+    color: #666666; }
+@media (max-width: 767px) {
+  .work aside {
+    grid-row-start: 1; } }
 .work aside div {
   min-width: 220px;
   grid-gap: 16px;

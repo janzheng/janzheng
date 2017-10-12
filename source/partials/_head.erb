@@ -1,4 +1,7 @@
 
+  
+  <% source = current_page.data.source || "./" %>
+
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="google" content="notranslate">
@@ -11,7 +14,7 @@
   <!-- Use the title from a page's frontmatter if it has one -->
   <!-- <title><%= current_page.data.title || "Middleman" %></title> -->
 
-  <link rel="icon" type="image/png" href="images/me.png">
+  <link rel="icon" type="image/png" href=<%= source + "images/me.png" %> >
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
@@ -26,12 +29,12 @@
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet"> -->
 
   <!-- because middleman is too dumb- for build -->
-  <script src="./javascripts/jquery.min.js"></script>
-  <script src="./javascripts/site.js?=v0.259"></script>
-  <link href="./javascripts/owl/assets/owl.carousel.min.css" rel="stylesheet">
-  <script src="./javascripts/owl/owl.carousel.min.js"></script>
-  <link href="./javascripts/owl/assets/owl.theme.default.min.css" rel="stylesheet">
-  <link href="./stylesheets/site.css?=v0.742" rel="stylesheet">
+  <script src= <%= source + "javascripts/jquery.min.js" %> ></script>
+  <script src= <%= source + "./javascripts/site.js?=v0.259" %>></script>
+  <link href= <%= source + "./javascripts/owl/assets/owl.carousel.min.css" %> rel="stylesheet">
+  <script src= <%= source + "./javascripts/owl/owl.carousel.min.js" %>></script>
+  <link href= <%= source + "./javascripts/owl/assets/owl.theme.default.min.css" %> rel="stylesheet">
+  <link href= <%= source + "./stylesheets/site.css?=v0.742" %> rel="stylesheet">
 
 
 
@@ -46,3 +49,10 @@
 
   <%= stylesheet_link_tag "site" %>
   <%= javascript_include_tag "site" %>
+
+
+
+
+
+
+

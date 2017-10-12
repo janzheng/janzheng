@@ -1,13 +1,26 @@
-<!-- layouts can't have yaml -->
-<% wrap_layout :main do %>
+<!-- layouts can't have yaml, so this wraps the layout -->
+<% wrap_layout :nav do %>
+
 <div class="_styleguide _content _container">
   <div class="_styleguide-nav">
   </div>
 
-  <div class="_styleguide-main">
-    <!-- no nav for mini styleguide -->
-    <%= yield %>
+
+  <div class="_styleguide-main _grid-one-three">
+
+    <aside>
+      <!-- <h1 class="_transparent">menu</h1> -->
+      <span class="_sticky-tr"></span>
+      <div class="_sidebar --divider">
+        <%= partial '/partials/style-menu' %>
+      </div>
+    </aside>
+
+    <div>
+      <%= yield %>
+    </div>
   </div>
+  
 
   <!-- <div class="_styleguide-footer">
   </div> -->

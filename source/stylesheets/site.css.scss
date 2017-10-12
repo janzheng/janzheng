@@ -169,7 +169,10 @@ p { // p reset
     font-size: 24px;
     line-height: 24px * 1.5;
   }
-
+  .index-intro-sub {
+    font-size: $base;
+    color: $color-gray-lighter;
+  }
   ._screen-height-half {
     height: 30vh;
   }
@@ -284,7 +287,7 @@ p { // p reset
 
 
 // js-based autosizer
-._size {
+._size-vheight {
 
   min-height: fit-content;
   // prevents item overlap
@@ -306,9 +309,6 @@ p { // p reset
 @import 'tumblr';
 @import 'topper';
 @import 'work';
-
-
-
 
 
 

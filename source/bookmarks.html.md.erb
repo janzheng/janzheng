@@ -5,7 +5,7 @@ layout: light
 <div class="_grid-four-one bookmarks" id="landing" markdown="1" id="tumblrList">
   <div class="index-intro">
 
-    <div class="_width-content-max-narrow _size _padding-2" data-height="25">
+    <div class="_width-content-max-narrow _size-vheight _padding-2" data-vheight="25">
       <h2 class="_page-header">bookmarks  </h2>
       <p>
         This social bookmarking experiment turned out rather useful.
@@ -72,23 +72,6 @@ layout: light
 
 
 </div>
-
-<script>
-  // css/js hybrid
-  // dynamic height dispenser
-  // don't rely on vh as browser bugs and annoyances like iOS chrome
-  // vw more reliable
-  // syntax: class="_size" data-height="30" is calculated 30 vh
-  $(window).load(function() {
-    $('._size').each(function() {
-      // calculate vh manually, and set it dynamically
-      // console.log($(this).data())
-      var height = $(window).height() * ($(this).data('height') * 0.01);
-      $(this).css({'height': height})
-    });
-  });
-
-</script>
 
 
 

@@ -38,7 +38,7 @@ set :build_dir, 'docs' # for github pages master (not for projects)
 # Helpers
 ###
 
-activate :asset_hash # github cache buster
+# activate :asset_hash # github cache buster
 
 activate :deploy do |deploy|
   deploy.deploy_method = :git
