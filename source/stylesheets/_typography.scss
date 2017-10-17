@@ -18,8 +18,8 @@
 
 
 %font-body {
-  font-size: $base + 1px;
-  line-height: ($base + 3px) * 1.5;
+  font-size: 17px; // $base + 1px;
+  line-height: 31px; // ($base + 3px) * 1.5;
   font-weight: 400;
   color: $color-copy;
   @extend %font-serif;

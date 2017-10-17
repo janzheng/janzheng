@@ -3422,3 +3422,28 @@ div ._tumblr-item.--full {
     display: inline; }
   .work aside div:last-child {
     border: 0; }
+
+._button-main, button,
+._button, a._button {
+  color: #FAFAFA;
+  background-color: #971F1F; }
+  ._button-main:hover, button:hover,
+  ._button:hover {
+    background: transparent;
+    color: #971F1F;
+    border-color: #971F1F; }
+
+button,
+._button {
+  border-radius: 0 !important;
+  border-width: 3px; }
+  button.--outline,
+  ._button.--outline {
+    color: #971F1F;
+    border: 3px solid #971F1F;
+    background: transparent; }
+    button.--outline:hover,
+    ._button.--outline:hover {
+      color: #FAFAFA;
+      background-color: #971F1F;
+      border: 3px solid #971F1F; }
