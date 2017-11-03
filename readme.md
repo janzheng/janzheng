@@ -73,6 +73,10 @@ activate :asset_hash
 This project is filed under an MIT license. Attribution/a nod to the source would be nice in your readme file but doesn't really matter. Have fun adapting it to your own needs
 
 
+## Todo
+
+- Bugs
+  - bookmarks: sometimes posts seem to combine?? maybe using the "full" version something is happening (e.g. tympanus article and youtube link), or maybe it's just the media links that are having trouble; title and count not shown for media; should show count # (e.g. > 1. Title) in reverse (so instead of #1 you're showing bookmark #342); clear filters btn not clearing the search bar; 
 
 
 
