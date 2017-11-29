@@ -49,6 +49,15 @@
   <link href="javascripts/owl/assets/owl.theme.default.min.css" rel="stylesheet">
   <link href="stylesheets/site.css?=v0.742" rel="stylesheet">
  -->
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39843414-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-39843414-1');
+  </script>
 
   <link href="stylesheets/site.css" rel="stylesheet" />
   <script src="javascripts/site.js"></script>
@@ -117,33 +126,6 @@
       <div class="_tags _padding-top">tags</div>
     </div>
   </aside>
-
-  <!-- <div id="users">
-  <input class="search" placeholder="Search" />
-  <button class="sort" data-sort="name">
-    Sort by name
-  </button>
-
-  <ul class="list">
-    <li>
-      <h3 class="name">Jonny Stromberg</h3>
-      <p class="born">1986</p>
-    </li>
-    <li>
-      <h3 class="name">Jonas Arnklint</h3>
-      <p class="born">1985</p>
-    </li>
-    <li>
-      <h3 class="name">Martina Elm</h3>
-      <p class="born">1986</p>
-    </li>
-    <li>
-      <h3 class="name">Gustaf Lindqvist</h3>
-      <p class="born">1983</p>
-    </li>
-  </ul>
-
-</div> -->
 
 </div>
 
@@ -215,6 +197,7 @@ function tumblrSuccess(json, payload) {
     // console.log('posts: ', total, posts, json.response, json.response.posts);
     // times++;
 
+    // this is used to print out the data. a bit janky
     // $('#output').html($('#output').html + objs)
     // if(times >= total/_limit) {
     //   // print objects
@@ -331,6 +314,11 @@ $('#_tumblr-search').on('keyup', function(e) {
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 
 <script>
+
+  // 
+  //  Form Sending Script
+  //  https://www.npmjs.com/package/html-form-send-email-via-google-script-without-server
+  // 
 
   var action;
 
@@ -466,8 +454,9 @@ function getFormData() {
   return data;
 }
 
-
 </script>
+
+
       
 <footer class="_footer _padding-2">
   <div class="_footer-left _align-center">
