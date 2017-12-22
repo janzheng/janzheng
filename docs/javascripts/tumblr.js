@@ -16,7 +16,7 @@ function getTumblr(opt, success) {
 
   $.ajax({
     type: 'GET',
-    url: "http://api.tumblr.com/v2/blog/ja-nz.tumblr.com/posts?" + params + "&api_key=inC0HuM2X45UqdQ6RhPJvRXoWEYJiH4JEcrsVD281MSdZUoLao",
+    url: "https://api.tumblr.com/v2/blog/ja-nz.tumblr.com/posts?" + params + "&api_key=inC0HuM2X45UqdQ6RhPJvRXoWEYJiH4JEcrsVD281MSdZUoLao",
     contentType: "application/json",
     dataType: 'jsonp',
     success: success,
