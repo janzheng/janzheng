@@ -40,7 +40,7 @@
       padding-bottom: $base/2;
     }
 
-    &:nth-child(2n+1) {
+    &:nth-child(2n) {
       @include screen-sm {
         position: relative;
         top: -$base*2

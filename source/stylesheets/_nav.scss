@@ -53,6 +53,7 @@ $nav-border: $border-line solid $color-silver-light;
       content: "\2192";
       display: inline-block;
       padding-left: $base/2;
+
     }
   }
 }
@@ -63,6 +64,7 @@ $nav-border: $border-line solid $color-silver-light;
 
   ._nav-content {
     padding: $base $base;
+    padding-top: $base+5px; // to account for the color strip
     // display: grid;
     span, a {
       display: inline-block;
@@ -77,6 +79,7 @@ $nav-border: $border-line solid $color-silver-light;
       content: '\2192';
       display: inline-block;
       // padding-left: $base/2;
+      margin-left: $base/2;
       margin-right: $base*2;
     }
   }
@@ -98,7 +101,16 @@ $nav-border: $border-line solid $color-silver-light;
     grid-row-start: 2;
     // white-space: nowrap;
     // white-space: pre;
-    a { display: block; }
+    a { 
+      // display: block; 
+      padding-top: $base/2;
+      &:after {
+        content: ' / ';
+      }
+      &:last-child:after {
+        content: '';
+      }
+    }
   }
   ._nav-logo {
     grid-row-start: 1;

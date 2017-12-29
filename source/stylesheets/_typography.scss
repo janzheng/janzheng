@@ -92,8 +92,23 @@ h6 {
 // }
 
 
+._legibility  { 
+  // can enable ligatures < 20px;
+  // ONLY APPLY THIS for < 1000 words or severely hampers load time
+  text-rendering:   optimizeLegibility; 
+}
+
+._antialias { 
+  // light text on dark backgrounds makes it look lighter
+  // only works on Mac webkit
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 
+._italic {
+  font-style: italic;
+}
 
 
 
