@@ -233,7 +233,7 @@ function getTumblr(opt, success) {
   function populateShort(postList, container) {
     postList.forEach(function(post, i) {
       var source = post.source_url ? post.source_url : '#';
-      var excerpt = post.excerpt ? `: <div class="_tumblr-excerpt _inline">${post.excerpt}</div>` : '';
+      var excerpt = post.excerpt ? `: <div class="_tumblr-excerpt _inline ">${post.excerpt}</div>` : '';
 
       function getDescription(str) {
         return  ( `<div class="_tumblr-description-container">

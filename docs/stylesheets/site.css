@@ -2957,12 +2957,12 @@ p {
   font-size: 29px; }
 
 .index-intro-message {
-  font-size: 24px;
-  line-height: 36px; }
+  font-size: 28px;
+  line-height: 44.8px; }
 
 .index-intro-sub {
   font-size: 16px;
-  color: #ADADAD; }
+  color: #666666; }
 
 ._screen-height-half {
   height: 30vh; }
@@ -3053,7 +3053,8 @@ nav {
       padding-left: 8px; } }
 @media (max-height: 499px), (max-width: 767px) {
   ._nav-content {
-    padding: 16px 16px; }
+    padding: 16px 16px;
+    padding-top: 21px; }
     ._nav-content span, ._nav-content a {
       display: inline-block; }
 
@@ -3062,6 +3063,7 @@ nav {
     ._nav-more:after {
       content: '\2192';
       display: inline-block;
+      margin-left: 8px;
       margin-right: 32px; }
 
   nav {
@@ -3073,7 +3075,11 @@ nav {
   ._nav-links {
     grid-row-start: 2; }
     ._nav-links a {
-      display: block; }
+      padding-top: 8px; }
+      ._nav-links a:after {
+        content: ' / '; }
+      ._nav-links a:last-child:after {
+        content: ''; }
 
   ._nav-logo {
     grid-row-start: 1; }
@@ -3134,6 +3140,16 @@ h6 {
   font-style: italic;
   color: #666666; }
 
+._legibility {
+  text-rendering: optimizeLegibility; }
+
+._antialias {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+._italic {
+  font-style: italic; }
+
 form .input, form .textarea, form ._form-select-dropdown + select, form input, form textarea {
   font-size: 18px; }
 form ._inline {
@@ -3187,7 +3203,7 @@ form textarea {
   .portfolio-item .portfolio-tags {
     padding-bottom: 8px; }
   @media (min-width: 768px) {
-    .portfolio-item:nth-child(2n+1) {
+    .portfolio-item:nth-child(2n) {
       position: relative;
       top: -32px; } }
   @media (max-width: 767px) {

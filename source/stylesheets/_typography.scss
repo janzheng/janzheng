@@ -98,7 +98,7 @@ h6 {
   text-rendering:   optimizeLegibility; 
 }
 
-._antialias { 
+._antialiased { 
   // light text on dark backgrounds makes it look lighter
   // only works on Mac webkit
   -webkit-font-smoothing: antialiased;

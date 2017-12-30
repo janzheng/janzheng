@@ -58,9 +58,10 @@ div ._tumblr-item {
 
   }
   ._tumblr-excerpt {
-    color: $color-gray-lighter;
+    color: $color-black;
     padding-bottom: $base/4;
     @extend %font-body-small;
+    @extend ._antialiased;
     line-height: $tumblr-lh;
   }
   ._tumblr-description {
