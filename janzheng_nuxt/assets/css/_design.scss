@@ -1,0 +1,537 @@
+
+
+/* 
+
+	Typography
+  - note that Capsid has its own typography styles
+
+ */
+
+
+%md-sans_serif, .MD {
+  // fixing markdown
+  &, *, p {
+    @extend %font-sans;
+    font-size: usetheme(size);
+    line-height: usetheme(lineheight);
+  }
+}
+
+
+.ContentFrame {
+  width: 100%;
+  position: relative;
+
+  // hide ugly loader
+  @extend %ease-slow;
+  opacity: 0;
+  top: 10px;
+
+  &.--loaded {
+    @extend %ease-slow;
+    opacity: 1;
+    top: 0;
+  }
+
+  @extend %font-body;
+  color: $color-copy;
+  margin: 0;
+}
+
+
+body {
+  background-color: usetheme(body-bg); //$color-gray;
+  color: usetheme(copy);
+}
+
+p {
+  margin-bottom: usetheme(size);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: usetheme(header-color);
+
+  &.--roomy {
+    padding-bottom: $size-2x;
+  }
+  &.--title {
+    padding-top: 0 !important;
+  }
+  &.--normal {
+    font-weight: normal;
+  }
+  &.--inline {
+    padding-bottom: $size-half !important;
+  }
+}
+
+
+// semantically used to introduce a page, not meant to surround content
+h1 {
+  padding-top: $size-2x;
+  padding-bottom: $size-2x;
+}
+
+h2 {
+// used to separate sections, and is largest element
+// lots of room up to, some at bottom to separate content
+  padding-top: $size-2x;
+
+  &.--large {
+    font-size: $size-4;
+    padding-bottom: $size-2;
+  }
+}
+
+h3 {
+// used to introduce subtopics, hugs content but still needs to breathe
+  padding-top: $size-2;
+}
+
+h4 {
+// used to introduce subtopics, hugs content but still needs to breathe
+  // padding-top: $size-2;
+  // line-height: $size-3;
+}
+
+h5 {
+  font-size: $size + 2px;
+}
+
+h6.--tight, %tight {
+  font-size: usetheme(font--2);
+  line-height: usetheme(font--2-lh);
+  letter-spacing: 1px;
+}
+
+
+
+// h1 {
+//   font-size: $font-h1;
+//   line-height: $font-h1 * 1.2;
+//   padding-bottom: $size-2x;
+// }
+
+// h2 {
+//   // font-size: $size-2x;
+//   line-height: $font-h2 * 1.2;
+//   // padding-top:0;
+//   // padding-bottom: 0;
+// }
+
+// h3 {
+//   font-size: $size-2x;
+//   line-height: $size-3;
+//   // padding-top:0;
+//   // padding-bottom: 0;
+// }
+
+
+// template / layout 
+.ContentFrame {
+  position: relative;
+
+  // prevent scrolling the page when mobile nav is open
+  &.--open {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+  }
+}
+
+blockquote {
+  // border-left: $border-medium solid;
+  border-color: usetheme(border-color); //$color-tertiary;
+  padding-left: $size-2x;
+
+  &, p {
+    font-size: $font-larger;
+    line-height: $font-larger-lineheight * 1;
+    @extend %font-serif;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: unset;
+    font-style: italic;
+    color: usetheme(brand-copy);
+    // @extend .--antialias;
+  }
+  cite, .source {
+    @extend %font-sans;
+    color: usetheme(copy); //$color-gray;
+    font-size: $size;
+    font-style: normal;
+    color: usetheme(copy);
+  }
+}
+
+
+
+%copy-large {
+  font-size: usetheme(copy-large);
+  line-height: usetheme(copy-large-lh);
+  margin-bottom: $size-3;
+}
+.Copy-large {
+  p, ul, li, table {
+    @extend %copy-large;
+  }
+}
+
+p, ul, li, {
+  // font-size: $font-size-base;
+  // line-height: $font-lineheight;
+  @extend %md-sans_serif;
+
+  padding-left: 0;
+  // @extend %font-serif;
+
+  a { // in-paragraph links
+    // font-weight: 700;
+    &+a {
+    }
+  }
+}
+
+
+// fancy trendy fat links
+
+%hover-middleOut {
+  &:after {
+    content: ' ';
+    @extend %ease-fast;
+    display: inline-block;
+    height: $size-base - 3px;
+    background-color: rgba($color-active, 0.15);
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    width: 0%;
+  }
+
+  &:hover {
+    @extend %ease-fast;
+    color: $color-hover;
+    &:after {
+      height: $size-base - 3px;
+      left: 0%;
+      width: 100%;
+    }
+  }
+}
+
+a {
+  position: relative;
+  border: 0;
+  @extend %ease;
+  // &:before {
+  //   content: ' ';
+  //   // display: block;
+  //   padding: 0;
+  //   background: rgba($color-active,0.12);
+  //   width: 0%;
+  //   position: absolute;
+  //   height: 8px;
+  //   bottom: 0;
+  //   @extend %ease;
+  // }
+  // &:hover:before {
+  //   width: 100%;
+  //   @extend %ease;
+  // }
+  // @extend %hover-middleOut;
+}
+
+
+// body links
+a, ._link {
+  cursor: pointer;
+  // text-decoration: underline;
+  // text-decoration-color: usetheme(links-decoration); //$color-links;
+  color: usetheme(links); //$color-links;
+  border: 0;
+
+  position: relative;
+  @extend %ease;
+  &:before {
+    content: ' ';
+    // display: block;
+    padding: 0;
+    background: rgba($color-active,0.2);
+    width: 0%;
+    position: absolute;
+    height: 11px;
+    bottom: 0px;
+    @extend %ease;
+  }
+
+  &:hover:before {
+    width: 100%;
+    @extend %ease;
+  }
+
+
+  &:after {
+    content: ' ';
+    // display: block;
+    padding: 0;
+    background: rgba($color-active,0.2);
+    width: 0%;
+    position: absolute;
+    height: 11px;
+    top: -1px;
+    right: 0%;
+    @extend %ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+    right: 0%;
+    @extend %ease;
+  }
+
+
+  &:visited {
+    color: usetheme(links);
+  };
+
+  &:hover, &:active {
+    color: usetheme(brand-hover); //$color-links;
+    text-decoration-color: usetheme(hover); //$color-links;
+  }
+
+  &._button {
+    text-decoration: none;
+  }
+
+  &.--disabled {
+    color: usetheme(disabled);
+  }
+
+  &.--quiet {
+    // color: usetheme(pink-active);
+    padding-bottom: $size;
+    font-size: $size--1;
+
+    &:hover {
+    }
+
+  }
+}
+
+  .ContentFrame-body a {
+    font-weight: bold;
+  }
+
+
+
+
+
+
+
+
+// fontello-generated font icons for academics 
+
+// uses:
+// - academicons (https://jpswalsh.github.io/academicons/)
+// - font awesome (https://fontawesome.com/icons/)
+@font-face {
+  font-family: 'phagedir';
+  src: url('/fonts/fontello/font/phagedir.eot');
+  src: url('/fonts/fontello/font/phagedir.eot#iefix') format('embedded-opentype'),
+       url('/fonts/fontello/font/phagedir.woff') format('woff'),
+       url('/fonts/fontello/font/phagedir.ttf') format('truetype'),
+       url('/fonts/fontello/font/phagedir.svg#phagedir') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+._font-phage {
+  font-family: "phagedir";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .05em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  // line-height: 1em;
+  font-size: 123% !important;
+  line-height: $size;
+ 
+  position: relative;
+  bottom: -.1rem;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  vertical-align: middle; 
+  &.icon-mail-alt { font-size: 101% !important; position: relative; right: 4px;}
+  &.icon-linkedin { font-size: 112% !important; }
+  &.icon-researchgate { font-size: 130% !important; position: relative; bottom: 0px;}
+  .icon-google-scholar {  }
+}
+
+
+.icon-mail:before { content: '\e800'; } /* '' */
+.icon-bookmark:before { content: '\e803'; } /* '' */
+.icon-tag:before { content: '\e804'; } /* '' */
+.icon-down-open:before { content: '\e805'; } /* '' */
+.icon-left-open:before { content: '\e806'; } /* '' */
+.icon-right-open:before { content: '\e807'; } /* '' */
+.icon-up-open:before { content: '\e808'; } /* '' */
+.icon-cc:before { content: '\e809'; } /* '' */
+.icon-cc-by:before { content: '\e80a'; } /* '' */
+.icon-cc-nc:before { content: '\e80b'; } /* '' */
+.icon-cc-sa:before { content: '\e80c'; } /* '' */
+.icon-cancel:before { content: '\e80d'; } /* '' */
+.icon-search:before { content: '\e80e'; } /* '' */
+.icon-researcherid:before { content: '\e91a'; } /* '' */
+.icon-publons:before { content: '\e937'; } /* '' */
+.icon-open-access:before { content: '\e939'; } /* '' */
+.icon-researchgate:before { content: '\e95e'; } /* '' */
+.icon-doi:before { content: '\e97e'; } /* '' */
+.icon-figshare:before { content: '\e981'; } /* '' */
+.icon-pubmed:before { content: '\e99f'; } /* '' */
+.icon-biorxiv:before { content: '\e9a2'; } /* '' */
+.icon-cv:before { content: '\e9a5'; } /* '' */
+.icon-academia:before { content: '\e9af'; } /* '' */
+.icon-google-scholar:before { content: '\e9d4'; } /* '' */
+.icon-orcid:before { content: '\e9d9'; } /* '' */
+.icon-bookmark-empty:before { content: '\f097'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-rss:before { content: '\f09e'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-lightbulb:before { content: '\f0eb'; } /* '' */
+.icon-code:before { content: '\f121'; } /* '' */
+.icon-rss-squared:before { content: '\f143'; } /* '' */
+.icon-youtube-play:before { content: '\f16a'; } /* '' */
+.icon-mail-squared:before { content: '\f199'; } /* '' */
+.icon-paypal:before { content: '\f1ed'; } /* '' */
+.icon-linkedin-squared:before { content: '\f30c'; } /* '' */
+
+
+
+
+
+// adds a bg effect to links
+// %links-bg,
+// ._links-bg {
+//   position: relative;
+//   &:after {
+//     content: ' ';
+//     position: absolute;
+//     left: $offset; bottom: -2px;
+//     height: $offset/2;
+//     background: $color-main;
+//     padding: $offset;
+
+//     width: 100%;
+//     z-index: -1;
+
+//     // clip-path: polygon(0% 20%, 80% 0%, 100% 0, 100% 100%, 0 100%);
+//   }
+// }
+
+
+// some pages have an intro section / overview w/ larger text 
+.Intro {
+  @extend ._font-larger;
+
+}
+
+
+
+// tmp 
+
+// $typography: (
+//   font--2: $size--1,
+//   font--2-lh: $size--1 * 5/2,
+//   font--1: $size-smaller,
+//   font--1-lh: $size-smaller * 3/2,
+//   font: $size,
+//   font-lh: $size * 3/2,
+//   font-1: $size-1,
+//   font-1-lh: $size-1 * 3/2,
+//   font-2: $size-2,
+//   font-2-lh: $size-2 * 3/2,
+//   font-3: $size-3,
+//   font-3-lh: $size-3 * 4/3,
+//   font-4: $size-4,
+//   font-4-lh: $size-4 * 5/4,
+//   font-5: $size-5,
+//   font-5-lh: $size-5 * 6/5,
+//   font-6: $size-6,
+//   font-6-lh: $size-6 * 6/5,
+//   font-7: $size-7,
+//   font-7-lh: $size-7 * 6/5,
+//   font-8: $size-8,
+//   font-8-lh: $size-8,
+//   font-9: $size-9,
+//   font-9-lh: $size-9,
+// );
+// @include addtheme($typography);
+
+// // these are manual / no mixin b/c we want to be able to tweak+adjust them in the future w/ bold, medium, etc.
+// ._font--2 {
+//   font-size: usetheme(font--2);
+//   line-height: usetheme(font--2-lh);
+// }
+// ._font--1 {
+//   font-size: usetheme(font--1);
+//   line-height: usetheme(font--1-lh);
+//   &#{5} {
+//     font-weight: bold;
+//   }
+// }
+// ._font {
+//   font-size: usetheme(font);
+//   line-height: usetheme(font-lh);
+// }
+// ._font-1 {
+//   font-size: usetheme(font-1);
+//   line-height: usetheme(font-1-lh);
+// }
+// ._font-2 {
+//   font-size: usetheme(font-2);
+//   line-height: usetheme(font-2-lh);
+// }
+// ._font-3 {
+//   font-size: usetheme(font-3);
+//   line-height: usetheme(font-3-lh);
+// }
+// ._font-4 {
+//   font-size: usetheme(font-4);
+//   line-height: usetheme(font-4-lh);
+// }
+// ._font-5 {
+//   font-size: usetheme(font-5);
+//   line-height: usetheme(font-5-lh);
+// }
+// ._font-6 {
+//   font-size: usetheme(font-6);
+//   line-height: usetheme(font-6-lh);
+// }
+// ._font-7 {
+//   font-size: usetheme(font-7);
+//   line-height: usetheme(font-7-lh);
+// }
+// ._font-8 {
+//   font-size: usetheme(font-8);
+//   line-height: usetheme(font-8-lh);
+// }
+// ._font-9 {
+//   font-size: usetheme(font-9);
+//   line-height: usetheme(font-9-lh);
+// }
+
+
+
+
+
+
+
+

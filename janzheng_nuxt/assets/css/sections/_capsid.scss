@@ -1,0 +1,369 @@
+
+
+$capsid_: (
+  capsid-section-featured: usetheme(silver-lighter), // usetheme(silver-lighter),
+  capsid-section-new: usetheme(mono-5),
+  capsid-section-jobs: usetheme(pink--1),
+  capsid-section-community: usetheme(yellow-0),
+);
+
+@include addtheme($capsid_)
+
+
+
+.Capsid {
+	.Capsid-masthead {
+
+	}
+
+	.Capsid-masthead-title {
+		font-weight: normal;
+		font-style: italic;
+	}
+}
+
+
+.Capsid-Signup {
+  // used to sign up for Capsid all over the site 
+  // two versions: one wide (over articles) and one narrow (in footer);
+  
+  // box-shadow: 0px 4px 8px rgba(70, 70, 70, 0.1);
+  @extend ._card;
+  background-color: usetheme(capsid-color); //$color-teal-50;
+  border-color: usetheme(capsid-color); //$color-teal-50;
+
+  border-radius: $radius;
+  padding: $size;
+  // margin-bottom: $size;
+
+  input[type='email'] {
+    &:focus, &:hover {
+      background-color: usetheme(bg); //$color-bg;
+    }
+  }
+}
+
+
+
+// used to display short headlines on Capsid & Tail
+.Capsid-Stub {
+  
+  .Capsid-Stub-latest {
+    padding-bottom: $size-quart;
+  }
+  
+  // don't highlight / underline some parts
+  a.Capsid-Stub-item {
+
+    &,* {
+      text-decoration: none;
+    }
+
+    .Capsid-header, .Capsid-lede {
+      font-weight: normal;
+    }
+
+    h1, h2, h3 {
+      text-decoration: underline;
+      text-decoration-color: usetheme(active); //$color-links;
+      padding-bottom: $size;
+    }
+    .Capsid-title {
+      padding-top: $size;
+      padding-bottom: $size;
+    }
+
+    h5 {
+      // font-size: 34px;
+      // line-height: 42px;
+      // font-weight: normal;
+      padding-bottom: $size-quart;
+    }
+    &.--featured {
+      border-color: usetheme(active); //$color-tertiary;
+    
+      .Capsid-title {
+        padding-top: $size-2;
+        padding-bottom: $size-2;
+      }
+    }
+    // emulate a link, but handled in js
+    // since might contain nested links
+    border-width: $border-thin;
+    @extend %ease;
+    cursor: pointer;
+
+    &:hover {
+      color: usetheme(copy);
+      .Capsid-title {
+        color: usetheme(active);
+      }
+
+      @extend %ease;
+      border: $border-thin solid usetheme(active); //$color-tertiary;
+      h2 {
+        // color: usetheme(capsid-color); // $color-tertiary;
+        @extend %ease;
+      }
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+/* 
+
+  Capsid & Tail Article Styling
+
+ */
+
+
+.Capsid-section-featured {
+  background: usetheme(capsid-section-featured);
+}
+.Capsid-section-new {
+  background: usetheme(capsid-section-new);
+}
+.Capsid-section-jobs {
+  background: usetheme(capsid-section-jobs);
+}
+.Capsid-section-community {
+  background: usetheme(capsid-section-community);
+}
+
+
+.Capsid-section {
+  @extend %width-content-paragraph;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: $size;
+
+  // padding: $size;
+  @include screen-sm {
+    padding: $size-2x;
+    padding-left: $size;
+    padding-right: $size;
+  }
+
+  .Capsid-section-header {
+    padding-bottom: $size;
+    @include screen-xs {
+      padding: $size;
+    }
+
+    h2.Capsid-section-heading {
+      padding-top: $size-half;
+    }
+
+    h5 {
+      padding: 0;
+      padding-bottom: $size-half;
+    }
+  }
+}
+
+// capsid card sections are encapsulated in this
+.Capsid-item {
+  img {
+    max-width: 100%;
+  }
+}
+
+.Capsid-article {
+  .Capsid-lede {
+    font-weight: normal;
+    font-size: usetheme(font-large);
+    line-height: usetheme(font-large) * 1.6;
+    padding-bottom: $size;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+  Other Article Stylings
+
+ */
+
+
+
+.Capsid-card {
+  // .Periodical-card is legacy to the BiomX C&T
+
+  padding: $size;
+  background-color: usetheme(card); //$color-ui-lighter;
+  border-radius: $radius;
+  margin-bottom: $size;
+  @extend ._card;
+  box-shadow: none;
+
+  &.--callout {
+    background-color: usetheme(copy-light); //$color-teal-50;
+  }
+
+  &.--light {
+    background-color: setheme(highlight); //$color-teal-10;
+    font-weight: inherit;
+  }
+
+  &.--img {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// specifically for the classroom episode,
+// ti
+.Classroom-card {
+  padding: $size;
+  background-color: usetheme(classroom-color); //$color-ui-lighter;
+  border-color: usetheme(classroom-color);
+  border-radius: $radius;
+  margin-bottom: $size;
+  @extend ._card;
+  box-shadow: none;
+}
+
+
+
+/* 
+
+  Capsid Author
+  - some of these actually come from airtable... :\
+
+ */
+.Capsid-author {
+  margin-bottom: 0;
+  h5 {
+    padding-bottom: $size-half;
+  }
+}
+// sometimes it's using a table, for email formatting... these also come from airtable
+table.Capsid-author-header {
+  td {
+    vertical-align: middle;
+    padding: $size-half;
+  }
+}
+.Capsid-author,
+.Capsid-authorCard img {
+  // margin-right: $size;
+  // vertical-align: bottom;
+  // display: inline;
+  // margin-top: $size/2;
+  // max-width: 80px;
+}
+  .Capsid-author-card {
+    @extend .Capsid-card;
+    padding: $size-half $size;
+    padding-top: $size !important;
+    background-color: usetheme(bg-lighter); // $color-ui-lighter;
+    border-radius: $radius;
+
+    h3, h4, h5 {
+      padding-top: 0;
+    }
+  }
+
+
+.Capsid-form {
+  margin-top: $size;
+}
+
+.Capsid-share {
+  // @extend .Capsid-card;
+  // margin-top: $size-2x;
+  // margin-bottom: $size-2x;
+  img {
+    width: auto;
+  }
+}
+
+  .Capsid-twitter {
+    img {
+      vertical-align: middle;
+      margin-right: $size/4;
+    }
+    margin-bottom: $size;
+  }
+
+
+
+
+// guest writer prompt + signup
+.Capsid-footer._section-content {
+  background-color: usetheme(bg-silver);
+  padding-top: $size;
+  padding-bottom: $size;
+  margin-bottom: 0;
+  
+  @include screen-xs {
+    padding-left: $size/2;
+    padding-right: $size/2;
+  }
+}
+
+
+.Capsid-disqus {
+  padding: $size-2x $size;
+  background-color: usetheme(bg-silver);
+
+  @include screen-xs {
+    padding-left: $size/2;
+    padding-right: $size/2;
+  }
+}
+  #disqus_thread {
+    margin: 0 auto;
+    @extend %width-content-paragraph;
+  }
+
+
+
+
+
+
+/* 
+
+  Email Template
+
+ */
+
+.Capsid-email {
+  background-color: usetheme(bg);
+}
+
+
+
+

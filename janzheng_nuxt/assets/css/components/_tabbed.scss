@@ -1,0 +1,151 @@
+
+.Tabbed {
+
+  $border: solid $border-medium;
+
+  .Tabbed-container {
+    position: relative;
+    &:after {
+      content: ' ';
+      border: $border;
+      border-color: usetheme(disabled);
+      position: absolute;
+      bottom: 0; // -12px;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+
+  .Tabbed-left {
+    .Tabbed-tab {
+      margin-right: $size;
+    }
+  }
+  .Tabbed-right {
+    text-align: right;
+    .Tabbed-tab {
+      margin-left: $size;
+    }
+  }
+
+  .Tabbed-tab {
+    font-size: $font-h5;
+    line-height: $lineheight-h5;
+    display: inline-block;
+
+    text-decoration: none;
+    // padding-bottom: $size-half;
+    font-weight: bold;
+
+    a {
+      text-decoration: none;
+    }
+
+    & > * {
+      padding-bottom: $size--1;
+      cursor: pointer;
+      display: inline-block;
+
+      &:hover {
+        color: usetheme(hover);
+      }
+    }
+
+    // current highlighted view
+    &.nuxt-link-exact-active, &.--active {
+      color: usetheme(active);
+      &:after {
+        content: '';
+        border: $border;
+        border-color: usetheme(active); // usetheme(disabled);
+        position: absolute;
+        bottom: 0; // -12px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+      }
+    //   position: relative;
+    //   z-index: 100;
+    //   color: usetheme(active);
+    //   // border-bottom: $border-thick solid usetheme(active);
+    //   border: $border;
+    //   border-color: usetheme(disabled);
+    }
+  }
+
+  .Tabbed-links {
+    position: relative;
+
+    @include screen-xs {
+      display: block;
+
+      a {
+        display: block;
+        text-align: left;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+
+
+/* 
+
+  Mobile Tabbed Styles
+
+ */
+
+.Tabbed .Tabbed-mobile {
+
+  @include screen-xs {
+    .Tabbed-right {
+      text-align: left;
+    }
+
+    .Tabbed-tab {
+      display: block;
+      margin: 0;
+      margin-bottom: $size;
+
+      & > * {
+        padding-bottom: $size-half;
+        width: 100%;
+        display: block;
+        font-size: $size-3;
+      }
+
+      // &:after { // reset the underscore highlight for something more traditional
+        // display: none;
+      // }
+      &:after {
+        // content: '';
+        border-width: $border-thin;
+        // border-color: usetheme(active); // usetheme(disabled);
+      }
+    }
+
+    .Tabbed-container {
+      position: relative;
+    }
+  }
+}
+
+@include screen-xs {
+  .Tabbed-container {
+    // background-color: usetheme(mono-10);
+    // padding: $size $size-half;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+

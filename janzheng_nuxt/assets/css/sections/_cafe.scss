@@ -1,0 +1,156 @@
+
+/* 
+
+	For coffee-shops list, cafe page, and stories pages
+
+ */
+
+
+
+ .CoffeeShops {
+
+ }
+
+	.CoffeeShops-filters {
+ 		margin-bottom: $size;
+	}
+
+ 	.CoffeeShops-search {
+ 		width: 100%;
+ 		height: $size-5;
+ 		font-size: usetheme(size-search);
+ 		padding-top: $size;
+ 		padding-bottom: $size;
+ 	}
+
+
+.Coffee-gallery {
+	// uses vue-picture-swipe
+	.my-gallery {
+		@extend ._grid-2-xs;
+		figure img {
+			width: 100%;
+		}
+	}
+}
+
+.Coffee {
+
+	.Coffee-cover-img {
+		height: 400px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.Coffee-body {
+		grid-template-areas: "main sidebar";
+
+		@include screen-xs {
+	    grid-template-rows: 1fr;
+	    grid-template-columns: 1fr;
+
+			grid-template-areas: 
+			"sidebar"
+			"main";
+		}
+
+		.Coffee-main {
+			grid-area: main;
+		}
+		.Coffee-sidebar {
+			grid-area: sidebar;
+
+			.Coffee-sidebar-container {
+				margin-bottom: $size-2;
+			}
+
+			h6 {
+				padding-bottom: $size/2;
+			}
+		}
+	}
+}
+
+
+.Story {
+	.Story-cover-img {
+		height: 400px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.Story-content {
+		img {
+			max-width: 100%;
+		}
+	}
+	.Story-footer {
+		font-style: italic;
+		padding-top: $size;
+		padding-bottom: $size;
+	}
+	img {
+		border-radius: $radius;
+	}
+}
+
+// used in homepage / latest
+.Coffee-preview {
+	img {
+		object-fit: cover;
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 0;
+	}
+
+}
+
+.Coffee-card {
+	width: fit-content;
+	max-width: 500px;
+
+	img {
+		object-fit: cover;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 0;
+	}
+
+	.Coffee-card-title {
+		font-size: $size-large;
+	}
+
+	&.--wide {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+
+/* 
+
+	Cofee Page
+
+ */
+
+// 
+.Coffee-head {
+	margin-top: $size;
+	// margin-bottom: $size;
+}
+
+.Author {
+	padding-bottom: $size;
+}
+	.Author-name {
+		font-size: $size-large;
+		line-height: $size-large * 1.8;
+	}
+	.Author-about {
+		color: usetheme(_brown, $colors);
+	}
+
+
+
+

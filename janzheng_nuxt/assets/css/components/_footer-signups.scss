@@ -1,0 +1,102 @@
+
+$footer: (
+  capsid-border-color: usetheme(brand-60),
+  capsid-bg-color: usetheme(brand-5),
+  capsid-cta-color: usetheme(brand-5),
+  capsid-cta-bg-color: usetheme(brand-70),
+  capsid-cta-active-color: usetheme(brand-0),
+  capsid-cta-bg-active-color: usetheme(brand-90),
+  capsid-input-border-color: usetheme(brand-90),
+  capsid-input-bg-color: usetheme(purewhite),
+  capsid-input-bg-active-color: usetheme(whiter),
+
+  alert-border-color: usetheme(pink-5),
+  alert-bg-color: usetheme(pink-0),
+  alert-cta-color: usetheme(pink-60),
+  alert-cta-active-color: usetheme(brand-active),
+  alert-input-border-color: usetheme(pink-30),
+  alert-input-bg-color: usetheme(purewhite),
+  alert-input-bg-active-color: usetheme(whiter),
+);
+
+// for alerts and mailchimp
+// custom breakpoint
+.FooterSignups {
+  @include screen-sm {
+    background-color: usetheme(mono-30);
+  }
+}
+
+
+.FooterSignups-capsid {
+  background: usetheme(capsid-bg-color, $footer);
+  border-left: solid $border-thick;
+  border-color: usetheme(capsid-border-color, $footer);
+  @extend ._shadow-1;
+
+  input._form-input {
+    background-color: usetheme(capsid-input-bg-color, $footer);
+
+    border-style: solid;
+    border-width: $border-thin;
+    border-color: usetheme(capsid-input-border-color, $footer);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    &:hover, &:active, &:focus {
+      border-style: solid;
+      border-width: $border-thin;
+      border-color: usetheme(capsid-input-border-color, $footer);
+      background-color: usetheme(capsid-input-bg-active-color, $footer) !important;
+    };
+  }
+  ._button {
+    font-weight: 700;
+    margin: 0;
+    background: usetheme(capsid-cta-bg-color, $footer);
+    border-color: usetheme(capsid-cta-bg-color, $footer);
+    color: usetheme(capsid-cta-color, $footer);
+    &:hover {
+      background: usetheme(capsid-cta-bg-active-color, $footer);
+      border-color: usetheme(capsid-cta-bg-active-color, $footer);
+      color: usetheme(capsid-cta-active-color, $footer);
+    };
+  }
+}
+
+.FooterSignups-alerts {
+  background: usetheme(alert-bg-color, $footer);
+  border-left: solid $border-thick;
+  border-color: usetheme(alert-border-color, $footer);
+  @extend ._shadow-1;
+
+  input._form-input {
+    background-color: usetheme(alert-input-bg-color, $footer);
+
+    border-style: solid;
+    border-width: $border-thin;
+    border-color: usetheme(alert-input-border-color, $footer);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    &:hover, &:active, &:focus {
+      border-style: solid;
+      border-width: $border-thin;
+      border-color: usetheme(alert-input-border-color, $footer);
+      background-color: usetheme(alert-input-bg-active-color, $footer) !important;
+    };
+  }
+  ._button {
+    font-weight: 700;
+    margin: 0;
+    color: usetheme(alert-cta-color, $footer);
+    border-color: usetheme(alert-cta-color, $footer);
+    &:hover {
+      border-color: usetheme(alert-cta-active-color, $footer) !important;
+      color: usetheme(alert-cta-active-color, $footer) !important;
+    };
+  }
+}
+

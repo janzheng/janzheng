@@ -1,0 +1,22 @@
+
+.PolicyBanner {
+  background: usetheme(brand-lighter); //$color-phdir;
+  color: usetheme(copy); //$color-gray;
+  border-radius: $radius;
+
+  padding: $size-base;
+  margin-bottom: $size-base;
+
+  position: fixed;
+  // position: sticky;
+  left: $size-base;
+  z-index: $z-popup;
+  bottom: $size-half;
+  width: calc(100% - #{$size-2x});
+
+  .PolicyBanner-btn {
+    &:hover {
+      background-color: usetheme(active); // $color-links;
+    }
+  }
+}

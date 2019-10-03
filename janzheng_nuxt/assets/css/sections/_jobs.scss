@@ -1,0 +1,68 @@
+
+.Jobs {
+	.Expired { 
+    opacity: usetheme(opacity-expired);
+    background-color: $color-silver-lighter;
+    border: 0;
+  }
+}
+
+.Jobs-item {
+	img {
+		max-width: 100%;
+	}
+
+	a {
+		// @extend ._wordbreak;
+	}
+
+}
+
+
+
+// moved to buttons
+// .Job {
+// 	a._button {
+// 		color: usetheme(bg);
+// 		&:hover {
+// 			background-color: usetheme(active);
+// 			border-color: usetheme(active);
+// 		}
+// 	}
+// 	a._button.--outline {
+// 		color: usetheme(copy);
+// 	}
+// }
+
+.Job-title {
+	padding-top: 0;
+	padding-bottom: $size-half;
+}
+
+.Job-description {
+	&.--short {
+		&, p {
+			// max-height: 70px;
+		 //  // white-space: nowrap; 
+		 //  overflow: hidden;
+		 //  text-overflow: ellipsis;
+		}
+		// padding-bottom: $size;
+	}
+}
+
+.Job-org.--title {
+	@extend h5;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: $size;
+	font-weight: normal;
+	// font-weight: bold;
+}
+
+.Job-org-logo {
+	max-width: 300px;
+	max-height: 120px;
+}
+
+

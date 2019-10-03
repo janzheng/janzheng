@@ -1,0 +1,65 @@
+
+
+.Footer {
+  background-color: usetheme(footer-bg);
+  color: usetheme(footer-copy);
+  
+  // span {
+  //   white-space: nowrap;
+  // }
+
+  .Footer-right div a {
+    line-height: $size-2x;
+  }
+  
+  a {
+    // text-decoration: none;
+    // color: usetheme(footer-links); //$color-bg;
+    // border: 0;
+    font-weight: normal;
+
+    // svg {
+    //   @extend %ease;
+
+    //   fill: usetheme(brand-10);
+    // }
+
+    // &:hover {
+    //   color: usetheme(brand-50); //$color-phdir;
+    //   text-decoration: none;
+
+    //   svg {
+    //     @extend %ease;
+    //     fill: usetheme(brand-50) !important;
+    //   }
+    // }
+  }
+  .nuxt-link-exact-active, 
+  .nuxt-link-active {
+    // @extend %links-bg;
+    @extend %font-bold;
+  }
+  .Footer-right,
+  .Footer-top {
+    // margin-right: $size-8;
+  }
+
+
+  @include screen-xs {
+    // text-align: center;
+
+    .Footer-textlogo {
+      margin-top: $size-2;
+    }
+    .Footer-left {
+      margin-bottom: $size-2;
+    }
+  }
+
+}
+
+  .Footer-logo {
+    max-width: 180px; 
+  }
+
+

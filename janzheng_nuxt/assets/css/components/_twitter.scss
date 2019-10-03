@@ -1,0 +1,11 @@
+
+.Twitter {
+  width: 100%;
+  max-width: 100%;
+  // overflow: scroll;
+  .Twitter-timeline,
+  #twitter-widget-0 {
+    // max-width: $width-xs-max !important;
+    // width: 100% !important;
+  }
+}

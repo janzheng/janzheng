@@ -1,0 +1,254 @@
+
+/* 
+
+  A section is roughly defined as either:
+  - pages on the site
+  - parts of the site, like header, footer, signup area, etc.
+  - but are not reusable (those are components)
+
+ */
+
+
+// @import '/sections/home';
+// @import '/sections/alerts';
+// @import '/sections/community';
+// @import '/sections/jobs';
+// @import '/sections/capsid';
+// @import '/sections/directory';
+@import '/sections/header';
+@import '/sections/footer';
+
+
+
+%roomiest {
+  margin-top: $size-12 !important;
+  margin-bottom: $size-12 !important;
+}
+%roomier {
+  margin-top: $size-2x !important;
+  margin-bottom: $size-2x !important;
+}
+%roomy {
+  margin-top: $size !important;
+  margin-bottom: $size !important;
+}
+
+
+._section-page--min {
+  min-height: 50vh
+}
+
+// Section is used to break up content vertically
+section {
+  // padding-left: $size-2x;
+  // padding-right: $size-2x;
+  // @include screen-xs {
+  //   padding-left: $size-base;
+  //   padding-right: $size-base;
+  // }
+  padding-top: $size-3;
+  padding-bottom: $size-3;
+}
+  // section.narrow {
+  //   // @extend ._width-content-magic;
+  //   @extend ._width-content-paragraph;
+  //   // @include screen-xs {
+  //   //   padding-left: 0;
+  //   //   padding-right: 0;
+  //   // }
+  //   &.--left {
+  //     margin-left: 0;
+  //     padding-left: 0;
+  //   }
+  // }
+
+// Creates margins for the page 
+._section-page {
+  @extend ._width-content-max;
+
+  &.--roomy {
+    @extend %roomy;
+  }
+  &.--roomier {
+    @extend %roomier;
+  }
+  &.--roomiest {
+    @extend %roomiest;
+  }
+
+  // custom for coffee shops
+  @include screen-xs {
+    padding-left: $size;
+    padding-right: $size;
+    padding-top: $size-2x; // for the header
+  }
+  @include screen-sm {
+    padding-left: $size*2;
+    padding-right: $size*2;
+  }
+}
+
+// Creates margins for content within a page
+._section-content {
+  @extend %width-content-paragraph;
+  margin-top: $size-2x;
+  margin-bottom: $size-2x;
+
+  &.--roomy {
+    @extend %roomy;
+  }
+  &.--roomier {
+    @extend %roomier;
+  }
+  &.--roomiest {
+    @extend %roomiest;
+  }
+
+  @include screen-xs {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+
+}
+
+._divider-top {
+  margin-top: $size-10;
+}
+._divider-bottom {
+  margin-bottom: $size-10;
+}
+._divider-top-half {
+  margin-top: $size-6;
+}
+._divider-bottom-half {
+  margin-bottom: $size-6;
+}
+
+
+
+// Creates margins for articles within content of a page
+// for readable articles, readable content-width
+// refer to sidebar.io's format
+// note: don't use <article> tag as it's a formatting tag
+// some of these are specified in markdown, so the markup should be very simple
+$article-width: 60ch;
+._section-article {
+
+  &.--roomy {
+    @extend %roomy;
+  }
+  &.--roomier {
+    @extend %roomier;
+  }
+  &.--roomiest {
+    @extend %roomiest;
+  }
+
+  // used for pages outside of just Capsid!! including Classroom Initiative
+  @include screen-sm {
+    max-width: $article-width;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+}
+
+
+// for narrow intro sections
+$width-narrow: 44ch;
+._section-narrow {
+  max-width: 100%;
+  @media (min-width: $width-narrow) {
+    max-width: $width-narrow;
+  } 
+
+  margin-top: $size-3;
+  margin-bottom: $size-3;
+}
+
+
+
+
+
+
+/* 
+
+  Semantic Sections
+
+ */
+
+// Sections w/ copy
+// .Copy {
+//   a {
+//     text-decoration: underline;
+//     text-decoration-color: $color-links;
+//     &:hover {
+//       color: $color-links;
+//     }
+//   }
+// }
+
+$footer-item-width: 48ch;
+._section-footer {
+  max-width: $footer-item-width;
+}
+
+
+
+
+
+
+/* 
+
+  Unused — leave them here for a while, if not missed, delete
+
+ */
+
+// narrow, text-friendly widths
+// this doesn't have the padding constraints
+// .narrow {
+//   max-width: $width-magic;
+// }
+
+// article.narrow {
+//   @extend ._width-content-magic;
+//   margin-left: 0;
+//   padding-left: 0;
+// }
+
+
+// block of contextually separate content
+// .block {
+//   margin-top: $size-base;
+//   margin-bottom: $size-2x;
+// }
+
+// Outline and framework for all Pages
+// Not all pages have these
+// .Page-header {
+//   margin-bottom: $size-2x;
+// }
+
+
+
+
+
+
+
+
+// .Join {
+//   .Join-grid {
+//     position: relative;
+//   }
+//   .Join-cta {
+//     // position: absolute;
+//     bottom: 0;
+//     text-align: center;
+//     margin-bottom: 0;
+//   }
+// }
+
+
+
+
+
+

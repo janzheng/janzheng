@@ -1,0 +1,265 @@
+
+// $dir-gray: usetheme(copy-gray); // $color-gray-lighter;
+
+// .Directory {
+//   .Directory-intro {
+//     padding-left: 0;
+//   }
+//   // .Directory-name {
+//     // padding-bottom: 0;
+//     // color: $color-ui-dark;
+//   // }
+//   .Directory-search {
+//     border-radius: $radius;
+//     &:hover, &:focus, &:active {
+//       border-color: usetheme(active); // $color-active;
+//     }
+//     @include screen-xs {
+//       // display: none; // removes redundancy on small screen
+//       // header search removed, use this instead
+//       height: $size-4;
+//     }
+//   }
+  
+//   .Directory-nav-container {
+//     position: sticky;
+//     top: -1px; //$size-half;
+//     padding-top: $size-half;
+//     padding-bottom: $size-half;
+//     background-color: rgba($color-bg, 0.9);
+//     z-index: $z-top;
+
+//     ._button.CTA {
+//       margin-bottom: 0;
+//     }
+//   }
+// }
+//   // gray search words
+//   .Directory-search {
+//     span {
+//       color: $dir-gray;
+//       text-transform: none;
+//     }
+//   }
+
+
+// // The big kahuna.
+
+// .DirectoryView {
+
+//   .DirectoryView-item {
+//     @extend ._grid-1-3;
+//     margin-bottom: $size-base;
+//     @include screen-sm {
+//       grid-gap: $size-2x;
+//     }
+//     @include screen-xs {
+//       margin-top: $size-2x;
+//     }
+//   }
+
+//   .DirectoryView-view {
+//     padding-top: 0;
+//     margin-bottom: $size-2x;
+//     @extend ._grid-3-1;
+//     h3 { 
+//       text-transform: capitalize;
+//       padding: 0;
+//     }
+//   }
+//   .DirectoryView-contact {
+//     font-size: $font-small;
+//     margin-bottom: $size-base;
+//     // @include screen-sm {
+//     //   text-align: right;
+//     // }
+//   }
+
+
+
+//   // "Template" styles used across all views
+
+//   .DirectoryView-head {
+//   }
+//     .DirectoryView-title {
+//       // phage-name, lab-name
+//       // @extend h5;
+//       font-size: $font-large;
+//       @extend %font-600;
+//       padding-top: 0;
+
+//       @include screen-sm {
+//         position: sticky;
+//         top: $size-5;
+//       }
+//     }
+//       .DirectoryView-title-desc {
+//         font-size: $font-small;
+//         line-height: $font-small + 4px;
+//         color: $dir-gray;
+//         padding-top: $size-half;
+//       }
+
+//   .DirectoryView-body {
+//   }
+//     .DirectoryView-subitem {
+//       // padding: $size-base $size-2x;
+//       padding: $size-base;
+//       background-color: $color-ui-light;
+//       border-radius: $radius;
+//       margin-bottom: $size-half;
+//       &:last-child {
+//         margin-bottom: 0;
+//       }
+//     }
+
+
+//   // people needs to be standardized
+//   .person-info {
+//     // @extend ._grid-2-1-xs;
+//   }
+//     ._tag {
+//       // display: inline-block;
+//       background-color: $color-silver;
+//     }
+//     // ._tag.--light {
+//     //   background-color: $color-bg;
+//     //   // border: $color-gray solid $border-line;
+//     //   padding-top: 0;
+//     //   padding-bottom: 0;
+//     //   color: $color-gray;
+//     //   position: relative;
+//     //   bottom: 0px;
+//     //   // float: left;
+//     // }
+//     .person-meta {
+//       font-size: $font-small;
+//       margin-right: $size-base;
+//       // float: left;
+//     }
+//     .person-name {
+//       @extend %font-600;
+//     }
+//     .person-social {
+//       a {
+//         // display: block;
+//         font-size: $font-small;
+//         text-decoration: none;
+//         text-align: right;
+//         margin-right: $size-half;
+//         color: $color-gray-light;
+//         // float:left;
+//         &:hover {
+//           color: $color-links;
+//         }
+
+//         // only for labs view
+//         // @include screen-xs {
+//         //   float: left;
+//         //   display: block;
+//         // }
+//       }
+//       .person-twitter {
+//         // float: right;
+//         // @extend %font-bold;
+//       }
+//     }
+
+
+
+
+
+
+//   // labs view
+
+//   &.labs {
+//     .labs-org {
+
+//     }
+//     .lab-name {
+//       padding-bottom: $size-base;
+//       // @extend %font-600;
+//     }
+//     .lab-person {
+//       @extend ._grid-2-3-xs;
+//       padding-bottom: $size-base;
+//       & + .lab-person {
+//         // border-top: solid $color-ui $border-line;
+//         padding-top: $size-half;
+//       }
+//     }
+//     .person-social {
+//       display: block;
+//       a {
+//         @include screen-xs {
+//           float: left;
+//           // display: block;
+//         }
+//       }
+//       .person-twitter {
+//         // float: right;
+//         // @extend %font-bold;
+//         width: 100%;
+//         text-align: left;
+//       }
+//     }
+//   }
+
+
+
+
+
+
+
+
+
+//   // phages view
+
+//   &.phages {
+//     .phage-name {
+//     }
+//     .DirectoryView-body {
+//       // padding: $size-base;
+//     }
+//     .phage-head {
+//       padding-top: $size-base;
+//       @include screen-sm {
+//         text-align: right;
+//       }
+//     }
+//       .phage-lab-name {
+//         // @extend %font-600;
+//       }
+//       .phage-lab-org {
+//         @extend h6;
+//         padding-bottom: 0;
+//         color: $color-gray-lighter;
+//       }
+//       .phage-lab-content {
+//         @extend ._grid-1-3;
+//       }
+//       .lab-person {
+//         padding-bottom: $size-base;
+
+//         &:last-child {
+//           padding-bottom: 0;
+//         }
+
+//         & + .lab-person {
+//           // border-top: solid $color-ui $border-line;
+//           padding-top: $size-half;
+//         }
+//       }
+//   }
+
+// }
+
+
+
+// // Special Classes / 'Objects'
+// // can be found / reused throughout, as special components
+// // e.g. e. coli - has to be italicized - apply to spans
+// ._organismName { // formatting of an organism name e.g. Escherichia coli or E. coli
+//   font-style: italic !important;
+// }
+

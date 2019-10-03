@@ -1,0 +1,372 @@
+
+// Specific for Kisaco / Phage Futures prototype
+$phagefutures-maxwidth: 566.89px;
+$phagefutures-post-maxwidth: 479.05px;
+
+.PhageFutures-menu {
+  position: relative;
+  &:after {
+    content: '';
+    border-bottom: $border-thick solid usetheme(disabled);
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+  }
+
+  a {
+    @extend h5;
+    margin-right: $size;
+    text-decoration: none;
+    padding-bottom: $size-half;
+
+    // current highlighted view
+    &.nuxt-link-exact-active {
+      position: relative;
+      z-index: 100;
+      color: usetheme(active);
+      border-bottom: $border-thick solid usetheme(active);
+    }
+  }
+
+  @include screen-xs {
+    display: block;
+
+    a {
+      display: block;
+      text-align: left;
+      margin: 0;
+    }
+  }
+}
+
+
+// .PhageFutures-agenda {
+//   margin-bottom: $size-2x;
+
+//   h6 {
+//     padding-bottom: $size-half;
+//     color: usetheme(copy-light);
+//   }
+// }
+//   .PhageFutures-agenda-meta {
+//     // time sig for each agenda
+//     div {
+//       // @extend ._font-small;
+//       // font-weight: bold;
+//       text-align: right;
+//       color: usetheme(copy-light);
+//     }
+//   }
+
+
+
+
+
+.PhageFutures-post {
+  margin-bottom: $size;
+
+  @include screen-xs {
+    display: block;
+  }
+}
+
+.PhageFutures-post-header {
+  color: usetheme(copy-gray);
+}
+
+.PhageFutures-post-sidebar {
+  @include screen-xs {
+    img {
+      margin-left: 0;
+    }
+  }
+}
+
+.PhageFutures-post-images {
+  img {
+    max-width: 100%;
+  }
+}
+
+a.PhageFutures-post-author {
+  // @extend ._font-small;
+  font-weight: bold;
+  text-decoration: none;
+  &, a, p {
+    color: usetheme(copy-gray);
+    &:hover {
+      color: usetheme(active);
+    }
+  }
+}
+  a.PhageFutures-post-header-twitter {
+    &, a, p {
+      text-decoration: none;
+      color: usetheme(copy-light);
+      &:hover {
+        color: usetheme(active);
+      }
+    }
+  }
+  .PhageFutures-post-header-meta {
+    color: usetheme(copy-light);
+  }
+
+.PhageFutures-post-content.--transparent {
+  border-color: transparent; // usetheme(bg-silver);
+  background: usetheme(bg-silver);
+  padding: $size;
+  margin-bottom: 0;
+  max-width: $phagefutures-maxwidth; // forces twitter cards to shrink
+  width: 100%;
+}
+  
+  // 
+  .PhageFutures-post-content.--transparent {
+    max-width: $phagefutures-post-maxwidth; // forces twitter cards to shrink
+  }
+
+
+  .StreamEvent-header {
+    color: usetheme(copy-light);
+  }
+    .StreamEvent-main {
+      @extend ._card;
+      @extend .--simple;
+      @extend ._md-p_fix;
+      border-color: transparent; // usetheme(bg-silver);
+      background: usetheme(bg-silver);
+      padding: $size;
+      margin-bottom: 0;
+      max-width: $phagefutures-maxwidth; // forces twitter cards to shrink
+      width: 100%;
+    }
+
+
+
+
+
+
+// up next box
+.PhageFutures-now,
+.PhageFutures-next {
+  .AgendaEvent {
+    border-left: $border-medium solid usetheme(active);
+  }
+}
+
+// timeline container
+.PhageFutures-timeline {
+  .--expired {
+    // force expired posts in timeline to remain 100% opacity
+    opacity: 1 !important;
+  }
+  .AgendaEvent {
+    &.--now,
+    &.--upcoming {
+      padding-left: $size;
+      border-left: $border-medium solid usetheme(active);
+    }
+    .AgendaEvent-item {
+      margin: 0;
+      .AgendaEvent-item-title {
+        &:before {
+          content: none;
+          border: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// agenda container
+.PhageFutures-agenda {
+
+}
+
+
+// AgendaEvent
+
+%line-highlight {
+  @include screen-sm {
+    position: relative;
+    &:before {
+      $width : 30px;
+      $height: $border-medium;
+      content: ' ';
+      position: absolute;
+      width: $width;
+      border: $height solid usetheme(main);
+      left: - $width - $size;
+      top: calc(50% - #{$height});
+    }
+  }
+}
+
+.AgendaEvent {
+  &.--upcoming {
+    @extend ._card;
+    padding: $size;
+    margin-bottom: $size-2x;
+  }
+  @include screen-xs {
+    margin-top: $size-2x;
+  }
+}
+
+.AgendaEvent-next {
+  @extend h6;
+  padding: 0;
+}
+
+.AgendaEvent-item {
+
+  margin-top: $size;
+  margin-bottom: $size;
+
+  .StreamEvent-header {
+    @extend ._align-bottom;
+  }
+
+  .AgendaEvent-item-name {
+    font-weight: bold;
+  }
+  .AgendaEvent-item-speakers {
+    margin-top: $size;
+    font-size: $font-small;
+    line-height: $font-small * 1.5;
+  }
+
+  &.--meta-major {
+    // describes event start and end
+    // @extend ._card;
+    // @extend .--highlight;
+    // @extend .--transparent;
+    // @extend .--simple;
+    border: 0;
+
+    padding: $size;
+    padding-left: 0;
+    padding-right: 0;
+    .AgendaEvent-item-title {
+      @extend h4;
+      padding: 0;
+      @extend %line-highlight;
+    }
+    .AgendaEvent-item-date {
+      color: usetheme(copy);
+    }
+  }
+
+  &.--meta-descriptor {
+    // describes event start and end
+    // @extend ._card;
+    // @extend .--highlight;
+    // @extend .--transparent;
+    // @extend .--simple;
+    border: 0;
+
+    padding: $size;
+    padding-left: 0;
+    padding-right: 0;
+    .AgendaEvent-item-title {
+      @extend h6;
+      padding: 0;
+      @extend %line-highlight;
+    }
+  }
+  &.--meta-session {
+    // Session is also meta, but describes the next few blocks, kind of like "day"
+    // @extend ._card;
+    // @extend .--highlight;
+    // @extend .--transparent;
+    // @extend .--simple;
+    border: 0;
+
+    // color: usetheme(highlight);
+    padding: $size;
+    padding-left: 0;
+    margin-top: $size-2x;
+    margin-bottom: $size-2x;
+    .AgendaEvent-item-title {
+      @extend h6;
+      padding: 0;
+      @extend %line-highlight;
+    }
+    .--meta-session-header {
+      @extend h6;
+      padding: 0;
+      color: usetheme(copy-light);
+    }
+
+    @include screen-xs {
+      padding: $size;
+      background-color: usetheme(highlight);
+    }
+  }
+  &.--meta-event {
+    // describes an event like start, end, lunch, break
+    // Day, Day End, and Event
+    @extend ._card;
+    // @extend .--active;
+    @extend .--highlight;
+    @extend .--simple;
+
+    padding: $size;
+    .AgendaEvent-item-title {
+      @extend h5;
+      padding: 0;
+    }
+    .AgendaEvent-item-date {
+      color: usetheme(copy);
+    }
+  }
+
+  // a past event in the agenda
+  &.--expired {
+    opacity: 0.3;
+    
+  }
+
+}
+  .AgendaEvent-item-date {
+    color: usetheme(copy-light);
+  }
+
+
+
+
+// Poster styles 
+.PhageFutures-poster {
+  .PhageFutures-poster-name {
+    @extend %ease-fast;
+  }
+  // &:hover {
+  //   .PhageFutures-poster-name {
+  //     color: usetheme(active);
+  //     @extend %ease-fast;
+  //   }
+  // }
+  &.--closed {
+    .PhageFutures-poster-more {
+      display: none;
+    }
+  }
+  &.--open .PhageFutures-poster-name {
+    color: usetheme(active);
+    @extend %ease-fast;
+  }
+}
+
+
+
+
+
+
+
+
+

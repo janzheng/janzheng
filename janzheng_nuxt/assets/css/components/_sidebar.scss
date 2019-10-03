@@ -1,0 +1,182 @@
+
+$sidebar: (
+  sidebar-links: usetheme(brand-100), // usetheme(gray),
+  sidebar-links-hover: usetheme(brand-active),
+  sidebar-links-active: usetheme(brand-100),
+  sidebar-bg: usetheme(silver-light, $colors_),
+
+  sidebar-border: transparent, // usetheme(coeur-active),
+  sidebar-border-active: usetheme(brand-80),
+  sidebar-background-active: usetheme(brand-5),
+  // sidebar-background-active: usetheme(mono-5),
+
+  size-bar: 16px, // sidenav is a shorter sidebar just for nav
+  sidebar-min-width: 240px, // for larger sidebars w/ info and content
+);
+@include addtheme($sidebar)
+
+
+$link-active-weight: 600;
+.Sidebar {
+
+  // ._sidebar {
+
+    padding-left: 0;
+
+    overflow-y: inherit;
+    overflow-x: inherit;
+    min-width: auto;
+    height: auto !important;
+
+    @include screen-xs {
+      // padding-top: $size-base;
+    }
+
+    & a { // "& a" helps reinforce the cascade, don't remove
+      text-decoration: none;
+      font-size: usetheme(size-sidebar);
+      color: usetheme(sidebar-links);
+
+      display: block; // inline-block;
+      padding-top: $size--4;
+      padding-bottom: $size--4;
+      font-weight: normal;
+      border-left: $border-medium solid transparent;
+
+      &:hover {
+        color: usetheme(sidebar-links-hover);
+      }
+
+      &.nuxt-link-active {
+        // this applies to the top-most item, which is usually the header for the entire section
+        // font-weight: $link-active-weight; //$font-bold;
+      }
+
+    }
+      // .nuxt-link-exact-active {
+      .nuxt-link-active:not(.--active-disabled), .--scrollspy-active {
+        // affects both subsections and active links
+        color: usetheme(sidebar-links-active);
+        font-weight: $link-active-weight; //$font-bold;
+        background-color: usetheme(sidebar-background-active);
+        border-left-color: usetheme(sidebar-border-active);
+
+        // not(.--active-disabled) is used to disable the nuxt-active b/c scrollspy's active class takes over;
+        // otherwise anchorlinks will trigger nuxt-link-active and create two active sidebar links
+      }
+
+
+    ._sidebar-content {
+      // @extend ._shadow-light;
+      // background: usetheme(sidebar-bg);
+      // padding: $size;
+      // position: sticky;
+      // top: $size-2x;
+      // top: $size-base;
+      // background-color: $color-ui-light;
+      // padding-top: 0;
+      // padding-bottom: $size-base;
+      // padding-left: $size-base;
+      @include screen-sm {
+        // text-align: right;
+      }
+    }
+
+    ._sidebar-content-group {
+      // background-color: $color-ui;
+      // border-left: $border-medium solid usetheme(sidebar-border);
+      // padding: 2px $size;
+      // margin-bottom: $size/2;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.--active {
+        // this is the subsection group that's currently active
+        // color: usetheme(sidebar-links-active);
+        // border-left-color: usetheme(sidebar-border-active);
+        background-color: usetheme(sidebar-background-active);
+      }
+    }
+
+    ._sidebar-submenu {
+      a { padding-left: $size-2x; }
+    }
+
+    ._sidebar-item {
+      padding-left: $size;
+      padding-right: $size;
+      
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    ._sidebar-label {
+      padding-left: 0;
+      padding-bottom: $size-half;
+      // all padding controlled by the label itself
+    }
+    ._sidebar-heading {
+      // @extend h5;
+      font-weight: bold;
+      // font-size: 100px !important;
+    }
+  // }
+}
+
+
+
+// for manually created docs, you can combine sidebar and content w/ nuxt-active (used in coeur docs)
+._sidebar-content-group.nuxt-link-active {
+  // color: usetheme(sidebar-links-active) !important;
+  // border-left-color: usetheme(sidebar-border-active) !important;
+  // background-color: usetheme(sidebar-background-active);
+}
+
+
+
+
+// .sidebar._sidebar {
+//   padding-top: $size-2x;
+//   padding-left: 0;
+
+//   overflow-y: inherit;
+//   overflow-x: inherit;
+//   min-width: auto;
+//   height: auto !important;
+
+//   background: usetheme(sidebar-bg);
+  
+//   @include screen-xs {
+//     padding-top: $size-base;
+//   }
+
+//   a {
+//     display: block;
+//     // padding-left: $size-2x;
+//     // padding-right: $size-2x;
+//     // padding-right: 0;
+//     margin-right: 0;
+//     margin-bottom: $size-base;
+//     font-size: $font-large;
+//     text-decoration: none;
+
+//     &.nuxt-link-exact-active {
+//       font-weight: $font-bold;
+//     }
+//     &:last-child {
+//       margin-bottom: 0;
+//     }
+//   }
+//   ._sidebar-content {
+//     position: sticky;
+//     // top: $size-2x;
+//     top: $size-base;
+//     // background-color: $color-ui-light;
+//     padding-top: 0;
+//     // padding-bottom: $size-base;
+//     padding-left: $size-base;
+//     // @include screen-sm {
+//     //   text-align: right;
+//     // }
+//   }
+// }

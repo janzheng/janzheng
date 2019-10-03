@@ -1,0 +1,185 @@
+
+
+$forms: (
+  btn-bg: usetheme(pink-50),
+);
+
+
+
+
+
+// Phage Directory form design standards
+
+input, .input, %input {
+  border-radius: $radius;
+  background-color: usetheme(purewhite); // purewhite stands out w/ colored bg
+  @extend %font-sans;
+
+  &[type="email"],
+  &[type="text"],
+  &[type="number"],
+  &[type="password"],
+  &[type="date"],
+  &[type="url"] {
+    border: solid $border-thin usetheme(brand-70);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+
+    &:focus, &:active, &:hover, &:hover:focus {
+      border: solid $border-thin usetheme(brand-70);
+      background-color: usetheme(purewhite);
+    }
+  }
+
+}
+
+
+textarea, .textarea { 
+  border-radius: $radius;
+  background-color: usetheme(purewhite); // purewhite stands out w/ colored bg
+  border-color: usetheme(brand-10); // grabs attention w/ border color
+  border-bottom-color: usetheme(brand-70);
+
+  @extend %font-sans;
+
+  &:focus, &:active, &:hover {
+    border-color: usetheme(brand-70);
+    background-color: usetheme(purewhite);
+  }
+  &:hover {
+    background-color: usetheme(purewhite);
+  }
+}
+
+
+
+// dynamic form
+.Form {
+  .Form-btn {
+    background-color: usetheme(btn-bg, $forms);
+    border-color: usetheme(btn-bg, $forms);
+    color: usetheme(white); //$color-bg;
+
+    &:hover {
+      background-color: usetheme(hover); // (btn-active); //$color-links;
+      color: usetheme(white); //$color-bg;
+      border-color: usetheme(hover); // (btn-active); //$color-links;
+    }
+    &:active, &:focus {
+      background-color: usetheme(pink-active); //$color-links;
+      color: usetheme(white); //$color-bg;
+      border-color: usetheme(pink-active); //$color-gray;
+    }
+
+    &.--loading {
+      cursor: progress;
+      &, &:active, &:hover, &:focus {
+        &, * {
+          color: usetheme(brand-copy) !important;
+        }
+        border-color: usetheme(brand-border);
+        background-color: usetheme(brand-background);
+      }
+    }
+  }
+
+  // broken in coeur
+  ._form-checkbox {
+    input:focus {
+      & + span {
+        // border-color: $color-links;
+        border-bottom: $border-thin solid usetheme(links);
+      }
+    }
+  }
+
+  .Form-body {
+    padding-top: $size;
+  }
+}
+
+
+
+// cards in forms, as quick questions (e.g. contact page)
+// wraps Node-Form
+.FormCard {
+	@extend ._card;
+	// padding: $size $size-2x;
+  padding: $size-2x $size;
+  color: usetheme(copy);
+
+  background-color: usetheme(brand-background); 
+  border-color: usetheme(brand-border); 
+  border-width: $border-thin;
+
+  @include screen-xs {
+    padding: $size;
+  }
+
+  @extend ._shadow-4;
+
+
+
+  // tighter, compact form
+  &.--compact {
+    padding-top: $size;
+    padding-bottom: $size;
+
+    .Form-body {
+      padding: 0;
+    }
+    ._form-label p {
+      font-size: usetheme(size);
+      line-height: usetheme(size-lh);
+      // font-weight: normal;
+      padding: 0;
+    }
+    ._form-control {
+      margin-bottom: $size;
+    }
+  }
+}
+
+
+// standardized form template
+.Formlet {
+  h1, h2, h3, h4, h5, h6 {
+    padding-bottom: 0;
+  }
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ._form-control {
+    margin-bottom: $size-2x;
+  }
+  ._form-label {
+    &, p {
+      // font-size: $size;
+      @extend h5;
+      padding-top: 0;
+      padding-bottom: $size-quart;
+      font-weight: bold;
+    }
+  }
+  ._form-desc {
+    &, p {
+      font-size: $size;
+      padding-bottom: $size-quart;
+    }
+  }
+
+  ._error {
+    @extend ._card;
+    padding: $size-half $size;
+    margin-top: $size-half;
+    border: $border-line solid usetheme(pink-border);
+    background-color: usetheme(pink-background);
+  }
+}
+
+
+

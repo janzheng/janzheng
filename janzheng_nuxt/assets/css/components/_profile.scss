@@ -1,0 +1,26 @@
+
+.ProfileCard {
+  @extend ._card;
+  padding: $size-2x;
+  
+  // &._card {
+    &:hover {
+      background-color: inherit;
+    }
+    .profile-name {
+      font-size: $font-large;
+      line-height: $font-larger + 4px;
+      padding-bottom: $size-half;
+    }
+    .profile-image img {
+      border-radius: $radius;
+    }
+  // }
+}
+
+// image profile
+.ProfileCard-avatar {
+  border-radius: 100%;
+}
+
+

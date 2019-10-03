@@ -1,0 +1,190 @@
+
+
+@import 'settings.scss';
+@import 'design.scss';
+@import 'layout'; // typography, basic design & whitespace
+
+// for code highlighting
+@import 'highlightjs';
+
+
+// modular
+@import 'components';
+@import 'sections';
+@import 'templates';
+
+
+
+
+
+.Header-title {
+  
+}
+
+// $splash: 450px;
+._splash-container {
+  position: relative;
+  // top: -175px;
+  left: 0;
+  width: 100%;
+  // height: $splash;
+}
+  ._splash-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // background-position: top;
+    width: 100%;
+    // height: $splash;
+  }
+
+
+
+
+.color-palette {
+  position: absolute;
+  z-index: 100000;
+  width: 100%;
+  height: auto;
+}
+.color-palette #c1 {
+  background-color: #9C001A;
+}
+.color-palette #c2 {
+  background-color: #FFFBDB;
+}
+.color-palette #c3 {
+  background-color: #ACBFCC;
+}
+.color-palette #c4 {
+  background-color: #77838C;
+}
+.color-palette #c5 {
+  background-color: #41484C;
+}
+.color-palette #a1 {
+  background-color: #2A3140;
+}
+.color-palette #a2 {
+  background-color: #F2D399;
+}
+.color-palette #a3 {
+  background-color: #F29863;
+}
+.color-palette #a4 {
+  background-color: #D95F43;
+}
+.color-palette #a5 {
+  background-color: #A63737;
+}
+.color-palette div {
+  height: 5px;
+  width: 10%;
+  float: left;
+  z-index: 2000;
+}
+.color-palette.color-top {
+  top: 0px;
+  left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+  Experiments
+
+ */
+
+
+
+// used for medium-like full-width images
+._image-stretch-bg {
+  margin-top: $size*2;
+  margin-bottom: $size*2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img {
+  &.--profile {
+    & > *, & {
+      // width: 100%;
+      border-radius: 100%;
+      border: $border-medium solid usetheme(mono-disabled);
+    }
+
+    &.--medium {
+      width: 65px;
+      height: 65px; 
+    }
+  }
+}
+
+
+.Feed-item {
+  h6 {
+    padding: 0;
+    font-weight: normal;
+  }
+  h5 {
+    padding-top: 2px;
+    padding-bottom: 4px;
+  }
+}
+
+
+
+.Project {
+  @extend %ease;
+
+  .Project-logo {
+    max-width: 400px;
+  }
+
+  $project-bg: #f4f0f0;
+  &:hover {
+    background-color: $project-bg;
+  }
+
+  img {
+    float: left;
+    margin-right: $size-2;
+  }
+
+  &.--open {
+    @extend %ease;
+    background-color: $project-bg;
+
+    img {
+      margin-bottom: $size;
+    }
+  }
+}
+
+/* 
+
+  To be added to Coeur
+
+ */
+
+

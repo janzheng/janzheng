@@ -1,0 +1,13 @@
+
+._organism {
+	@extend ._tag;
+	// @extend %font-serif;
+	font-style: italic;
+	// font-size: usetheme(font-1);
+	line-height: usetheme(font-1-lh);
+	margin-bottom: $size-quart;
+}
+._organism-tag {
+	// list the org name and other metadata
+	padding: $size-quart;
+}

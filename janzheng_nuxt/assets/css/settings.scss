@@ -1,0 +1,347 @@
+
+/* 
+
+
+/* 
+
+    COEUR PRESETS, VARIABLES, and OVERRIDES
+
+ */
+
+
+
+$use-cssvars: false;
+$use-colorate: true;
+
+$height-input: 48px; //inherit; // coeur sets a height limit on inputs, but we don't want that here
+
+/* 
+
+  IMPORT COEUR HERE
+  - don't use nuxt, it messes w/ default variables & cascading
+
+ */
+
+
+// @import '../../node_modules/coeur/styles/index.scss';
+
+// selective import for space saving
+@import '../../node_modules/coeur/styles/_utils.scss';
+@import '../../node_modules/coeur/styles/_heart.scss';
+
+
+
+
+
+/* 
+
+  Default variable overrides
+  - for buttons, etc.
+
+ */
+
+
+
+$sizes: (
+  size-diff: 0,
+  size: 18px,
+  lineheight: 28px,
+
+  font-large: 21px,
+
+  size-mobile: 19px,
+  size-mobile-input: 24px,
+  line-height-mobile: 26px,
+
+  size-title: 16px,
+  lineheight-title: 16px*1.2,
+
+  // roomier copy for article pages
+  size-copy: 16px,
+  size-copy-lh: 24px,
+
+  copy-large: 18px,
+  copy-large-lh: 28px,
+
+  opacity-expired: 0.5,
+
+  z-top: 90,
+  z-popup: 100,
+ 
+) !default;
+
+@include addtheme($sizes)
+
+
+$size: usetheme(size); // 16px;
+$font-lineheight: usetheme(lineheight); // 24px;
+// $font-size-base: 18px;
+$font-small: usetheme(font-small); // $size - 2px;
+$font-large: usetheme(font-large); // $size + 2px;
+// $offset: 5px;
+$z-popup: 100; // 
+$z-top: 90;
+
+$size-diff: usetheme(size-diff) !default;      // default: 0; in case we’re not using base16, used for some edge cases / alignment
+$size: usetheme(size) - $size-diff !default;   // 16px default; // based on 4*4
+$sizeline: usetheme(lineheight); // $size * 1.5 !default;               // baseline; base lineheight; line-heights follow 1.5 rule
+$baseline: $sizeline;
+
+
+
+
+/* 
+
+  COLOR MANAGEMENT
+
+ */
+
+
+
+$colors: (
+
+); 
+@include addtheme($colors);
+
+
+// https://www.colorbox.io/#steps=5#hue_start=341#hue_end=343#hue_curve=easeInQuad#sat_start=92#sat_end=92#sat_curve=easeOutQuad#sat_rate=0#lum_start=95#lum_end=36#lum_curve=easeInOutQuad#lock_hex=971F1F#minor_steps_map=0
+$colors-brand: (
+  brand: #971f1f,
+
+  brand-0: #f2f2f2,
+  brand-5: #f5cece,
+  brand-10: #f8a9a9,
+  brand-20: #cd6b6b,
+  brand-30: #9f3a3a,
+  brand-40: #971f1f,
+  brand-90: #3f0a0a,
+
+  brand-bg: #f5cece,
+  brand-copy: #3f0a0a,
+  brand-links: #971f1f,
+  brand-hover: #e00a0a,
+  brand-alert: #f5cece,
+  brand-bright: #e00a0a,
+  brand-border: #8e191c,
+  brand-disabled: #f5cece,
+  brand-background: #f5cece,
+);
+
+@include addtheme($colors-brand);
+@include colorate($colors-brand);
+
+
+._color-brand { color: usetheme(brand); }
+
+@include addtheme($colors_); // merge settings colors into working theme 
+$colorMap: colorTintMap($colors);
+
+$context: (
+  main: usetheme(brand),
+  secondary: usetheme(gray),
+  // tertiary: usetheme(pink, $colors),
+  // tertiary-dark: color(usetheme(pink, $colors), 122),
+
+  active: usetheme(brand-bright),
+  links: usetheme(brand-links),
+  hover: usetheme(brand-hover),
+
+  body: usetheme(white),
+  body-bg: usetheme(white),
+  copy: usetheme(brand-copy),
+  copy-gray: usetheme(mono-80),
+
+  header-color: usetheme(brand-100), // used for h1-h6
+  title-color: usetheme(brand), // used for logotype in nav
+  // header-bg-top: rgba(usetheme(gray), 0.02),
+  // header-bg-scroll: rgba(usetheme(silver-lighter, $colors_), 0.86),
+  // header-search-bg: rgba(usetheme(silver-lighter, $colors_), 0.26),
+  header-links: usetheme(gray),
+  header-active: usetheme(active),
+
+  footer-bg: usetheme(white),
+  footer-copy: usetheme(brand-copy),
+  footer-links: usetheme(brand),
+  footer-active: usetheme(brand),
+
+  sidebar-bg: usetheme(silver-light),
+
+  border-color: usetheme(pink),
+
+  classroom-color: usetheme(pink-5),
+
+  bg: usetheme(white, $colors_),
+  bg-white: usetheme(white, $colors_),
+  bg-purewhite: usetheme(purewhite, $color-presets_),
+  bg-silver: usetheme(silver-light, $colors_),
+  bg-lighter: usetheme(silver-lighter, $colors_),
+
+  btn-active: usetheme(brand-dark, $colors),
+  // bg-blue: usetheme(blue-dark, $colors_),
+  // bg-blue-silver: usetheme(blue-silver, $colors),
+  // tbd refactor later
+  // blue: usetheme(blue, $colors_), // useful for alert-signup, when a blue color needed (prb needs fix later)
+  // white: usetheme(white, $colors_), // contextually useful for text on dark backgrounds
+
+  card: usetheme(silver-light, $colors_),
+
+  // alert-color-cta: usetheme(teal_dull, $colors),
+
+
+  alert: usetheme(brand-20),
+  success: usetheme(green, $colors_),
+  warning: usetheme(yellow, $colors_),
+  info: usetheme(_brown, $colors_),
+  danger: usetheme(red, $colors_),
+  disabled: usetheme(silver, $colors_),
+  transparent: usetheme(transparent, $colors_),
+);
+
+@include addtheme($context)
+// @include colorate($context_);
+
+
+
+
+// color overrides / legacy
+$color-active: usetheme(active);
+$color-hover: usetheme(active);
+
+// button defaults
+$button-color-disabled: usetheme(disabled);
+$button-color-disabled-text: usetheme(gray-light, $colors_);
+
+
+@import '../../node_modules/coeur/styles/_head.scss';
+
+// @import '../../node_modules/coeur/styles/_neck.scss';
+@import '../../node_modules/coeur/styles/_neck-buttons.scss';
+@import '../../node_modules/coeur/styles/_neck-layout.scss';
+@import '../../node_modules/coeur/styles/_neck-design.scss';
+@import '../../node_modules/coeur/styles/_neck-links.scss';
+@import '../../node_modules/coeur/styles/_neck-code.scss';
+
+// @import '../../node_modules/coeur/styles/_body.scss';
+@import '../../node_modules/coeur/styles/_body-card.scss';
+@import '../../node_modules/coeur/styles/_body-forms';  
+@import '../../node_modules/coeur/styles/_body-tag';  
+@import '../../node_modules/coeur/styles/_body-table';  
+@import '../../node_modules/coeur/styles/_body-buttonGroups';  
+
+// re-cascade
+@import '../../node_modules/coeur/styles/_head-helpers.scss';
+
+
+
+
+
+/* latin-ext */
+// @font-face {
+//   font-family: Baruta;
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url(/fonts/rns-baruta-black/RNS-B.ttf) format("truetype");
+//   // src: local('Baruta') local('RNS Baruta Black'), url('/fonts/rns-baruta-black/RNS-B.ttf') format('truetype');
+// }
+
+
+
+%font-mono,
+._font-mono {
+  font-family: Courier, Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', monospace;
+} ._font-mono, ._font-code { @extend %font-mono; }
+
+
+%font-sans, ._font-sans,
+%font-basic, ._font-basic {
+  font-family: $font-sans;
+  @extend %font-sans;
+}
+
+%font-serif,
+._font-serif {
+  // font-family: "Georgia", serif;
+  font-family: usetheme(font-serif, $settings); // not dynamic
+  // font-family: usetheme(font-serif, $theme-typography);
+
+  // looks bad over white bg, so need to turn on manually
+  // &.--antialias {
+  //   -webkit-font-smoothing: auto;
+  //   -moz-osx-font-smoothing: unset;
+  // }
+}
+
+%font-display,
+._font-display {
+  font-family: $font-display;
+}
+
+// ._font-coffee { 
+//   font-family: $font-coffee;
+//   letter-spacing: 2px;
+// }
+
+
+
+
+._border-solid {
+  border-style: solid;
+}
+
+
+
+$shadows__: (
+  shadow-2: 0 1px 4px hsla(0, 0%, 0%, 0.18),
+  shadow-3: 0 2px 8px hsla(0, 0%, 0%, 0.18),
+  shadow-4: 0 4px 16px hsla(0, 0%, 0%, 0.18),
+  shadow-5: 0 8px 24px hsla(0, 0%, 0%, 0.18),
+  shadow-6: 0 16px 36px hsla(0, 0%, 0%, 0.18),
+) !default;
+
+._shadow-2 {
+  box-shadow: usetheme(shadow-2, $shadows__);
+}
+._shadow-3 {
+  box-shadow: usetheme(shadow-3, $shadows__);
+}
+._shadow-4 {
+  box-shadow: usetheme(shadow-4, $shadows__);
+}
+._shadow-5 {
+  box-shadow: usetheme(shadow-5, $shadows__);
+}
+._shadow-6 {
+  box-shadow: usetheme(shadow-6, $shadows__);
+}
+
+
+
+
+
+$inset__: (
+  inset-2: inset 0 2px 0px hsla(0, 0%, 0%, 0.1),
+  inset-3: inset 0 2px 2px hsla(0, 0%, 0%, 0.15),
+  inset-4: (inset 0 -2px 0 hsla(0, 0%, 100%, 0.14), inset 0 2px 2px hsla(0, 0%, 0%, 0.1)),
+  // inset-5: inset 0 0 0 1000px hsla(0, 0%, 0%, 0.14),
+  // inset-6: inset 0 0 0 1000px hsla(0, 0%, 0%, 0.24),
+) !default;
+
+._inset-2 {
+  box-shadow: usetheme(inset-2, $inset__);
+}
+._inset-3 {
+  box-shadow: usetheme(inset-3, $inset__);
+}
+
+
+
+
+
+._inset-4 {
+  box-shadow: usetheme(inset-4, $inset__);
+}
+
+
+
+
+

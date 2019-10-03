@@ -1,0 +1,60 @@
+
+
+.Alert {
+  margin-bottom: $size-base;
+  padding-bottom: $size-base;
+  padding-top: $size-base;
+
+  border-top: $border-thin solid usetheme(active); // $color-pink;
+
+  &.Resolved { 
+    opacity: usetheme(opacity-expired);
+    background-color: usetheme(bg-silver-lighter); // $color-silver-lighter;
+    // border: 0;
+  }
+  &.Urgent {
+    border-top: $border-thin solid usetheme(danger); // $color-danger;
+  }
+
+  .Alert-status {
+    // margin-top: $size-half;
+    margin-bottom: $size-half;
+    .Alert-status-tag {
+      padding: $size-quart $size-half;
+      background-color: usetheme(bg-silver-lighter); // $color-ui-light;
+      border-radius: $radius;
+    }
+    .Resolved {
+      // avoid using green; default to gray
+      background-color: usetheme(bg-silver);
+    }
+    .Urgent {
+      background-color: usetheme(danger); // $color-danger;
+      color: usetheme(bg); //$color-bg;
+    }
+    .Low {
+      background-color: transparent;
+      border: $border-thin solid usetheme(bg-silver); // $color-ui-light;
+    }
+  }
+  .Alert-title { // rendered in Md
+    &, p, p * {
+      font-size: $font-larger;
+      line-height: $font-larger + 8px;
+      padding-bottom: 0; // $size-base;
+    }
+  }
+  .Alert-tags {
+    margin-bottom: $size-base;
+  }
+}
+
+
+
+.Alerts-form {
+  h4 {
+    padding-top: $size;
+  }
+}
+
+

@@ -6,7 +6,17 @@ Thumbs.db
 
 !.gitkeep
 
+.ruby-version
 .rbenv-version
 .rvmrc
 
 app/invoices/
+
+.sass_cache
+
+
+# v2
+janzheng_nuxt/node_modules
+janzheng_nuxt/npm-debug.log
+janzheng_nuxt/.nuxt
+janzheng_nuxt/dist

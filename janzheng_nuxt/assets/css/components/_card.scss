@@ -1,0 +1,76 @@
+
+._card {
+  box-shadow: usetheme(shadow-1, $shadows_);
+
+  // adds slightly more visibility
+  border: 1px solid usetheme(card); // $color-silver-lighter;
+  // color: usetheme(copy);
+  overflow: auto;
+  @extend %ease;
+
+  a {
+    &:hover {
+      *, & {
+        color: usetheme(active) // !important; // !important messes w/ button states
+      }
+    }
+  }
+
+
+
+  &.--hover:hover {
+    border-color: usetheme(active);
+    @extend %ease;
+  }
+
+  &.--img {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &.--silver {
+    background-color: usetheme(silver-lighter); // $color-teal-50;
+    border-color: usetheme(silver-light);
+  }
+  &.--fyi {
+    background: usetheme(brand-5);
+    border-left: solid $border-thick;
+    border-color: usetheme(brand-60);
+    border-radius: $radius;
+  }
+  &.--brand {
+    background-color: usetheme(brand-background); // $color-teal-50;
+    border-color: usetheme(brand-border); // $color-teal-50;
+    color: usetheme(brand-90);
+  }
+    &.--border-highlight {
+      border-color: usetheme(highlight); // $color-teal-50;
+      border-width: $border-thin;
+    }
+    &.--border-active {
+      border-color: usetheme(active); // $color-teal-50;
+      border-width: $border-thin;
+    }
+
+  &.--advert, &.--active {
+    background-color: usetheme(advert); // $color-teal-50;
+    border-color: usetheme(advert); // $color-teal-50;
+  }
+
+  &.--alert {
+    background-color: usetheme(brand-disabled); // $color-teal-50;
+    border-color: usetheme(brand-border); // $color-teal-50;
+  }
+  &.--success {
+    background-color: usetheme(brand-0); // $color-teal-50;
+    border-color: usetheme(brand-30); // $color-teal-50;
+  }
+
+
+  &.--shadow {
+    //   box-shadow: 0px 4px 8px rgba(70, 70, 70, 0.1);
+    box-shadow: usetheme(shadow-2, $shadows_);
+  }
+
+}

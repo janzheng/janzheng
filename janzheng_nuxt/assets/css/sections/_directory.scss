@@ -1,0 +1,148 @@
+
+/* 
+
+		Directory Styles
+		- Sections / Titles
+
+ */
+
+.Dir-category {
+	background-color: usetheme(mono-0);
+}
+
+.Dir-section { // a block of larger content
+	// margin-bottom: $size; // use margin for folding
+}
+.Dir-block { // a block of smaller content 
+	margin-top: $size; // use margin for folding
+	margin-bottom: $size; // use margin for folding
+}
+
+.Dir-section-title { // h6
+	@extend %tight;
+	padding-bottom: $size-half;
+	margin-top: $size-2x;
+	color: usetheme(copy-gray);
+}
+
+.Dir-social { // icons
+}
+	.Dir-icon {
+		text-decoration: none;
+		._font-phage {
+			color: usetheme(mono-70);
+		}
+		._font-phage:hover {
+			color: usetheme(hover);
+		}
+		.icon-twitter:hover {
+			color: usetheme(twitter);
+		}
+		.icon-linkedin:hover {
+			color: usetheme(linkedin);
+		}
+		.icon-researchgate:hover {
+			color: usetheme(researchgate);
+		}
+		.icon-orcid:hover {
+			color: usetheme(orcid);
+		}
+		// vertical-align: text-bottom;
+		// the url line is also considered an icon
+
+	}
+
+.Dir-title {
+	// padding-top: $size-half;
+	// padding-bottom: $size-half;
+  line-height: $size-5;
+  font-weight: 500;
+
+	&, * {
+		font-size: usetheme(font-1);
+		font-weight: normal;
+  	color: usetheme(brand-copy);
+	}
+	a {
+		// text-decoration: none;
+		font-weight: normal;
+		text-decoration-color: usetheme(mono-50);
+		&:hover {
+			text-decoration-color: usetheme(active);
+		}
+	}
+}
+.Dir-subtitle {
+	font-size: usetheme(font--1);
+	line-height: usetheme(font--1-lh);
+	margin-bottom: $size;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	&, * {
+		font-weight: 500 !important;
+	}
+
+}
+.Dir-label {
+	font-size: usetheme(font--1);
+	line-height: usetheme(font--1-lh);
+	// margin-bottom: $size-quart;
+	color: usetheme(copy-gray);
+}
+.Dir-card {
+	padding-top: $size-2;
+	padding-bottom: $size-2;
+
+	@extend ._card;
+  background-color: usetheme(purewhite); // $color-teal-50;
+  border-color: usetheme(silver-light);
+  // border-color: usetheme(mono-0);
+
+	.--url {
+		// color: usetheme(copy-gray);
+		// text-decoration: none;
+		text-decoration-color: usetheme(mono-50);
+		font-size: usetheme(font--1);
+		line-height: usetheme(font--1-lh);
+		font-weight: normal;
+
+		&:hover {
+			text-decoration-color: usetheme(hover);
+		}
+	}
+}
+
+.Dir-short {
+	font-size: usetheme(font--1);
+	line-height: usetheme(font--1-lh);
+	color: usetheme(copy-gray);
+}
+
+
+
+/* 
+
+		People -- Card / Profile
+
+ */
+
+.People {
+
+}
+.People-basic {
+	color: usetheme(mono-80);
+}
+.People-roles {
+	&:after {
+		content: ' | ';
+		padding-left: $size-quart;
+		padding-right: $size-quart;
+		color: usetheme(mono-40);
+		font-weight: bold;
+	}
+}
+
+
+

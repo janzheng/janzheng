@@ -1,0 +1,10 @@
+
+# ignore file for nuxt generation
+
+components/experiments/*
+pages/experiments/*
+# /components/coeur
+templates/*
+pages/routers/*
+pages/coeur/contemplate
+coeur/contemplate

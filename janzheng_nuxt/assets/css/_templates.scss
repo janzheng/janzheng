@@ -1,0 +1,41 @@
+
+
+@import '/templates/template-1-2';
+
+
+.Template-Manuscript-Capsid {
+  @include screen-xs {
+  }
+  @include screen-sm {
+    grid-template-areas: 'main sidebar';
+  }
+  
+  .Template--Context {
+    grid-area: sidebar
+  }
+  .Template--Main {
+    grid-area: main;
+  }
+
+}
+
+.Template-Context {
+  .Template--Main-Sidebar {
+    @include screen-sm {
+      grid-template-areas: 'main sidebar';
+    }
+  }
+  .Template--Sidebar-Main {
+    @include screen-sm {
+      grid-template-areas: 'sidebar main';
+    }
+  }
+
+  .Template--Sidebar {
+    grid-area: sidebar
+  }
+  .Template--Main {
+    grid-area: main;
+  }
+
+}

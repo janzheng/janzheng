@@ -2,6 +2,11 @@
 
 todo
 ------------
+
+- update to Coeur 
+- https://medium.com/astro-hq/7-design-portfolio-tips-from-a-hiring-manager-3224f6c94cbb
+
+
 – accessibility: wrap timeline__list as <a> so keyboard tabbing works through them
 
 - about
