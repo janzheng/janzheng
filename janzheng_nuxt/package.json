@@ -32,7 +32,7 @@
     "@nuxtjs/markdownit": "^1.2.4",
     "@nuxtjs/pwa": "^3.0.0-beta.14",
     "@nuxtjs/workbox": "^3.0.0-beta.14",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-runtime": "^6.26.0",
     "coeur": "^0.2.28",
     "core-js": "2",
