@@ -10,7 +10,8 @@ This project is filed under an MIT license. Attribution/a nod to the source woul
 
 
 ### Old Middleman notes
-
+ 
+~~~
 Getting Started
 This project is written in a combination of ERB (Ruby on Rails templating code), Kramdown (variant of Markdown), and HTML, supported by my own custom, experimental SCSS "framework" I call Stylecoeur that I put together to increase my productivity.
 
@@ -57,4 +58,4 @@ activate :asset_hash
 License and Use
 This project is filed under an MIT license. Attribution/a nod to the source would be nice in your readme file but doesn't really matter. Have fun adapting it to your own needs
 
-
+~~~
