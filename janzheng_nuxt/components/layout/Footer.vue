@@ -14,7 +14,7 @@
           <span><a class="_margin-right" href="https://www.linkedin.com/in/janzh/">Linkedin</a></span>
           <span><a class="_margin-right" href="https://twitter.com/yawnxyz">@yawnxyz</a></span>
           <span><a class="_margin-right" href="/resume.pdf">resume</a></span>
-          <span><a class="" href="mailto:hello@janzheng.com">hello@janzheng.com</a></span>
+          <span><a class="_block-xs _padding-top-xs" href="mailto:hello@janzheng.com">hello@janzheng.com</a></span>
         </div>
       </div>
     </div>
@@ -25,13 +25,13 @@
 
 <script>
 
-import FormGoogs from '~/components/FormGoogs.vue'
+// import FormGoogs from '~/components/FormGoogs.vue'
 
 
 export default {
 
   components: {
-    FormGoogs,
+    // FormGoogs,
   },
 
   data () {

@@ -26,12 +26,12 @@
 
 import { mapState } from 'vuex'
 import Project from '~/components/Project.vue'
-import NodeForm from '~/components/render/NodeForm.vue'
+// import NodeForm from '~/components/render/NodeForm.vue'
 
 export default {
 
   components: {
-    NodeForm,
+    // NodeForm,
     Project,
   },
 

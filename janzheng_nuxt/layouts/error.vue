@@ -11,7 +11,7 @@
         We apologize... we couldn’t find what you were looking for, or something went wrong.
       </h1>
       <h3>
-        If you keep getting to this page but suspect you shouldn't be, please reach out to us by emailing <a href="mailto:jan@email.com">feedback@email.com</a>. 
+        If you keep getting to this page but suspect you shouldn't be, please reach out to us by emailing <a href="mailto:hello@janzheng.com">hello@janzheng.com</a>. 
         <br><br>
         We really appreciate your help!
       </h3>
