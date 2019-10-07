@@ -10,7 +10,7 @@
         <div class="_padding-2 _grid-1-4 _grid-gap-large">
           <img :src="logo_url" class="Project-logo _pointer " :style="project.fields['Logostyle']">
           <div>
-            <h4 v-if="project.fields['Short']" class="_margin-top-none-i --title _inline-block" style="">{{project.fields['Short']}}</h4>
+            <h4 v-if="project.fields['Short']" class="_font-serif _margin-top-none-i --title _inline-block" style="">{{project.fields['Short']}}</h4>
             <div class="_font-small _color-gray-lighter " v-if="project.fields['Data:Tags']">{{ project.fields['Data:Tags'].join(', ') }}</div>
           </div>
         </div>
@@ -21,7 +21,7 @@
         <div class="_padding-2 _grid-1-4 _grid-gap-large">
           <img :src="logo_url" class="Project-logo _pointer _margin-bottom-2" :style="project.fields['Logostyle']">
           <div>
-            <h4 v-if="project.fields['Short']" class="_margin-top-none-i --title _inline-block" style="">{{project.fields['Short']}}</h4>
+            <h4 v-if="project.fields['Short']" class="_font-serif _margin-top-none-i --title _inline-block" style="">{{project.fields['Short']}}</h4>
             <div class="_section-narrow _margin-top-none-i" @click.stop="" v-html="$md.render( project.fields['Markdown'] || '')" />
             <div>
               <span class="_padding-right">Website:</span><a :href="project.fields['URL']">{{ project.fields['URL'] }}</a>

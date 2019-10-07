@@ -96,6 +96,43 @@
 
 
 
+.logo {
+  max-width: 200px;
+}
+
+
+$home-bg: #eee;
+$home-lite: #f7f7f7;
+
+.Home-intro {
+  background-color: $home-bg;
+  // to match w/ the image bg
+  // 
+
+}
+
+._available {
+  background-color: $home-lite;
+  border-color: $home-lite;
+}
+
+._statement {
+  padding-bottom: $size-6 !important;
+  font-size: 30px;
+  line-height: 42px !important;
+}
+
+#me {
+  max-width: 320px;
+  vertical-align: bottom;
+}
+
+
+h2._font-serif {
+  font-size: 28px;
+}
+
+
 
 
 

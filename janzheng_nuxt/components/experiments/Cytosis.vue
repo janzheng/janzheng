@@ -63,6 +63,7 @@ export default {
       this.$store.dispatch('clear', "Atoms")
     }
 
+
     if (tableQuery) {
       // loads data from airtable based on a partial query
       this.response = this.loadQueryData(routeName, this.$store, env, tableQuery, keyword)

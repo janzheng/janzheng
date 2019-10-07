@@ -1573,12 +1573,12 @@ acorn@^6.0.2, acorn@^6.0.5, acorn@^6.0.7:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
 
-airtable@^0.5.6:
-  version "0.5.10"
-  resolved "https://registry.yarnpkg.com/airtable/-/airtable-0.5.10.tgz#89ea398393fac46f04a1ea810b97bfcf6bf07012"
-  integrity sha512-dasOg2FpNsydcqlYJ0rsteop54i0uU4kYINkjv3AMW5w9ledIY1W0mwEP8ZVrOokH8o9BLyNAEvaWJUTMFAJhg==
+airtable@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/airtable/-/airtable-0.7.1.tgz#1ebad9c9ed332d9348fb3ec3ef9c2d8be452b4f4"
+  integrity sha512-VV/8LKyDOtWca2YFMDJWDbPNPkhQPij6+H8SwoLTDEAR/02mTcGI1fSiwC5eW3xfy5Uzn6gLlfTGne7YqxxUkQ==
   dependencies:
-    lodash "4.17.11"
+    lodash "4.17.14"
     request "2.88.0"
     xhr "2.3.3"
 
@@ -3086,12 +3086,12 @@ cyclist@~0.2.2:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
   integrity sha1-GzN5LhHpFKL9bW7WRHRkRE5fpkA=
 
-cytosis@^0.0.326:
-  version "0.0.326"
-  resolved "https://registry.yarnpkg.com/cytosis/-/cytosis-0.0.326.tgz#f1f46c2f1d4a7db83376b91dfe13e941bd539929"
-  integrity sha512-jL0bf6sAd1mmF4rMPQ3bsLbu5hFqXUpvtkYUxGqyn0wH83isUV4pf3g+ODqtmkXpQBruhfpezi1U31GWtq8s8g==
+cytosis@^0.0.351:
+  version "0.0.351"
+  resolved "https://registry.yarnpkg.com/cytosis/-/cytosis-0.0.351.tgz#41493d0181bb0193e3fe49c01aae378199d71d99"
+  integrity sha512-rxeTY7+4H0Q5+RtBbJoJJ4uYr+dxehmzhzYhsu+l9Lexvja83BzymVu6Ns0afjR700KBGmLZdOuEUVvb2TyiWg==
   dependencies:
-    airtable "^0.5.6"
+    airtable "^0.7.1"
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -5403,7 +5403,12 @@ lodash.uniqueid@^4.0.1:
   resolved "https://registry.yarnpkg.com/lodash.uniqueid/-/lodash.uniqueid-4.0.1.tgz#3268f26a7c88e4f4b1758d679271814e31fa5b26"
   integrity sha1-MmjyanyI5PSxdY1nknGBTjH6WyY=
 
-lodash@4.17.11, lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lodash@^4.17.5, lodash@~4.17.10:
+lodash@4.17.14:
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
+  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
+
+lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lodash@^4.17.5, lodash@~4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==

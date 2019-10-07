@@ -4,9 +4,9 @@
 
 button, ._button {
 
-  background-color: usetheme(brand-background); //$color-links;
-  border-color: usetheme(brand-80); //$color-links;
-  color: usetheme(brand-80); //$color-links;
+  background-color: white; //$color-links;
+  border-color: usetheme(brand); //$color-links;
+  color: usetheme(brand); //$color-links;
   // @extend ._shadow-1;
 
   // declared using overriding default variables in settings

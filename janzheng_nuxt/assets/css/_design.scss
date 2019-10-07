@@ -54,8 +54,11 @@ h1, h2, h3, h4, h5, h6 {
   &.--roomy {
     padding-bottom: $size-2x;
   }
-  &.--title {
+  &.--title, &.--ceiling {
     padding-top: 0 !important;
+  }
+  &.--floor {
+    padding-bottom: 0 !important;
   }
   &.--normal {
     font-weight: normal;
