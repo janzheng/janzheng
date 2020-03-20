@@ -18,7 +18,7 @@
       <div class="_nav-bottom">
         <div><a href="https://www.linkedin.com/in/janzh"><span class="_font-phage icon-linkedin"/></a></div>
         <div><a href="https://github.com/janzheng"><span class="_font-phage icon-github-circled"/></a></div>
-        <div><a href="https://twitter.com/@yawnxys"><span class="_font-phage icon-twitter"/></a></div>
+        <div><a href="https://twitter.com/@yawnxyz"><span class="_font-phage icon-twitter"/></a></div>
         <div><a href="mailto:hello@janzheng.com"><span class="_font-phage icon-mail"/></a></div>
       </div>
     </nav>

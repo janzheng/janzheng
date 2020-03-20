@@ -3,7 +3,7 @@
 
     <div class="Home-intro _padding-top-2 _divider-bottom" >
       <div class="_section-page">
-        <div class="_grid-2-1 _align-bottom _grid-gap-large" >
+        <div class="_grid-2-1 _align-bottom _grid-gap-large-md" >
           <div class="Home-intro-txt _section-article " v-html="$md.render(intro || '')" />
           <div class="_center" >
             <img id="me" src="https://dl.airtable.com/.attachments/04e509743d71f5c3238d7bf1745adb01/f230816b/8.31supd_157_sq_sm_tiny.jpg" >
@@ -23,10 +23,10 @@
           </div>
         </no-ssr>
 
-        <Toggle class="_divider-top" >
+        <Toggle class="_divider-top _cursor-help" >
           <template #off>
             <div class="_section-article " v-html="$md.render(self_short || '')" />
-            <button class="_button --short">Learn more</button>
+            <button class="_button --naked --short">Continue ➝ </button>
           </template>
 
           <template #on>
@@ -40,14 +40,28 @@
 
 
 
-
-    <Project v-for="item of main_projects" :key="item.id" :project="item" class=" _margin-bottom" />
-
-    <div class="Home-projects _section-page _divider-top _divider-bottom">
-      <div class="_section-article _divider-top _divider-bottom" v-html="$md.render(second || '')" />
+    <div class="_section-page">
+      <Project v-for="item of main_projects" :key="item.id" :project="item" class=" _margin-bottom" />
     </div>
 
-    <Project v-for="item of client_projects" :key="item.id" :project="item" class=" _margin-bottom" />
+    <div class="Home-projects _section-page _divider-top _divider-bottom">
+      <div class="_section-page">
+        <div class="_section-article _divider-top _divider-bottom" v-html="$md.render(second || '')" />
+      </div>
+    </div>
+
+    <div class="_section-page">
+      <Project v-for="item of client_projects" :key="item.id" :project="item" class=" _margin-bottom" />
+    </div>
+
+    <div class="Home-third _section-page _divider-top _divider-bottom">
+      <div class="_section-page">
+        <div class="Home-brands _section-article _divider-top _divider-bottom" v-html="$md.render(third || '')" />
+      </div>
+    </div>
+
+
+
 
   </div>
 </template>
@@ -89,6 +103,7 @@ export default {
 
       now: this.$cytosis.findField('home-now', this.$store.state['Content'], 'Markdown' ),
       second: this.$cytosis.findField('home-second', this.$store.state['Content'], 'Markdown' ),
+      third: this.$cytosis.findField('home-third', this.$store.state['Content'], 'Markdown' ),
       
     }
   },

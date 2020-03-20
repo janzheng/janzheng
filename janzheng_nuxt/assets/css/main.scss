@@ -129,11 +129,8 @@ $home-lite: #f7f7f7;
 
 
 h2._font-serif {
-  font-size: 28px;
+  font-size: 30px;
 }
-
-
-
 
 
 
@@ -223,5 +220,20 @@ img {
   To be added to Coeur
 
  */
+
+
+em {
+  font-style: normal;
+  color: usetheme(brand);
+}
+
+._cursor-help, {
+  cursor: help
+}
+
+
+
+
+
 
 

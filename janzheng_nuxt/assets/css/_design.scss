@@ -13,7 +13,7 @@
   &, *, p {
     @extend %font-sans;
     font-size: usetheme(size);
-    line-height: usetheme(lineheight);
+    line-height: usetheme(font-lineheight);
   }
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 p {
-  margin-bottom: usetheme(size);
+  margin-bottom: usetheme(size) * 1.2;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,6 +89,12 @@ h2 {
 h3 {
 // used to introduce subtopics, hugs content but still needs to breathe
   padding-top: $size-2;
+  font-weight: normal;
+
+  &.--large {
+    font-size: $size-3;
+    padding-bottom: $size;
+  }
 }
 
 h4 {
@@ -261,7 +267,8 @@ a, ._link {
     background: rgba($color-active,0.2);
     width: 0%;
     position: absolute;
-    height: 11px;
+    // height: 11px;
+    height: 53%;
     bottom: 0px;
     @extend %ease;
   }
@@ -279,7 +286,8 @@ a, ._link {
     background: rgba($color-active,0.2);
     width: 0%;
     position: absolute;
-    height: 11px;
+    // height: 11px;
+    height: 53%;
     top: -1px;
     right: 0%;
     @extend %ease;
@@ -374,6 +382,10 @@ a, ._link {
   &.icon-linkedin { font-size: 112% !important; }
   &.icon-researchgate { font-size: 130% !important; position: relative; bottom: 0px;}
   .icon-google-scholar {  }
+
+  // &:before {
+    // margin: $size;
+  // }
 }
 
 

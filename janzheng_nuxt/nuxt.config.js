@@ -21,21 +21,21 @@ const site_policy = '1.0.0'
 const site_ga = 'UA-39843414-2';
 const site_segment = '';
 const site_url = 'https://janzheng.com';
-const site_name = 'Who is Jan?';
-const site_title = 'Who is Jan?';
+const site_name = 'Jan Z — product design & code & biz & 🎉';
+const site_title = 'Jan Z — product design & code & biz & 🎉';
 const site_twitter = '@yawnxyz';
 const site_twitter_creator = '@yawnxyz';
 const site_color = '#971f1f';
-const site_description = 'Who is Jan Z? Let’s find out!';
+const site_description = 'Sup, I’m Jan, a product designer who combines code and lean startup methods to solve really hard problems in the world.';
 
 // const site_ico = '/ico_dull.png';
 const site_ico = '';
-const site_image = '/share_img.png';
+const site_image = '/share_img_2.png';
 const site_search = 'index,follow';
 const site_author = 'Jan Zheng';
 const page_name = ''; // placeholder for the copy+paste
 
-const site_fb = ''; // buildAtl fb id
+const site_fb = '409001986635448'; // phage directory fb id
 
 const airtable_api = 'keyAe6M1KoPfg25aO'; // cytosisreader@zeee.co handler
 const airtable_base = 'appdhZvWtrq7Bn7s0'; // Quicktrip Airtable Repo

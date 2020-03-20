@@ -18,8 +18,10 @@ $nav-border: $border-line solid $color-silver-light;
 
 
 // down the left
-@media (min-height: 500px) 
-       and (min-width: $width-xs-max)  {
+// @media (min-height: 500px) 
+//        and (min-width: $width-xs-max)  {
+
+@media (min-width: $width-xs-max)  {
   .ContentFrame {
     // display: grid;
     // grid-template-columns: 80px auto;
@@ -71,10 +73,18 @@ $nav-border: $border-line solid $color-silver-light;
     }
   }
 
+  .Footer {
+    padding-left: 80px;
+  }
+
   ._nav-bottom {
     padding: $size-half;
     text-align: center;
     padding-bottom: $size-2;
+
+    a {
+      padding: $size;
+    }
   }
 
 
@@ -89,7 +99,7 @@ $nav-border: $border-line solid $color-silver-light;
   // }
 
   ._nav-logo {
-    display: block;
+    display: inline-block;
     transform: rotate(-90deg);
     transform-origin: 100%;
     // text-align: right;
@@ -100,8 +110,10 @@ $nav-border: $border-line solid $color-silver-light;
 }
 
 // across top
-@media (max-height: 499px) 
-       , (max-width: $width-xs-max)  {
+
+// @media (max-height: 499px) 
+//        , (max-width: $width-xs-max)  {
+@media (max-width: $width-xs-max)  {
 
   ._nav-more {
     // white-space: nowrap;
