@@ -45,7 +45,7 @@
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-mark": "^2.0.0",
     "markdown-it-sup": "^1.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "nuxt": "^2.7.0",
     "nuxt-leaflet": "^0.0.18",
     "nuxt-purgecss": "^0.2.1",
