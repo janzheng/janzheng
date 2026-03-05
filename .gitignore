@@ -1,22 +1,24 @@
-___design/*
-_theme_packages/*
+# build output
+dist/
 
-Thumbs.db
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
 .DS_Store
 
-!.gitkeep
-
-.ruby-version
-.rbenv-version
-.rvmrc
-
-app/invoices/
-
-.sass_cache
-
-
-# v2
-janzheng_nuxt/node_modules
-janzheng_nuxt/npm-debug.log
-janzheng_nuxt/.nuxt
-janzheng_nuxt/dist
+# jetbrains setting folder
+.idea/

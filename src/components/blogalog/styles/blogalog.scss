@@ -1,0 +1,1018 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* this file overrides default Tailwind styling ??
+
+  - this file is watched and converted by PostCSS
+
+  Tailwind tends to override some things like link styling:
+  https://stackoverflow.com/questions/63883580/tailwind-css-how-to-style-a-href-links-in-react 
+
+*/
+// @font-face {
+//   font-family: 'Fraunces';
+//   src: url('/fraunces/Fraunces-9ptBlack.woff2') format('woff2'),
+//     url('/fraunces/Fraunces-9ptBlack.woff') format('woff');
+//   font-weight: 900;
+//   font-style: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'Fraunces';
+//   src: url('/fraunces/Fraunces_72pt_SuperSoft-Light.woff') format('woff2'),
+//     url('/fraunces/Fraunces-9ptBlack.woff') format('woff');
+//   font-weight: light;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// in layout
+// @import '@fontsource/inter';
+// @import '@fontsource/nanum-myeongjo';
+
+
+
+// 
+//    MAIN PROJECT THEMES / STYLES
+// 
+//    base :root styles are in /baseline
+@import './baseline';
+
+// social fonts
+// @import "$plasmid/themes/templates/social";
+// @import "./lib/themes/social";
+// @import "./lib/themes/prism";
+
+// include coeur templates if needed; treated as a separate theme
+// @import './lib/themes/coeur';
+// @import './lib/themes/elements';
+
+// Additional project styling
+
+.tw {
+  // @import "$plasmid/themes/tw";
+}
+
+
+$tabsize: 1.3rem;
+
+/* 
+  Reused, compartmentalized styles
+*/
+
+$fontSans: 'Inter', sans-serif;
+
+.postHeaders {
+  h1 {
+    @apply leading-tight text-4xl lg:leading-tight mb-4 font-extrabold tracking-tight;
+    font-family: var(--font-title, $fontSans)
+  }
+
+  h2 {
+    @apply leading-tight text-3xl mb-2 font-semibold tracking-tight;
+    font-family: var(--font-title, $fontSans)
+  }
+
+  h3 {
+    @apply text-2xl font-semibold tracking-tight mb-2 text-slate-800;
+    font-family: var(--font-title, $fontSans)
+  }
+
+  h4 {
+    @apply text-xl font-semibold mb-2;
+    font-family: var(--font-title, $fontSans)
+  }
+}
+
+
+@mixin notionStyles {
+  .notion {
+    font-family: var(--font-paragraph, $fontSans) !important;
+    color: var(--color-base);
+
+    // ol>li {
+    //   list-style-type: decimal;
+    // }
+
+    ul>li {
+      list-style-type: disc;
+    }
+
+    // ol {
+    //   counter-reset: item;
+    //   list-style-type: decimal;
+      
+    //   ol {
+    //     counter-reset: alpha;
+    //     list-style-type: lower-alpha;
+        
+    //     ol {
+    //       counter-reset: roman;
+    //       list-style-type: lower-roman;
+    //     }
+    //   }
+    // }
+
+
+    // p+ul,
+    // p+ol {
+    //   margin-top: -0.5rem;
+    // }
+
+    p {
+      // @apply mb-4 whitespace-break-spaces;
+      @apply whitespace-break-spaces;
+  }
+
+  }
+
+  // special landing page "softer" / millennial styles
+  .notion-soft {
+    img {
+      @apply rounded-xl;
+    }
+  }
+
+  .notion-links {
+    @extend ._link-reset;
+  }
+
+  .notion-img-rounded {
+    img {
+      @apply rounded-xl;
+    }
+  }
+
+  // special landing page CTA styles
+  .notion-cta {
+    a:first-of-type {
+      @extend .Btn-solid;
+    }
+
+    a:last-of-type {
+      @extend .Btn-textbg;
+    }
+  }
+
+
+  .notion-row-columnflex {
+
+    // if we know notion blocks are always columns, we use this to force flex on it for better styling
+    .notion-row {
+      @apply flex flex-wrap gap-2;
+    }
+
+    .notion-spacer {
+      display: none;
+    }
+  }
+
+  .notion-sturdy-columnheaders {
+    .notion-column {
+      .notion-text:first-of-type {
+        @apply text-sm tracking-wider font-semibold capitalize;
+      }
+    }
+  }
+
+  .notion-list,
+  .notion-list-disc {
+
+    // easy nested ul / ol lists!
+    ul,
+    ol {
+      padding-inline-start: $tabsize * 1;
+
+      // already recursive, so this messes it up further...
+      // ul, ol {
+      //   // padding-inline-start: $tabsize * 2;
+
+      //   ul, ol {
+      //     // padding-inline-start: $tabsize * 2;
+
+      //     ul, ol {
+      //       // padding-inline-start: $tabsize * 2;
+      //     }
+      //   }
+      // }
+    }
+
+    li {
+      list-style-position: outside;
+    }
+  }
+
+  .notion-collection-gallery-group-items {
+    @apply grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-12 justify-center items-center;
+  }
+
+  .notion-simpleTable {
+    @apply pb-3 mt-0 pt-0;
+
+    table {
+      @apply table-auto border-collapse border border-gray-200 text-gray-600;
+    }
+
+    th,
+    td {
+      @apply border border-gray-300 p-2;
+    }
+
+    th {
+      @apply bg-gray-100;
+    }
+  }
+
+  // turns notion dropdowns into FAQ-style collapse components
+  .notion-collapse {
+
+    // decorative classes&,
+    details {
+      @apply mt-4 bg-white rounded-md;
+    }
+
+    summary {
+      font-family: var(--font-title, $fontSans) !important;
+      @apply cursor-pointer py-2 mt-0 relative;
+      @apply transition-all;
+    }
+
+    &.--summary-xl summary {
+
+      // larger summary / FAQ question text
+      &,
+      * {
+        @apply text-xl;
+      }
+    }
+
+    summary+div {
+      @apply pt-2 ml-0 pl-1 mt-0;
+
+      p:last-of-type {
+        @apply pb-1;
+      }
+    }
+
+    details[open] summary~* {
+      animation: open .2s ease-in-out;
+    }
+
+    @keyframes open {
+      0% {
+        opacity: 0;
+        margin-top: -20px
+      }
+
+      100% {
+        opacity: 1;
+        margin-top: 0px
+      }
+    }
+
+    // details:not([open]) summary + div {
+    //   @apply opacity-0 -mt-5 duration-1000;
+    // }
+    // details[open] summary + div {
+    //   @apply opacity-100 mt-0 duration-1000;
+    // }
+
+    details {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      border-radius: var(--rounded-box, 1rem);
+    }
+
+    summary {
+      position: relative;
+      display: block;
+      // outline: 2px solid transparent; // hides the outline
+      outline-offset: -2px;
+      border-radius: var(--rounded-box, 1rem);
+    }
+
+    details[open] summary:after,
+    summary:after {
+      --tw-translate-y: -50%;
+      --tw-rotate: 225deg;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    details summary:after {
+      position: absolute;
+      display: block;
+      height: 0.5rem;
+      width: 0.5rem;
+      --tw-translate-y: -100%;
+      --tw-rotate: 45deg;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      transition-duration: 150ms;
+      transition-duration: 0.2s;
+      top: 50%;
+      right: 1.4rem;
+      content: "";
+      transform-origin: 75% 75%;
+      box-shadow: 2px 2px;
+      pointer-events: none;
+    }
+  }
+
+  .Profile .notion {
+
+    // less margin for Profile page, since header used to highlight content
+    // on PageContent though you DO want more margin since these act as real headers
+    h1 {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      font-family: var(--font-title, $fontSans);
+    }
+
+    h2 {
+      margin-top: 1rem;
+      // padding-top: 1rem;
+      font-family: var(--font-title, $fontSans);
+    }
+
+    h3 {
+      margin-top: 1rem;
+      // padding-top: 1rem;
+      font-family: var(--font-title, $fontSans);
+    }
+
+    h4 {
+      // margin-top: 1rem;
+      // padding-top: 1rem;
+      font-family: var(--font-title, $fontSans);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      &:first-of-type {
+        @apply mt-2 pt-0;
+      }
+    }
+  }
+}
+
+@mixin postStyles {
+  // .Posts {
+  //   .Post-name { @apply text-xl; }
+  // }
+
+  .Profile,
+  .Layout {
+    // set notion page width to default blogalog page width
+    --notion-page-width: var(--blogalog-page-width);
+  }
+
+  // Post / Blog Page
+  .PostPage {
+    @apply relative px-2 mx-auto w-full h-full;
+    max-width: var(--blogalog-post-width);
+
+    @extend .postheaders !optional;
+  }
+
+  .PostPage .notion-page {
+    // margin-left: 0; // left-align
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@mixin headlineStyles {
+
+  .headline {
+    h1 {
+      @apply leading-none tracking-tighter text-5xl mb-4 font-bold;
+      color: var(--color-title, var(--color-base));
+      font-family: var(--font-title, $fontSans);
+    }
+
+    h2 {
+      @apply leading-none tracking-tighter text-4xl mb-4 font-bold;
+      color: var(--color-title, var(--color-base));
+      font-family: var(--font-title, $fontSans);
+
+      &.--extra {
+        @apply text-4xl mb-2 tracking-tight;
+      }
+
+      &+h3 {
+        padding-top: 0;
+      }
+    }
+
+    h3 {
+      @apply text-3xl tracking-tight mb-2 text-slate-800;
+      color: var(--color-title, var(--color-base));
+      font-family: var(--font-title, $fontSans);
+    }
+
+    h4 {
+      @apply text-xl mb-2;
+      color: var(--color-title, var(--color-base));
+      font-family: var(--font-title, $fontSans);
+    }
+
+    h5 {
+      @apply leading-snug text-xs uppercase tracking-widest mb-2 text-slate-500;
+      color: var(--color-title, var(--color-base));
+      font-family: var(--font-title, $fontSans);
+    }
+
+    h6 {
+      @apply text-xs tracking-wide uppercase mb-2;
+      color: var(--color-title, var(--color-base));
+      font-family: var(--font-title, $fontSans);
+    }
+
+    p {
+      @apply text-xl tracking-tight mb-2;
+      color: var(--color-base);
+      font-family: var(--font-paragraph);
+    }
+  }
+
+
+  .headline-margin-none {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply m-0;
+    }
+  }
+}
+
+
+
+
+/* 
+
+  *** these are MODIFIED for janzheng.com
+  Base BLOGALOG-janzheng themes
+
+*/
+@mixin sharedStyles {
+
+  // general styles
+  // font-family: Inter, sans-serif;
+  font-family: var(--font-paragraph);
+  font-size: 1em;
+  line-height: 1.5;
+  color: var(--color-base);
+
+
+  p {
+    // @apply pb-4 mt-0 pt-0; // pb-4 makes paras a bit too airy for blogs
+    // @apply pb-0 mt-0 pt-0;
+    @apply pb-0 mb-2 pt-0;
+
+    &+ul,
+    &+ol {
+      // @apply -mt-6; // to adjust for the large paragraph margin
+    }
+  }
+
+  p,
+  ul,
+  ol,
+  blockquote,
+  article,
+  section,
+  main,
+  aside,
+  figcaption {
+    color: var(--color-base);
+    @extend .font-paragraph;
+  }
+
+  hr {
+    @apply pb-2;
+  }
+
+  .title {
+    color: var(--color-title, var(--color-base));
+  }
+
+  .font-title {
+    font-family: var(--font-title);
+  }
+
+  .font-paragraph {
+    font-family: var(--font-paragraph);
+  }
+
+  // Add any other styles you want
+
+  a,
+  ._link {
+    &:not(.Btn-solid, .Btn-outline, .link-custom) {
+      @apply no-underline cursor-pointer;
+      color: var(--color-link, var(--color-base));
+
+      &:hover {
+        // @apply underline;
+        text-decoration: var(--link-hover-decoration, underline);
+        text-decoration-thickness: var(--link-hover-decoration-thickness, auto);
+        color: var(--color-link-hover, var(--color-base));
+      }
+
+      ;
+    }
+  }
+
+  ._link-reset {
+
+    &,
+    a {
+      @apply no-underline hover:no-underline;
+      text-decoration: none !important;
+      // color: inherit;
+
+      // these prevent new colors from being added using tw classes
+      // @apply no-underline hover:no-underline text-inherit;
+      // color: var(--color-base);
+    }
+  }
+
+  // specific component styles
+  .headline {
+    // @apply font-display;
+    text-rendering: geometricprecision;
+  }
+
+  // for narrative pages / longform
+  .Narrative {
+    img {
+      @apply rounded-md;
+    }
+  }
+
+  .text-light {
+    @apply text-slate-600;
+  }
+
+  // preloaded global tw styles for airtable/notion classes
+  .tw-border-blue-600 {
+    @apply border-blue-600;
+  }
+
+  // Blogs, Case studies / dynamic routed stuff from Notion
+  .PageContent .notion-page {
+    margin-left: 0; // left-align
+  }
+
+  // headers have some spacing
+  *+h1,
+  *+h2,
+  *+h3,
+  *+h5,
+  *+h6 {
+    @apply pt-12
+  }
+
+  // except when listed with other headers (a headers-list)
+  h1, h2, h3, h4, h5, h6 {
+
+    &+h1,
+    &+h2,
+    &+h3,
+    &+h4,
+    &+h5,
+    &+h6 {
+      @apply pt-0;
+    }
+  }
+
+
+  /* 
+
+    interactive styles; might need to break out for more flexible styles / templates
+  
+  */
+  .Btn-solid {
+    @apply bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-[var(--color-primary-text)] hover:text-[var(--color-primary-text-hover)] border-[var(--color-primary)] hover:border-[var(--color-primary-hover)];
+  }
+
+  .Btn-link {
+    // todo: add hover text color here?
+    @apply border-2 border-[var(--color-primary)] hover:border-[var(--color-primary-hover)] text-[var(--color-primary)] bg-transparent;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+
+  }
+
+  .Btn-outline {
+    @apply border-[var(--color-primary)] hover:border-[var(--color-primary-hover)] text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] bg-transparent;
+  }
+
+  .Btn-textbg {
+    @apply bg-[var(--color-primary-white)] hover:bg-[var(--color-primary-light)] text-[var(--color-primary)] border-transparent hover:no-underline;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  .font-title {
+
+    &,
+    &>p {
+      font-family: var(--font-title);
+    }
+  }
+
+  a {
+    .font-title {
+
+      &,
+      &>p {
+        color: var(--color-title-link);
+      }
+    }
+
+    &:hover {
+      .font-title {
+
+        &,
+        &>p {
+          color: var(--color-title-hover);
+        }
+      }
+    }
+  }
+
+  .font-paragraph {
+    font-family: var(--font-paragraph);
+  }
+
+  // 
+  // 
+
+  h1,
+  .h1 {
+    @apply leading-tight text-3xl lg:leading-tight mb-4 font-bold;
+    color: var(--color-title, var(--color-base));
+  }
+
+  h2,
+  .h2 {
+    @apply leading-tight text-2xl mb-2 font-bold;
+    color: var(--color-title, var(--color-base));
+
+    &.--extra {
+      @apply text-4xl mb-2 tracking-tight;
+    }
+
+    &+h3 {
+      padding-top: 0;
+    }
+  }
+
+  h3,
+  .h3 {
+    @apply text-xl mb-2 text-slate-800;
+    color: var(--color-title, var(--color-base));
+  }
+
+  h4,
+  .h4 {
+    @apply text-lg mb-2;
+    color: var(--color-title, var(--color-base));
+  }
+
+  h5,
+  .h5 {
+    @apply leading-snug text-xs uppercase tracking-widest mb-2 text-slate-500;
+    color: var(--color-title, var(--color-base));
+  }
+
+  h6 {
+    @apply text-xs tracking-wide uppercase mb-2;
+    color: var(--color-title, var(--color-base));
+  }
+
+  .title {
+    // for divs specced as "title"
+    color: var(--color-title, var(--color-base));
+  }
+
+  ul,
+  ol {
+    padding-inline-start: $tabsize * 1;
+  }
+
+  li {
+    list-style-position: outside;
+    @apply mb-2;
+  }
+
+  .content-pad {
+    @apply px-8 md:px-32 py-8 mx-auto;
+    // max-width: var(--notion-page-width);
+  }
+
+  .content-custom-width {
+    max-width: var(--blogalog-page-custom-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content-post-width {
+    max-width: var(--blogalog-post-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content-notion-wide {
+    max-width: var(--blogalog-page-width, 704px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content-notion-wider {
+    max-width: calc(var(--notion-page-width) + 224px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  @include notionStyles;
+  @include postStyles;
+  @include headlineStyles;
+  // @include profileStyles;
+
+}
+
+
+
+
+
+.Blogalog-Container, .sharedStyles {
+  @include sharedStyles;
+}
+
+
+.BlogalogProfile {
+
+  /* } */
+
+
+  .content-pad {
+    @apply px-8 md:px-32 py-8 mx-auto;
+    /* max-width: var(--notion-page-width); */
+  }
+
+  .content-custom-width {
+    max-width: var(--blogalog-page-custom-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content-notion-wide {
+    max-width: var(--blogalog-page-width, 704px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content-notion-wider {
+    max-width: calc(var(--notion-page-width) + 224px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .notion-callout-icon {
+    align-self: flex-start;
+  }
+
+  .notion-page-icon {
+    font-size: 1.7rem;
+    ;
+  }
+
+  .Profile {
+    background-color: var(--color-bg);
+  }
+
+  .Profile-Row-Main {
+
+    h2,
+    h3,
+    h4 {
+      &:first-of-type {
+        @apply pt-1;
+        /* tiny padding for first header keeps it tighter */
+      }
+    }
+  }
+
+
+  h1 {
+    @apply text-2xl font-bold mb-4 mt-4;
+  }
+
+  h2 {
+    @apply text-xl font-bold mb-4 mt-8;
+  }
+
+  h3 {
+    @apply text-lg font-bold mb-4;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  a {
+    @apply text-blue-500 hover:underline cursor-pointer hover:cursor-pointer;
+  }
+
+  pre {
+    @apply bg-gray-200 rounded p-4;
+  }
+
+
+
+  @keyframes fast-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+      background-color: #4caf50;
+    }
+
+    50% {
+      transform: scale(1.2);
+      opacity: 0.5;
+      background-color: #81c784;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+      background-color: #4caf50;
+    }
+  }
+
+  .animate-fast-pulse {
+    animation: fast-pulse 1.4s infinite;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// special project styles
+.Builderclub,
+.Smiles {
+  .headline {
+    h1 {
+      @apply leading-none tracking-normal text-5xl mb-4 font-bold;
+      color: var(--color-title, var(--color-base));
+      font-family: var(--font-title, $fontSans);
+    }
+
+    h2 {
+      @apply leading-none tracking-normal text-4xl mb-4 font-bold;
+      color: var(--color-title, var(--color-base));
+      font-family: var(--font-title, $fontSans);
+
+      &.--extra {
+        @apply text-4xl mb-2 tracking-tight;
+      }
+
+      &+h3 {
+        padding-top: 0;
+      }
+    }
+
+    h3 {
+      @apply text-3xl tracking-normal mb-2;
+      color: var(--color-title, var(--color-base));
+      font-family: var(--font-title, $fontSans);
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+// non-project specific /// future baseline styles
+// 
+
+// messes with notion code
+// .code {
+//   position: relative;
+// }
+
+// code {
+//   display: inline-block;
+//   padding: 0.4em;
+//   font-size: 14px;
+//   line-height: 14px * 1.4;
+//   font-family: "fira-mono", monospace;
+//   background: #333;
+//   color: #fdce93;
+// }
+
+.snug,
+.psnug,
+.pfix,
+.paraWrap {
+
+  // removes padding of last paragraph of a rendered markdown block
+  // to create snug-ness
+  p:last-child {
+    padding-bottom: 0;
+  }
+
+  &--i {
+    padding-bottom: 0 !important;
+  }
+}
+
+.inlinep,
+.pinline {
+  p {
+    display: inline;
+  }
+}
+
+details summary {
+  cursor: pointer;
+}
+
+.content-pad {
+  @apply px-8 md:px-32 py-8;
+}
+
+
+
+.notion-callout {
+  .notion-callout-icon {
+    display: none;
+  }
+  .notion-blank {
+    display: none;
+  }
+}

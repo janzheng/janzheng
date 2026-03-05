@@ -1,0 +1,46 @@
+---
+import '@styles/resume.scss';
+import Resume from "@components/Resume.svelte";
+// import Resume from "@components/ResumeCompact.svelte";
+import Layout from "@layouts/Layout.astro";
+import sheet from '@yawnxyz/sheetlog';
+
+import resumeJson from '@data/cv.json';
+// import resumeJson from '@data/resume.json';
+
+// Get URL parameters in Astro
+const id = Astro.url.searchParams.get('id');
+const state = Astro.url.searchParams.get('state') || false;
+const live = Astro.url.searchParams.get('live') || false;
+
+// Setup and fetch sheet data server-side
+const PUBLIC_SHEET_URL = "https://script.google.com/macros/s/AKfycbw_Vzxf_O4YaijlPK_bksDF9az8vs2PtspU_wZH6E-j1JurWNfPjP9kDQbpSOf4cgud/exec";
+
+sheet.setup({ 
+  sheetUrl: PUBLIC_SHEET_URL,
+  sheet: "Resumes"
+});
+
+// Fetch initial resume data if id exists
+let initialResumeJson = resumeJson;
+if (id) {
+  try {
+    const result = await sheet.find("Id", id);
+    if (result && result.data?.Resume) {
+      initialResumeJson = JSON.parse(result.data.Resume);
+      console.log(">>> live resume loaded", JSON.stringify(initialResumeJson, null, 2));
+    }
+  } catch (e) {
+    console.error('[resume] error loading initial data:', e);
+  }
+}
+---
+
+<Layout title="Resume">
+  <Resume 
+    id={id} 
+    state={state} 
+    initialResumeJson={initialResumeJson}
+    client:load 
+  />
+</Layout>

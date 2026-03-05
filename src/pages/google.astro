@@ -1,0 +1,10 @@
+---
+const AUTH_ORIGIN = "https://auth.labspace.ai";
+const ORIGIN = "https://yawnxyz-newwebsite.web.val.run";
+
+const redirectUri = `${ORIGIN}/auth/google/callback`; // URL to return to after Google login
+const authServiceUrl = `${AUTH_ORIGIN}/auth/google?redirect_uri=${redirectUri}`;
+
+// Redirect to AuthService for Google login
+return Astro.redirect(authServiceUrl);
+---

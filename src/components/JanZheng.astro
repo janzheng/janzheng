@@ -1,0 +1,80 @@
+---
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/700.css";
+
+import "@fontsource/nanum-myeongjo/400.css";
+import "@fontsource/nanum-myeongjo/700.css";
+
+import { marked } from "marked";
+import BlogalogProfile from "@components/blogalog/BlogalogProfile.svelte";
+// import BlogalogRows from "@components/blogalog/BlogalogRows.svelte";
+// import BlogalogFooter from "@components/blogalog/BlogalogFooter.svelte";
+// import GeminiBbox from '@components/deno/GeminiBbox.astro';
+
+import Explorations from "@components/Explorations.svelte";
+import Notes from "@components/Notes.svelte";
+
+// Get URL parameters and set up pathData
+const { url } = Astro;
+const urlParams = new URLSearchParams(url.search);
+
+let pathData = {
+  name: "janzheng",
+  isLive:
+    urlParams.get("mode")?.includes("live") ||
+    Astro.locals?.pathData?.mode ||
+    "",
+  isLocal:
+    urlParams.get("mode")?.includes("local") ||
+    Astro.locals?.pathData?.local ||
+    "",
+};
+
+// Helper function to generate the correct URL based on environment
+function getUrl(path) {
+  return pathData?.isLocal
+    ? `http://localhost:9999/${path}${pathData?.isLive ? "?mode=live" : ""}`
+    : `https://coverflow.deno.dev/${path}${pathData?.isLive ? "?mode=live" : ""}`;
+}
+
+const apiUrl = getUrl(pathData.name);
+
+let blogalogData = {};
+try {
+  let response = await fetch(apiUrl, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json; charset=utf-8",
+    },
+  });
+  blogalogData = await response.json();
+  /* 
+    process / render markdown / etc
+  */
+  blogalogData.meta = {
+    ...blogalogData.meta,
+    longDescription:
+      blogalogData.meta?.longDescription &&
+      marked(blogalogData.meta.longDescription),
+    shortDescription:
+      blogalogData.meta?.shortDescription &&
+      marked(blogalogData.meta.shortDescription),
+    location: blogalogData.meta?.location && marked(blogalogData.meta.location),
+  };
+} catch (error) {
+  console.error(
+    `"Error fetching or parsing blogalog data: [${getUrl(pathData.name)}]`,
+    error
+  );
+}
+---
+
+<div class="JanZheng | container mx-auto pt-12">
+  <!-- <GeminiBbox classes="mb-12" /> -->
+  <BlogalogProfile {blogalogData} client:load="svelte" />
+  <Explorations {blogalogData} client:load="svelte" />
+  <Notes {blogalogData} client:load="svelte" />
+  <!-- <BlogalogRows {blogalogData} client:load="svelte" /> -->
+  <!-- <BlogalogFooter {blogalogData} client:load="svelte" /> -->
+</div>

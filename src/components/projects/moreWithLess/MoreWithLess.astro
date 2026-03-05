@@ -1,0 +1,71 @@
+---
+// import Markdown from '@components/Markdown.astro';
+import '@components/blogalog/styles/blogalog.scss';
+import { Content } from './moreWithLess.mdx';
+import SimpleConverter from './components/SimpleConverter.svelte';
+import DateConverter from './components/DateConverter.svelte';
+import ChatConverter from './components/ChatConverter.svelte';
+import ChitConverter from './components/ChitConverter.svelte';
+import RubeConverter from './components/RubeConverter.svelte';
+import ConciergeConverter from './components/ConciergeConverter.svelte';
+
+const { classes = '' } = Astro.props;
+const geminiBbox = typeof Deno !== "undefined" ? (await import("https://esm.town/v/yawnxyz/geminiBbox?v=198")).html : undefined;
+
+
+---
+
+  <div class="more-with-less |">
+    <Content components={geminiBbox}  />
+    <SimpleConverter client:load="svelte" />
+    <DateConverter client:load="svelte" />
+    <ChatConverter client:load="svelte" />
+    <ChitConverter client:load="svelte" cta="$100 USD → CAD" prompt="Convert 100 from USD to currency 'CAD' " />
+    <ChitConverter client:load="svelte" cta="$100 USD → EUR" prompt="Convert 100 from USD to currency 'EUR' " />
+    <ChitConverter client:load="svelte" cta="$100 USD → AUD" prompt="Convert 100 from USD to currency 'AUD'. " />
+    <RubeConverter client:load="svelte" />
+    <ConciergeConverter client:load="svelte" />
+
+
+    <!-- <Test />
+
+    argh
+    <Markdown>When I go to a restaurant, I prefer to look at a menu before talking to staff. A menu tells me what’s available, without me having to interrogate the staff. 
+
+If my group has allergies or special requests however, I like the ability to tell the staff in detail about those allergies. 
+
+I'd love for this interaction to play out across the apps and websites I use!
+    </Markdown>
+
+
+
+
+    <Markdown>
+
+      # another title
+
+      When I go to a restaurant, I prefer to look at a menu before talking to staff. A menu tells me what’s available, without me having to interrogate the staff. 
+
+      If my group has allergies or special requests however, I like the ability to tell the staff in detail about those allergies. 
+
+      I'd love for this interaction to play out across the apps and websites I use!
+
+
+    </Markdown> -->
+  </div>
+
+
+
+
+
+
+
+
+
+<style is:global>
+  .more-with-less {
+    h2 {
+      /* @apply text-4xl font-bold text-red-400; */
+    }
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+const AUTH_ORIGIN = "https://auth.labspace.ai";
+
+// Get the session token from the query parameters
+const url = new URL(Astro.request.url);
+const sessionToken = url.searchParams.get('session_token');
+
+if (!sessionToken) {
+  return new Response("Invalid session token", { status: 400 });
+}
+
+// Validate the session token with AuthService
+const validateSessionResponse = await fetch(`${AUTH_ORIGIN}/auth/validate-session`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ session_token: sessionToken }),
+});
+
+const { valid } = await validateSessionResponse.json();
+
+if (!valid) {
+  return new Response("Invalid session token", { status: 400 });
+}
+
+// Set session cookie
+const response = new Response(null, {
+  status: 302, // Redirect status
+  headers: {
+    "Set-Cookie": `session_token=${sessionToken}; HttpOnly; Secure; Path=/; Max-Age=3600`, // 1-hour expiration
+    Location: "/dashboard", // Redirect to dashboard after successful login
+  },
+});
+
+return response;
+---

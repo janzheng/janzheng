@@ -1,0 +1,16 @@
+---
+const { 
+  name = 'Gemini Bbox',
+  classes = '',
+  url = 'https://esm.town/v/yawnxyz/geminiBbox?v=198',
+  selector = 'html'
+} = Astro.props;
+const component = typeof Deno !== "undefined" ? (await import(url))[selector] : undefined;
+
+---
+
+<div class={`Deno-component ${name} ${classes}`}>
+  {component ? ( 
+      <Fragment set:html={component} />
+  ) : typeof Deno === "undefined" ? (<div class="text-center my-12 px-12 py-12 bg-gray-100 text-gray-600 rounded-lg">Deno is not available in this environment.</div>) : null}
+</div>

@@ -1,0 +1,474 @@
+{
+  "$schema": "file://Users/janzheng/Desktop/Projects/_astro/janzheng/src/data/resume-schema-3.json",
+  "meta": {
+    "version": "v1.0.0",
+    "lastModified": "2024-02-20T10:00:00",
+    "sections": [
+      {
+        "name": "work",
+        "label": "Work Experience"
+      },
+      {
+        "name": "writings",
+        "label": "Selected Writings"
+      },
+      {
+        "name": "projects",
+        "label": "Selected Projects"
+      },
+      {
+        "name": "roles",
+        "label": "Board & Advisory roles"
+      },
+      {
+        "name": "awards",
+        "label": "Grant Awards"
+      }
+    ],
+    "order": [
+      "work",
+      "projects",
+      "education",
+      "skills",
+      "publications",
+      "certificates",
+      "awards",
+      "talks",
+      "writings",
+      "media",
+      "interests",
+      "languages",
+      "roles",
+      "volunteering",
+      "references"
+    ]
+  },
+  "basics": {
+    "name": "Jan Zheng",
+    "title": "",
+    "phone": "",
+    "label": "AI Design Engineer & Bioinformatics Engineer",
+    "image": "https://f2.phage.directory/blogalog/jan-parrot-smaller.jpeg",
+    "email": "jan@phage.directory",
+    "summary": "AI design engineer with HCI background, specializing in rapid prototypes that solve real-world problems. Builds AI-powered automation systems that help scientists and researchers streamline their workflows. \n\nPreviously built software that supported 20+ phage therapy cases in a nation-wide clinical trial.",
+    "about": "I have over a decade of experience in user-centered product design, specializing in building full-stack prototypes. My work spans from running customer interviews, to illustrating SVGs and prototyping apps in Figma, to designing and building APIs in FastAPI then deploying on Fly.io, writing Cloudflare Workers functions, and building full-stack JS projects with frameworks like Vue, Svelte, and React. \n\n In the last few years, I've worked on Phage Directory, a community-driven crowd-sourced phage therapy project. We've received grants from Mozilla Science, Helmsley Charitable Trust, and Grant for the web; were key partners in starting Phage Australia, an Australia-wide phage therapy clinical trial; and helped treat ~20 patients with phage therapy. \n\n In the last year, I've been building experimental LLM tools like generative UI and LLM-driven finite state machine agents for more predictable function execution, for automating various data engineering tasks at Phage Australia. ",
+    "location": {
+      "city": "San Francisco",
+      "region": "CA"
+    },
+    "notes": [
+      "Dual citizen of US and Sweden. (Has work authorization for both US and Europe)."
+    ],
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/janzh"
+      },
+      {
+        "network": "Twitter",
+        "url": "https://twitter.com/yawnxyz"
+      },
+      {
+        "network": "Github",
+        "url": "http://github.com/janzheng"
+      },
+      {
+        "network": "googlescholar",
+        "url": "https://scholar.google.com/citations?hl=en&user=FR2GtNoAAAAJ"
+      },
+      {
+        "url": "https://janzheng.com"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Labspace.ai",
+      "position": "Technical Co-founder",
+      "startDate": "August 2024",
+      "location": "San Francisco, CA",
+      "url": "https://phageaustralia.org",
+      "description": "Labspace is an independent metascience community  and product design lab. We host research-focused workshops across topics like lab protocol design and biobank data architectures. We also build various experiments and tools for researchers — from automated data and task orchestration systems that can scrape papers, extract and process data with AI, and store them in a Google Sheet or a database... to “science communication” tools that turn papers into viral tweets.",
+      "highlights": [
+        "**Coverflow** — inspired by Github Actions, this serverless task and data orchestration system uses a simple JSON format to create complex workflows like scraping, parsing, inferencing, database editing. This semi-agentic workflow tool powers Phage Papers, a bluesky bot posting phage papers, Coverpage, a tool for generating CVs and personal websites, and powers many data and AI summarization tasks.",
+        "**Coverpage** — uses Coverflow to generate and manage online CVs and personal websites. Powers sites like labspace.ai, [jess.bio](htps://jess.bio), and janzheng.com.",
+        "**Coversheet** — a tool that embeds Coverflow, which allows for formulas like Wikipedia and Pubmed search, summarizing selected cells with AI, and extracting data as grids of rows and columns inside Google Sheets from PDFs, papers, and other sources.",
+        "Other projects include [threadg1rl.labspace.ai](https://threadg1rl.labspace.ai) which turns papers (or any text or url) into tweets and summaries; [pageshot.labspace.ai](https://pageshot.labspace.ai/) which grabs metadata about any web page, paper, or DOI, and a dozen more smaller tools."
+      ]
+    },
+    {
+      "name": "Westmead Institute for Medical Research",
+      "position": "Bioinformatics Engineer",
+      "startDate": "March 2022",
+      "location": "Sydney, Australia",
+      "url": "https://phageaustralia.org",
+      "description": "Led data engineering efforts to collect and aggregate all clinical, wet lab, and genomics data into a single source for data analysis for Phage Australia and STAMP, an Australia-wide clinical process trial for individualized phage therapy.",
+      "highlights": [
+        "Used Google Sheets and CUE lang to design and build a fully compliant electronic case report form (eCRF) on top of REDCap, totalling 800+ questions and collecting phage, clinical, and labs details before, during, and after treatment.",
+        "Prototyped a federated lab data tracking system that works across Google Sheets, Airtable, and JSON / document DBs, and verifies logs with Merkle hashes.",
+        "Designed and built the Phage Australia website on top of Vercel and Sveltekit, and is powered by Airtable, Notion, and Google Sheets.",
+        "Worked collaborated with lab members on projects like bioinformatics pipelines and generative UIs for lab data entry.",
+        "Used LLMs for schema inferencing and data (re-)structuring",
+        "Built an experimental data and grant analysis agent on top of LLMs / GPT-4."
+      ]
+    },
+    {
+      "name": "Phage Directory",
+      "position": "Co-founder · Technical co-founder",
+      "startDate": "October 2017",
+      "location": "Atlanta, GA + Nomad",
+      "description": "Phage Directory is a social enterprise that connects patients suffering from antibiotic-resistant infections patients with phages that can save their lives. We're also a community of thousands of phage researchers across 80+ countries, and we host webinars, week-long conferences, and build useful tools for microbiologists.",
+      "highlights": [
+        "Almost 60 phage alerts which led to 2 treated kids, 1 treated sea-turtle, and the Phage Australia clinical trial, which treated 16+ patients!",
+        "Phage Directory: built with Vue 2 using Airtable as CMS, Fly.io and Cloudflare workers as API, and Vercel for deployment.",
+        "Capsid & Tail: Our newsletter, has 1400 phage researcher subscribers and 40% open rate. Custom-built on Vue, Airtable, and launched on Mailchimp.",
+        "Evergreen Phage Conference: Created and hosted a One-week bacteriophage conference in Olympia, WA. 200+ attendees w/ $100k+ revenue, and abstract submission, review, and full days of science talks. I built the site, handled payments, but also on-site ops, emceeing, A/V, and other tasks. I also designed and branded everything.",
+        "Instill: A Grant for the Web project, this was created as a simple 'drop-in forum' that could be embedded in websites but also tools like Notion. Built on Sveltekit, powered by Airtable or Google Sheets, and runs on a simplified, custom auth. Originally created with the intention of using payment pointers.",
+        "Blogalog.net: A blog and website system with features like Stripe pay-gating, sign up forms, and advanced embedding and styling. Completely powered by Notion, and built on Sveltekit, Vercel, and powered by the official and a not-so-official Notion API."
+      ]
+    },
+    {
+      "name": "Ubiquiti Networks",
+      "position": "Lead UX Designer, Front-end developer",
+      "startDate": "2014",
+      "endDate": "2016",
+      "location": "Atlanta, GA",
+      "description": "Designed and built a support-centric community social network for Ubiquiti’s users, inspired by community forums, StackExchange, Quora, Instagram and others. Created business logic, requirements, wireframes, prototypes, and a modular, SCSS-based responsive framework. Also built front-end features using AngularJS."
+    },
+    {
+      "name": "nurun",
+      "position": "Sr. UX Architect",
+      "startDate": "2012",
+      "endDate": "2014",
+      "location": "Atlanta, GA",
+      "description": "Guided campaign requirements and strategy; created user flows, wireframes, and interactive protototypes for clients like Nespresso, Assurant, Gas South, and The Home Depot."
+    },
+    {
+      "name": "Freelance Designer",
+      "position": "Web Development · UX Design ",
+      "startDate": "2011",
+      "endDate": "2016",
+      "location": "Atlanta, GA",
+      "description": "Worked for several clients including Diamax Korea, doublethedonation.com, GigaGen (DNA sequencing/annotation software), ANDP (non-profit housing initiative), LifeLine Animal Project (non-profit, no-kill shelter)"
+    },
+    {
+      "name": "Moxie Interactive",
+      "position": "UX Architect",
+      "startDate": "2010",
+      "endDate": "2012",
+      "location": "Atlanta, GA",
+      "description": "Focused on web and mobile experiences, information architecture, and conversion funnels, for clients like Verizon Wireless, Cartoon Network, Coca-Cola, L'Oreal, and BBC America."
+    },
+    {
+      "name": "Microsoft",
+      "position": "Program Manager Intern · Visual Studio Team Services",
+      "startDate": "2008",
+      "endDate": "2008",
+      "location": "Raleigh, NC"
+    },
+    {
+      "name": "Lockheed Martin",
+      "position": "Software Developer · IT Division · Social Security Agency · Part-time",
+      "startDate": "2006",
+      "endDate": "2007",
+      "location": "Woodlawn, MD"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Carnegie Mellon University",
+      "area": "Human-Computer Interaction",
+      "studyType": "Masters (MHCI)",
+      "startDate": "2010"
+    },
+    {
+      "institution": "University of Maryland, Baltimore County",
+      "area": "Computer Science, Psychology",
+      "studyType": "Bachelor of Science (BSc)",
+      "startDate": "2006",
+      "endDate": "2010"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Attitudes to phage therapy among Australian infectious diseases physicians",
+      "publisher": "medRxiv",
+      "releaseDate": "2023",
+      "url": "https://doi.org/10.1101/2023.07.03.23292153",
+      "summary": "Preprint on attitudes towards phage therapy in Australia.",
+      "doi": "10.1101/2023.07.03.23292153",
+      "markdown": "Plymoth, M., Lynch, S. A., Khatami, A. K., Sinclair, H. A., Sacher, J. C., **Zheng, J.**, Lin, R. C. Y., & Iredell, J. R. (2023). Attitudes to phage therapy among Australian infectious diseases physicians [Preprint]. medRxiv. https://doi.org/10.1101/2023.07.03.23292153"
+    },
+    {
+      "name": "Data to Power Precision Phage Therapy: A Look at the Phage Directory–Phage Australia Partnership",
+      "publisher": "PHAGE: Therapy, Applications, and Research",
+      "releaseDate": "2022",
+      "url": "https://doi.org/10.1089/phage.2022.29030.jcs",
+      "summary": "Discussion on the partnership between Phage Directory and Phage Australia for precision phage therapy.",
+      "doi": "10.1089/phage.2022.29030.jcs",
+      "markdown": "Sacher, J. C., **Zheng, J.**, & Lin, R. C. (2022). Data to Power Precision Phage Therapy: A Look at the Phage Directory–Phage Australia Partnership. *PHAGE:* *Therapy, Applications, and Research*, *3*(2), 112-115. DOI: [10.1089/phage.2022.29030.jcs](https://doi.org/10.1089/phage.2022.29030.jcs)"
+    },
+    {
+      "name": "inPhocus: “State of Phage” Survey Highlights Widespread Diverse Phage Isolation and Research in 40+ Countries",
+      "publisher": "PHAGE: Therapy, Applications, and Research",
+      "releaseDate": "2021",
+      "url": "https://doi.org/10.1089/phage.2021.29023.jcs",
+      "summary": "Survey results highlighting global phage research and isolation efforts.",
+      "doi": "10.1089/phage.2021.29023.jcs",
+      "markdown": "Sacher, J. C., & **Zheng, J.** (2021). inPhocus: “State of Phage” Survey Highlights Widespread Diverse Phage Isolation and Research in 40+ Countries. *PHAGE:* *Therapy, Applications, and Research*, *2*(4), 156-169. DOI: [10.1089/phage.2021.29023.jcs](https://doi.org/10.1089/phage.2021.29023.jcs)"
+    },
+    {
+      "name": "Phage Biobank: Present Challenges and Future Perspectives",
+      "publisher": "Current Opinion in Biotechnology",
+      "releaseDate": "2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33581425/",
+      "summary": "Overview of current challenges and future perspectives for phage biobanks.",
+      "doi": "10.1016/j.copbio.2020.12.018",
+      "markdown": "Lin, R. C., Sacher, J. C., Ceyssens, P. J., **Zheng, J.**, Khalid, A., Iredell, J. R., & Network, T. A. P. B. (2021). Phage Biobank: Present Challenges and Future Perspectives. *Current Opinion in Biotechnology*, 68, 221-230. DOI: [10.1016/j.copbio.2020.12.018](https://pubmed.ncbi.nlm.nih.gov/33581425/)."
+    },
+    {
+      "name": "Current state of compassionate phage therapy",
+      "publisher": "Viruses",
+      "releaseDate": "2019",
+      "url": "https://www.mdpi.com/1999-4915/11/4/343",
+      "summary": "Overview of the current landscape and challenges in the application of phage therapy on a compassionate basis.",
+      "doi": "10.3390/v11040343",
+      "markdown": "McCallin, S., Sacher, J. C., Zheng, J., & Chan, B. K. (2019). Current state of compassionate phage therapy. Viruses, 11(4), 343. DOI: 10.3390/v11040343."
+    },
+    {
+      "name": "Sourcing Phages for Compassionate Use",
+      "publisher": "Microbiology Australia",
+      "releaseDate": "2019",
+      "url": "https://www.publish.csiro.au/MA/MA19012",
+      "summary": "Discussion on strategies for sourcing bacteriophages for use in compassionate therapy cases.",
+      "doi": "10.1071/MA19012",
+      "markdown": "Sacher, J. C., **Zheng, J.**, & McCallin, S. (2019) Sourcing Phages for Compassionate Use. *Microbiology Australia* 40(1) 24-27. DOI: [10.1071/MA19012](https://www.publish.csiro.au/MA/MA19012)."
+    },
+    {
+      "name": "Phage Therapy Collaboration and Compassionate Use",
+      "publisher": "Springer, Cham",
+      "releaseDate": "2019",
+      "url": "https://link.springer.com/referenceworkentry/10.1007/978-3-319-41986-2_50",
+      "summary": "Book chapter discussing phage therapy collaboration and the compassionate use of phages in therapeutic applications.",
+      "doi": "Book Chapter - Springer",
+      "markdown": "Sacher J. C., **Zheng J.** (2019) [Phage Therapy Collaboration and Compassionate Use](https://link.springer.com/referenceworkentry/10.1007/978-3-319-41986-2_50). In: Harper D., Abedon S., Burrowes B., McConville M. (eds) [Bacteriophages: Biology, Technology, Therapy](https://www.springer.com/gp/book/9783319419855). Springer, Cham."
+    }
+  ],
+  "awards": [
+    {
+      "title": "Mozilla Science Mini Grants",
+      "date": "2019",
+      "awarder": "Mozilla",
+      "summary": "We received two grants for Mozilla: (1) the first one for understanding phage researchers' biobanking needs and build a public database for phage labs, and (2) a collaboration with Phages for Global Health to create a public phage microbiology resource aimed at under-resourced labs and universities."
+    },
+    {
+      "title": "Grant for the Web",
+      "date": "2021",
+      "awarder": "Interledger Foundation",
+      "summary": "We received a grant to build Instill.xyz, a messaging board/forum for sharing links, papers, and peer reviewing manuscripts. "
+    }
+  ],
+  "skills": [
+    {
+      "name": "Design",
+      "description": "I'm a multi-disciplinary designer with experience ranging from user-centered UX research, wireframing and building Figma prototypes, and illustrating vector logos, to designing information/data architectures, building full-stack prototypes, and making more accessible APIs for better DX.",
+      "keywords": [
+        "Figma",
+        "Illustrator",
+        "InDesign",
+        "User-Centered Design",
+        "UX Research",
+        "Customer Discovery",
+        "API Design"
+      ],
+      "subskills": [
+        {
+          "name": "Product Design & Management",
+          "description": "Working with clients, startups, and projects to take ideas through the iterative design and prototyping stages.",
+          "details": [
+            "Stakeholder mapping",
+            "Requirement gathering",
+            "Scoping and establishing roadmap",
+            "Setting OKRs and product analytics / feedback system"
+          ],
+          "keywords": [
+            "User-centered design",
+            "Product Management"
+          ]
+        },
+        {
+          "name": "UX Research · Customer Discovery",
+          "description": "I've done user-centered design-style research for clients like Coca Cola, and performed lean startup-stylecustomer discovery for my own startup.",
+          "details": [
+            "Interviewed Ubiquiti users on how to best serve support/troubleshooting needs",
+            "Talked to and worked with hundreds of biologists to understand the drug discovery and phage therapy software tooling landscape"
+          ],
+          "keywords": [
+            "User-centered design",
+            "Customer interviews",
+            "Diary studies",
+            "Lean startup"
+          ]
+        },
+        {
+          "name": "Prototyping",
+          "description": "Rapidly iterating from idea to paper to wireframes and clickable prototypes, based on analytics, user interviews, and customer/team feedback.",
+          "details": [
+            "Going from Idea → Paper → Wireframes → Figma prototypes",
+            "Creating components and design systems in Figma",
+            "Building and iterating on component libraries in Svelte, CSS/SCSS, and Tailwind"
+          ],
+          "keywords": [
+            "Figma",
+            "Illustrator"
+          ]
+        },
+        {
+          "name": "Full-stack Prototyping",
+          "description": "Some experiences like LLM-driven generative UIs and APIs are hard to design on paper or in Figma.",
+          "details": [
+            "Rapidly iterating FastAPI endpoints for LLM and real or fake data, and testing using RESTFox",
+            "Prototyping RAG, agent, and other systems with Python and JS",
+            "Building rapid prototype (e.g. skipping type safety & unit tests) apps in Sveltekit"
+          ],
+          "keywords": [
+            "API design",
+            "Gen UI",
+            "Experimental User flows",
+            "CRUD Apps"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Software Development",
+      "description": "Once I have an outline of an idea, I'll move straight to code, to build a prototype or MVP. Many of the projects I build come from direct project, community, customer, or collaborator needs. Some are community asks or product needs; others are just for fun — since I'm an indie hacker / builder at heart!",
+      "keywords": [],
+      "subskills": [
+        {
+          "name": "Front-end Development",
+          "description": "Much of my dev work stems from Phage Directory's needs to build tools for the community. I'm an indie hacker at heart so here's a small slice of projects:",
+          "details": [
+            "Phage Directory: a directory of phage researchers and resources and custom-built blog running on Airtable",
+            "Evergreen: a science conference website with Stripe integration and LLM-assisted abstract submission",
+            "Blogalog.net: A blogging and site hosting system on Vercel and powered by Notion"
+          ],
+          "keywords": [
+            "JS/TS",
+            "Python",
+            "Svelte",
+            "SvelteKit",
+            "Vue",
+            "Nuxt",
+            "React",
+            "Next.js",
+            "Tailwind",
+            "CSS/SCSS",
+            "Node",
+            "Vite"
+          ]
+        },
+        {
+          "name": "API Design",
+          "description": "I've designed and built several services with API endpoints mostly for internal use, like data services on top of Cloudflare, Apps Scripts, and wrappers around getting/posting data to Airtable and Notion.",
+          "details": [
+            "Built and deployed a service for accessing multiple LLMs and RAG endpoint in Python, on Fly.io",
+            "Built a system to merge and cache/invalidate data from several APIs like Notion, Airtable, Google Sheets and RAG, to serve front-ends"
+          ],
+          "keywords": [
+            "FastAPI",
+            "Cloudflare Stack",
+            "Node.js",
+            "Express",
+            "Hono"
+          ]
+        },
+        {
+          "name": "Internal Tools",
+          "description": "Many tools I've built simplify lots of tasks, like having the ability to use Airtable and Notion as a CMS for instantly editing websites, and logging signups to Sheets.",
+          "details": [
+            "Built a wrapper around Notion/Airtable/Google Sheets APIs to read and write data, as a CMS suite (which frees us from hefty headless CMS prices)",
+            "Built interfaces like reviewing research papers, micro-comments systems, etc. using Sveltekit/Retool/D1/Airtable and other tools",
+            "Built a CLI to make backing up data w/ rclone simpler"
+          ],
+          "keywords": [
+            "Vercel",
+            "Cloudflare Stack",
+            "Fly.io",
+            "MongoDB",
+            "CouchDB",
+            "SQL",
+            "rclone",
+            "CLI",
+            "Retool",
+            "Airtable"
+          ]
+        },
+        {
+          "name": "AI Engineering",
+          "description": "Building experimental tools with LLMS.",
+          "details": [
+            "Experimenting with embeddings, vector databases and RAG for data retrieval",
+            "Building a tool that structures lab data and research papers into searchable data",
+            "Building a 'semi-stochastic' agent that uses composable building blocks for function calling",
+            "Built a GPT that acts as a note taker and stores + structures data"
+          ],
+          "keywords": [
+            "Claude",
+            "GPT-4 API",
+            "LangChain",
+            "Llamaindex",
+            "Cloudflare AI",
+            "Vercel AI SDK",
+            "Various RAG / Vector Pipelines"
+          ]
+        },
+        {
+          "name": "Bioinformatics Engineering",
+          "description": "At Phage Australia, I set up many systems for collecting, storing, and analyzing data around (ELT/ETL) for our phage therapy clinical trial. Since researchers prefer spreadsheets, the system reads/loads into Google Sheets instead of traditional ELT software.",
+          "details": [
+            "Built an 800+ question electronic case report form with REDCap.",
+            "Used LLMs to structure and store unsanitized data.",
+            "Built a system on R2 that acts as a data lake/house for any lab data, including anonymized clinical data, genomics data, and lab results."
+          ],
+          "keywords": [
+            "Node.js",
+            "python",
+            "Cloudflare R2, D1, Workers",
+            "duckdb",
+            "LLms",
+            "REDCap",
+            "ELT/ETL pipelines"
+          ]
+        }
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "organization": "Full Radius Dance",
+      "position": "Board Member",
+      "url": "https://fullradiusdance.org/",
+      "startDate": "2019",
+      "endDate": "2022",
+      "summary": "Full Radius Dance is a dance company that combines 'traditional' modern dance with techniques that let dancers perform with dancer with physical disabilities.",
+      "highlights": [
+        "Supported technical aspects like collecting payments of new events.",
+        "Considered building a platform for FRD to teach the dance technique during COVID-19, as an online wiki / technique manual.",
+        "Previously performed as a dancer for one of FRD's events, the Modern Atlanta Dance Festival."
+      ]
+    }
+  ],
+  "volunteering": [
+    {
+      "organization": "American Institute of Graphic Arts (AIGA)",
+      "position": "Rise Up! Design Mentor",
+      "url": "https://atlanta.aiga.org",
+      "startDate": "2020",
+      "summary": "The program helped people who wanted to transition into design and UX from other fields.",
+      "highlights": [
+        "Held bi-weekly mentorship meetings with a graphic designer who worked at a local newspaper. Showed her career paths and helped optimize her entry into UX. She eventually landed a UX job at Amazon Echo."
+      ]
+    }
+  ]
+}
