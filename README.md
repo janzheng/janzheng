@@ -1,16 +1,33 @@
-# Smallweb Astro
+# janzheng.com
 
-This is the main Astro project for smallweb / Deno.
-NOTE THAT IT DOESN'T WORK PROPERLY ON SMWALLWEB!!! You must run `astro dev` locally.
+Personal portfolio and blog built with Astro, Svelte, React, and Tailwind CSS. Deployed on Deno Deploy.
 
+## Stack
 
+- **Framework:** [Astro](https://astro.build/) (SSR mode)
+- **UI:** Svelte + React components
+- **Styling:** Tailwind CSS + SCSS
+- **Runtime:** Deno
+- **Deployment:** [Deno Deploy](https://deno.com/deploy)
 
-## Usage
+## Development
 
 ```sh
-smallweb init ~/localhost/astro --template pomdtr/smallweb-astro-template
-cd ~/localhost/astro
-npm install && npm run build
+yarn install
+yarn dev
 ```
 
-The go to `https://astro.localhost` in your browser.
+## Build & Preview
+
+```sh
+yarn build
+yarn preview
+```
+
+## Deploy
+
+```sh
+yarn prod
+```
+
+This runs `astro build` and deploys to Deno Deploy via `deployctl`.
