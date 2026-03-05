@@ -1,0 +1,21 @@
+---
+import Layout from '@layouts/Layout.astro';
+
+// const { url = 'http://localhost:9999/janzheng?mode=live' } = Astro.props;
+const { url = 'https://coverflow.deno.dev/janzheng?mode=live' } = Astro.props;
+
+let response = await fetch(url, {
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json; charset=utf-8'
+  }
+});
+
+
+---
+
+<Layout>
+  <div class="container mx-auto my-12 text-center">
+    Reloading {url} ...!
+  </div>
+</Layout> 

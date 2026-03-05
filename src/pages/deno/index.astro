@@ -1,0 +1,46 @@
+---
+import "@fontsource/shrikhand";
+import "@fontsource/permanent-marker";
+import "@fontsource-variable/nunito";
+
+import Layout from "@layouts/Layout.astro";
+// import Notion from "@components/sveltekit-notion/src/Notion.svelte";
+// import EmailSignup from "@components/EmailSignup.astro";
+
+// const response = await fetch(`http://localhost:9999/sicamous`);
+// const response = await fetch(`https://coverflow.deno.dev/sicamous`);
+
+// const notionPageBlocks = await response.json();
+// console.log("sicamous blocks:::", notionPageBlocks);
+
+// const currentUrl = Astro.url.hostname;
+// const isJanFirst = currentUrl.includes('janandjess.com');
+// const names = isJanFirst ? 'Jan and Jess' : 'Jess and Jan';
+
+
+
+let geminiBbox;
+try {
+  if (typeof Deno !== "undefined") {
+    const { html } = await import("https://esm.town/v/yawnxyz/geminiBbox?v=198");
+    geminiBbox = html;
+  }
+} catch (error) {
+  console.error("Error importing module:", error);
+}
+// https://esm.town/v/yawnxyz/geminiBbox?v=198
+// challenge();
+// console.log("banana:::", challenge());
+
+---
+
+<Layout>
+  <div class="page | container mx-auto pt-24 pb-24 px-4 sm:px-2">
+    {geminiBbox ? (
+      <Fragment set:html={geminiBbox} />
+    ) : typeof Deno === "undefined" ? (
+      <p>Deno is not available in this environment.</p>
+    ) : null}
+    
+  </div>
+</Layout>

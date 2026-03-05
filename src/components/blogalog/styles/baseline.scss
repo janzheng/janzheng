@@ -1,0 +1,412 @@
+@tailwind components;
+
+
+// rgb(219, 244, 233)
+:root {
+  // colors
+  --pure-white: #ffffff;
+  --primary-color: #b9c6d2;
+  --secondary-color: #d0dde9;
+  --tertiary-color: #edf0f8;
+  --accent-color: #ff3e00;
+  --heading-color: rgba(0, 0, 0, 0.7);
+  --text-color: #37352f;
+  --color-base: #37352f;
+  --background-without-opacity: rgba(255, 255, 255, 0.7);
+  --column-width: 42rem;
+  --column-margin-top: 4rem;
+
+  // this sets the page width of all blogalog
+  --blogalog-page-width: 79ch; // comfiest ch width, roughly 770px
+  --blogalog-page-custom-width: 77ch;
+  --blogalog-post-width: 72ch; // post / blog pages
+  --color-title: #37352f;
+  --color-link: #1d4ed8;
+  --color-link-hover: #1d4ed8;
+  // --color-title-link: #2563eb;
+  --color-title-link: #1d4ed8;
+  --color-bg: inherit; //#fff;
+
+  --color-primary: #3b82f6;
+  /* blue-600 */
+  --color-primary-hover: #1d4ed8;
+  /* blue-700 */
+  --color-title-hover: #1d4ed8;
+  /* blue-700 */
+  --color-primary-active: #1e40af;
+  /* blue-800 */
+  --color-primary-active-hover: #1e40af;
+  /* blue-800 */
+  --color-primary-white: #eff6ff;
+  /* blue-50 */
+  --color-primary-light: #dbeafe;
+  /* blue-800 */
+  --color-primary-dark: #1e40af;
+  /* blue-800 */
+  --color-primary-ring: #dbeafe;
+  /* blue-100 */
+  --color-primary-ring-active: #60a5fa;
+  /* blue-400 */
+  --color-primary-text: white;
+  --color-primary-text-hover: #dbeafe;
+  /* blue-100 */
+  --slideup-distance: 60px;
+  --slideup-duration: 0.3s;
+  --font-title: 'Nanum Myeongjo', -apple-system, sans-serif;
+  --font-paragraph: 'Inter', -apple-system, sans-serif;
+
+  --link-hover-decoration: underline;
+  --link-hover-decoration-thickness: auto;
+
+
+
+  // Flexoki Colors
+  --flexoki-black: #100F0F;
+  --flexoki-paper: #FFFCF0;
+
+  // UI & Layout
+  --flexoki-bg: #FFFCF0;
+  --flexoki-bg-alt: #F2F0E5;
+  --flexoki-border-base: #282726;
+  --flexoki-border-hover: #343331;
+  --flexoki-border-active: #403E3C;
+
+  // Typography  
+  --flexoki-text-faint: #575653;
+  --flexoki-text-muted: #878580;
+  --flexoki-text-primary: #100F0F;
+  --flexoki-tx: #100F0F;
+
+  // Status & Feedback
+  --flexoki-text-error: #D14D41;
+  --flexoki-text-warning: #DA702C;
+  --flexoki-text-success: #879A39;
+
+  // Interactive Elements
+  --flexoki-text-link: #3AA99F;
+
+  // Syntax Highlighting
+  --flexoki-syntax-constant: #D0A215;
+  --flexoki-syntax-variable: #4385BE;
+  --flexoki-syntax-number: #8B7EC8;
+  --flexoki-syntax-keyword: #CE5D97;
+
+  // Light Theme Colors
+  --flexoki-light-bg: #FFFCF0;
+  --flexoki-light-bg-2: #F2F0E5;
+  --flexoki-light-ui: #E6E4D9;
+  --flexoki-light-ui-2: #DAD8CE;
+  --flexoki-light-ui-3: #CECDC3;
+  --flexoki-light-tx: #100F0F;
+  --flexoki-light-tx-2: #6F6E69;
+  --flexoki-light-tx-3: #B7B5AC;
+
+  // Dark Theme Colors  
+  --flexoki-dark-bg: #100F0F;
+  --flexoki-dark-bg-2: #1C1B1A;
+  --flexoki-dark-ui: #282726;
+  --flexoki-dark-ui-2: #343331;
+  --flexoki-dark-ui-3: #403E3C;
+  --flexoki-dark-tx: #CECDC3;
+  --flexoki-dark-tx-2: #878580;
+  --flexoki-dark-tx-3: #575653;
+
+  // Flexoki Color Palette
+
+  // Base
+  --flexoki-base-50: #F2F0E5;
+  --flexoki-base-100: #E6E4D9;
+  --flexoki-base-150: #DAD8CE;
+  --flexoki-base-200: #CECDC3;
+  --flexoki-base-300: #B7B5AC;
+  --flexoki-base-400: #9F9D96;
+  --flexoki-base-500: #878580;
+  --flexoki-base-600: #6F6E69;
+  --flexoki-base-700: #575653;
+  --flexoki-base-800: #403E3C;
+  --flexoki-base-850: #343331;
+  --flexoki-base-900: #282726;
+  --flexoki-base-950: #1C1B1A;
+  // Red
+  --flexoki-red-50: #FFE1D5;
+  --flexoki-red-100: #FFCABB;
+  --flexoki-red-150: #FDB2A2;
+  --flexoki-red-200: #F89A8A;
+  --flexoki-red-300: #E8705F;
+  --flexoki-red-400: #D14D41;
+  --flexoki-red-500: #C03E35;
+  --flexoki-red-600: #AF3029;
+  --flexoki-red-700: #942822;
+  --flexoki-red-800: #6C201C;
+  --flexoki-red-850: #551B18;
+  --flexoki-red-900: #3E1715;
+  --flexoki-red-950: #261312;
+
+  // Orange
+  --flexoki-orange-50: #FFE1D5;
+  --flexoki-orange-100: #FFCABB;
+  --flexoki-orange-150: #FDB2A2;
+  --flexoki-orange-200: #F89A8A;
+  --flexoki-orange-300: #E8705F;
+  --flexoki-orange-400: #D14D41;
+  --flexoki-orange-500: #C03E35;
+  --flexoki-orange-600: #AF3029;
+  --flexoki-orange-700: #942822;
+  --flexoki-orange-800: #6C201C;
+  --flexoki-orange-850: #551B18;
+  --flexoki-orange-900: #3E1715;
+  --flexoki-orange-950: #261312;
+
+  // Yellow
+  --flexoki-yellow-50: #FAEEC6;
+  --flexoki-yellow-100: #F6E2A0;
+  --flexoki-yellow-150: #F1D67E;
+  --flexoki-yellow-200: #ECCB60;
+  --flexoki-yellow-300: #DFB431;
+  --flexoki-yellow-400: #D0A215;
+  --flexoki-yellow-500: #BE9207;
+  --flexoki-yellow-600: #AD8301;
+  --flexoki-yellow-700: #8E6B01;
+  --flexoki-yellow-800: #664D01;
+  --flexoki-yellow-850: #503D02;
+  --flexoki-yellow-900: #3A2D04;
+  --flexoki-yellow-950: #241E08;
+
+  // Green
+  --flexoki-green-50: #EDEECF;
+  --flexoki-green-100: #DDE2B2;
+  --flexoki-green-150: #CDD597;
+  --flexoki-green-200: #BEC97E;
+  --flexoki-green-300: #A0AF54;
+  --flexoki-green-400: #879A39;
+  --flexoki-green-500: #768D21;
+  --flexoki-green-600: #66800B;
+  --flexoki-green-700: #536907;
+  --flexoki-green-800: #3D4C07;
+  --flexoki-green-850: #313D07;
+  --flexoki-green-900: #252D09;
+  --flexoki-green-950: #1A1E0C;
+
+  // Cyan
+  --flexoki-cyan-50: #DDF1E4;
+  --flexoki-cyan-100: #BFE8D9;
+  --flexoki-cyan-150: #A2DECE;
+  --flexoki-cyan-200: #87D3C3;
+  --flexoki-cyan-300: #5ABDAC;
+  --flexoki-cyan-400: #3AA99F;
+  --flexoki-cyan-500: #2F968D;
+  --flexoki-cyan-600: #24837B;
+  --flexoki-cyan-700: #1C6C66;
+  --flexoki-cyan-800: #164F4A;
+  --flexoki-cyan-850: #143F3C;
+  --flexoki-cyan-900: #122F2C;
+  --flexoki-cyan-950: #101F1D;
+
+  // Blue
+  --flexoki-blue-50: #E1ECEB;
+  --flexoki-blue-100: #C6DDE8;
+  --flexoki-blue-150: #ABCFE2;
+  --flexoki-blue-200: #92BFDB;
+  --flexoki-blue-300: #66A0C8;
+  --flexoki-blue-400: #4385BE;
+  --flexoki-blue-500: #3171B2;
+  --flexoki-blue-600: #205EA6;
+  --flexoki-blue-700: #1A4F8C;
+  --flexoki-blue-800: #163B66;
+  --flexoki-blue-850: #133051;
+  --flexoki-blue-900: #12253B;
+  --flexoki-blue-950: #101A24;
+
+  // Purple
+  --flexoki-purple-50: #F0EAEC;
+  --flexoki-purple-100: #E2D9E9;
+  --flexoki-purple-150: #D3CAE6;
+  --flexoki-purple-200: #C4B9E0;
+  --flexoki-purple-300: #A699D0;
+  --flexoki-purple-400: #8B7EC8;
+  --flexoki-purple-500: #735EB5;
+  --flexoki-purple-600: #5E409D;
+  --flexoki-purple-700: #4F3685;
+  --flexoki-purple-800: #3C2A62;
+  --flexoki-purple-850: #31234E;
+  --flexoki-purple-900: #261C39;
+  --flexoki-purple-950: #1A1623;
+
+  // Magenta
+  --flexoki-magenta-50: #FEE4E5;
+  --flexoki-magenta-100: #FCCFDA;
+  --flexoki-magenta-150: #F9B9CF;
+  --flexoki-magenta-200: #F4A4C2;
+  --flexoki-magenta-300: #E47DA8;
+  --flexoki-magenta-400: #CE5D97;
+  --flexoki-magenta-500: #B74583;
+  --flexoki-magenta-600: #A02F6F;
+  --flexoki-magenta-700: #87285E;
+  --flexoki-magenta-800: #641F46;
+  --flexoki-magenta-850: #4F1B39;
+  --flexoki-magenta-900: #39172B;
+  --flexoki-magenta-950: #24131D;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  font-size: 1rem; // make base font slightly larger for everything
+  line-height: 1rem * 1.52; // make base font slightly larger for everything
+  // font-size: 0.875rem; // 14px; good for dashboards
+  // background-color: var(--color-evergreen);
+
+  .notion-page {
+    --notion-h1-weight: 500;
+    --notion-h2-weight: 500;
+    --notion-h3-weight: 400;
+    --notion-h3: 1.26rem;
+
+    --notion-p-padding: var(--notion-8px) var(--notion-2px);
+  }
+
+  b {
+    font-weight: 600;
+  }
+
+  // --base: 1.125rem;
+  // --title: 2.7rem;
+  // --h1: 2em;
+  // --h2: 1.74rem;
+  // --h3 : 1.2rem;
+
+  // --notion-base: var(--base) !important;
+  // --notion-title: var(--title) !important;
+  // --notion-h1: var(--h1) !important;
+  // --notion-h2: var(--h2) !important;
+  // --notion-h3 : var(--h3) !important;
+
+
+  // typography
+  font-family: 'Inter',
+  Arial,
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  'Open Sans',
+  'Helvetica Neue',
+  sans-serif;
+  /* --font-mono: 'Fira Mono', monospace; */
+  --font-mono: monospace;
+
+}
+
+
+// legacy
+$border-thin: 2px;
+$size: 1rem;
+$height-input: 3rem; //inherit; // coeur sets a height limit on inputs, but we don't want that here
+$radius: 0.375rem;
+$font-small: 0.825rem;
+
+
+
+
+
+/* 
+
+  Other resets
+
+*/
+svg {
+  display: inline;
+}
+
+// prevents annoying blue border on main section on focus
+main:focus:not(:focus-visible),
+main ._content:focus-visible,
+.layout:focus-visible,
+.ContentBody:focus-visible {
+  // outline: none !important;
+  outline: transparent !important;
+}
+
+// @layer component {
+._page {
+  @apply max-w-xl mx-auto py-12 px-4 md:max-w-4xl;
+}
+
+._content {
+  // @apply relative container mx-auto p-4 w-full h-full;
+  @apply relative container mx-auto sm:p-4 w-full h-full;
+
+  &.--page {
+    @apply pt-16 pb-32;
+  }
+}
+
+// override 'container'
+@media (min-width: 320px) {
+  ._content {
+    @apply mx-auto max-w-full px-4;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 320px) {
+  ._content {
+    max-width: 100% !important;
+  }
+}
+
+
+._content-text {
+  @apply relative container max-w-3xl mx-auto p-4 w-full h-full;
+}
+
+._content-narrow {
+  @apply relative container max-w-[704px] mx-auto p-4 w-full h-full;
+}
+
+._content-narrower {
+  // matches the submit abstract box; for enter ticket ID
+  @apply relative container max-w-[361.5px] mx-auto p-4 w-full h-full;
+}
+
+._content-wide {
+  @apply relative container max-w-7xl mx-auto p-4 w-full h-full;
+}
+
+._content-xlg {
+  @apply xl:container xl:mx-auto xl:rounded-xl;
+}
+
+// }
+
+
+
+// tailwinds strips these 
+ul li {
+  @apply list-disc list-inside;
+
+  &:last-child {
+    @apply mb-2;
+  }
+}
+
+ol li {
+  @apply list-inside;
+  // @apply list-decimal list-inside;
+
+  &:last-child {
+    @apply mb-2;
+  }
+}

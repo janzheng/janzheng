@@ -1,0 +1,163 @@
+.Resume {
+
+
+  input,
+  input[type=text] {
+    margin-top: 0 !important;
+  }
+
+  .resume {
+    // actual resume class
+    @apply text-slate-700;
+
+    // print styles
+    // @media print {
+    // }
+  }
+
+  .mdpara {
+    // markdown paragraphs
+  }
+
+  p {
+    @apply inline-block mb-2;
+  }
+
+  ._tag {
+    @apply inline-block text-xs py-1 px-2 bg-slate-100 text-slate-700 rounded-sm mr-1 mb-1;
+  }
+
+  ._slate {
+    @apply text-slate-500;
+  }
+
+  .title {
+    @apply text-xl mb-2;
+    @apply print:text-base print:mb-0;
+  }
+
+  .sub-title {
+    @apply text-base;
+    @apply print:text-sm;
+  }
+
+  .items-cols {
+    // @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+    @apply grid grid-cols-1 gap-0;
+  }
+
+
+
+
+  .section {
+    @apply mt-24 print:mt-4;
+
+    a {
+      @apply text-blue-700 hover:text-blue-900 hover:underline;
+
+      &.item-link {
+        // too much blue! 
+        @apply text-black hover:text-slate-800;
+      }
+    }
+
+
+    .item {
+      a {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+      &>div {
+        // single attribute
+        @apply mt-2 print:mt-0;
+      }
+    }
+
+    li {
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+
+  }
+
+
+  li {
+    @apply my-1;
+    list-style: none;
+    display: flex;
+
+    &::before {
+      content: '•';
+      color: #999;
+      font-size: 1.5rem;
+      line-height: 0.8;
+      padding-right: 0.75rem;
+      margin-left: -1.5rem;
+    }
+  }
+
+  .preview-mode {
+    // for preview mode
+
+    .button {
+      @apply border-blue-100 px-2 py-1 text-blue-700;
+
+      &.active {
+        @apply bg-blue-700 text-white;
+      }
+    }
+  }
+
+  .p0 {
+
+    *,
+    & {
+      @apply pb-0 mb-0;
+    }
+  }
+
+
+  // draggable
+  .view-json {
+    overflow: auto;
+  }
+
+  .handlebar {
+    cursor: ew-resize;
+    // background-color: #333;
+    width: 8px;
+    z-index: 10;
+    position: relative;
+    margin-left: -18px;
+  }
+
+  .view-resume {
+    flex-grow: 1;
+  }
+
+
+}
+
+// end .Resume
+
+
+
+
+// special templates
+
+.compact {
+  .SocialBox {
+    @apply grid lg:grid-cols-2 gap-x-4 gap-y-1;
+
+    svg {
+      margin-right: 0.25rem !important;
+      min-width: 20px;
+      min-height: 20px;
+    }
+  }
+
+  .section {
+    @apply mt-3;
+  }
+}

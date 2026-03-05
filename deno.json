@@ -1,0 +1,15 @@
+{
+  "imports": {
+    "@deno/dnt": "jsr:@deno/dnt@^0.41.3"
+  },
+  "deploy": {
+    "project": "cdf5a87a-51b4-4150-9567-99caac4daaa2",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [
+      "./dist"
+    ],
+    "entrypoint": "dist/server/entry.mjs"
+  }
+}

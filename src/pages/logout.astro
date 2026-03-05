@@ -1,0 +1,11 @@
+---
+const response = new Response(null, {
+  status: 302, // Redirect status
+  headers: {
+    'Set-Cookie': `session_token=; Max-Age=0; Path=/`, // Remove the session cookie
+    'Location': '/login' // Redirect to login page
+  }
+});
+
+return response;
+---

@@ -1,0 +1,180 @@
+{
+  "$schema": "file:///Users/janzheng/Desktop/Projects/resume-json-test/resume-schema-2.json",
+  "meta": {
+    "version": "v1.0.0",
+    "lastModified": "2024-02-20T10:00:00",
+    "classes": "compact",
+    "template": "compact",
+    "sections": [
+      {
+        "name": "about",
+        "label": "Experience",
+        "titleClass": "hidden"
+      },
+      {
+        "name": "work",
+        "label": "Experience",
+        "titleClass": "hidden"
+      },
+      {
+        "name": "education",
+        "titleClass": "hidden"
+      },
+      {
+        "name": "skills",
+        "titleClass": "hidden"
+      }
+    ],
+    "order": [
+      "about",
+      "work",
+      "education",
+      "skills",
+      "projects",
+      "publications",
+      "certificates",
+      "awards",
+      "talks",
+      "writings",
+      "media",
+      "interests",
+      "languages",
+      "roles",
+      "volunteer",
+      "references"
+    ]
+  },
+  "basics": {
+    "name": "Jan Zheng",
+    "title": "",
+    "label": "AI Design Engineer & Bioinformatics Engineer",
+    "image": "https://f2.phage.directory/blogalog/jan-parrot-smaller.jpeg",
+    "email": "jan@phage.directory",
+    "summary": "AI design engineer with HCI background, specializing in rapid prototypes that solve real-world problems. Builds AI-powered automation systems that help scientists and researchers streamline their workflows. \n\n Previously built software that supported 20+ phage therapy cases in a nation-wide clinical trial",
+    "about": "I have over a decade in user-centered product and UX design,  and full-stack prototype development. My work spans UX research to Figma prototypes, to full-stack JS in Vue/Svelte/React, deployed on Vercel, Cloudflare, or Fly. My last few years focused on Phage Directory, a community-driven crowd-sourced phage therapy project. We were key partners in creating an Australia-wide phage therapy clinical trial, and helped treat ~20 patients. Recently, I've been building experimental LLM tools like generative UI and finite state machine agents.",
+    "location": {
+      "city": "San Francisco"
+    },
+    "profiles": [
+      {
+        "network": "Website",
+        "url": "https://janzheng.com"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://linkedin.com/in/janzh"
+      },
+      {
+        "network": "Twitter",
+        "url": "https://twitter.com/yawnxyz"
+      },
+      {
+        "network": "Github",
+        "url": "http://github.com/janzheng"
+      },
+      {
+        "network": "googlescholar",
+        "url": "https://scholar.google.com/citations?hl=en&user=FR2GtNoAAAAJ"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Westmead Institute for Medical Research / Phage Australia",
+      "position": "Bioinformatics Engineer",
+      "startDate": "2022",
+      "location": "Sydney, Australia",
+      "url": "https://phageaustralia.org",
+      "description": "Built data collection pipelines, aggregating clinical, wet lab, & genomics data for an Australia-wide phage therapy trial, on tools like REDCap, Cloudflare Workers, Vercel, and Sveltekit. Also worked on LLMs for schema inferencing and structuring, and prototyped tools for recording lab notebook data."
+    },
+    {
+      "name": "Phage Directory",
+      "position": "Co-founder",
+      "startDate": "2017",
+      "location": "Atlanta",
+      "description": "Community of 1000+ phage researchers, we connect patients with phage therapy, and have treated 3 patients. We build valuable phage tools and run conferences, and our success led to an Australia-wide phage therapy clinical trial. Our trial successfully treated 16+ patients in 2023."
+    },
+    {
+      "name": "Ubiquiti Networks",
+      "position": "Lead UX Designer, Front-end developer",
+      "startDate": "2014",
+      "endDate": "2016",
+      "location": "Atlanta, GA",
+      "description": "Designed and built a support-centric community / forum / 'social network' for Ubiquiti’s core users."
+    },
+    {
+      "name": "nurun",
+      "position": "Sr. UX Architect",
+      "startDate": "2012",
+      "endDate": "2014",
+      "location": "Atlanta, GA",
+      "description": "Guided campaign requirements and strategy; created user flows, wireframes, and interactive protototypes for clients like Nespresso, Assurant, Gas South, and The Home Depot."
+    },
+    {
+      "name": "Moxie Interactive",
+      "position": "UX Architect",
+      "startDate": "2010",
+      "endDate": "2012",
+      "location": "Atlanta, GA",
+      "description": "Focused on web and mobile experiences, information architecture, and conversion funnels, for clients like Verizon Wireless, Cartoon Network, Coca-Cola, L'Oreal, and BBC America."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Carnegie Mellon University",
+      "area": "Human-Computer Interaction",
+      "location": "Pittsburgh, PA",
+      "studyType": "Masters (MHCI)",
+      "startDate": "2005",
+      "endDate": "2009"
+    },
+    {
+      "institution": "University of Maryland, Baltimore County",
+      "area": "Computer Science, Psychology",
+      "location": "Catonsville, MD",
+      "studyType": "Bachelor of Science (BSc)",
+      "startDate": "2006-09",
+      "endDate": "2010-05"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Product Design",
+      "description": "Coming from user-centered design and service design, I'm also comfortable talking to customers and design the whole picture. I'm equally comfortable designing in Figma, SCSS, or JS/Python, which is handy for API, Gen AI/UI, and LLM-centric design.",
+      "keywords": [
+        "Figma",
+        "User-Centered Design",
+        "UX Research",
+        "UX & Data Architecture",
+        "Customer Interviews",
+        "Lean startup"
+      ]
+    },
+    {
+      "name": "Software Development",
+      "description": "I've previously designed and built interfaces in Svelte/Vue/React, and backend in Express/Hono/FastAPI, and deployed on Fly.io, Vercel, and Cloudflare. ",
+      "keywords": [
+        "JS/TS",
+        "Python",
+        "Svelte",
+        "Vue",
+        "React",
+        "Tailwind/SCSS/CSS",
+        "Docker",
+        "FastAPI",
+        "Express/Hono",
+        "Vercel",
+        "Cloudflare",
+        "Fly.io",
+        "CouchDB",
+        "MongoDB",
+        "Supabase",
+        "AI APIs",
+        "LangChain",
+        "Llamaindex",
+        "RAG + Vector DBs",
+        "ETL / ELT"
+      ]
+    }
+  ]
+}
