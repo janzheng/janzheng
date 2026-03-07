@@ -1,4 +1,29 @@
 ---
+/*
+  [postPath].astro — Individual blog post page
+
+  Fetches blogalog data from coverflow-v3 API and renders a single post
+  matched by the URL path (e.g., /svelte-masonry).
+
+  URL Query Parameters:
+    mode=local     — Fetch from localhost:9999 (always bypasses caches)
+    refresh=true   — Bust both local (Astro cachedFetch) and remote (Smallstore) caches
+    noCache=true   — Same as refresh; busts both caches
+
+  Local Development (sacramento + coverflow-v3 running locally):
+    1. Start coverflow-v3:  cd coverflow-v3 && deno task serve
+    2. Start sacramento:    cd sacramento && npm run dev
+    3. Visit a post:        http://localhost:4321/svelte-masonry?mode=local
+       (always fresh — caches are automatically bypassed in local mode)
+
+  Production (fetches from coverflow-v3.yawnxyz.deno.net):
+    - Default:              http://localhost:4321/svelte-masonry
+    - Force refresh:        http://localhost:4321/svelte-masonry?refresh=true
+
+  API Endpoints:
+    - Local:  http://localhost:9999/janzheng
+    - Prod:   https://coverflow-v3.yawnxyz.deno.net/janzheng
+*/
 
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
@@ -8,6 +33,7 @@ import '@fontsource/nanum-myeongjo/400.css';
 import '@fontsource/nanum-myeongjo/700.css';
 
 import { marked } from 'marked';
+import { cachedFetch } from '@lib/cache';
 import Layout from '@layouts/Layout.astro';
 import BlogalogPostPage from '@components/blogalog/BlogalogPostPage.svelte';
 import BlogalogFooter from '@components/blogalog/BlogalogFooter.svelte';
@@ -15,43 +41,50 @@ import BlogalogFooter from '@components/blogalog/BlogalogFooter.svelte';
 // custom posts
 import MoreWithLess from '@components/projects/moreWithLess/MoreWithLess.astro';
 
-// const { url = 'https://coverflow.deno.dev/janzheng' } = Astro.props;
-// const { url = 'http://localhost:9999/janzheng?mode=live' } = Astro.props;
-// const { url = 'http://localhost:9999/janzheng' } = Astro.props;
+const { url: astroUrl } = Astro;
+const urlParams = new URLSearchParams(astroUrl.search);
+const isLocal = urlParams.get("mode")?.includes("local");
+const refresh = urlParams.get("refresh") === "true";
+const noCache = urlParams.get("noCache") === "true";
 
+// Local mode always bypasses caches for faster dev iteration
+const shouldRefresh = noCache || refresh || !!isLocal;
 
-const url = import.meta.env.PROD
-  ? "https://coverflow.deno.dev/janzheng"
-  : "http://localhost:9999/janzheng?mode=live";
+// Build API URL with query params
+const base = isLocal
+  ? "http://localhost:9999/janzheng"
+  : "https://coverflow-v3.yawnxyz.deno.net/janzheng";
+const params = new URLSearchParams();
+if (isLocal) params.set("mode", "local");
+if (shouldRefresh) params.set("noCache", "true");
+const qs = params.toString();
+const url = qs ? `${base}?${qs}` : base;
 
 const { postPath } = Astro.params;
 let blogalogData = {}, currentPost;
 try {
-  let response = await fetch(url, {
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json; charset=utf-8'
-    }
+  blogalogData = await cachedFetch(url, {
+    refresh: shouldRefresh,
+    fetchOptions: {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json; charset=utf-8'
+      }
+    },
   });
-  
-  blogalogData = await response.json();
-  currentPost = blogalogData.pages?.find(item => item.Path === postPath) || null;
+  currentPost = blogalogData.pages?.find(item => item.path === postPath) || null;
 
   if (!currentPost) {
     console.log('rewrite to 404');
     return Astro.rewrite('/404');
   }
 
-  // console.log('postData:::', postPath, currentPost);
 } catch (error) {
   console.error(`Error fetching or parsing blogalog data: [${url}]`, error);
 }
 
-
-
-
 ---
-<Layout title={currentPost?.Name}>
+<Layout title={currentPost?.name}>
   <div class="JanZheng | Article | ">
     {currentPost && (
       <BlogalogPostPage {blogalogData} {currentPost} client:load="svelte">

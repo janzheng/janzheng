@@ -17,15 +17,14 @@ export function getPageBlocks(blocks, blogalogData) {
 export function buildPageOrder({ sitePages, pageOrder = [], sections = [] } = {}) {
   // build the sections list
   sitePages?.forEach(page => {
-    if (page?.Type) {
-      const Section = page.Section;
-      if (Section && Section.length > 0 && Section !== ' ') {
-        // console.log('Section -->', `[${Section}]`)
-        const sectionExists = sections.find(section => section.Section === Section);
+    if (page?.type) {
+      const section = page.section;
+      if (section && section.length > 0 && section !== ' ') {
+        const sectionExists = sections.find(s => s.section === section);
         if (sectionExists) {
           sectionExists.pages.push(page);
         } else {
-          const newSection = { Section: Section, SectionDescription: page.SectionDescription, pages: [page] };
+          const newSection = { section: section, sectionDescription: page.sectionDescription, pages: [page] };
           sections.push(newSection);
         }
       }
@@ -34,16 +33,15 @@ export function buildPageOrder({ sitePages, pageOrder = [], sections = [] } = {}
   // build the pageOrder list
   sitePages?.forEach(page => {
     pageOrder.push(page);
-    if (page.Section && !pageOrder.find(pageOrderPage => pageOrderPage.Group === page.Section)) {
-      const section = sections.find(section => section.Section === page.Section);
+    if (page.section && !pageOrder.find(pageOrderPage => pageOrderPage.group === page.section)) {
+      const section = sections.find(s => s.section === page.section);
       if (section) {
-        const newObject = { Name: section.Section, Group: section.Section, Type: ['Group'], Pages: section.pages, SectionDescription: section.SectionDescription };
+        const newObject = { name: section.section, group: section.section, type: ['Group'], pages: section.pages, sectionDescription: section.sectionDescription };
         pageOrder.push(newObject);
       }
     }
   });
-  pageOrder = pageOrder.filter(item => (!item.Section || item.Section == ' '));
-  // console.log('pageOrder 1:', pageOrder, 'sections:', sections);
+  pageOrder = pageOrder.filter(item => (!item.section || item.section == ' '));
   return pageOrder
 } 
 
@@ -51,24 +49,14 @@ export function buildPageOrder({ sitePages, pageOrder = [], sections = [] } = {}
 
 
 export function getNotionImageLink(notionImage) {
-  /* 
-    we want rawUrl whenever possible, EXCEPT when it contains "https://prod-files-secure.s3" which doesn't render properly
-  */
+  // New schema: cover/files are pre-resolved URL strings
   if (!notionImage) return null
-
-  let fileObj = notionImage?.Files?.[0] || notionImage?.[0] || notionImage
-  let url // = notionImage?.Content // defunct; images should be in .Cover or other explicit URL fields! Many items use .Content for text
-
-  // console.log('fileObj:',fileObj)
-  const links = ["https://prod-files-secure.s3", "//s3-us-west-2.amazonaws"];
-  if (!url) url = links.some(link => fileObj?.rawUrl?.includes(link)) ? fileObj?.url : fileObj?.rawUrl;
-  // console.log('url1:',url)
-  if (!url) url = fileObj?.url
-  // console.log('url2:',url)
-  if (!url) url = notionImage?.Cover
-  if (!url && notionImage.includes && notionImage.includes("http")) url = notionImage
-
-  return url
+  // If it's a page object with pre-resolved cover URL
+  if (notionImage?.cover) return notionImage.cover;
+  if (notionImage?.files?.[0]) return notionImage.files[0];
+  // Fallback for raw string URLs
+  if (typeof notionImage === 'string' && notionImage.includes("http")) return notionImage;
+  return null
 }
 
 

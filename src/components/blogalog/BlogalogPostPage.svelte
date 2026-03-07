@@ -32,12 +32,9 @@
 
 
 
-
 <svelte:head>
-  <!-- <title>{marked(currentPost?.Name || '', {renderer: plainRenderer()})}</title> -->
-  <title>{currentPost?.Name}</title>
+  <title>{currentPost?.name}</title>
 
-  <!-- <title>{blogalogData.header?.title}</title> -->
   <meta name="description" content={blogalogData.header?.description}>
   <link rel="canonical" href={blogalogData.header?.canonical}>
   
@@ -46,20 +43,6 @@
       <link rel={link.rel} type={link.type} href={link.href}>
     {/each}
   {/if}
-<!-- 
-  <link rel="icon" type="image/jpeg" href={blogalogData.header?.ico}>
-
-  <meta property="og:title" content={blogalogData.header?.openGraph?.title}>
-  <meta property="og:description" content={blogalogData.header?.openGraph?.description}>
-  <meta property="og:url" content={blogalogData.header?.openGraph?.url}>
-  <meta property="og:image" content={blogalogData.header?.openGraph?.image}>
-
-  <meta name="twitter:card" content={blogalogData.header?.twitter?.card}>
-  <meta name="twitter:site" content={blogalogData.header?.twitter?.site}>
-  <meta name="twitter:title" content={blogalogData.header?.twitter?.title}>
-  <meta name="twitter:description" content={blogalogData.header?.twitter?.description}>
-  <meta name="twitter:image" content={blogalogData.header?.twitter?.image}>
-  <meta name="twitter:image:alt" content={blogalogData.header?.twitter?.imageAlt}> -->
 </svelte:head>
 
 
@@ -85,30 +68,30 @@
       </div>
   
   
-      {#if currentPost?.Cover && blogalogData?.settings?.post?.hideCover != true}
+      {#if currentPost?.cover && blogalogData?.settings?.post?.hideCover != true}
         <div class="CoverImage-container | mt-4">
-          <img alt="CoverImage header " src="{currentPost?.Cover}" />
+          <img alt="CoverImage header " src="{currentPost?.cover}" />
         </div>
       {/if}
   
   
       <div class="PostPage-Meta">
-        {#if currentPost?.Date?.start_date}
-          <div class="PostPage-Meta-Date | mb-4">{niceDate(currentPost?.Date?.start_date||'')}</div>
+        {#if currentPost?.date}
+          <div class="PostPage-Meta-Date | mb-4">{niceDate(currentPost?.date||'')}</div>
         {/if}
       </div>
   
-      {#if currentPost?.Name}
-        <h1 class="PageContent-Name !mb-0 {blogalogData?.settings?.post?.page?.title?.class || 'mb-0 pfix'}" style="padding-top: 0; padding-bottom: 0;">{@html md.strip(md.render(currentPost?.Name||''))}</h1>
+      {#if currentPost?.name}
+        <h1 class="PageContent-Name !mb-0 {blogalogData?.settings?.post?.page?.title?.class || 'mb-0 pfix'}" style="padding-top: 0; padding-bottom: 0;">{@html md.strip(md.render(currentPost?.name||''))}</h1>
       {/if}
   
-      {#if currentPost.AuthorName && currentPost.AuthorName !== 'undefined' }
-        {#if currentPost.AuthorName.includes('\n')}
-          {#each currentPost.AuthorName.split('\n') as name, index}
+      {#if currentPost.author && currentPost.author !== 'undefined' }
+        {#if currentPost.author.includes('\n')}
+          {#each currentPost.author.split('\n') as name, index}
             <div class="flex items-center mb-1">
-              {#if currentPost.AuthorProfile?.[index]}
+              {#if currentPost.authorImage?.[index]}
                 <div class="rounded-full overflow-hidden mr-2">
-                  <img class="w-8 h-8" src="{currentPost.AuthorProfile[index]?.rawUrl || currentPost.AuthorProfile[index]?.url}" alt="Author Profile" />
+                  <img class="w-8 h-8" src="{currentPost.authorImage[index]}" alt="Author Profile" />
                 </div>
               {/if}
               <div>{name}</div>
@@ -116,43 +99,43 @@
           {/each}
         {:else}
           <div class="Posts-Author | mt-1 mb-4 flex items-center">
-            {#if currentPost.AuthorProfile?.[0] }
+            {#if currentPost.authorImage?.[0] }
               <div class="rounded-full overflow-hidden mr-2">
-                <img class="w-8 h-8" src="{currentPost.AuthorProfile?.[0]?.rawUrl || currentPost.AuthorProfile?.[0]?.url}" alt="Author Profile" />
+                <img class="w-8 h-8" src="{currentPost.authorImage?.[0]}" alt="Author Profile" />
               </div>
             {/if}
-            {#if currentPost.AuthorName && currentPost.AuthorName !== 'undefined' }
-              <div>{currentPost.AuthorName}</div>
+            {#if currentPost.author && currentPost.author !== 'undefined' }
+              <div>{currentPost.author}</div>
             {/if}
           </div>
         {/if}
       {/if}
   
-      {#if currentPost.Categories }
-        {#if Array.isArray(currentPost.Categories) && currentPost.Categories.length > 0}
+      {#if currentPost.categories }
+        {#if Array.isArray(currentPost.categories) && currentPost.categories.length > 0}
           <div class="mt-2">
-            {#each currentPost.Categories as cat}
+            {#each currentPost.categories as cat}
               <span class="Category text-xs py-2 px-2 text-gray-800 bg-gray-200/50 border-gray-100 | mr-2">{cat}</span>
             {/each}
           </div>
         {:else}
-          <span class="Category text-xs py-2 px-2 text-gray-800 bg-gray-100 border-gray-100 | mr-2">{currentPost.Categories}</span>
+          <span class="Category text-xs py-2 px-2 text-gray-800 bg-gray-100 border-gray-100 | mr-2">{currentPost.categories}</span>
         {/if}
       {/if}
   
   
-      {#if currentPost?.Content}
-        <div class="PageContent-Content text-xl | mt-4 mb-8">{@html md.render(currentPost?.Content)}</div>
+      {#if currentPost?.content}
+        <div class="PageContent-Content text-xl | mt-4 mb-8">{@html md.render(currentPost?.content)}</div>
       {/if}
   
-      {#if currentPost?.Link}
+      {#if currentPost?.link}
         <div class="PageContent-Link">
-          {#if currentPost.Link.startsWith('<a')}
-            {@html currentPost.Link}
-          {:else if currentPost.Link.startsWith('https://')}
-            <a href="{currentPost?.Link}">{currentPost?.Link}</a>
+          {#if currentPost.link.startsWith('<a')}
+            {@html currentPost.link}
+          {:else if currentPost.link.startsWith('https://')}
+            <a href="{currentPost?.link}">{currentPost?.link}</a>
           {:else}
-            {@html md.render(currentPost?.Link)}
+            {@html md.render(currentPost?.link)}
           {/if}
         </div>
       {/if}
@@ -162,9 +145,9 @@
 
   <div class="PostPage | mt-16">
     <div class="content-container">
-      {#if currentPost?.pageBlocks || blogalogData?.meta?.crossPages[currentPost?.CrossPageId]}
+      {#if currentPost?.pageBlocks || blogalogData?.crossPages?.[currentPost?.crossPageId]}
         <div class="PageContent-Blocks post | my-4">
-          <Notion classes="notion" loud={true} blocks={getPageBlocks(currentPost?.pageBlocks, blogalogData) || getPageBlocks(blogalogData?.meta?.crossPages[currentPost?.CrossPageId], blogalogData)} ></Notion>
+          <Notion classes="notion" loud={true} blocks={getPageBlocks(currentPost?.pageBlocks, blogalogData) || getPageBlocks(blogalogData?.crossPages?.[currentPost?.crossPageId], blogalogData)} ></Notion>
         </div>
       {/if} 
       <slot></slot>
@@ -232,15 +215,13 @@
   :global(figure.notion-image-fullwidth) {
     grid-column: full-start / full-end;
     width: 100%;
-    // max-width: none !important;
     
-    // Ensure the image inside also stretches
     img {
       width: 100%;
       max-width: none !important;
-      margin: 0 auto;  // Centers the image horizontally
-      display: block;  // Removes any inline spacing
-      max-width: 100%; // Ensures image doesn't overflow
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
     }
   }
 
@@ -253,12 +234,11 @@
   }
   :global(.notion-code) {
     @media (max-width: 768px) {
-      max-width: 400px; // Change to full width in mobile views
+      max-width: 400px;
     }
   }
   
   .BlogalogPostPage {
-    // overflow-x: hidden;
     max-width: 100%;
   }
   

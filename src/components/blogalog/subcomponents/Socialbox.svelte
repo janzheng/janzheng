@@ -18,6 +18,8 @@
   }
 
   if(socialText) {
+    // Strip markdown link syntax [text](url) → url for socialParse compatibility
+    socialText = socialText.replace(/\[([^\]]*)\]\(([^)]+)\)/g, '$2');
     socialProfiles = socialParse(socialText);
     socials = socialProfiles.resultsArr;
 

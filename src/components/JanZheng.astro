@@ -1,4 +1,32 @@
 ---
+/*
+  JanZheng.astro — Landing page component
+
+  Fetches blogalog data from coverflow-v3 API and renders the profile,
+  explorations, and notes sections.
+
+  URL Query Parameters:
+    mode=local     — Fetch from localhost:9999 (always bypasses caches)
+    mode=live      — Pass mode=live to the API (for live Notion data)
+    refresh=true   — Bust both local (Astro cachedFetch) and remote (Smallstore) caches
+    noCache=true   — Same as refresh; busts both caches
+
+  Local Development (sacramento + coverflow-v3 running locally):
+    1. Start coverflow-v3:  cd coverflow-v3 && deno task serve
+    2. Start sacramento:    cd sacramento && npm run dev
+    3. Visit:               http://localhost:4321/?mode=local
+       (always fresh — caches are automatically bypassed in local mode)
+
+  Production (fetches from coverflow-v3.yawnxyz.deno.net):
+    - Default:              http://localhost:4321/
+    - Force refresh:        http://localhost:4321/?refresh=true
+    - Live Notion data:     http://localhost:4321/?mode=live
+
+  API Endpoints:
+    - Local:  http://localhost:9999/janzheng
+    - Prod:   https://coverflow-v3.yawnxyz.deno.net/janzheng
+*/
+
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/700.css";
@@ -7,10 +35,8 @@ import "@fontsource/nanum-myeongjo/400.css";
 import "@fontsource/nanum-myeongjo/700.css";
 
 import { marked } from "marked";
+import { cachedFetch } from "@lib/cache";
 import BlogalogProfile from "@components/blogalog/BlogalogProfile.svelte";
-// import BlogalogRows from "@components/blogalog/BlogalogRows.svelte";
-// import BlogalogFooter from "@components/blogalog/BlogalogFooter.svelte";
-// import GeminiBbox from '@components/deno/GeminiBbox.astro';
 
 import Explorations from "@components/Explorations.svelte";
 import Notes from "@components/Notes.svelte";
@@ -18,6 +44,8 @@ import Notes from "@components/Notes.svelte";
 // Get URL parameters and set up pathData
 const { url } = Astro;
 const urlParams = new URLSearchParams(url.search);
+const refresh = urlParams.get("refresh") === "true";
+const noCache = urlParams.get("noCache") === "true";
 
 let pathData = {
   name: "janzheng",
@@ -31,24 +59,34 @@ let pathData = {
     "",
 };
 
+// Local mode always bypasses caches for faster dev iteration
+const shouldRefresh = noCache || refresh || !!pathData.isLocal;
+
 // Helper function to generate the correct URL based on environment
 function getUrl(path) {
-  return pathData?.isLocal
-    ? `http://localhost:9999/${path}${pathData?.isLive ? "?mode=live" : ""}`
-    : `https://coverflow.deno.dev/${path}${pathData?.isLive ? "?mode=live" : ""}`;
+  const base = pathData?.isLocal
+    ? `http://localhost:9999/${path}`
+    : `https://coverflow-v3.yawnxyz.deno.net/${path}`;
+  const params = new URLSearchParams();
+  if (pathData?.isLive) params.set("mode", "live");
+  if (shouldRefresh) params.set("noCache", "true");
+  const qs = params.toString();
+  return qs ? `${base}?${qs}` : base;
 }
 
 const apiUrl = getUrl(pathData.name);
 
 let blogalogData = {};
 try {
-  let response = await fetch(apiUrl, {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json; charset=utf-8",
+  blogalogData = await cachedFetch(apiUrl, {
+    refresh: shouldRefresh,
+    fetchOptions: {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json; charset=utf-8",
+      },
     },
   });
-  blogalogData = await response.json();
   /* 
     process / render markdown / etc
   */
@@ -75,6 +113,4 @@ try {
   <BlogalogProfile {blogalogData} client:load="svelte" />
   <Explorations {blogalogData} client:load="svelte" />
   <Notes {blogalogData} client:load="svelte" />
-  <!-- <BlogalogRows {blogalogData} client:load="svelte" /> -->
-  <!-- <BlogalogFooter {blogalogData} client:load="svelte" /> -->
 </div>
