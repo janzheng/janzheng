@@ -18,7 +18,7 @@
   let blogPath = "";
 
   function getCover(post) {
-    return getNotionImageLink(post);
+    return post.cover || post.files?.[0] || null;
   }
 
   let postsSettings = settings;
@@ -76,10 +76,10 @@
 <div class="BlogalogRows | Blogalog-Container | {classes}">
 
   {#each pageOrder as row, rowIndex }
-    {@const settings = row?.YAML && parseYaml(row?.YAML, row) || null}
-    <!-- {@const settings = row?.YAML && parseYaml(row?.YAML) || null} -->
+    {@const settings = row?.yaml && parseYaml(row?.yaml, row) || null}
+    <!-- {@const settings = row?.yaml && parseYaml(row?.yaml) || null} -->
     {@const rowPageStyles = (settings?.page && generatePageStyles(settings.page, {type: 'string'})) || ''}
-    {#if row.Name && row.Hide == true}
+    {#if row.name && row.hide == true}
       <!-- do nothing if hidden -->
     {:else}
       <span id={settings?.id || 'row-'+rowIndex} class="row-anchor {blogalogData.settings?.anchor?.class}"></span>
@@ -88,21 +88,21 @@
 
         <div class="Profile-Row-Container | {settings?.row?.container?.class || blogalogData?.styles?.profile?.defaultRowContainer}  | " style={settings?.row?.container?.style||''}>
 
-          {#if row?.Type?.includes('Group') && row.Group === groupName}
+          {#if row?.type?.includes('Group') && row.group === groupName}
 
             <div class="text-2xl font-title font-bold text-center mt-16">{title}</div>
 
             <div class="Profile-Row--Group Profile-Row--Posts | {settings?.row?.class || blogalogData?.styles?.profile?.defaultRow + ' | my-2 '} ">
               <div class="Posts Posts-list | grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6   | {settings?.posts?.class || ''} ">
-                {#each row.Pages.filter(page => page?.Type?.includes("Posts") && !page.Hide && page.Status !== "Draft") as post}
+                {#each row.pages.filter(page => page?.type?.includes("Posts") && !page.hide && page.status !== "draft") as post}
                   <div class="Post-item | block ">
                     <div class="Post-item-wrapper">
-                      <a class="Post-link | block relative hover:after:opacity-100 after:opacity-0 after:z-0 after:absolute after:-inset-2 after:rounded-md after:bg-slate-100" href={blogPath + post.Path}>
+                      <a class="Post-link | block relative hover:after:opacity-100 after:opacity-0 after:z-0 after:absolute after:-inset-2 after:rounded-md after:bg-slate-100" href={blogPath + post.path}>
                         <div class="Post-main relative z-10 {settings?.post?.main?.class || ''}">
-                          <span class="Post-name text-lg pfix">{@html md.strip(md.render(post.Name))}</span>
-                          {#if post.Content}<div class="Post-content text pt-1 text-base">{@html marked(post.Content || '')}</div>{/if}
-                          {#if post.Date}
-                            <span class="Post-date text block text-base text-sm mb-1 pfix">{new Date(post.Date?.start_date).toLocaleDateString('en-US', {month: 'long', year: 'numeric'})}</span>
+                          <span class="Post-name text-lg pfix">{@html md.strip(md.render(post.name))}</span>
+                          {#if post.content}<div class="Post-content text pt-1 text-base">{@html marked(post.content || '')}</div>{/if}
+                          {#if post.date}
+                            <span class="Post-date text block text-base text-sm mb-1 pfix">{new Date(post.date).toLocaleDateString('en-US', {month: 'long', year: 'numeric'})}</span>
                           {/if}
                         </div>
                       </a>

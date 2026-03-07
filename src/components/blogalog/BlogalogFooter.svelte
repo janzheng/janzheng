@@ -7,7 +7,7 @@
   import Notion from "@components/sveltekit-notion/src/Notion.svelte";
   import SocialBox from './subcomponents/SocialBox.svelte';
 
-  import { parseYaml, generatePageStyles } from './utils/index.js'
+  import { parseYaml, generatePageStyles, getPageBlocks } from './utils/index.js'
   
   import MarkdownIt from 'markdown-it';
   import markdownItAttrs from 'markdown-it-attrs';
@@ -17,26 +17,14 @@
   export let blogalogData, classes = "mt-8"
 
   export let pageType = 'profile'; // profile, component, post
-  // let blogData = getContext('blogData');
-  // let email = blogData?.blog?.['site-data']?.Email?.['Content'];
-  // let socialLinks = blogData?.blog?.['site-data']?.SocialLinks?.['Content'];
-  // let content = blogData?.blog?.['site-data']?.['Footer']?.Content;
-  // let pageBlocks = blogData?.blog?.['site-data']?.['Footer']?.pageBlocks;
 
-  // let settings = blogData?.settings
-  // let pageStyles
-  // if (blogData?.blog?.['site-data']?.['Footer']?.YAML) {
-  //   settings = parseYaml(blogData?.blog?.['site-data']?.['Footer']?.YAML)
-  //   // settings = YAML.parse(tmp)
-  //   pageStyles = generatePageStyles(settings?.page, {type:'string'}) || null
-  // }
-
-  let settings = (blogalogData?.site?.footer?.YAML && parseYaml(blogalogData?.site?.Footer?.YAML)) || blogalogData?.settings
+  // Footer data comes from the top-level footer object in new schema
+  let settings = blogalogData?.settings
   let footerData = {
     email: blogalogData?.meta?.email,
     socialLinks: blogalogData?.meta?.socialLinks,
-    content: blogalogData?.site?.Footer?.Content,
-    pageBlocks: blogalogData?.site?.Footer?.pageBlocks,
+    content: blogalogData?.footer?.content,
+    pageBlocks: getPageBlocks(blogalogData?.footer?.pageBlocks, blogalogData),
     settings: settings,
     styleString: settings?.page && generatePageStyles(settings?.page, {type: 'string'}),
   }
@@ -100,24 +88,6 @@
     </div>
   {/if}
 </footer>
-
-<!-- 
-{#if !footerData.settings?.footer?.hidePromo}
-  <div class="Content-Blogalog | {footerData.settings?.footer?.promoClass||'text-sm py-4 text-center bg-slate-50' }">
-    {#if footerData.settings?.footer?.promoText}
-      {@html md.render(footerData.settings?.footer?.promoText || ``)}
-    {:else}
-      Get your own <a href="https://blogalog.net"> website</a> for your <a href="https://blogalog.net">blog, CV, research lab, or side project.</a>
-      {#if footerData.settings?.footer?.showPhageDirectory}
-        <br>A <a href="https://phage.directory">Phage Directory project.</a>
-      {/if}
-    {/if}
-  </div>
-{/if} -->
-
-
-
-
 
 
 <style lang="scss">

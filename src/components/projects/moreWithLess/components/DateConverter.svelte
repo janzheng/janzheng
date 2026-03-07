@@ -86,7 +86,7 @@
       console.log('Sending data...', postData);
       requests = [...requests, postData];
       // const response = await fetch('http://localhost:9999/execute', {
-      const response = await fetch('https://coverflow.deno.dev/execute', {
+      const response = await fetch('https://coverflow-v3.yawnxyz.deno.net/execute', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
