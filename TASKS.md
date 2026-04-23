@@ -43,13 +43,14 @@ Eleven files were mid-edit (unstaged) bumping `coverflow.deno.dev` → `coverflo
 
 - [x] [done 2026-04-23: chose coverflow.labspace.ai after confirming direct deno URL returns 410 Gone] **Decide canonical URL.** The labspace.ai hostname goes through CF Worker which preserves `X-Trace-Id`, sets origin auth, and edge-caches GETs.
 - [x] [done 2026-04-23] **Update GET URLs** — bulk-rewrote all 11 source files: `[postPath].astro`, `JanZheng.astro`, `Sicamous.astro`, `pages/deno/index.astro`, `pages/reload/index.astro` (GETs) plus the 6 `moreWithLess` converters (POSTs). Verified upstream: `curl https://coverflow.labspace.ai/janzheng` returns 200 with 541KB JSON. SSR'd `/` returns full 2.4MB rendered page in local preview.
-- [ ] **Decide on POST URLs for moreWithLess converters** — currently rewrote them to `coverflow.labspace.ai/execute`, but the worker requires bearer token for `/execute` from the browser (same blocker labspace hit). Options: (a) keep converters pointed at labspace.ai and let them 401 until we proxy server-side via an Astro action, (b) revert just the 6 converter POSTs to direct `coverflow-v3.yawnxyz.deno.net/execute` (loses CF cache benefit but POSTs aren't cached anyway, and direct deno only hardens `coverflow.labspace.ai/*` traffic — still need to verify direct deno accepts unauthed POST `/execute`), (c) proxy them server-side. Pick after deploying main migration. (See #9 in labspace `BRIEF-error-handling.md` for full options analysis.)
-- [ ] **Adopt `?envelope=v2`** — once converters land on a final URL, append `?envelope=v2` and read `body.ok` discriminator. Mirrors labspace `src/lib/pipeline.ts:23`. Optional but recommended — gives discriminated success/error shape.
+- [x] [done 2026-04-23] **Decide on POST URLs for moreWithLess converters** — chose option (c): proxy server-side via Astro action. Converters now call `actions.pipe({pipeline})` instead of browser-direct fetch.
+- [x] [done 2026-04-23] **Adopt `?envelope=v2`** — wired into `src/lib/pipeline.ts` so the discriminated `body.ok` shape is used for all pipeline calls.
+- [x] [done 2026-04-23] **Add a `lib/pipeline.ts`** — mirrors labspace pattern: central `executePipeline()` returning `PipelineResult` discriminated union. Pipe action uses it; converters use the action.
+- [x] [done 2026-04-23] **Trace-id propagation** — `crypto.randomUUID()` per call, `X-Trace-Id` header out, logged at both action and pipeline.ts layers.
+- [ ] **[BLOCKED on upstream]** — live pipe action returns `Forbidden` from `coverflow.labspace.ai/execute`, BUT labspace.ai's own pipe action returns the same error on the same test payload. This is a coverflow/CF-Worker-side issue, not janzheng's. When labspace's swyripa form starts working again, janzheng's converters will too without any code change. Track upstream fix in labspace/coverflow TASKS.
 
 ## Later
 
-- [ ] **Add a `lib/pipeline.ts`** like labspace — central `executePipeline()` returning `PipelineResult` discriminated union, used by both server-side actions and (post-proxy) the converters. Avoids 6× duplicated fetch+error-handling logic in `moreWithLess`.
-- [ ] **Trace-id propagation** — `crypto.randomUUID()` per call, `X-Trace-Id` header out, echo into action logs. Mirrors labspace Phase 2.
 - [ ] **Replace `deployctl` references in README** — currently mentions old deploy flow, update post-cutover.
 
 ## Notes
