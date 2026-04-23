@@ -9,6 +9,7 @@
 
 <script>
 
+  import { actions } from 'astro:actions';
 	import { Button } from "$lib/components/ui/button/index.ts";
   import { Input } from "$lib/components/ui/input/index.ts";
 	import { Label } from "$lib/components/ui/label/index.ts";
@@ -147,24 +148,16 @@
 
       message=`Calculating conversions...`;
 
-      const response = await fetch('https://coverflow.labspace.ai/execute', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(postData)
-      });
+      const { data: r, error } = await actions.pipe({ pipeline: postData.pipeline });
 
-
-      if (!response.ok) {
-        message = "Oops!"
-        throw new Error(`HTTP error! status: ${response.status}`);
-      } else {
-        // message = ''
-        result = await response.json()
-        results = [...results, result];
-        console.log('result', result)
-        if(result.data?.steps[0]) {
+      if (error) {
+        message = error.message || 'Oops!';
+        throw new Error(error.message);
+      }
+      result = r;
+      results = [...results, result];
+      console.log('result', result)
+      if(result.data?.steps[0]) {
           const toolResults = result.data.steps[0].toolResults;
           const fromCurrencies = Object.entries($fromList).filter(([key, value]) => value).map(([key]) => key);
           const toCurrencies = Object.entries($toList).filter(([key, value]) => value).map(([key]) => key);
@@ -180,10 +173,9 @@
           }));
 
           message = `Conversion complete for ${amount} ${fromCurrencies.join(', ')} to ${toCurrencies.join(', ')}`;
-        }
-
-        console.log('resultsList', resultsList)
       }
+
+      console.log('resultsList', resultsList)
     } catch (error) {
       console.error('An error occurred while converting:', error);
       message = 'An error occurred while converting.';

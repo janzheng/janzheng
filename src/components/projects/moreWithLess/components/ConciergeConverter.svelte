@@ -4,6 +4,7 @@
   import { marked } from 'marked'
   import * as chrono from 'chrono-node';
   import { z } from 'zod';
+  import { actions } from 'astro:actions';
 
 	import { Button } from "$lib/components/ui/button/index.ts";
   import { Input } from "$lib/components/ui/input/index.ts";
@@ -107,24 +108,16 @@
       }
       console.log('Sending data...', postData);
       requests = [...requests, postData];
-      const response = await fetch('https://coverflow.labspace.ai/execute', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(postData)
-      });
+      const { data: result, error } = await actions.pipe({ pipeline: postData.pipeline });
 
-      if (!response.ok) {
-        message = "Oops!"
-        throw new Error(`HTTP error! status: ${response.status}`);
-      } else {
-        let result = await response.json()
-        results = [...results, result];
-        requests = [...requests, result];
-        
-        message = `Total amount in ${$to$}: ${currencies.filter(cur => cur.value === $to$)[0].symbol}${result.data.result}`;
+      if (error) {
+        message = error.message || 'Oops!';
+        throw new Error(error.message);
       }
+      results = [...results, result];
+      requests = [...requests, result];
+
+      message = `Total amount in ${$to$}: ${currencies.filter(cur => cur.value === $to$)[0].symbol}${result.data.result}`;
     } catch (error) {
       console.error('An error occurred while converting:', error);
       message = 'An error occurred while converting.';
@@ -174,34 +167,24 @@
 
       requests = [...requests, postData];
 
-      const response = await fetch('https://coverflow.labspace.ai/execute', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(postData)
-      });
+      const { data: r, error } = await actions.pipe({ pipeline: postData.pipeline });
 
+      if (error) {
+        message = error.message || 'Oops!';
+        throw new Error(error.message);
+      }
+      message='Thinking about my answer...';
+      result = r;
+      results = [...results, result];
+      requests = [...requests, result];
 
-      if (!response.ok) {
-        message = "Oops!"
-        throw new Error(`HTTP error! status: ${response.status}`);
-      } else {
-        message='Thinking about my answer...';
-        result = await response.json()
-        results = [...results, result];
-        requests = [...requests, result];
-        // console.log('result', result)
+      if(result?.data) {
+        message = result?.reply?.json?.fullAnswer || `Amount: ${result?.reply?.json?.answer}`;
+      }
 
-        if(result?.data) {
-          message = result?.reply?.json?.fullAnswer || `Amount: ${result?.reply?.json?.answer}`;
-        }
-        
-
-        console.log('llm response:', result)
-        if(result?.data) {
-          message = marked(result?.data?.text || result?.data)
-        }
+      console.log('llm response:', result)
+      if(result?.data) {
+        message = marked(result?.data?.text || result?.data)
       }
     } catch (error) {
       console.error('An error occurred while converting:', error);

@@ -1,6 +1,7 @@
 <script>
 
   import { CalendarDate, today, DateFormatter, getLocalTimeZone } from "@internationalized/date";
+  import { actions } from 'astro:actions';
 	import { Button } from "$lib/components/ui/button/index.ts";
   import { Input } from "$lib/components/ui/input/index.ts";
 	import { Label } from "$lib/components/ui/label/index.ts";
@@ -33,29 +34,21 @@
       }
       thinking = true;
       requests = [...requests, postData];
-      const response = await fetch('https://coverflow.labspace.ai/execute', {
-      // const response = await fetch('http://localhost:9999/execute', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(postData)
-      });
+      const { data: r, error } = await actions.pipe({ pipeline: postData.pipeline });
 
       message='';
-      if (!response.ok) {
-        message = "Oops!"
-        throw new Error(`HTTP error! status: ${response.status}`);
-      } else {
-        message = ""
-        result = await response.json()
-        results = [...results, result];
-        console.log('result', result)
+      if (error) {
+        message = error.message || 'Oops!';
         thinking = false;
-        if(result?.data) {
-          message = `Amount: ${result?.data?.text}`;
-          steps = result?.data?.steps;
-        }
+        throw new Error(error.message);
+      }
+      result = r;
+      results = [...results, result];
+      console.log('result', result)
+      thinking = false;
+      if(result?.data) {
+        message = `Amount: ${result?.data?.text}`;
+        steps = result?.data?.steps;
       }
     } catch (error) {
       console.error('An error occurred while converting:', error);

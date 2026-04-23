@@ -1,6 +1,7 @@
 <script>
 
   import * as chrono from 'chrono-node';
+  import { actions } from 'astro:actions';
 	import { immerStore, History } from 'svelte-immer-store';
 
 	import { Button } from "$lib/components/ui/button/index.ts";
@@ -85,31 +86,17 @@
       }
       console.log('Sending data...', postData);
       requests = [...requests, postData];
-      // const response = await fetch('http://localhost:9999/execute', {
-      const response = await fetch('https://coverflow.labspace.ai/execute', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(postData)
-      });
+      const { data: result, error } = await actions.pipe({ pipeline: postData.pipeline });
 
-      if (!response.ok) {
-        message = "Oops!"
-        throw new Error(`HTTP error! status: ${response.status}`);
-      } else {
-        let result = await response.json()
-
-        if(result.error) {
-          message = result.error;
-          if(result.error == 'HTTP error! status: 404') {
-            message = 'Sorry, the exchange rate for this date was not found.'
-          }
-          return
-        }
-        console.log("Received data:", result)
-        message = `Total amount in ${$to$}: ${currencies.filter(cur => cur.value === $to$)[0].symbol}${result.data.result}`;
+      if (error) {
+        console.error('pipe action failed:', error);
+        message = error.message === 'HTTP error! status: 404'
+          ? 'Sorry, the exchange rate for this date was not found.'
+          : (error.message || 'Oops!');
+        return;
       }
+      console.log("Received data:", result)
+      message = `Total amount in ${$to$}: ${currencies.filter(cur => cur.value === $to$)[0].symbol}${result.data.result}`;
     } catch (error) {
       console.error('An error occurred while converting:', error, error.message);
       message = 'An error occurred while converting.';
