@@ -1,0 +1,45 @@
+---
+/*
+  /reload — The single, memorable way to force-refresh Notion content.
+
+  Mirror of labspace's /reload. How it works: redirect the user to
+  `<destination>?refresh=true` and let the destination page's SSR handler
+  bust every cache layer end-to-end.
+
+  Usage:
+    /reload                  → redirects to /?refresh=true (homepage)
+    /reload?from=/janzheng   → redirects to /janzheng?refresh=true
+    /reload?mode=local       → passes mode=local through (for local dev)
+
+  What this busts:
+    • Janzheng SSR cache        (src/lib/cache.ts — bypassed by ?refresh=true)
+    • CF Worker edge cache      (coverflow.labspace.ai/*  — ?refresh=true in CF bypass list)
+    • coverflow-v3 smallstore   (via janzheng forwarding noCache=true on shouldRefresh=true)
+    • CF zone cache in front of janzheng.com  (different cache key = MISS → fresh render)
+
+  See labspace/.brief/cache-layers.md for the full 4-layer breakdown (same stack).
+*/
+const { url } = Astro;
+const urlParams = new URLSearchParams(url.search);
+
+let from = urlParams.get("from");
+if (!from) {
+  const referer = Astro.request.headers.get("referer");
+  if (referer) {
+    try {
+      const refererUrl = new URL(referer);
+      if (refererUrl.host === url.host && refererUrl.pathname !== "/reload") {
+        from = refererUrl.pathname + refererUrl.search;
+      }
+    } catch {}
+  }
+}
+from = from || "/";
+
+const destUrl = new URL(from, url);
+destUrl.searchParams.set("refresh", "true");
+const mode = urlParams.get("mode");
+if (mode) destUrl.searchParams.set("mode", mode);
+
+return Astro.redirect(destUrl.pathname + destUrl.search, 302);
+---

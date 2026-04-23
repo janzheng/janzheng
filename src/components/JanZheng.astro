@@ -5,22 +5,23 @@
   Fetches blogalog data from coverflow-v3 API and renders the profile,
   explorations, and notes sections.
 
-  URL Query Parameters:
+  Cache busting (see ../../labspace/.brief/cache-layers.md for the full stack):
+    ?refresh=true  — the canonical bust. Propagates through all cache layers.
+    /reload        — user-friendly redirect that appends ?refresh=true.
+
+  Back-compat (accepted, not documented in new places):
+    noCache=true / nocache=true  — aliases for refresh=true
+    mode=live                    — runtime flag, NOT a full bust
+
+  Local dev (janzheng + coverflow-v3 running locally):
     mode=local     — Fetch from localhost:9999 (always bypasses caches)
-    mode=live      — Pass mode=live to the API (for live Notion data)
-    refresh=true   — Bust both local (Astro cachedFetch) and remote (Smallstore) caches
-    noCache=true   — Same as refresh; busts both caches
-
-  Local Development (sacramento + coverflow-v3 running locally):
     1. Start coverflow-v3:  cd coverflow-v3 && deno task serve
-    2. Start sacramento:    cd sacramento && npm run dev
+    2. Start janzheng:      cd janzheng && npm run dev
     3. Visit:               http://localhost:4321/?mode=local
-       (always fresh — caches are automatically bypassed in local mode)
 
-  Production (fetches from coverflow.labspace.ai):
-    - Default:              http://localhost:4321/
-    - Force refresh:        http://localhost:4321/?refresh=true
-    - Live Notion data:     http://localhost:4321/?mode=live
+  Production:
+    - Default:        https://janzheng.com/
+    - Force refresh:  https://janzheng.com/?refresh=true (or /reload)
 
   API Endpoints:
     - Local:  http://localhost:9999/janzheng

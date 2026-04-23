@@ -5,20 +5,23 @@
   Fetches blogalog data from coverflow-v3 API and renders a single post
   matched by the URL path (e.g., /svelte-masonry).
 
-  URL Query Parameters:
-    mode=local     — Fetch from localhost:9999 (always bypasses caches)
-    refresh=true   — Bust both local (Astro cachedFetch) and remote (Smallstore) caches
-    noCache=true   — Same as refresh; busts both caches
+  Cache busting (see ../labspace/.brief/cache-layers.md for the full 4-layer stack):
+    ?refresh=true  — the canonical bust. Propagates through all cache layers.
+    /reload        — user-friendly redirect that appends ?refresh=true.
 
-  Local Development (sacramento + coverflow-v3 running locally):
+  Back-compat (accepted, not documented in new places):
+    noCache=true / nocache=true  — aliases for refresh=true
+    mode=live                    — runtime flag, NOT a full bust
+
+  Local dev (janzheng + coverflow-v3 running locally):
+    mode=local     — Fetch from localhost:9999 (always bypasses caches)
     1. Start coverflow-v3:  cd coverflow-v3 && deno task serve
-    2. Start sacramento:    cd sacramento && npm run dev
+    2. Start janzheng:      cd janzheng && npm run dev
     3. Visit a post:        http://localhost:4321/svelte-masonry?mode=local
-       (always fresh — caches are automatically bypassed in local mode)
 
   Production (fetches from coverflow.labspace.ai):
-    - Default:              http://localhost:4321/svelte-masonry
-    - Force refresh:        http://localhost:4321/svelte-masonry?refresh=true
+    - Default:       https://janzheng.com/svelte-masonry
+    - Force refresh: https://janzheng.com/svelte-masonry?refresh=true (or /reload)
 
   API Endpoints:
     - Local:  http://localhost:9999/janzheng
