@@ -67,6 +67,7 @@ That happened on 2026-04-23 — a janzheng build somehow landed on the labspace 
 
 ## Related references
 
-- `../labspace/BRIEF-deno-deploy-astro-ssr.md` — full Astro SSR deploy recipe (corrected 2026-04-23 to drop the wrong `./dist` guidance).
+- `.brief/resume-system.md` — how the `/resume` system works (URL params, edit/save workflow, schema, where the data lives). Read this before touching `Resume.svelte` or `resume.astro` — it's also the reference jan reaches for when updating his own resume.
+- `../labspace/.brief/deno-deploy-astro-ssr.md` — full Astro SSR deploy recipe (corrected 2026-04-23 to drop the wrong `./dist` guidance).
 - `../labspace/CLAUDE.md` — parent project with the same deploy discipline. Stay in sync on any deploy-recipe change.
-- `../labspace/BRIEF-valtown-proxy.md` — val.town proxy for the coverflow-v3 WAF 403 issue. Janzheng consumes the same `VALTOWN_COVERFLOW_PROXY_URL` / `_SECRET` env vars as labspace.
+- `../labspace/.brief/valtown-proxy.md` — val.town proxy for the coverflow-v3 WAF 403 issue. Janzheng consumes the same `VALTOWN_COVERFLOW_PROXY_URL` / `_SECRET` env vars as labspace.
