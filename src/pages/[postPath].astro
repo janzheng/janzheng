@@ -16,13 +16,13 @@
     3. Visit a post:        http://localhost:4321/svelte-masonry?mode=local
        (always fresh — caches are automatically bypassed in local mode)
 
-  Production (fetches from coverflow-v3.yawnxyz.deno.net):
+  Production (fetches from coverflow.labspace.ai):
     - Default:              http://localhost:4321/svelte-masonry
     - Force refresh:        http://localhost:4321/svelte-masonry?refresh=true
 
   API Endpoints:
     - Local:  http://localhost:9999/janzheng
-    - Prod:   https://coverflow-v3.yawnxyz.deno.net/janzheng
+    - Prod:   https://coverflow.labspace.ai/janzheng
 */
 
 import '@fontsource/inter/400.css';
@@ -53,7 +53,7 @@ const shouldRefresh = noCache || refresh || !!isLocal;
 // Build API URL with query params
 const base = isLocal
   ? "http://localhost:9999/janzheng"
-  : "https://coverflow-v3.yawnxyz.deno.net/janzheng";
+  : "https://coverflow.labspace.ai/janzheng";
 const params = new URLSearchParams();
 if (isLocal) params.set("mode", "local");
 if (shouldRefresh) params.set("noCache", "true");

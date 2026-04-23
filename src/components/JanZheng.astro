@@ -17,14 +17,14 @@
     3. Visit:               http://localhost:4321/?mode=local
        (always fresh — caches are automatically bypassed in local mode)
 
-  Production (fetches from coverflow-v3.yawnxyz.deno.net):
+  Production (fetches from coverflow.labspace.ai):
     - Default:              http://localhost:4321/
     - Force refresh:        http://localhost:4321/?refresh=true
     - Live Notion data:     http://localhost:4321/?mode=live
 
   API Endpoints:
     - Local:  http://localhost:9999/janzheng
-    - Prod:   https://coverflow-v3.yawnxyz.deno.net/janzheng
+    - Prod:   https://coverflow.labspace.ai/janzheng
 */
 
 import "@fontsource/inter/400.css";
@@ -66,7 +66,7 @@ const shouldRefresh = noCache || refresh || !!pathData.isLocal;
 function getUrl(path) {
   const base = pathData?.isLocal
     ? `http://localhost:9999/${path}`
-    : `https://coverflow-v3.yawnxyz.deno.net/${path}`;
+    : `https://coverflow.labspace.ai/${path}`;
   const params = new URLSearchParams();
   if (pathData?.isLive) params.set("mode", "live");
   if (shouldRefresh) params.set("noCache", "true");

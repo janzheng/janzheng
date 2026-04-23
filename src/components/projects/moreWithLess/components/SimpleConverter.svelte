@@ -85,7 +85,7 @@
       }
       console.log('Sending data...', postData);
       requests = [...requests, postData];
-      const response = await fetch('https://coverflow-v3.yawnxyz.deno.net/execute', {
+      const response = await fetch('https://coverflow.labspace.ai/execute', {
       // const response = await fetch('http://localhost:9999/execute', {
         method: 'POST',
         headers: {

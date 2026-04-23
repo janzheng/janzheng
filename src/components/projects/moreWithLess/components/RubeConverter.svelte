@@ -147,7 +147,7 @@
 
       message=`Calculating conversions...`;
 
-      const response = await fetch('https://coverflow-v3.yawnxyz.deno.net/execute', {
+      const response = await fetch('https://coverflow.labspace.ai/execute', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

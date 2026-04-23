@@ -10,7 +10,7 @@ import Layout from "@layouts/Layout.astro";
 import Notion from "@components/sveltekit-notion/src/Notion.svelte";
 import EmailSignup from "@components/EmailSignup.astro";
 
-const { url = 'https://coverflow-v3.yawnxyz.deno.net/sicamous' } = Astro.props;
+const { url = 'https://coverflow.labspace.ai/sicamous' } = Astro.props;
 const urlParams = new URLSearchParams(Astro.url.search);
 const refresh = urlParams.get("refresh") === "true";
 
