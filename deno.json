@@ -1,15 +1,35 @@
 {
+  "nodeModulesDir": "manual",
   "imports": {
-    "@deno/dnt": "jsr:@deno/dnt@^0.41.3"
+    "@astrojs/internal-helpers/": "npm:@astrojs/internal-helpers/",
+    "clsx": "npm:clsx",
+    "cookie": "npm:cookie",
+    "cssesc": "npm:cssesc",
+    "dayjs": "npm:dayjs",
+    "dayjs/": "npm:dayjs/",
+    "devalue": "npm:devalue",
+    "es-module-lexer": "npm:es-module-lexer",
+    "html-escaper": "npm:html-escaper",
+    "kleur": "npm:kleur",
+    "kleur/": "npm:kleur/",
+    "linkify-it": "npm:linkify-it",
+    "markdown-it": "npm:markdown-it",
+    "markdown-it-attrs": "npm:markdown-it-attrs",
+    "marked": "npm:marked",
+    "mrmime": "npm:mrmime",
+    "sanitize-html": "npm:sanitize-html",
+    "svelte": "npm:svelte",
+    "yaml": "npm:yaml",
+    "zod": "npm:zod"
+  },
+  "tasks": {
+    "build": "npm run build",
+    "deploy:dev": "npm run build && deno deploy --org yawnxyz --app janzheng ./dist",
+    "deploy:prod": "npm run build && deno deploy --org yawnxyz --app janzheng --prod ./dist",
+    "logs": "deno deploy logs --org yawnxyz --app janzheng"
   },
   "deploy": {
-    "project": "cdf5a87a-51b4-4150-9567-99caac4daaa2",
-    "exclude": [
-      "**/node_modules"
-    ],
-    "include": [
-      "./dist"
-    ],
-    "entrypoint": "dist/server/entry.mjs"
+    "org": "yawnxyz",
+    "app": "janzheng"
   }
 }

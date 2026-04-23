@@ -1,16 +1,81 @@
 {
-  "version": "4",
+  "version": "5",
   "specifiers": {
+    "jsr:@std/cli@^1.0.25": "1.0.29",
+    "jsr:@std/encoding@^1.0.10": "1.0.10",
+    "jsr:@std/fmt@^1.0.8": "1.0.10",
+    "jsr:@std/fs@^1.0.21": "1.0.23",
+    "jsr:@std/html@^1.0.5": "1.0.5",
+    "jsr:@std/http@1.0": "1.0.23",
+    "jsr:@std/internal@^1.0.12": "1.0.13",
+    "jsr:@std/media-types@^1.1.0": "1.1.0",
+    "jsr:@std/net@^1.0.6": "1.0.6",
+    "jsr:@std/path@1.0": "1.0.9",
+    "jsr:@std/path@^1.1.4": "1.1.4",
+    "jsr:@std/streams@^1.0.16": "1.1.0",
     "npm:hono@*": "3.12.12",
     "npm:hono@3": "3.12.12",
     "npm:marked@*": "14.1.2"
+  },
+  "jsr": {
+    "@std/cli@1.0.29": {
+      "integrity": "fa4ef29130baa834d8a13b7d138240c3a2fcfba740bfb7afa646a360a15ec84f"
+    },
+    "@std/encoding@1.0.10": {
+      "integrity": "8783c6384a2d13abd5e9e87a7ae0520a30e9f56aeeaa3bdf910a3eaaf5c811a1"
+    },
+    "@std/fmt@1.0.10": {
+      "integrity": "90dfba288802ac6de82fb31d0917eb9e4450b9925b954d5e51fc29ac07419db5"
+    },
+    "@std/fs@1.0.23": {
+      "integrity": "3ecbae4ce4fee03b180fa710caff36bb5adb66631c46a6460aaad49515565a37"
+    },
+    "@std/html@1.0.5": {
+      "integrity": "4e2d693f474cae8c16a920fa5e15a3b72267b94b84667f11a50c6dd1cb18d35e"
+    },
+    "@std/http@1.0.23": {
+      "integrity": "6634e9e034c589bf35101c1b5ee5bbf052a5987abca20f903e58bdba85c80dee",
+      "dependencies": [
+        "jsr:@std/cli",
+        "jsr:@std/encoding",
+        "jsr:@std/fmt",
+        "jsr:@std/fs",
+        "jsr:@std/html",
+        "jsr:@std/media-types",
+        "jsr:@std/net",
+        "jsr:@std/path@^1.1.4",
+        "jsr:@std/streams"
+      ]
+    },
+    "@std/internal@1.0.13": {
+      "integrity": "2f9546691d4ac2d32859c82dff284aaeac980ddeca38430d07941e7e288725c0"
+    },
+    "@std/media-types@1.1.0": {
+      "integrity": "c9d093f0c05c3512932b330e3cc1fe1d627b301db33a4c2c2185c02471d6eaa4"
+    },
+    "@std/net@1.0.6": {
+      "integrity": "110735f93e95bb9feb95790a8b1d1bf69ec0dc74f3f97a00a76ea5efea25500c"
+    },
+    "@std/path@1.0.9": {
+      "integrity": "260a49f11edd3db93dd38350bf9cd1b4d1366afa98e81b86167b4e3dd750129e"
+    },
+    "@std/path@1.1.4": {
+      "integrity": "1d2d43f39efb1b42f0b1882a25486647cb851481862dc7313390b2bb044314b5",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/streams@1.1.0": {
+      "integrity": "2f7024d841f343fd478afe0c958a3f0f068ef2a0d2bcc954f550f97ac1fa22e3"
+    }
   },
   "npm": {
     "hono@3.12.12": {
       "integrity": "sha512-5IAMJOXfpA5nT+K0MNjClchzz0IhBHs2Szl7WFAhrFOsbtQsYmNynFyJRg/a3IPsmCfxcrf8txUGiNShXpK5Rg=="
     },
     "marked@14.1.2": {
-      "integrity": "sha512-f3r0yqpz31VXiDB/wj9GaOB0a2PRLQl6vJmXiFrniNwjkKdvakqJRULhjFKJpxOchlCRiG5fcacoUZY5Xa6PEQ=="
+      "integrity": "sha512-f3r0yqpz31VXiDB/wj9GaOB0a2PRLQl6vJmXiFrniNwjkKdvakqJRULhjFKJpxOchlCRiG5fcacoUZY5Xa6PEQ==",
+      "bin": true
     }
   },
   "redirects": {
@@ -113,16 +178,32 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@deno/dnt@~0.41.3"
+      "npm:@astrojs/internal-helpers@*",
+      "npm:clsx@*",
+      "npm:cookie@*",
+      "npm:cssesc@*",
+      "npm:dayjs@*",
+      "npm:devalue@*",
+      "npm:es-module-lexer@*",
+      "npm:html-escaper@*",
+      "npm:kleur@*",
+      "npm:linkify-it@*",
+      "npm:markdown-it-attrs@*",
+      "npm:markdown-it@*",
+      "npm:marked@*",
+      "npm:mrmime@*",
+      "npm:sanitize-html@*",
+      "npm:svelte@*",
+      "npm:yaml@*",
+      "npm:zod@*"
     ],
     "packageJson": {
       "dependencies": [
-        "npm:@astrojs/check@0.7",
-        "npm:@astrojs/mdx@^3.1.7",
-        "npm:@astrojs/react@^3.6.2",
-        "npm:@astrojs/svelte@^5.7.0",
-        "npm:@astrojs/tailwind@^5.1.0",
-        "npm:@deno/astro-adapter@~0.1.3",
+        "npm:@astrojs/check@~0.9.4",
+        "npm:@astrojs/mdx@^5.0.4",
+        "npm:@astrojs/svelte@^8.0.5",
+        "npm:@astrojs/tailwind@^6.0.2",
+        "npm:@deno/astro-adapter@0.4",
         "npm:@fontsource-variable/gelasio@^5.1.0",
         "npm:@fontsource-variable/nunito@^5.1.0",
         "npm:@fontsource/frank-ruhl-libre@^5.1.0",
@@ -132,10 +213,8 @@
         "npm:@fontsource/shrikhand@^5.1.0",
         "npm:@iconify/svelte@^4.0.2",
         "npm:@internationalized/date@^3.5.5",
-        "npm:@radix-ui/react-icons@^1.3.0",
-        "npm:@radix-ui/react-slot@^1.1.0",
         "npm:@yawnxyz/sheetlog@^0.0.17",
-        "npm:astro@^4.15.6",
+        "npm:astro@^6.1.9",
         "npm:autoprefixer@^10.4.20",
         "npm:bits-ui@~0.21.15",
         "npm:chrono-node@^2.7.7",
@@ -144,31 +223,30 @@
         "npm:cmdk-sv@^0.0.18",
         "npm:cssnano@^7.0.6",
         "npm:dayjs@^1.11.13",
-        "npm:lucide-react@0.445",
         "npm:markdown-it-attrs@^4.2.0",
         "npm:markdown-it@^14.1.0",
         "npm:marked@^14.1.2",
         "npm:postcss-discard-comments@^7.0.3",
         "npm:postcss-import@^16.1.0",
         "npm:postcss-nesting@13",
+        "npm:postcss@^8.5.1",
         "npm:prism-solarized-dark@^1.0.1",
         "npm:prism@^4.1.2",
         "npm:radix-icons-svelte@^1.2.1",
-        "npm:react-dom@^18.3.1",
-        "npm:react@^18.3.1",
         "npm:sass-embedded@^1.78.0",
         "npm:scss@~0.2.4",
         "npm:svelte-immer-store@^1.0.2",
-        "npm:svelte-jsoneditor@^2.3.3",
-        "npm:svelte-masonry@~0.1.4",
-        "npm:svelte-persisted-store@0.11",
+        "npm:svelte-jsoneditor@^3.5.0",
+        "npm:svelte-persisted-store@0.12",
+        "npm:svelte-preprocess@^6.0.3",
         "npm:svelte-radix@^1.1.1",
-        "npm:svelte@^4.2.19",
+        "npm:svelte@^5.15.0",
         "npm:tailwind-merge@^2.5.2",
         "npm:tailwind-variants@~0.2.1",
         "npm:tailwindcss-animate@^1.0.7",
         "npm:tailwindcss@^3.4.10",
-        "npm:typescript@^5.5.3"
+        "npm:typescript@^5.5.3",
+        "npm:vite@^6.4.2"
       ]
     }
   }
