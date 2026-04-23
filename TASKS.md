@@ -47,11 +47,13 @@ Eleven files were mid-edit (unstaged) bumping `coverflow.deno.dev` → `coverflo
 - [x] [done 2026-04-23] **Adopt `?envelope=v2`** — wired into `src/lib/pipeline.ts` so the discriminated `body.ok` shape is used for all pipeline calls.
 - [x] [done 2026-04-23] **Add a `lib/pipeline.ts`** — mirrors labspace pattern: central `executePipeline()` returning `PipelineResult` discriminated union. Pipe action uses it; converters use the action.
 - [x] [done 2026-04-23] **Trace-id propagation** — `crypto.randomUUID()` per call, `X-Trace-Id` header out, logged at both action and pipeline.ts layers.
-- [ ] **[BLOCKED on upstream]** — live pipe action returns `Forbidden` from `coverflow.labspace.ai/execute`, BUT labspace.ai's own pipe action returns the same error on the same test payload. This is a coverflow/CF-Worker-side issue, not janzheng's. When labspace's swyripa form starts working again, janzheng's converters will too without any code change. Track upstream fix in labspace/coverflow TASKS.
+- [x] [done 2026-04-23] **Pipe action working end-to-end via val.town proxy** — the `Forbidden` that blocked us was Deno Deploy's CF edge WAF blocking Deno-to-Deno POSTs. Fixed org-wide by routing through `yawnxyz/coverflowProxy` on val.town; janzheng's `VALTOWN_COVERFLOW_PROXY_URL` + `_SECRET` env vars + `pipeline.ts` conditional routing inherit the fix with zero converter-level changes. Verified 20/20 POSTs returning 200 with real pipeline results. Full story: `../labspace/BRIEF-valtown-proxy.md`.
+- [x] [done 2026-04-23] **Cold-start-friendly retry in `pipeline.ts`** — retry widened from narrow CF-edge 403 to also cover network errors + 5xx transient (502/503/504). Delays `[0, 2s, 5s, 10s]` + jitter, 4 attempts, ~17s total backoff. Survives the ~20s coverflow-v3 Deno-isolate cold-start without surfacing "server down" to users. Mirrors labspace.
 
 ## Later
 
 - [ ] **Replace `deployctl` references in README** — currently mentions old deploy flow, update post-cutover.
+- [ ] **[WHEN DENO RESPONDS] rollback val.town routing** — drop `VALTOWN_COVERFLOW_PROXY_URL` env var; `pipeline.ts` auto-falls-back to direct path. See `../labspace/BRIEF-valtown-proxy.md` § Rollback.
 
 ## Notes
 
