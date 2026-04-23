@@ -18,13 +18,17 @@ export type PipelineResult =
       traceId: string;
     };
 
-// Caller-side retry for the CF-edge 403 pattern on new Deno Deploy.
-// Deno Deploy's CF edge runs managed WAF / Bot Fight rules that score
-// server-to-server POSTs and block some with empty-body 403s pre-origin.
-// Retry is safe for this specific pattern because the request never
-// executed on origin. Only 403s with no structured body retry; 401/400/410/
-// 5xx pass through in one attempt.
-const POST_RETRY_DELAYS_MS = [0, 900, 2500]; // + jitter
+// Caller-side retry budget. Retry on three safe-to-repeat patterns:
+//   1. CF-edge 403 with no body (pre-origin block; request never ran).
+//   2. 5xx from upstream (502/503/504 — transient infra hiccup or val /
+//      coverflow-v3 cold-start warmup).
+//   3. Network-level errors (connection closed, TLS handshake failed,
+//      fetch threw). Most often also pre-origin.
+// 401/400/410/422/429 + 2xx pass through in one attempt.
+// Budget is cold-start-friendly: coverflow-v3's Deno Deploy isolate
+// cold-starts in 15–25s. Total delay across retries ~17s + per-attempt
+// fetch time. Mirrors labspace.
+const POST_RETRY_DELAYS_MS = [0, 2000, 5000, 10000]; // 4 attempts, + jitter
 
 export async function executePipeline(
   pipeline: any,
@@ -51,17 +55,24 @@ export async function executePipeline(
   const traceId = crypto.randomUUID();
   console.log(`[executePipeline trace=${traceId}] → ${url}`);
 
-  let response: Response;
+  let response!: Response;
   let text = '';
   let body: any;
+  let lastNetworkError: string | null = null;
 
   for (let attempt = 0; attempt < POST_RETRY_DELAYS_MS.length; attempt++) {
     if (attempt > 0) {
       const jitter = Math.floor(Math.random() * 500);
       const delay = POST_RETRY_DELAYS_MS[attempt] + jitter;
-      console.log(`[executePipeline trace=${traceId}] retry ${attempt}/${POST_RETRY_DELAYS_MS.length - 1} after ${delay}ms (prev CF-edge 403)`);
+      const reason = lastNetworkError
+        ? `network error: ${lastNetworkError}`
+        : response?.status === 403
+          ? 'CF-edge 403'
+          : `HTTP ${response?.status}`;
+      console.log(`[executePipeline trace=${traceId}] retry ${attempt}/${POST_RETRY_DELAYS_MS.length - 1} after ${delay}ms (prev ${reason})`);
       await new Promise(r => setTimeout(r, delay));
     }
+    lastNetworkError = null;
     try {
       response = await fetch(url, {
         method: 'POST',
@@ -78,7 +89,10 @@ export async function executePipeline(
       });
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
-      console.error(`[executePipeline trace=${traceId}] network error:`, message);
+      console.error(`[executePipeline trace=${traceId}] network error (attempt ${attempt + 1}/${POST_RETRY_DELAYS_MS.length}):`, message);
+      lastNetworkError = message;
+      // Retry network errors if budget remains; give up on final.
+      if (attempt < POST_RETRY_DELAYS_MS.length - 1) continue;
       return {
         ok: false,
         error: { code: 'NETWORK_ERROR', message, statusCode: 0 },
@@ -87,10 +101,13 @@ export async function executePipeline(
     }
     text = await response.text();
     try { body = JSON.parse(text); } catch { body = { raw: text }; }
-    // Narrow retry: only the "CF-edge 403 pre-origin" shape — 403 with
-    // no structured response body. Envelope-v2 bodies have `ok`.
+    // Retry-safe patterns:
+    //   - CF-edge 403 with no envelope body (pre-origin block; didn't run).
+    //   - 5xx transient (cold-start warmup / gateway flake).
+    // Deterministic results (2xx, 4xx non-403) break out immediately.
     const isCfEdge403 = response.status === 403 && (!text || typeof body?.ok === 'undefined');
-    if (!isCfEdge403) break;
+    const isUpstreamTransient = response.status >= 502 && response.status <= 504;
+    if (!isCfEdge403 && !isUpstreamTransient) break;
   }
 
   // Envelope v2: trust body.ok over response.ok (so a 200 with ok:false
@@ -118,12 +135,13 @@ export async function executePipeline(
     };
   }
 
-  // CF-edge 403 that survived retries — empty body, no envelope. Surface
-  // a clearer human message so the Astro action can show users something
-  // actionable instead of raw "Forbidden".
+  // Exhausted retries on a transient failure (CF-edge 403 with no body,
+  // OR 5xx upstream). Surface a clear human message instead of raw
+  // statusText so the Astro action layer shows users something actionable.
   const isExhaustedCfEdge403 = response.status === 403 && (!text || typeof body?.ok === 'undefined');
-  if (isExhaustedCfEdge403) {
-    console.error(`[executePipeline trace=${traceId}] CF-edge 403 after ${POST_RETRY_DELAYS_MS.length} attempts — upstream WAF blocked`);
+  const isExhaustedTransient = response.status >= 502 && response.status <= 504;
+  if (isExhaustedCfEdge403 || isExhaustedTransient) {
+    console.error(`[executePipeline trace=${traceId}] exhausted ${POST_RETRY_DELAYS_MS.length} attempts — final HTTP ${response.status}`);
     return {
       ok: false,
       error: {
