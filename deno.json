@@ -2,6 +2,15 @@
   "nodeModulesDir": "manual",
   "imports": {
     "@astrojs/internal-helpers/": "npm:@astrojs/internal-helpers/",
+    "@codemirror/state": "npm:@codemirror/state",
+    "@floating-ui/dom": "npm:@floating-ui/dom",
+    "@fortawesome/free-regular-svg-icons": "npm:@fortawesome/free-regular-svg-icons",
+    "@fortawesome/free-solid-svg-icons": "npm:@fortawesome/free-solid-svg-icons",
+    "@internationalized/date": "npm:@internationalized/date",
+    "@jsonquerylang/jsonquery": "npm:@jsonquerylang/jsonquery",
+    "@melt-ui/svelte": "npm:@melt-ui/svelte",
+    "@oslojs/encoding": "npm:@oslojs/encoding",
+    "@yawnxyz/sheetlog": "npm:@yawnxyz/sheetlog",
     "clsx": "npm:clsx",
     "cookie": "npm:cookie",
     "cssesc": "npm:cssesc",
@@ -9,18 +18,38 @@
     "dayjs/": "npm:dayjs/",
     "devalue": "npm:devalue",
     "es-module-lexer": "npm:es-module-lexer",
+    "focus-trap": "npm:focus-trap",
     "html-escaper": "npm:html-escaper",
+    "immer": "npm:immer",
+    "immutable-json-patch": "npm:immutable-json-patch",
+    "json-source-map": "npm:json-source-map",
+    "jsonrepair": "npm:jsonrepair",
     "kleur": "npm:kleur",
     "kleur/": "npm:kleur/",
     "linkify-it": "npm:linkify-it",
+    "lodash-es": "npm:lodash-es",
     "markdown-it": "npm:markdown-it",
     "markdown-it-attrs": "npm:markdown-it-attrs",
+    "markdown-it-deflist": "npm:markdown-it-deflist",
+    "markdown-it-footnote": "npm:markdown-it-footnote",
+    "markdown-it-mark": "npm:markdown-it-mark",
+    "markdown-it-sup": "npm:markdown-it-sup",
+    "markdown-it-toc-and-anchor": "npm:markdown-it-toc-and-anchor",
     "marked": "npm:marked",
+    "memoize-one": "npm:memoize-one",
     "mrmime": "npm:mrmime",
+    "nanoid": "npm:nanoid",
+    "nanoid/": "npm:nanoid/",
+    "natural-compare-lite": "npm:natural-compare-lite",
+    "piccolore": "npm:piccolore",
     "sanitize-html": "npm:sanitize-html",
     "svelte": "npm:svelte",
+    "tailwind-merge": "npm:tailwind-merge",
+    "tailwind-variants": "npm:tailwind-variants",
+    "unstorage": "npm:unstorage",
     "yaml": "npm:yaml",
-    "zod": "npm:zod"
+    "zod": "npm:zod",
+    "zod/": "npm:zod/"
   },
   "tasks": {
     "build": "npm run build",
@@ -33,3 +62,8 @@
     "app": "janzheng"
   }
 }
+
+
+
+
+

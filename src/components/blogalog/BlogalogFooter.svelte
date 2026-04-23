@@ -5,7 +5,7 @@
  -->
 <script>
   import Notion from "@components/sveltekit-notion/src/Notion.svelte";
-  import SocialBox from './subcomponents/SocialBox.svelte';
+  import SocialBox from './subcomponents/Socialbox.svelte';
 
   import { parseYaml, generatePageStyles, getPageBlocks } from './utils/index.js'
   
