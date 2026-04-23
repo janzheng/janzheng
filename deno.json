@@ -53,8 +53,8 @@
   },
   "tasks": {
     "build": "npm run build",
-    "deploy:dev": "npm run build && deno deploy --org yawnxyz --app janzheng ./dist",
-    "deploy:prod": "npm run build && deno deploy --org yawnxyz --app janzheng --prod ./dist",
+    "deploy:dev": "npm run build && deno deploy --org yawnxyz --app janzheng",
+    "deploy:prod": "npm run build && deno deploy --org yawnxyz --app janzheng --prod",
     "logs": "deno deploy logs --org yawnxyz --app janzheng"
   },
   "deploy": {
@@ -62,6 +62,15 @@
     "app": "janzheng"
   }
 }
+
+
+
+
+
+
+
+
+
 
 
 

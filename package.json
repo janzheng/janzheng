@@ -9,8 +9,8 @@
     "preview": "deno run --allow-net --allow-read --allow-env --allow-import ./dist/server/entry.mjs",
     "build-preview": "npm run build && npm run preview",
     "format": "deno fmt && prettier --write .",
-    "prod": "npm run build && deno deploy --org yawnxyz --app janzheng --prod ./dist",
-    "test": "npm run build && deno deploy --org yawnxyz --app janzheng ./dist",
+    "prod": "npm run build && deno deploy --org yawnxyz --app janzheng --prod",
+    "test": "npm run build && deno deploy --org yawnxyz --app janzheng",
     "astro": "astro"
   },
   "dependencies": {
