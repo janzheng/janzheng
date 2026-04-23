@@ -31,10 +31,22 @@ export async function executePipeline(
   settings: any = {},
 ): Promise<PipelineResult> {
   const apiKey = import.meta.env.COVERFLOW_API_KEY;
+  // Val.town proxy (labspace/BRIEF-valtown-proxy.md): if
+  // VALTOWN_COVERFLOW_PROXY_URL is set on Deno Deploy env, route through
+  // the val to sidestep the Deno CF-edge WAF that blocks Deno-to-Deno
+  // server-side POSTs. Auth switches from X-API-Key to X-Proxy-Secret;
+  // the val adds X-API-Key on its own outbound. Unset proxy URL = direct
+  // path (pre-workaround).
+  const proxyUrl = import.meta.env.VALTOWN_COVERFLOW_PROXY_URL;
+  const proxySecret = import.meta.env.VALTOWN_COVERFLOW_PROXY_SECRET;
+  const viaProxy = !!proxyUrl && !!proxySecret;
+  const baseUrl = viaProxy
+    ? `${proxyUrl.replace(/\/$/, '')}/execute`
+    : 'https://coverflow.labspace.ai/execute';
   // envelope=v2: response body is always
   //   { ok: true, result, meta, steps } on success, or
   //   { ok: false, error, meta } on failure.
-  const url = 'https://coverflow.labspace.ai/execute?envelope=v2';
+  const url = `${baseUrl}?envelope=v2`;
 
   const traceId = crypto.randomUUID();
   console.log(`[executePipeline trace=${traceId}] → ${url}`);
@@ -56,7 +68,11 @@ export async function executePipeline(
         headers: {
           'Content-Type': 'application/json',
           'X-Trace-Id': traceId,
-          ...(apiKey ? { 'X-API-Key': apiKey } : {}),
+          // Via val.town proxy, send X-Proxy-Secret; val adds X-API-Key
+          // on its outbound. Direct path uses X-API-Key.
+          ...(viaProxy
+            ? { 'X-Proxy-Secret': proxySecret }
+            : apiKey ? { 'X-API-Key': apiKey } : {}),
         },
         body: JSON.stringify({ pipeline, ...settings }),
       });
