@@ -24,23 +24,15 @@
       "@data/*": [
         "src/data/*"
       ],
-      "@api/*": [
-        "src/pages/api/*"
-      ],
       "@layouts/*": [
         "src/layouts/*"
       ],
       "@pages/*": [
         "src/pages/*"
       ],
-      "@deno": [
-        "src/deno/build/esm/index.js"
-      ],
       "@lib/*": [
         "src/lib/*"
       ]
-    },
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    }
   }
 }

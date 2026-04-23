@@ -4,17 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev --host",
-    "start-notes": "Notes: astro dev will not be able to import any deno modules. Use `yarn deno` instead, which runs astro AND does deno imports, with live sync; ",
     "start": "astro dev",
     "build": "astro build && deno run --allow-read --allow-write ./scripts/patch-deno-entry.ts",
     "preview": "deno run --allow-net --allow-read --allow-env --allow-import ./dist/server/entry.mjs",
     "build-preview": "npm run build && npm run preview",
-    "deno": "astro build && deno run --allow-net --allow-read --allow-env --watch ./dist/server/entry.mjs",
     "format": "deno fmt && prettier --write .",
     "prod": "npm run build && deno deploy --org yawnxyz --app janzheng --prod ./dist",
     "test": "npm run build && deno deploy --org yawnxyz --app janzheng ./dist",
-    "astro": "astro",
-    "deno-dnt": "cd src/deno/; deno run -A ./build.ts"
+    "astro": "astro"
   },
   "dependencies": {
     "svelte-jsoneditor": "^3.5.0"
