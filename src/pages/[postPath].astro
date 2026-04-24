@@ -89,9 +89,12 @@ try {
 
 // Short browser + edge cache so Notion edits propagate within ~1 min + SWR
 // window keeps repeat visits snappy. See labspace/.brief/cache-layers.md.
+// EXCEPT on bust requests: no-store so repeat busts always re-fetch.
 Astro.response.headers.set(
   'Cache-Control',
-  'public, max-age=60, stale-while-revalidate=3600'
+  shouldRefresh
+    ? 'no-store, must-revalidate'
+    : 'public, max-age=60, stale-while-revalidate=3600'
 );
 
 ---
