@@ -86,6 +86,13 @@ try {
   console.error(`Error fetching or parsing blogalog data: [${url}]`, error);
 }
 
+// Short browser + edge cache so Notion edits propagate within ~1 min + SWR
+// window keeps repeat visits snappy. See labspace/.brief/cache-layers.md.
+Astro.response.headers.set(
+  'Cache-Control',
+  'public, max-age=60, stale-while-revalidate=3600'
+);
+
 ---
 <Layout title={currentPost?.name}>
   <div class="JanZheng | Article | ">
