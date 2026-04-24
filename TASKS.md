@@ -55,6 +55,7 @@ Eleven files were mid-edit (unstaged) bumping `coverflow.deno.dev` → `coverflo
 - [x] [done 2026-04-23] **Add `/reload` endpoint** — new `src/pages/reload/index.astro`: thin redirector that reads `?from=<path>` or Referer, redirects to `<path>?refresh=true`. Matches labspace's unified cache-bust UX. Full story in `../labspace/.brief/cache-layers.md`. #cache
 - [x] [done 2026-04-23] **Short predictable browser cache** — `Cache-Control: public, max-age=60, stale-while-revalidate=3600` on homepage + `[postPath]`. Replaces implicit browser heuristic caching (unpredictable) with an explicit 60s + 1h SWR window so Notion edits are visible to repeat visitors within ~1 min. #cache
 - [x] [done 2026-04-23] **Proper 404 status on missing-post rewrite** — `[postPath].astro` used to rewrite to `/404` but keep HTTP 200 (Astro rewrite default). Now sets `Astro.response.status = 404` before the rewrite so wire status matches rendered content. Stops scanner probes from seeing "not found" pages as successful hits. #security
+- [x] [done 2026-04-23] **marked → markdown-it migration** — ported labspace's `marked()` + `plainText()` shim into `src/components/blogalog/utils/markdownit.js`. Rewired 11 files from `import { marked } from 'marked'` to the shim. Deleted 3 orphan files (`ComponentPage.svelte`, `PageGroup.svelte`, `utils/marked.js`) + their duplicate `plainRenderer` in `utils/index.js`. Dropped `marked` from deps. One markdown engine across the site now (matches labspace). #cleanup #deps
 
 ## Later
 
