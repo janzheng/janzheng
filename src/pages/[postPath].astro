@@ -79,6 +79,7 @@ try {
 
   if (!currentPost) {
     console.log('rewrite to 404');
+    Astro.response.status = 404;
     return Astro.rewrite('/404');
   }
 
