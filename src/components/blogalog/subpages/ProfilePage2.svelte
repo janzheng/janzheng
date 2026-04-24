@@ -66,7 +66,7 @@
 
 
 <script>
-  import { marked } from 'marked';
+  import { marked } from '@components/blogalog/utils/markdownit.js';
   export let blogalogData, classes;
 </script>
 

@@ -252,7 +252,6 @@
         "npm:dayjs@^1.11.13",
         "npm:markdown-it-attrs@^4.2.0",
         "npm:markdown-it@^14.1.0",
-        "npm:marked@^14.1.2",
         "npm:postcss-discard-comments@^7.0.3",
         "npm:postcss-import@^16.1.0",
         "npm:postcss-nesting@13",

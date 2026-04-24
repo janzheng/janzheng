@@ -3,7 +3,7 @@
   import { buildPageOrder, parseYaml, getNotionImageLink } from './blogalog/utils/index.js';
   import { componentTypes } from './blogalog/utils/componentTypes.js';
   import { userData } from './blogalog/utils/stores.js';
-  import { marked } from 'marked';
+  import { marked } from '@components/blogalog/utils/markdownit.js';
   import { md } from './blogalog/utils/markdownit.js';
   import { niceDate } from './blogalog/utils/date.js';
   import './blogalog/styles/blogalog.scss';

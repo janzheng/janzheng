@@ -1,7 +1,7 @@
 
 <script>
   import { getContext } from 'svelte';
-  import { marked } from 'marked';
+  import { marked } from '@components/blogalog/utils/markdownit.js';
   import { md } from '../utils/markdownit.js'
   import { parseYaml, getNotionImageLink } from '../utils/index.js';
   import { niceDate } from '../utils/date.js';

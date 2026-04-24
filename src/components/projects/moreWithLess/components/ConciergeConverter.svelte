@@ -1,7 +1,7 @@
 
 <script>
 
-  import { marked } from 'marked'
+  import { marked } from '@components/blogalog/utils/markdownit.js'
   import * as chrono from 'chrono-node';
   import { z } from 'zod';
   import { actions } from 'astro:actions';

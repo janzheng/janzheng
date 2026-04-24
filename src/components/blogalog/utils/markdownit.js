@@ -29,6 +29,28 @@ export let md = new MarkdownIt({
   breaks: true,
 })
 md.use(MarkdownItAttrs)
+
+// Drop-in replacement for marked() — same HTML shape marked would produce,
+// without typographer/linkify so short strings (locations, descriptions,
+// chat messages) don't get unexpectedly transformed.
+const mdSimple = new MarkdownIt({ html: true, breaks: true })
+mdSimple.use(MarkdownItAttrs)
+export const marked = (text) => mdSimple.render(text ?? '')
+// No-ops so legacy marked v4 plugin/options call sites don't throw.
+marked.use = () => marked
+marked.setOptions = () => marked
+
+// Render markdown to plain text. Replaces the marked v4 `{renderer: plainRenderer()}`
+// pattern used for <title> tags and other places that need markdown stripped.
+export const plainText = (text) =>
+  mdSimple.render(text ?? '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .trim()
 // md.use(MarkdownItSup)
 // md.use(MarkdownItFootnote)
 // md.use(LinkifyIt) // really good at detecting links

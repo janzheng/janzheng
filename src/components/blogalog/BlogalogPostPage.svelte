@@ -8,13 +8,12 @@
 <script>
   import './styles/blogalog.scss';
 
-  import { marked } from 'marked'
+  import { marked } from '@components/blogalog/utils/markdownit.js'
   import dayjs from 'dayjs'
 
   import { generatePageStyles, parseYaml, getNotionImageLink, getPageBlocks } from './utils/index.js'
   import { niceDate } from './utils/date.js';
   import { md } from './utils/markdownit.js'
-  import { plainRenderer } from './utils/marked.js';
 
   import Notion from "@components/sveltekit-notion/src/Notion.svelte";
 
