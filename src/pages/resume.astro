@@ -2,7 +2,8 @@
 import '@styles/resume.scss';
 import Resume from "@components/Resume.svelte";
 import Layout from "@layouts/Layout.astro";
-import sheet from '@yawnxyz/sheetlog';
+import { Sheet } from '@yawnxyz/sheetlog';
+const sheet = new Sheet();
 
 import resumeJson from '@data/cv.json';
 
@@ -26,10 +27,10 @@ if (id) {
     const result = await sheet.find("Id", id);
     if (result && result.data?.Resume) {
       initialResumeJson = JSON.parse(result.data.Resume);
-      console.log(">>> live resume loaded", JSON.stringify(initialResumeJson, null, 2));
+
     }
   } catch (e) {
-    console.error('[resume] error loading initial data:', e);
+    console.error('[resume] stored resume unavailable');
   }
 }
 ---

@@ -23,7 +23,11 @@
   export let id;
   export let preview;
 
-  import sheet, { Sheet } from '@yawnxyz/sheetlog';
+  import { Sheet } from '@yawnxyz/sheetlog';
+  import { createResumeSaver } from '@lib/resume-save';
+  const sheet = new Sheet();
+  const saveOnce = createResumeSaver((payload, options) => sheet.update(payload, options));
+  let isSaving = false, saveUncertain = false;
   import { persisted } from 'svelte-persisted-store'
   export let savedResumeText = persisted(`resumeText-${id}`, '');
   export let resumeText = writable('');
@@ -132,16 +136,16 @@
       resumeJson = JSON.parse($resumeText)
       socialEmail = resumeJson.basics?.email;
       socialText = resumeJson.basics?.profiles.map(p => p.url + '\n').join('');
-      console.log('loaded resumeJson', resumeJson)
+
     } catch(e) {
-      console.error('[resumeText] error:', e, $resumeText)
+      console.error('[resumeText] invalid resume JSON')
     }
   }
 
   
   // content / json change
   function handleChange(updatedContent, previousContent, { contentErrors, patchResult }) {
-    console.log('[handleChange]: ', { updatedContent, previousContent, contentErrors, patchResult })
+
 
     $resumeText = updatedContent.text || JSON.stringify(updatedContent.json, null, 2);
     resumeJson = JSON.parse($resumeText);
@@ -174,34 +178,28 @@
 
 
   async function saveResume() {
+    if (isSaving || saveUncertain) return;
+    const saveId = id;
+    const saveText = $resumeText;
+    isSaving = true;
+    message = 'saving';
     try {
-      if(!id) {
-        message = "Please enter an id!"
-        console.error(message)
-        return; 
+      // Keep the local draft even if provider acknowledgement is lost.
+      savedResumeText = persisted(`resumeText-${saveId}`, '');
+      $savedResumeText = saveText;
+      const outcome = await saveOnce(saveId, saveText);
+      if (outcome.status === 'confirmed') {
+        const unchanged = id === saveId && $resumeText === saveText;
+        hasUnsaved = !unchanged;
+        message = unchanged ? 'saved!' : 'Saved the earlier version; current edits are unsaved.';
+      } else if (outcome.status === 'invalid') {
+        message = 'Enter an id and valid resume JSON (up to 1 MiB).';
+      } else if (outcome.status === 'unknown') {
+        saveUncertain = true;
+        hasUnsaved = true;
+        message = 'Save outcome unknown. Check the stored resume before reloading or trying again. Your local draft is retained.';
       }
-      message = "saving"
-
-      // Make sure we're using the correct persisted store for current ID
-      savedResumeText = persisted(`resumeText-${id}`, '');
-      let saveObj = { Id: id, Resume: $resumeText}
-      $savedResumeText = $resumeText
-
-      let results = await sheet.update(saveObj, {
-        "id": id,
-        "idColumn": "Id",
-      });
-  
-      // could fetch + diff, but would take up an action (and be slower)
-      // SOMETIMES GOOGLE SHEETS DOESN'T SEEM TO SAVE? (or update the sheets interface?)
-      console.log('saveResume:', saveObj, id, 'results', results)
-      message = "saved!"
-      hasUnsaved = false // super naive impl
-
-    } catch(e) {
-      console.error('error saving resume', e)
-      message = "error saving!"
-    }
+    } finally { isSaving = false; }
   }
 
   let resumeOrder = [
@@ -250,7 +248,7 @@
           <button class="button | {state == 'view' ? 'active' : ''} border-r-2 border-y-2 rounded-e-xl" on:click="{() => state = 'view'}">View</button>
         </div>
         <input type="text" class="px-2 py-1 my-0" bind:value={id} />
-        <button class="Btn-text | " on:click={() => saveResume()}>Save</button>
+        <button class="Btn-text | " disabled={isSaving || saveUncertain} on:click={() => saveResume()}>Save</button>
         {#if message}
           <span class="text-slate-500 ml-2">{message}</span>
         {/if}
@@ -259,7 +257,7 @@
       </div>
     {/if}
 
-    <div class="flex gap-4 px-4">
+    <div class="resume-workspace flex gap-4 px-4">
       {#if state && (state === 'json' || state === 'split')}
         <div class="view-json | h-screen sticky top-0 || print:hidden"
           style={`width: ${state==='split' && (panelWidth+"px") || '100%'};`}>

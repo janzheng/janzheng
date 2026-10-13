@@ -1,0 +1,233 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Jan Zheng",
+    "label": "Product Designer",
+    "email": "hello@janzheng.com",
+    "phone": "",
+    "url": "https://janzheng.com",
+    "summary": "I’m Jan, a product designer who combines code, user research, and lean startup methods to tackle complex issues and difficult projects.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Atlanta, GA",
+      "countryCode": "US",
+      "region": "Georgia"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "yawnxyz",
+        "url": ""
+      },
+      {
+        "network": "LinkedIn",
+        "username": "janzh",
+        "url": "https://linkedin.com/in/janzh"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Ubiquiti Networks",
+      "position": "Lead User Experience Architect, UX Design, Front-End Dev",
+      "url": "",
+      "startDate": "2014",
+      "endDate": "2016",
+      "summary": "Designed and built a support-centric community social network for Ubiquiti’s users.",
+      "location": "Atlanta, GA",
+      "highlights": [
+        "Created business logic, requirements, wireframes, prototypes.",
+        "Built a modular, SCSS-based responsive framework.",
+        "Developed front-end features using AngularJS."
+      ]
+    },
+    {
+      "name": "nurun",
+      "position": "Senior User Experience Architect",
+      "url": "",
+      "startDate": "2012",
+      "endDate": "2014",
+      "summary": "Guided campaign requirements and strategy; created user flows, wireframes, and interactive prototypes.",
+      "location": "Atlanta, GA",
+      "highlights": [
+        "Worked with clients like Nespresso, Assurant, Gas South, and The Home Depot."
+      ]
+    },
+    {
+      "name": "Moxie",
+      "position": "User Experience Architect",
+      "url": "",
+      "startDate": "2010",
+      "endDate": "2012",
+      "summary": "Focused on web and mobile experiences, information architecture, and conversion funnels.",
+      "location": "Atlanta, GA",
+      "highlights": [
+        "Clients included Verizon Wireless, Cartoon Network, Coca-Cola, Garnier, and BBC America."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Carnegie Mellon University",
+      "area": "Human-Computer Interaction",
+      "studyType": "Masters",
+      "startDate": "2009",
+      "endDate": "2010",
+      "location": "Pittsburgh, PA"
+    },
+    {
+      "institution": "University of Maryland, Baltimore County",
+      "area": "Computer Science & Game Development, and Psychology",
+      "studyType": "B.S.",
+      "startDate": "",
+      "endDate": "2009",
+      "location": "Catonsville, MD"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Design Skills",
+      "level": "",
+      "keywords": [
+        "User-Centered Design",
+        "User Experience Strategy",
+        "UX Development",
+        "Card Sorting",
+        "Content Strategy",
+        "Ethnographic Research",
+        "Information Architecture",
+        "Interaction Design",
+        "Rapid Prototyping",
+        "Service Design",
+        "Usability Testing",
+        "User Research",
+        "Wireframing"
+      ]
+    },
+    {
+      "name": "Code Skills",
+      "level": "",
+      "keywords": [
+        "Front-end Development",
+        "Responsive Design",
+        "Design systems",
+        "Static websites",
+        "Serverless deployments",
+        "HTML / SCSS",
+        "Meteor.js / Vue.js / React.js",
+        "Node.js",
+        "GraphQL / Apollo",
+        "MongoDB",
+        "Shopify / WordPress / Squarespace",
+        "Python 2/3"
+      ]
+    },
+    {
+      "name": "Design Tools",
+      "level": "",
+      "keywords": [
+        "Axure",
+        "Airtable",
+        "Sketch",
+        "Figma",
+        "Adobe Creative Suite",
+        "Pen & Paper"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Swedish",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Mandarin","fluency": "Fluent"}
+  ],
+  "notes": [
+    "Dual citizen (U.S. & Sweden)"
+  ],
+  "projects": [
+    {
+      "name": "Phage Directory",
+      "description": "Community and tools for phage researchers, co-founded to support scientific research.",
+      "technologies": [
+        "Product Design",
+        "Business Strategy",
+        "Full-Stack Development"
+      ],
+      "url": "https://phage.directory"
+    },
+    {
+      "name": "ANDP",
+      "description": "Data science project using Python to track nonprofit housing impact.",
+      "technologies": [
+        "Python",
+        "Data Science"
+      ],
+      "url": "https://andpi.org"
+    },
+    {
+      "name": "LifeLine Animal Project",
+      "description": "UX/UI redesign for animal management in shelters.",
+      "technologies": [
+        "UX/UI Design"
+      ],
+      "url": "https://lifelineanimal.org"
+    },
+    {
+      "name": "Ellen Thomas Events",
+      "description": "Website development for a local wedding planner using WordPress.",
+      "technologies": [
+        "WordPress"
+      ],
+      "url": "https://ellenthomasevents.com"
+    },
+    {
+      "name": "Decatur Smiles",
+      "description": "Developed a fun landing page for a dental clinic.",
+      "technologies": [
+        "Middleman"
+      ],
+      "url": "https://decatursmilesga.com"
+    },
+    {
+      "name": "ATLX",
+      "description": "Event registration system for swing dancing.",
+      "technologies": [
+        "React",
+        "Meteor"
+      ],
+      "url": "https://atlantalindyexchange.com"
+    },
+    {
+      "name": "Diamax Korea",
+      "description": "Light-weight, customizable CMS for product management and event display.",
+      "technologies": [
+        "React",
+        "Meteor"
+      ],
+      "url": "https://diamakorea.com"
+    },
+    {
+      "name": "Double the Donation",
+      "description": "Designed a conversion funnel that significantly increased subscriptions.",
+      "technologies": [
+        "WordPress",
+        "Copywriting",
+        "UX/UI Design"
+      ],
+      "url": "https://doublethedonation.com"
+    }
+  ],
+  "consulting": [
+    {
+      "name": "GigaGen",
+      "description": "Created information architecture and wireframes for RNA sequencing analysis software.",
+      "technologies": [
+        "Information Architecture",
+        "Wireframing"
+      ]
+    }
+  ]
+}

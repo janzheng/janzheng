@@ -45,7 +45,6 @@
     let temp = $from$;
     $from$ = $to$;
     $to$ = temp;
-    console.log(`Clicked swap | currencyData`, $currencyData$);
   }
 
   const currencies = Object.values(currencyList).map(cur => ({
@@ -71,34 +70,20 @@
     message='Converting...';
     
     try {
-      let postData = {
-        pipeline: [
-          {
-            name: "getCurrency",
-            settings: {
-              amount: currencyData.amount.toString(),
-              from: currencyData.from,
-              to: currencyData.to,
-              date: today(getLocalTimeZone())
-            }
-          }
-        ]
-      }
-      console.log('Sending data...', postData);
+      const postData = { definitionId: 'currency-v1', entries: { amount: currencyData.amount.toString(), from: currencyData.from, to: currencyData.to, date: today(getLocalTimeZone()).toString() } };
       requests = [...requests, postData];
-      const { data: result, error } = await actions.pipe({ pipeline: postData.pipeline });
+      const { data: result, error } = await actions.pipe(postData);
 
       if (error) {
-        console.error('pipe action failed:', error);
+        console.error('Conversion failed.');
         message = error.message === 'HTTP error! status: 404'
           ? 'Sorry, the exchange rate for this date was not found.'
           : (error.message || 'Oops!');
         return;
       }
-      console.log("Received data:", result)
       message = `Total amount in ${$to$}: ${currencies.filter(cur => cur.value === $to$)[0].symbol}${result.data.result}`;
     } catch (error) {
-      console.error('An error occurred while converting:', error, error.message);
+      console.error('Conversion failed.');
       message = 'An error occurred while converting.';
     }
   }
@@ -231,7 +216,6 @@
           if(e.target.value) {
             let newdate = chrono.parseDate(e.target.value);
             if (newdate) {
-              console.log('newDate:', newdate);
               let year = newdate.getUTCFullYear();
               let month = newdate.getUTCMonth() + 1; // getUTCMonth() returns a zero-based month, so we add 1
               let day = newdate.getUTCDate();
@@ -245,7 +229,6 @@
             if(e.key === 'Enter') {
               let newdate = chrono.parseDate(e.target.value);
               if (newdate) {
-                console.log('newDate:', newdate);
                 let year = newdate.getUTCFullYear();
                 let month = newdate.getUTCMonth() + 1; // getUTCMonth() returns a zero-based month, so we add 1
                 let day = newdate.getUTCDate();

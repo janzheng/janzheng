@@ -108,47 +108,12 @@
     
     try {
       resultsList = []
-      let prompt = `Please convert the amount ${amount} for all possible combinations of the following currencies:
-        From currencies: ${Object.entries($fromList).filter(([key, value]) => value).map(([key]) => key).join(', ')}
-        To currencies: ${Object.entries($toList).filter(([key, value]) => value).map(([key]) => key).join(', ')}
-
-        Instructions:
-        1. Create a conversion for each possible pair of FROM currency to TO currency.
-        2. Use one function call for each currency pair, as it only handles ONE CURRENCY PAIR at a time.
-        3. Output your answers in an array of JSON objects, with each object structured as follows:
-        {
-          from: "USD",
-          to: "EUR",
-          amount: 100,
-          result: 116.92
-        }
-
-        4. Ensure you make ${Object.entries($fromList).filter(([key, value]) => value).length * Object.entries($toList).filter(([key, value]) => value).length} conversions in total.
-        5. If a conversion is not possible or the function call fails, provide your best estimate and add "(guess)" to the 'to' field, e.g., "EUR (guess)".
-        6. Review your answers after all function calls to ensure completeness and accuracy.
-        7. Return the final result as a JSON array of objects.`
-
-      console.log('prompt', prompt)
-      let postData = {
-        "pipeline": [
-          {
-            "name": "ai",
-            "settings": {
-              "tools": [
-                "getCurrency"
-              ],
-              "prompt": `${prompt} | Today's date is ${today(getLocalTimeZone())}`,
-              "model": "llama3-groq-8b-8192-tool-use-preview",
-              "provider": "groq"
-            }
-          }
-        ]
-      }
+      const postData = { definitionId: 'rube-v1', entries: { amount: String(amount), from: Object.entries($fromList).filter(([, value]) => value).map(([key]) => key), to: Object.entries($toList).filter(([, value]) => value).map(([key]) => key), date: today(getLocalTimeZone()).toString() } };
       requests = [...requests, postData];
 
       message=`Calculating conversions...`;
 
-      const { data: r, error } = await actions.pipe({ pipeline: postData.pipeline });
+      const { data: r, error } = await actions.pipe(postData);
 
       if (error) {
         message = error.message || 'Oops!';
@@ -156,7 +121,6 @@
       }
       result = r;
       results = [...results, result];
-      console.log('result', result)
       if(result.data?.steps[0]) {
           const toolResults = result.data.steps[0].toolResults;
           const fromCurrencies = Object.entries($fromList).filter(([key, value]) => value).map(([key]) => key);
@@ -175,9 +139,8 @@
           message = `Conversion complete for ${amount} ${fromCurrencies.join(', ')} to ${toCurrencies.join(', ')}`;
       }
 
-      console.log('resultsList', resultsList)
     } catch (error) {
-      console.error('An error occurred while converting:', error);
+      console.error('Conversion failed.');
       message = 'An error occurred while converting.';
     }
   }

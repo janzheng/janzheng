@@ -54,7 +54,7 @@
     filename = url.pathname.substring(url.pathname.lastIndexOf("/") + 1);
   }
 
-  if (!display_source && browser) {
+  if (!display_source && api && typeof window !== 'undefined') {
     get();
   }
 

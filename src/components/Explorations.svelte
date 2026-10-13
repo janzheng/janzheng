@@ -102,7 +102,7 @@
                         <div class="Post-main relative z-10 flex flex-col flex-grow gap-2 {settings?.post?.main?.class || ''}">
                           {#if getCover(post)}
                             <div class="Cover-image-container">
-                              <img src={getCover(post)} alt="Cover Image" class="max-h-64 max-w-5xl" />
+                              <img src={getCover(post)} alt="Cover Image" class="max-h-64 max-w-full" />
                             </div>
                           {/if}
                           <div class="Post-content-wrapper ">

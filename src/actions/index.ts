@@ -5,8 +5,9 @@
 import { defineAction, ActionError } from 'astro:actions';
 import { z } from 'astro:schema';
 // import sheet, { Sheet } from '@yawnxyz/sheetlog';
-import sheet from '../lib/sheetlogs.ts';
+import { Sheet } from '../lib/sheetlogs.ts';
 import { executePipeline } from '../lib/pipeline.ts';
+import { runConverter } from '../server/converter-definitions.ts';
 
 
 
@@ -16,30 +17,17 @@ export const server = {
   // COVERFLOW_API_KEY in the environment so the worker accepts the
   // call. Converters in moreWithLess call this via actions.pipe().
   pipe: defineAction({
-    input: z.object({
-      pipeline: z.any(),
-    }),
-    handler: async ({ pipeline }) => {
-      const result = await executePipeline(pipeline, { verbose: false, useCache: true });
-      if (!result.ok) {
-        console.error('[pipe] pipeline failed:', result.error, 'trace:', result.traceId);
-        throw new ActionError({
-          code: result.error.statusCode === 0 ? 'INTERNAL_SERVER_ERROR' : 'BAD_REQUEST',
-          message: result.error.message,
-        });
-      }
-      // Return coverflow's `.result` object as-is (with its own `.data`,
-      // `.messages`, etc. wrapping). Callers alias it back to `result`
-      // so their existing field access (`result.data.text`, `result.messages`)
-      // keeps working without rewrites.
-      return result.result;
+    input: z.unknown(),
+    handler: async (input, { request }) => {
+      try { return await runConverter(input, request, executePipeline); }
+      catch { throw new ActionError({code:'BAD_REQUEST',message:'Conversion unavailable. No automatic retry was made.'}); }
     },
   }),
 
   newsletter: defineAction({
     accept: 'form',
     input: z.object({
-      email: z.string().email(),
+      email: z.string().email().max(254),
       terms: z.boolean(),
     }),
     handler: async ({ email, terms }) => { /* ... */ },
@@ -47,28 +35,24 @@ export const server = {
   emailSignup: defineAction({
     accept: 'form',
     input: z.object({
-      name: z.string(),
-      email: z.string().email(),
-      attendance: z.string(), // Mandatory attendance
-      note: z.string().optional(), // Optional note
+      name: z.string().trim().min(1).max(200),
+      email: z.string().email().max(254),
+      attendance: z.string().trim().min(1).max(100), // Mandatory attendance
+      note: z.string().max(4000).optional(), // Optional note
     }),
-    handler: async ({ email, name, attendance, note }) => { 
+    handler: async ({ email, name, attendance, note }, { request }) => {
+      const url = new URL(request.url);
+      if (url.protocol !== 'https:' || !['janzheng.com','www.janzheng.com','janzheng.yawnxyz.deno.net'].includes(url.hostname) || request.headers.get('origin') !== url.origin) {
+        throw new ActionError({code:'FORBIDDEN',message:'Request origin is not authorized.'});
+      }
+      const sheet = new Sheet();
+      sheet.setup({sheetUrl:import.meta.env.SHEET_URL,sheet:'emails',logPayload:false});
       try {
-        if (!attendance) {
-          throw new Error("Attendance is required.");
-        }
-
-        // console.log("email", email, name, attendance, note, 'env:', import.meta.env.SHEET_URL)
-
-        sheet.setup({
-          sheetUrl: import.meta.env.SHEET_URL,
-          sheet: "emails"
-        });
-
-        sheet.log({ email, name, attendance, note })
-      } catch (error) {
-        console.error("Error in emailSignup handler:", error);
-        // You might want to return an error response or handle the error appropriately
+        const result = await sheet.log({email,name,attendance,note});
+        if (!result || result.status !== 201) throw new Error('Unconfirmed write');
+        return {ok:true};
+      } catch {
+        throw new ActionError({code:'INTERNAL_SERVER_ERROR',message:'Submission outcome unknown. Check before submitting again.'});
       }
     },
   })

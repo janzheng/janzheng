@@ -17,24 +17,10 @@
     message='Thinking...';
     
     try {
-      let postData = {
-        "pipeline": [
-          {
-            "name": "ai",
-            "settings": {
-              "tools": [
-                "getCurrency"
-              ],
-              "prompt": `${promptStr} | Today's date is ${today(getLocalTimeZone())}`,
-              "model": "llama3-groq-8b-8192-tool-use-preview",
-              "provider": "groq"
-            }
-          }
-        ]
-      }
+      const postData = { definitionId: 'chat-v1', entries: { prompt: promptStr, date: today(getLocalTimeZone()).toString() } };
       thinking = true;
       requests = [...requests, postData];
-      const { data: r, error } = await actions.pipe({ pipeline: postData.pipeline });
+      const { data: r, error } = await actions.pipe(postData);
 
       message='';
       if (error) {
@@ -44,14 +30,13 @@
       }
       result = r;
       results = [...results, result];
-      console.log('result', result)
       thinking = false;
       if(result?.data) {
         message = `Amount: ${result?.data?.text}`;
         steps = result?.data?.steps;
       }
     } catch (error) {
-      console.error('An error occurred while converting:', error);
+      console.error('Conversion failed.');
       message = 'An error occurred while converting.';
     }
   }

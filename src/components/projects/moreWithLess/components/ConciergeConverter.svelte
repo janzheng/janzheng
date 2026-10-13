@@ -68,7 +68,6 @@
     let temp = $from$;
     $from$ = $to$;
     $to$ = temp;
-    console.log(`Clicked swap | currencyData`, $currencyData$);
   }
 
   const currencies = Object.values(currencyList).map(cur => ({
@@ -93,22 +92,9 @@
     message='Converting...';
     
     try {
-      let postData = {
-        pipeline: [
-          {
-            name: "getCurrency",
-            settings: {
-              amount: currencyData.amount.toString(),
-              from: currencyData.from,
-              to: currencyData.to,
-              date: currencyData.date.toString()
-            }
-          }
-        ]
-      }
-      console.log('Sending data...', postData);
+      const postData = { definitionId: 'currency-v1', entries: { amount: currencyData.amount.toString(), from: currencyData.from, to: currencyData.to, date: currencyData.date.toString() } };
       requests = [...requests, postData];
-      const { data: result, error } = await actions.pipe({ pipeline: postData.pipeline });
+      const { data: result, error } = await actions.pipe(postData);
 
       if (error) {
         message = error.message || 'Oops!';
@@ -119,7 +105,7 @@
 
       message = `Total amount in ${$to$}: ${currencies.filter(cur => cur.value === $to$)[0].symbol}${result.data.result}`;
     } catch (error) {
-      console.error('An error occurred while converting:', error);
+      console.error('Conversion failed.');
       message = 'An error occurred while converting.';
     }
   }
@@ -130,44 +116,11 @@
     message='Getting an answer...';
     
     try {
-      // let prompt = `Ask: ${promptStr} | 
-      //     If the user's ask about currencies is nuanced, please add an "explanation" key to the JSON response. If the request asks about multiple or area currencies, please decide how to run multiple function calling, run them an explain the output in your answer.
-      //     Always use the currency conversion function.
-      let prompt = `Ask: ${promptStr} | 
-          If the user's ask about currencies is nuanced, please add furter explanation. If the request asks about multiple or area currencies, please decide how to run multiple function calling, run them an explain the output in your answer.
-          Always use the currency conversion function.
-          Today's date is ${today(getLocalTimeZone())}
-        `
-      let postData = {
-        "pipeline": [
-          {
-            "name": "ai",
-            "settings": {
-              "tools": [
-                "getCurrency"
-              ],
-              "prompt": `${prompt}`,
-              // "model": "llama3-groq-8b-8192-tool-use-preview",
-              // "provider": "groq"
-              "model": "gpt-4o-mini",
-              "provider": "openai"
-            }
-          },
-          {
-            "name": "ai",
-            "settings": {
-              "prompt": `Please use the context to asnswer the following query:<query>${prompt}</query>. Be succinct in your answer. Just respond to the answer, don't reflect on the question or explain your answer.`,
-              "model": "llama3-70b-8192",
-              "provider": "groq",
-
-            }
-          }
-        ]
-      }
+      const postData = { definitionId: 'concierge-v1', entries: { prompt: promptStr, date: today(getLocalTimeZone()).toString() } };
 
       requests = [...requests, postData];
 
-      const { data: r, error } = await actions.pipe({ pipeline: postData.pipeline });
+      const { data: r, error } = await actions.pipe(postData);
 
       if (error) {
         message = error.message || 'Oops!';
@@ -182,12 +135,11 @@
         message = result?.reply?.json?.fullAnswer || `Amount: ${result?.reply?.json?.answer}`;
       }
 
-      console.log('llm response:', result)
       if(result?.data) {
         message = marked(result?.data?.text || result?.data)
       }
     } catch (error) {
-      console.error('An error occurred while converting:', error);
+      console.error('Conversion failed.');
       message = 'An error occurred while converting.';
     }
   }
@@ -363,7 +315,6 @@
                 if(e.target.value) {
                   let newdate = chrono.parseDate(e.target.value);
                   if (newdate) {
-                    console.log('newDate:', newdate);
                     let year = newdate.getUTCFullYear();
                     let month = newdate.getUTCMonth() + 1; // getUTCMonth() returns a zero-based month, so we add 1
                     let day = newdate.getUTCDate();
@@ -377,7 +328,6 @@
                   if(e.key === 'Enter') {
                     let newdate = chrono.parseDate(e.target.value);
                     if (newdate) {
-                      console.log('newDate:', newdate);
                       let year = newdate.getUTCFullYear();
                       let month = newdate.getUTCMonth() + 1; // getUTCMonth() returns a zero-based month, so we add 1
                       let day = newdate.getUTCDate();

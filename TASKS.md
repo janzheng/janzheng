@@ -67,3 +67,12 @@ Eleven files were mid-edit (unstaged) bumping `coverflow.deno.dev` → `coverflo
 - Old Deno Deploy project: `cdf5a87a-51b4-4150-9567-99caac4daaa2` (legacy `deployctl` flow, sunsetting platform).
 - Labspace migration commits to mirror: `da9020f` (Astro 6 + adapter 0.4) and `5bb6f18` (yarn linker + image service noop).
 - Labspace `BRIEF-deno-deploy-migration.md` has the full Discord-thread context and gotchas if anything misbehaves.
+
+## Cloudflare continuity — 2026-10-09
+
+- [x] **JCF001 — Single-attempt pipeline writes.** Owner codex-continuity-01a122b8. Local fix; fake-provider regression proves four writes before, one after. Direct/proxy and envelope behavior retained. Not deployed. See [.brief/cloudflare-continuity.md](.brief/cloudflare-continuity.md).
+- [ ] **JCF002 — Qualify separate portfolio Worker migration.** Build, bindings, resume/routes, public actions, content/assets, cache/outage and rollback; preserve separate app identity.
+
+- [x] **JCF003 — Portfolio SSR/mobile fixes and bounded content GETs.** Owner codex-lcf-g01-20261009. Local source fixes;20runtime/10browser/11fake-provider cases pass. No dependency or deployment changes. Evidence in linked continuity brief. JCF002 remains open on release target and refresh/converter/resume contracts.
+
+- [x] **JCF004 — Local converter/resume caller contracts.** Owner codex-lcf-g01-20261009. Fixed server-owned definitions, signup acknowledgement and resume uncertain-save/draft guards;23offline tests plus fake actual actions/browser saves pass. First release keeps AI demos disabled by user choice. Independent read-only target prepared in Labspace; remote deployment and live provider gates remain open.
