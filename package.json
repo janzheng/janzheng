@@ -32,7 +32,7 @@
     "@iconify/svelte": "^4.0.2",
     "@internationalized/date": "^3.5.5",
     "@yawnxyz/sheetlog": "^0.0.17",
-    "astro": "^6.1.9",
+    "astro": "^6.1.10",
     "autoprefixer": "^10.4.20",
     "bits-ui": "^0.21.15",
     "chrono-node": "^2.7.7",
